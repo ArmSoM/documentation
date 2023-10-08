@@ -1,0 +1,14 @@
+{
+  "home.page.HomePageTitle": {
+    "description": "Home Page Title",
+    "message": "ArmSoM 文档中心"
+  },
+  "home.page.HomePageIntroduction": {
+    "description": "Home page introduction",
+    "message": "🎉 找到想要的 sbc 或者 som  🥳"
+  },
+  "home.page.HomePageButton": {
+    "description": "开始阅读文档",
+    "message": "开始"
+  }
+}
