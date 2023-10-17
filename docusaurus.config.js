@@ -100,11 +100,32 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'ArmSoM',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Home",
+                to: "http://www.armsom.org/",
+                target: "_self",
+              },
+              {
+                label: "Products",
+                to: "http://www.armsom.org/product",
+                target: "_self",
+              },
+              {
+                label: "News",
+                to: "http://www.armsom.org/news",
+                target: "_self",
+              },
+              {
+                label: "Services",
+                to: "http://www.armsom.org/services",
+                target: "_self",
+              },
+              {
+                label: "Community",
+                to: "http://www.armsom.org/association",
+                target: "_self",
               },
             ],
           },
