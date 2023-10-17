@@ -3,7 +3,6 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ArmSoM docs',
@@ -11,7 +10,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.armsom.com',
+  url: 'https://docs.armsom.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -79,6 +78,26 @@ const config = {
         },
         items: [
           {
+            position: 'left',
+            label: 'SIG',
+            to: '/sig',
+          },
+          {
+            position: 'left',
+            label: 'LM',
+            to: '/lm',
+          },
+          {
+            position: 'left',
+            label: 'BM',
+            to: '/bm',
+          },
+          {
+            position: 'left',
+            label: 'AIM',
+            to: '/aim',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
@@ -86,8 +105,8 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://armsom.org/',
+            label: 'ArmSoM',
             position: 'right',
           },
           {
@@ -100,7 +119,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'ArmSoM',
+            title: 'About',
             items: [
               {
                 label: "Home",
@@ -122,49 +141,58 @@ const config = {
                 to: "http://www.armsom.org/services",
                 target: "_self",
               },
-              {
-                label: "Community",
-                to: "http://www.armsom.org/association",
-                target: "_self",
-              },
             ],
           },
           {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'YouTube',
+                href: 'test',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'twitter',
+                href: 'https://twitter.com/armsom',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Blog',
+                href: 'http://docs.armsom.org/blog',
+              },
+              {
+                label: 'stackoverflow',
+                href: 'https://stackoverflow.com/users/21867949/armsom',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Support',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Forum',
+                href: 'http://forum.armsom.org/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Github',
+                href: 'https://github.com/armsom',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["bash"],
+      },
+      typography: {
+        fontFamily: [
+          "Helvetica",
+          "pingFangSC",
+          "Microsoft YaHei",
+          "微软雅黑",
+          "Arial",
+          "sans-serif",
+        ],
       },
     }),
 };
