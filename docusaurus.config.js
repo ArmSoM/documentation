@@ -77,26 +77,26 @@ const config = {
           src: 'img/favicon.ico',
         },
         items: [
-          {
-            position: 'left',
-            label: 'SIG',
-            to: '/sig',
-          },
-          {
-            position: 'left',
-            label: 'LM',
-            to: '/lm',
-          },
-          {
-            position: 'left',
-            label: 'BM',
-            to: '/bm',
-          },
-          {
-            position: 'left',
-            label: 'AIM',
-            to: '/aim',
-          },
+          // {
+          //   position: 'left',
+          //   label: 'SIG',
+          //   to: '/sig',
+          // },
+          // {
+          //   position: 'left',
+          //   label: 'LM',
+          //   to: '/lm',
+          // },
+          // {
+          //   position: 'left',
+          //   label: 'BM',
+          //   to: '/bm',
+          // },
+          // {
+          //   position: 'left',
+          //   label: 'AIM',
+          //   to: '/aim',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -148,7 +148,7 @@ const config = {
             items: [
               {
                 label: 'YouTube',
-                href: 'test',
+                href: 'https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w',
               },
               {
                 label: 'twitter',
