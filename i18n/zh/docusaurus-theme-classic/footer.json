@@ -34,21 +34,5 @@
   "link.item.label.Blog": {
     "description": "The label of footer link with label=Blog linking to http://docs.armsom.org/blog",
     "message": "博客"
-  },
-  "link.item.label.YouTube": {
-    "description": "The label of footer link with label=Blog linking to https://blog.csdn.net/nb124667390",
-    "message": "哔哩哔哩"
-  },
-  "link.item.href.test": {
-    "description": "The label of footer link with label=Blog linking to http://www.armsom.org/services",
-    "message": "https://space.bilibili.com/101696800"
-  },
-  "link.item.label.twitter": {
-    "description": "The label of footer link with label=Blog linking to https://blog.csdn.net/nb124667390",
-    "message": "今日头条"
-  },
-  "link.item.label.stackoverflow": {
-    "description": "The label of footer link with label=Blog linking to https://blog.csdn.net/nb124667390",
-    "message": "知乎"
   }
 }

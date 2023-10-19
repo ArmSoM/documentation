@@ -13,7 +13,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">
+        <h1 className={clsx('hero__title', styles.topBannerTitleText)} >
           <Translate id="home.page.HomePageTitle"></Translate>
         </h1>
         <p className="hero__subtitle">

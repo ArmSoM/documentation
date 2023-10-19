@@ -121,22 +121,22 @@ const config = {
               {
                 label: "Home",
                 to: "http://www.armsom.org/",
-                target: "_self",
+                target: "_blank",
               },
               {
                 label: "Products",
                 to: "http://www.armsom.org/product",
-                target: "_self",
+                target: "_blank",
               },
               {
                 label: "News",
                 to: "http://www.armsom.org/news",
-                target: "_self",
+                target: "_blank",
               },
               {
                 label: "Services",
                 to: "http://www.armsom.org/services",
-                target: "_self",
+                target: "_blank",
               },
             ],
           },
@@ -145,19 +145,23 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'http://docs.armsom.org/blog',
+                to: 'http://docs.armsom.org/blog',
+                target: "_self",
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/armsom',
+                to: 'https://twitter.com/armsom',
+                target: "_blank",
               },
               {
                 label: 'YouTube',
-                href: 'https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w',
+                to: 'https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w',
+                target: "_blank",
               },
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/users/21867949/armsom',
+                to: 'https://stackoverflow.com/users/21867949/armsom',
+                target: "_blank",
               },
             ],
           },
@@ -166,11 +170,13 @@ const config = {
             items: [
               {
                 label: 'Forum',
-                href: 'http://forum.armsom.org/',
+                to: 'http://forum.armsom.org/',
+                target: "_blank",
               },
               {
                 label: 'Github',
-                href: 'https://github.com/armsom',
+                to: 'https://github.com/armsom',
+                target: "_blank",
               },
             ],
           },
