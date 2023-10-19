@@ -1,51 +1,65 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+// import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
+// const {withBaseUrl} = useBaseUrlUtils();
 
 const FeatureList = [
   {
-    title: 'SBC',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Getting Started Guide',
+    image: {
+      src: '/img/undraw_version_control.svg',
+      width: 1038.23,
+      height: 693.31,
+    },
     description: (
       <>
-        Single Board Computer 
+        Start your favorite SBC/SOM, Provide complete product usage documentation to help software engineers quickly develop applications.
+        {/* 启动您喜爱的SBC/SOM，帮助软件工程师快速进行应用开发。*/}
       </>
     ),
   },
   {
-    title: 'LM',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Hardware Information',
+    image: {
+      src: '/img/Open-source-hardware-logo.svg',
+      width: 1038.23,
+      height: 693.31,
+    },
     description: (
       <>
-        LGA moudle
+        Provides rich hardware development documents, including schematics, PCB, DXF, etc. 
+        Help hardware engineers quickly develop and put into production
       </>
     ),
   },
    {
-    title: 'AIM',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Passionate developer community',
+    image: {
+      src: '/img/undraw_around_the_world.svg',
+      width: 1038.23,
+      height: 693.31,
+    },
     description: (
       <>
-        AI moudle
-      </>
-    ),
-  },
-  {
-    title: 'BM',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        B2B moudle
+        The armsom community is powered by a passionate community of developers that publish videos, guides, and open source projects.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description, index}) {
+function Feature({ image,title, description, index}) {
   return (
     <div className={clsx('col col--4',index === 3 && 'col--offset-4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <img
+        className={styles.featureImage}
+        width={Math.floor(image.width)}
+        height={Math.floor(image.height)}
+        src={(image.src)}
+        loading="lazy"
+      />
+        {/* <Svg className={styles.featureSvg} role="img" /> */}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
