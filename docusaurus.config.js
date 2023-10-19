@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ArmSoM docs',
-  tagline: 'Documentations for ArmSoM products',
+  tagline: 'Find the desired sbc or som',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -77,31 +77,11 @@ const config = {
           src: 'img/favicon.ico',
         },
         items: [
-          // {
-          //   position: 'left',
-          //   label: 'SIG',
-          //   to: '/sig',
-          // },
-          // {
-          //   position: 'left',
-          //   label: 'LM',
-          //   to: '/lm',
-          // },
-          // {
-          //   position: 'left',
-          //   label: 'BM',
-          //   to: '/bm',
-          // },
-          // {
-          //   position: 'left',
-          //   label: 'AIM',
-          //   to: '/aim',
-          // },
           {
             type: 'docSidebar',
             position: 'left',
-            sidebarId: 'sib',
-            label: 'SIB',
+            sidebarId: 'sbc',
+            label: 'SBC',
           },
           {
             type: 'docSidebar',
@@ -164,19 +144,19 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'YouTube',
-                href: 'https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w',
-              },
-              {
-                label: 'twitter',
-                href: 'https://twitter.com/armsom',
-              },
-              {
                 label: 'Blog',
                 href: 'http://docs.armsom.org/blog',
               },
               {
-                label: 'stackoverflow',
+                label: 'Twitter',
+                href: 'https://twitter.com/armsom',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w',
+              },
+              {
+                label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/users/21867949/armsom',
               },
             ],
