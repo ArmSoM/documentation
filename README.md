@@ -12,5 +12,5 @@ $ npm install
 
 ```
 npm run start
-npm run start --locale zh
+npm run start -- --locale zh
 ```

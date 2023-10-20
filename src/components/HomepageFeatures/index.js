@@ -3,47 +3,59 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 // import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 // const {withBaseUrl} = useBaseUrlUtils();
+import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: 'Getting Started Guide',
+    title: (
+      <Translate id="home.page.HomePageFeatures.gettingStart.title">
+        Getting Started Guide
+      </Translate>
+    ),
     image: {
-      src: '/img/undraw_version_control.svg',
+      src: './img/undraw_version_control.svg',
       width: 1038.23,
       height: 693.31,
     },
     description: (
-      <>
+      <Translate id="home.page.HomePageFeatures.gettingStart.description">
         Start your favorite SBC/SOM, Provide complete product usage documentation to help software engineers quickly develop applications.
-        {/* 启动您喜爱的SBC/SOM，帮助软件工程师快速进行应用开发。*/}
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Hardware Information',
+    title: (
+      <Translate id="home.page.HomePageFeatures.HardwareInformation.title">
+        'Hardware Information
+      </Translate>
+    ),
     image: {
-      src: '/img/Open-source-hardware-logo.svg',
+      src: './img/Open-source-hardware-logo.svg',
       width: 1038.23,
       height: 693.31,
     },
     description: (
-      <>
+      <Translate id="home.page.HomePageFeatures.HardwareInformation.description">
         Provides rich hardware development documents, including schematics, PCB, DXF, etc. 
         Help hardware engineers quickly develop and put into production
-      </>
+      </Translate>
     ),
   },
    {
-    title: 'Passionate developer community',
+    title: (
+      <Translate id="home.page.HomePageFeatures.PassionateCommunity.title">
+        Passionate developer community
+      </Translate>
+    ),
     image: {
-      src: '/img/undraw_around_the_world.svg',
+      src: './img/undraw_around_the_world.svg',
       width: 1038.23,
       height: 693.31,
     },
     description: (
-      <>
-        The armsom community is powered by a passionate community of developers that publish videos, guides, and open source projects.
-      </>
+      <Translate id="home.page.HomePageFeatures.PassionateCommunity.description">
+        The armsom community is powered by a passionate of developers that publish videos, guides, and open source projects.
+      </Translate>
     ),
   },
 ];
@@ -59,7 +71,6 @@ function Feature({ image,title, description, index}) {
         src={(image.src)}
         loading="lazy"
       />
-        {/* <Svg className={styles.featureSvg} role="img" /> */}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

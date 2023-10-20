@@ -10,5 +10,29 @@
   "home.page.HomePageButton": {
     "description": "开始阅读文档",
     "message": "开始"
+  },
+  "home.page.HomePageFeatures.gettingStart.title": {
+    "description": "home.page.HomePageFeatures.gettingStart.title",
+    "message": "完善的使用文档"
+  },
+  "home.page.HomePageFeatures.gettingStart.description": {
+    "description": "home.page.HomePageFeatures.gettingStart.description",
+    "message": "启动您喜爱的SBC/SOM，帮助软件工程师快速进行应用开发。"
+  },
+  "home.page.HomePageFeatures.HardwareInformation.title": {
+    "description": "home.page.HomePageFeatures.HardwareInformation.title",
+    "message": "丰富的硬件资料"
+  },
+  "home.page.HomePageFeatures.HardwareInformation.description": {
+    "description": "home.page.HomePageFeatures.HardwareInformation.description",
+    "message": "提供丰富的硬件开发文档，包括原理图、PCB、DXF等，帮助硬件工程师快速开发并投入生产。"
+  },
+  "home.page.HomePageFeatures.PassionateCommunity.title": {
+    "description": "home.page.HomePageFeatures.PassionateCommunity.title",
+    "message": "充满激情的开发者社区"
+  },
+  "home.page.HomePageFeatures.PassionateCommunity.description": {
+    "description": "home.page.HomePageFeatures.PassionateCommunity.description",
+    "message": "Armsom 社区由一群充满热情的开发人员提供支持，他们发布视频、指南和开源项目。"
   }
 }
