@@ -26,7 +26,7 @@ const FeatureList = [
   {
     title: (
       <Translate id="home.page.HomePageFeatures.HardwareInformation.title">
-        'Hardware Information
+        Hardware Information
       </Translate>
     ),
     image: {

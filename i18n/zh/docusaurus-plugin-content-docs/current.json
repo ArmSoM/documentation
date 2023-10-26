@@ -1,0 +1,9 @@
+{
+    "sidebar.lm.category.LM-5": {
+        "description": "The label for category ROCK 3 Family in sidebar tutorialSidebar",
+        "message": "LM-5"
+    },
+    "sidebar.lm.category.LM-5.link.generated-index.description": {
+        "message": "ArmSoM-LM5采用瑞芯微RK3588，其强大的功能加上极小的尺寸适用于各种嵌入式场景，我们将提供完善的​​底板参考设计资料，可自主深度化定制，帮助用户快速开发和验证产品。"
+    }
+} 
