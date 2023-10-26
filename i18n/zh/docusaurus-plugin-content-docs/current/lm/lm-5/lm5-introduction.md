@@ -230,7 +230,7 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
         </tr>
         <tr >
             <th>NPU</th>
-            <th><li>硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>硬编码：8K@30fps H.265 / H.264</li></th>
+            <th></th>
             <th><li>支持多路并行编码,最大 16 路 1080P@30fps 编码</li><li>支持实时 H.265/H.264 视频解码</li><li>支持最大 32 路 1080P@30fps 解码</li></th>
         </tr>
          <tr >
