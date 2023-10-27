@@ -37,14 +37,14 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 
 :::info
 
-ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
+ArmSoM-LM5拥有极小尺寸，约为信用卡的一半大小。
 
 :::
 ![ArmSoM-LM5 front & back](/img/lm/lm-5/armsom-rk3588_lga_core_board_front_back.png)
 ![ArmSoM-LM5 & Credit-Card-Size.webp](/img/lm/lm-5/Credit-Card-Size.webp)
 
 ### ArmSoM-LM5 开发套件
-![ArmSoM-LM5 development kit](/img/lm/lm-5/armsom-lm5-development-kit.webp.png)
+![ArmSoM-LM5 development kit](/img/lm/lm-5/armsom-lm5-development-kit.jpg)
 
 
 
@@ -204,7 +204,7 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
 
 :::
 
-### ArmSoM-LM5 开发套件规格参数
+### ArmSoM-LM5 开发套件(ArmSoM-W3)规格参数
 
 <table>
     <thead>
@@ -304,3 +304,8 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
         </tr>
     </tbody>
 </table>
+
+## 尺寸图
+
+### ArmSoM-LM5 尺寸图
+

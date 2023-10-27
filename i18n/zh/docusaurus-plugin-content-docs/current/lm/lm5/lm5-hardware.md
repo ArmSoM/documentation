@@ -7,7 +7,7 @@ sidebar_position: 4
 获取底板原理图、PCB、DXF等硬件资料，快速投入开发
 
 ## 原理图
-
+[ArmSoM-W3_1V1 原理图](/hardware/ArmSoM_W3_1V1_SCH.pdf)
 ## Layout
 
 ## 引脚功能表格
