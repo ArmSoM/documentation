@@ -28,9 +28,9 @@ sidebar_position: 4
 
 ### 2D CAD 图
 
-[ArmSoM-W3 顶部](/hardware/lm/lm5/ARMSOM_W3_1V1_bot.dxf) - ArmSoM-W3_bot 2D CAD 文件下载
+[ArmSoM-W3 顶部](/hardware/lm/lm5/ArmSoM_W3_1V1_bot.dxf) - ArmSoM-W3_bot 2D CAD 文件下载
 
-[ArmSoM-W3 底部](/hardware/lm/lm5/ARMSOM_W3_1V1_top.dxf) - ArmSoM-W3_top 2D CAD 文件下载
+[ArmSoM-W3 底部](/hardware/lm/lm5/ArmSoM_W3_1V1_top.dxf) - ArmSoM-W3_top 2D CAD 文件下载
 
 ### 位号图
 
