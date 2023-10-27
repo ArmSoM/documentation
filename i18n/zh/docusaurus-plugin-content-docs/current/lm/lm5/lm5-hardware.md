@@ -6,11 +6,36 @@ sidebar_position: 4
 
 获取底板原理图、PCB、DXF等硬件资料，快速投入开发
 
-## 原理图
-[ArmSoM-W3_1V1 原理图](/hardware/ArmSoM_W3_1V1_SCH.pdf)
-## Layout
+## ArmSoM-LM5 硬件资料
 
-## 引脚功能表格
+### 引脚功能表格
+[ArmSoM-LM5 引脚功能表格](/hardware/lm/lm5/ArmSoM-LM5_Pin_and_Function_List20230603.xlsx) - ArmSoM-LM5 引脚功能表格下载
+
+### 封装
+
+[ArmSoM-LM5 封装](/hardware/lm/lm5/LGA506_45R0X50R0_2005.asc) - ArmSoM-LM5 封装下载
+
+## ArmSoM-LM5 开发套件(ArmSoM-W3) 硬件资料
+
+### 原理图
+[ArmSoM-W3_1V1 原理图pdf](/hardware/lm/lm5/ArmSoM_W3_1V1_SCH.pdf) - ArmSoM-W3_1V1 原理图pdf下载
+
+[ArmSoM-W3_1V1 原理图orcad](/hardware/lm/lm5/ArmSoM_W3_1V1_SCH.DSN) - ArmSoM-W3_1V1 原理图原始文件（orcad）下载
+
+### PCB
+
+[ArmSoM-W3_1V1 PCB PADS](/hardware/lm/lm5/ArmSoM_W3_1V1.pcb) - ArmSoM-W3_1V1 PCB原始文件（PADS）下载
+
+### 2D CAD 图
+
+[ArmSoM-W3 顶部](/hardware/lm/lm5/ARMSOM_W3_1V1_bot.dxf) - ArmSoM-W3_bot 2D CAD 文件下载
+
+[ArmSoM-W3 底部](/hardware/lm/lm5/ARMSOM_W3_1V1_top.dxf) - ArmSoM-W3_top 2D CAD 文件下载
+
+### 位号图
+
+[ArmSoM-W3_1V1 位号图](/hardware/lm/lm5/ArmSoM_W3_1V1_SMD.pdf) - ArmSoM-W3_1V1 位号图下载
+
 
 ## 注意
 
