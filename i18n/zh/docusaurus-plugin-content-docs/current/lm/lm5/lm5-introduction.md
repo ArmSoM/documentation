@@ -13,7 +13,7 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 ## 关键参数
 
 - SOC：瑞芯微 RK3588
-- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz
+- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8nm
 - GPU：ARM Mali-G610 MP4
 - NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
 - VPU/编解码: 
@@ -24,7 +24,9 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - 工作电压：电压 4V（电压误差±5%）
 - 工作温度：0℃ ~ 70℃
 - 接口类型：LGA封装（栅格阵列封装），总引脚数 506Pin
-- 操作系统：Android 12.0，Debian11，Buildroot，Armbian，Kylin OS
+- 操作系统：
+  - Rockchip官方支持：Android 12.0，Debian11，Buildroot
+  - 第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS
 - PCB 层数: 12 层 PCB 板设计
 - 重量：约 13.4克
 - 大小：45mm × 50mm × 4.5mm (top: 2.2mm+PCB: 1.2mm +bottom: 1.1mm)
@@ -48,7 +50,7 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
 
 ## 硬件规格
 
-### ArmSoM-LM5 功能参数
+### ArmSoM-LM5 引脚功能参数
 
 <table>
     <thead>
@@ -198,7 +200,7 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
 
 :::info
 
-硬件参考设计专栏将提供完整的 **[《引脚功能表格》](/docs/lm/lm5/lm5-hardware#引脚功能表格)**
+表中接口数量为硬件设计或CPU理论最大值，其中多数功能引脚为复用关系，为方便配置请参考LM5的**[《引脚功能表格》](/docs/lm/lm5/lm5-hardware#引脚功能表格)**表格； 
 
 :::
 
@@ -207,51 +209,98 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半。
 <table>
     <thead>
         <tr>
-            <th>项目</th>
-            <th>参数</th>
-            <th>功能</th>
+            <th>类别</th>
+            <th>功能参数</th>
         </tr>
     </thead>
     <tbody align="left">
-        <tr >
+        <tr>
             <th>SOC</th>
-            <th>RockChip RK3588</th>
-            <th></th>
+            <th><li>RockChip RK3588</li></th>
         </tr>
-        <tr >
+        <tr>
             <th>CPU</th>
-            <th>Quad Core Cortex-A76@2.4GHz+Quad CoreCortex-A55@1.8GHz 8nm</th>
-            <th></th>
+            <th><li>RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8nm</li></th>
         </tr>
-        <tr >
+        <tr>
             <th>GPU</th>
-            <th>GPU Mali-G610 MP4(4x256KB L2 Cache)</th>
-            <th><li>支持 OpenGL ES3.2/OpenCL2.2/Vulkan1.1</li></th>
+            <th><li>GPU Mali-G610 MP4 (4x256KB L2 Cache)</li><li>支持 OpenGL ES3.2/OpenCL2.2/Vulkan1.1</li></th>
         </tr>
-        <tr >
+        <tr>
             <th>NPU</th>
-            <th></th>
-            <th><li>支持多路并行编码,最大 16 路 1080P@30fps 编码</li><li>支持实时 H.265/H.264 视频解码</li><li>支持最大 32 路 1080P@30fps 解码</li></th>
+            <th><li>6 TOPS@INT8(3 NPU core)</li><li>支持 INT4/INT8/INT16 混合运算</li><li>支持深度学习框架：TensorFlow/MXNet/PyTorch/Caffe/Tflite/Onnx NN/Android NN 等</li></th>
         </tr>
-         <tr >
+         <tr>
             <th>VPU/编解码</th>
-            <th>6 TOPS@INT8(3 NPU core)</th>
-            <th><li>支持 INT4/INT8/INT16 混合运算</li><li>支持深度学习框架：TensorFlow/MXNet/PyTorch/Caffe/Tflite/Onnx NN/Android NN 等</li></th>
+            <th><li>硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>硬编码：8K@30fps H.265 / H.264</li></th>
+        </tr>
+         <tr>
+            <th>ISP</th>
+            <th><li>集成48MP ISP with HDR&3DNR</li></th>
         </tr>
         <tr >
             <th>RAM</th>
-            <th>4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</th>
-            <th><li>支持四通道,每个通道 16 位数据宽度最大支持 32GB</li></th>
+            <th><li>4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th>16GB/32GB/64GB/128GB/256GB eMMC，默认eMMC 32GB</th>
-            <th><li>支持 HS400/HS200/DDR50</li> <li>支持从 eMMC/SD/MMC 启动系统</li> </th>
+            <th><li>16GB/32GB/64GB/128GB/256GB eMMC，默认eMMC 32GB</li><li>支持MicroSD卡扩展</li></th>
         </tr>
-        <tr >
-            <th>SD/MMC</th>
-            <th>SD3.0/MMC4.51</th>
-            <th><li>支持最高 150M 数据速率</li> </th>
+        <tr>
+            <th>PCIe</th>
+            <th><li>1x M.2 E key 接口(PCIe 2.1 1-lane)，支持PCIe/SATA/USB/SDIO/UART 并可外接Bluetooth/WIFI模块</li><li>1x M.2 M key 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
+        </tr>
+        <tr>
+            <th>网络</th>
+            <th><li>1x 2.5G网口</li></th>
+        </tr>
+        <tr>
+            <th>视频输出</th>
+            <th><li>2x HDMI OUT2.1，其中一个HDMI OUT 支持 8K@60fps 或者 4K@120fps另一个HDMI OUT 支持 4K@60fps</li><li>1x MIPI DSI分辨率可达 4K@60Hz</li><li>1x DP1.4分辨率可达 8192x4320@30Hz</li></th>
+        </tr>
+        <tr>
+            <th>视频输入</th>
+            <th><li>1x HDMI IN2.0，支持3.4Gbps~6Gbps</li><li>1x 4Lanes MIPI CSI / 2x 2Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
+        </tr>
+        <tr>
+            <th>音频</th>
+            <th><li>2x HDMI音频输出</li><li>1x Audio Jack 3.5mm（ES8316）音频输出</li><li>1x Type-C 3.1 (DP1.4)音频输出</li></th>
+        </tr>
+        <tr>
+            <th>USB接口</th>
+            <th><li>2x USB3.0（USB3.1 Gen1），支持USB3.1 Gen1，相当于USB3.2 Gen1和USB3.0，高达5Gbps数据速率</li><li>2x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li><li>1x USB Type-C 3.1（DP1.4/OTG/PD 快充）</li></th>
+        </tr>
+        <tr>
+            <th>40-pin</th>
+            <th><li>和树莓派40pin可完全兼容，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
+        </tr>
+        <tr>
+            <th>其他</th>
+            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片HYM8563TS的供电</li><li>1x RGB灯，供电正常时绿灯亮，系统正常时蓝色灯开始闪烁，红色灯由用户控制</li><li>1x 调试串口uart, 3-Pin 2.54mm连接头, 3.3V level, 1500000bps</li></th>
+        </tr>
+        <tr>
+            <th>电源</th>
+            <th><li>支持DC 12V/2.5A Aperture 2.5mm</li><li>支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A</li><li>支持12V PoE</li></th>
+        </tr>
+        <tr>
+            <th>按键</th>
+            <th><li>1x PWRON键，支持休眠唤醒</li><li>1x Reset键，支持重启</li><li>1x Recovery键，支持进入loader烧录模式</li><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
+        </tr>
+        <tr>
+            <th>系统</th>
+            <th><li>Rockchip官方支持：Android 12.0，Debian11，Buildroot</li><li>第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS</li></th>
+        </tr>
+        <tr>
+            <th>尺寸</th>
+            <th><li>148 mm* 100.5mm</li></th>
+        </tr>
+        <tr>
+            <th>工作温度</th>
+            <th><li>0℃ ~ 70℃</li></th>
+        </tr>
+        <tr>
+            <th>存储温度</th>
+            <th><li>-20℃ ~ 80℃</li></th>
         </tr>
     </tbody>
 </table>
