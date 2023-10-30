@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# 产品介绍
+# 产品简介
 
 让我们在 5 分钟内了解 LM5。
 
@@ -13,7 +13,7 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 ## 关键参数
 
 - SOC：瑞芯微 RK3588
-- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8nm
+- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8nm制程
 - GPU：ARM Mali-G610 MP4
 - NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
 - VPU/编解码: 

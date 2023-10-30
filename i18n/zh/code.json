@@ -17,7 +17,7 @@
   },
   "home.page.HomePageFeatures.gettingStart.description": {
     "description": "home.page.HomePageFeatures.gettingStart.description",
-    "message": "启动您喜爱的SBC/SOM，帮助软件工程师快速进行应用开发。"
+    "message": "帮助开发爱好者快速启动喜爱的SBC或开发套件。"
   },
   "home.page.HomePageFeatures.HardwareInformation.title": {
     "description": "home.page.HomePageFeatures.HardwareInformation.title",
@@ -25,7 +25,7 @@
   },
   "home.page.HomePageFeatures.HardwareInformation.description": {
     "description": "home.page.HomePageFeatures.HardwareInformation.description",
-    "message": "提供丰富的硬件开发文档，包括原理图、PCB、DXF等，帮助硬件工程师快速开发并投入生产。"
+    "message": "提供包括规格书、原理图、PCB、DXF等硬件开发资料"
   },
   "home.page.HomePageFeatures.PassionateCommunity.title": {
     "description": "home.page.HomePageFeatures.PassionateCommunity.title",
@@ -33,6 +33,6 @@
   },
   "home.page.HomePageFeatures.PassionateCommunity.description": {
     "description": "home.page.HomePageFeatures.PassionateCommunity.description",
-    "message": "ArmSoM 社区由一群充满热情的开发人员提供支持，他们发布视频、指南和开源项目。"
+    "message": "ArmSoM社区由全球开发爱好者共同维护，提供有趣的技术交流平台"
   }
 }
