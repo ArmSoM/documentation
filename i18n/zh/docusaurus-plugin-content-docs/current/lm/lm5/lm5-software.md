@@ -324,7 +324,7 @@ root@linaro-alip:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,for
 
 ![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-play.png)
 
-## HDMI IN
+### HDMI IN
 
 ArmSoM-W3使用rk3588原生hdmi rx接口，可以使用v4l2命令测试hdmi in接口。
 
@@ -387,7 +387,7 @@ v4l2-ctl --verbose -d /dev/video17 \
 --stream-count=5 --stream-poll
 ```
 
-## 风扇
+### 风扇
 
 ```
 echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
