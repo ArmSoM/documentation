@@ -139,7 +139,7 @@ ArmSoM-W3 有两个 HDMI 输出端口，均支持 CEC 和 HDMI 2.1，分辨率�
 ArmSoM-W3 提供两个 M.2 连接器：
 
 - 主板正面有一个带 2230 安装孔的 M.2 E Key 连接器，提供 PCIe 2.1 单通道、USB、SATA、SDIO、PCM 和 UART 信号，支持工业标准 M.2 WiFi 6 模块。  
-  如果你想通过无线模块上网，Radxa 推荐使用 RTL8852BE。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
+  ArmSoM 推荐使用 RTL8852BE。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
 
 ```
 # 1. Switch to super user mode
