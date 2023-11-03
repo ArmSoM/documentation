@@ -28,3 +28,43 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.gpio_style > table {
+  overflow: visible;
+}
+
+.gpio_style > table td {
+  padding: 3px 5px;
+  font-size: 12px;
+}
+
+
+.green {
+  background-color: green;
+  color: #fff;
+}
+
+.black {
+  color: #fff;
+  background-color: black;
+}
+
+.blue {
+  color: #fff;
+  background-color: blue;
+}
+
+.yellow {
+  color: #000;
+  background-color: yellow;
+}
+
+.red {
+  color: #000;
+  background-color: red;
+}
+
+.orange-txt {
+  color: orange;
+  /* background-color: orange; */
+}
