@@ -117,10 +117,6 @@ ArmSoM-W3 开发套件支持 Maskrom 模式和 Loader 模式，该特殊操作�
 
 如果你是首次使用 ArmSoM-LM5 开发套件(ArmSoM-W3)，请先熟悉下 [外设接口](./lm5-introduction##armsom-lm5-开发套件armsom-w3)，以便于你更好的理解后续的内容。
 
-### USB接口
-
-ArmSoM-W3 提供两个 USB 2.0 和两个 USB 3.0 端口。
-
 ### 2.5G 以太网口
 
 如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-W3 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
@@ -147,104 +143,11 @@ or
 $ sudo dhclient enP4p65s0
 ```
 
-### HDMI
-
-ArmSoM-W3 有两个 HDMI 输出端口，均支持 CEC 和 HDMI 2.1，分辨率最高支持分别为 8Kp60 和 4Kp60，并且其 Type-C 接口也可支持视频输出。  
-另外，ArmSoM-W3 拥有 1 个 HDMI 输入接口，支持 HDMI 2.1 输入，分辨率为 4Kp60。
-
-:::caution
-注意: 在使用之前，请确认 HDMI 线的接口规格。
-:::
-
-### M.2接口
-
-ArmSoM-W3 提供两个 M.2 连接器：
-
-- 主板正面有一个带 2230 安装孔的 M.2 E Key 连接器，提供 PCIe 2.1 单通道、USB、SATA、SDIO、PCM 和 UART 信号，支持工业标准 M.2 WiFi 6 模块。  
-  ArmSoM 推荐使用 RTL8852BE。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
-
-```
-# 1. Switch to super user mode
-root@linaro-alip:/# sudo su
-# 2. Open the WIFI
-root@linaro-alip:/# nmcli r wifi on
-# 3. Scan WIFI
-root@linaro-alip:/# nmcli dev wifi
-# 4. Connect to WIFI network
-root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
-```
-
-
-- 在板的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
-  **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
-
-```
-root@linaro-alip:/home/linaro# mkdir temp
-root@linaro-alip:/home/linaro# mount /dev/nvme0n1 temp
-```
-
-### RGB LED
-
-ArmSoM-W3 具有电源 LED 和用户 LED。
-
-- 电源指示灯
-  电源 LED 为绿色， ArmSoM-W3默认通电时常亮。
-
-- 用户指示灯
-  用户 LED 为蓝色， 默认情况下，其闪烁状态显示正在运行的内核。
-
-用户可通过命令控制
-
-```
-
-linaro@linaro-alip:/home/linaro# sudo su
-root@linaro-alip:/home/linaro# echo timer > /sys/class/leds/blue:status/trigger
-root@linaro-alip:/home/linaro# echo activity > /sys/class/leds/blue:status/trigger
-
-```
-
-### RTC
-
-- ArmSoM-W3配备了一颗RTC IC **hym8563**。
-- 首先，插入RTC电池给RTC IC供电。
-- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中。插入电源适配器为 ROCK 5B 供电。并确认 rtc hym8563 设备已创建
-
-
-
-```bash
-root@linaro-alip:/home/rock#  dmesg | grep rtc
-[    6.407133] rtc-hym8563 6-0051: rtc information is valid
-[    6.412731] rtc-hym8563 6-0051: registered as rtc0
-[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
-```
-
-- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
-
-```bash
-root@linaro-alip:/home/rock# hwclock -r
-2023-11-03 10:32:40.461910+00:00
-root@linaro-alip:/home/rock# date
-2023年 11月 03日 星期五 10:33:12 UTC
-root@linaro-alip:/home/rock# hwclock -w
-root@linaro-alip:/home/rock# hwclock -r
-root@linaro-alip:/home/rock# poweroff
-```
-
-- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并打开rock5b，检查RTC是否与系统时钟同步
-
-```bash
-root@linaro-alip:/home/rock# hwclock -r
-2023-11-03 10:35:40.461910+00:00
-root@linaro-alip:/home/rock# date
-2023年 11月 03日 星期五 10:36:01 UTC
-```
-
 ### 音频
 
 查看系统中的声卡。
 
 ```bash
-
 root@linaro-alip:/# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
@@ -262,67 +165,21 @@ card 4: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [roc
 
 ```
 
-### MIC录音
+### USB接口
 
-```bash
+ArmSoM-W3 提供两个 USB 2.0 和两个 USB 3.0 端口。
 
-root@linaro-alip:/root# arecord -D hw:1,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
-Recording WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
-root@linaro-alip:/root# aplay t.wav
-Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
+### Type-C
 
-```
+ArmSoM-W3 配备全功能 USB Type‑C™ 3.1 端口，支持高达 4Kp60 的 DP 显示
 
-### 摄像头
+### HDMI
 
-#### MIPI-CSI
+ArmSoM-W3 有两个 HDMI 输出端口，均支持 CEC 和 HDMI 2.1，分辨率最高支持分别为 8Kp60 和 4Kp60。
 
-  摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
-
-```bash
-root@linaro-alip:/# dmesg | grep imx415
-[    2.547754] imx415 3-001a: driver version: 00.01.08
-[    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
-[    2.547819] imx415 3-001a: Failed to get power-gpios
-[    2.547826] imx415 3-001a: could not get default pinstate
-[    2.547831] imx415 3-001a: could not get sleep pinstate
-[    2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator
-[    2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator
-[    2.547945] imx415 3-001a: supply avdd not found, using dummy regulator
-[    2.613843] imx415 3-001a: Detected imx415 id 0000e0
-[    2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5
-[   18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0
-[   18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203)
-```
-
-  使用v4l2-ctl进行抓图
-```
-
-root@linaro-alip:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
-
-```
-
-  使用gst-launch-1.0可直接录像
-```
-
-root@linaro-alip:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
-
-```
-![armsom-w3-imx415-camera](/img/lm/lm-5/armsom-w3-imx415-camera.jpeg)
-
-####  USB3.0 Camera
-
-连接usb3.0摄像头后，打开Qt V4L2 test Utility应用程序进行测试
-
-![armsom-w3-usb-camera-qtv4l2](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2.png)
-
-打开视频节点：video21
-
-![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-select-video.png)
-
-点击相机按钮，您将看到相机屏幕
-
-![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-play.png)
+:::caution
+注意: 在使用之前，请确认 HDMI 线的接口规格。
+:::
 
 ### HDMI IN
 
@@ -387,14 +244,155 @@ v4l2-ctl --verbose -d /dev/video17 \
 --stream-count=5 --stream-poll
 ```
 
+### RGB LED
+
+ArmSoM-W3 具有电源 LED 和用户 LED。
+
+- 电源指示灯
+  电源 LED 为绿色， ArmSoM-W3默认通电时常亮。
+
+- 用户指示灯
+  用户 LED 为蓝色， 默认情况下，其闪烁状态显示正在运行的内核。
+
+用户可通过命令控制
+
+```
+linaro@linaro-alip:/# sudo su
+root@linaro-alip:/# echo timer > /sys/class/leds/blue:status/trigger
+root@linaro-alip:/# echo activity > /sys/clas
+```
+
+### RTC
+
+- ArmSoM-W3配备了一颗RTC IC **hym8563**。
+- 首先，插入RTC电池给RTC IC供电。
+- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc hym8563 设备已创建
+
+
+
+```bash
+root@linaro-alip:/#  dmesg | grep rtc
+[    6.407133] rtc-hym8563 6-0051: rtc information is valid
+[    6.412731] rtc-hym8563 6-0051: registered as rtc0
+[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
+```
+
+- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
+
+```bash
+root@linaro-alip:/# hwclock -r
+2023-11-03 10:32:40.461910+00:00
+root@linaro-alip:/# date
+2023年 11月 03日 星期五 10:33:12 UTC
+root@linaro-alip:/# hwclock -w
+root@linaro-alip:/# hwclock -r
+root@linaro-alip:/# poweroff
+```
+
+- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动ArmSoM-W3，检查RTC是否与系统时钟同步
+
+```bash
+root@linaro-alip:/# hwclock -r
+2023-11-03 10:35:40.461910+00:00
+root@linaro-alip:/# date
+2023年 11月 03日 星期五 10:36:01 UTC
+```
+
 ### 风扇
 
-```
-echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
-echo 10000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/period
-echo 5000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/duty_cycle
-echo inversed  > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/polarity
-echo 1 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
-#echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
+ArmSoM-W3 配备一个 5V 的风扇，使用 1.25mm 的连接器
 
 ```
+root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
+root@linaro-alip:/# echo 10000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/period
+root@linaro-alip:/# echo 5000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/duty_cycle
+root@linaro-alip:/# echo inversed  > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/polarity
+root@linaro-alip:/# echo 1 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
+root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
+```
+
+### M.2接口
+
+ArmSoM-W3 提供两个 M.2 连接器：
+
+- 主板正面有一个带 2230 安装孔的 M.2 E Key 连接器，提供 PCIe 2.1 单通道、USB、SATA、SDIO、PCM 和 UART 信号，支持工业标准 M.2 WiFi 6 模块。  
+  ArmSoM 推荐使用 RTL8852BE。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
+
+```
+# 1. Switch to super user mode
+root@linaro-alip:/# sudo su
+# 2. Open the WIFI
+root@linaro-alip:/# nmcli r wifi on
+# 3. Scan WIFI
+root@linaro-alip:/# nmcli dev wifi
+# 4. Connect to WIFI network
+root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+```
+
+- 在板的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
+  **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
+
+```
+root@linaro-alip:/# mkdir temp
+root@linaro-alip:/# mount /dev/nvme0n1 temp
+```
+
+### MIC录音
+
+```bash
+root@linaro-alip:/root# arecord -D hw:1,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
+Recording WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
+root@linaro-alip:/root# aplay t.wav
+Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
+```
+
+### 摄像头
+
+#### MIPI-CSI
+
+  摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
+
+```bash
+root@linaro-alip:/# dmesg | grep imx415
+[    2.547754] imx415 3-001a: driver version: 00.01.08
+[    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
+[    2.547819] imx415 3-001a: Failed to get power-gpios
+[    2.547826] imx415 3-001a: could not get default pinstate
+[    2.547831] imx415 3-001a: could not get sleep pinstate
+[    2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator
+[    2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator
+[    2.547945] imx415 3-001a: supply avdd not found, using dummy regulator
+[    2.613843] imx415 3-001a: Detected imx415 id 0000e0
+[    2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5
+[   18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0
+[   18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203)
+```
+
+  使用v4l2-ctl进行抓图
+```
+root@linaro-alip:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+```
+
+  使用gst-launch-1.0可直接录像
+```
+root@linaro-alip:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+```
+![armsom-w3-imx415-camera](/img/lm/lm-5/armsom-w3-imx415-camera.jpeg)
+
+####  USB3.0 Camera
+
+连接usb3.0摄像头后，打开Qt V4L2 test Utility应用程序进行测试
+
+![armsom-w3-usb-camera-qtv4l2](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2.png)
+
+打开视频节点：video21
+
+![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-select-video.png)
+
+点击相机按钮，您将看到相机屏幕
+
+![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-play.png)
+
+### MIPI DSI
+
+ArmSoM-W3 分辨率最高分辨率可达 4K@60Hz
