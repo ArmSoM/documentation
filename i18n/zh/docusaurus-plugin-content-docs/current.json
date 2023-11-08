@@ -1,6 +1,6 @@
 {
     "sidebar.lm.category.LM-5": {
-        "description": "The label for category ROCK 3 Family in sidebar tutorialSidebar",
+        "description": "The label for category LM Family in sidebar tutorialSidebar",
         "message": "LM-5"
     },
     "sidebar.lm.category.LM-5.link.generated-index.description": {
@@ -8,5 +8,11 @@
     },
     "sidebar.lm.category.general tutorial": {
         "message": "通用教程"
+    },
+    "sidebar.sbc.category.general tutorial": {
+        "message": "通用教程"
+    },
+    "sidebar.sbc.category.p2pro.link.generated-index.description": {
+        "message": "ArmSoM-p2pro采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网 和语音应用程序。"
     }
 }

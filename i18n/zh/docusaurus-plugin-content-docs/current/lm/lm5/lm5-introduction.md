@@ -13,10 +13,10 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 ## 关键参数
 
 - SOC：瑞芯微 RK3588
-- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8nm制程
+- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
 - GPU：ARM Mali-G610 MP4
 - NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
-- VPU/编解码: 
+- VPU/编解码：
   - 硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - 硬编码：8K@30fps H.265 / H.264
 - RAM：4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
@@ -27,7 +27,7 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - 操作系统：
   - Rockchip官方支持：Android 12.0，Debian11，Buildroot
   - 第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS
-- PCB 层数: 12 层 PCB 板设计
+- PCB：12 层 PCB 板设计
 - 重量：约 13.4克
 - 大小：45mm × 50mm × 4.5mm (top: 2.2mm+PCB: 1.2mm +bottom: 1.1mm)
 
@@ -221,7 +221,7 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半大小。
         </tr>
         <tr>
             <th>CPU</th>
-            <th><li>RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8nm</li></th>
+            <th><li>RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程</li></th>
         </tr>
         <tr>
             <th>GPU</th>
@@ -293,7 +293,7 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半大小。
         </tr>
         <tr>
             <th>尺寸</th>
-            <th><li>148 mm* 100.5mm</li></th>
+            <th><li>148 mm x 100.5mm</li></th>
         </tr>
         <tr>
             <th>工作温度</th>

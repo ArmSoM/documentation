@@ -110,8 +110,8 @@ const config = {
           }, {
             type: 'docSidebar',
             position: 'left',
-            sidebarId: 'bm',
-            label: 'BM',
+            sidebarId: 'cm',
+            label: 'CM',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
