@@ -33,7 +33,7 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 ![ArmSoM-LM7 back](/img/lm/lm7/armsom-rk3588_lga_core_board_back.png?w=600#light)
 
 ### ArmSoM-LM7 开发套件
-![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-LM7-development-kit.jpg)
+![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
 
 
 ## 硬件规格
