@@ -202,7 +202,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ### 实物图
 
-![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-LM7-development-kit.jpg)
+![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
 
 ### 硬件规格
 
