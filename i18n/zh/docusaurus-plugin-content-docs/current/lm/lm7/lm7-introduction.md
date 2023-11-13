@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # 产品简介
 
-让我们在 5 分钟内了解 LM5。
+让我们在 5 分钟内了解 LM7。
 
 ## 简介
 
-ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，采用了LGA封装，传输能力和稳定性更强。拥有丰富的接口，支持多硬盘、千兆网、WiFi6、5G/4G扩展和多种视频输入输出。支持多种操作系统；提供底板参考设计资料，用户可自主深度化定制。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
+ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，采用了LGA封装，传输能力和稳定性更强。拥有丰富的接口，支持多硬盘、千兆网、WiFi6、5G/4G扩展和多种视频输入输出。支持多种操作系统；提供底板参考设计资料，用户可自主深度化定制。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
 ## 关键参数
 
@@ -31,17 +31,17 @@ ArmSoM-LM5采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - 重量：约 13.4克
 - 大小：45mm × 50mm × 4.5mm (top: 2.2mm+PCB: 1.2mm +bottom: 1.1mm)
 
-## ArmSoM-LM5
+## ArmSoM-LM7
 
 ### 实物图
 
 :::info
 
-ArmSoM-LM5拥有极小尺寸，约为信用卡的一半大小。
+ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 :::
-![ArmSoM-LM5 front & back](/img/lm/lm-5/armsom-rk3588_lga_core_board_front_back.png)
-![ArmSoM-LM5 & Credit-Card-Size.webp](/img/lm/lm-5/Credit-Card-Size.webp)
+![ArmSoM-LM7 front & back](/img/lm/lm-7/armsom-rk3588_lga_core_board_front_back.png)
+![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm-7/Credit-Card-Size.webp)
 
 ### 硬件规格
 
@@ -194,15 +194,15 @@ ArmSoM-LM5拥有极小尺寸，约为信用卡的一半大小。
 
 :::info
 
-表中接口数量为硬件设计或CPU理论最大值，其中多数功能引脚为复用关系，为方便配置请参考LM5的**[《引脚功能表格》](/docs/lm/lm5/lm5-hardware#引脚功能表格)**表格； 
+表中接口数量为硬件设计或CPU理论最大值，其中多数功能引脚为复用关系，为方便配置请参考LM7的**[《引脚功能表格》](/docs/lm/LM7/LM7-hardware#引脚功能表格)**表格； 
 
 :::
 
-## ArmSoM-LM5 开发套件(ArmSoM-W3)
+## ArmSoM-LM7 开发套件(ArmSoM-W3)
 
 ### 实物图
 
-![ArmSoM-LM5 development kit](/img/lm/lm-5/armsom-lm5-development-kit.jpg)
+![ArmSoM-LM7 development kit](/img/lm/lm-7/armsom-LM7-development-kit.jpg)
 
 ### 硬件规格
 

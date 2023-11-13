@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # 使用手册
 
-LM5开发套件(ArmSoM-W3)使用手册，帮助软件工程师掌握开发板使用 。
+LM7开发套件(ArmSoM-W3)使用手册，帮助软件工程师掌握开发板使用 。
 
 
 ## 入门准备
@@ -60,7 +60,7 @@ ArmSoM-W3 开发套件支持 Maskrom 模式和 Loader 模式，该特殊操作�
 1. Maskrom模式：按住板子上的 maskrom 按键不松手，再短按 reset 键。
 2. Loader模式：按住板子上的 Recovery 按键不松手，再短按 reset 键。或进入系统后在终端输入 ```reboot loader``` 命令
 
-![armsom-w3-typec-install-file](/img/lm/lm-5/armsom-w3-typec-install-file.png)
+![armsom-w3-typec-install-file](/img/lm/lm-7/armsom-w3-typec-install-file.png)
 
 :::
 
@@ -115,7 +115,7 @@ ArmSoM-W3 开发套件支持 Maskrom 模式和 Loader 模式，该特殊操作�
 
 ## 接口设置
 
-如果你是首次使用 ArmSoM-LM5 开发套件(ArmSoM-W3)，请先熟悉下 [外设接口](./lm5-introduction##armsom-lm5-开发套件armsom-w3)，以便于你更好的理解后续的内容。
+如果你是首次使用 ArmSoM-LM7 开发套件(ArmSoM-W3)，请先熟悉下 [外设接口](./LM7-introduction##armsom-LM7-开发套件armsom-w3)，以便于你更好的理解后续的内容。
 
 ### 2.5G 以太网口
 
@@ -377,21 +377,21 @@ root@linaro-alip:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2
 ```
 root@linaro-alip:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
-![armsom-w3-imx415-camera](/img/lm/lm-5/armsom-w3-imx415-camera.jpeg)
+![armsom-w3-imx415-camera](/img/lm/lm-7/armsom-w3-imx415-camera.jpeg)
 
 ####  USB3.0 Camera
 
 连接usb3.0摄像头后，打开Qt V4L2 test Utility应用程序进行测试
 
-![armsom-w3-usb-camera-qtv4l2](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2.png)
+![armsom-w3-usb-camera-qtv4l2](/img/lm/lm-7/armsom-w3-usb-camera-qtv4l2.png)
 
 打开视频节点：video21
 
-![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-select-video.png)
+![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/lm-7/armsom-w3-usb-camera-qtv4l2-select-video.png)
 
 点击相机按钮，您将看到相机屏幕
 
-![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm-5/armsom-w3-usb-camera-qtv4l2-play.png)
+![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm-7/armsom-w3-usb-camera-qtv4l2-play.png)
 
 ### MIPI DSI
 
