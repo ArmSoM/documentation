@@ -15,7 +15,7 @@ npm run start
 npm run start -- --locale zh
 ```
 
-### 
+### build
 
 ```
 npm run build

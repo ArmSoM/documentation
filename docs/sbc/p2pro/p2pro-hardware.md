@@ -9,32 +9,32 @@ sidebar_position: 4
 ## LM7 硬件资料
 
 ### 引脚功能表格
-[ArmSoM-LM7 引脚功能表格](/hardware/lm/LM7/ArmSoM-LM7_Pin_and_Function_List20230603.xlsx) - 引脚功能表格下载
+[ArmSoM-LM7 引脚功能表格](/hardware/lm/lm7/ArmSoM-LM7_Pin_and_Function_List20230603.xlsx) - 引脚功能表格下载
 
 ### 封装
 
-[ArmSoM-LM7 封装](/hardware/lm/LM7/LGA506_45R0X50R0_2005.asc) - 封装下载
+[ArmSoM-LM7 封装](/hardware/lm/lm7/LGA506_45R0X50R0_2005.asc) - 封装下载
 
 ## LM7 开发套件(ArmSoM-W3) 硬件资料
 
 ### 原理图
-[ArmSoM-W3_1V1 原理图pdf](/hardware/lm/LM7/ArmSoM_W3_1V1_SCH.pdf) - 原理图pdf下载
+[ArmSoM-W3_1V1 原理图pdf](/hardware/lm/lm7/ArmSoM_W3_1V1_SCH.pdf) - 原理图pdf下载
 
-[ArmSoM-W3_1V1 原理图orcad](/hardware/lm/LM7/ArmSoM_W3_1V1_SCH.DSN) - 原理图原始文件（orcad）下载
+[ArmSoM-W3_1V1 原理图orcad](/hardware/lm/lm7/ArmSoM_W3_1V1_SCH.DSN) - 原理图原始文件（orcad）下载
 
 ### PCB
 
-[ArmSoM-W3_1V1 PCB PADS](/hardware/lm/LM7/ArmSoM_W3_1V1.pcb) - PCB原始文件（PADS）下载
+[ArmSoM-W3_1V1 PCB PADS](/hardware/lm/lm7/ArmSoM_W3_1V1.pcb) - PCB原始文件（PADS）下载
 
 ### 2D CAD 图
 
-[ArmSoM-W3 底部](/hardware/lm/LM7/ArmSoM_W3_1V1_bot.dxf) - 2D CAD 文件下载
+[ArmSoM-W3 底部](/hardware/lm/lm7/ArmSoM_W3_1V1_bot.dxf) - 2D CAD 文件下载
 
-[ArmSoM-W3 顶部](/hardware/lm/LM7/ArmSoM_W3_1V1_top.dxf) - 2D CAD 文件下载
+[ArmSoM-W3 顶部](/hardware/lm/lm7/ArmSoM_W3_1V1_top.dxf) - 2D CAD 文件下载
 
 ### 位号图
 
-[ArmSoM-W3_1V1 位号图](/hardware/lm/LM7/ArmSoM_W3_1V1_SMD.pdf) -  位号图下载
+[ArmSoM-W3_1V1 位号图](/hardware/lm/lm7/ArmSoM_W3_1V1_SMD.pdf) -  位号图下载
 
 ### 硬件引脚定义
 
