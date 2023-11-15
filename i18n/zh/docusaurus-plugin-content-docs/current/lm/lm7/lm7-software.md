@@ -316,8 +316,21 @@ root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm
 ArmSoM-W3 提供两个 M.2 连接器：
 
 - 主板正面有一个带 2230 安装孔的 M.2 E Key 连接器，提供 PCIe 2.1 单通道、USB、SATA、SDIO、PCM 和 UART 信号，支持工业标准 M.2 WiFi 6 模块。  
-  ArmSoM 推荐使用 RTL8852BE。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
+  ArmSoM 推荐使用 RTL8852BE，AP6256。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
 
+```
+# 加载驱动
+root@linaro-alip:/# insmod system/lib/modules/rtkm.ko
+root@linaro-alip:/# insmod system/lib/modules/rtkm.ko
+root@linaro-alip:/# insmod /usr/lib/modules/rtk_btusb.ko
+root@linaro-alip:/# lsmod
+Module                  Size  Used by
+8852be               4030464  0
+rtkm                   16384  1 8852be
+rtk_btusb              57344  0
+```
+
+#### WIFI
 ```
 # 1. Switch to super user mode
 root@linaro-alip:/# sudo su
@@ -328,6 +341,23 @@ root@linaro-alip:/# nmcli dev wifi
 # 4. Connect to WIFI network
 root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
+
+
+#### BT
+
+```
+# 1. 激活蓝牙
+root@linaro-alip:/# service bluetooth start
+# 2. 进入bluetoothctl
+root@linaro-alip:/# bluetoothctl
+# 3. 输入以下命令即可连接
+root@linaro-alip:/# power on
+root@linaro-alip:/# agent on
+root@linaro-alip:/# default-agent
+root@linaro-alip:/# scan on
+root@linaro-alip:/# pair yourDeviceMAC
+```
+
 
 - 在板的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
   **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
