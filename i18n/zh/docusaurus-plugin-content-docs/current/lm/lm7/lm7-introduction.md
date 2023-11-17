@@ -20,7 +20,7 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
   - 硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - 硬编码：8K@30fps H.265 / H.264
 - RAM：4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
-- Flash：16GB/32GB/64GB/128GB/256GB eMMC，默认eMMC 32GB
+- Flash：16GB/32GB/64GB/128GB eMMC，默认eMMC 32GB
 - 工作电压：电压 4V（电压误差±5%）
 - 工作温度：0℃ ~ 70℃
 - 接口类型：LGA封装（栅格阵列封装），总引脚数 506Pin
@@ -249,7 +249,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 E key 接口(PCIe 2.1 1-lane)，支持PCIe/SATA/USB/SDIO/UART 并可外接Bluetooth/WIFI模块</li><li>1x M.2 M key 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
+            <th><li>1x M.2 Key E 接口(PCIe 2.1 1-lane)，支持PCIe/SATA/USB/SDIO/UART 并可外接Bluetooth/WIFI模块</li><li>1x M.2 Key M 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
         </tr>
         <tr>
             <th>网络</th>
