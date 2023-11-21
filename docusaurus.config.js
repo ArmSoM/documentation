@@ -82,7 +82,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/docusaurus-social-card.png',
       navbar: {
         title: '',
         logo: {
@@ -112,6 +112,12 @@ const config = {
             position: 'left',
             sidebarId: 'cm',
             label: 'CM',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'general-tutorial',
+            label: 'General Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {

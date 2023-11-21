@@ -14,7 +14,7 @@ ArmSoM-p2pro 是 ArmSoM 社区基于 Rockchip RK3308B-S 的 SBC（单板计算�
 
 - SOC：瑞芯微RK3308B-S
 - CPU：四核ARM Cortex-A35@ 1.3GHz，28纳米制程
-- RAM：256MB/512MB DDR3，，默认DDR3 512MB
+- RAM：256MB/512MB DDR3，默认DDR3 512MB
 - Flash：8GB eMMC
 - WiFi&Bluetooth：802.11 a/b/g/n/ac & BT5.0（AP6256）
 - 音频：支持 various audio interfaces,such as MIC/PDM/SPDIF/I2S
@@ -58,7 +58,7 @@ ArmSoM-p2pro 小巧的尺寸，合理的接口布局，方便客户产品化
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>256MB/512MB DDR3，，默认DDR3 512MB</li></th>
+            <th><li>256MB/512MB DDR3，默认DDR3 512MB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
@@ -66,7 +66,7 @@ ArmSoM-p2pro 小巧的尺寸，合理的接口布局，方便客户产品化
         </tr>
         <tr>
             <th>网络</th>
-            <th><li>1x 100兆网口 （支持 PoE）</li></th>
+            <th><li>1x 100兆网口（支持 PoE）</li></th>
         </tr>
         <tr>
             <th>USB接口</th>

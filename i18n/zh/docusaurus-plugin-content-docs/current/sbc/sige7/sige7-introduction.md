@@ -15,7 +15,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 - SOC：瑞芯微 RK3588
 - CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
 - GPU：ARM Mali-G610 MP4
-- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算，使用
+- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
 - VPU/编解码：
   - 硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - 硬编码：8K@30fps H.265 / H.264
@@ -40,3 +40,6 @@ ArmSoM-Sige7拥有极小尺寸，您的口袋电脑。
 
 :::
 ![ArmSoM-Sige7 front & back](/img/sbc/sige7/armsom-sige7-layout.jpg)
+
+
+板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5

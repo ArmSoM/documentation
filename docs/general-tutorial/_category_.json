@@ -1,8 +1,8 @@
 {
-  "label": "General tutorials",
+  "label": "General Tutorials",
+  "position": 1,
   "link": {
-    "slug": "/general-tutorial",
-    "type": "generated-index"
-  },
-  "position": 2
+    "type": "generated-index",
+    "description": "11111111111111111"
+  }
 }

@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "The ArmSoM-LM7 uses the Rockchip RK3588, extremely small size 45mm × 50mm × 4.5mm. armsom provides complete development board hardware information to help you quickly develop and verify products"
+    "description": "The ArmSoM-LM7 uses the Rockchip RK3588, extremely small size 45mm × 50mm × 4.5mm. ArmSoM provides complete development board hardware information to help you quickly develop and verify products"
   }
 }

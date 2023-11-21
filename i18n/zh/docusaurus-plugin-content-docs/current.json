@@ -3,14 +3,17 @@
         "description": "The label for category LM Family in sidebar tutorialSidebar",
         "message": "lm7"
     },
+    "sidebar.general-tutorial.category.General tutorial.link.generated-index.description": {
+        "message": "ArmSoM 通用教程，适用于 ArmSoM 全部产品"
+    },
+    "sidebar.general-tutorial.category.General tutorial.link.generated-index.title": {
+        "message": "通用教程"
+    },
+    "sidebar.general-tutorial.category.General tutorial": {
+        "message": "通用教程"
+    },
     "sidebar.lm.category.lm7.link.generated-index.description": {
         "message": "ArmSoM-LM7采用瑞芯微RK3588，其强大的功能加上极小的尺寸适用于各种嵌入式场景，我们将提供完善的​​底板参考设计资料，可自主深度化定制，帮助用户快速开发和验证产品。"
-    },
-    "sidebar.lm.category.general tutorial": {
-        "message": "通用教程"
-    },
-    "sidebar.sbc.category.general tutorial": {
-        "message": "通用教程"
     },
     "sidebar.sbc.category.p2pro.link.generated-index.description": {
         "message": "ArmSoM-p2pro采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网 和语音应用程序。"

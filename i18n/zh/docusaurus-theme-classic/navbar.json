@@ -1,6 +1,10 @@
 {
-  "item.label.About": {
+  "item.label.General Tutorial": {
     "description": "Navbar item with label About",
-    "message": "关于"
+    "message": "通用教程"
+  },
+  "item.label.Blog": {
+    "description": "Navbar item with label About",
+    "message": "博客"
   }
 }
