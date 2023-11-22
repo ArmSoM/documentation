@@ -1,6 +1,6 @@
 ---
 sidebar_label: "串口设置教程"
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 # USB 转 TTL 串口线使用教程
