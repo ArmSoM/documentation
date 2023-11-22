@@ -89,7 +89,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 1. 准备Type-C线，用于镜像烧录
 2. 将所有有可能给产品供电的接线都断开，如电源线，USB线等
 3. 使用一根Type-C线一端连接到产品的OTG接口，另一端连接电脑的usb接口，然后打开软件RKDevTool
-4. 按住MASKROM按键，然后使用DC供电连接给产品通电
+4. 按住MASKROM按键，然后使用 DC 给产品供电
 5. 等待软件提示 发现一个MASKROM设备（如下图所示），即可松开按键
 6. 如果不成功，重复2-5步骤。
 ```
@@ -105,7 +105,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 刷写进度显示在右边，完成后它会提示你：
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
 
-#### 2.2.5. Recovery模式烧录镜像
+#### 2.2.5. Loader模式烧录镜像
 
 该模式适合 系统能够正常运行的产品
 
@@ -115,7 +115,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 1. 准备Type-C线，用于镜像烧录
 2. 将所有有可能给产品供电的接线都断开，如电源线，USB线等
 3. 使用一根Type-C线一端连接到产品的OTG接口，另一端连接电脑的usb接口，然后打开软件RKDevTool
-4. 按住Recovery按键，然后使用DC供电连接给产品通电
+4. 按住Recovery按键，然后使用 DC 给产品供电
 5. 等待软件提示 发现一个LOADER设备（如下图所示），即可松开按键
 6. 如果不成功，重复2-5步骤。
 ```
@@ -126,18 +126,34 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 
 镜像烧录到SD卡需要专用烧录软件和SD卡读卡器
 
-### 2.2.1 安装SDDiskTool
+#### 2.2.1 安装SDDiskTool
 
 烧录镜像到eMMC需要使用到烧录工具 SDDiskTool_版本号.exe
 
 点击进入链接:[百度网盘链接](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
 
+![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
+
 解压压缩包后无需安装即可使用，双击 SD_Firmware_Tool.exe 进入软件界面。
 
-### 2.2.2 烧录镜像
+
+#### 2.2.2 烧录镜像
 
 打开烧录SDDiskTool的可执行文件SD_Firmware_Tool.exe并插入SD卡。
 
-首先选择正确的要烧录的SD卡，然后将功能模式选择位 SD启动 ， 再选择要烧录的镜像，最后点击开始创建烧录镜像到SD卡。
+首先选择正确的要烧录的SD卡，然后将功能模式选择位 SD Boot ， 再选择要烧录的镜像，最后点击开始创建烧录镜像到SD卡。
+
+![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
 
 耐心等待SD卡烧录完整，当镜像较大时，烧录的时间会相应变长。
+
+:::tip 烧录SD卡镜像报错
+点击 Create 会有一定概率报错说无法烧录，可以关闭错误窗口再进行开始创建，如果还不行尝试格式化SD卡。
+:::
+
+:::note Maskrom模式烧录 和 Loader模式烧录有什么区别？
+* Maskrom：Flash 在未烧录固件时，芯⽚会引导进⼊ Maskrom 模式，可以进⾏初次固件的烧写；
+开发调试过程中若遇到 Loader ⽆法正常启动的情况，也可进⼊ Maskrom 模式烧写固件。
+* Loader：原理是在uboot启动期间检测到引脚被按下，Loader 模式下，可以进⾏固件的烧写、升级。
+可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
+:::

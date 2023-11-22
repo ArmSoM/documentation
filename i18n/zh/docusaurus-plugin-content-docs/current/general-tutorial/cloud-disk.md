@@ -26,11 +26,11 @@ ArmSoM 发布的所有产品软件资源都会同步到百度网盘供用户下�
 
 存放产品使用或开发过程中可能使用到的工具和软件包，例如串口驱动、烧录工具等，具体查看文件夹中的说明文件。
 
-**Linux_Upgrade_Tool**： linux环境命令行开发工具，为开发人员提供了固件烧录
+**Linux_Upgrade_Tool**： Linux 下开发的⼯具，⽀持固件的升级
 
-**FactoryTool**：USB量产烧录工具，适用于RK格式镜像
+**FactoryTool**：量产升级⼯具，⽀持 USB ⼀拖多烧录
 
-**RKDevTool 烧写工具**：瑞芯微开发工具,用于USB烧录RK格式(Ubuntu/Debian)完整镜像或分区烧录镜像到EMMC。
+**RKDevTool 烧写工具**：瑞芯微开发⼯具，分⽴升级固件及整个 update 升级固件⼯具
  
 **RK驱动助手**：瑞芯微驱动程序，Windows版本
 
