@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # 系统镜像烧录
 
-启动产品需要三个步骤：烧录系统，启动系统和系统登录
+启动产品需要两个步骤：烧录系统，启动系统
 
 ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以根据自己需求选择相应的镜像下载
 
@@ -97,7 +97,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 可以点击 firmware 选择要烧录的镜像，如armsom-w3-debian-bullseye-xfce4-arm64-20231115e.img，再点击Upgrade烧录。
 
 :::tip
-百度网盘下载的固件需要解压后才能加载
+百度网盘下载的固件需要解压后才能加载，Windows PC需要在管理员权限运行工具才可执行。
 :::
 
 ![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.png)
@@ -122,7 +122,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
 
-### 2.2. 烧录镜像到SD卡
+### 2.2. 烧录官方镜像到SD卡
 
 镜像烧录到SD卡需要专用烧录软件和SD卡读卡器
 
@@ -157,3 +157,22 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 * Loader：原理是在uboot启动期间检测到引脚被按下，Loader 模式下，可以进⾏固件的烧写、升级。
 可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
 :::
+
+### 2.3. 烧录armbian系统到SD卡
+
+该方法适用于烧录系统到SD卡， Windows、MacOS、Linux x64 操作系统都可用。
+
+
+1. 从 [balena 官网](https://etcher.balena.io/) 下载 balenaEtcher ，选择指定主机系统下载。该处Linux的程序格式是 AppImage，某些用户可能需要通过chmod命令修改成**_可执行_**运行即可。
+
+2. 将要烧录的 MicroSD卡插入 MicroSD读卡器
+
+3. 打开 etcher 窗口，首先选择 Flash from file，找到您镜像下载位置，双击选择。
+![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-from-file.png)
+
+
+4. 然后点击 Select target，选择自己要烧录的 MicroSD卡。
+5. 点击 Flash, 烧录等待成功，这里需要一段时间。
+6. 烧录成功，会显示如图所示
+![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-success.png)
+

@@ -22,6 +22,7 @@ const FeatureList = [
         Start your favorite SBC/SOM, Provide complete product usage documentation to help software engineers quickly develop applications.
       </Translate>
     ),
+    hrefLink: "./docs/sbc/sbc-introduction"
   },
   {
     title: (
@@ -40,6 +41,7 @@ const FeatureList = [
         Help hardware engineers quickly develop and put into production
       </Translate>
     ),
+    hrefLink: "./docs/sbc/sbc-introduction"
   },
    {
     title: (
@@ -57,26 +59,30 @@ const FeatureList = [
         The armsom community is powered by a passionate of developers that publish videos, guides, and open source projects.
       </Translate>
     ),
+    hrefLink: "http://forum.armsom.org/"
   },
 ];
 
-function Feature({ image,title, description, index}) {
+function Feature({ image,title, description,hrefLink, index}) {
   return (
-    <div className={clsx('col col--4',index === 3 && 'col--offset-4')}>
-      <div className="text--center">
-      <img
-        className={styles.featureImage}
-        width={Math.floor(image.width)}
-        height={Math.floor(image.height)}
-        src={(image.src)}
-        loading="lazy"
-      />
+  
+      <div className={clsx('col col--4',index === 3 && 'col--offset-4')}>
+        <div className="text--center">
+        <a href={hrefLink} target="_blank"> 
+        <img
+          className={styles.featureImage}
+          width={Math.floor(image.width)}
+          height={Math.floor(image.height)}
+          src={(image.src)}
+          loading="lazy"
+        />
+        </a>
+        </div>
+        <div className="text--center padding-horiz--md">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
   );
 }
 
