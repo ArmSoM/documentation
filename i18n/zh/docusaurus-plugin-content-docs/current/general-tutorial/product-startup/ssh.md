@@ -43,7 +43,7 @@ ip a
 其中与主机同一个网段的IP地址即是SSH连接时所需要的ip地址，如以下输出中 192.168.10.59 即是我们需要的ip地址:
 
 ```
-armsom@ArmSoM-W3:~$ ip a
+armsom@armsom-w3:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo

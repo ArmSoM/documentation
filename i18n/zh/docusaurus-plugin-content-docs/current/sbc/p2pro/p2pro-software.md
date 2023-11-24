@@ -36,65 +36,7 @@ ArmSoM-p2pro使用手册，帮助软件工程师掌握开发板使用 。
 * USB-A型转USB-C型数据线
 
 ## 烧录方式选择
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-:::tip
-
-ArmSoM-p2pro 支持 Loader 模式，该特殊操作模式是 CPU 通过 USB OTG 端口接收命令。 
-
-插电启动板子，LED绿灯亮，插入 USB A 转 Typec 数据线连接电脑
-Loader模式：按住板子上的 Recovery 按键不松手，再短按 reset 键。或进入系统后在终端输入 ```reboot loader``` 命令
-
-![armsom-p2pro-typec-install-file](/img/sbc/p2pro/armsom-p2pro-typec-install-file.jpg)
-
-:::
-
-<Tabs>
-<TabItem value="RKDevTool" label="RKDevTool" default>
-
-该方式适合于烧录系统到eMMC, 在 Windows 下使用 RKDevTool。
-
-1. 在 Windows 下安装工具以及 RK 驱动：
-
-  [RKDevTool V3.18](/tools/RKDevTool.rar)
-
-  [DriverAssitant V5.12](/tools/DriverAssitant_v5.12.zip)
-
-1. 把ArmSoM-p2pro启动到 Loader 模式，两种方式都可以烧录固件
-
-  2.1 打开 RKdevtool
-
-  这是没检测到 Loader 设备的界面：
-  ![rkdevtool-no-device-found](/img/tools/rkdevtool-no-device-found.png)
-
-  这是检测到 Loader 设备的界面：
-  ![rkdevtool-found-one-loader-device](/img/tools/rkdevtool-found-one-loader-device.png)
-
-  2.2 刷写进度显示在右边，完成后它会提示你：
-    ![rkdevtool-success](/img/tools/rkdevtool-success.png)
-
-</TabItem>
-	<TabItem value="Etcher" label="Etcher 方式" >
-该方法适用于烧录系统到SD卡， Windows、MacOS、Linux x64 操作系统都可用。
-
-
-1. 从 [balena 官网](https://etcher.balena.io/) 下载 balenaEtcher ，选择指定主机系统下载。该处Linux的程序格式是 AppImage，某些用户可能需要通过chmod命令修改成**_可执行_**运行即可。
-
-2. 将要烧录的 MicroSD卡插入 MicroSD读卡器
-
-3. 打开 etcher 窗口，首先选择 Flash from file，找到您镜像下载位置，双击选择。
-![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-from-file.png)
-
-
-4. 然后点击 Select target，选择自己要烧录的 MicroSD卡。
-5. 点击 Flash, 烧录等待成功，这里需要一段时间。
-6. 烧录成功，会显示如图所示
-![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-success.png)
-
-</TabItem>
-
-</Tabs>
+[系统镜像烧录](../../general-tutorial/flash-img)
 
 ## 接口设置
 

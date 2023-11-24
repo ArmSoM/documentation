@@ -12,7 +12,15 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 #### 下载
 以下系统已由ArmSoM官方测试验证：
 
-[armsom-w3-debian-bullseye-xfce4-arm64-20231115](https://pan.baidu.com/s/10jxCHyhV-LFRt_0ej-UD_w?pwd=arms)
+网盘地址：[百度网盘链接](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+
+**debain bullseye**
+
+固件位置：3. Linux镜像/debian/ArmSoM-LM7(Development Kit ArmSoM-W3)
+
+**安卓12**
+
+固件位置：4. 安卓镜像/ArmSoM-LM7(Development Kit ArmSoM-W3)
 
 #### 发布信息
 

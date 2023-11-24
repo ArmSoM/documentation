@@ -77,7 +77,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 
 软件主要有三大部分，分别是下载镜像（可根据地址烧录镜像）、升级固件和高级功能
 
-#### 2.2.4. MASKROM模式烧录镜像
+#### 2.1.4. MASKROM模式烧录镜像
 
 该模式适合产品未烧录系统或烧录的系统损坏无法运行 **（适应一切状况）**
 
@@ -105,7 +105,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 刷写进度显示在右边，完成后它会提示你：
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
 
-#### 2.2.5. Loader模式烧录镜像
+#### 2.1.5. Loader模式烧录镜像
 
 该模式适合 系统能够正常运行的产品
 
@@ -121,6 +121,18 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 ```
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
+
+:::tip 烧写失败分析
+如果烧写过程中出现Download Boot Fail, 或者烧写过程中出错，如下图所示，通常是由于使用的USB线连接不良、劣质线材，或者电脑USB口驱动能力不足导致的，请更换USB线或者电脑USB端口排查。
+:::
+
+:::note Maskrom模式烧录 和 Loader模式烧录有什么区别？
+* Maskrom：Flash 在未烧录固件时，芯⽚会引导进⼊ Maskrom 模式，可以进⾏初次固件的烧写；
+开发调试过程中若遇到 Loader ⽆法正常启动的情况，也可进⼊ Maskrom 模式烧写固件。
+* Loader：原理是在uboot启动期间检测到引脚被按下，Loader 模式下，可以进⾏固件的烧写、升级。
+可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
+:::
+
 
 ### 2.2. 烧录官方镜像到SD卡
 
@@ -149,13 +161,6 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 
 :::tip 烧录SD卡镜像报错
 点击 Create 会有一定概率报错说无法烧录，可以关闭错误窗口再进行开始创建，如果还不行尝试格式化SD卡。
-:::
-
-:::note Maskrom模式烧录 和 Loader模式烧录有什么区别？
-* Maskrom：Flash 在未烧录固件时，芯⽚会引导进⼊ Maskrom 模式，可以进⾏初次固件的烧写；
-开发调试过程中若遇到 Loader ⽆法正常启动的情况，也可进⼊ Maskrom 模式烧写固件。
-* Loader：原理是在uboot启动期间检测到引脚被按下，Loader 模式下，可以进⾏固件的烧写、升级。
-可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
 :::
 
 ### 2.3. 烧录armbian系统到SD卡
