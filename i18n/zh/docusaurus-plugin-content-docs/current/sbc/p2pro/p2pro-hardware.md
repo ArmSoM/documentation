@@ -49,11 +49,12 @@ sidebar_position: 4
 |          | MICP5  | <div className='green'>33</div>  | <div className='green'>34</div> | MICN5     |             |
 |          | MICP6  | <div className='green'>35</div>  | <div className='green'>36</div> | MICN6 |          |
 |          | MICP7 | <div className='green'>37</div>  | <div className='green'>38</div> |  MICN7   |          |
-|          |   MICP8    | <div className='green'>39</div>  | <div className='green'>40</div> |   MICN8  |     107     |
+|          |   MICP8    | <div className='green'>39</div>  | <div className='green'>40</div> |   MICN8  |          |
 
 </div>
 
 #### 12-PIN 座子
+
 <div className='gpio_style'>
 
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
