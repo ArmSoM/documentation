@@ -12,7 +12,7 @@ sidebar_position: 4
 
 ### 原理图
 
-[ArmSoM-p2pro_1V1 原理图pdf](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf，原始文件（orcad）下载
+[ArmSoM-p2pro_1V1 原理图pdf](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf
 
 ### 2D CAD 图
 

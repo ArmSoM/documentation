@@ -20,11 +20,11 @@ sidebar_position: 4
 
 ### 原理图
 
-[ArmSoM-W3_1V1 原理图pdf，orcad原始文件](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf，原始文件（orcad）下载
+[ArmSoM-W3_1V1 原理图pdf，orcad源文件](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf，源文件（orcad）下载
 
 ### PCB
 
-[ArmSoM-W3_1V1 PCB PADS](https://pan.baidu.com/s/1H45A34d7bLm00fh1Oj0ynA?pwd=arms ) - PCB原始文件（PADS）下载
+[ArmSoM-W3_1V1 PCB PADS](https://pan.baidu.com/s/1H45A34d7bLm00fh1Oj0ynA?pwd=arms ) - PCB源文件（PADS）下载
 
 ### 2D CAD 图
 
