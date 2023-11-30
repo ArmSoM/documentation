@@ -4,23 +4,28 @@ sidebar_position: 4
 
 # 硬件资料
 
-获取 p2pro 原理图、DXF等硬件资料
+获取 Sige7 原理图、DXF等硬件资料
 
-## p2pro 硬件资料
+## Sige7 硬件资料
 
 点击进入链接: [百度网盘链接](https://pan.baidu.com/s/1YzTRiSsw2eJ0UFLxHJ7B-A?pwd=arms )
 
 ### 原理图
 
-[ArmSoM-p2pro_1V1 原理图pdf](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf
+[ArmSoM-Sige7_1V0 原理图pdf](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf
+[ArmSoM-Sige7_1V1 原理图pdf](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf
 
 ### 2D CAD 图
 
-[ArmSoM-p2pro_1V1 底部，顶部](https://pan.baidu.com/s/1REHKRQTdJgXPO_1bWNB5Wg?pwd=arms) - 2D CAD 文件下载
+[ArmSoM-Sige7_1V0 底部，顶部](https://pan.baidu.com/s/1REHKRQTdJgXPO_1bWNB5Wg?pwd=arms) - 2D CAD 文件下载
+[ArmSoM-Sige7_1V1 底部，顶部](https://pan.baidu.com/s/1REHKRQTdJgXPO_1bWNB5Wg?pwd=arms) - 2D CAD 文件下载
+
 
 ### 位号图
 
-[ArmSoM-p2pro_1V1 位号图](https://pan.baidu.com/s/1XvIFdjdpIluafuSrsSZUcg?pwd=arms ) -  位号图下载
+[ArmSoM-Sige7_1V0 位号图](https://pan.baidu.com/s/1XvIFdjdpIluafuSrsSZUcg?pwd=arms ) -  位号图下载
+[ArmSoM-Sige7_1V1 位号图](https://pan.baidu.com/s/1XvIFdjdpIluafuSrsSZUcg?pwd=arms ) -  位号图下载
+
 
 ### 硬件引脚定义
 
