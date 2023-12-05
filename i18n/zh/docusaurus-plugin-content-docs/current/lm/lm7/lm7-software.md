@@ -298,7 +298,7 @@ root@linaro-alip:/# pair yourDeviceMAC
 ```
 
 
-- 在板的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
+- 产品的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
   **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
 
 ```

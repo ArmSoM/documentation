@@ -1,0 +1,79 @@
+---
+sidebar_label: "Rockchip启动介绍"
+sidebar_position: 5
+---
+
+# Rockchip启动介绍
+
+首先我们明确一个概念，当我们启动 linux 系统的时候有很多启动阶段；
+
+然后我们需要知道固件如何打包，以及存放的位置；
+
+最后，我们将解释如何写入不同的介质并从那里启动
+这里是Rockchip预发布的rkbian，可能后面会提到
+
+https://github.com/rockchip-linux/rkbin
+
+## 开机流程
+
+本章介绍Rockchip处理器的通用启动流程，包括在Rockchip平台可以使用哪些镜像作为启动路径的详细信息。
+
+- 使用来自upsream或者rockhip U-Boot中的 U-Boot TPL/SPL，完整的源码。
+- 使用 Rockchip idbLoader , 它由 Rockchip ddr init bin文件 和 Rockchip rkbin 项目中的miniloader bin文件组合而成
+
+```
++--------+----------------+----------+-------------+---------+
+|启动阶段 | 术语           | 程序名称  | RK镜像名称   | 镜像位置   |
++--------+----------------+----------+-------------+---------+
+| 1      |  Primary       | ROM code | BootRom     |         |
+|        |  Program       |          |             |         |
+|        |  Loader        |          |             |         |
+|        |                |          |             |         |
+| 2      |  Secondary     | U-Boot   |idbloader.img| 0x40    | pre-loader
+|        |  Program       | TPL/SPL  |             |         |
+|        |  Loader (SPL)  |          |             |         |
+|        |                |          |             |         |
+| 3      |  -             | U-Boot   | u-boot.itb  | 0x4000  | including u-boot and atf
+|        |                |          | uboot.img   |         | only used with miniloader
+|        |                |          |             |         |
+|        |                | ATF/TEE  | trust.img   | 0x6000  | only used with miniloader
+|        |                |          |             |         |
+| 4      |  -             | kernel   | boot.img    | 0x8000  |
+|        |                |          |             |         |
+| 5      |  -             | rootfs   | rootfs.img  | 0x40000 |
++--------+----------------+----------+-------------+---------+
+```
+
+当我们讨论从 eMMC/SD/U-Disk/net 启动时，它们是不同的概念
+* 第 1 阶段始终位于引导 ROM 中，它加载第 2 阶段，并且可能加载第 3 阶段（当启用 SPL_BACK_TO_BROM 选项时）。
+* 从 SPI flash 启动意味着 SPI flash 中的第 2 和第 3 阶段（仅限 SPL 和 U-Boot）固件以及其他地方的第 4/5 阶段的固件；
+* 从eMMC启动是指eMMC中的所有固件（包括阶段2、3、4、5）；
+* 从SD卡启动是指SD卡中的所有固件（包括阶段2、3、4、5）；
+* 从 U 盘启动是指磁盘中第 4 阶段和第 5 阶段（不包括 SPL 和 U-Boot）的固件，可选地仅包括第 5 阶段；
+* Boot from net/tftp 表示网络上第 4 阶段和第 5 阶段的固件（不包括 SPL 和 U-Boot）；
+
+![rockchip-boot](/img/general-tutorial/rockchip-boot.jpg)
+
+引导流程 1 是典型的采用 Rockchip miniloader 的 Rockchip 引导流程；
+引导流程 2 适用于大多数 SoC，其中 U-Boot TPL 用于 ddr 初始化，SPL 用于信任（ATF/OP-TEE）加载并运行到下一阶段；
+
+注 1. 如果 loader1 有超过 1 个阶段，程序将返回到 bootrom，并加载 bootrom 并运行到下一个阶段。例如。如果loader1是tpl和spl，则bootrom将首先运行到tpl，tpl init ddr并返回到bootrom，bootrom加载并运行到spl。
+注2.如果启用trust，loader1需要同时加载trust和u-boot，然后在安全模式下运行trust（armv8中的EL3），trust进行初始化并在非安全模式下运行U-Boot（EL2）在armv8中）。
+注3：对于trust（在trust.img或u-boot.itb中），armv7只有一个tee.bin，armv8有bl31.elf和bl32的选项。
+注4. boot.img中的内容可以是Linux下的zImage及其dtb，也可以选择grub.efi，也可以是AOSP boot.img，ramdisk是可选的；
+
+## 打包选项
+
+在我们了解启动之后，
+
+这里是第2 ~ 4 阶段前的打包列表：
+
+有源码：
+    * 来自 U-Boot: u-boot-spl.bin，u-boot.bin(可能使用 u-boot-nodtb.bin 和 u-boot.dtb 代替)
+    * 来自 kernel: kernel Image/zImage file, kernel dtb,
+    * 来自 ATF（ARM Trusted firmware）：bl31.elf
+Rockchip提供的二进制文件：
+    * ddr，usbplug，miniloader,bl31/op-tee,(全部带有 'rkxx_'的芯片和 '_x.xx.bin' 后缀)
+    
+我们针对不同的解决方案提供了两种不同的引导加载程序方法，步骤和请求文件也完全不同。但并非所有平台都支持这两种引导加载程序方法。以下是从这些文件打包图像的类型：
+
