@@ -1,4 +1,5 @@
 ---
+sidebar_label: "产品简介"
 sidebar_position: 2
 ---
 
@@ -33,7 +34,7 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 
 ## ArmSoM-LM7
 
-### 实物图
+### 实物图(LM7及LM7-M)
 
 :::info
 
@@ -41,7 +42,9 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 :::
 ![ArmSoM-LM7 front & back](/img/lm/lm7/armsom-rk3588_lga_core_board_front_back.png)
+![ArmSoM-LM7-M front ](/img/lm/lm7/SOM-3588M-LGA.jpg)
 ![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm7/Credit-Card-Size.webp)
+
 
 ### 硬件规格
 
@@ -200,7 +203,11 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ## ArmSoM-LM7 开发套件(ArmSoM-W3)
 
-### 实物图
+### 实物图搭载 RK3588M
+
+![ArmSoM-LM7-M development kit](/img/lm/lm7/armsom-lm7-m-development-kit.jpg)
+
+### 实物图搭载 RK3588
 
 ![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
 
@@ -217,7 +224,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
     <tbody align="left">
         <tr>
             <th>SOC</th>
-            <th><li>RockChip RK3588</li></th>
+            <th><li>RockChip RK3588/RK3588M/RK3588J</li></th>
         </tr>
         <tr>
             <th>CPU</th>
@@ -297,11 +304,11 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
         </tr>
         <tr>
             <th>工作温度</th>
-            <th><li>0℃ ~ 70℃</li></th>
+            <th><li>RK3588：0℃ ~ 70℃</li><li>RK3588M：-40℃ ~ 85℃</li></th>
         </tr>
         <tr>
-            <th>存储温度</th>
-            <th><li>-20℃ ~ 80℃</li></th>
+            <th>工作湿度</th>
+            <th><li>10%～90%（无凝露）</li></th>
         </tr>
     </tbody>
 </table>
