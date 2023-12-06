@@ -3,7 +3,7 @@ sidebar_label: "官方操作系统"
 sidebar_position: 4
 ---
 
-# ArmSoM-p2pro 官方操作系统
+# ArmSoM-P2pro 官方操作系统
 
 ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
@@ -17,4 +17,4 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 **debain bullseye**
 
-固件位置：3. Linux镜像/debian/ArmSoM-p2pro
+固件位置：3. Linux镜像/debian/ArmSoM-P2pro

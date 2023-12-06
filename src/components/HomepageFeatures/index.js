@@ -31,7 +31,7 @@ const FeatureList = [
       </Translate>
     ),
     image: {
-      src: './img/Open-source-hardware-logo.svg',
+      src: './img/Open-source-hardware-logo.png',
       width: 1038.23,
       height: 693.31,
     },

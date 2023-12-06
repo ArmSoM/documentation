@@ -1,8 +1,8 @@
 {
-  "label": "sige7",
+  "label": "Sige7",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "ArmSoM-LM7是ArmSoM社区基于 Rockchip RK3588开发的SBC，其强大的功能加上极致的尺寸，给极客带来非凡的体验。"
   }
 }

@@ -109,7 +109,7 @@ pu rtscts           No
 minicom rockchip
 ```
 
-:::tip FAQs
+:::tip FAQ
 Q1：如果设备管理器没有看到设备
 > A1：需要自行安装对应串口的驱动
 

@@ -19,6 +19,6 @@
         "message": "ArmSoM-p2pro采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网 和语音应用程序。"
     },
     "sidebar.sbc.category.sige7.link.generated-index.description": {
-        "message": "ArmSoM-sige7 采用瑞芯微RK3588，其强大的功能加上极小的尺寸适用于各种嵌入式场景，DIY有趣的产品。"
+        "message": "ArmSoM-Sige7 采用瑞芯微RK3588，其强大的功能加上极小的尺寸适用于各种嵌入式场景，DIY有趣的产品。"
     }
 }

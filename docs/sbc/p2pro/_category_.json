@@ -1,8 +1,8 @@
 {
-  "label": "p2pro",
+  "label": "P2pro",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "ArmSoM-p2pro 是 ArmSoM 社区基于 Rockchip RK3308B-S 的 SBC，使其非常适合物联网和语音应用程序。"
   }
 }

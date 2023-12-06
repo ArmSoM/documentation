@@ -34,7 +34,7 @@ ArmSoM SBC系列产品开源资料的逐步完善中，涉及到多个方面，�
 
 |型号名称 |   [ ArmSoM-Sige7 ](/docs/sbc/sige7/sige7-introduction) |  [ ArmSoM-P2pro ](/docs/sbc/p2pro/p2pro-introduction) |
 | :--------: | :----------: | :----------: | 
-|缩略图   |  ![armsom-sige7](/img/sbc/sige7/armsom-sige7.jpg) | ![armsom-p2pro](/img/sbc/p2pro/armsom-p2pro.jpg) |
+|缩略图   |  ![armsom-Sige7](/img/sbc/sige7/armsom-sige7.jpg) | ![armsom-p2pro](/img/sbc/p2pro/armsom-p2pro.jpg) |
 | 主控 | RK3588 | RK3308 |
 | RAM | LPDDR4x |  DDR3 |
 | Flash |  eMMC |  eMMC | 

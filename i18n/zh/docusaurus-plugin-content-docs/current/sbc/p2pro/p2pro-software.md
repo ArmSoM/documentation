@@ -4,14 +4,14 @@ sidebar_position: 3
 
 # 使用手册
 
-ArmSoM-p2pro使用手册，帮助软件工程师掌握开发板使用 。
+ArmSoM-P2pro使用手册，帮助软件工程师掌握开发板使用 。
 
 
 ## 入门准备
-在开始使用 ArmSoM-p2pro 之前，请准备好以下物品
+在开始使用 ArmSoM-P2pro 之前，请准备好以下物品
 
 ### 工具准备
-* ArmSoM-p2pro 主板
+* ArmSoM-P2pro 主板
 * 电源（三选一）
   * 支持 USB Type-C 5V
   * 支持 PoE 5V
@@ -44,7 +44,7 @@ ArmSoM-p2pro使用手册，帮助软件工程师掌握开发板使用 。
 
 ### 100M 以太网口
 
-如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-p2pro 上的 RJ45 端口插入。
+如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-P2pro 上的 RJ45 端口插入。
 
 手动配置以太网
 - 切换root用户
@@ -70,7 +70,7 @@ $ sudo dhclient enP4p65s0
 
 ### 音频
 
-ArmSoM-p2pro 配备一个耳机 3.5mm 音频输出
+ArmSoM-P2pro 配备一个耳机 3.5mm 音频输出
 
 查看系统中的声卡。
 
@@ -183,18 +183,18 @@ arecord -D hw:0,0 -c 8 -r 44100 -f S16_LE --period-size=1024 --buffer-size=4096 
 
 ### USB接口
 
-ArmSoM-p2pro 提供1个 USB 2.0
+ArmSoM-P2pro 提供1个 USB 2.0
 
 ### Type-C
 
-ArmSoM-p2pro 配备 USB Type‑C™ 3.1 端口，支持5V供电
+ArmSoM-P2pro 配备 USB Type‑C™ 3.1 端口，支持5V供电
 
 ### RGB LED
 
-ArmSoM-p2pro 具有电源 LED 和用户 LED。
+ArmSoM-P2pro 具有电源 LED 和用户 LED。
 
 - 电源指示灯
-  电源 LED 为红灯， ArmSoM-p2pro默认通电时常亮。
+  电源 LED 为红灯， ArmSoM-P2pro默认通电时常亮。
 
 - 用户指示灯
   用户 LED 为绿色， 默认情况下，其闪烁状态显示正在运行的内核。

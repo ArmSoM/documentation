@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-#  FAQs
+#  FAQ
 
 Q1：如果在使用文档的过程中有疑问怎么办？
 

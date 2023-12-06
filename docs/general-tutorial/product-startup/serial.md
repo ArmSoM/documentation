@@ -109,7 +109,7 @@ Execute the following command to connect ArmSoM products based on Rockchip chips
 minicom rockchip
 ```
 
-:::tip FAQs
+:::tip FAQ
 Q1: If device manager does not see the device
 > A1: You need to install the driver corresponding to the serial port yourself
 
