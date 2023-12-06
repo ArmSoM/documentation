@@ -317,9 +317,5 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
             <th>Operating temperature</th>
             <th><li>0℃ ~ 70℃</li></th>
         </tr>
-        <tr>
-            <th>Storage temperature</th>
-            <th><li>-20℃ ~ 80℃</li></th>
-        </tr>
     </tbody>
 </table>

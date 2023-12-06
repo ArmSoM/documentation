@@ -134,11 +134,7 @@ ArmSoM-Sige7拥有极小尺寸，您的口袋电脑。
         </tr>
         <tr>
             <th>工作温度</th>
-            <th><li>0℃ ~ 70℃</li></th>
-        </tr>
-        <tr>
-            <th>存储温度</th>
-            <th><li>-20℃ ~ 80℃</li></th>
+            <th><li>0℃ ~ 80℃</li></th>
         </tr>
     </tbody>
 </table>
