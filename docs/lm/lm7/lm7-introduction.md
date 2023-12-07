@@ -51,9 +51,8 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 
 :::
 
-
 ![ArmSoM-LM7 front & back](/img/lm/lm7/armsom-rk3588_lga_core_board_front_back.png)
-![ArmSoM-LM7 & Credit Card Size](/img/lm/lm7/Credit-Card-Size.webp)
+![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm7/Credit-Card-Size.webp)
 
 ### Hardware Specification
 
@@ -218,7 +217,11 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 ## ArmSoM-LM7 Development Kit (ArmSoM-W3) 
 
-### Real Pictures
+### Real Pictures RK3588M
+
+![ArmSoM-LM7-M development kit](/img/lm/lm7/armsom-lm7-m-development-kit.jpg)
+
+### Real Pictures RK3588
 
 ![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
 

@@ -42,8 +42,8 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 :::
 ![ArmSoM-LM7 front & back](/img/lm/lm7/armsom-rk3588_lga_core_board_front_back.png)
-![ArmSoM-LM7-M front ](/img/lm/lm7/SOM-3588M-LGA.jpg)
 ![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm7/Credit-Card-Size.webp)
+
 
 
 ### 硬件规格
