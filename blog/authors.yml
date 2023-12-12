@@ -7,11 +7,17 @@ endi:
 yangshun:
   name: Yangshun Tay
   title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
+  url: https://github.com/zhouxp5300747
   image_url: https://github.com/yangshun.png
 
-slorber:
-  name: Sébastien Lorber
+keven:
+  name: keven zhou
   title: Docusaurus maintainer
-  url: https://sebastienlorber.com
+  url: https://github.com/zhouxp5300747
   image_url: https://github.com/slorber.png
+
+ArmSoM:
+  name: ArmSoM
+  title: Maintainer of ArmSoM
+  url: https://github.com/armsom
+  image_url: https://github.com/armsom.png

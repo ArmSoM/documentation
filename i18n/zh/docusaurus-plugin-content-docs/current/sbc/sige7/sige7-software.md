@@ -5,48 +5,43 @@ sidebar_position: 3
 
 # 使用手册
 
-LM7开发套件(ArmSoM-W3)使用手册，帮助软件工程师掌握开发板使用 。
+Sige7 使用手册，帮助您。
 
 
 ## 入门准备
-在开始使用 ArmSoM-W3 之前，请准备好以下物品
+在开始使用 ArmSoM-Sige7 之前，请准备好以下物品
 
 ### 工具准备
-* ArmSoM-W3 主板
-* 电源（三选一）
-  * 支持 9V/2A、12V/2A、15V/2A 和 20V/2A 的 USB Type-C PD 2.0
-  * 支持 DC 12V适配器，2.5mm
-  * 支持 PoE 12V
+* Sige7 主板
+* 电源 
+  * 支持 5V/3A, 12V/3A
 * 系统安装（二选一）
   * MicroSD卡/TF卡启动
-    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器，
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
     * 以下是经过ArmSoM团队测试验证的高速TF卡
       * SanDisk 32GB TF（MicroSD）（开发者推荐）
       * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
       * 闪迪 TF 8G Class10 microSD 
       * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
   * 板载eMMC启动
-    * USB A型转 C型数据线，从 typec 端口在 ArmSoM-W3 上写入镜像或使用 fastboot/adb 命令，您需要 USB A转type C数据线连接 ArmSoM-W3 和 PC。
+    * USB A型转 C型数据线，从 typec 端口在 Sige7 上写入镜像或使用 fastboot/adb 命令，您需要 USB A转type C数据线连接 Sige7 和 PC。
 
 ### 可选选项
 * USB 键盘鼠标
 * HDMI 显示器和 HDMI 线
-  * ArmSoM-W3配备了全尺寸 HDMI 接口，最高支持 8K@60 显示。
+  * Sige7配备了全尺寸 HDMI 接口，最高支持 8K@60 显示。
   * HDMI EDID用于确定最佳显示分辨率。 在支持 1080p（或 4K/8K）的显示器和电视上，将选择此分辨率。 如果不支持 1080p，EDID会找到的下一个可用分辨率。
 * Ethernet 线（网线）
-  * ArmSoM-W3支持以太网上网，最高支持2.5G。
-  * 网线用于将ArmSoM-W3连接到本地网络和互联网。
+  * Sige7 支持以太网上网，最高支持2.5G。
+  * 网线用于将 Sige7 连接到本地网络和互联网。
 * 摄像头模块
-  * ArmSoM-W3支持拍照功能
+  * Sige7 支持拍照功能
   * 推荐使用imx415模组，可找ArmSoM官方店淘宝客服购买。
 * LCD显示屏
-  * ArmSoM-W3支持LCD显示功能。
+  * Sige7 支持LCD显示功能。
   * 推荐使用 ArmSoM Display 10.1 HD，可找ArmSoM官方店淘宝客服购买。
 * 音频线
-  * 可以使用标准 3.5 毫米插孔通过扬声器或耳机播放音频。
-* WiFi/蓝牙卡
-  * ArmSoM 支持市面上常见的无线模块，请查看支持列表的 Wireless 列表。
-  * 推荐使用 RTL8852be，AP6256
+  * 可以使用0.8mm立式插座。
 * USB-A型转USB-C型数据线
 
 ## 烧录方式选择

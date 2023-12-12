@@ -10,6 +10,10 @@ sidebar_position: 2
 
 ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，拥有丰富的接口，支持双2.5G网口、WiFi6、BT5和多种视频输出。支持多种操作系统, 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
+:::tip 应用
+依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
+:::
+
 ## 关键参数
 
 - SOC：瑞芯微 RK3588
@@ -35,11 +39,14 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 ### 实物图
 
 :::info
-ArmSoM-Sige7拥有极小尺寸，您的口袋电脑。
+ArmSoM-Sige7 拥有极小尺寸，您的口袋电脑，Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是电源接口。
 :::
 
 ![ArmSoM-Sige7 front & back](/img/sbc/sige7/armsom-sige7-layout.jpg)
 
+:::tip
+Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是电源接口。
+:::
 
 ### 硬件规格
 
