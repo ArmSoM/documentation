@@ -1,41 +1,98 @@
----
-sidebar_label: "ODM定制服务"
-sidebar_position: 5
----
+# ODM Customization Services
 
-# ODM定制服务
+- Expertise: Our engineers will evaluate product requirements based on the information you provide.  
 
-* 专业：我们的工程师会根据您提供的信息进行产品需求评估。
-* 质量：我们丰富的设计和制造经验，使用高质量的组件以确保产品质量的可靠性。
-* 效率：我们强大的供应链，为您提供达到价格、时间和质量之间的最佳平衡。
-* 可行性：我们确保您的产品能够生产，实现产品生命周期循环。
+- Quality: We have extensive design and manufacturing experience, along with the use of high-quality materials, which ensures reliable product quality.
 
-## 开发阶段
+- Efficiency: Our robust supply chain provides the best balance between price, time and quality for you.  
 
-### 1. 前期沟通
+- Feasibility: We ensure your products can be manufactured to achieve full product lifecycle circulation.
 
-时间：1-2周
-内容：
-    * 项目概况
-    * 项目要求（ERD）
-    * 时间轴以及可交付成果
 
-沟通阶段是定制产品的第一步：在联系我们之前，请综合考虑项目的整体情况（市场营销，工程，软件，用户体验，设计，销售，财务，物流，客户服务等）明确项目需求，并编写产品需求文档（PRD）。
- 
-准备好PRD之后，请协助填写我们的工程需求文档（ERD）以明确您的需求细节。ERD文档涵盖产品技术方面，例如 硬件接口，操作环境，性能和寿命，物料以及项目可行性的评估。
- 
-一旦ERD双方达成一致，我们将制定项目时间轴表和相应的可交付成果，您要先支付项目开发费NRE的50%，才能进行下一阶段
+## Development Stages
 
-### 2. 样机阶段
+### 1. Preliminary Communication
 
-时间: 6-8周
-内容：
-    * 70% 硬件 
-    * 20% 软件
-    * 10% 调试
+Time: 1-2 weeks
 
-在样机阶段，我们工程师会根据ERD上的需求设计产品核心PCB, 并免费提供2个样机。
+Contents: 
+* Understand project background  
+* Clarify project requirements (ERD)
+* Output timeline and deliverables
 
-如果您的产品涉及外部组件（例如外壳，盖子）的工业设计（ID），可以根据您的需求和PCB设计同时进行或者之后进行。则可根据您的要求在PCB设计之前，同时或之后进行。 一旦准备好PCB和ID（原型I），我们的软件团队将编写基本软件，以供您的团队进行产品调试。
+Communication is the first step in customization: Before contacting us, please consider your project’s overall situation (marketing, engineering, software, UX, design, sales, finance, logistics, customer service, etc.) to define clear product requirements and prepare a Product Requirements Document (PRD).  
 
-在此阶段，所有的项目利益主体必须针对样机进行反馈，以便我们能够更新ERD。根据PRD&ERD,样机的调试主要侧重于产品的功能方面。
+Once you have the PRD ready, please help fill out our Engineering Requirements Document (ERD) to specify requirement details. The ERD covers the product’s technical aspects such as interfaces, operating environments, performance and lifespan, materials and project feasibility assessments.
+
+Once the ERD is agreed upon by both sides, we will create a project timeline and corresponding deliverables. You need to pay 50% of the NRE development fee first before moving to the next stage.
+
+### 2. Prototype Stage  
+
+Time: 6-8 weeks
+
+Contents:
+* Hardware engineer 70%  
+* Software engineer 20%
+* Update ERD 10% 
+
+The project enters the R&D stage with hardware and software engineers engaged in development. 
+
+In the prototype stage, our engineers will design the product based on the ERD requirements and provide 2-5 free prototypes.  
+
+If your product involves industrial design (ID) of external components (e.g. housing, covers), it can be done in parallel with the PCBA design based on your needs. Once the PCBA and ID are ready, our software team will write basic software for your team’s debugging.  
+
+In this stage, all project stakeholders must provide feedback on the prototypes to allow us to update the ERD. According to the PRD & ERD, prototype debugging focuses mainly on the product's functional aspects.
+
+### 3. Modification Stage
+
+Time: 6-8 weeks  
+
+Contents: 
+* Hardware 20%
+* Software 50%  
+* Testing 30%
+
+The project enters the second R&D stage for modification confirmation, performance testing, and aging based on prototype feedback.
+
+Based on feedback from Stage 2, modify the prototype PCB and industrial design (ID), and carry out software development. Before entering Stage 3, we need to complete most hardware architectural designs in Stage 2.
+
+Conduct prototype debugging tests for accelerated aging, performance, vibration, temperature, drop, humidity, etc.
+
+Once 80% of the hardware architecture is completed, our software team can start writing firmware and software for your product. If your team is conducting software development, we will provide modified prototypes.  
+
+According to the debugging test results and software development status, we can enter Stage 4, or modify prototypes again to meet the PRD and ERD requirements more strictly.
+
+### 4. Final Prototype  
+
+Time: 6 weeks
+
+Contents:  
+* Hardware 20% 
+* Software 50%
+* Certification testing 30%   
+
+The final prototype can go into production. Hardware changes should be avoided at this stage, but software can still be continuously revised.
+
+According to your ERD specifications, the final prototype will be sent to external test labs for certification testing such as CE, ROHS and FCC. 
+
+Once your team is satisfied with the results, you will receive previously agreed ERD deliverables indicating production readiness.  
+
+### 5. Mass Production Stage
+
+Time: 6 weeks   
+
+Contents:
+* MOQ: 500 units 
+* Support hardware/software DFM
+* Mass production SOP + QC
+
+Once the hardware and software are synchronized and release-ready, we can proceed with mass production. Conduct a pilot run of 100 units first to confirm no issues with SOP & QC.  
+
+Upon successful piloting, there will be mass production stage , with a minimum order quantity of 500 units. At this stage, customers can assign their own or third-party QC personnel for quality control.
+
+Pilot run testing:
+* Assembly standard operating procedures (SOP)  
+* Quality control stations & hardware testing
+* Product assembly precision, cycle times, ease of operation, safety
+* Software/firmware programming (e.g. MAC addresses, serial numbers) 
+* Packaging and serialization

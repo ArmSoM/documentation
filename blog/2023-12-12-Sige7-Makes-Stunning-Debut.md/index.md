@@ -1,7 +1,7 @@
 ---
 slug: Sige7-Makes-Stunning-Debut
 title: Sige7-Makes-Stunning-Debut
-authors: [ArmSoM]
+authors: [ArmSoM, keven]
 tags: [Sige7, Makes]
 ---
 
