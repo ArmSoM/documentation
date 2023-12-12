@@ -50,7 +50,7 @@ Sige7 使用手册，帮助您。
 
 ## 接口设置
 
-如果你是首次使用 ArmSoM-LM7 开发套件(ArmSoM-W3)，请先熟悉下 [外设接口](./LM7-introduction##armsom-LM7-开发套件armsom-w3)，以便于你更好的理解后续的内容。
+如果你是首次使用 ArmSoM-Sige7 开发套件，请先熟悉下 [外设接口](./sige7-introduction)，以便于你更好的理解后续的内容。
 
 ### 2.5G 以太网口
 
