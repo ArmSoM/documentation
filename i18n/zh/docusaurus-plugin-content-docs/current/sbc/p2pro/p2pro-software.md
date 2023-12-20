@@ -42,6 +42,15 @@ ArmSoM-P2pro使用手册，帮助软件工程师掌握开发板使用 。
 
 如果你是首次使用 ArmSoM-p2pro，请先熟悉下 [外设接口](./p2pro-introduction#实物图)，以便于你更好的理解后续的内容。
 
+### 串口
+P2pro的串口在12pin 座子上
+
+| ArmSoM-P2pro       | 连接  | 串口模块 |
+| --------------- | ----- | ------ |
+| **GND** (pin 8) | <---> | GND |
+| **TX** (pin 9)  | <---> | RX |
+| **RX** (pin 11) | <---> | TX |
+
 ### 100M 以太网口
 
 如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-P2pro 上的 RJ45 端口插入。
@@ -229,9 +238,12 @@ insmod /system/lib/modules/bcmdhd.ko firmware_path=/system/etc/firmware/ nvram_p
 
 ```
 vi /data/cfg/wpa_supplicant.conf
- network={
-        ssid="ydtx"
-        psk="YDTX123456"
+ctrl_interface=/var/run/wpa_supplicant
+update_config=1
+pmf=1
+network={
+        ssid="armsom"
+        psk="armsom123"
         key_mgmt=WPA-PSK
 }
 ```

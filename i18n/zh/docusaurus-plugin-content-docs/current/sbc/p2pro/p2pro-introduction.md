@@ -35,6 +35,8 @@ ArmSoM-p2pro 是 ArmSoM 社区基于 Rockchip RK3308B-S 的 SBC（单板计算�
 
 ArmSoM-p2pro 小巧的尺寸，合理的接口布局，方便客户产品化
 
+**POE模块为选配**
+
 :::
 ![ArmSoM-p2pro front & back](/img/sbc/p2pro/armsom-p2pro-layout.png)
 

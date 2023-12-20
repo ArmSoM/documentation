@@ -1,7 +1,7 @@
 ---
 slug: Sige7-Makes-Stunning-Debut
 title: Sige7-Makes-Stunning-Debut
-authors: [ArmSoM]
+authors: [ArmSoM, keven]
 tags: [Sige7, Makes]
 ---
 
@@ -13,6 +13,9 @@ Recently, we are excited to launch an all-new single board computer (SBC）power
 The release of this new product marks an important breakthrough in our technological innovation and product development, providing users with a superior computing experience.  
 
 Sige7 - Connecting Innovation, Infinite Possibilities
+
+
+![sige7](/img/blog/sige7/sige7.png)
 
 ## 1. Powerful Performance of RK3588 
 
