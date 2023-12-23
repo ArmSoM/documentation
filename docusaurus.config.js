@@ -178,8 +178,8 @@ const config = {
                 target: "_blank",
               },
               {
-                label: 'Stack Overflow',
-                to: 'https://stackoverflow.com/users/21867949/armsom',
+                label: 'bilibili',
+                to: 'https://space.bilibili.com/101696800',
                 target: "_blank",
               },
             ],

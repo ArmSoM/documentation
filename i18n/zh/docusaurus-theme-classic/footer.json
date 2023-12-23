@@ -34,5 +34,17 @@
   "link.item.label.Blog": {
     "description": "The label of footer link with label=Blog linking to http://docs.armsom.org/blog",
     "message": "博客"
+  },
+  "link.item.label.Twitter": {
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/armsom",
+    "message": "推特"
+  },
+  "link.item.label.YouTube": {
+    "description": "The label of footer link with label=YouTube linking to https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w",
+    "message": "油管"
+  },
+  "link.item.label.bilibili": {
+    "description": "The label of footer link with label=bilibili linking to https://space.bilibili.com/101696800",
+    "message": "哔哩哔哩"
   }
 }
