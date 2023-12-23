@@ -22,7 +22,7 @@ const FeatureList = [
         Start your favorite SBC/SOM, Provide complete product usage documentation to help software engineers quickly develop applications.
       </Translate>
     ),
-    hrefLink: "./docs/sbc/sbc-introduction"
+    hrefLink: "./docs/sige/sige-introduction"
   },
   {
     title: (
@@ -41,7 +41,7 @@ const FeatureList = [
         Help hardware engineers quickly develop and put into production
       </Translate>
     ),
-    hrefLink: "./docs/sbc/sbc-introduction"
+    hrefLink: "./docs/sige/sige-introduction"
   },
    {
     title: (

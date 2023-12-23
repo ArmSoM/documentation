@@ -38,14 +38,10 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 ### 实物图
 
-:::info
-ArmSoM-Sige7 拥有极小尺寸，您的口袋电脑，Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是电源接口。
-:::
-
-![ArmSoM-Sige7 front & back](/img/sbc/sige7/armsom-sige7-layout.jpg)
+![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.jpg)
 
 :::tip
-Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是电源接口。
+Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。
 :::
 
 ### 硬件规格
@@ -97,7 +93,7 @@ Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是
         </tr>
         <tr>
             <th>网络</th>
-            <th><li>2x 2.5G网口</li><li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (AP6275s)</li></th>
+            <th><li>2x 2.5G网口</li><li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (AP6275P)</li></th>
         </tr>
         <tr>
             <th>视频输出</th>
@@ -113,7 +109,7 @@ Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是
         </tr>
         <tr>
             <th>USB接口</th>
-            <th><li>2x USB3.0（USB3.1 Gen1），支持USB3.1 Gen1，相当于USB3.2 Gen1和USB3.0，高达5Gbps数据速率</li><li>1x USB Type-C 3.1（DP1.4/OTG）</li></th>
+            <th><li>1x USB3.0（USB3.1 Gen1），支持USB3.1 Gen1，相当于USB3.2 Gen1和USB3.0，高达5Gbps数据速率</li><li>1x USB Type-C 3.1（DP1.4/OTG）</li><li>1x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
         </tr>
         <tr>
             <th>40-pin</th>
@@ -125,7 +121,7 @@ Sige7上有两个长得一样的Type-C接口，其中靠近板边得那个才是
         </tr>
         <tr>
             <th>电源</th>
-            <th><li>支持USB Type-C 5/4A</li></th>
+            <th><li>支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A</li></th>
         </tr>
         <tr>
             <th>按键</th>

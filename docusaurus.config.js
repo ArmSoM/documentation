@@ -93,8 +93,13 @@ const config = {
           {
             type: 'docSidebar',
             position: 'left',
-            sidebarId: 'sbc',
-            label: 'SBC',
+            sidebarId: 'sige',
+            label: 'Sige',
+          }, {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'link',
+            label: 'Link',
           },
           {
             type: 'docSidebar',
@@ -107,11 +112,6 @@ const config = {
             position: 'left',
             sidebarId: 'aim',
             label: 'AIM',
-          }, {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'cm',
-            label: 'CM',
           },
           {
             type: 'docSidebar',

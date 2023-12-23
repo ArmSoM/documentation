@@ -43,7 +43,7 @@ Relying on a powerful ecosystem and a variety of expansion accessories, ArmSoM c
 ArmSoM-Sige7 has an extremely small size. It is your pocket computer. There are two Type-C interfaces on the Sige7 that look the same. The one near the edge of the board is the power interface.
 :::
 
-![ArmSoM-Sige7 front & back](/img/sbc/sige7/armsom-sige7-layout.jpg)
+![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.jpg)
 
 :::tip
 There are two identical Type-C interfaces on the Sige7, and the one near the edge of the board is the power interface.
