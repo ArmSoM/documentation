@@ -5,8 +5,7 @@ sidebar_position: 3
 
 # 使用手册
 
-Sige7 使用手册，帮助您。
-
+Sige7 使用手册，帮助用户了解Sige7的基本使用和需要的准备工作。 当您拿到产品的时候，您需要知道它的型号以及硬件版本，这些信息都可以在板子上的丝印找到。我们会尽可能详细地向您介绍产品的信息。
 
 ## 入门准备
 在开始使用 ArmSoM-Sige7 之前，请准备好以下物品
@@ -28,11 +27,11 @@ Sige7 使用手册，帮助您。
 
 ### 可选选项
 * USB 键盘鼠标
-* HDMI 显示器和 HDMI 线
+* HDMI显示器和HDMI线
   * Sige7配备了全尺寸 HDMI 接口，最高支持 8K@60 显示。
   * HDMI EDID用于确定最佳显示分辨率。 在支持 1080p（或 4K/8K）的显示器和电视上，将选择此分辨率。 如果不支持 1080p，EDID会找到的下一个可用分辨率。
 * Ethernet 线（网线）
-  * Sige7 支持以太网上网，最高支持2.5G。
+  * Sige7 支持以太网上网，最高支持2.5Gb。
   * 网线用于将 Sige7 连接到本地网络和互联网。
 * 摄像头模块
   * Sige7 支持拍照功能。
@@ -52,40 +51,67 @@ Sige7 使用手册，帮助您。
 
 ## 接口设置
 
-如果你是首次使用 ArmSoM-Sige7，请先熟悉下 [外设接口](./sige7-introduction)，以便于你更好的理解后续的内容。
+如果您是首次使用 ArmSoM-Sige7，请先熟悉下 [外设接口](./sige7-introduction)，以便于您更好的理解后续的内容。
 
 ### 2.5G 以太网口
 
 如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-Sige7 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
 
-手动配置以太网
-- 切换root用户
-
-```bash
-sudo su
-```
-
-- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 eth0 或 enP4p65s0 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
+- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 enP2p33s0 或 enP4p65s0 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
 
 ```bash
 ifconfig
-ping www.baidu.com
+ping mi.com
 ```
 
 - 如果无法ping通，尝试
 
 ```bash
-$ sudo dhclient eth0
+$ sudo dhclient enP2p33s0
 or
 $ sudo dhclient enP4p65s0
 ```
+
+### HDMI
+
+ArmSoM-Sige7 有HDMI 输出端口，支持 CEC 和 HDMI 2.1，分辨率最高支持 8Kp60。
+
+### USB接口
+
+ArmSoM-Sige7 提供一个 USB 2.0 和一个 USB 3.0 端口。
+
+**USB3.0 Camera**
+
+连接usb3.0摄像头后，您可以下载 cheese 然后使用以下命令使用摄像机:
+
+```bash
+armsom@armsom-sige7: sudo apt update
+armsom@armsom-sige7: sudo apt install cheese
+```
+
+同时，您也可以使用终端命令打开相机预览:
+```bash
+gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
+```
+
+命令拍照:
+```bash
+gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
+```
+
+命令拍摄视频:
+```bash
+gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
+```
+
+![armsom-sige7-gst](/img/sige/sige7/armsom-sige7-gst.png)
 
 ### 音频
 
 查看系统中的声卡。
 
 ```bash
-root@linaro-alip:/# aplay -l
+armsom@armsom-sige7:/# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
  Subdevices: 1/1
@@ -93,122 +119,53 @@ card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchi
 card 1: rockchipes8316 [rockchip-es8316], device 0: fe470000.i2s-ES8316 HiFi es8316.7-0011-0 [fe470000.i2s-ES8316 HiFi es8316.7-0011-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
-card 3: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
+card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
-card 4: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [rockchip-hdmi1 i2s-hifi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-
 ```
 
-### USB接口
+### 风扇
 
-ArmSoM-W3 提供两个 USB 2.0 和两个 USB 3.0 端口。
+Sige7 配备一个 5V 的风扇，使用 0.8mm 的连接器
+
+```
+armsom@armsom-sige7:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon8/pwm1
+```
 
 ### Type-C
 
-ArmSoM-W3 配备全功能 USB Type‑C™ 3.1 端口，支持高达 4Kp60 的 DP 显示
+Sige7 配备全功能 USB Type‑C™ 3.1 端口，支持高达 4Kp60 的 DP 显示
 
-### HDMI
+### 40Pin
 
-ArmSoM-W3 有两个 HDMI 输出端口，均支持 CEC 和 HDMI 2.1，分辨率最高支持分别为 8Kp60 和 4Kp60。
-
-:::caution
-注意: 在使用之前，请确认 HDMI 线的接口规格。
-:::
-
-### HDMI IN
-
-ArmSoM-W3使用rk3588原生hdmi rx接口，可以使用v4l2命令测试hdmi in接口。
-
-**查看所有视频节点**
-
-```
-ls /dev/video*
-```
-
-**查找 rk hdmirx 设备**
-
-执行v4l2-ctl -d命令指定vidoe节点。执行-D命令查看节点信息。使用驱动程序名称检查 rk_hdmirx 设备。
-```
-root@linaro-alip:/# v4l2-ctl -d /dev/video0 -D
-Driver Info:
-Driver name : rk_hdmirx
-Card type : rk_hdmirx
-Bus info : fdee0000.hdmirx-controller
-Driver version : 5.10.66
-Capabilities : 0x84201000
-Video Capture Multiplanar
-Streaming
-Extended Pix Format
-Device Capabilities
-Device Caps : 0x04201000
-Video Capture Multiplanar
-Streaming
-Extended Pix Format
-```
-
-**查询分辨率和图像格式**
-
-查询当前分辨率和图像格式：
-```
-root@linaro-alip:/# v4l2-ctl -d /dev/video17 --get-fmt-video
-Format Video Capture Multiplanar:
-Width/Height : 3840/2160
-Pixel Format : 'NV16'
-Field : None
-Number of planes : 1
-Flags : premultiplied-alpha, 000000fe
-Colorspace : Unknown (1025fcdc)
-Transfer Function : Unknown (00000020)
-YCbCr Encoding : Unknown (000000ff)
-Quantization : Default
-Plane 0 :
-Bytes per Line : 3840
-Size Image : 16588800
-```
-
-**抓取图像文件**
-
-将镜像文件保存到设备，通过7yuv等工具查看：
-
-```
-v4l2-ctl --verbose -d /dev/video17 \ 
---set-fmt-video=width=3840，height=2160，pixelformat='NV16' \ 
---stream-mmap=4 --stream-skip=3 \ 
---stream-to=/data/4k60_nv16.yuv \ 
---stream-count=5 --stream-poll
-```
+Sige7 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
 ### RGB LED
 
-ArmSoM-W3 具有电源 LED 和用户 LED。
+Sige7 具有两个用户灯 LED 绿灯和红灯。
 
-- 电源指示灯
-  电源 LED 为绿色， ArmSoM-W3默认通电时常亮。
+- 用户绿灯
+  默认情况下，其常量显示正在运行的内核。
 
-- 用户指示灯
-  用户 LED 为蓝色， 默认情况下，其闪烁状态显示正在运行的内核。
+- 用户红灯
+  默认情况下不亮，可由用户自行操控。
 
 用户可通过命令控制
 
 ```
-linaro@linaro-alip:/# sudo su
-root@linaro-alip:/# echo timer > /sys/class/leds/blue:status/trigger
-root@linaro-alip:/# echo activity > /sys/clas
+linaro@armsom-sige7:/# sudo su
+armsom@armsom-sige7:/# echo timer > /sys/class/leds/red/trigger
+armsom@armsom-sige7:/# echo activity > /sys/class/leds/red/trigger
 ```
 
 ### RTC
 
-- ArmSoM-W3配备了一颗RTC IC **hym8563**。
-- 首先，插入RTC电池给RTC IC供电。
+- Sige7配备了一颗RTC IC **hym8563**。
+- 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
 - 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc hym8563 设备已创建
 
-
-
 ```bash
-root@linaro-alip:/#  dmesg | grep rtc
+armsom@armsom-sige7:/#  dmesg | grep rtc
 [    6.407133] rtc-hym8563 6-0051: rtc information is valid
 [    6.412731] rtc-hym8563 6-0051: registered as rtc0
 [    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
@@ -217,100 +174,34 @@ root@linaro-alip:/#  dmesg | grep rtc
 - 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
 
 ```bash
-root@linaro-alip:/# hwclock -r
+armsom@armsom-sige7:/# hwclock -r
 2023-11-03 10:32:40.461910+00:00
-root@linaro-alip:/# date
+armsom@armsom-sige7:/# date
 2023年 11月 03日 星期五 10:33:12 UTC
-root@linaro-alip:/# hwclock -w
-root@linaro-alip:/# hwclock -r
-root@linaro-alip:/# poweroff
+armsom@armsom-sige7:/# hwclock -w
+armsom@armsom-sige7:/# hwclock -r
+armsom@armsom-sige7:/# poweroff
 ```
 
-- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动ArmSoM-W3，检查RTC是否与系统时钟同步
+- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动Sige7，检查RTC是否与系统时钟同步
 
 ```bash
-root@linaro-alip:/# hwclock -r
+armsom@armsom-sige7:/# hwclock -r
 2023-11-03 10:35:40.461910+00:00
-root@linaro-alip:/# date
+armsom@armsom-sige7:/# date
 2023年 11月 03日 星期五 10:36:01 UTC
-```
-
-### 风扇
-
-ArmSoM-W3 配备一个 5V 的风扇，使用 1.25mm 的连接器
-
-```
-root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
-root@linaro-alip:/# echo 10000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/period
-root@linaro-alip:/# echo 5000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/duty_cycle
-root@linaro-alip:/# echo inversed  > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/polarity
-root@linaro-alip:/# echo 1 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
-root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
 ```
 
 ### M.2接口
 
-ArmSoM-W3 提供两个 M.2 连接器：
-
-- 主板正面有一个带 2230 安装孔的 M.2 E Key 连接器，提供 PCIe 2.1 单通道、USB、SATA、SDIO、PCM 和 UART 信号，支持工业标准 M.2 WiFi 6 模块。  
-  ArmSoM 推荐使用 RTL8852BE，AP6256。安装在 ArmSoM-W3 的 M.2 E 口然后设置 wifi 网络就可以上网。
-
-```
-# 加载驱动
-root@linaro-alip:/# insmod system/lib/modules/rtkm.ko
-root@linaro-alip:/# insmod system/lib/modules/rtkm.ko
-root@linaro-alip:/# insmod /usr/lib/modules/rtk_btusb.ko
-root@linaro-alip:/# lsmod
-Module                  Size  Used by
-8852be               4030464  0
-rtkm                   16384  1 8852be
-rtk_btusb              57344  0
-```
-
-#### WIFI
-```
-# 1. Switch to super user mode
-root@linaro-alip:/# sudo su
-# 2. Open the WIFI
-root@linaro-alip:/# nmcli r wifi on
-# 3. Scan WIFI
-root@linaro-alip:/# nmcli dev wifi
-# 4. Connect to WIFI network
-root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
-```
-
-
-#### BT
-
-```
-# 1. 激活蓝牙
-root@linaro-alip:/# service bluetooth start
-# 2. 进入bluetoothctl
-root@linaro-alip:/# bluetoothctl
-# 3. 输入以下命令即可连接
-root@linaro-alip:/# power on
-root@linaro-alip:/# agent on
-root@linaro-alip:/# default-agent
-root@linaro-alip:/# scan on
-root@linaro-alip:/# pair yourDeviceMAC
-```
-
+ArmSoM-Sige7 提供 M.2 连接器：
 
 - 产品的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
   **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
 
 ```
-root@linaro-alip:/# mkdir temp
-root@linaro-alip:/# mount /dev/nvme0n1 temp
-```
-
-### MIC录音
-
-```bash
-root@linaro-alip:/root# arecord -D hw:1,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
-Recording WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
-root@linaro-alip:/root# aplay t.wav
-Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
+armsom@armsom-sige7:/# mkdir temp
+armsom@armsom-sige7:/# mount /dev/nvme0n1 temp
 ```
 
 ### 摄像头
@@ -320,7 +211,7 @@ Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
   摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
 
 ```bash
-root@linaro-alip:/# dmesg | grep imx415
+armsom@armsom-sige7:/# dmesg | grep imx415
 [    2.547754] imx415 3-001a: driver version: 00.01.08
 [    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
 [    2.547819] imx415 3-001a: Failed to get power-gpios
@@ -337,29 +228,24 @@ root@linaro-alip:/# dmesg | grep imx415
 
   使用v4l2-ctl进行抓图
 ```
-root@linaro-alip:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+// MIPI-CSI1
+armsom@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+
+// MIPI-CSI2
+armsom@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
 ```
 
-  使用gst-launch-1.0可直接录像
+使用gst-launch-1.0可直接录像
 ```
-root@linaro-alip:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+// MIPI-CSI1
+armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+
+// MIPI-CSI2
+armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/lm7/armsom-w3-imx415-camera.jpeg)
 
-####  USB3.0 Camera
-
-连接usb3.0摄像头后，打开Qt V4L2 test Utility应用程序进行测试
-
-![armsom-w3-usb-camera-qtv4l2](/img/lm/lm7/armsom-w3-usb-camera-qtv4l2.png)
-
-打开视频节点：video21
-
-![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/lm7/armsom-w3-usb-camera-qtv4l2-select-video.png)
-
-点击相机按钮，您将看到相机屏幕
-
-![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm7/armsom-w3-usb-camera-qtv4l2-play.png)
 
 ### MIPI DSI
 
-ArmSoM-W3 分辨率最高分辨率可达 4K@60Hz
+ArmSoM-Sige7 分辨率最高分辨率可达 4K@60Hz

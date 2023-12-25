@@ -148,3 +148,11 @@ sidebar_position: 4
 |28,29                        | VCC5V0_LCD |  5V Power ouput |
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
 
+#### Fan
+0.8mm 连接器(CN32)
+
+|Pin |Assignment |   Description |
+ :--------: | :---------: | :--------: | 
+|1    | VCC_5V0 | 5V Power ouput |
+|2    | GND | 地 |
+|3    | PWM | PWM控制 |
