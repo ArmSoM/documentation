@@ -13,8 +13,8 @@ Sige7 使用手册，帮助您。
 
 ### 工具准备
 * Sige7 主板
-* 电源 
-  * 支持 5V/3A, 12V/3A
+* 电源: USB Type-C PD
+  * 支持 9V/2A, 12V/2A, 15V/2A
 * 系统安装（二选一）
   * MicroSD卡/TF卡启动
     * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
@@ -24,7 +24,7 @@ Sige7 使用手册，帮助您。
       * 闪迪 TF 8G Class10 microSD 
       * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
   * 板载eMMC启动
-    * USB A型转 C型数据线，从 typec 端口在 Sige7 上写入镜像或使用 fastboot/adb 命令，您需要 USB A转type C数据线连接 Sige7 和 PC。
+    * USB Type-C数据线，从 typec 端口在 Sige7 上写入镜像，您需要 Type-C 数据线连接 Sige7 和 PC。
 
 ### 可选选项
 * USB 键盘鼠标
@@ -35,11 +35,13 @@ Sige7 使用手册，帮助您。
   * Sige7 支持以太网上网，最高支持2.5G。
   * 网线用于将 Sige7 连接到本地网络和互联网。
 * 摄像头模块
-  * Sige7 支持拍照功能
+  * Sige7 支持拍照功能。
   * 推荐使用imx415模组，可找ArmSoM官方店淘宝客服购买。
 * LCD显示屏
   * Sige7 支持LCD显示功能。
   * 推荐使用 ArmSoM Display 10.1 HD，可找ArmSoM官方店淘宝客服购买。
+* 摄像头
+  * Sige7 支持摄像头功能。
 * 音频线
   * 可以使用0.8mm立式插座。
 * USB-A型转USB-C型数据线
@@ -50,11 +52,11 @@ Sige7 使用手册，帮助您。
 
 ## 接口设置
 
-如果你是首次使用 ArmSoM-LM7 开发套件(ArmSoM-W3)，请先熟悉下 [外设接口](./sige7-introduction)，以便于你更好的理解后续的内容。
+如果你是首次使用 ArmSoM-Sige7，请先熟悉下 [外设接口](./sige7-introduction)，以便于你更好的理解后续的内容。
 
 ### 2.5G 以太网口
 
-如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-W3 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
+如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-Sige7 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
 
 手动配置以太网
 - 切换root用户

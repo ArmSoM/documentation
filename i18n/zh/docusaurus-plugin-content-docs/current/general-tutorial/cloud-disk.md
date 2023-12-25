@@ -52,6 +52,37 @@ ArmSoM 发布的所有产品软件资源都会同步到百度网盘供用户下�
 ### 2.3. Linux镜像
 存放了 ArmSoM 产品配套的 Linux 系统镜像，分别提供了Ubuntu、Debian和Armbian系统镜像。
 
+### 镜像命名规则
+产品型号-根文件系统-桌面类型-更新时间
+
+#### 产品型号
+ArmSoM-W3 ：产品型号如 ArmSoM-W3 
+
+#### 根文件系统
+debian-bullseye ： 代表系统使用的根文件系统是debian 11
+
+#### 桌面类型
+xfce4 ：使用xfce4套件的桌面版镜像
+
+CLI	：命令行版，无桌面
+
+#### 更新日期
+更新日期的格式为 yyyymmdd 即 年月日
+
+#### 举例说明
+
+我们以 ArmSoM-LM7(Development Kit ArmSoM-W3) 的通用镜像为例
+
+armsom-w3-debian-bullseye-xfce4-arm64-20231115
+
+* 产品的适用型号：适合ArmSoM-W3
+
+* 根文件系统：debian11
+
+* 系统类别：xfce4·桌面版
+
+* 更新日期：2023年11月15日
+
 ### 2.4. Android镜像
 存放了 ArmSoM 产品配套的 Android 系统镜像
 
