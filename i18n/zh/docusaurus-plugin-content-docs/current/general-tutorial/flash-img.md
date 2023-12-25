@@ -49,6 +49,16 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 
 * 更新日期：2023年11月15日
 
+:::tip
+1. 官方镜像的默认账号/密码为armsom/armsom。
+2. debian系统是使用RK官方提供SDK适配编译的系统，对于有 ISP、GPU、编解码、NPU需求的商业客户更加合适。使用RKDevTool烧录到EMMC，或者使用SDDiskTool烧录到SD卡。
+3. Ubuntu，Armbian，Openwrt是ArmSoM 为开源爱好者提供的更多选择。
+:::
+
+## 2. Ubuntu，Armbian，Openwrt
+
+
+
 ## 2. Windows平台烧录镜像
 
 ### 2.1. 烧录镜像到eMMC
