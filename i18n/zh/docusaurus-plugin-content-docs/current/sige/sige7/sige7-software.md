@@ -39,8 +39,6 @@ Sige7 使用手册，帮助用户了解Sige7的基本使用和需要的准备工
 * LCD显示屏
   * Sige7 支持LCD显示功能。
   * 推荐使用 ArmSoM Display 10.1 HD，可找ArmSoM官方店淘宝客服购买。
-* 摄像头
-  * Sige7 支持摄像头功能。
 * 音频线
   * 可以使用0.8mm立式插座。
 * USB-A型转USB-C型数据线
