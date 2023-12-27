@@ -1,5 +1,5 @@
 ---
-sidebar_label: "官方操作系统"
+sidebar_label: "操作系统"
 sidebar_position: 4
 ---
 
