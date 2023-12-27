@@ -1,8 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_label: "Product Introduction"
+sidebar_position: 1
 ---
 
-# # Product Introduction:LM7
+# Product Introduction:LM7
 
 Let's get to know LM7 in 5 minutes.
 

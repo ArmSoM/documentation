@@ -86,7 +86,7 @@ $ sudo dhclient enP4p65s0
 View the sound cards in the system.  
 
 ```bash
-root@linaro-alip:/# aplay -l
+armsom@armsom-w3:/# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
  Subdevices: 1/1
@@ -133,7 +133,7 @@ ls /dev/video*
 
 Execute command v4l2-ctl -d  to specify video node. Execute command -D to view node info. Check for rk_hdmirx device using driver name.
 ```  
-root@linaro-alip:/# v4l2-ctl -d /dev/video0 -D
+armsom@armsom-w3:/# v4l2-ctl -d /dev/video0 -D
 Driver Info:
 Driver name : rk_hdmirx
 Card type : rk_hdmirx
@@ -154,7 +154,7 @@ Extended Pix Format
 
 Query current resolution and image formats:
 ```
-root@linaro-alip:/# v4l2-ctl -d /dev/video17 --get-fmt-video
+armsom@armsom-w3:/# v4l2-ctl -d /dev/video17 --get-fmt-video
 Format Video Capture Multiplanar:
 Width/Height : 3840/2160
 Pixel Format : 'NV16'
@@ -195,9 +195,9 @@ The ArmSoM-W3 has a power LED and user LED.
 The user can control via commands:
 
 ```  
-linaro@linaro-alip:/# sudo su
-root@linaro-alip:/# echo timer > /sys/class/leds/blue:status/trigger
-root@linaro-alip:/# echo activity > /sys/clas
+armsom@armsom-w3:/# sudo su
+root@armsom-w3:/# echo timer > /sys/class/leds/blue:status/trigger
+root@armsom-w3:/# echo activity > /sys/clas
 ```
 
 ### RTC  
@@ -207,7 +207,7 @@ root@linaro-alip:/# echo activity > /sys/clas
 - Note that we should keep the RTC battery in the RTC connector and confirm the rtc hym8563 device has been created
 
 ```bash 
-root@linaro-alip:/#  dmesg | grep rtc
+armsom@armsom-w3:/#  dmesg | grep rtc
 [    6.407133] rtc-hym8563 6-0051: rtc information is valid
 [    6.412731] rtc-hym8563 6-0051: registered as rtc0
 [    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
@@ -216,21 +216,21 @@ root@linaro-alip:/#  dmesg | grep rtc
 - Locating rtc0, then use the following commands to set system time and sync to rtc0.  
 
 ```bash
-root@linaro-alip:/# hwclock -r
+armsom@armsom-w3:/# hwclock -r
 2023-11-03 10:32:40.461910+00:00
-root@linaro-alip:/# date
+armsom@armsom-w3:/# date
 11/03/2023 Friday 10:33:12 UTC
-root@linaro-alip:/# hwclock -w
-root@linaro-alip:/# hwclock -r
-root@linaro-alip:/# poweroff
+armsom@armsom-w3:/# hwclock -w
+armsom@armsom-w3:/# hwclock -r
+armsom@armsom-w3:/# poweroff
 ```
 
 - Removing RTC battery, after 10mins or longer insert battery and boot ArmSoM-W3, check if RTC is in sync with system clock  
 
 ```bash 
-root@linaro-alip:/# hwclock -r
+armsom@armsom-w3:/# hwclock -r
 2023-11-03 10:35:40.461910+00:00
-root@linaro-alip:/# date
+armsom@armsom-w3:/# date
 11/03/2023 Friday 10:36:01 UTC
 ```
 
@@ -239,12 +239,12 @@ root@linaro-alip:/# date
 The ArmSoM-W3 is equipped with a 5V fan, using a 1.25mm connector  
 
 ```
-root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
-root@linaro-alip:/# echo 10000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/period
-root@linaro-alip:/# echo 5000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/duty_cycle
-root@linaro-alip:/# echo inversed  > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/polarity
-root@linaro-alip:/# echo 1 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
-root@linaro-alip:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
+armsom@armsom-w3:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
+armsom@armsom-w3:/# echo 10000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/period
+armsom@armsom-w3:/# echo 5000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/duty_cycle
+armsom@armsom-w3:/# echo inversed  > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/polarity
+armsom@armsom-w3:/# echo 1 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
+armsom@armsom-w3:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
 ```
 
 ### M.2 Interface  
@@ -256,10 +256,10 @@ The ArmSoM-W3 provides two M.2 connectors:
 
 ```
 # Load driver  
-root@linaro-alip:/# insmod system/lib/modules/rtkm.ko
-root@linaro-alip:/# insmod system/lib/modules/rtkm.ko
-root@linaro-alip:/# insmod /usr/lib/modules/rtk_btusb.ko
-root@linaro-alip:/# lsmod
+armsom@armsom-w3:/# insmod system/lib/modules/rtkm.ko
+armsom@armsom-w3:/# insmod system/lib/modules/rtkm.ko
+armsom@armsom-w3:/# insmod /usr/lib/modules/rtk_btusb.ko
+armsom@armsom-w3:/# lsmod
 Module                  Size  Used by
 8852be               4030464  0
 rtkm                   16384  1 8852be
@@ -269,44 +269,44 @@ rtk_btusb              57344  0
 #### WIFI
 ```  
 # 1. Switch to super user mode
-root@linaro-alip:/# sudo su
+armsom@armsom-w3:/# sudo su
 # 2. Open the WIFI
-root@linaro-alip:/# nmcli r wifi on
+root@armsom-w3:/# nmcli r wifi on
 # 3. Scan WIFI
-root@linaro-alip:/# nmcli dev wifi
+root@armsom-w3:/# nmcli dev wifi
 # 4. Connect to WIFI network
-root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+root@armsom-w3:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
 
 #### BT  
 
 ```
 # 1. Activate bluetooth  
-root@linaro-alip:/# service bluetooth start
+armsom@armsom-w3:/# service bluetooth start
 # 2. Enter to bluetoothctl
-root@linaro-alip:/# bluetoothctl
+armsom@armsom-w3:/# bluetoothctl
 # 3. Input the below commands to connect
-root@linaro-alip:/# power on
-root@linaro-alip:/# agent on
-root@linaro-alip:/# default-agent
-root@linaro-alip:/# scan on
-root@linaro-alip:/# pair yourDeviceMAC
+armsom@armsom-w3:/# power on
+armsom@armsom-w3:/# agent on
+armsom@armsom-w3:/# default-agent
+armsom@armsom-w3:/# scan on
+armsom@armsom-w3:/# pair yourDeviceMAC
 ```
 
 - There is an M.2 M Key connector on the back of the ArmSom-W3 with a quad-channel PCIe 3.0 interface. There is a standard M.2 2280 mounting hole on board that can deploy M.2 2280 NVMe SSDs.
-  **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**  
+**<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**  
 
 ```
-root@linaro-alip:/# mkdir temp  
-root@linaro-alip:/# mount /dev/nvme0n1 temp
+armsom@armsom-w3:/# mkdir temp  
+armsom@armsom-w3:/# mount /dev/nvme0n1 temp
 ```
 
 ### MIC Recording  
 
 ```bash
-root@linaro-alip:/root# arecord -D hw:1,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
+armsom@armsom-w3:~# arecord -D hw:1,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
 Recording WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
-root@linaro-alip:/root# aplay t.wav
+armsom@armsom-w3:~# aplay t.wav
 Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
 ```
 
@@ -317,7 +317,7 @@ Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
   The camera uses the IMX415 module. After connecting and powering on the camera module you can view the boot logs.  
 
 ```bash
-root@linaro-alip:/# dmesg | grep imx415
+armsom@armsom-w3:/# dmesg | grep imx415
 [    2.547754] imx415 3-001a: driver version: 00.01.08
 [    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
 [    2.547819] imx415 3-001a: Failed to get power-gpios
@@ -334,12 +334,12 @@ root@linaro-alip:/# dmesg | grep imx415
 
   Use v4l2-ctl for image capture  
 ```
-root@linaro-alip:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+armsom@armsom-w3:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
 ```
 
   Use gst-launch-1.0 for direct video recording  
 ```
-root@linaro-alip:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+armsom@armsom-w3:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/lm7/armsom-w3-imx415-camera.jpeg)  
 

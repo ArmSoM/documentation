@@ -151,7 +151,7 @@ Sige7 具有两个用户灯 LED 绿灯和红灯。
 用户可通过命令控制
 
 ```
-linaro@armsom-sige7:/# sudo su
+armsom@armsom-sige7:/# sudo su
 armsom@armsom-sige7:/# echo timer > /sys/class/leds/red/trigger
 armsom@armsom-sige7:/# echo activity > /sys/class/leds/red/trigger
 ```
