@@ -30,7 +30,7 @@ The gradual improvement of open source materials for ArmSoM sige series products
 
 Provide complete open source materials, including but not limited to product introductions, user manuals, hardware information, general tutorials, etc. Help students, enthusiasts and beginners gain an in-depth understanding of products and accelerate the realization of great inspiration.
 
-## sige series hardware comparison
+## Sige series hardware comparison
 
 |Model name | [ ArmSoM-Sige7 ](/docs/sige/sige7/sige7-introduction)  |
 | :--------: | :----------:|

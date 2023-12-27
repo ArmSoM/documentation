@@ -97,7 +97,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>16GB/32GB/64GB/128GB eMMC，default 32GB eMMC</li><li>Supports MicroSD card expansion</li></th>
+            <th><li>32GB/64GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li></th>
         </tr>
         <tr>
             <th>PCIe</th>

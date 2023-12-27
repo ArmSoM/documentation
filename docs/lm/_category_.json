@@ -1,9 +1,9 @@
 {
-  "label": "LM7",
-  "position": 2,
+  "label": "lm",
   "collapsed": false,
+  "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "ArmSoM-LM7"
+    "description": "lm"
   }
 }

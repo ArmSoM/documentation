@@ -47,7 +47,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'General tutorial',
-        description: 'Learn about the most important Docusaurus concepts!',
+        description: 'ArmSoM General Tutorial, Applicable to All ArmSoM Products',
         slug: '/general-tutorial',
       },
       items: [{

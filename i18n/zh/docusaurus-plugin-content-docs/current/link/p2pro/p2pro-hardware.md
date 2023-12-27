@@ -4,37 +4,20 @@ sidebar_position: 4
 
 # 硬件资料
 
-获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
-
-## LM7 硬件资料
-
-### 引脚功能表格
-[ArmSoM-LM7 引脚功能表格](/hardware/lm/lm7/ArmSoM-LM7_Pin_and_Function_List20230603.xlsx) - 引脚功能表格下载
-
-### 封装
-
-[ArmSoM-LM7 封装](/hardware/lm/lm7/LGA506_45R0X50R0_2005.asc) - 封装下载
-
-## LM7 开发套件(ArmSoM-W3) 硬件资料
-
 ### 原理图
-[ArmSoM-W3_1V1 原理图pdf](/hardware/lm/lm7/ArmSoM_W3_1V1_SCH.pdf) - 原理图pdf下载
-
-[ArmSoM-W3_1V1 原理图orcad](/hardware/lm/lm7/ArmSoM_W3_1V1_SCH.DSN) - 原理图原始文件（orcad）下载
-
-### PCB
-
-[ArmSoM-W3_1V1 PCB PADS](/hardware/lm/lm7/ArmSoM_W3_1V1.pcb) - PCB原始文件（PADS）下载
+[ArmSoM-p2pro v1.1 原理图pdf](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
 
 ### 2D CAD 图
 
-[ArmSoM-W3 底部](/hardware/lm/lm7/ArmSoM_W3_1V1_bot.dxf) - 2D CAD 文件下载
-
-[ArmSoM-W3 顶部](/hardware/lm/lm7/ArmSoM_W3_1V1_top.dxf) - 2D CAD 文件下载
+[ArmSoM-p2pro v1.1 底部&顶部](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms) 
 
 ### 位号图
 
-[ArmSoM-W3_1V1 位号图](/hardware/lm/lm7/ArmSoM_W3_1V1_SMD.pdf) -  位号图下载
+[ArmSoM-p2pro v1.1 位号图](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
+
+:::tip 版本更改记录
+v1.0 为内部版本暂不公布
+:::
 
 ### 硬件引脚定义
 
@@ -44,11 +27,11 @@ sidebar_position: 4
 
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='yellow'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     139     | I2S1_SDO2_M0 / I2C7_SDA_M3 / UART8_CTSN_M0 / PWM15_IR_M1 / CAN1_TX_M1 / GPIO4_B3 /| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     138     | I2S1_SDO1_M0 / I2C7_SCL_M3 / UART8_RTSN_M0 /  PWM14_M1   / CAN1_RX_M1 / GPIO4_B2  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     115     | SPI1_CS1_M1 / I2C8_SDA_M4 / UART7_CTSN_M1 / PWM15_IR_M0 / GPIO3_C3  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  GPIO0_B5 / <div className='orange-txt'>UART2_TX_M0</div> / I2C1_SCL_M0 / I2S1_MCLK_M1 |     13      |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART2_RX_M0</div> / I2C1_SDA_M0 / I2S1_SCLK_M1 /  |     14      |
+|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
+|          | ADC_KEY_IN1 | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
+|     69   | GPIO2_A5 / I2S0_SCLK_TX  |  <div className='green'>5</div>  | <div className='black'>6</div>  | SPDIF_TX / GPIO0_C1    |    17      |
+|     70     | I2S0_SCLK_RX / GPIO2_A6 / PDM_CLK   |  <div className='green'>7</div>  | <div className='green'>8</div>  |  I2S0_LRCK_TX / GPIO2_A7 |     71      |
+|      68   |   I2S0_8CH_MCLK / GPIO2_A4  / I2S0_MCLK  |  <div className='black'>9</div>  | <div className='green'>10</div> |  I2S0_LRCK_RX  / GPIO2_B0  |     72      |
 |     113     |  SPI1_CLK_M1 / UART7_RX_M1 / GPIO3_C1  | <div className='green'>11</div>  | <div className='green'>12</div> |  GPIO3_B5  / CAN1_RX_M0 / PWM12_M0  /UART3_TX_M1 / I2S2_SCLK_M1 |     109     |
 |     111     |             | SPI1_MOSI_M1 |              | I2C3_SCL_M1 |               |             |            | GPIO3_B7  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |            |            |                                           |             |              |              |           |             |
 |     112     |   SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1  / GPIO3_C0  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4   |     100     |
