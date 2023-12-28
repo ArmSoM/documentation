@@ -53,7 +53,7 @@ Before starting to use the ArmSoM-W3, please prepare the following items:
 
 ## Interface Settings  
 
-For the first time using the ArmSoM-W3 development kit, please first get familiar with the [Peripheral Interfaces](./LM7-introduction##armsom-LM7-development-kit-armsom-w3) to better understand the subsequent content.
+For the first time using the ArmSoM-W3 development kit, please first get familiar with the [Peripheral Interfaces](./LM7-introduction#armsom-LM7-development-kit-armsom-w3) to better understand the subsequent content.
 
 ### 2.5G Ethernet  
 
