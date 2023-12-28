@@ -97,7 +97,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>视频输出</th>
-            <th><li>1x HDMI OUT2.1，支持 8K@60fps</li><li>1x MIPI DSI分辨率可达 4K@60fps</li><li>1x DP1.4分辨率可达 8192x4320@30fps</li></th>
+            <th><li>1x HDMI OUT2.1，支持 8K@60fps</li><li>1x MIPI DSI分辨率可达 4K@60fps</li><li>1x DP1.4分辨率可达 8K@30fps</li></th>
         </tr>
         <tr>
             <th>视频输入</th>

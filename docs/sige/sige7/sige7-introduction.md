@@ -109,7 +109,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Video Out</th>
-            <th><li>1x HDMI 2.1, supports 8K@60fps</li><li>1x MIPI DSI up to 4K@60fps</li><li>1x DP 1.4 up to 8192×4320@30fps</li></th>
+            <th><li>1x HDMI 2.1, supports 8K@60fps</li><li>1x MIPI DSI up to 4K@60fps</li><li>1x DP 1.4 up to 8K@30fps</li></th>
         </tr>
         <tr>
             <th>Video In</th>
