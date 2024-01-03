@@ -53,7 +53,7 @@ Before starting to use the ArmSoM-Sige7, please prepare the following items:
 
 ## Interface Setup 
 
-If this is your first time using the ArmSoM-Sige7, please familiarize yourself with the [Peripheral Interfaces](./sige7-introduction) to better understand the content below.
+If this is your first time using the ArmSoM-Sige7, please familiarize yourself with the [Peripheral Interfaces](./introduction) to better understand the content below.
 
 ### 2.5G Ethernet
 

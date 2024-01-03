@@ -212,7 +212,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 
 The interface quantities in the table are the maximum theoretical values for the hardware design or CPU. 
 
-Most function pins have multiplexed relationships. For easy configuration, please refer to the **[Pin Function Table](/docs/lm/LM7/LM7-hardware#pin-function-table)** for the LM7.  
+Most function pins have multiplexed relationships. For easy configuration, please refer to the **[Pin Function Table](./hardware#pin-function-table)** for the LM7.  
 
 :::
 
