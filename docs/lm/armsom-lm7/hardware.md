@@ -29,7 +29,7 @@ You can obtain the schematics, PCB, DXF and other hardware resources of the deve
 
 ### 2D CAD Drawings
 
-[ArmSoM-W3 Top, Bottom](/hardware/lm/lm7/ArmSoM_W3_1V1_bot.dxf) - Download 2D CAD files
+[ArmSoM-W3 Top, Bottom](https://pan.baidu.com/s/1KKVkZcszuTWFLTrPl4541g?pwd=arms) - Download 2D CAD files
 
 ### Assembly Drawings 
 

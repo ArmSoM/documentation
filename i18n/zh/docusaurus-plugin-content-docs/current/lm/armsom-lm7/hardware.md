@@ -29,7 +29,7 @@ sidebar_position: 4
 
 ### 2D CAD 图
 
-[ArmSoM-W3 底部，顶部](/hardware/lm/lm7/ArmSoM_W3_1V1_bot.dxf) - 2D CAD 文件下载
+[ArmSoM-W3 Top, Bottom](https://pan.baidu.com/s/1KKVkZcszuTWFLTrPl4541g?pwd=arms) - 2D CAD 文件下载
 
 ### 位号图
 
