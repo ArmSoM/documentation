@@ -47,9 +47,8 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - Weight: 
 - Size: 92mm × 62mm
 
-## ArmSoM-Sige7 
 
-### Images
+## Images
 
 ![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.jpg)
 
@@ -57,7 +56,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port is for power input.
 :::
 
-### Hardware Specifications 
+## Hardware Specifications 
 
 <table>
     <thead>

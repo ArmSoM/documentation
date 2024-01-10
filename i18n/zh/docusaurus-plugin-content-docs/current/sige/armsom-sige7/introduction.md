@@ -34,9 +34,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 - 重量：
 - 大小：92mm × 62mm
 
-## ArmSoM-Sige7
-
-### 实物图
+## 实物图
 
 ![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.jpg)
 
@@ -44,7 +42,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。
 :::
 
-### 硬件规格
+## 硬件规格
 
 
 <table>
