@@ -44,6 +44,60 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 ### 产品框图
 ![aim7-product](/img/aim/aim7/aim7-product.png)
 
+### 硬件规格
+
+<table>
+    <thead>
+        <tr>
+            <th>类别</th>
+            <th>功能</th>
+      </tr>
+    </thead>
+    <tbody align="left">
+        <tr>
+            <th>显示</th>
+            <th><li>1x DP interface</li><li>1x HDMI/eDP combo interface</li> <li>up to 7680 x 4320@60 Hz for HDMI and DP, and 3840 x 2160@60 Hz for eDP </li></th>
+        </tr>
+        <tr>
+            <th>摄像头</th>
+            <th><li>3x 4-lane or 5x 2-lane MIPI CSI 接口，每线最高 2.5Gbps</li></th>
+        </tr>
+        <tr>
+            <th>网络</th>
+            <th>
+              <li>1路GMAC，提供 RGMII / RMII 接口引出</li>
+              <li>支持 10/100/1000Mbps 数据传输速率</li>
+            </th>
+        </tr>
+        <tr>
+            <th>PCIe</th>
+            <th>
+              <li>PCIe 3.0 x4: 每通道最高支持 8Gbps 数据速率, 支持 4 种组合方式：1路 x4、2路 x2、4路 x1、1路 x2+2路 x1，每通道最高支持 8Gbps 数据速率</li>
+              <li>PCIe 2.1 x1: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li></th>
+        </tr>
+         <tr>
+            <th>USB</th>
+            <th>
+            <li>1x USB 3.0 (Gen1)</li>
+            <li>3x USB 2.0</li>
+            </th>
+        </tr>
+         <tr>
+            <th rowspan="3">Others</th>
+            <th ><li>UART DEBUG x1, UART+flow control x2</li>
+            <li>SPI x2</li>
+            <li>I2C x4</li>
+            <li>can x1</li>
+            <li>I2S x2</li>
+            <li>SD 4.0, SDHOST 4.0, and SDIO 3.0</li>
+            <li>PWM x3, 多个 GPIO</li>
+            </th>
+        </tr>
+    </tbody>
+</table>
+
+
+
 ### 规格参数对比
 
 | 规格                                 |  ArmSoM-AIM7              | Jetson Nano (NVIDIA)                |
