@@ -7,14 +7,14 @@ sidebar_position: 4
 ## 引脚功能
 
 
-### 摄像头
-**两个 MIPI DC (DPHY/CPHY) combo PHY**
+### Video input interface
+**Two  MIPI DC (DPHY/CPHY) combo PHY**
 * Support USE DPHY or CPHY
-* 每个 MIPI DPHY V2.0, 4 lanes, 4.5 Gbps per lane
-* 每个 MIPI CPHY V1.1, 3 lanes, 2.5 Gbps per lane
+* Each MIPI DPHY V2.0, 4 lanes, 4.5 Gbps per lane
+* Each MIPI CPHY V1.1, 3 lanes, 2.5 Gbps per lane
   
-**四个MIPI CSI DPHY**
-* 每个 MIPI DPHY V1.2, 2 lanes, 2.5 Gbps per lane
+**Four MIPI CSI DPHY**
+* Each MIPI DPHY V1.2, 2 lanes, 2.5 Gbps per lane
 * Support combine 2 DPHY together to one 4-lan
 
 Table 1. CSI pin descriptions
@@ -66,7 +66,7 @@ Table 2. Camera control pin descriptions
 |122|	CAM1_MCLK|	Camera 1 Reference Clock|	Output|	CMOS – 1.8V|
 |120|	CAM1_PWDN|	Camera 1 Powerdown or GPIO	|Output	|CMOS – 1.8V|
 
-### 显示接口
+### Video output processor
 
 **HDMI/eDP TX interface**
 
@@ -152,7 +152,7 @@ Table 5. SDIO pin descriptions
 |223|	SDMMC0_D2|	SD Card or SDIO Data 2	|Bidir|	CMOS – 1.8V/3.3V
 |225|	SDMMC0_D3|	SD Card or SDIO Data 3	|Bidir|	CMOS – 1.8V/3.3V
 
-### 网口
+### GMAC
 
 Table 6. Gigabit Ethernet pin descriptions
 
@@ -246,9 +246,8 @@ Table 10. PCIe 2.1 pin descriptions
 |160	|PCIE30_CLK_N	|PCIe #0 Reference Clock–	                                                |Output|	PCIe PHY|
 |162	|PCIE30_CLK_P	|PCIe #0 Reference Clock+	                                                |Output|	PCIe PHY|
 
-### SPI 接口
+### SPI interface
 
-**SPI interface**
 * Support 5 SPI Controllers (SPI0-SPI4)
 * Support two chip-select output
 * Support serial-master and serial-slave mode, software-configurable
@@ -267,7 +266,7 @@ Table 12. SPI pin descriptions
 |108|	SPI1_MISO	|SPI 1 Master In / Slave Out	|Bidir	|CMOS – 1.8|
 |110|	SPI1_CS0*	|SPI 1 Chip Select 0	        |Bidir	|CMOS – 1.8|
 
-### I2C 接口
+### I2C interface
 
 Table 13. I2C pin descriptions
 
@@ -282,7 +281,8 @@ Table 13. I2C pin descriptions
 |213|	I2C3_SCL_M0	|Camera I2C Clock. 2.2kΩ pull-up to 3.3V on the module.|	Bidir|	Open Drain – 3.3V
 |215|	I2C3_SDA_M0	|Camera I2C Data. 2.2kΩ pull-up to 3.3V on the module.|	Bidir|	Open Drain – 3.3V
 
-### UART 接口
+### UART interface
+
 * Support 10 UART interfaces (UART0-UART9)
 * Embedded two 64-byte FIFO for TX and RX operation respectively
 * Support transmitting or receiving 5-bit, 6-bit, 7-bit, and 8-bit serial data
@@ -305,7 +305,7 @@ Table 13. UART pin descriptions
 |236|	UART2_TX_M0_DEBUG	|UART #2 Transmit	        |Output|	CMOS – 1.8V
 |238|	UART2_RX_M0_DEBUG	|UART #2 Receive	        |Input|	CMOS – 1.8V
 
-<!-- ### CAN bus
+### CAN bus
 
 * Support transmitting or receiving CAN standard frame
 * Support transmitting or receiving CAN extended frame
@@ -316,7 +316,7 @@ Table 14. CAN pin descriptions
 |Pin| 	Pin name	        |Signal description|	Direction	Pin type
 |---|------------|-------------------|--------------|--------------|
 |145|	CAN_TX	 |CAN PHY	    | Output            |	CMOS – 3.3V
-|143|	CAN_RX	 |CAN PHY 	|Input              |	CMOS – 3.3V -->
+|143|	CAN_RX	 |CAN PHY 	|Input              |	CMOS – 3.3V 
 
 ### GPIO
 
@@ -348,7 +348,9 @@ Table 15. GPIO pin descriptions
 |230|	GPIO3_A1/PWM11_IR/MIPI_CAM4_PDN |	GPIO #14 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 
 
-### i2s 接口
+### i2s interface
+
+Table 16. i2s pin descriptions
 
 |Pin| 	Pin name|	Signal description|	Direction|	Pin type
 |---|------------|-------------------|--------------|--------------|
@@ -361,7 +363,7 @@ Table 15. GPIO pin descriptions
 |220|	I2S2_SDO_M1|	I2S Audio Port 1 Data Out	|Output|	CMOS – 1.8V
 |222|	I2S2_SDI_M1 |	I2S Audio Port 1 Data In	|Input	|CMOS – 1.8V
 
-## pin 定义
+## pin define
 
 |ArmSoM-AIM7 function |	Pin number	|Pin number|	ArmSoM-AIM7 function|
 |------------------|-------------------------|-------------------------|-------------------------|

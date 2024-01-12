@@ -42,7 +42,7 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 ## 硬件规格
 
 ### 产品框图
-![aim7-product](/img/aim/aim7/aim7-product.png)
+![aim7-product](/img/aim/aim7/aim7-product.jpg)
 
 ### 硬件规格
 
