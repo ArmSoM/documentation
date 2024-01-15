@@ -30,7 +30,7 @@ ArmSoM-P2pro 的首次官方发布通告请在以下链接查看：
 ### 第三方系统
 
 #### armbian
-![armbian-log](/img/armbian-log.webp)
+![armbian-logo](/img/armbian-logo.webp)
 
 <!-- [Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160.img](https://pan.baidu.com/s/1URvyxKoox207rWwsMJmCyQ?pwd=arms)
 

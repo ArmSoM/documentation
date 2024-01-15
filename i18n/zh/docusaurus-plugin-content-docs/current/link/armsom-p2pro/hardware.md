@@ -15,6 +15,10 @@ sidebar_position: 4
 
 [ArmSoM-p2pro v1.1 位号图](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
 
+### datasheet
+
+[ArmSoM-p2pro v1.1 datasheet](https://drive.google.com/drive/folders/1tykssd5rnPnps8AoJ0eVFfM6lm8U7qCe)  
+
 :::tip 版本更改记录
 v1.0 为内部版本暂不公布
 :::
