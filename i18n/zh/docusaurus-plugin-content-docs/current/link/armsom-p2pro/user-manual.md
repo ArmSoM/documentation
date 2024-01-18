@@ -1,4 +1,6 @@
 ---
+description: ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网和语音应用程序
+keywords: [armsom, armsom-p2pro, maker kit, rockchip, rk3308使用手册]
 sidebar_label: "使用手册"
 sidebar_position: 3
 ---
@@ -72,6 +74,7 @@ $ sudo dhclient eth0
 
 ### 调试串口
 调试串口的位置在12pin-head的 9，11脚
+
 | P2pro       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
 | **GND** (pin 8) | <---> | GND |

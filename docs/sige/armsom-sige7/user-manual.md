@@ -1,4 +1,6 @@
 ---
+description: The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
+keywords: [armsom, armsom-sige7, SBC, maker kit, Rockchip User Manual]
 sidebar_label: "User Manual "
 sidebar_position: 3
 ---

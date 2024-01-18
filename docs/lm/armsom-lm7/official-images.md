@@ -1,4 +1,6 @@
 ---
+description: The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-bit processor with a maximum frequency of up to 2.4GHz and a 6 TOPS NPU. It supports up to 32GB of large memory.
+keywords: [armsom, armsom-LM7, Armbian, maker kit, rockchip, rk3588 Operating Systems]
 sidebar_label: "Operating Systems"
 sidebar_position: 5
 ---
@@ -39,3 +41,11 @@ View the initial official release announcement for ArmSoM-W3 here:
 [Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160.img](https://pan.baidu.com/s/1-6qgLxC7CbiNObRmJdFTDQ?pwd=arms)  
 
 [Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160_xfce_desktop.img](https://pan.baidu.com/s/1Pr0IJNrffxx7aLJ-eZLUUA?pwd=arms )
+
+### Source Code
+
+[ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
+
+[ArmSoM-W3 kernel](https://github.com/ArmSoM/linux-rockchip)
+
+[ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)

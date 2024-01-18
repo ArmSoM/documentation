@@ -1,4 +1,6 @@
 ---
+description: The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit quad-core ARM Cortex-A35 processor, USB, Ethernet, Bluetooth, wireless connectivity and a voice detection engine.With rich audio interfaces (such as MIC/PDM/SPDIF/I2S),RK3308 is ideal product for IoT and voice applications. 
+keywords: [armsom, armsom-p2pro, rockchip, open source router，open source hardware]
 sidebar_position: 4
 ---
 

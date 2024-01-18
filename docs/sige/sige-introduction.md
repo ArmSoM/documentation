@@ -1,4 +1,6 @@
 ---
+description: The Sige series（SBC） products launched by ArmSoM, with its superior performance and stable hardware quality, cover maker DIY implementation, commercial applications, industrial control and other fields, and have a wide range of application scenarios
+keywords: [armsom, armsom-sige, SBC, maker kit]
 sidebar_position: 1
 ---
 

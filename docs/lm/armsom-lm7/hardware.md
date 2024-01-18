@@ -1,4 +1,6 @@
 ---
+description: The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-bit processor with a maximum frequency of up to 2.4GHz and a 6 TOPS NPU. It supports up to 32GB of large memory.
+keywords: [armsom, armsom-LM7, LGA, maker kit, rockchip, rk3588 hardware]
 sidebar_label: "Hardware Resources"
 sidebar_position: 4
 ---

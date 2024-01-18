@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="The ArmSoM team consists of young open source hardware  enthusiasts. Our mission is to build a more open and reliable global open source community - single board computer,  development board， mini pc， open source  development board，open source hardware, raspberry pi，Thin client，embedded development board, arm development board, arm linux board,  arm single board computer，jetson nano">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

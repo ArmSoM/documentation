@@ -1,4 +1,6 @@
 ---
+description: The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit quad-core ARM Cortex-A35 processor, USB, Ethernet, Bluetooth, wireless connectivity and a voice detection engine.With rich audio interfaces (such as MIC/PDM/SPDIF/I2S),RK3308 is ideal product for IoT and voice applications. 
+keywords: [armsom, armsom-p2pro, rockchip, rk3308 Operating System]
 sidebar_label: "Operating System"
 sidebar_position: 5
 ---
@@ -31,3 +33,7 @@ Firmware location: 4. openwrt/ArmSoM-P2pro
 ![armbian-logo](/img/armbian-logo.webp)
 
 We are working on adapting armbian systems！Coming soon...
+
+### Source Code
+
+[ArmSoM-P2pro BSP](https://github.com/ArmSoM/armsom-p2pro-bsp)

@@ -1,4 +1,6 @@
 ---
+description: ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网和语音应用程序
+keywords: [armsom, armsom-p2pro, maker kit, rockchip, rk3308语音应用]
 sidebar_position: 2
 ---
 

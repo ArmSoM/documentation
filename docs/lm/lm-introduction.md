@@ -1,4 +1,6 @@
 ---
+description: This guide is specially designed for the LM series which adopts LGA packaging technology for stronger transmission capability and stability, as well as an extremely small size to facilitate customer embedding into products. 
+keywords: [armsom, armsom-LM, LGA, maker kit, Rockchip]
 sidebar_position: 1
 ---
 

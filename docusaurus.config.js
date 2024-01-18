@@ -81,8 +81,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name: 'keywords', content: 'armsom, SBC, Open Source, Thin client, rockchip'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+      ],
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.png',
+      image: 'img/armsom-social-card.png',
       navbar: {
         title: '',
         logo: {

@@ -1,4 +1,6 @@
 ---
+description: ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，采用了LGA封装，传输能力和稳定性更强。拥有丰富的接口，支持多硬盘、千兆网、WiFi6、5G/4G扩展和多种视频输入输出。支持多种操作系统；提供底板参考设计资料，用户可自主深度化定制。
+keywords: [armsom, armsom-lm7, armsom-w3, maker kit, rockchip, rk3588硬件]
 sidebar_label: "硬件资料"
 sidebar_position: 4
 ---
