@@ -94,11 +94,11 @@ const config = {
             label: 'General Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://armsom.org/',
-            label: 'ArmSoM',
-            position: 'right',
-          },
+          // {
+          //   href: 'https://armsom.org/',
+          //   label: 'ArmSoM',
+          //   position: 'right',
+          // },
           {
             type: "localeDropdown",
             position: "right",
