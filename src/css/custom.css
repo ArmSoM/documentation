@@ -68,3 +68,12 @@
   color: orange;
   /* background-color: orange; */
 }
+
+.navbar__logo img {
+  height: 100%;
+  /* margin-top: -8px; */
+}
+.navbar__inner {
+  margin: 0 auto;
+  width: 1300px!important;
+}

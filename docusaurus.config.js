@@ -39,19 +39,6 @@ const config = {
     },
   },
 
-  plugins: [
-    [
-      '@docusaurus/plugin-ideal-image',
-      {
-        quality: 70,
-        max: 1030, // max resized image's size.
-        min: 640, // min resized image's size. if original is lower, use that size.
-        steps: 2, // the max number of images generated between min and max (inclusive)
-        disableInDev: false,
-      },
-    ],
-  ],
-
   presets: [
     [
       'classic',
@@ -91,32 +78,15 @@ const config = {
         title: '',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/favicon.ico',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'docSidebar',
             position: 'left',
-            sidebarId: 'sige',
-            label: 'Sige',
-          }, {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'link',
-            label: 'Link',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'lm',
-            label: 'LM',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'aim',
-            label: 'AIM',
-          },
+            sidebarId: 'getting-started',
+            label: 'Getting Started',
+          }, 
           {
             type: 'docSidebar',
             position: 'left',
@@ -157,8 +127,8 @@ const config = {
                 target: "_blank",
               },
               {
-                label: "Services",
-                to: "http://www.armsom.org/services",
+                label: "ODM",
+                to: "http://www.armsom.org/odm",
                 target: "_blank",
               },
             ],
@@ -220,6 +190,7 @@ const config = {
           "sans-serif",
         ],
       },
+      
     }),
 };
 

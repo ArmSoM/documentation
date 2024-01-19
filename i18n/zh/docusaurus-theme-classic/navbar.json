@@ -1,4 +1,8 @@
 {
+  "item.label.Getting Started": {
+    "description": "Navbar item with label About",
+    "message": "用户手册"
+  },
   "item.label.General Tutorial": {
     "description": "Navbar item with label About",
     "message": "通用教程"
