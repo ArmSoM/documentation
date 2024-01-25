@@ -19,4 +19,10 @@ Join the ArmSoM user community!
 
 ArmSoM Forum: [ArmSoM Forum](http://forum.armsom.org/) - Our main channel for technical assistance.
 
-ArmSoM Wechat number: armsom-jackson
+ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
+
+# contact us
+
+ArmSoM Wechat number: armsom-jackson 
+
+ArmSoM email: sales@armsom.org

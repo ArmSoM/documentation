@@ -13,4 +13,10 @@ sidebar_position: 1
 
 官方论坛: [ArmSoM Forum](http://forum.armsom.org/) - 主要技术支持渠道，中英文都支持。
 
+官方github账号: [ArmSoM Forum](http://forum.armsom.org/)
+
+
+# 联系我们
 官方微信号: armsom-jackson
+
+官方邮箱: sales@armsom.org
