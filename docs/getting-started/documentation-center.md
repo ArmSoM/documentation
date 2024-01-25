@@ -3,12 +3,20 @@ sidebar_label: "Documentation Center"
 sidebar_position: 1
 ---
 
-# Documentation Center
+# ArmSoM Documentation
 
-This documentation center is a tutorial and guide maintained by the ArmSoM development team and the community to support the ArmSoM series of products and their peripheral products.
+Welcome to the official ArmSoM documentation center - your tutorial and guide for the ArmSoM series of products maintained by our development team and user community.
 
-If you encounter related problems while using this document, please ask questions through the forum or submit an issue on Github, and we will respond as soon as possible.
+Inside you'll find support to get started building your applications and systems powered by ArmSoM's capable computing modules and peripheral products.
 
-# Join the community
+# Getting Help
 
-Official Forum: [ArmSoM Forum](http://forum.armsom.org/) - Main technical support channel.
+If you run into any problems using this documentation, ask your questions in our forum or submit a GitHub issue. We have an active technical support team responding regularly to assist you.
+
+# community
+
+Join the ArmSoM user community!
+
+ArmSoM Forum: [ArmSoM Forum](http://forum.armsom.org/) - Our main channel for technical assistance.
+
+ArmSoM Wechat number: armsom-jackson

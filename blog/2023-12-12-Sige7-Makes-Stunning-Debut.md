@@ -2,7 +2,7 @@
 slug: Sige7-Makes-Stunning-Debut
 title: Sige7-Makes-Stunning-Debut
 authors: [ArmSoM, keven]
-tags: [Sige7, Makes]
+tags: [Sige7, Makes, SBC]
 ---
 
 
