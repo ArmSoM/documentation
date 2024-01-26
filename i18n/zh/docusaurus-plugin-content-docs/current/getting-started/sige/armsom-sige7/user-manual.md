@@ -70,6 +70,33 @@ or
 $ sudo dhclient enP4p65s0
 ```
 
+### WIFI
+```
+# 1. Open the WIFI
+armsom@armsom-sige7:/# nmcli r wifi on
+# 2. Scan WIFI
+armsom@armsom-sige7:/# nmcli dev wifi
+# 3. Connect to WIFI network
+armsom@armsom-sige7:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+```
+
+
+### BT
+
+```
+# 1. 激活蓝牙
+armsom@armsom-sige7:/# service bluetooth start
+# 2. 进入bluetoothctl
+armsom@armsom-sige7:/# bluetoothctl
+# 3. 输入以下命令即可连接
+armsom@armsom-sige7:/# power on
+armsom@armsom-sige7:/# agent on
+armsom@armsom-sige7:/# default-agent
+armsom@armsom-sige7:/# scan on
+armsom@armsom-sige7:/# pair yourDeviceMAC
+```
+
+
 ### HDMI
 
 ArmSoM-Sige7 有HDMI 输出端口，支持 CEC 和 HDMI 2.1，分辨率最高支持 8Kp60。

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # ArmSoM 系列产品介绍
 
-## Sige 系列产品介绍
+## Sige 系列
 
 ### 应用场景
 
@@ -36,7 +36,7 @@ ArmSoM Sige系列产品开源资料的逐步完善中，涉及到多个方面，
 
 |型号名称 |   [ ArmSoM-Sige7 ](./sige/armsom-sige7/introduction)|
 | :--------: | :----------: | 
-|缩略图   |  ![armsom-Sige7](/img/sige/sige7/armsom-sige7.jpg) |
+|缩略图   |  ![armsom-Sige7](/img/sige/sige7/armsom-sige7.png) |
 | 主控 | RK3588 |
 | RAM | LPDDR4x  |
 | Flash |  eMMC  | 
@@ -59,7 +59,7 @@ ArmSoM Sige系列产品开源资料的逐步完善中，涉及到多个方面，
 ArmSoM-AIM是我们推出的一系列嵌入式人工智能计算模块，主要用于开发和部署具有机器学习和深度学习功能的应用。
 
 :::tip
-**尺寸和引脚与Jetson nano兼容,**
+**尺寸和引脚与Jetson nano兼容**
 :::
 
 ### 规格参数对比

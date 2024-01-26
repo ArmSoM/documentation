@@ -272,7 +272,7 @@ rtkm                   16384  1 8852be
 rtk_btusb              57344  0
 ```
 
-#### WIFI
+### WIFI
 ```
 # 1. Switch to super user mode
 root@linaro-alip:/# sudo su
@@ -285,7 +285,7 @@ root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
 
 
-#### BT
+### BT
 
 ```
 # 1. 激活蓝牙

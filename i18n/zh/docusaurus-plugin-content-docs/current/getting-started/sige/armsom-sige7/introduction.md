@@ -38,7 +38,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 ## 实物图
 
-![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.jpg)
+![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.webp)
 
 :::tip
 Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。

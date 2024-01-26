@@ -266,7 +266,7 @@ rtkm                   16384  1 8852be
 rtk_btusb              57344  0
 ```
 
-#### WIFI
+### WIFI
 ```  
 # 1. Switch to super user mode
 armsom@armsom-w3:/# sudo su
@@ -278,7 +278,7 @@ root@armsom-w3:/# nmcli dev wifi
 root@armsom-w3:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
 
-#### BT  
+### BT  
 
 ```
 # 1. Activate bluetooth  

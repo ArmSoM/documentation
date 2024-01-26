@@ -52,7 +52,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 
 ## Images
 
-![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.jpg)
+![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.webp)
 
 :::tip
 There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port is for power input.
