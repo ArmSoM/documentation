@@ -16,7 +16,7 @@ The system image includes the linux kernel, basic programs, etc., and is necessa
 
 ## 1. Obtain system image
 
-Visit the Google Drive resource introduction page to obtain the system image: [Google Drive link](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+Visit the Google Drive resource introduction page to obtain the system image: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM?usp=drive_link)
 
 ### 1.1. Image naming rules
 Product model-root file system-desktop type-update time
@@ -57,7 +57,7 @@ armsom-w3-debian-bullseye-xfce4-arm64-20231115
 
 Burning the image to eMMC requires the use of RKDevTool burning tool and RK Driver Assistant (DriverAssitant)
 
-Click to enter the link: [Google Drive link](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+Click to enter the link: [Google Drive link](https://drive.google.com/drive/folders/1r7a2kNEMk3A_C_pA2p7skR8Se7s9Ia_2?usp=drive_link)
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
@@ -142,7 +142,7 @@ Burning the image to the SD card requires special burning software and an SD car
 
 Burning the image to eMMC requires the use of the burning tool SDDiskTool_version number.exe
 
-Click to enter the link: [Google Drive link](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+Click to enter the link: [Google Drive link](https://drive.google.com/drive/folders/12ucrWgg0JfyyxGiSbTCliuQg-14nEhPe?usp=drive_link)
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 

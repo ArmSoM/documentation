@@ -19,7 +19,7 @@ sidebar_position: 4
 
 ### datasheet
 
-[ArmSoM-p2pro v1.1 datasheet](https://drive.google.com/drive/folders/1tykssd5rnPnps8AoJ0eVFfM6lm8U7qCe)  
+[ArmSoM-p2pro v1.1 datasheet](https://pan.baidu.com/s/1GBr2kwJ_-Xor_3thJ0iu5A?pwd=arms)  
 
 :::tip 版本更改记录
 v1.0 为内部版本暂不公布
