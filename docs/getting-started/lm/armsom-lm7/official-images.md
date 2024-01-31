@@ -16,9 +16,13 @@ The following systems have been tested and verified by ArmSoM officially:
 
 Download link: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
 
-**debian bullseye**  
+**Debian bullseye**  
 
 Image location: 3. Linux Images/debian/ArmSoM-LM7(Development Kit ArmSoM-W3)  
+
+**Ubuntu**  
+
+Image location: 3. Linux Images/ubuntu/ArmSoM-LM7(Development Kit ArmSoM-W3)  
 
 **Android 12**
 

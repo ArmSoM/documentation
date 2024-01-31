@@ -51,6 +51,19 @@ Sige7 使用手册，帮助用户了解Sige7的基本使用和需要的准备工
 
 如果您是首次使用 ArmSoM-Sige7，请先熟悉下 [外设接口](./introduction)，以便于您更好的理解后续的内容。
 
+### 调试串口
+
+如下所示连接 USB 转 TTL 串口线：
+
+![armsom-sige7-debug](/img/sige/sige7/armsom-sige7-debug.png)
+
+| Sige7       | 连接  | 串口模块 |
+| --------------- | ----- | ------ |
+| **GND** (pin 6) | <---> | GND |
+| **TX** (pin 8)  | <---> | RX |
+| **RX** (pin 10) | <---> | TX |
+
+
 ### 2.5G 以太网口
 
 如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-Sige7 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
@@ -79,7 +92,6 @@ armsom@armsom-sige7:/# nmcli dev wifi
 # 3. Connect to WIFI network
 armsom@armsom-sige7:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
-
 
 ### BT
 
@@ -153,8 +165,20 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
 
 Sige7 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
+目前风扇默认五个状态
+
+| 温度       | 状态  | PWM转速 |
+| --------------- | ----- | ------ |
+| 小于50° | 0 | 0 |
+| 50°-55°  | 1 | 50 |
+| 55°-60° | 2 | 100 |
+| 60°-65° | 3 | 150 |
+| 65°°-70° | 4 | 200 |
+| 70°以上 | 5 | 250 |
+
 ```
-armsom@armsom-sige7:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon8/pwm1
+// 查看当前转速 
+armsom@armsom-sige7:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
 
 ### Type-C
@@ -170,7 +194,7 @@ Sige7 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传�
 Sige7 具有两个用户灯 LED 绿灯和红灯。
 
 - 用户绿灯
-  默认情况下，其常量显示正在运行的内核。
+  默认情况下，其常量显示系统运行正常。
 
 - 用户红灯
   默认情况下不亮，可由用户自行操控。
@@ -274,3 +298,8 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 ### MIPI DSI
 
 ArmSoM-Sige7 分辨率最高分辨率可达 4K@60Hz
+
+
+## 性能
+
+待公布

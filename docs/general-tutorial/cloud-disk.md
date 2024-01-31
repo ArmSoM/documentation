@@ -13,7 +13,7 @@ There are abundant software and hardware resources in the network disk, includin
 
 Click to enter the link: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
 
-![ArmSoM baidu-cloud-all](/img/general-tutorial/google-cloud-all.png)
+![ArmSoM google-cloud-all](/img/general-tutorial/google-cloud-all.png)
 
 Google Drive resources mainly include the following parts:
 

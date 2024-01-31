@@ -253,3 +253,5 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 ### MIPI DSI  
 
 The ArmSoM-Sige7 supports up to 4K@60Hz resolution over MIPI DSI
+
+## Performance

@@ -5,6 +5,38 @@ sidebar_label: "操作系统 & 源码"
 sidebar_position: 5
 ---
 
-# ArmSoM-sige7 官方操作系统
 
-正式版本待发布
+# ArmSoM-Sige7 官方操作系统
+
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+
+## 官方镜像
+
+### 下载
+以下系统已由ArmSoM官方测试验证：
+
+网盘地址：[百度网盘链接](../../../general-tutorial/cloud-disk)
+
+**debain bullseye**
+
+固件位置：3. Linux镜像/debian/ArmSoM-Sige7
+
+**安卓12**
+
+固件位置：4. 安卓镜像/ArmSoM-Sige7
+
+
+### 第三方系统
+
+#### armbian
+![armbian-logo](/img/armbian-logo.webp)
+
+固件位置：3. Linux镜像/armbian/ArmSoM-Sige7
+
+### 源码
+
+[ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
+
+[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/linux-rockchip)
+
+[ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)

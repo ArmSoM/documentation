@@ -14,22 +14,30 @@ sidebar_position: 4
 
 ### 原理图
 
-* [ArmSoM-Sige7_1V0 原理图pdf](https://pan.baidu.com/s/1db_c6ioYoqmMNsV-mPSrhQ?pwd=arms) - 原理图pdf
+* [ArmSoM-Sige7_1V1 原理图pdf](https://pan.baidu.com/s/1GUg1hSzNVVuuWlY-_vGloA?pwd=arms) - 原理图pdf
 
-<!-- * [ArmSoM-Sige7_1V1 原理图pdf]() - 原理图pdf -->
 
 ### 2D CAD 图
 
-<!-- * [ArmSoM-Sige7_1V0 底部，顶部]() - 2D CAD 文件下载 -->
-
-<!-- * [ArmSoM-Sige7_1V1 底部，顶部]() - 2D CAD 文件下载 -->
+* [ArmSoM-Sige7_1V1 底部，顶部](https://pan.baidu.com/s/10UYqMjc3IjTlguOVMv7JXw?pwd=arms) - 2D CAD 文件下载
 
 ### 位号图
 
-* [ArmSoM-Sige7_1V0 位号图](https://pan.baidu.com/s/1Y0MsLGczlFYRCDp4utqEIw?pwd=arms) -  位号图下载
+* [ArmSoM-Sige7_1V1 位号图](https://pan.baidu.com/s/1Nk5RWFABTPvNcvISxS2c7Q?pwd=arms) -  位号图下载
 
-<!-- * [ArmSoM-Sige7_1V1 位号图]() -  位号图下载 -->
 
+:::tip 版本更改记录
+V1.1 
+* VOL_IC: U27/U7/U6301change part pin;
+* USB：U15 fr o m TypeC1 change t o TypeC0; CN31 fr o m USB3. 0 change t o USB2. 0;
+* 40PIN：add UART Pr ot ect; J 2&CN2&CN32 change t o WF0. 8;
+* CAM：DEL R6352, CSI _1 I2C3 change t o I2C4；
+* WIFI Module: AP6275S change to AP6275P;
+:::
+
+### datasheet
+
+* [ArmSoM-Sige7 元件datasheet](https://pan.baidu.com/s/1SBVyAAxlQHdpzCAu6ZWJXQ?pwd=arms) -  datasheet下载
 
 ### 硬件引脚定义
 
