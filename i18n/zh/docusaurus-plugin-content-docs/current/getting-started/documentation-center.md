@@ -13,6 +13,8 @@ sidebar_position: 1
 
 官方论坛: [ArmSoM Forum](http://forum.armsom.org/) - 主要技术支持渠道，中英文都支持。
 
+Discord社群: [ArmSoM Discord](https://discord.gg/YMdSuFVr2V) - 英文实时讨论群
+
 官方github账号: [ArmSoM Forum](http://forum.armsom.org/)
 
 
