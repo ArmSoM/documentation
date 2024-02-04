@@ -11,16 +11,16 @@ Download link: [Google Drive link](../../../general-tutorial/cloud-disk)
 
 ### Schematics
 
-* [ArmSoM-Sige7_1V1 Schematics pdf](https://pan.baidu.com/s/1GUg1hSzNVVuuWlY-_vGloA?pwd=arms) - Schematics pdf
+* [ArmSoM-Sige7_1V1 Schematics pdf](https://drive.google.com/file/d/1Ii0Ep-616JgdENhtjnCNix_exlq1Ax9Z/view?usp=drive_link) - Schematics pdf
 
 
 ### 2D CAD Drawings
 
-* [ArmSoM-Sige7_1V1 Top, Bottom](https://pan.baidu.com/s/10UYqMjc3IjTlguOVMv7JXw?pwd=arms) - Download 2D CAD files
+* [ArmSoM-Sige7_1V1 Top, Bottom](https://drive.google.com/drive/folders/1nLe93JpHQ83welST-KUr-j9DrSCuE-JV?usp=drive_link) - Download 2D CAD files
 
-### Assembly Drawings 
+### SMD
 
-* [ArmSoM-Sige7_1V1 Assembly Drawings](https://pan.baidu.com/s/1Nk5RWFABTPvNcvISxS2c7Q?pwd=arms) -  Download assembly drawings
+* [ArmSoM-Sige7_1V1 SMD](https://drive.google.com/file/d/1CAIkXP9vTAlQEQWiOLY9ytuNbfACrvga/view?usp=drive_link) -  Download components Position Reference of Sige7 V1.1
 
 
 :::tip Version change history

@@ -33,9 +33,9 @@ You can obtain the schematics, PCB, DXF and other hardware resources of the deve
 
 [ArmSoM-W3 Top, Bottom](https://pan.baidu.com/s/1KKVkZcszuTWFLTrPl4541g?pwd=arms) - Download 2D CAD files
 
-### Assembly Drawings 
+### SMD
 
-[ArmSoM-W3_1V1 Assembly Drawing](https://pan.baidu.com/s/1zZ59b95ROjsHF3TlcG-cNA?pwd=arms) - Download assembly drawings
+[ArmSoM-W3_1V1 Assembly Drawing](https://pan.baidu.com/s/1zZ59b95ROjsHF3TlcG-cNA?pwd=arms) - Download components Position Reference of W3 V1.1
 
 ### Hardware Pin Definitions
 

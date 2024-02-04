@@ -13,7 +13,7 @@ Inside you'll find support to get started building your applications and systems
 
 If you run into any problems using this documentation, ask your questions in our forum or submit a GitHub issue. We have an active technical support team responding regularly to assist you.
 
-# community
+# Community
 
 Join the ArmSoM user community!
 
@@ -23,7 +23,7 @@ Discord Community: [ArmSoM Discord](https://discord.gg/YMdSuFVr2V) - Instant cha
 
 ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
-# contact us
+# Contact us
 
 ArmSoM Wechat number: armsom-jackson 
 
