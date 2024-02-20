@@ -23,7 +23,7 @@ Discord Community: [ArmSoM Discord](https://discord.gg/YMdSuFVr2V) - Instant cha
 
 ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
-# Contact us
+# Contact Us
 
 ArmSoM Wechat number: armsom-jackson 
 
