@@ -50,6 +50,6 @@ View the initial official release announcement for ArmSoM-W3 here:
 
 [ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
 
-[ArmSoM-W3 kernel](https://github.com/ArmSoM/linux-rockchip)
+[ArmSoM-W3 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
 [ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)

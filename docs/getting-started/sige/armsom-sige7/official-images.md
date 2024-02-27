@@ -40,6 +40,6 @@ Firmware location: 3. Linux image/armbian/ArmSoM-Sige7
 
 [ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
 
-[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/linux-rockchip)
+[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
 [ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)

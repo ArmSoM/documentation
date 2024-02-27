@@ -37,6 +37,6 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 [ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
 
-[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/linux-rockchip)
+[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
 [ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)

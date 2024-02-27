@@ -22,7 +22,7 @@ sidebar_position: 5
 - 在 /boot/firmware/ubuntuEnv.txt文件中找到 "overlays=" 这个关键词。如下是为 ArmSoM-Sige7 使用两个覆盖层的示例。
 
 ```bash
-overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-mipi-dsi
+overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 ```
 
 ​	编辑好之后重启设备来更改overlays设置。

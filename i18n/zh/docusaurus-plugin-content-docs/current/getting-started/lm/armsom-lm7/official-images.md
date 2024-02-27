@@ -46,6 +46,6 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 
 [ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
 
-[ArmSoM-W3 kernel](https://github.com/ArmSoM/linux-rockchip)
+[ArmSoM-W3 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
 [ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)

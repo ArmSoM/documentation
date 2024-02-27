@@ -15,6 +15,15 @@
     "sidebar.general-tutorial.category.Start the system": {
         "message": "访问系统"
     },
+    "sidebar.general-tutorial.category.Interface usage": {
+        "message": "接口使用"
+    },
+    "sidebar.accessories.category.Accessories": {
+        "message": "配件"
+    },
+    "sidebar.getting-started.accessories.category.Accessories": {
+        "message": "配件"
+    },
     "sidebar.lm.category.lm7.link.generated-index.description": {
         "message": "ArmSoM-LM7采用瑞芯微RK3588，其强大的功能加上极小的尺寸适用于各种嵌入式场景，我们将提供完善的​​底板参考设计资料，可自主深度化定制，帮助用户快速开发和验证产品。"
     },
