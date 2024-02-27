@@ -2,44 +2,45 @@
 sidebar_label: "ArmSoM Display 10 HD"
 sidebar_position: 1
 ---
-#  ArmSoM  Display 10 HD
+# ArmSoM Display 10 HD
 
+# I. Enable Display Overlay
 
+## 1.1 Ubuntu22.04 image to enable display overlay
 
-# 一. 启用Display的overlay
+- Use nano to open the /boot/firmware/ubuntuEnv.txt file:
 
-## 1.1 Ubuntu22.04镜像启用Display的overlay
-- 使用nano 打开/boot/firmware/ubuntuEnv.txt文件：
-
-```bash
+```bash  
 sudo nano /boot/firmware/ubuntuEnv.txt
 ```
 
-- 在该文件中找到 "overlays=" 这个关键词，并添加如下内容：
-​	
+- Find the "overlays=" keyword in the file, and add the following:
+
 ```bash
 overlays=armsom-sige7-display-10hd
 ```
-快捷键：Ctrl + S保存    Ctrl + X退出
 
-编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
+Shortcut keys: Ctrl + S to save, Ctrl + X to exit  
 
-## 1.2 Armbian镜像启用Display 的overlay
+After editing, restart the device to change the Overlays settings to support the Display 10 HD.
 
-- 使用nano 打开/boot/armbianEnv.txt文件：
+## 1.2 Armbian image to enable display overlay
+
+- Use nano to open the /boot/armbianEnv.txt file:
 
 ```bash
 sudo nano /boot/armbianEnv.txt
 ```
 
-- 在该文件中找到或者添加 "overlays=" 这个关键词。
+- Find or add the "overlays=" keyword in the file.
 
 
-```bash
+```bash 
 overlays=armsom-sige7-display-10hd
 ```
-快捷键：Ctrl + S保存    Ctrl + X退出
 
-编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
+Shortcut keys: Ctrl + S to save, Ctrl + X to exit  
+
+After editing, restart the device to change the Overlays settings to support the Display 10 HD. 
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
