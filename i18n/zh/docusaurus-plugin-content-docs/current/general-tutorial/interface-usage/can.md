@@ -48,7 +48,7 @@ make savedefconfig
 
 # 5. DTS 节点配置
 
-## 5.1. 主要参数:
+## 5.1 主要参数:
 
 - interrupts = <GIC_SPI 1 IRQ_TYPE_LEVEL_HIGH>;
 转换完成，产生中断信号。
@@ -59,7 +59,7 @@ make savedefconfig
 - pinctrl
 配置CAN相关的引脚信息，功能复用
 
-## 5.2. 芯片级公共配置 
+## 5.2 芯片级公共配置 
 
 kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
 
@@ -118,7 +118,7 @@ can2: can@fea70000 {
 
 - pinctrl配置：根据实际板卡连接情况配置can_h和can_l的iomux作为can功能使用。
 
-## 5.3. 板级配置 
+## 5.3 板级配置 
 
 kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts
 
