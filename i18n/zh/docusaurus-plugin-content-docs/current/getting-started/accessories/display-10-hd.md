@@ -6,7 +6,7 @@ sidebar_position: 1
 
 
 
-# 一. 启用Display的overlay
+# 1. 启用Display的overlay
 
 ## 1.1 Ubuntu22.04镜像启用Display的overlay
 - 使用nano 打开/boot/firmware/ubuntuEnv.txt文件：

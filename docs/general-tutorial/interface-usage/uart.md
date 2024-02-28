@@ -2,7 +2,7 @@
 sidebar_label: "UART 使用"
 sidebar_position: 8
 ---
-
+# UART 使用
 ## 1. UART 简介
 
 Rockchip UART (Universal Asynchronous Receiver/Transmitter) 基于16550A串口标准，完整模块支持以下功能：

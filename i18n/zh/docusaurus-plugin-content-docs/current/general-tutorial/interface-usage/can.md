@@ -5,7 +5,7 @@ sidebar_position: 6
 # CAN 使用
 ## 1. CAN 简介
 
-- CAN (controller Area Network)：控制器局域网络总线，是一种有效支持分布式控制或实时控制的串行通信网络。
+CAN (controller Area Network)：控制器局域网络总线，是一种有效支持分布式控制或实时控制的串行通信网络。
 
 - 目前世界上绝大多数汽车制造厂商都采用CAN总线来实现汽车内部控制系统之间的数据通信。
 

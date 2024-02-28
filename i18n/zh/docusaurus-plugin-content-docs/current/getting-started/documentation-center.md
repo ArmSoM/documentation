@@ -15,7 +15,7 @@ sidebar_position: 1
 
 Discord社群: [ArmSoM Discord](https://discord.gg/YMdSuFVr2V) - 英文实时讨论群
 
-官方github账号: [ArmSoM Forum](http://forum.armsom.org/)
+官方github账号: [ArmSoM Github](http://forum.armsom.org/)
 
 
 # 联系我们
