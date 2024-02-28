@@ -2,8 +2,8 @@
 sidebar_label: "CAN 使用"
 sidebar_position: 6
 ---
-
-# 1. CAN 简介
+# CAN 使用
+## 1. CAN 简介
 
 - CAN (controller Area Network)：控制器局域网络总线，是一种有效支持分布式控制或实时控制的串行通信网络。
 
@@ -13,16 +13,16 @@ sidebar_position: 6
 
 - 在ArmSoM-Sige7中，CAN集成在40PIN中，可供用户复用为CAN相关引脚。
 
-# 2. 原理图
+## 2. 原理图
 CAN在40PIN中的位置: CAN_TX对应40PIN中的第35编号，CAN_RX对应40PIN中的第12编号
 ![can-sch](/img/general-tutorial/interface-usage/can-sch.png)
 
-# 3. 硬件连接
+## 3. 硬件连接
 CAN模块之间接线：CAN_TX接CAN_TX，CAN_RX接CAN_RX。
 ![can-real](/img/general-tutorial/interface-usage/can-real.png)
 
 
-# 4. 内核配置
+## 4. 内核配置
 - rockchip_linux_defconfig配置：
 
 ```bash
@@ -46,9 +46,9 @@ make savedefconfig
 
 ![can-config](/img/general-tutorial/interface-usage/can-config.png)
 
-# 5. DTS 节点配置
+## 5. DTS 节点配置
 
-## 5.1 主要参数:
+### 5.1 主要参数:
 
 - interrupts = <GIC_SPI 1 IRQ_TYPE_LEVEL_HIGH>;
 转换完成，产生中断信号。
@@ -59,7 +59,7 @@ make savedefconfig
 - pinctrl
 配置CAN相关的引脚信息，功能复用
 
-## 5.2 芯片级公共配置 
+### 5.2 芯片级公共配置 
 
 kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
 
@@ -118,7 +118,7 @@ can2: can@fea70000 {
 
 - pinctrl配置：根据实际板卡连接情况配置can_h和can_l的iomux作为can功能使用。
 
-## 5.3 板级配置 
+### 5.3 板级配置 
 
 kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts
 
@@ -135,7 +135,7 @@ kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts
 
 - 由于系统根据上述dts节点创建的CAN设备只有一个，而第一个创建的设备为CAN0
 
-# 6. CAN通信测试
+## 6. CAN通信测试
 
 - 查询当前⽹络设备:
 
