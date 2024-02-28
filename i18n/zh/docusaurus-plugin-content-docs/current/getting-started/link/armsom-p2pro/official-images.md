@@ -22,7 +22,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 **istoreos**
 
-固件位置：4. openwrt/ArmSoM-P2pro
+固件位置：3. Linux image/openwrt/ArmSoM-P2pro  
 
 <!-- #### 发布信息
 

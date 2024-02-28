@@ -20,7 +20,7 @@ Rockchip UART (Universal Asynchronous Receiver/Transmitter) 基于16550A串口�
 - 在40PIN中可供复用的UART有:uart2-m2，uart3-m1，uart4-m2，uart7-m1，uart7-m2，uart8-m0
   
 ### 2.1 如何使用40PIN中的UART ？
-用户只需参考[overlay](https://docs.armsom.org/zh/docs/general-tutorial/overlay)设置，在overlay属性中添加上UART的overlay文件：
+用户只需参考 [overlay](https://docs.armsom.org/zh/docs/general-tutorial/overlay) 设置，在overlay属性中添加上UART的overlay文件：
 
 例如：
 - 使用UART3：	
@@ -48,7 +48,9 @@ Device Drivers(*)   ---> Character devices(*)  ---> Serial drivers
 ![uart-config](/img/general-tutorial/interface-usage/uart-config.jpg)
 
 ### 2.3 dts配置
-#### 2.3.1 芯片级公共配置 kernel/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
+#### 2.3.1 芯片级公共配置 
+
+kernel/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
 
 ```bash
 uart2: serial@feb50000 {
@@ -65,7 +67,10 @@ uart2: serial@feb50000 {
 		status = "disabled";
 	};
 ```
-#### 2.3.2 板级配置 kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7.dts
+#### 2.3.2 板级配置 
+
+kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7.dts
+
 UART的板级dts配置只有以下参数允许修改：
 -  dma-names：
 	- "tx" 打开tx dma
@@ -143,7 +148,7 @@ fiq_debugger: fiq-debugger {
 - interrupts：配置的辅助中断，保持默认即可。
 
 ## 4. 测试
-UART调试提供一个官方测试程序：ts_uart.uart、两个测试用文件send_0x55和send_00_ff，该程序可以联系ArmSoM客服获取。
+UART调试提供一个官方测试程序：ts_uart.uart(存放在网盘：1. 开发工具->测试工具)、两个测试用文件send_0x55和send_00_ff，该程序可以联系ArmSoM客服获取。
 通过adb工具将测试程序放在开发板上一个可执行的路径下，以下放在data路径：
 
 ```bash

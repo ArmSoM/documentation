@@ -23,7 +23,7 @@ Firmware location: 3. Linux image/debian/ArmSoM-P2pro
 
 **istoreos**  
 
-Firmware location: 4. openwrt/ArmSoM-P2pro  
+Firmware location: 3. Linux image/openwrt/ArmSoM-P2pro  
 
 
 ### Third Party System  
