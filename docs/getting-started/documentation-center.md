@@ -19,7 +19,7 @@ Join the ArmSoM user community!
 
 ArmSoM Forum: [ArmSoM Forum](http://forum.armsom.org/) - Our main channel for technical assistance.
 
-Discord Community: [ArmSoM Discord](https://discord.gg/YMdSuFVr2V) - Instant chatting and discussion group, English only
+Discord Community: [ArmSoM Discord](https://discord.gg/EFrQbnsy) - Instant chatting and discussion group, English only
 
 ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
