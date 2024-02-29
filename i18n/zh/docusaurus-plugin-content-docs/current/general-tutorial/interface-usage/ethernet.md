@@ -14,60 +14,62 @@ ArmSoM系列产品主要使用到了两款以太网芯片
 在ArmSoM系列产品中，ArmSoM-Aim7使用的是RTL8211F－CG千兆以太网芯片
 
 ### 2.1 驱动
+
 drivers/net/ethernet/stmicro/stmmac/*
+
 ### 2.2 DTS 节点配置
 
 芯片级公共配置  kernel/arch/arm64/boot/dts/rockchip/rk3588.dtsi
 
 ```bash
 gmac0: ethernet@fe1b0000 {
-		compatible = "rockchip,rk3588-gmac", "snps,dwmac-4.20a";
-		reg = <0x0 0xfe1b0000 0x0 0x10000>;
-		interrupts = <GIC_SPI 227 IRQ_TYPE_LEVEL_HIGH>,
-			     <GIC_SPI 226 IRQ_TYPE_LEVEL_HIGH>;
-		interrupt-names = "macirq", "eth_wake_irq";
-		rockchip,grf = <&sys_grf>;
-		rockchip,php_grf = <&php_grf>;
-		clocks = <&cru CLK_GMAC_125M>, <&cru CLK_GMAC_50M>,
-			 <&cru PCLK_GMAC0>, <&cru ACLK_GMAC0>,
-			 <&cru CLK_GMAC0_PTP_REF>;
-		clock-names = "stmmaceth", "clk_mac_ref",
-			      "pclk_mac", "aclk_mac",
-			      "ptp_ref";
-		resets = <&cru SRST_A_GMAC0>;
-		reset-names = "stmmaceth";
-		power-domains = <&power RK3588_PD_GMAC>;
+	compatible = "rockchip,rk3588-gmac", "snps,dwmac-4.20a";
+	reg = <0x0 0xfe1b0000 0x0 0x10000>;
+	interrupts = <GIC_SPI 227 IRQ_TYPE_LEVEL_HIGH>,
+				<GIC_SPI 226 IRQ_TYPE_LEVEL_HIGH>;
+	interrupt-names = "macirq", "eth_wake_irq";
+	rockchip,grf = <&sys_grf>;
+	rockchip,php_grf = <&php_grf>;
+	clocks = <&cru CLK_GMAC_125M>, <&cru CLK_GMAC_50M>,
+			<&cru PCLK_GMAC0>, <&cru ACLK_GMAC0>,
+			<&cru CLK_GMAC0_PTP_REF>;
+	clock-names = "stmmaceth", "clk_mac_ref",
+				"pclk_mac", "aclk_mac",
+				"ptp_ref";
+	resets = <&cru SRST_A_GMAC0>;
+	reset-names = "stmmaceth";
+	power-domains = <&power RK3588_PD_GMAC>;
 
-		snps,mixed-burst;
-		snps,tso;
+	snps,mixed-burst;
+	snps,tso;
 
-		snps,axi-config = <&gmac0_stmmac_axi_setup>;
-		snps,mtl-rx-config = <&gmac0_mtl_rx_setup>;
-		snps,mtl-tx-config = <&gmac0_mtl_tx_setup>;
-		status = "disabled";
+	snps,axi-config = <&gmac0_stmmac_axi_setup>;
+	snps,mtl-rx-config = <&gmac0_mtl_rx_setup>;
+	snps,mtl-tx-config = <&gmac0_mtl_tx_setup>;
+	status = "disabled";
 
-		mdio0: mdio {
-			compatible = "snps,dwmac-mdio";
-			#address-cells = <0x1>;
-			#size-cells = <0x0>;
-		};
-
-		gmac0_stmmac_axi_setup: stmmac-axi-config {
-			snps,wr_osr_lmt = <4>;
-			snps,rd_osr_lmt = <8>;
-			snps,blen = <0 0 0 0 16 8 4>;
-		};
-
-		gmac0_mtl_rx_setup: rx-queues-config {
-			snps,rx-queues-to-use = <1>;
-			queue0 {};
-		};
-
-		gmac0_mtl_tx_setup: tx-queues-config {
-			snps,tx-queues-to-use = <1>;
-			queue0 {};
-		};
+	mdio0: mdio {
+		compatible = "snps,dwmac-mdio";
+		#address-cells = <0x1>;
+		#size-cells = <0x0>;
 	};
+
+	gmac0_stmmac_axi_setup: stmmac-axi-config {
+		snps,wr_osr_lmt = <4>;
+		snps,rd_osr_lmt = <8>;
+		snps,blen = <0 0 0 0 16 8 4>;
+	};
+
+	gmac0_mtl_rx_setup: rx-queues-config {
+		snps,rx-queues-to-use = <1>;
+		queue0 {};
+	};
+
+	gmac0_mtl_tx_setup: tx-queues-config {
+		snps,tx-queues-to-use = <1>;
+		queue0 {};
+	};
+};
 ```
 
 #### 板级配置 
@@ -165,37 +167,37 @@ iperf是一种网络性能测试工具，它通过在两个计算机之间传输
 
 - 客户端：
 
-	```bash
-	armsom@armsom-sige7:/$ sudo iperf -c 192.168.100.11l -t l0 -i l
-	-------------------------------------------------------------
-	client connecting to 192.168.100.111，TCP port 5001
-	TCP window size: 45.0 KByte (default)
-	-------------------------------------------------------------
-	[ 3] local 192.168.100.110 port 60564 connected with 192.168.100.1ll port 5001
-	[ID] IntervalTransferBandwidth
-	[ 3] 0.0000-1.0000 sec 275 NBytes 2.31 Gbits/sec
-	[ 3] 1.0000-2.0000 sec 281 NBytes 2.35 Gbits/sec
-	[ 3] 2.0000-3.0000 sec 278 MBytes 2.34 Gbits/sec
-	[ 3] 3.0000-4.0000 sec 280 NBytes 2.35 Gbits/sec
-	[ 3] 4.0000-5.0000 sec 279 NBytes 2.34 Gbits/sec
-	[ 3] 5.0000-6.0000 sec 279 MBytes 2.34 Gbits/sec
-	[ 3] 6.0000- 7.0000 sec 276 NBytes 2.32 Gbits/sec
-	[ 3] 7.0000-8.0000 sec 282 NBytes 2.36 Gbits/sec
-	[ 3] 8.0000-9.0000 sec 279 MBytes 2.34 Gbits/sec
-	[ 3] 9.0000-10.0000 sec 278 MBytes 2.33 Gbits/sec
-	[ 3] 10.0000-10.0002 sec 256 KBytes 11.2 Gbits/sec
-	[ 3] 0.0000-10.0002 sec 2.72 GBytes 2.34 Gbits/sec
-	```
+```bash
+armsom@armsom-sige7:/$ sudo iperf -c 192.168.100.11l -t l0 -i l
+-------------------------------------------------------------
+client connecting to 192.168.100.111，TCP port 5001
+TCP window size: 45.0 KByte (default)
+-------------------------------------------------------------
+[ 3] local 192.168.100.110 port 60564 connected with 192.168.100.1ll port 5001
+[ID] IntervalTransferBandwidth
+[ 3] 0.0000-1.0000 sec 275 NBytes 2.31 Gbits/sec
+[ 3] 1.0000-2.0000 sec 281 NBytes 2.35 Gbits/sec
+[ 3] 2.0000-3.0000 sec 278 MBytes 2.34 Gbits/sec
+[ 3] 3.0000-4.0000 sec 280 NBytes 2.35 Gbits/sec
+[ 3] 4.0000-5.0000 sec 279 NBytes 2.34 Gbits/sec
+[ 3] 5.0000-6.0000 sec 279 MBytes 2.34 Gbits/sec
+[ 3] 6.0000- 7.0000 sec 276 NBytes 2.32 Gbits/sec
+[ 3] 7.0000-8.0000 sec 282 NBytes 2.36 Gbits/sec
+[ 3] 8.0000-9.0000 sec 279 MBytes 2.34 Gbits/sec
+[ 3] 9.0000-10.0000 sec 278 MBytes 2.33 Gbits/sec
+[ 3] 10.0000-10.0002 sec 256 KBytes 11.2 Gbits/sec
+[ 3] 0.0000-10.0002 sec 2.72 GBytes 2.34 Gbits/sec
+```
 - 服务器端：
 
-	```bash
-	armsom@armsom-w3:/$ iperf -s
-	-------------------------------------------------------------
-	Server listening on TCp port 5001
-	Tcp window size: 128 KByte (default)
-	-------------------------------------------------------------
-	[ 4] local 192.168.100.111 port 5081 connected with 192.168.108.110 port 68564
-	[ID]  Interval         Transfer        Bandwidth 
-	[ 4] 0.0000-10.0045 sec 2.72 GBytes 2.34 Gbits/sec
-	```
-	测试结果中，每秒的带宽大致在2.31 Gbits/sec到2.36 Gbits/sec之间波动，最后的平均带宽为2.34 Gbits/sec。
+```bash
+armsom@armsom-w3:/$ iperf -s
+-------------------------------------------------------------
+Server listening on TCp port 5001
+Tcp window size: 128 KByte (default)
+-------------------------------------------------------------
+[ 4] local 192.168.100.111 port 5081 connected with 192.168.108.110 port 68564
+[ID]  Interval         Transfer        Bandwidth 
+[ 4] 0.0000-10.0045 sec 2.72 GBytes 2.34 Gbits/sec
+```
+测试结果中，每秒的带宽大致在2.31 Gbits/sec到2.36 Gbits/sec之间波动，最后的平均带宽为2.34 Gbits/sec。
