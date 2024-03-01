@@ -46,7 +46,7 @@ GPIO口除了通用输入输出功能外，还可能有其它复用功能
 				/* uart3_rx_m0 */
 				<1 RK_PC0 10 &pcfg_pull_up>,   # 将GPIO1_C0复用为uart3_rx_m0 
 				/* uart3_tx_m0 */
-				<1 RK_PC1 10 &pcfg_pull_up>;   # 将GPIO1_C1复用为uart3_rx_m0 
+				<1 RK_PC1 10 &pcfg_pull_up>;   # 将GPIO1_C1复用为uart3_tx_m0 
 		};
 	};
 };

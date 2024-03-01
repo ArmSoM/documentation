@@ -4,8 +4,7 @@ sidebar_position: 1
 ---
 # ArmSoM Camera 4K
 
-
-# I. Enable Camera Overlay
+# 1. Enable Camera Overlay
 
 ## 1.1 Ubuntu22.04 image to enable camera overlay
 

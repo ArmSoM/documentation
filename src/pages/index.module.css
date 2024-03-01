@@ -23,12 +23,12 @@
 }
 
 
-
+/* 
 .topBannerTitleText {
   background: linear-gradient(45deg, #399cff, #00c775 80%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 /* .topBannerTitleText:hover {
   border-bottom: solid 2px;
