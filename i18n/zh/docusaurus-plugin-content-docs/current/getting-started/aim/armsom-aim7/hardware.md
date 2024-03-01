@@ -36,6 +36,9 @@ Table 1. CSI0 pin descriptions
 |116| CAM0_MCLK|	Camera, CSI 0 Data 1+|	Input	|MIPI D-PHY|
 
 Table 2. CSI1 pin descriptions
+
+|Pin|	Pin name	|Signal description|	Direction|	Pin type|
+|---------|--------------|-------------------|--------------|--------------|
 |1|GND|	Ground  |	|	|
 |3|	MIPI_CSI0_RX_D2N|	Camera, CSI 1 Data 0–|	Input	|MIPI D-PHY
 |5|	MIPI_CSI0_RX_D2P|	Camera, CSI 1 Data 0+|	Input|	MIPI D-PHY
@@ -48,6 +51,9 @@ Table 2. CSI1 pin descriptions
 |126| CAM1_MCLK|	Camera, CSI 0 Data 1+|	Input	|MIPI D-PHY|
 
 Table 3. CSI2 pin descriptions
+
+|Pin|	Pin name	|Signal description|	Direction|	Pin type|
+|---------|--------------|-------------------|--------------|--------------|
 |20|GND|	Ground  |	|	|
 |22| CSI2_D0_N|	Camera, CSI 2 Data 0–|	Input|	MIPI D-PHY|
 |24| CSI2_D0_P|	Camera, CSI 2 Data 0+	|Input	|MIPI D-PHY|
@@ -61,6 +67,9 @@ Table 3. CSI2 pin descriptions
 |122| CAM2_PWDN|	Camera, CSI 2 Data 1+|	Input	|MIPI D-PHY|
 
 Table 3. CSI3 pin descriptions
+
+|Pin|	Pin name	|Signal description|	Direction|	Pin type|
+|---------|--------------|-------------------|--------------|--------------|
 |19|GND|	Ground  |	|	|
 |21| CSI3_D0_N|	Camera, CSI 3 Data 0–|	Input|	MIPI D-PHY|
 |23| CSI3_D0_P|	Camera, CSI 3 Data 0+	|Input	|MIPI D-PHY|
@@ -74,6 +83,9 @@ Table 3. CSI3 pin descriptions
 |218| CAM3_PWDN|	Camera, CSI 3 Data 1+|	Input	|MIPI D-PHY|
 
 Table 4. CSI4 pin descriptions
+
+|Pin|	Pin name	|Signal description|	Direction|	Pin type|
+|---------|--------------|-------------------|--------------|--------------|
 |38|GND|	Ground  |	|	|
 |40|	CSI4_D2_N|	Camera, CSI 4 Data 2–|	Input|	MIPI D/C-PHY|
 |42|	CSI4_D2_P|	Camera, CSI 4 Data 2+|	Input|	MIPI D/C-PHY|
@@ -158,6 +170,9 @@ Table 6. DP / USB3.0 pin descriptions
 |92|	DP0_AUX_P|	Display Port 0 Aux+	|Bidir	|DP|
 
 Table 7. eDP/HDMI pin descriptions
+
+|Pin|	Pin name	| Signal description	|Direction	|Pin type|
+|---------|--------------|-------------------|--------------|--------------|
 |61|GND|	Ground  |	|	|
 |63|	HDMI_TXD2_N/EDP_TX0_D2N|	HDMI/EDP Lane 2–    |Output|    HDMI/EDP|
 |65|	HDMI_TXD2_P/EDP_TX0_D2P|	HDMI/EDP Lane 2+	|Output|	HDMI/EDP|
@@ -423,10 +438,10 @@ Table 15. GPIO pin descriptions
 |130|GPIO06/GPIO4_A7/PCIE_30X2_WAKE|	GPIO #6|	Bidir|	CMOS – 1.8V
 |206|GPIO07/GPIO3_A0/PWM10|	GPIO #7 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 |208|GPIO08/GPIO1_C6/PWM15_IR|	GPIO #8 or Fan Tach	|Bidir|	CMOS – 1.8V
-|211|GPIO09/GPIO4_A0/I2S1_MCLK_M0/PCIE30X1_1_CLKREQN_M1|	GPIO #9 or Audio Codec Master Clock|	Bidir|	CMOS – 1.8V
+|211|I2S1_MCLK_M0/PCIE30X1_1_CLKREQN_M1|	GPIO #9 or Audio Codec Master Clock|	Bidir|	CMOS – 1.8V
 |212|GPIO10/GPIO4_A3/PCIE_30X1_0_CLKREQ |	GPIO #10	|Bidir|	CMOS – 1.8V
 |216|GPIO11/GPIO3_B0/MIPI_CAM3_CLKOUT|	GPIO #11 or Generic Clocks	|Bidir|	CMOS – 1.8V
-|218|GPIO12/GPIO3_B4/I2S2_MCLK_M1/MIPI_CAM3_PDN|	GPIO #12 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
+|218|GPIO12/I2S2_MCLK_M1/MIPI_CAM3_PDN|	GPIO #12 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 |228|GPIO13/GPIO3_B1/PWM2/MIPI_CAM4_CLKOUT|	GPIO #13 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 |230|GPIO14/GPIO3_A1/PWM11_IR/MIPI_CAM4_PDN | GPIO #14 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 
@@ -555,10 +570,10 @@ Table 16. i2s pin descriptions
 |UART1_RXD|	205|	206|	GPIO07/GPIO3_A0/PWM10|
 |UART1_RTS|	207|	208|	GPIO08/GPIO1_C6/PWM15_IR|
 |UART1_CTS|	209|	210|	32KOUT|
-|GPIO09/GPIO4_A0/I2S1_MCLK_M0/PCIE30X1_1_CLKREQN_M1|211|212|GPIO10/GPIO4_A3/PCIE_30X1_0_CLKREQ|
+|I2S1_MCLK_M0/PCIE30X1_1_CLKREQN_M1|211|212|GPIO10/GPIO4_A3/PCIE_30X1_0_CLKREQ|
 |CAM_I2C_SCL|	213|	214|	RECOVERY_KEY|
 |CAM_I2C_SDA|	215|	216|	GPIO11/GPIO3_B0/MIPI_CAM3_CLKOUT|
-|GND_56|	217|	218|	GPIO12/GPIO3_B4/I2S2_MCLK_M1/MIPI_CAM3_PDN|
+|GND_56|	217|	218|	GPIO12/I2S2_MCLK_M1/MIPI_CAM3_PDN|
 |SDMMC_DAT0|	219|	220|	I2S1_DOUT|
 |SDMMC_DAT1|	221|	222|	I2S1_DIN|
 |SDMMC_DAT2|	223|	224|	I2S1_FS|
