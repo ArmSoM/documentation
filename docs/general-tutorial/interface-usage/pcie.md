@@ -26,12 +26,14 @@ PCIe（Peripheral Component Interconnect Express）是一种用于连接主板�
 RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应关系如图：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/56606bc23be147358e09cd62bdd15bb1.png)
+
 ## 3. RK3588 DTS配置
 ### 3.1 ArmSoM-W3上的PCIe接口
 - 这里以ArmSoM-W3开发板为例，讲解RK3588的PCIe配置
 - Armsom-W3开发板上有 1 个 PCIe3.0 x 4 接口和两个PCIe2.0接口，如图：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/e60e2d285ef04175bd0eec436bb9083b.png)
+
 ###  3.2 ArmSoM-W3开发板PCie相关的DTS配置：
 一般根据原理图在 DTS 中配置PCie的供电引脚、复位引脚，选择正确的 pcie 控制器节点以及 PHY 节点使能。
 - 在kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts中配置如下：

@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Ethernet 使用"
-sidebar_position: 9
+sidebar_position: 7
 ---
 
 # Ethernet 使用

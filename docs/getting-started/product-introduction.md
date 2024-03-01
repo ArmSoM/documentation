@@ -81,10 +81,10 @@ ArmSoM-AIM is a series of embedded artificial intelligence computing modules we 
 | Size             | 69.6 mm x 45 mm  | 69.6 mm x 45 mm                                              | 
 | Form Factor      | 260-pin edge connector                                       | 260-pin edge connector     |
 
-## Introduction to the Link Series
-
-ArmSoM soft routing series products are suitable for various scenarios, including home networks, corporate offices, data centers, etc. Whether it's a small network environment or a complex enterprise network, our soft routing products deliver superior performance and reliable connectivity.
-
 ## Introduction to the LM Series
 
 This guide is specially designed for the LM series which adopts LGA packaging technology for stronger transmission capability and stability, as well as an extremely small size to facilitate customer embedding into products.
+
+## Introduction to the Link Series
+
+ArmSoM soft routing series products are suitable for various scenarios, including home networks, corporate offices, data centers, etc. Whether it's a small network environment or a complex enterprise network, our soft routing products deliver superior performance and reliable connectivity.

@@ -1,6 +1,6 @@
 ---
 sidebar_label: "UART 使用"
-sidebar_position: 8
+sidebar_position: 11
 ---
 # UART 使用
 ## 1. UART 简介

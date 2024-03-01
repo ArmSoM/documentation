@@ -3,6 +3,7 @@ sidebar_label: "PCIe 使用"
 sidebar_position: 9
 ---
 
+# PCIe 使用
 ## 1. PCIe 简介
 PCIe（Peripheral Component Interconnect Express）是一种用于连接主板和外部设备的高速串行接口标准。它是 PCI 技术的后继者，旨在提供更高的带宽和更好的性能。
 
