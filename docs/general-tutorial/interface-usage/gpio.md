@@ -1,9 +1,9 @@
 ---
-sidebar_label: "gpio 使用"
+sidebar_label: "GPIO 使用"
 sidebar_position: 7
 ---
 
-# gpio 使用
+# GPIO 使用
 ## 1. GPIO简介
 GPIO，全称 General-Purpose Input/Output（通用输入输出），是一种在计算机和嵌入式系统中常见的数字输入输出接口。它允许软件控制硬件的数字输入和输出，例如开关、传感器、LED灯等。GPIO通常由一个芯片或处理器上的引脚提供支持，通过编程可以配置这些引脚为输入或输出，并且可以通过相应的软件命令来读取输入状态或控制输出状态。
 
@@ -21,43 +21,44 @@ RK3588共 有 5 组 GPIO bank：GPIO0~GPIO4，每组又以 A0~A7, B0~B7, C0~C7, 
 ## 3. 复用
 GPIO口除了通用输入输出功能外，还可能有其它复用功能
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/7547dc0d25d04ead986e636437026962.png)
+![rockchip-gpio](/img/general-tutorial/interface-usage/gpio.png)
 
 从原理图中看出：以GPIO1_C0为例，就有如下几个功能：
+
 | func0    | func1       | func2       | func3        |
 | -------- | ----------- | ----------- | ------------ |
 | GPIO1_C0 | I2C3_SDA_M0 | UART3_RX_M0 | SPI4_MISO_M0 |
 
 在系统DTS配置中GPIO1_C0默认是I2C3_SDA_M0功能。如果我们想将GPIO1_C0复用为UART3_RX_M0功能，该怎么做呢？
 1. 首先打开uart3 节点，将pinctrl配置为uart3m0_xfer。pinctrl配置是GPIO复用的最关键的配置，在这里就是将GPIO1_C0复用做了uart3功能。
-	```bash
-	&uart3 {
-		pinctrl-names = "default";
-		pinctrl-0 = <&uart3m0_xfer>;
-		status = "okay";
-	};
-	
-	&pinctrl {
-		uart3 {
-			/omit-if-no-ref/
-			uart3m0_xfer: uart3m0-xfer {
-				rockchip,pins =
-					/* uart3_rx_m0 */
-					<1 RK_PC0 10 &pcfg_pull_up>,   # 将GPIO1_C0复用为uart3_rx_m0 
-					/* uart3_tx_m0 */
-					<1 RK_PC1 10 &pcfg_pull_up>;   # 将GPIO1_C1复用为uart3_rx_m0 
-			};
+```bash
+&uart3 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart3m0_xfer>;
+	status = "okay";
+};
+
+&pinctrl {
+	uart3 {
+		/omit-if-no-ref/
+		uart3m0_xfer: uart3m0-xfer {
+			rockchip,pins =
+				/* uart3_rx_m0 */
+				<1 RK_PC0 10 &pcfg_pull_up>,   # 将GPIO1_C0复用为uart3_rx_m0 
+				/* uart3_tx_m0 */
+				<1 RK_PC1 10 &pcfg_pull_up>;   # 将GPIO1_C1复用为uart3_rx_m0 
 		};
 	};
-	
-	```
-1. 如果发现GPIO1_C0被复用为I2c3，则在dts中关闭它。
-	```bash
-	&i2c3 {
-		status = "disabled";
-	};
-	```
-	这样，我们就将GPIO1_C0复用为了UART3_RX_M0功能
+};
+
+```
+2. 如果发现GPIO1_C0被复用为I2c3，则在dts中关闭它。
+```bash
+&i2c3 {
+	status = "disabled";
+};
+```
+这样，我们就将GPIO1_C0复用为了UART3_RX_M0功能
 
 
 ## 4. GPIO调试方法

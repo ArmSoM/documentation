@@ -24,6 +24,7 @@ GPIO口除了通用输入输出功能外，还可能有其它复用功能
 ![rockchip-gpio](/img/general-tutorial/interface-usage/gpio.png)
 
 从原理图中看出：以GPIO1_C0为例，就有如下几个功能：
+
 | func0    | func1       | func2       | func3        |
 | -------- | ----------- | ----------- | ------------ |
 | GPIO1_C0 | I2C3_SDA_M0 | UART3_RX_M0 | SPI4_MISO_M0 |
