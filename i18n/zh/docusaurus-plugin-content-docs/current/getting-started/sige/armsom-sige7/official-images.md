@@ -25,6 +25,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 固件位置：4. 安卓镜像/ArmSoM-Sige7
 
+**openwrt**
+
+固件位置：3. Linux镜像/openwrt/ArmSoM-Sige7
 
 ### 第三方系统
 
