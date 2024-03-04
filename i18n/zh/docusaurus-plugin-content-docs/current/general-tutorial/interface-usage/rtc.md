@@ -63,7 +63,7 @@ CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # 默认同步时间的RTC设备
 - 查看I2C总线是否挂载上RTC：
 
 ```bash
-	sudo i2cdetect -y 6
+sudo i2cdetect -y 6
 ```
 
 ```
@@ -96,5 +96,4 @@ armsom@armsom:~$ sudo  date -s "2024-02-27 18:45:00"  # 重新设置系统时间
 2024年 02月 27日 星期二 18:45:00 CST
 
 armsom@armsom:~$ sudo hwclock -w   # 同步系统时间到rtc上，掉电不丢失时间
-
 ```

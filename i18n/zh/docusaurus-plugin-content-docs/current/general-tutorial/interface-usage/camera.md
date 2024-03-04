@@ -43,7 +43,9 @@ sidebar_position: 6
 	
 - 虚线链路解析：vicap ---> rkcif_mipi_lvds2_sditf --->  isp
 
-	<font color="red" size="3">每个vicap节点与isp的链接关系，通过对应虚拟出的XXX_sditf来指明链接关系。</font>
+:::tip
+每个vicap节点与isp的链接关系，通过对应虚拟出的XXX_sditf来指明链接关系。
+:::
 	
 ## 5. ArmSoM-Sige7双路Camera调试
 

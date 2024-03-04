@@ -227,8 +227,10 @@ Type-C 接口需要通过 Type-C 的 CC 检测和 PD 协商来配置 lane 和 HP
 };
 ```
 
+:::tip
+⽬前不⽀持 Type-C 接口的 DP 开机 logo!
+:::
 
-<font color="red" size="3">Note: ⽬前不⽀持 Type-C 接口的 DP 开机 logo!</font>
 ## 4.2 调试
 ### 4.2.1 查看 connector 状态：
 在 /sys/class/drm ⽬录下可以看到驱动注册的各个 card，其中 card0-DP-1 是 DP 显⽰设备
