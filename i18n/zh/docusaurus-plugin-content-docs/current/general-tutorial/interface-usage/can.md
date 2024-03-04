@@ -19,6 +19,7 @@ CAN在40PIN中的位置: CAN_TX对应40PIN中的第35编号，CAN_RX对应40PIN�
 
 ## 3. 硬件连接
 CAN模块之间接线：CAN_TX接CAN_TX，CAN_RX接CAN_RX。
+
 ![can-real](/img/general-tutorial/interface-usage/can-real.png)
 
 

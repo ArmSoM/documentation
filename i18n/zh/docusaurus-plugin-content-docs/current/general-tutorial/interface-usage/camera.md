@@ -9,7 +9,7 @@ sidebar_position: 6
 - ArmSoM系列产品使用的是mipi-csi接口的摄像头
 
 - ArmSoM-Sige7支持双摄同显：
-![rockchip-camera-interface](/img/general-tutorial/interface-usage/camera-interface.png)v
+![rockchip-camera-interface](/img/general-tutorial/interface-usage/camera-interface.png)
 
 ## 2. RK3588硬件通路框图
 ![rockchip-camera-hardware-phy](/img/general-tutorial/interface-usage/camera-hardware-phy.png)
@@ -59,6 +59,7 @@ sidebar_position: 6
 
 - **链路配置1： imx415 —> csi2_dphy0 —> mipi2_csi2 —> rkcif_mipi_lvds2—>rkcif_mipi_lvds2_sditf —>rkisp0_vir2**
 - **链路配置2： imx415 —> csi2_dphy3 —> mipi4_csi2 —> rkcif_mipi_lvds4—>rkcif_mipi_lvds4_sditf —>rkisp1_vir1**
+  
 ```bash
 &i2c3 {
 	status = "okay";
