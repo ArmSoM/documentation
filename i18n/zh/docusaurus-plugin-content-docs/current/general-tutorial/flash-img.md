@@ -163,7 +163,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
 
-![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.png)
+![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
 
 刷写进度显示在右边，完成后它会提示你：
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)

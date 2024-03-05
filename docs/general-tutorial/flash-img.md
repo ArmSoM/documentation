@@ -83,7 +83,7 @@ This mode is suitable for products that have not been burned into the system or 
 
 We open the RKDevTool burning tool and set the product to enter burning mode.
 
-![maskroom-flash-tool](/img/general-tutorial/maskroom-flash-tool.png)
+![maskroom-flash-tool](/img/general-tutorial/maskroom-flash-tool.jpg)
 
 ```
 1. Prepare Type-C cable for image burning
@@ -100,7 +100,7 @@ You can click firmware to select the image to be burned, such as armsom-w3-debia
 The firmware downloaded from Google Drive needs to be decompressed before loading, and the Windows PC needs to run the tool with administrator rights before it can be executed.
 :::
 
-![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.png)
+![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
 
 The flashing progress is displayed on the right, and it will prompt you after completion:
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
