@@ -46,7 +46,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
   - Official: Android 12.0, Debian 11, Buildroot
   - 3rd party: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
 - PCB: 12-layer
-- Weight: 
+- Weight: 46.6g
 - Size: 92mm × 62mm
 
 
