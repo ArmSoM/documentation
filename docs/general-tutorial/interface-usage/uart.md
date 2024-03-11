@@ -80,7 +80,7 @@ UART的板级dts配置只有以下参数允许修改：
 	- "okay" 打开
     - "disabled" 关闭
 
- 例如，将40PIN中的第36和第38编号引脚复用为uart2：
+例如，将40PIN中的第36和第38编号引脚复用为uart2：
 ```bash
 &uart2 {
 	status = "okay";
