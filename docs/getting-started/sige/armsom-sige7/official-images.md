@@ -36,6 +36,10 @@ Firmware location: 3. Linux image/openwrt/ArmSoM-Sige7
 
 Firmware location: 3. Linux image/armbian/ArmSoM-Sige7 
 
+#### Joshua-Riek/ubuntu-rockchip
+
+[ubuntu-rockchip](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
+
 ### Source Code
 
 [ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
@@ -43,3 +47,5 @@ Firmware location: 3. Linux image/armbian/ArmSoM-Sige7
 [ArmSoM-Sige7 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
 [ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)
+
+[istoreos](https://github.com/istoreos/istoreos)

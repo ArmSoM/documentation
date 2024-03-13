@@ -42,6 +42,11 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 
 [Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160_xfce_desktop.img](https://pan.baidu.com/s/1Pr0IJNrffxx7aLJ-eZLUUA?pwd=arms )
 
+#### Joshua-Riek/ubuntu-rockchip
+
+固件位置：[ubuntu-rockchip](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-w3.html)
+
+
 ### 源码
 
 [ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)

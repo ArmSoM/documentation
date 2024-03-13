@@ -36,6 +36,10 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 固件位置：3. Linux镜像/armbian/ArmSoM-Sige7
 
+#### Joshua-Riek/ubuntu-rockchip
+
+固件位置：[ubuntu-rockchip](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
+
 ### 源码
 
 [ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
@@ -43,3 +47,5 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 [ArmSoM-Sige7 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
 [ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)
+
+[istoreos](https://github.com/istoreos/istoreos)
