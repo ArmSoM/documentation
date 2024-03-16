@@ -51,7 +51,7 @@ Before starting to use the ArmSoM-Sige7, please prepare the following items:
 
 ## Image Flashing
 
-[Flash System Image](../../../general-tutorial/flash-img)
+[Flash System Image](../../general-tutorial/flash-img)
 
 ## Interface Setup 
 

@@ -49,7 +49,7 @@ Before starting to use the ArmSoM-W3, please prepare the following items:
 
 ## Image Flashing Options  
 
-[Flashing System Images](../../../general-tutorial/flash-img)
+[Flashing System Images](../../general-tutorial/flash-img)
 
 ## Interface Settings  
 

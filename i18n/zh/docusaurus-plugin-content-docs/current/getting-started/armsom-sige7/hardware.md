@@ -10,7 +10,7 @@ sidebar_position: 4
 
 ## Sige7 硬件资料
 
-点击进入链接: [百度网盘链接](../../../general-tutorial/cloud-disk)
+点击进入链接: [百度网盘链接](../../general-tutorial/cloud-disk)
 
 ### 原理图
 

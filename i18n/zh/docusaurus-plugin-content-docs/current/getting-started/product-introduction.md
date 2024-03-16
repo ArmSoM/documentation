@@ -34,7 +34,7 @@ ArmSoM Sige系列产品开源资料的逐步完善中，涉及到多个方面，
 
 ### Sige 系列硬件对比
 
-|型号名称 |   [ ArmSoM-Sige7 ](./sige/armsom-sige7/introduction)|
+|型号名称 |   [ ArmSoM-Sige7 ](./armsom-sige7/introduction)|
 | :--------: | :----------: | 
 |缩略图   |  ![armsom-Sige7](/img/sige/sige7/armsom-sige7.png) |
 | 主控 | RK3588 |

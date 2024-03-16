@@ -46,7 +46,7 @@ Before starting to use ArmSoM-P2pro, please prepare the following items
 
 ## Image Flashing 
 
-[Flash System Image](../../../general-tutorial/flash-img)
+[Flash System Image](../../general-tutorial/flash-img)
 
 
 ## Interface Setup 

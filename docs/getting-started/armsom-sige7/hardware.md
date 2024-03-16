@@ -7,7 +7,7 @@ sidebar_position: 4
 
 ## Sige7 Hardware Resources 
 
-Download link: [Google Drive link](../../../general-tutorial/cloud-disk)
+Download link: [Google Drive link](../../general-tutorial/cloud-disk)
 
 ### Schematics
 
