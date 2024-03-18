@@ -11,7 +11,7 @@ Inside you'll find support to get started building your applications and systems
 
 # Getting Help
 
-If you run into any problems using this documentation, ask your questions in our [forum](http://forum.armsom.org/) or [ArmSoM Discord](https://discord.gg/tuVsVMvgND). We have an active technical support team responding regularly to assist you.
+If you run into any problems using this documentation, ask your questions in our [forum](http://forum.armsom.org/) or [ArmSoM Discord](https://discord.gg/THfTEatpfK). We have an active technical support team responding regularly to assist you.
 
 # Community
 
@@ -19,7 +19,7 @@ Join the ArmSoM user community!
 
 ArmSoM Forum: [ArmSoM Forum](http://forum.armsom.org/) - Our main channel for technical assistance.
 
-Discord Community: [ArmSoM Discord](https://discord.gg/tuVsVMvgND) - experienced users and the ArmSoM team will definitely help you.
+Discord Community: [ArmSoM Discord](https://discord.gg/THfTEatpfK) - experienced users and the ArmSoM team will definitely help you.
 
 ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
