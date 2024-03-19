@@ -1,164 +1,177 @@
 ---
-sidebar_label: "CAN 使用"
+sidebar_label: "CAN Usage"
 sidebar_position: 6
 ---
+# CAN Usage
 
-# 1. CAN简介
+## 1. CAN Introduction
 
-CAN (controller Area Network)：控制器局域网络总线，是一种有效支持分布式控制或实时控制的串行通信网络。
+CAN (Controller Area Network): A serial communication network that effectively supports distributed control or real-time control.
 
-- 目前世界上绝大多数汽车制造厂商都采用CAN总线来实现汽车内部控制系统之间的数据通信。
+- Currently, most automobile manufacturers in the world adopt the CAN bus to achieve data communication between internal control systems of automobiles.
 
-- RK3568/RK3588的CAN驱动文件：drivers/net/can/rockchip/rockchip_canfd.c
+- RK3568/RK3588 CAN driver file: drivers/net/can/rockchip/rockchip_canfd.c
 
-- 在ArmSoM-Sige7中，CAN集成在40PIN中，可供用户复用为CAN相关引脚。
+- In the ArmSoM-Sige7, CAN is integrated into the 40PIN, which can be reused by users as CAN-related pins.
 
-# 2. 原理图
-CAN在40PIN中的位置: CAN_TX对应40PIN中的第35编号，CAN_RX对应40PIN中的第12编号
-![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/4718d0b1ce814b36aecf2928484ab6ed.png)
+## 2. Schematic Diagram
 
-# 3. 硬件连接
-CAN模块之间接线：CAN_TX接CAN_TX，CAN_RX接CAN_RX。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/28ef052b9ae740249ae37be5eb5a40ab.png)
+Location of CAN in 40PIN: CAN_TX corresponds to pin 35 in 40PIN, and CAN_RX corresponds to pin 12 in 40PIN.
+![can-sch](/img/general-tutorial/interface-usage/can-sch.png)
 
+## 3. Hardware Connection
 
-# 4. 内核配置
-- rockchip_linux_defconfig配置：
+CAN module wiring: CAN_TX connects to CAN_TX, CAN_RX connects to CAN_RX.
+
+![can-real](/img/general-tutorial/interface-usage/can-real.png)
+
+## 4. Kernel Configuration
+
+- rockchip_linux_defconfig configuration:
 
 ```bash
 CONFIG_CAN=y
-
 CONFIG_CAN_DEV=y
-
 CONFIG_CAN_ROCKCHIP=y
-
 CONFIG_CANFD_ROCKCHIP=y
 ```
-- 内核配置：
+
+- Kernel configuration:
+
 ```bash
 cd kernel
-
 make ARCH=arm64 menuconfig
-
 make savedefconfig
 ```
-- 选择：Networking support ---> CAN bus subsystem support (*)--->CAN Device Drivers(*) ---> Platform CAN drivers with Netlink support(*)
 
-![image-20240227150050577](C:\Users\zhouxp\AppData\Roaming\Typora\typora-user-images\image-20240227150050577.png)
+- Select: Networking support ---> CAN bus subsystem support (*)--->CAN Device Drivers(*) ---> Platform CAN drivers with Netlink support(*)
 
-# 5. DTS 节点配置
-## 5.1 主要参数:
+![can-config](/img/general-tutorial/interface-usage/can-config.png)
+
+## 5. DTS Node Configuration
+
+### 5.1 Main Parameters:
 
 - interrupts = <GIC_SPI 1 IRQ_TYPE_LEVEL_HIGH>;
-转换完成，产生中断信号。
+  Generates an interrupt signal upon completion of transfer.
 
 - clock
-时钟属性，用于驱动开关clk，reset属性，用于每次复位总线。
+  Clock attribute, used to turn on/off clk; reset attribute, used to reset the bus each time.
 
 - pinctrl
-配置CAN相关的引脚信息，功能复用
-## 5.2 芯片级公共配置 kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
+  Configures CAN-related pin information and function multiplexing.
 
+### 5.2 Chip-level Common Configuration
+
+kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
 
 ```bash
 can0: can@fea50000 {
-	            compatible = "rockchip,can-2.0";
-	            reg = <0x0 0xfea50000 0x0 0x1000>;
-	            interrupts = <GIC_SPI 341 IRQ_TYPE_LEVEL_HIGH>;
-	            clocks = <&cru CLK_CAN0>, <&cru PCLK_CAN0>;
-	            clock-names = "baudclk", "apb_pclk";
-	            resets = <&cru SRST_CAN0>, <&cru SRST_P_CAN0>;
-	            reset-names = "can", "can-apb";
-	            pinctrl-names = "default";
-	            pinctrl-0 = <&can0m0_pins>;
-	            tx-fifo-depth = <1>;
-	            rx-fifo-depth = <6>;
-	            status = "disabled";
-	    };
-	
+            compatible = "rockchip,can-2.0";
+            reg = <0x0 0xfea50000 0x0 0x1000>;
+            interrupts = <GIC_SPI 341 IRQ_TYPE_LEVEL_HIGH>;
+            clocks = <&cru CLK_CAN0>, <&cru PCLK_CAN0>;
+            clock-names = "baudclk", "apb_pclk";
+            resets = <&cru SRST_CAN0>, <&cru SRST_P_CAN0>;
+            reset-names = "can", "can-apb";
+            pinctrl-names = "default";
+            pinctrl-0 = <&can0m0_pins>;
+            tx-fifo-depth = <1>;
+            rx-fifo-depth = <6>;
+            status = "disabled";
+    };
+
 can1: can@fea60000 {
-	            compatible = "rockchip,can-2.0";
-	            reg = <0x0 0xfea60000 0x0 0x1000>;
-	            interrupts = <GIC_SPI 342 IRQ_TYPE_LEVEL_HIGH>;
-	            clocks = <&cru CLK_CAN1>, <&cru PCLK_CAN1>;
-	            clock-names = "baudclk", "apb_pclk";
-	            resets = <&cru SRST_CAN1>, <&cru SRST_P_CAN1>;
-	            reset-names = "can", "can-apb";
-	            pinctrl-names = "default";
-	            pinctrl-0 = <&can1m0_pins>;
-	            tx-fifo-depth = <1>;
-	            rx-fifo-depth = <6>;
-	            status = "disabled";
-	    };
-	
+            compatible = "rockchip,can-2.0";
+            reg = <0x0 0xfea60000 0x0 0x1000>;
+            interrupts = <GIC_SPI 342 IRQ_TYPE_LEVEL_HIGH>;
+            clocks = <&cru CLK_CAN1>, <&cru PCLK_CAN1>;
+            clock-names = "baudclk", "apb_pclk";
+            resets = <&cru SRST_CAN1>, <&cru SRST_P_CAN1>;
+            reset-names = "can", "can-apb";
+            pinctrl-names = "default";
+            pinctrl-0 = <&can1m0_pins>;
+            tx-fifo-depth = <1>;
+            rx-fifo-depth = <6>;
+            status = "disabled";
+    };
+
 can2: can@fea70000 {
-	            compatible = "rockchip,can-2.0";
-	            reg = <0x0 0xfea70000 0x0 0x1000>;
-	            interrupts = <GIC_SPI 343 IRQ_TYPE_LEVEL_HIGH>;
-	            clocks = <&cru CLK_CAN2>, <&cru PCLK_CAN2>;
-	            clock-names = "baudclk", "apb_pclk";
-	            resets = <&cru SRST_CAN2>, <&cru SRST_P_CAN2>;
-	            reset-names = "can", "can-apb";
-	            pinctrl-names = "default";
-	            pinctrl-0 = <&can2m0_pins>;
-	            tx-fifo-depth = <1>;
-	            rx-fifo-depth = <6>;
-	            status = "disabled";
-	    };
+            compatible = "rockchip,can-2.0";
+            reg = <0x0 0xfea70000 0x0 0x1000>;
+            interrupts = <GIC_SPI 343 IRQ_TYPE_LEVEL_HIGH>;
+            clocks = <&cru CLK_CAN2>, <&cru PCLK_CAN2>;
+            clock-names = "baudclk", "apb_pclk";
+            resets = <&cru SRST_CAN2>, <&cru SRST_P_CAN2>;
+            reset-names = "can", "can-apb";
+            pinctrl-names = "default";
+            pinctrl-0 = <&can2m0_pins>;
+            tx-fifo-depth = <1>;
+            rx-fifo-depth = <6>;
+            status = "disabled";
+    };
 ```
 
-- compatible = “rockchip,can-1.0” ，rockchip,can-1.0用来匹配can控制器驱动。
+- compatible = "rockchip,can-1.0" is used to match the can controller driver.
 
-- compatible = “rockchip,can-2.0” ，rockchip,can-2.0用来匹配canfd控制器驱动。
+- compatible = "rockchip,can-2.0" is used to match the canfd controller driver.
 
-- assigned-clock-rates用来配置can的始终频率，如果CAN的比特率低于等于3M建议修改CAN时钟到100M，信号更稳定。高于3M比特率的，时钟设置200M就可以。
+- assigned-clock-rates is used to configure the constant frequency of the can. If the CAN bit rate is less than or equal to 3M, it is recommended to modify the CAN clock to 100M for more stable signals. For bit rates higher than 3M, a clock setting of 200M is sufficient.
 
-- pinctrl配置：根据实际板卡连接情况配置can_h和can_l的iomux作为can功能使用。
+- pinctrl configuration: Based on the actual board connection, configure the iomux of can_h and can_l for the can function.
 
-## 5.3 板级配置 kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts
+### 5.3 Board-level Configuration
+
+kernel-5.10/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts
 
 ```bash
 /* can1 */
-	&can1 {
-	        status = "okay";
-	        assigned-clocks = <&cru CLK_CAN1>;
-	        assigned-clock-rates = <200000000>;
-	        pinctrl-names = "default";
-	        pinctrl-0 = <&can1m1_pins>;      #根据原理图进行配置
-	};
+&can1 {
+        status = "okay";
+        assigned-clocks = <&cru CLK_CAN1>;
+        assigned-clock-rates = <200000000>;
+        pinctrl-names = "default";
+        pinctrl-0 = <&can1m1_pins>;      #Configure based on the schematic diagram
+};
 ```
 
-- 由于系统根据上述dts节点创建的CAN设备只有一个，而第一个创建的设备为CAN0
+- Since the CAN device created by the system according to the above dts node is only one, and the first created device is CAN0.
 
-# 6. CAN通信测试
-- 查询当前⽹络设备:
+## 6. CAN Communication Test
 
-	```bash
-	ifconfig -a
-	```
+- Query current network devices:
 
-- CAN启动
-	```bash
-	ip link set can0 down   //关闭CAN
-	
-	ip link set can0 type can bitrate 500000   #设置⽐特率500KHz
-	
-	ip -details -statistics link show can0    #打印can0信息
-	 
-	ip link set can0 up     //启动CAN
-- CAN发送
+```bash
+ifconfig -a
+```
 
-	```bash
-	cansend can0 123#DEADBEEF            #发送（标准帧,数据帧,ID:123,date:DEADBEEF）
-	
-	cansend can0 123#R                   #发送（标准帧,远程帧,ID:123）
-	  
-	cansend can0 00000123#12345678       #发送（扩展帧,数据帧,ID:00000123,date:DEADBEEF）
-	
-	cansend can0 00000123#R              #发送（扩展帧,远程帧,ID:00000123）
-	```
-- CAN接收
+- CAN startup
 
-	```bash
-	candump can0       //candump can0
-	```
+```bash
+ip link set can0 down   //Close CAN
+
+ip link set can0 type can bitrate 500000   #Set bit rate to 500KHz
+
+ip -details -statistics link show can0    #Print can0 information
+    
+ip link set can0 up     //Start CAN
+```
+
+- CAN send
+
+```bash
+cansend can0 123#DEADBEEF            #Send (standard frame, data frame, ID:123, data:DEADBEEF)
+
+cansend can0 123#R                   #Send (standard frame, remote frame, ID:123)
+    
+cansend can0 00000123#12345678       #Send (extended frame, data frame, ID:00000123, data:DEADBEEF)
+
+cansend can0 00000123#R              #Send (extended frame, remote frame, ID:00000123)
+```
+
+- CAN receive
+
+```bash
+candump can0       //candump can0
+```
+

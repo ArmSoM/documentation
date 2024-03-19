@@ -1,8 +1,0 @@
-{
-  "label": "p2pro(RK3308)",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "ArmSoM-p2pro 是 ArmSoM 社区基于 Rockchip RK3308B-S 的 SBC，使其非常适合物联网和语音应用程序。"
-  }
-}

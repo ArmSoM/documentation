@@ -1,15 +1,134 @@
 ---
 description: ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存，接口完全兼容 Jetson Nano。
-keywords: [armsom, armsom-AIM7, 创客套件, rockchip, rk3588硬件资料, RK3588原理图]
-sidebar_position: 4
+keywords: [armsom, armsom-AIM7, 创客套件, rockchip, rk3588产品介绍]
+sidebar_label: "AIM7"
+sidebar_position: 5
 ---
 
-# 硬件资料
+# AIM7产品简介
 
-## 引脚功能
+ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。接口完全兼容 Jetson Nano的同时，升级了PCIe接口为PCIe3.0 4-lane和PCIe2.1 1-lan。
+
+AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
+
+## 关键参数
+
+- SOC：瑞芯微 RK3588
+- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
+- GPU：ARM Mali-G610 MP4
+- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
+- VPU/编解码：
+  - 硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
+  - 硬编码：8K@30fps H.265 / H.264
+- RAM：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4x，默认LPDDR4x 8GB
+- Flash：32GB/64GB/128GB eMMC，默认eMMC 32GB
+- 接口类型：260pin SO-DIMM 连接器，兼容 Jetson TX2 NX
+- 工作电压：5V DC
+- 温度：工作温度：0°C 至 80°C，存储温度：-20°C 至 85°C
+- 湿度：相对湿度: 运行：10% 至 90%，存储：5% 至 95%
+- 操作系统：
+  - Rockchip官方支持：Android 12.0，Debian11，Buildroot
+  - 第三方支持：Armbian 23.07，Ubuntu 20.04，Ubuntu22.04，Kylin OS
+- PCB：12 层 PCB 板设计
+- 重量：
+- 大小：69.6 mm x 45 mm
+
+## 实物图
+
+![ArmSoM-AIM7-front & back](/img/aim/aim7/armsom-aim7-front&back.png)
+
+:::tip
+AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
+:::
+
+## 硬件规格
+
+### 产品框图
+![aim7-product](/img/aim/aim7/aim7-product.jpg)
+
+### 硬件规格
+
+<table>
+    <thead>
+        <tr>
+            <th>类别</th>
+            <th>功能</th>
+      </tr>
+    </thead>
+    <tbody align="left">
+        <tr>
+            <th>显示</th>
+            <th><li>1x DP interface</li><li>1x HDMI/eDP combo interface</li> <li>up to 7680 x 4320@60 Hz for HDMI and DP, and 3840 x 2160@60 Hz for eDP </li></th>
+        </tr>
+        <tr>
+            <th>摄像头</th>
+            <th><li>3x 4-lane or 5x 2-lane MIPI CSI 接口，每线最高 2.5Gbps</li></th>
+        </tr>
+        <tr>
+            <th>网络</th>
+            <th>
+              <li>1路GMAC，提供 RGMII / RMII 接口引出</li>
+              <li>支持 10/100/1000Mbps 数据传输速率</li>
+            </th>
+        </tr>
+        <tr>
+            <th>PCIe</th>
+            <th>
+              <li>PCIe 3.0 x4: 每通道最高支持 8Gbps 数据速率, 支持 4 种组合方式：1路 x4、2路 x2、4路 x1、1路 x2+2路 x1，每通道最高支持 8Gbps 数据速率</li>
+              <li>PCIe 2.1 x1: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li></th>
+        </tr>
+         <tr>
+            <th>USB</th>
+            <th>
+            <li>1x USB 3.0 (Gen1)</li>
+            <li>3x USB 2.0</li>
+            </th>
+        </tr>
+         <tr>
+            <th rowspan="3">Others</th>
+            <th ><li>UART DEBUG x1, UART+flow control x2</li>
+            <li>SPI x2</li>
+            <li>I2C x4</li>
+            <li>can x1</li>
+            <li>I2S x2</li>
+            <li>SD 4.0, SDHOST 4.0, and SDIO 3.0</li>
+            <li>PWM x3, 多个 GPIO</li>
+            </th>
+        </tr>
+    </tbody>
+</table>
 
 
-### Video input interface
+
+### 竞品规格参数对比
+
+| 规格                                 |  ArmSoM-AIM7              | Jetson Nano (NVIDIA)                |
+|--------------------------------------|-----------------------------------|--------------------------------|
+| CPU核数    |**四核ARM® Cortex®A76+四核 ARM® Cortex®A55** | 四核 ARM® Cortex®A57 MPCore 处理器    | 
+| GPU核数    | ARM Mali-G610 MP4                 |128核Maxwell架构GPU   | 
+| 内存容量   |8GB/32GB 64位 LPDDR4x, 2112Mhz  | 4GB 64位 LPDDR4, 1600MHz   | 
+| 存储支持  |  microSD卡、32GB/64GB eMMC 5.1 闪存   | microSD卡、16GB eMMC 5.1闪存  |
+| 视频编码  |  **8K@30fps H.265 / H.264**  | 250 MP/sec，1x 4K@30 (HEVC)，2x 1080p@60 (HEVC)，4x 1080p@30 (HEVC)  |
+| 视频解码  |  **8K@60fps H.265/VP9/AVS2，8K@30fps H.264 AVC/MVC，4K@60fps AV1，1080P@60fps MPEG-2/-1/VC-1/VP8** | 500 MP/s，1x 4K@60 (HEVC)，2x 4K@30 (HEVC)，4x 1080p@60 (HEVC)，8x 1080p@30 (HEVC)   |
+| USB端口  | 1 个 USB 3.0、3 个 USB 2.0  | 1 个 USB 3.0、3 个 USB 2.0  |
+| 以太网接口    | 1 个 10/100/1000 BASE-T 以太网   |1 个 10/100/1000 BASE-T 以太网 | 
+| CSI接口 | 12通道 3x 4-lane or 5x 2-lane MIPI CSI 每线最高 2.5Gbps      |12 通道（3x4 或 4x2）MIPI CSI-2 D-PHY 1.1 (18 Gbps)     | 
+| I/O        | 3 个 UART、2 个 SPI、2 个 I2S、4 个 I2C、多个 GPIO   | 3 个 UART、2 个 SPI、2 个 I2S、4 个 I2C、多个 GPIO        |
+| PCIE    |**1 个 1/2/4lan PCIE3.0 & 1 个 1lan PCIE2.0**   | 1 个 1/2/4lan PCIE2.0  | 
+| HDMI输出      |  **1 个 HDMI OUT2.1  / 1 个 eDP 1.4**   |1 个 HDMI 2.0  |
+| DP接口    | 1 个 DP1.4a | 1 个 DP1.2  |
+| eDP/DP接口    | **1 个 eDP 1.4/ 1 个 HDMI OUT2.1**  | 1 个 eDP 1.4/1 个 DP接口  | 
+|  DSI接口    | 1 个 DSI (1 x2)  | 1 个 DSI (1 x2)   | 
+| 操作系统支持    |支持debian，ubuntu，armbian，Openwrt     | NVIDIA JetPack软件套件 | 
+| 大小   |  69.6 mm x 45 mm |69.6 mm x 45 mm  |
+|规格尺寸|260 引脚边缘连接器| 260 引脚边缘连接器| 
+
+
+## 硬件资料
+
+### 功能接口定义
+
+#### Video input interface
 **Two  MIPI DC (DPHY/CPHY) combo PHY**
 * Support USE DPHY or CPHY
 * Each MIPI DPHY V2.0, 4 lanes, 4.5 Gbps per lane
@@ -102,7 +221,7 @@ Table 4. CSI4 pin descriptions
 |230| CAM4_PWDN|	Camera, CSI 4 Data 1+|	Input	|MIPI D-PHY|
 
 
-### Video output processor
+#### Video output processor
 
 **HDMI/eDP TX interface**
 
@@ -190,7 +309,7 @@ Table 7. eDP/HDMI pin descriptions
 |96|	HDMI_CEC|	HDMI/EDP Hot Plug Detect|	Input	|Open Drain–3.3V|
 |94|	HDMI_HPD|	HDMI/EDP CEC|	Bidir|	Open Drain–1.8V|
 
-### SDIO
+#### SDIO
 * Compatible with SDIO3.0 protocol
 * 4-bit data bus width
 
@@ -208,7 +327,7 @@ Table 8. SDIO pin descriptions
 |126|	SDMMC_DET|	SD Card or SDIO DET	|Output|	CMOS – 1.8V/3.3V
 
 
-### GMAC
+#### GMAC
 
 Table 9. Gigabit Ethernet pin descriptions
 
@@ -226,7 +345,7 @@ Table 9. Gigabit Ethernet pin descriptions
 |202|	GBE_MDI3_N	|GbE Transformer Data 3–	|Bidir	|MDI|
 |204|	GBE_MDI3_P	|GbE Transformer Data 3+	|Bidir	|MDI|
 
-### USB3.0
+#### USB3.0
 
 * Embedded two USB 3.0 OTG interfaces which combo with DP TX (USB3OTG_0 and USB3OTG_1)
 * Embedded one USB 3.0 Host interface which combos with Combo PIPE PHY2 (USB3OTG_2)
@@ -241,7 +360,7 @@ Table 10. USB 3.0 GEN1 pin descriptions
 |166|	PCIE20_2_TXN/SATA30_2_TXN/USBSS_TX_N	|USB SS Transmit- (USB 3.0 Ctrl #0)	|Output	|USB SS PHY|
 |168|	PCIE20_2_TXP/SATA30_2_TXP/USBSS_TX_P	|USB SS Transmit+ (USB 3.0 Ctrl #0)	|Output	|USB SS PHY|
 
-### USB 2.0 Host
+#### USB 2.0 Host
 
 * Compatible with USB 2.0 specification
 * Support two USB 2.0 Hosts
@@ -260,7 +379,7 @@ Table 11. USB 2.0 pin descriptions
 |121|	USB2_D_N|	USB 2.0 Port 2 Data–	|Bidir	|USB PHY|
 |123|	USB2_D_P|	USB 2.0 Port 2 Data+	|Bidir	|USB PHY|
 
-### PCIe
+#### PCIe
 
 **PCIe 2.1 interface**
 * Compatible with PCI Express Base Specification Revision 2.1
@@ -340,7 +459,7 @@ Table 13. PCIe 3.0 pin descriptions
 
 
 
-### SPI interface
+#### SPI interface
 
 * Support 5 SPI Controllers (SPI0-SPI4)
 * Support two chip-select output
@@ -362,7 +481,7 @@ Table 14. SPI pin descriptions
 |110|	SPI1_CS0	|SPI 1 Chip Select 0	        |Bidir	|CMOS – 1.8|
 |112|	SPI1_CS1	|SPI 1 Chip Select 1	        |Bidir	|CMOS – 1.8|
 
-### I2C interface
+#### I2C interface
 
 Table 15. I2C pin descriptions
 
@@ -377,7 +496,7 @@ Table 15. I2C pin descriptions
 |213|	CAM_I2C_SCL	|Camera I2C Clock. 2.2kΩ pull-up to 3.3V on the module.|	Bidir|	Open Drain – 3.3V
 |215|	CAM_I2C_SDA	|Camera I2C Data. 2.2kΩ pull-up to 3.3V on the module.|	Bidir|	Open Drain – 3.3V
 
-### UART interface
+#### UART interface
 
 * Support 10 UART interfaces (UART0-UART9)
 * Embedded two 64-byte FIFO for TX and RX operation respectively
@@ -402,7 +521,7 @@ Table 16. UART pin descriptions
 |236|	UART2_TXD	|UART #2 Transmit	        |Output|	CMOS – 1.8V
 |238|	UART2_RXD	|UART #2 Receive	        |Input|	CMOS – 1.8V
 
-### CAN bus
+#### CAN bus
 
 * Support transmitting or receiving CAN standard frame
 * Support transmitting or receiving CAN extended frame
@@ -416,7 +535,7 @@ Table 14. CAN pin descriptions
 |145|	CAN_TX	 |CAN PHY	    | Output            |	CMOS – 3.3V
 |143|	CAN_RX	 |CAN PHY 	|Input              |	CMOS – 3.3V 
 
-### GPIO
+#### GPIO
 
 * All GPIOs can be used to generate interrupt
 * Support level trigger and edge trigger interrupt
@@ -446,7 +565,7 @@ Table 15. GPIO pin descriptions
 |230|GPIO14/GPIO3_A1/PWM11_IR/MIPI_CAM4_PDN | GPIO #14 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 
 
-### i2s interface
+#### i2s interface
 
 Table 16. i2s pin descriptions
 
@@ -461,7 +580,7 @@ Table 16. i2s pin descriptions
 |220|	I2S1_DOUT|	I2S Audio Port 1 Data Out	|Output|	CMOS – 1.8V
 |222|	I2S1_DIN |	I2S Audio Port 1 Data In	|Input	|CMOS – 1.8V
 
-## pin define
+### 全部引脚
 
 |ArmSoM-AIM7 function |	Pin number	|Pin number|	ArmSoM-AIM7 function|
 |------------------|-------------------------|-------------------------|-------------------------|

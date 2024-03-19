@@ -34,7 +34,7 @@ ArmSoM Sige系列产品开源资料的逐步完善中，涉及到多个方面，
 
 ### Sige 系列硬件对比
 
-|型号名称 |   [ ArmSoM-Sige7 ](./armsom-sige7/introduction)|
+|型号名称 |   [ ArmSoM-Sige7 ](./sige7)|
 | :--------: | :----------: | 
 |缩略图   |  ![armsom-Sige7](/img/sige/sige7/armsom-sige7.png) |
 | 主控 | RK3588 |
@@ -62,7 +62,7 @@ ArmSoM-AIM是我们推出的一系列嵌入式人工智能计算模块，主要�
 **尺寸和引脚与Jetson nano兼容**
 :::
 
-### 规格参数对比
+### 竞品规格参数对比
 
 下面是Jetson Nano模块（以NVIDIA Jetson Nano为代表）与armsom开发的AIM7（Rockchip RK3588）的主要技术规格的对比：
 

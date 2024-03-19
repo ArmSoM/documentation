@@ -1,36 +1,42 @@
 ---
-sidebar_label: "GPIO 使用"
+sidebar_label: "GPIO Usage"
 sidebar_position: 7
 ---
 
-# GPIO 使用
-## 1. GPIO简介
-GPIO，全称 General-Purpose Input/Output（通用输入输出），是一种在计算机和嵌入式系统中常见的数字输入输出接口。它允许软件控制硬件的数字输入和输出，例如开关、传感器、LED灯等。GPIO通常由一个芯片或处理器上的引脚提供支持，通过编程可以配置这些引脚为输入或输出，并且可以通过相应的软件命令来读取输入状态或控制输出状态。
+# GPIO Usage
 
-## 2. GPIO引脚编号计算方法
-RK3588共 有 5 组 GPIO bank：GPIO0~GPIO4，每组又以 A0~A7, B0~B7, C0~C7, D0~D7 作为编号区分，常用以下公式计算引脚：
+## 1. Introduction to GPIO
+
+GPIO, short for General-Purpose Input/Output, is a common digital input/output interface in computers and embedded systems. It allows software to control the digital inputs and outputs of hardware, such as switches, sensors, LEDs, etc. GPIO is typically supported by pins on a chip or processor, which can be programmed to configure these pins as inputs or outputs, and their input status can be read or output status controlled through corresponding software commands.
+
+## 2. GPIO Pin Number Calculation Method
+
+RK3588 has a total of 5 GPIO banks: GPIO0~GPIO4, each of which is further numbered as A0~A7, B0~B7, C0~C7, D0~D7. The following formulas are commonly used to calculate the pin numbers:
 
 ```bash
- GPIO pin脚计算公式：pin = bank * 32 + number
+ GPIO pin calculation formula: pin = bank * 32 + number
 
- GPIO 小组编号计算公式：number = group * 8 + X
+ GPIO group number calculation formula: number = group * 8 + X
 ```
 
-例如: GPIO3_B5的计算方式 : 32 * 3 + 1 * 8 + 5 = 109    ---> 也就是说，GPIO3_B5对应的是GPIO的编号是gpio-109。
+For example, the calculation for GPIO3_B5: 32 * 3 + 1 * 8 + 5 = 109 ---> This means that GPIO3_B5 corresponds to the GPIO number gpio-109.
 
-## 3. 复用
-GPIO口除了通用输入输出功能外，还可能有其它复用功能
+## 3. Multiplexing
+
+In addition to the general input/output function, GPIO pins may have other multiplexing functions.
 
 ![rockchip-gpio](/img/general-tutorial/interface-usage/gpio.png)
 
-从原理图中看出：以GPIO1_C0为例，就有如下几个功能：
+From the schematic, we can see that using GPIO1_C0 as an example, it has the following functions:
 
 | func0    | func1       | func2       | func3        |
 | -------- | ----------- | ----------- | ------------ |
 | GPIO1_C0 | I2C3_SDA_M0 | UART3_RX_M0 | SPI4_MISO_M0 |
 
-在系统DTS配置中GPIO1_C0默认是I2C3_SDA_M0功能。如果我们想将GPIO1_C0复用为UART3_RX_M0功能，该怎么做呢？
-1. 首先打开uart3 节点，将pinctrl配置为uart3m0_xfer。pinctrl配置是GPIO复用的最关键的配置，在这里就是将GPIO1_C0复用做了uart3功能。
+In the system DTS configuration, GPIO1_C0 defaults to the I2C3_SDA_M0 function. If we want to multiplex GPIO1_C0 as the UART3_RX_M0 function, how should we do it?
+
+1. First, open the uart3 node and set the pinctrl configuration to uart3m0_xfer. The pinctrl configuration is the most critical configuration for GPIO multiplexing, and here it multiplexes GPIO1_C0 as the uart3 function.
+
 ```bash
 &uart3 {
 	pinctrl-names = "default";
@@ -44,26 +50,31 @@ GPIO口除了通用输入输出功能外，还可能有其它复用功能
 		uart3m0_xfer: uart3m0-xfer {
 			rockchip,pins =
 				/* uart3_rx_m0 */
-				<1 RK_PC0 10 &pcfg_pull_up>,   # 将GPIO1_C0复用为uart3_rx_m0 
+				<1 RK_PC0 10 &pcfg_pull_up>,   # Multiplex GPIO1_C0 as uart3_rx_m0 
 				/* uart3_tx_m0 */
-				<1 RK_PC1 10 &pcfg_pull_up>;   # 将GPIO1_C1复用为uart3_tx_m0 
+				<1 RK_PC1 10 &pcfg_pull_up>;   # Multiplex GPIO1_C1 as uart3_tx_m0 
 		};
 	};
 };
 
 ```
-2. 如果发现GPIO1_C0被复用为I2c3，则在dts中关闭它。
+
+2. If you find that GPIO1_C0 is multiplexed as I2c3, disable it in the dts.
+
 ```bash
 &i2c3 {
 	status = "disabled";
 };
 ```
-这样，我们就将GPIO1_C0复用为了UART3_RX_M0功能
+
+In this way, we have multiplexed GPIO1_C0 as the UART3_RX_M0 function.
 
 
-## 4. GPIO调试方法
-### 4.1 读取GPIO状态信息
-Debugfs 文件系统目的是为开发人员提供更多内核数据，方便调试。 这里 GPIO 的调试也可以用 Debugfs 文件系统，获得更多的内核信息。GPIO 在 Debugfs 文件系统中的接口为 /sys/kernel/debug/gpio，可以这样读取该接口的信息：
+## 4. GPIO Debugging Methods
+
+### 4.1 Read GPIO Status Information
+
+The Debugfs file system is designed to provide developers with more kernel data for debugging purposes. The debugging of GPIO can also be done using the Debugfs file system to obtain more kernel information. The GPIO interface in the Debugfs file system is /sys/kernel/debug/gpio, and you can read the information from this interface as follows:
 
 ```bash
 armsom@armsom:~$ sudo cat /sys/kernel/debug/gpio
@@ -98,8 +109,10 @@ gpiochip4: GPIOs 128-159, parent: platform/fec50000.gpio, gpio4:
 
 gpiochip5: GPIOs 509-511, parent: platform/rk806-pinctrl.9.auto, rk806-gpio, can sleep:
 ```
-从读取到的信息中可以知道，内核把 GPIO 当前的状态都列出来了，以 GPIO0组为例，gpio-15(GPIO0_B7) 对应的dts节点是led_rgb_b，输出低电平 (out lo)。
-### 4.2 查看 pinmux-pins
+
+From the information read, we can see that the kernel lists the current status of the GPIO. For example, for the GPIO0 group, gpio-15 (GPIO0_B7) corresponds to the dts node led_rgb_b and outputs a low level (out lo).
+
+### 4.2 View pinmux-pins
 
 ```bash
 armsom@armsom:~$ sudo cat /sys/kernel/debug/pinctrl/pinctrl-rockchip-pinctrl/pinmux-pins
@@ -129,19 +142,23 @@ pin 20 (gpio0-20): sdio-pwrseq gpio0:20 function sdio-pwrseq group wifi-enable-h
 pin 21 (gpio0-21): (MUX UNCLAIMED) gpio0:21
 ...
 ```
-我们以pin 13 (gpio0-13): fiq-debugger (GPIO UNCLAIMED) function uart2 group uart2m0-xfer作为解析：
 
-gpio0-13对应的节点名是 fiq-debugger，此节点使用pinctrl配置复用为debug串口功能，pinctrl的值是uart2m0-xfer。
+We can take pin 13 (gpio0-13): fiq-debugger (GPIO UNCLAIMED) function uart2 group uart2m0-xfer as an example:
 
-## 5. GPIO控制
-这里介绍一下在用户空间基于sysfs控制gpio的方式：
-sysfs控制gpio的方式主要是基于内核提供的gpio控制接口文件。也就是通过读写/sys/class/gpio目录下的文件来控制对应的gpio接口。
+The node name corresponding to gpio0-13 is fiq-debugger. This node is multiplexed as the debug serial function using the pinctrl configuration, and the pinctrl value is uart2m0-xfer.
+
+## 5. GPIO Control
+
+Here, we introduce how to control GPIO in user space based on sysfs:
+The method of controlling GPIO through sysfs is mainly based on the GPIO control interface files provided by the kernel. In other words, it is done by reading and writing the files under the /sys/class/gpio directory to control the corresponding GPIO interface.
 
 ```bash
-echo 109 > /sys/class/gpio/export                  # 申请导出相应的gpio
-echo out > /sys/class/gpio/gpio109/direction       # 设置相应gpio为输出方向
-echo 1 > /sys/class/gpio/gpio109/value             # 设置输出高电平
-cat /sys/class/gpio/gpio109/value                  # 获取gpio当前状态值，是高电平还是低电平
-echo 109 > /sys/class/gpio/unexport                # 释放申请的gpio
+echo 109 > /sys/class/gpio/export                  # Export the corresponding GPIO
+echo out > /sys/class/gpio/gpio109/direction       # Set the GPIO as output direction
+echo 1 > /sys/class/gpio/gpio109/value             # Set high output level
+cat /sys/class/gpio/gpio109/value                  # Get the current GPIO status, whether it is high or low level
+echo 109 > /sys/class/gpio/unexport                # Release the requested GPIO
 ```
-注意：只有当GPIO3_B5脚没有被其它外设复用时, 我们才可以通过export导出该引脚去使用
+
+Note: Only when the GPIO3_B5 pin is not multiplexed by other peripherals, we can export it and then use.
+

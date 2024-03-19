@@ -1,38 +1,46 @@
 ---
-sidebar_label: "RTC 使用"
+sidebar_label: "RTC Usage"
 sidebar_position: 10
 ---
+# RTC Usage
 
-# 1. 简介
-RTC：(Real_Time Clock)：实时时钟
+## 1. RTC Introduction
 
-HYM8563是一种低功耗实时时钟（RTC）芯片，用于提供精确的时间和日期信息。它提供一个可编程的时钟输出，一个中断输出和一个掉电检测器，所有的地址和数据都通过I2C总线接口串行传递。最大总线速度为 400Kbits/s,每次读写数据后,内嵌的字地址寄存器会自动递增
+RTC: (Real-Time Clock)
 
-以下是HYM8563芯片的主要特点和功能：
+HYM8563 is a low-power real-time clock (RTC) chip used to provide accurate time and date information. It provides a programmable clock output, an interrupt output, and a power-fail detector. All addresses and data are serially transmitted via the I2C bus interface. The maximum bus speed is 400Kbits/s, and the embedded address register will automatically increment after each read or write operation.
 
- - 时钟和日历功能：HYM8563具有时钟和日历功能，可提供准确的时间和日期信息。它支持年、月、日、星期、小时、分钟和秒的显示和计时。
- - 电池供电：为了保持时间和日期的持久性，HYM8563芯片内置了电池供电电路，即使在主电源断开的情况下也能继续运行。
- - 闹钟功能：芯片内部集成了闹钟功能，可以设置闹钟时间，并在达到指定时间时触发警报。
- - 定时器功能：HYM8563芯片还具有定时器功能，可以设置计时器开始时间和计时时间，并在计时结束时触发相应的事件。
- - 温度补偿：该芯片具有温度补偿功能，可以根据环境温度对时钟频率进行自动修正，以保持时间的准确性。
- - 通信接口：HYM8563通过I2C（Inter-Integrated Circuit）接口与主控芯片或微处理器通信。这种接口简单易用，并且在许多嵌入式系统中得到广泛应用。
+The following are the main features and functions of the HYM8563 chip:
 
-# 2. HYM8563时钟调试
-## 2.1. 原理图
+- Clock and Calendar Functions: HYM8563 has clock and calendar functions, providing accurate time and date information. It supports the display and timing of years, months, days, weeks, hours, minutes, and seconds.
+- Battery Power Supply: To maintain the persistence of time and date, the HYM8563 chip has a built-in battery power supply circuit, allowing it to continue running even when the main power is disconnected.
+- Alarm Function: The chip integrates an alarm function, allowing users to set the alarm time and trigger an alarm when the specified time is reached.
+- Timer Function: The HYM8563 chip also has a timer function, enabling users to set the start time and duration of the timer, and triggering corresponding events when the timer expires.
+- Temperature Compensation: The chip has a temperature compensation function, which can automatically adjust the clock frequency according to the ambient temperature to maintain accurate timekeeping.
+- Communication Interface: HYM8563 communicates with the main controller chip or microprocessor through the I2C (Inter-Integrated Circuit) interface. This interface is simple and widely used in many embedded systems.
+
+## 2. HYM8563 Clock Debugging
+
+### 2.1 Schematic
+
 ![rtc-sch](/img/general-tutorial/interface-usage/rtc-sch.jpg)
-## 2.2. 驱动
-- kernel/drivers/rtc/rtc-hym8563.c
-## 2.3. 内核配置
 
-- rockchip_linux_defconfig配置：
+## 2.2 Driver
+
+- kernel/drivers/rtc/rtc-hym8563.c
+
+### 2.3 Kernel Configuration
+
+- rockchip_linux_defconfig configuration:
 
 ```bash
-CONFIG_RTC_HCTOSYS=y                # 允许RTC时间设置到系统时间
-CONFIG_RTC_HCTOSYS_DEVICE="rtc0"    # 默认同步时间的RTC设备
-CONFIG_RTC_SYSTOHC=y                # 允许系统时间设置到RTC
-CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # 默认同步时间的RTC设备
+CONFIG_RTC_HCTOSYS=y                # Allow RTC time to be set to system time
+CONFIG_RTC_HCTOSYS_DEVICE="rtc0"    # Default RTC device for time synchronization
+CONFIG_RTC_SYSTOHC=y                # Allow system time to be set to RTC
+CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # Default RTC device for time synchronization
 ```
-## 2.4. 设备树节点配置
+
+### 2.4 Device Tree Node Configuration
 
 ```bash
 &i2c6 {
@@ -59,17 +67,18 @@ CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # 默认同步时间的RTC设备
 };
 ```
 
-## 2.5. 调试
-- 查看I2C总线是否挂载上RTC：
+### 2.5 Debugging
+
+- Check if the RTC is mounted on the I2C bus:
 
 ```bash
-	sudo i2cdetect -y 6
+sudo i2cdetect -y 6
 ```
 
 ```
 armsom@armsom:~$ sudo i2cdetect -y 6
 
-		0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+        0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:                         -- -- -- -- -- -- -- --
 10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -79,22 +88,25 @@ armsom@armsom:~$ sudo i2cdetect -y 6
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- --
 ```
-可以看到I2C总线/dev/i2c-6上挂载了一个有效的I2C设备:RTC,其地址为0x51。
-# 3. RTC测试
-Linux系统下包含两个时间：系统时间和RTC时间。
 
-linux命令中的date和time等命令都是用来设置系统时间的，而hwclock命令是用来设置和读写RTC时间的。
+We can see that an I2C device (RTC) with an address of 0x51 is mounted on the I2C bus /dev/i2c-6.
+
+## 3. RTC Testing
+
+The Linux system includes two times: system time and RTC time.
+
+Commands like date and time in Linux are used to set the system time, while the hwclock command is used to set and read and write the RTC time.
 
 ```bash
-armsom@armsom:~$ sudo hwclock -r   # 查看硬件时间
+armsom@armsom:~$ sudo hwclock -r   #  View hardware time (RTC time)
 2024-02-27 17:16:05.631917+08:00
 
-armsom@armsom:~$ date  # 查看系统时间
+armsom@armsom:~$ date  # View system time
 2024年 02月 27日 星期二 17:16:22 CST
 
-armsom@armsom:~$ sudo  date -s "2024-02-27 18:45:00"  # 重新设置系统时间
+armsom@armsom:~$ sudo  date -s "2024-02-27 18:45:00"  # Reset system time
 2024年 02月 27日 星期二 18:45:00 CST
 
-armsom@armsom:~$ sudo hwclock -w   # 同步系统时间到rtc上，掉电不丢失时间
-
+armsom@armsom:~$ sudo hwclock -w   # Sync system time to RTC, time is not lost after power off
 ```
+

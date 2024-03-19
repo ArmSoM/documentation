@@ -1,53 +1,68 @@
 ---
-sidebar_label: "UART 使用"
+sidebar_label: "UART Usage"
 sidebar_position: 11
 ---
-# UART 使用
-## 1. UART 简介
+# UART Usage
 
-Rockchip UART (Universal Asynchronous Receiver/Transmitter) 基于16550A串口标准，完整模块支持以下功能：
-- 支持5、6、7、8 bits数据位。
-- 支持1、1.5、2 bits停止位。
-- 支持奇校验和偶校验，不支持mark校验和space校验。
-- 支持接收FIFO和发送FIFO，一般为32字节或者64字节。
-- 支持最高4M波特率，实际支持波特率需要芯片时钟分频策略配合。
-- 支持中断传输模式和DMA传输模式。
-- 支持硬件自动流控，RTS+CTS。
+## 1. UART Introduction
+
+Rockchip UART (Universal Asynchronous Receiver/Transmitter) is based on the 16550A serial port standard, and the complete module supports the following functions:
+
+- Supports 5, 6, 7, 8 data bits.
+- Supports 1, 1.5, 2 stop bits.
+- Supports odd parity and even parity, but does not support mark parity and space parity.
+- Supports receive FIFO and transmit FIFO, generally 32 bytes or 64 bytes.
+- Supports up to 4M baud rate, the actual supported baud rate needs to cooperate with the chip clock division strategy.
+- Supports interrupt transfer mode and DMA transfer mode.
+- Supports hardware automatic flow control, RTS+CTS.
 
 
-## 2. 普通串口
-- 在ArmSoM-Sige7中，普通UART集成在40PIN中，可供用户复用为UART引脚。
-- 在40PIN中可供复用的UART有:uart2-m2，uart3-m1，uart4-m2，uart7-m1，uart7-m2，uart8-m0
-  
-### 2.1 如何使用40PIN中的UART ？
-用户只需参考[overlay](https://docs.armsom.org/zh/docs/general-tutorial/overlay)设置，在overlay属性中添加上UART的overlay文件：
+## 2. Standard UART
 
-例如：
-- 使用UART3：	
+- In ArmSoM-Sige7, standard UART is integrated in the 40PIN and can be reused for UART function by users.
+- The UARTs that can be reused in the 40PIN are: uart2-m2, uart3-m1, uart4-m2, uart7-m1, uart7-m2, uart8-m0
 
-	```bash
-	overlays=rk3588-uart3-m1
-	```
+### 2.1 How to use the UART in the 40PIN?
 
-- 使用uart4
+Users only need to refer to the [overlay](https://docs.armsom.org/en/docs/general-tutorial/overlay) setting, and add the UART's overlay file in the overlay properties:
 
-	```bash
-	overlays=rk3588-uart4-m2
-	```
-- 使用uart7
-	```bash
-	overlays=rk3588-uart7-m1
-	```
-- 使用uart8
-	```bash
-	overlays=rk3588-uart8-m0
-	```
-### 2.2 内核menuconfig配置
+For example:
+
+- Use UART3:	
+
+```bash
+overlays=rk3588-uart3-m1
+```
+
+- Use uart4
+
+```bash
+overlays=rk3588-uart4-m2
+```
+
+- Use uart7
+
+```bash
+overlays=rk3588-uart7-m1
+```
+
+- Use uart8
+
+```bash
+overlays=rk3588-uart8-m0
+```
+
+### 2.2 Kernel menuconfig configuration
+
 Device Drivers(*)   ---> Character devices(*)  ---> Serial drivers 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/77ad81a6fdf04f729c2138ba4a567d47.png)
-### 2.3 dts配置
-#### 2.3.1 芯片级公共配置 kernel/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
+![uart-config](/img/general-tutorial/interface-usage/uart-config.jpg)
+
+### 2.3 dts configuration
+
+#### 2.3.1 Chip-level common configuration 
+
+kernel/arch/arm64/boot/dts/rockchip/rk3588s.dtsi
 
 ```bash
 uart2: serial@feb50000 {
@@ -64,23 +79,29 @@ uart2: serial@feb50000 {
 		status = "disabled";
 	};
 ```
-#### 2.3.2 板级配置 kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7.dts
-UART的板级dts配置只有以下参数允许修改：
--  dma-names：
-	- "tx" 打开tx dma
-	- "rx" 打开rx dma
-	- "!tx" 关闭tx dma
-	- "!rx" 关闭rx dma
-- pinctrl-0：
-	- &uart1m0_xfer 配置tx和rx引脚为iomux group 0
-	- &uart1m1_xfer 配置tx和rx引脚为iomux group 1
-	- &uart1m0_ctsn和&uart1m0_rtsn 配置硬件自动流控cts和rts引脚为iomux group 0
-	- &uart1m1_ctsn和&uart1m1_rtsn 配置硬件自动流控cts和rts引脚为iomux group 1
--  status：
-	- "okay" 打开
-    - "disabled" 关闭
 
-例如，将40PIN中的第36和第38编号引脚复用为uart2：
+#### 2.3.2 Board-level configuration 
+
+kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7.dts
+
+The board-level dts configuration for UART allows modifications to the following parameters:
+
+-  dma-names:
+   - "tx" enable tx dma
+   - "rx" enable rx dma
+   - "!tx" disable tx dma
+   - "!rx" disable rx dma
+-  pinctrl-0:
+   - &uart1m0_xfer configure tx and rx pins as iomux group 0
+   - &uart1m1_xfer configure tx and rx pins as iomux group 1
+   - &uart1m0_ctsn and &uart1m0_rtsn configure hardware automatic flow control cts and rts pins as iomux group 0
+   - &uart1m1_ctsn and &uart1m1_rtsn configure hardware automatic flow control cts and rts pins as iomux group 1
+-  status:
+   - "okay" enable
+   - "disabled" 
+
+ For example, to reuse pins 36 and 38 of the 40PIN as uart2:
+
 ```bash
 &uart2 {
 	status = "okay";
@@ -88,8 +109,10 @@ UART的板级dts配置只有以下参数允许修改：
 	pinctrl-0 = <&uart2m2_xfer>;
 }
 ```
-### 2.4 UART设备节点
-配置好串口后，硬件接口对应软件上的节点分别为：
+
+### 2.4 UART device node
+
+After configuring the serial port, the hardware interfaces correspond to the following software nodes:
 
 ```bash
 UART3:   /dev/ttyS3
@@ -97,26 +120,29 @@ UART4:   /dev/ttyS4
 ...
 ```
 
-### 2.5 使用串口唤醒系统
-串口唤醒系统功能是在系统待机时串口保持打开，并且把串口中断设置为唤醒源。使用时需要在dts中增
-加以下参数：
+### 2.5 Using serial port to wake up the system
+
+The serial port wake-up system function keeps the serial port open when the system is in sleep mode and sets the serial port interrupt as the wake-up source. To use this function, you need to add the following parameters in the dts:
 
 ```bash
 &uart1 {
 	wakeup-source;
-}；
+};
 ```
 
-## 3. 控制台串口
-- 在ArmSoM-Sige7中，UART2是作为控制台串口使用，可供用户查看开机启动的信息以及日常调试使用。
-### 3.1 驱动
+## 3. Console UART
+
+- In ArmSoM-Sige7, UART2 is used as the console serial port, which allows users to view boot-up information and perform daily debugging.
+
+### 3.1 Driver
 
 ```bash
 kernel/drivers/soc/rockchip/fiq_debugger/rk_fiq_debugger.c
 ```
 
-### 3.2 dts配置
-由于fiq_debugger和普通串口互斥，在使能fiq_debugger节点后必须禁用对应的普通串口uart节点
+### 3.2 dts configuration
+
+Since fiq_debugger and the standard serial port are mutually exclusive, after enabling the fiq_debugger node, the corresponding standard uart node must be disabled.
 
 ```bash
 fiq_debugger: fiq-debugger {
@@ -136,14 +162,17 @@ fiq_debugger: fiq-debugger {
 	status = "disabled";
 };
 ```
-以下对几个参数进行说明：
-- rockchip,serial-id：使用的UART编号。修改serial-id到不同UART，fiq_debugger设备也会注册成ttyFIQ0设备。
-- rockchip,irq-mode-enable：配置为1使用irq中断，配置为0使用fiq中断。
-- interrupts：配置的辅助中断，保持默认即可。
 
-## 4. 测试
-UART调试提供一个官方测试程序：ts_uart.uart、两个测试用文件send_0x55和send_00_ff，该程序可以联系ArmSoM客服获取。
-通过adb工具将测试程序放在开发板上一个可执行的路径下，以下放在data路径：
+The following explains some of the parameters:
+
+- rockchip,serial-id: The UART number used. Changing the serial-id to a different UART will also register the fiq_debugger device as the ttyFIQ0 device.
+- rockchip,irq-mode-enable: Configure 1 to use irq interrupt, configure 0 to use fiq interrupt.
+- interrupts: Configure the auxiliary interrupt, keep it as default.
+
+## 4. Testing
+
+UART debugging provides an official test program: ts_uart.uart (stored in the network disk: 1. Development Tools->Test Tools), and two test files send_0x55 and send_00_ff. This program can be obtained by contacting the ArmSoM customer service.
+Use the adb tool to put the test program on the development board in an executable path, here it is placed in the data path:
 
 ```bash
 adb root
@@ -152,12 +181,14 @@ adb push ts_uart.uart /data
 adb push send_0x55 /data
 adb push send_00_ff /data
 ```
-在开发板上修改测试程序权限：
+
+Modify the test program permissions on the development board:
 
 ```bash
 sudo chmod +x /data/ts_uart.uart
 ```
-使用以下命令可以获取程序帮助：
+
+Use the following command to get program help:
 
 ```bash
 console:/ # ./data/ts_uart.uart
@@ -185,42 +216,45 @@ ts_uart m init.rc 1500000 0 0 0 /dev/ttyS0
 receive, data must be 0x55
 ts_uart r init.rc 1500000 0 0 0 /dev/ttyS0
 ```
-### 4.1 测试发送
-测试发送的命令如下，send_0x55和send_00_ff为发送的文件：
+
+### 4.1 Test sending
+
+The command  is as follows. send_0x55 and send_00_ff are the files to be sent:
 
 ```bash
 ./data/ts_uart.uart s ./data/send_0x55 1500000 0 0 0 /dev/ttyS3
 ./data/ts_uart.uart s ./data/send_00_ff 1500000 0 0 0 /dev/ttyS3
 ```
 
-发送成功可以通过USB转UART小板连接PC端，使用PC端串口调`在这里插入代码片`试工具验证。
+Successful sending can be verified by connecting a USB-to-UART board to a PC and using a PC serial port debugging tool.
 
-### 4.2 测试接收
-测试接收的命令如下，receive_0x55为接收的文件：
+### 4.2 Test receiving
+
+The command is as follows, and receive_0x55 is the file to receive:
 
 ```bash
 ./data/ts_uart.uart r ./data/receive_0x55 1500000 0 0 0 /dev/ttyS1
 ```
 
-可以使用PC端串口调试工具发送数据，测试程序将自动检测，检测到U（0x55）接收正确，检测到其它
-字符将打印16进制ASCII码值，可以对照查询接收是否正确。
+You can use a PC serial port debugging tool to send data, and the test program will automatically detect it. If U (0x55) is detected, it means the reception is correct; if other characters are detected, it will print the hexadecimal ASCII code value, which can be cross-referenced to check if the reception is correct.
 
-### 4.3 测试内部自发自收
-测试内部自发自收的命令如下：
+### 4.3 Test internal self-sending and self-receiving
+
+The command is as follows:
 
 ```bash
 ./data/ts_uart.uart m ./data/send_00_ff 1500000 0 0 0 /dev/ttyS3
 ```
-按下Ctrl+C停止测试，可以观察到结束log如下。比较发送和接收的数据是否一致：
+
+Press Ctrl+C to stop the test, and you can observe the end log as follows. Compare the sent and received data to see if they are consistent:
 
 ```bash
 Sending data from file to port...
-send:1172, receive:1172 total:1172 # 收发数据一致，测试成功
-send:3441, receive:3537 total:3441 # 收发数据不一致，测试失败
+send:1172, receive:1172 total:1172 # Sent and received data are consistent, test passed
+send:3441, receive:3537 total:3441 # Sent and received data are inconsistent, test failed
 ```
 
-如果测试失败，说明当前串口存在问题或者有其他程序也在使用同一个串口。可以使用以下命令查看哪
-些程序打开了这个串口：
+If the test fails, it means that the current serial port has a problem or other programs are also using the same serial port. You can use the following command to see which programs have opened this serial port:
 
 ```bash
 lsof | grep ttyS3
