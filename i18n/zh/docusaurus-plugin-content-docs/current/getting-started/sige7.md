@@ -483,7 +483,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 [istoreos](https://github.com/istoreos/istoreos)
 
 
-## Sige7 硬件资料
+## 硬件资料
 
 获取 Sige7 原理图、DXF等硬件资料
 

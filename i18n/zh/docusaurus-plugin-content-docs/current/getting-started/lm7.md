@@ -362,8 +362,6 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 
 获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
-### LM7 硬件资料
-
 #### 引脚功能表格
 
 [ArmSoM-LM7 引脚功能表格](https://pan.baidu.com/s/1E8Jb8mRqKdrFxWH5tXMYTg?pwd=arms) - 引脚功能表格下载
