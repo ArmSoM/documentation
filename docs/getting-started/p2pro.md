@@ -30,7 +30,7 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 
 ## Real-Pictures
 
-![armsom-p2pro-layout](/img/link/p2pro/armsom-p2pro-layout.png)  
+![armsom-p2pro-layout](/img/link/armsom-p2pro-layout.png)  
 
 :::tip
 The PoE module and eMMC module of P2pro are not equipped by default. They are optional choices.
@@ -141,7 +141,7 @@ The debug serial port location is pin 9 and 11 of the 12-pin header
 | **TX** (pin 9)  | <--->      | RX            |
 | **RX** (pin 11) | <--->      | TX            |
 
-![armsom-p2pro-debug](/img/link/p2pro/armsom-p2pro-debug.png)  
+![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)  
 
 #### USB Interface  
 

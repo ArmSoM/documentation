@@ -27,7 +27,7 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - 大小：52.5mm × 65mm
 
 ## 实物图
-![armsom-p2pro-layout](/img/link/p2pro/armsom-p2pro-layout.png)
+![armsom-p2pro-layout](/img/link/armsom-p2pro-layout.png)
 
 :::tip
 P2pro的POE模块和eMMC模块为选配，默认没有
@@ -131,7 +131,7 @@ $ sudo dhclient eth0
 | **TX** (pin 9)  | <---> | RX |
 | **RX** (pin 11) | <---> | TX |
 
-![armsom-p2pro-debug](/img/link/p2pro/armsom-p2pro-debug.png)
+![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)
 
 #### USB接口
 ArmSoM-P2pro 提供一个 USB 2.0 端口。

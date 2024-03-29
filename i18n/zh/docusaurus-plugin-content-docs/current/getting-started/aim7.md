@@ -35,7 +35,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 
 ## 实物图
 
-![ArmSoM-AIM7-front & back](/img/aim/aim7/armsom-aim7-front&back.png)
+![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
 
 :::tip
 AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
@@ -44,7 +44,7 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 ## 硬件规格
 
 ### 产品框图
-![aim7-product](/img/aim/aim7/aim7-product.jpg)
+![aim7-product](/img/aim/aim7-product.jpg)
 
 ### 硬件规格
 

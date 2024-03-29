@@ -39,7 +39,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 ## 实物图
 
-![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.webp)
+![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.webp)
 
 :::tip
 Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。
@@ -195,7 +195,7 @@ Sige7 使用手册，帮助用户了解Sige7的基本使用和需要的准备工
 
 如下所示连接 USB 转 TTL 串口线：
 
-![armsom-sige7-debug](/img/sige/sige7/armsom-sige7-debug.png)
+![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
 
 | Sige7       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
@@ -280,7 +280,7 @@ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw
 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
 ```
 
-![armsom-sige7-gst](/img/sige/sige7/armsom-sige7-gst.png)
+![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
 
 #### 音频
 
@@ -431,7 +431,7 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,
 // MIPI-CSI2
 armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
-![armsom-w3-imx415-camera](/img/lm/lm7/armsom-w3-imx415-camera.jpeg)
+![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
 
 #### MIPI DSI

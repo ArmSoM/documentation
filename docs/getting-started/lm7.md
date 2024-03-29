@@ -52,8 +52,8 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 
 :::
 
-![ArmSoM-LM7 front & back](/img/lm/lm7/armsom-rk3588_lga_core_board_front_back.png)
-![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm7/Credit-Card-Size.webp)
+![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
+![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
 
 ## Hardware Specification
 
@@ -219,11 +219,11 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 ### Real Pictures RK3588M
 
-![ArmSoM-LM7-M development kit](/img/lm/lm7/armsom-lm7-m-development-kit.jpg)
+![ArmSoM-LM7-M development kit](/img/lm/armsom-lm7-m-development-kit.jpg)
 
 ### Real Pictures RK3588
 
-![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
+![ArmSoM-LM7 development kit](/img/lm/armsom-lm7-development-kit.jpg)
 
 ### Hardware Specifications
 
@@ -663,21 +663,21 @@ armsom@armsom-w3:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2
 ```
 armsom@armsom-w3:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
-![armsom-w3-imx415-camera](/img/lm/lm7/armsom-w3-imx415-camera.jpeg)  
+![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)  
 
 ##### USB3.0 Camera  
 
 After connecting the usb3.0 camera, open the Qt V4L2 test Utility app for testing  
 
-![armsom-w3-usb-camera-qtv4l2](/img/lm/lm7/armsom-w3-usb-camera-qtv4l2.png)  
+![armsom-w3-usb-camera-qtv4l2](/img/lm/armsom-w3-usb-camera-qtv4l2.png)  
 
 Open video node: video21  
 
-![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/lm7/armsom-w3-usb-camera-qtv4l2-select-video.png)  
+![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/armsom-w3-usb-camera-qtv4l2-select-video.png)  
 
 Click the camera button and you will see the camera screen  
 
-![armsom-w3-usb-camera-qtv4l2-play](/img/lm/lm7/armsom-w3-usb-camera-qtv4l2-play.png)
+![armsom-w3-usb-camera-qtv4l2-play](/img/lm/armsom-w3-usb-camera-qtv4l2-play.png)
 
 #### MIPI DSI  
 

@@ -37,11 +37,11 @@ The ArmSoM-KVM provides two RS-232 and two RS-485 serial communication interface
 - supports multiple platform server environments: Windows, Mac, Sun, Linux, and VT100 serial devices
 
 ## Product Image
-![armsom-kvm-interface](/img/link/p2pro/armsom-kvm-interface.jpg)
+![armsom-kvm-interface](/img/link/armsom-kvm-interface.jpg)
 
 :::tip
 Video support HDMI,VGA,DP and DVI,support 4 expansion boards
-![armsom-kvm-video-interface](/img/link/p2pro/armsom-kvm-video-interface.png)
+![armsom-kvm-video-interface](/img/link/armsom-kvm-video-interface.png)
 :::
 
 ### Hardware Specifications
@@ -67,17 +67,17 @@ Video support HDMI,VGA,DP and DVI,support 4 expansion boards
 |Operating temperature	| 0℃ ~ 70℃|
 
 ### 接口拓扑
-![armsom-kvm_5](/img/link/p2pro/armsom-kvm_5.png)
+![armsom-kvm_5](/img/link/armsom-kvm_5.png)
 
 ### ArmSoM-KVM产品
 
 ArmSoM work closely with ikasinfo to provide total solutions to customers. IKASinfo is a Chongqing-based national high-tech enterprise committed to driving the manufacturing industry towards Industry 4.0. With branches in major cities in China and abroad, IKAS has developed cutting-edge technologies, including intelligent decision-making algorithms based on "ROPN + AI" technology, which have been empowering the semiconductor industry and gradually adopted in other sectors.
 
-![armsom-kvm_1](/img/link/p2pro/armsom-kvm_1.jpg)
+![armsom-kvm_1](/img/link/armsom-kvm_1.jpg)
 
 ### ArmSoM-KVM total solutions
 
-![armsom-kvm_5](/img/link/p2pro/armsom-kvm_2.png)
+![armsom-kvm_5](/img/link/armsom-kvm_2.png)
 
 ## Cooperation
 

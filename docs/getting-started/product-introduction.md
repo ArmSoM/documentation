@@ -37,7 +37,7 @@ Provide complete open source materials, including but not limited to product int
 
 |Model name | [ ArmSoM-Sige7 ](./sige7)  |
 | :--------: | :----------:|
-|Thumbnail | ![armsom-Sige7](/img/sige/sige7/armsom-sige7.png)  |
+|Thumbnail | ![armsom-Sige7](/img/sige/armsom-sige7.png)  |
 | Main control | RK3588 |
 | RAM | LPDDR4x |
 | Flash | eMMC  |

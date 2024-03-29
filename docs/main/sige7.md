@@ -15,7 +15,7 @@ Let's get to know Sige7 in 5 minutes.
 
 The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
 
-![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)
+![ArmSoM-sige7](/img/sige/sige7.jpg)
 
 :::tip Applications
 Rockchip RK3588 design [ArmSoM-Sige7](./sige7) AI SBC design;
@@ -56,7 +56,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ### Hardware Interface
 
-![ArmSoM-Sige7 front & back](/img/sige/sige7/armsom-sige7-layout.webp)
+![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.webp)
 
 :::tip
 There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port is for power input.
@@ -460,7 +460,7 @@ Record video:
 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
 ```
 
-![armsom-sige7-gst](/img/sige/sige7/armsom-sige7-gst.png)
+![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
 
 #### Audio
 
@@ -599,7 +599,7 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,
 // MIPI-CSI2
 armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
-![armsom-w3-imx415-camera](/img/lm/lm7/armsom-w3-imx415-camera.jpeg)
+![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
 
 #### MIPI DSI  

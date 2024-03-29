@@ -16,7 +16,7 @@ The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-b
 
 Supports 8K video encoding and decoding,with LGA packaging for stronger transmission capability and stability. 
 
-![ArmSoM-lm7](/img/lm/lm7/lm7.png)
+![ArmSoM-lm7](/img/lm/lm7.png)
 
 We can provide baseboard reference design materials for users to customize in-depth independently. 
 
@@ -65,8 +65,8 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 
 :::
 
-![ArmSoM-LM7 front & back](/img/lm/lm7/armsom-rk3588_lga_core_board_front_back.png)
-![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm7/Credit-Card-Size.webp)
+![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
+![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
 
 ### Hardware Specification
 
@@ -234,7 +234,7 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 ### Hardware Interface (W3)
 
-![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
+![ArmSoM-LM7 development kit](/img/lm/armsom-lm7-development-kit.jpg)
 
 
 ## Resources

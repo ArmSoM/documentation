@@ -19,22 +19,21 @@ Our commitment is to equip the open-source community with superb hardware, robus
 
 |ArmSoM Single Board Computer(SBC)|	Direction	|
 |---------|--------------|
-|[ArmSoM-Sige7](./sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)	|
-|[ArmSoM-W3](./lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)	|
+|[ArmSoM-Sige7](./sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7.jpg)	|
+|[ArmSoM-W3](./lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-w3](/img/lm/w3.jpg)	|
 
 ### Compute Module and maker kit:
 
 |ArmSoM Compute Module and maker kit |	Direction	|
 |---------|--------------|
-|[ArmSoM-AIM7](./aim7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)	|
-|[ArmSoM-LM7](./lm7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)	|
+|[ArmSoM-AIM7](./aim7)  [Rockchip RK3588]	| ![ArmSoM-AIM7](/img/aim/aim7.png)	|
+|[ArmSoM-LM7](./lm7)  [Rockchip RK3588]	| ![ArmSoM-lm7](/img/lm/lm7.png)	|
 
 ### Accessories
 
 |ArmSoM Accessories|	Direction	|
 |---------|--------------|
-|[ArmSoM-AIM7](./aim7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)	|
-|[ArmSoM-LM7](./lm7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7/sige7.jpg)	|
+|[display-10-hd](./display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
 
 
 # ArmSoM Documentation

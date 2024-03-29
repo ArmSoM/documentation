@@ -42,8 +42,8 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 :::
-![ArmSoM-LM7 front & back](/img/lm/lm7/armsom-rk3588_lga_core_board_front_back.png)
-![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/lm7/Credit-Card-Size.webp)
+![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
+![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
 
 ## 硬件规格
 
@@ -203,11 +203,11 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ### 实物图搭载 RK3588M
 
-![ArmSoM-LM7-M development kit](/img/lm/lm7/armsom-lm7-m-development-kit.jpg)
+![ArmSoM-LM7-M development kit](/img/lm/armsom-lm7-m-development-kit.jpg)
 
 ### 实物图搭载 RK3588
 
-![ArmSoM-LM7 development kit](/img/lm/lm7/armsom-lm7-development-kit.jpg)
+![ArmSoM-LM7 development kit](/img/lm/armsom-lm7-development-kit.jpg)
 
 ### 硬件规格
 

@@ -39,7 +39,7 @@ AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intellig
 
 ### Hardware Interface
 
-![ArmSoM-AIM7-front & back](/img/aim/aim7/armsom-aim7-front&back.png)
+![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
 
 :::tip
 All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions

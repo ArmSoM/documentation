@@ -36,11 +36,11 @@ ArmSoM-KVM 提供两个RS-232 和两个RS-485 串行通信接口。在接口通�
 - 支持多平台服务器环境：Windows、Mac、Sun、Linux、VT100串口设备
 
 ## 实物图
-![armsom-kvm-interface](/img/link/p2pro/armsom-kvm-interface.jpg)
+![armsom-kvm-interface](/img/link/armsom-kvm-interface.jpg)
 
 :::tip
 视频支持HDMI、VGA、DP和DVI，支持4个扩展板
-![armsom-kvm-video-interface](/img/link/p2pro/armsom-kvm-video-interface.png)
+![armsom-kvm-video-interface](/img/link/armsom-kvm-video-interface.png)
 :::
 
 ### 硬件规格
@@ -66,17 +66,17 @@ ArmSoM-KVM 提供两个RS-232 和两个RS-485 串行通信接口。在接口通�
 |工作温度	| 0℃ ~ 70℃|
 
 ### 接口拓扑
-![armsom-kvm_5](/img/link/p2pro/armsom-kvm_5.png)
+![armsom-kvm_5](/img/link/armsom-kvm_5.png)
 
 ### ArmSoM-KVM产品
 
 ArmSoM 与![ikasinfo](https://www.ikasinfo.com/)紧密合作，为客户提供整体解决方案。IKASinfo是一家总部位于重庆的国家高新技术企业，致力于推动制造业迈向工业4.0。IKAS在国内外各大城市设有分支机构，研发出的前沿技术，包括基于“ROPN+AI”技术的智能决策算法，已赋能半导体行业，并逐步应用于其他领域。
 
-![armsom-kvm_1](/img/link/p2pro/armsom-kvm_1.jpg)
+![armsom-kvm_1](/img/link/armsom-kvm_1.jpg)
 
 ### ArmSoM-KVM整体解决方案
 
-![armsom-kvm_5](/img/link/p2pro/armsom-kvm_2.png)
+![armsom-kvm_5](/img/link/armsom-kvm_2.png)
 
 
 
