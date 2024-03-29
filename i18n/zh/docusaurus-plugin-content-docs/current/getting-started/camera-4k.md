@@ -1,6 +1,6 @@
 ---
-sidebar_label: "ArmSoM Camera 4K"
-sidebar_position: 1
+sidebar_label: "Camera 4K"
+sidebar_position: 16
 ---
 #  ArmSoM Camera 4K
 

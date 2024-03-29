@@ -46,6 +46,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -75,7 +76,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/armsom-social-card.png',
       navbar: {
-        title: '',
+        title: 'ArmSoM',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
@@ -84,8 +85,8 @@ const config = {
           {
             type: 'docSidebar',
             position: 'left',
-            sidebarId: 'getting-started',
-            label: 'Getting Started',
+            sidebarId: 'main',
+            label: 'Main page',
           }, 
           {
             type: 'docSidebar',
@@ -94,11 +95,7 @@ const config = {
             label: 'General Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-          //   href: 'https://armsom.org/',
-          //   label: 'ArmSoM',
-          //   position: 'right',
-          // },
+          
           {
             type: "localeDropdown",
             position: "right",
@@ -155,7 +152,11 @@ const config = {
                 label: 'bilibili',
                 to: 'https://space.bilibili.com/101696800',
                 target: "_blank",
-              },
+              }, {
+                label: 'CSDN',
+                to: 'https://blog.csdn.net/nb124667390',
+                target: "_blank",
+              }
             ],
           },
           {

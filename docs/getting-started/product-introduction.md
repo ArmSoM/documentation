@@ -9,11 +9,11 @@ sidebar_position: 2
 
 ### Application scenarios
 
-The Sige series（SBC） products launched by ArmSoM, with its superior performance and stable hardware quality, cover maker DIY implementation, commercial applications, industrial control and other fields, and have a wide range of application scenarios:
+The Sige series（SBC） products launched by ArmSoM, with its superior performance and stable hardware quality, cover makerDIY implementation, commercial applications, industrial control and other fields, and have a wide range of application scenarios:
 
 * Single board computer: office, programming development, home entertainment, programming education, etc.
 
-* Embedded development kit: inspire your maker inspiration and accelerate the verification and development of creative projects
+* Embedded development kit: inspire your makerinspiration and accelerate the verification and development of creative projects
 
 * Linux server: private cloud, soft routing, NAS, personal WEB server, etc.
 

@@ -1,6 +1,6 @@
 ---
-sidebar_label: "ArmSoM Display 10 HD"
-sidebar_position: 1
+sidebar_label: "Display 10 HD"
+sidebar_position: 17
 ---
 #  ArmSoM  Display 10 HD
 

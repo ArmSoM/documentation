@@ -109,7 +109,7 @@ Super powerful computing performance, multi-core computing power surpasses Core 
         </tr>
         <tr>
             <th>USB接口</th>
-            <th><li>2x USB3.0（USB3.1 Gen1），support USB3.1 Gen1, equivalent to USB3.2 Gen1 and USB3.0, up to 5Gbps data rate  </li><li>1x USB Type-C 3.1（DP1.4/OTG/PD Fast charger）</li></th>
+            <th><li>2x USB3.1（USB3.1 Gen1），support USB3.1 Gen1, equivalent to USB3.2 Gen1 and USB3.0, up to 5Gbps data rate  </li><li>1x USB Type-C 3.2（DP1.4/OTG/PD Fast charger）</li></th>
         </tr>
         <tr>
             <th>40-pin</th>

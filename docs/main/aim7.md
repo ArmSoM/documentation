@@ -3,6 +3,7 @@ description: ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-c
 keywords: [armsom, armsom-aim7, jetson nano, nvidia, rockchip]
 sidebar_label: "AIM7"
 sidebar_position: 5
+slug: /aim7
 ---
 
 # Product Introduction:AIM7
@@ -10,6 +11,8 @@ sidebar_position: 5
 ## Overview
 
 ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit processor with a main frequency of up to 2.4GHz, 6 TOPS computing power NPU, and can be equipped with up to 32GB of large memory. While the interface is fully compatible with Jetson Nano, the PCIe interface has been upgraded to PCIe3.0 4-lane and PCIe2.1 1-lan.
+
+![ArmSoM-AIM7](/img/aim/aim7/aim7.png)
 
 AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVR and other fields
 
@@ -44,6 +47,7 @@ AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intellig
 :::tip
 All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
 :::
+### Hardware Specification
 
 | Specifications   |ArmSoM-AIM7(Rockchip)                                       | Jetson Nano (NVIDIA)                                         | 
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -67,9 +71,7 @@ All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 | Form Factor      | 260-pin edge connector                                       | 260-pin edge connector     |
 
 
-## Hardware Resources
-
-### Pin definition
+### Hardware Pin Definitions
 
 #### Video input interface
 **Two  MIPI DC (DPHY/CPHY) combo PHY**
@@ -523,7 +525,7 @@ Table 16. i2s pin descriptions
 |220|	I2S1_DOUT|	I2S Audio Port 1 Data Out	|Output|	CMOS – 1.8V
 |222|	I2S1_DIN |	I2S Audio Port 1 Data In	|Input	|CMOS – 1.8V
 
-### pin define
+#### pin define
 
 |ArmSoM-AIM7 function |	Pin number	|Pin number|	ArmSoM-AIM7 function|
 |------------------|-------------------------|-------------------------|-------------------------|
