@@ -36,17 +36,17 @@ Our commitment is to equip the open-source community with superb hardware, robus
 |[display-10-hd](./display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
 
 
-# ArmSoM Documentation
+## ArmSoM Documentation
 
 Welcome to the official ArmSoM documentation center - your tutorial and guide for the ArmSoM series of products maintained by our development team and user community.
 
 Inside you'll find support to get started building your applications and systems powered by ArmSoM's capable computing modules and peripheral products.
 
-# Getting Help
+## Getting Help
 
 If you run into any problems using this documentation, ask your questions in our [forum](http://forum.armsom.org/) or [ArmSoM Discord](https://discord.gg/THfTEatpfK). We have an active technical support team responding regularly to assist you.
 
-# Community
+## Community
 
 Join the ArmSoM user community!
 
@@ -56,7 +56,7 @@ Discord Community: [ArmSoM Discord](https://discord.gg/THfTEatpfK) - experienced
 
 ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
-# Contact Us
+## Contact Us
 
 ArmSoM Wechat number: armsom-jackson 
 
