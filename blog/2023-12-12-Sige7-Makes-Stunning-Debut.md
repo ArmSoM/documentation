@@ -196,4 +196,4 @@ We believe that through continuous technological innovation and product optimiza
 
 Thank you all for your support and attention. Let's usher in a new chapter of technology together!
 
-[Sige7 Documents Link](https://docs.armsom.org/docs/getting-started/sige7)
+[Sige7 Documents Link](https://docs.armsom.org/armsom-sige7)

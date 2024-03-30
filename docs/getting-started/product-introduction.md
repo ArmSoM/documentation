@@ -35,7 +35,7 @@ Provide complete open source materials, including but not limited to product int
 
 ### Sige series hardware comparison
 
-|Model name | [ ArmSoM-Sige7 ](./sige7)  |
+|Model name | [ ArmSoM-Sige7 ](./armsom-sige7)  |
 | :--------: | :----------:|
 |Thumbnail | ![armsom-Sige7](/img/sige/armsom-sige7.png)  |
 | Main control | RK3588 |

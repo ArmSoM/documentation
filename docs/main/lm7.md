@@ -23,13 +23,13 @@ We can provide baseboard reference design materials for users to customize in-de
 It can be applied to diversified fields such as ARM PCs, edge computing, cloud servers, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVRs, etc.
 
 :::tip Applications
-Rockchip RK3588 design [ArmSoM-Sige7](./sige7) AI SBC design;
+Rockchip RK3588 design [ArmSoM-Sige7](./armsom-sige7) AI SBC design;
 
-Rockchip RK3588 design [ArmSoM-AIM7](./aim7) Core board fully compatible with Jetson Nano/TX2 NX;
+Rockchip RK3588 design [ArmSoM-AIM7](./armsom-aim7) Core board fully compatible with Jetson Nano/TX2 NX;
 
-Rockchip RK3588 design [ArmSoM-LM7](./lm7) LGA core board ;
+Rockchip RK3588 design [ArmSoM-LM7](./armsom-lm7) LGA core board ;
 
-Rockchip RK3588 design [ArmSoM-W3](./w3) LGA core board maker kit;
+Rockchip RK3588 design [ArmSoM-W3](./armsom-w3) LGA core board maker kit;
 
 With the powerful ecosystem and variety of extension modules, ArmSoM can help users easily go from ideas to prototype to mass production, making it an ideal creative platform for makers, dreamers and hobbyists.
 :::
@@ -230,7 +230,7 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 ### Development Kit (W3) 
 
-[ArmSoM-LM7 Development Kit (ArmSoM-W3)](./w3)
+[ArmSoM-LM7 Development Kit (ArmSoM-W3)](./armsom-w3)
 
 ### Hardware Interface (W3)
 
