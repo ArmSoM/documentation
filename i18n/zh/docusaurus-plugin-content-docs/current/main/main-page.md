@@ -1,6 +1,6 @@
 ---
 sidebar_label: "🏠 首页"
-title: "ArmSoM Open Source Hardware Developer Center"
+title: "ArmSoM 开源硬件开发者中心"
 sidebar_position: 1
 slug: /
 ---
@@ -15,9 +15,9 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 
 ## ArmSoM 产品列表
 
-### Single Board Computer: 
+### 单板计算机: 
 
-|ArmSoM Single Board Computer(SBC)|	Direction	|
+|ArmSoM 单板计算机(SBC)|	Direction	|
 |---------|--------------|
 |[ArmSoM-Sige7](./sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7.jpg)	|
 |[ArmSoM-W3](./lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-w3](/img/lm/w3.jpg)	|

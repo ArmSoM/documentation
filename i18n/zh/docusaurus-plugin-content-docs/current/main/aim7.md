@@ -10,6 +10,8 @@ slug: /aim7
 
 ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。接口完全兼容 Jetson Nano的同时，升级了PCIe接口为PCIe3.0 4-lane和PCIe2.1 1-lan。
 
+![ArmSoM-AIM7](/img/aim/aim7.png)
+
 AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
 ## 关键参数

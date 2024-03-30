@@ -14,7 +14,17 @@ slug: /sige7
 
 ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，拥有丰富的接口，支持双2.5G网口、WiFi6 & BT5和多种视频输出。支持多种操作系统, 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
+![ArmSoM-sige7](/img/sige/sige7.jpg)
+
 :::tip 应用
+Rockchip RK3588 design [ArmSoM-Sige7](./sige7) 单板计算机;
+
+Rockchip RK3588 design [ArmSoM-AIM7](./aim7) AI核心板 完全兼容Jetson Nano/TX2 NX;
+
+Rockchip RK3588 design [ArmSoM-LM7](./lm7) LGA 核心板 ;
+
+Rockchip RK3588 design [ArmSoM-W3](./w3) LGA 核心板开发套件;
+
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
 :::
 
