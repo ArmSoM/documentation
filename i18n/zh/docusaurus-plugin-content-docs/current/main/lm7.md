@@ -3,7 +3,7 @@ description: ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理�
 keywords: [armsom, armsom-lm7, armsom-w3, maker kit, rockchip, rk3588]
 sidebar_label: "LM7"
 sidebar_position: 4
-slug: /lm7
+slug: /armsom-lm7
 ---
 
 # 产品简介

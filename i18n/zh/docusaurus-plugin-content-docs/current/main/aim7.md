@@ -3,7 +3,7 @@ description: ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处�
 keywords: [armsom, armsom-AIM7, 创客套件, rockchip, rk3588产品介绍]
 sidebar_label: "AIM7"
 sidebar_position: 5
-slug: /aim7
+slug: /armsom-aim7
 ---
 
 # AIM7产品简介

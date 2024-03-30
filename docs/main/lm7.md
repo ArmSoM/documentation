@@ -3,7 +3,7 @@ description: The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is ei
 keywords: [armsom, armsom-LM7,armsom-w3, LGA, maker kit, rockchip, rk3588]
 sidebar_label: "LM7"
 sidebar_position: 4
-slug: /lm7
+slug: /armsom-lm7
 ---
 
 # Product Introduction:LM7

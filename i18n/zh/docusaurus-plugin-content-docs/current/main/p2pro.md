@@ -3,6 +3,7 @@ description: ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM 
 keywords: [armsom, armsom-p2pro, maker kit, rockchip, rk3308语音应用]
 sidebar_label: "p2pro"
 sidebar_position: 6
+slug: /armsom-p2pro
 ---
 
 # 产品简介

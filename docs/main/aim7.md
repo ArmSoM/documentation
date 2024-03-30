@@ -3,7 +3,7 @@ description: ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-c
 keywords: [armsom, armsom-aim7, jetson nano, nvidia, rockchip]
 sidebar_label: "AIM7"
 sidebar_position: 5
-slug: /aim7
+slug: /armsom-aim7
 ---
 
 # Product Introduction:AIM7

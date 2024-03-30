@@ -1,5 +1,6 @@
 ---
 sidebar_label: "Camera 4K"
+slug: /armsom-camera-4k
 sidebar_position: 15
 ---
 # ArmSoM Camera 4K

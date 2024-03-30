@@ -3,7 +3,7 @@ description: ArmSoM-KVM KVM over IP Industrial control gateway design with Rockc
 keywords: [armsom, armsom-kvm, PIKVM, rockchip, RK3568]
 sidebar_label: "KVM"
 sidebar_position: 6
-slug: /kvm
+slug: /armsom-kvm
 ---
 
 # Product Introduction

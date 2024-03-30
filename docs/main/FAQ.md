@@ -1,5 +1,6 @@
 ---
 sidebar_label: "FAQs"
+slug: /armsom-faqs
 sidebar_position: 19
 ---
 

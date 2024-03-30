@@ -3,7 +3,7 @@ description: ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处�
 keywords: [armsom, armsom-sige7, maker kit, rockchip, rk3588产品介绍]
 sidebar_label: "Sige7"
 sidebar_position: 2
-slug: /sige7
+slug: /armsom-sige7
 ---
 
 # 产品简介

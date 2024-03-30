@@ -3,7 +3,7 @@ description: The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes 
 keywords: [armsom, armsom-p2pro, rockchip, open source router，open source hardware]
 sidebar_label: "P2pro"
 sidebar_position: 6
-slug: /p2pro
+slug: /armsom-p2pro
 ---
 
 # Product Introduction
