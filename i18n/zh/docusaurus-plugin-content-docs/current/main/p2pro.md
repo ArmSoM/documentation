@@ -6,13 +6,15 @@ sidebar_position: 6
 slug: /armsom-p2pro
 ---
 
-# 产品简介
+# P2pro 产品简介
 让我们在 5 分钟内了解 P2pro。
 
-## 简介
+### 简介
 ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网和语音应用程序。ArmSoM-p2pro 采用 1 个 RAM 大小 512MB DDR3，并使用 eMMC（选配） 或 SD 卡作为操作系统的存储。
 
-## 关键参数
+![ArmSoM-P2pro](/img/link/p2pro.jpg)
+
+### 关键参数
 
 - SOC：瑞芯微 RK3308
 - CPU：四核ARM Cortex-A35@ 1.2GHz，28纳米制程
@@ -27,7 +29,9 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - 重量：
 - 大小：52.5mm × 65mm
 
-## 实物图
+## 硬件信息
+
+### 硬件接口
 ![armsom-p2pro-layout](/img/link/armsom-p2pro-layout.png)
 
 :::tip
@@ -56,94 +60,15 @@ P2pro的POE模块和eMMC模块为选配，默认没有
 |工作温度	| 0℃ ~ 70℃|
 
 
-# 使用手册
+## 开发资料
 
-P2pro 使用手册，帮助用户了解P2pro的基本使用和需要的准备工作。 
+### SDK源码
 
-当您拿到产品的时候，您需要知道它的型号以及硬件版本，这些信息都可以在板子上的丝印找到，我们会尽可能详细地向您介绍产品的信息。
-
-## 入门准备
-在开始使用 ArmSoM-P2pro 之前，请准备好以下物品
-
-### 工具准备
-* P2pro 主板
-* 电源: USB Type-C
-  * 支持 5V/2A
-* 系统安装（二选一）
-  * MicroSD卡/TF卡启动
-    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
-    * 以下是经过ArmSoM团队测试验证的高速TF卡
-      * SanDisk 32GB TF（MicroSD）（开发者推荐）
-      * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
-      * 闪迪 TF 8G Class10 microSD 
-      * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
-  * 板载eMMC启动
-    * USB Type-C数据线，P2pro typec端口连接电脑，写入镜像。
-
-### 可选选项
-* Ethernet 线（网线）
-  * P2pro 支持以太网上网，最高支持100M。
-  * 网线用于将 P2pro 连接到本地网络和互联网。
-* 无线WIFI
-  * P2pro 支持无线上网功能，支持802.11 a/b/g/n/ac & BT5.0 (AP6256)
-* 音频线
-   * 可以使用标准 3.5 毫米插孔通过扬声器或耳机播放音频。
-* USB-A型转USB-C型数据线
-
-## 烧录方式选择
-
-[系统镜像烧录](../general-tutorial/flash-img)
-
-
-### 接口设置
-
-如果你是首次使用 ArmSoM-P2pro，请先熟悉下 [外设接口](#实物图)，以便于你更好的理解后续的内容。
-
-#### 100M 以太网口
-
-如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-P2pro 上的 RJ45 端口插入，网口灯闪烁确认硬件正常连接。
-
-手动配置以太网
-- 切换root用户
-
-```bash
-sudo su
-```
-
-- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 eth0 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
-
-```bash
-ifconfig
-ping www.baidu.com
-```
-
-- 如果无法ping通，尝试
-
-```bash
-$ sudo dhclient eth0
-```
-
-#### 调试串口
-调试串口的位置在12pin-head的 9，11脚
-
-| P2pro       | 连接  | 串口模块 |
-| --------------- | ----- | ------ |
-| **GND** (pin 8) | <---> | GND |
-| **TX** (pin 9)  | <---> | RX |
-| **RX** (pin 11) | <---> | TX |
-
-![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)
-
-#### USB接口
-ArmSoM-P2pro 提供一个 USB 2.0 端口。
-
-
-
-## 系统镜像
-
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+[ArmSoM-P2pro BSP](https://github.com/ArmSoM/armsom-p2pro-bsp)
 
 ### 官方镜像
+
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
@@ -177,31 +102,105 @@ ArmSoM-P2pro 的首次官方发布通告请在以下链接查看：
 
 社区适配中~
 
-## SDK源码
 
-[ArmSoM-P2pro BSP](https://github.com/ArmSoM/armsom-p2pro-bsp)
+### 硬件资料
 
-
-## 硬件资料
-
-### 原理图
 [ArmSoM-p2pro v1.1 原理图pdf](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
-
-### 2D CAD 图
 
 [ArmSoM-p2pro v1.1 底部&顶部](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms) 
 
-### 位号图
-
 [ArmSoM-p2pro v1.1 位号图](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
-
-### datasheet
 
 [ArmSoM-p2pro v1.1 datasheet](https://pan.baidu.com/s/1GBr2kwJ_-Xor_3thJ0iu5A?pwd=arms)  
 
 :::tip 版本更改记录
 v1.0 为内部版本暂不公布
 :::
+
+## 使用手册
+
+P2pro 使用手册，帮助用户了解P2pro的基本使用和需要的准备工作。 
+
+当您拿到产品的时候，您需要知道它的型号以及硬件版本，这些信息都可以在板子上的丝印找到，我们会尽可能详细地向您介绍产品的信息。
+
+### 入门准备
+在开始使用 ArmSoM-P2pro 之前，请准备好以下物品
+
+**工具准备**
+* P2pro 主板
+* 电源: USB Type-C
+  * 支持 5V/2A
+* 系统安装（二选一）
+  * MicroSD卡/TF卡启动
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
+    * 以下是经过ArmSoM团队测试验证的高速TF卡
+      * SanDisk 32GB TF（MicroSD）（开发者推荐）
+      * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
+      * 闪迪 TF 8G Class10 microSD 
+      * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
+  * 板载eMMC启动
+    * USB Type-C数据线，P2pro typec端口连接电脑，写入镜像。
+
+**可选选项**
+* Ethernet 线（网线）
+  * P2pro 支持以太网上网，最高支持100M。
+  * 网线用于将 P2pro 连接到本地网络和互联网。
+* 无线WIFI
+  * P2pro 支持无线上网功能，支持802.11 a/b/g/n/ac & BT5.0 (AP6256)
+* 音频线
+   * 可以使用标准 3.5 毫米插孔通过扬声器或耳机播放音频。
+* USB-A型转USB-C型数据线
+
+### 烧录方式选择
+
+[系统镜像烧录](../general-tutorial/flash-img)
+
+
+#### 接口设置
+
+如果你是首次使用 ArmSoM-P2pro，请先熟悉下 [外设接口](#实物图)，以便于你更好的理解后续的内容。
+
+**100M 以太网口**
+
+如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-P2pro 上的 RJ45 端口插入，网口灯闪烁确认硬件正常连接。
+
+手动配置以太网
+- 切换root用户
+
+```bash
+sudo su
+```
+
+- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 eth0 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
+
+```bash
+ifconfig
+ping www.baidu.com
+```
+
+- 如果无法ping通，尝试
+
+```bash
+$ sudo dhclient eth0
+```
+
+**调试串口**
+调试串口的位置在12pin-head的 9，11脚
+
+| P2pro       | 连接  | 串口模块 |
+| --------------- | ----- | ------ |
+| **GND** (pin 8) | <---> | GND |
+| **TX** (pin 9)  | <---> | RX |
+| **RX** (pin 11) | <---> | TX |
+
+![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)
+
+**USB接口**
+ArmSoM-P2pro 提供一个 USB 2.0 端口。
+
+
+
+
 
 ### 硬件引脚定义
 

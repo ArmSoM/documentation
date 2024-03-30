@@ -6,7 +6,7 @@ sidebar_position: 4
 slug: /armsom-lm7
 ---
 
-# 产品简介
+# LM7 产品简介
 
 让我们在 5 分钟内了解 LM7。
 
@@ -16,8 +16,7 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 
 ![ArmSoM-lm7](/img/lm/lm7.png)
 
-
-## 关键参数
+### 关键参数
 
 - SOC：瑞芯微 RK3588
 - CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
@@ -38,7 +37,9 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - 重量：约 13.4克
 - 大小：45mm × 50mm × 4.5mm (top: 2.2mm+PCB: 1.2mm +bottom: 1.1mm)
 
-## 实物图(LM7及LM7-M)
+## 硬件信息
+
+### 硬件接口
 
 :::info
 
@@ -48,7 +49,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 ![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
 ![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
 
-## 硬件规格
+### 硬件规格
 
 <table>
     <thead>
@@ -202,122 +203,20 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 :::
 
-## ArmSoM-LM7 开发套件(ArmSoM-W3)
 
-### 实物图搭载 RK3588M
+## 开发资料
 
-![ArmSoM-LM7-M development kit](/img/lm/armsom-lm7-m-development-kit.jpg)
+### SDK源码
 
-### 实物图搭载 RK3588
+[ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
 
-![ArmSoM-LM7 development kit](/img/lm/armsom-lm7-development-kit.jpg)
+[ArmSoM-W3 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
-### 硬件规格
-
-
-<table>
-    <thead>
-        <tr>
-            <th>类别</th>
-            <th>功能参数</th>
-        </tr>
-    </thead>
-    <tbody align="left">
-        <tr>
-            <th>SOC</th>
-            <th><li>RockChip RK3588/RK3588M/RK3588J</li></th>
-        </tr>
-        <tr>
-            <th>CPU</th>
-            <th><li>RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程</li></th>
-        </tr>
-        <tr>
-            <th>GPU</th>
-            <th><li>GPU Mali-G610 MP4 (4x256KB L2 Cache)</li><li>支持 OpenGL ES3.2/OpenCL2.2/Vulkan1.1</li></th>
-        </tr>
-        <tr>
-            <th>NPU</th>
-            <th><li>6 TOPS@INT8(3 NPU core)</li><li>支持 INT4/INT8/INT16 混合运算</li><li>支持深度学习框架：TensorFlow/MXNet/PyTorch/Caffe/Tflite/Onnx NN/Android NN 等</li></th>
-        </tr>
-         <tr>
-            <th>VPU/编解码</th>
-            <th><li>硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>硬编码：8K@30fps H.265 / H.264</li></th>
-        </tr>
-         <tr>
-            <th>ISP</th>
-            <th><li>集成48MP ISP with HDR&3DNR</li></th>
-        </tr>
-        <tr >
-            <th>RAM</th>
-            <th><li>4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
-        </tr>
-        <tr >
-            <th>Flash</th>
-            <th><li>16GB/32GB/64GB/128GB/256GB eMMC，默认eMMC 32GB</li><li>支持MicroSD卡扩展</li></th>
-        </tr>
-        <tr>
-            <th>PCIe</th>
-            <th><li>1x M.2 Key E 接口(PCIe 2.1 1-lane)，支持PCIe/SATA/USB/SDIO/UART 并可外接Bluetooth/WIFI模块</li><li>1x M.2 Key M 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
-        </tr>
-        <tr>
-            <th>网络</th>
-            <th><li>1x 2.5G网口</li></th>
-        </tr>
-        <tr>
-            <th>视频输出</th>
-            <th><li>2x HDMI OUT2.1，其中一个HDMI OUT 支持 8K@60fps 或者 4K@120fps另一个HDMI OUT 支持 4K@60fps</li><li>1x MIPI DSI分辨率可达 4K@60Hz</li><li>1x DP1.4分辨率可达 8192x4320@30Hz</li></th>
-        </tr>
-        <tr>
-            <th>视频输入</th>
-            <th><li>1x HDMI IN2.0，支持3.4Gbps~6Gbps</li><li>1x 4Lanes MIPI CSI / 2x 2Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
-        </tr>
-        <tr>
-            <th>音频</th>
-            <th><li>2x HDMI音频输出</li><li>1x Audio Jack 3.5mm（ES8316）音频输出</li><li>1x Type-C 3.1 (DP1.4)音频输出</li></th>
-        </tr>
-        <tr>
-            <th>USB接口</th>
-            <th><li>2x USB3.0（USB3.1 Gen1），支持USB3.1 Gen1，相当于USB3.2 Gen1和USB3.0，高达5Gbps数据速率</li><li>2x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li><li>1x USB Type-C 3.1（DP1.4/OTG/PD 快充）</li></th>
-        </tr>
-        <tr>
-            <th>40-pin</th>
-            <th><li>和树莓派40pin可完全兼容，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
-        </tr>
-        <tr>
-            <th>其他</th>
-            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片HYM8563TS的供电</li><li>1x RGB灯，供电正常时绿灯亮，系统正常时蓝色灯开始闪烁，红色灯由用户控制</li><li>1x 调试串口uart, 3-Pin 2.54mm连接头, 3.3V level, 1500000bps</li></th>
-        </tr>
-        <tr>
-            <th>电源</th>
-            <th><li>支持DC 12V/2.5A Aperture 2.5mm</li><li>支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A</li><li>支持12V PoE</li></th>
-        </tr>
-        <tr>
-            <th>按键</th>
-            <th><li>1x PWRON键，支持休眠唤醒</li><li>1x Reset键，支持重启</li><li>1x Recovery键，支持进入loader烧录模式</li><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
-        </tr>
-        <tr>
-            <th>系统</th>
-            <th><li>Rockchip官方支持：Android 12.0，Debian11，Buildroot</li><li>第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS</li></th>
-        </tr>
-        <tr>
-            <th>尺寸</th>
-            <th><li>148 mm x 100.5mm</li></th>
-        </tr>
-        <tr>
-            <th>工作温度</th>
-            <th><li>RK3588：0℃ ~ 70℃</li><li>RK3588M：-40℃ ~ 85℃</li></th>
-        </tr>
-    </tbody>
-</table>
-
-
-
-## 系统镜像
-
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+[ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)
 
 ### 官方镜像
 
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
@@ -325,13 +224,13 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 **debain bullseye**
 
-固件位置：3. Linux镜像/debian/ArmSoM-LM7(Development Kit ArmSoM-W3)
+固件位置：3. Linux镜像/debian/ArmSoM-LM7(Development Kit ArmSoM-W3) - [百度网盘链接](https://pan.baidu.com/s/1fbImGcfnfG4rCvNtgXDLsw?pwd=arms) 
 
 **安卓12**
 
-固件位置：4. 安卓镜像/ArmSoM-LM7(Development Kit ArmSoM-W3)
+固件位置：4. 安卓镜像/ArmSoM-LM7(Development Kit ArmSoM-W3) - [百度网盘链接](https://pan.baidu.com/s/1UYyrFEhOhZ5qgwGND4-EVA?pwd=arms ) 
 
-#### 发布信息
+**发布信息**
 
 ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 [ArmSoM-W3 系统发布通知](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139)
@@ -351,164 +250,28 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 
 #### Joshua-Riek/ubuntu-rockchip
 
-固件位置：[ubuntu-rockchip](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-w3.html)
+固件位置: 3. Linux Images/ubuntu/ArmSoM-Sige7 - [百度网盘](https://pan.baidu.com/s/1KRlG_lHbbmv8oBcxNOveQQ?pwd=arms ) 
+
+[joshua-ubuntu-rockchip-download](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
 
 
-## SDK源码
-
-[ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
-
-[ArmSoM-W3 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
-
-[ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)
-
-## 硬件资料
+### 硬件资料
 
 获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
-#### 引脚功能表格
-
 [ArmSoM-LM7 引脚功能表格](https://pan.baidu.com/s/1E8Jb8mRqKdrFxWH5tXMYTg?pwd=arms) - 引脚功能表格下载
-
-#### 封装
 
 [ArmSoM-LM7 封装](https://pan.baidu.com/s/1wIp67X337sZ5VEN-HnN-wA?pwd=arms ) - 封装下载
 
-### LM7 开发套件(ArmSoM-W3) 硬件资料
-
-#### 原理图
-
 [ArmSoM-W3_1V1 原理图pdf，orcad源文件](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf，源文件（orcad）下载
-
-#### PCB
 
 [ArmSoM-W3_1V1 PCB PADS](https://pan.baidu.com/s/1H45A34d7bLm00fh1Oj0ynA?pwd=arms ) - PCB源文件（PADS）下载
 
-#### 2D CAD 图
-
 [ArmSoM-W3 Top, Bottom](https://pan.baidu.com/s/1KKVkZcszuTWFLTrPl4541g?pwd=arms) - 2D CAD 文件下载
-
-#### 位号图
 
 [ArmSoM-W3_1V1 位号图](https://pan.baidu.com/s/1zZ59b95ROjsHF3TlcG-cNA?pwd=arms) -  位号图下载
 
-### 硬件引脚定义
-
-#### 40-pin 座子
-
-<div className='gpio_style'>
-
-| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
- :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     139     | I2S1_SDO2_M0 / I2C7_SDA_M3 / UART8_CTSN_M0 / PWM15_IR_M1 / CAN1_TX_M1 / GPIO4_B3 /| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     138     | I2S1_SDO1_M0 / I2C7_SCL_M3 / UART8_RTSN_M0 /  PWM14_M1   / CAN1_RX_M1 / GPIO4_B2  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     115     | SPI1_CS1_M1 / I2C8_SDA_M4 / UART7_CTSN_M1 / PWM15_IR_M0 / GPIO3_C3  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  GPIO0_B5 / <div className='orange-txt'>UART2_TX_M0</div> / I2C1_SCL_M0 / I2S1_MCLK_M1 / JTAG_TCK_M2|     13      |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART2_RX_M0</div> / I2C1_SDA_M0 / I2S1_SCLK_M1 /  JTAG_TMS_M2|     14      |
-|     113     |  SPI1_CLK_M1 / UART7_RX_M1 / GPIO3_C1  | <div className='green'>11</div>  | <div className='green'>12</div> |  GPIO3_B5  / CAN1_RX_M0 / PWM12_M0  /UART3_TX_M1 / I2S2_SCLK_M1 |     109     |
-|     111     |  SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     112     |   SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1  / GPIO3_C0  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1   |     100     |
-|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  GPIO4_C4 / PWM5_M2 / SPI3_MISO_M0 |    148     |
-|     42      | SPI0_MOSI_M2 / UART4_RX_M2 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
-|     41      | SPI0_MISO_M2 / GPIO1_B1  | <div className='green'>21</div>  | <div className='green'>22</div> | SARADC_IN4          |             |
-|     43      | SPI0_CLK_M2 / UART4_TX_M2 / GPIO1_B3  | <div className='green'>23</div>  | <div className='green'>24</div> |  GPIO1_B4 / UART7_RX_M2  / SPI0_CS0_M2 |     44      |
-|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     45      |
-|     150     | SPI3_CLK_M0 / I2C0_SDA_M1 / PWM7_IR_M3 / GPIO4_C6  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO4_C5 / PWM6_M2 / I2C0_SCL_M1 /
-|     63      | UART1_CTSN_M1 / PWM15_IR_M3 / GPIO1_D7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
-|     47      | SPDIF_TX_M0 / UART1_RX_M1 / PWM13_M2 / GPIO1_B7  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_C2 / PWM14_M0 / UART7_RTSN_M1 / I2C8_SCL_M4 / SPI1_CS0_M1  |    114     |
-|     103     | PWM8_M0 / GPIO3_A7  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
-|     110     | I2S2_LRCK_M1 / UART3_RX_M1 / PWM13_M0 / CAN1_TX_M0 / GPIO3_B6  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO3_B1 / PWM2_M1 / UART2_TX_M2 |     105     |
-|      0      | REFCLK_OUT / GPIO0_A0	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO3_B2 /PWM3_IR_M1 / UART2_RX_M2 / I2S2_SDI_M1   |     106     |
-|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO3_B3 /  UART2_RTSN / I2S2_SDO_M1   |     107     |
-
-</div>
-
-#### MIPI CSI
-0.5mm FPC 连接器
-
-|Pin |   MIPI-CSI |   描述   |
- :--------: | :---------------------: | :--------: | 
-|1,4,7,10,13,16,19,21,24,25,26,27,32,33        |  GND       |   Power Ground &  Signal Ground |
-|2     | MIPI_CSI0_RX_D3N   |     MIPI RX Lane3 iuput N |
-|3     | MIPI_CSI0_RX_D3P                  |   MIPI RX Lane3 iuput P |
-|5          | MIPI_CSI0_RX_D2N |   MIPI RX Lane2 iuput N |
-|6          | MIPI_CSI0_RX_D2P|   MIPI RX Lane2 iuput P |
-|8          | MIPI_CSI0_RX_CLK1N|   MIPI RX Clock iuput N |
-|9         | MIPI_CSI0_RX_CLK1P |   MIPI RX Clock iuput P |
-|11         |  MIPI_CSI0_RX_D1N |   MIPI RX Lane1 iuput N |
-|12         | MIPI_CSI0_RX_D1P |   MIPI RX Lane1 iuput P |
-|14         | MIPI_CSI0_RX_D0N|    MIPI RX Lane0 iuput N |
-|15         | MIPI_CSI0_RX_D0P |    MIPI RX Lane0 iuput P |
-|17         | MIPI_CSI0_RX_CLK0N|   MIPI RX Clock iuput N |
-|18         | MIPI_CSI0_RX_CLK0P|  MIPI RX Clock iuput P |
-|20         | MIPI_CAM3_CLKOUT |    1.8V, CLock ouput for Sensor |
-|22         | MIPI_CAM1_CLKOUT |   1.8V, CLock ouput for Sensor |
-|23         | MIPI_CSI0_PDN0_H(GPIO1_B0) |    1.8V, GPIO |
-|24         | I2C3_SCL_M0_MIPI |   1.8V, I2C Clock, pulled up to 1.8V with 2.2K on w3 |
-|25         | I2C3_SDA_M0_MIPI |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on w3 |
-|26         | MIPI_CSI0_PDN1_H(GPIO1_A7)|  1.8V, GPIO |
-|27         | CM_RST_L(GPIO4_A0)|   3.3V, GPIO |
-|28,29      | VCC_RX|   3.3V Power ouput |
-|30,31      | VCC_5V0|   5V Power ouput |
-
-#### MIPI DSI
-0.5mm FPC 连接器 (J23)
-
-|Pin |   MIPI-DSI  |   描述     |
- :--------: | :---------------------: | :--------: | 
-|1,4,7,10,13,16,27,33,34      | GND                |   Power and Signal Ground | 
-|2                            | MIPI_DPHY1_TX_D0N  |  MIPI1 TX Lane0 ouput N | 
-|3                            | MIPI_DPHY1_TX_D0P      |   MIPI1 TX Lane0 ouput P |
-|5                            | MIPI_DPHY1_TX_D1N        |    MIPI1 TX Lane1 ouput N |
-|6                            | MIPI_DPHY1_TX_D1P         |   MIPI1 TX Lane1 ouput P | 
-|8                            | MIPI_DPHY1_TX_CLKN   |   MIPI1 TX Clock ouput N | 
-|9                            | MIPI_DPHY1_TX_CLKP           |    MIPI1 TX Clock ouput P |
-|11                           | MIPI_DPHY1_TX_D2N                |   MIPI1 TX Lane2 ouput N |
-|12                           | MIPI_DPHY1_TX_D2P                |   MIPI1 TX Lane2 ouput P |
-|14                           | MIPI_DPHY1_TX_D3N |   MIPI1 TX Lane3 ouput N | 
-|15                           | MIPI_DPHY1_TX_D3P |   MIPI1 TX Lane3 ouput P | 
-|17                           | LCD_PWM (PWM2_M2/GPIO4_C2) |   1.8V, GPIO/PWM |
-|18,19                        | VCC3V3_LCD |   3.3V Power ouput | 
-|20                           | LCD_RESET (GPIO2_C1) |   1.8V, GPIO |
-|21                           | /NC |   No Connection | 
-|22                           | LCD_BL_EN (GPIO3_A1) |   3.3V, GPIO |
-|23                           | I2C6_SCL_M0 |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on w3 |
-|24                           | I2C6_SDA_M0|   1.8V, I2C Data, pulled up to 1.8V with 2.2K on w3 |
-|25                           | TP_INT (GPIO0_D3) |    1.8V, GPIO |
-|26                           | TP_RST (GPIO0_C6)|   1.8V, GPIO |
-|28,29                        | VCC5V0_LCD |  5V Power ouput |
-|31,32                        | VCC_1V8 |  1.8V Power ouput |
-
-#### Debug UART
-3.3V level signals, 1500000bps
-
-|Pin |Assignment |   Description |
- :--------: | :---------: | :--------: | 
-|1    | UART2_RX_M0 | intput |
-|2    | UART2_TX_M0 | output |
-|3    | GND      | 0V
-
-#### PoE In
-1.25mm 连接器
-
-|Pin |Assignment |   Description |
- :--------: | :---------: | :--------: | 
-|1    | VC1 | TX1 |
-|2    | VC2 | RX1 |
-|3    | VC3 | TX2 |
-|4    | VC4 | RX2 |
-
-#### PoE Out
-2.0mm 连接器
-
-|Pin |Assignment |   Description |
- :--------: | :---------: | :--------: | 
-|1    | VDD_POE | 12V Power ouput |
-|2    | VDD_POE | 12V Power ouput |
-|3    | GND | 地 |
-|4    | GND | 地 |
-
-### 注意
+## 注意
 
 :::tip
 不建议使用LM7开发8K显示：

@@ -6,7 +6,7 @@ sidebar_position: 5
 slug: /armsom-aim7
 ---
 
-# AIM7产品简介
+# AIM7 产品简介
 
 ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。接口完全兼容 Jetson Nano的同时，升级了PCIe接口为PCIe3.0 4-lane和PCIe2.1 1-lan。
 
@@ -14,7 +14,7 @@ ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
-## 关键参数
+### 关键参数
 
 - SOC：瑞芯微 RK3588
 - CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
@@ -36,7 +36,9 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 - 重量：
 - 大小：69.6 mm x 45 mm
 
-## 实物图
+## 硬件信息
+
+### 硬件接口
 
 ![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
 
@@ -44,7 +46,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
 :::
 
-## 硬件规格
+### 硬件规格
 
 ### 产品框图
 ![aim7-product](/img/aim/aim7-product.jpg)
@@ -126,8 +128,6 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 | 大小   |  69.6 mm x 45 mm |69.6 mm x 45 mm  |
 |规格尺寸|260 引脚边缘连接器| 260 引脚边缘连接器| 
 
-
-## 硬件资料
 
 ### 功能接口定义
 
@@ -583,7 +583,7 @@ Table 16. i2s pin descriptions
 |220|	I2S1_DOUT|	I2S Audio Port 1 Data Out	|Output|	CMOS – 1.8V
 |222|	I2S1_DIN |	I2S Audio Port 1 Data In	|Input	|CMOS – 1.8V
 
-### 全部引脚
+### 引脚定义
 
 |ArmSoM-AIM7 function |	Pin number	|Pin number|	ArmSoM-AIM7 function|
 |------------------|-------------------------|-------------------------|-------------------------|
@@ -718,3 +718,17 @@ Table 16. i2s pin descriptions
 |VDD_IN|	257|	258|	VDD_IN|
 |VDD_IN|	259|	260|	VDD_IN  |
 
+
+## 开发资料
+
+### SDK源码
+
+### 官方镜像
+
+### 第三方系统
+
+### 硬件资料
+
+### 注意
+
+## 使用手册
