@@ -60,7 +60,7 @@ const sidebars = {
     },{
       type: 'link',
       label: 'bilibili', // The link label
-      href: 'https://forum.armsom.org', // The external URL
+      href: 'https://space.bilibili.com/101696800', // The external URL
     }
   ],
   "general-tutorial": [
