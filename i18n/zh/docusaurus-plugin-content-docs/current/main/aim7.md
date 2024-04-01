@@ -729,6 +729,8 @@ Table 16. i2s pin descriptions
 
 ### 硬件资料
 
+## 使用手册
+
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
 
@@ -737,5 +739,3 @@ ArmSoM 速卖通官方店:
 ArmSoM 淘宝官方店: 
 
 OEM&ODM,  请联系: sales@armsom.org
-
-## 使用手册

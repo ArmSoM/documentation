@@ -88,12 +88,6 @@ const config = {
             sidebarId: 'main',
             label: 'Main page',
           }, 
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'general-tutorial',
-            label: 'General Tutorial',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
           
           {

@@ -1,15 +1,7 @@
 {
-  "item.label.ArmSoM": {
-    "description": "Navbar item with label About",
-    "message": "官网"
-  },
   "item.label.Main page": {
     "description": "Navbar item with label About",
     "message": "首页"
-  },
-  "item.label.General Tutorial": {
-    "description": "Navbar item with label About",
-    "message": "通用教程"
   },
   "item.label.Blog": {
     "description": "Navbar item with label About",

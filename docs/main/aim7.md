@@ -671,6 +671,8 @@ Table 16. i2s pin descriptions
 
 ### Hardware Resources 
 
+## User Manual
+
 ## Easy to buy sample
 
 ArmSoM online shop: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
@@ -680,5 +682,3 @@ ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805434864544
 ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714794342755](https://item.taobao.com/item.htm?id=714794342755)
 
 OEM&ODM, please contact: sales@armsom.org
-
-## User Manual

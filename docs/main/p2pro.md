@@ -154,15 +154,6 @@ v1.0 is an internal version (fail to disclose now)
 
 
 
-## Easy to buy sample
-ArmSoM online shop: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
- 
-ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805779421715.html](https://www.aliexpress.com/item/3256805779421715.html) 
-
-ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
-
-OEM&ODM, please contact: sales@armsom.org
-
 ## User Manual
 
 The P2pro user manual helps users understand the basic usage and preparation work needed for  P2pro. 
@@ -260,3 +251,13 @@ ArmSoM-P2pro provides a USB 2.0 port.
 ![armbian-logo](/img/armbian-logo.webp)
 
 We are working on adapting armbian systems！Coming soon...
+
+
+## Easy to buy sample
+ArmSoM online shop: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
+ 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805779421715.html](https://www.aliexpress.com/item/3256805779421715.html) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
+
+OEM&ODM, please contact: sales@armsom.org

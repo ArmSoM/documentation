@@ -1,22 +1,18 @@
 {
-    "sidebar.lm.category.lm7": {
-        "description": "The label for category LM Family in sidebar tutorialSidebar",
-        "message": "lm7"
-    },
-    "sidebar.general-tutorial.category.General tutorial.link.generated-index.description": {
-        "message": "ArmSoM 通用教程，适用于 ArmSoM 全部产品"
-    },
-    "sidebar.general-tutorial.category.General tutorial.link.generated-index.title": {
-        "message": "通用教程"
-    },
-    "sidebar.general-tutorial.category.General tutorial": {
+    "sidebar.main.category.General tutorial": {
         "message": "通用教程"
     },
     "sidebar.general-tutorial.category.Start the system": {
         "message": "访问系统"
     },
-    "sidebar.general-tutorial.category.Interface usage": {
+    "sidebar.main.general-tutorial.category.Interface usage": {
         "message": "接口使用"
+    },
+    "sidebar.main.category.Interface usage": {
+        "message": "接口使用"
+    },
+    "sidebar.main.category.Start the system": {
+        "message": "启动系统"
     },
     "sidebar.accessories.category.Accessories": {
         "message": "配件"

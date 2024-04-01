@@ -1,7 +1,7 @@
 ---
 description: ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处理器，USB、以太网、蓝牙、无线连接和语音检测引擎，并具有丰富的音频接口（如MIC/PDM/SPDIF/I2S），使其非常适合物联网和语音应用程序
 keywords: [armsom, armsom-p2pro, maker kit, rockchip, rk3308语音应用]
-sidebar_label: "p2pro"
+sidebar_label: "P2pro"
 sidebar_position: 6
 slug: /armsom-p2pro
 ---
@@ -164,15 +164,6 @@ v1.0 为内部版本暂不公布
 :::
 
 
-## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
- 
-ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256805779421715.html](https://www.aliexpress.com/item/3256805779421715.html) 
-
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
-
-OEM&ODM,  请联系: sales@armsom.org
-
 ## 使用手册
 
 P2pro 使用手册，帮助用户了解P2pro的基本使用和需要的准备工作。 
@@ -254,3 +245,12 @@ $ sudo dhclient eth0
 **USB接口**
 ArmSoM-P2pro 提供一个 USB 2.0 端口。
 
+
+## 样品购买
+ArmSoM 独立站: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256805779421715.html](https://www.aliexpress.com/item/3256805779421715.html) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
+
+OEM&ODM,  请联系: sales@armsom.org

@@ -356,15 +356,6 @@ V1.1
 * WIFI Module: AP6275S change to AP6275P;
 :::
 
-## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
- 
-ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
-
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
-
-OEM&ODM,  请联系: sales@armsom.org
-
 ## 使用手册
 
 Sige7 使用手册，帮助用户了解Sige7的基本使用和需要的准备工作。 当您拿到产品的时候，您需要知道它的型号以及硬件版本，这些信息都可以在板子上的丝印找到。我们会尽可能详细地向您介绍产品的信息。
@@ -662,13 +653,16 @@ ArmSoM-Sige7 分辨率最高分辨率可达 4K@60Hz
 
 ## 产品证书
 
-### CE
+### CE / FC / RoHS
 
-![sige7-ce](/img/sige/sige7-ce.png)
+![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
 
-### FC
-![sige7-fc](/img/sige/sige7-fc.png)
 
-### RoHS
+## 样品购买
+ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
 
-![sige7-rohs](/img/sige/sige7-rohs.png)
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+
+OEM&ODM,  请联系: sales@armsom.org

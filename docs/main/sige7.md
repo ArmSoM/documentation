@@ -357,15 +357,6 @@ V1.1
 * [ArmSoM-Sige7 datasheet](https://drive.google.com/drive/folders/1GHKJTWVRvuEXB0BPwlfFD4GWyQCOWf6D) -  datasheet
 
 
-## Easy to buy sample
-ArmSoM online shop: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
- 
-ArmSoM Aliexpress online shop: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
-
-ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
-
-OEM&ODM, please contact: sales@armsom.org
-
 ## User Manual 
 
 The Sige7 user manual helps users understand the basic usage and preparation work needed for Sige7. 
@@ -618,15 +609,18 @@ The ArmSoM-Sige7 supports up to 4K@60Hz resolution over MIPI DSI
 
 ## Product Certificate
 
-### CE
+### CE / FC / RoHS
 
-![sige7-ce](/img/sige/sige7-ce.png)
+![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
 
-### FC
-![sige7-fc](/img/sige/sige7-fc.png)
 
-### RoHS
+## Easy to buy sample
+ArmSoM online shop: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
 
-![sige7-rohs](/img/sige/sige7-rohs.png)
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+
+OEM&ODM, please contact: sales@armsom.org
 
 
