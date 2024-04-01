@@ -1,9 +1,9 @@
 ---
-sidebar_label: "armsom-build简介"
+sidebar_label: "armsom-build"
 sidebar_position: 6
 ---
 
-# 一. armsom-build简介
+# armsom-build简介
 armsom-build是armsom团队推出的一套开源bsp，可以构建出armsom系列产品的镜像。目前只支持构建Ubuntu22.04镜像，后续将增加对Debian镜像的构建与支持。
 目录包含有 build、config、docker、overlay、packages、scripts、等目录
 ## 支持的开发板
