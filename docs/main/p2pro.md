@@ -16,7 +16,7 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 
 ![ArmSoM-P2pro](/img/link/p2pro.jpg)
 
-## Key Parameters
+### Key Parameters
 
 - SoC: Rockchip RK3308
 - CPU: Quad-core ARM Cortex-A35@ 1.2GHz, 28nm
@@ -60,6 +60,14 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 |        Weight         |                             30g                              |
 | Operating Temperature |                          0°C ~ 70°C                          |
 
+## Easy to buy sample
+ArmSoM online shop: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
+ 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805779421715.html](https://www.aliexpress.com/item/3256805779421715.html) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
+
+OEM&ODM, please contact: sales@armsom.org
 
 ## User Manual
 

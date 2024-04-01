@@ -320,3 +320,12 @@ Here are some tips for your design reference:
 3. The HDMI connector is required to support HDMI 2.1 protocol ,8K compatible.
 
 :::
+
+## Easy to buy sample
+ArmSoM online shop: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)
+ 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805435700769.html](https://www.aliexpress.com/item/3256805435700769.html) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714003739668](https://item.taobao.com/item.htm?id=714003739668)
+
+OEM&ODM, please contact: sales@armsom.org

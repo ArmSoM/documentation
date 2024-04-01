@@ -95,3 +95,8 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 **debain bullseye**
 
 固件位置：3. Linux镜像/debian/ArmSoM-KVM
+
+
+## 样品购买
+
+OEM&ODM,  请联系: sales@armsom.org

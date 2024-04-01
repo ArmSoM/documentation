@@ -67,10 +67,10 @@ Video support HDMI,VGA,DP and DVI,support 4 expansion boards
 |Weight |600g|
 |Operating temperature	| 0℃ ~ 70℃|
 
-### 接口拓扑
+### Interface topology
 ![armsom-kvm_5](/img/link/armsom-kvm_5.png)
 
-### ArmSoM-KVM产品
+### ArmSoM-KVM Product
 
 ArmSoM work closely with ikasinfo to provide total solutions to customers. IKASinfo is a Chongqing-based national high-tech enterprise committed to driving the manufacturing industry towards Industry 4.0. With branches in major cities in China and abroad, IKAS has developed cutting-edge technologies, including intelligent decision-making algorithms based on "ROPN + AI" technology, which have been empowering the semiconductor industry and gradually adopted in other sectors.
 
@@ -101,3 +101,8 @@ Network disk address: [Google Drive link](https://drive.google.com/drive/folders
 **debain bullseye**  
 
 Firmware location: 3. Linux image/debian/ArmSoM-P2pro  
+
+
+## Easy to buy sample
+
+OEM&ODM,  please contact: sales@armsom.org

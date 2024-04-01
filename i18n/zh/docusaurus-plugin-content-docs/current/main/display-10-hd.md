@@ -24,6 +24,15 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 - 观看方向：全部
 - 功耗：待定 mW
 
+## 样品购买
+ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256806439494827.html](https://www.aliexpress.com/item/3256806439494827.html) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=770587380434](https://item.taobao.com/item.htm?id=770587380434)
+
+OEM&ODM,  请联系: sales@armsom.org
+
 ## 屏幕引脚
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |

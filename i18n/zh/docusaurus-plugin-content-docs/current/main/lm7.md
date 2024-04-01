@@ -271,7 +271,7 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 
 [ArmSoM-W3_1V1 位号图](https://pan.baidu.com/s/1zZ59b95ROjsHF3TlcG-cNA?pwd=arms) -  位号图下载
 
-## 注意
+### 注意
 
 :::tip
 不建议使用LM7开发8K显示：
@@ -284,3 +284,12 @@ HDMI输出8K对layout走线要求很高，核心板+底板的设计方式基本�
 3. HDMI的连接器也要选支持2.1协议的，需要使用支持8K的连接器。
 
 :::
+
+## 样品购买
+ArmSoM 独立站: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256805435700769.html](https://www.aliexpress.com/item/3256805435700769.html) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=714003739668](https://item.taobao.com/item.htm?id=714003739668)
+
+OEM&ODM,  请联系: sales@armsom.org

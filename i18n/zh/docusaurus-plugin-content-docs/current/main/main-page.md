@@ -35,6 +35,7 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 |---------|--------------|
 |[display-10-hd](./armsom-display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
 
+
 ## 文档中心
 
 此文档中心是由ArmSoM开发团队和社区共同维护的用于支持ArmSoM系列产品及其周边产品的教程和指南。
@@ -49,8 +50,11 @@ Discord社群: [ArmSoM Discord](https://discord.gg/THfTEatpfK) - 经验丰富的
 
 官方github账号: [ArmSoM Github](https://github.com/armsom)
 
+## 样品购买
+[ArmSoM 独立站](https://www.armsom.org/category/all-products) + [ArmSoM 速卖通官方店](https://www.aliexpress.com/store/1102800175) +  [ArmSoM 淘宝官方店](https://shop518100695.taobao.com/)
 
 ## 联系我们
+
 官方微信号: armsom-jackson
 
 官方邮箱: sales@armsom.org

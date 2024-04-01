@@ -356,6 +356,14 @@ V1.1
 * WIFI Module: AP6275S change to AP6275P;
 :::
 
+## 样品购买
+ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+
+OEM&ODM,  请联系: sales@armsom.org
 
 ## 使用手册
 
@@ -652,5 +660,15 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 ArmSoM-Sige7 分辨率最高分辨率可达 4K@60Hz
 
 
+## 产品证书
 
+### CE
 
+![sige7-ce](/img/sige/sige7-ce.png)
+
+### FC
+![sige7-fc](/img/sige/sige7-fc.png)
+
+### RoHS
+
+![sige7-rohs](/img/sige/sige7-rohs.png)

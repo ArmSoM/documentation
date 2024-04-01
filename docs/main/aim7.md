@@ -660,3 +660,25 @@ Table 16. i2s pin descriptions
 |VDD_IN|	257|	258|	VDD_IN|
 |VDD_IN|	259|	260|	VDD_IN  |
 
+
+## Resources
+
+### Source Code
+
+### Official Images  
+
+### Third Party Systems  
+
+### Hardware Resources 
+
+## Easy to buy sample
+
+ArmSoM online shop: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
+ 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805434864544.html](https://www.aliexpress.com/item/3256805434864544.html) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714794342755](https://item.taobao.com/item.htm?id=714794342755)
+
+OEM&ODM, please contact: sales@armsom.org
+
+## User Manual
