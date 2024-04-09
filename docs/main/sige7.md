@@ -292,13 +292,15 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 
 ### Source Code
 
-ArmSoM github source code :[ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
+ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
 
-ArmSoM-Sige7 kernel:[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
+ArmSoM-Sige7 kernel: [https://github.com/ArmSoM/ubuntu-linux-rockchip](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
-ArmSoM-Sige7 uboot:[ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)
+ArmSoM-Sige7 uboot: [https://github.com/ArmSoM/u-boot](https://github.com/ArmSoM/u-boot)
 
-openwrt(istoreos)[istoreos](https://github.com/istoreos/istoreos)
+openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
+
+RKNN-LLM: [RKNN-LLM](../general-tutorial/rknn-llm)
 
 
 ### Official Image

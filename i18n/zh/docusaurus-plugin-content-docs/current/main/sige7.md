@@ -288,13 +288,15 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 ### SDK源码
 
-[ArmSoM-Sige7 BSP](https://github.com/ArmSoM/armsom-build)
+ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
 
-[ArmSoM-Sige7 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
+ArmSoM-Sige7 kernel: [https://github.com/ArmSoM/ubuntu-linux-rockchip](https://github.com/ArmSoM/ubuntu-linux-rockchip)
 
-[ArmSoM-Sige7 uboot](https://github.com/ArmSoM/u-boot)
+ArmSoM-Sige7 uboot: [https://github.com/ArmSoM/u-boot](https://github.com/ArmSoM/u-boot)
 
-[istoreos](https://github.com/istoreos/istoreos)
+openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
+
+RKNN-LLM: [RKNN-LLM](../general-tutorial/rknn-llm)
 
 ### 官方镜像
 
