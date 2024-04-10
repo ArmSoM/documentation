@@ -177,6 +177,15 @@ d. Burn the newly compiled kernel into the device.
 
 ## Usage Environment
 
-Development board: ArmSoM-Sige7
+Development board: [ArmSoM-Sige7](../armsom-sige7)
 
 Code repository: [rknn-llm](https://github.com/ArmSoM/rknn-llm)
+
+## Easy to buy sample
+ArmSoM online shop: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+
+OEM&ODM, please contact: sales@armsom.org

@@ -197,6 +197,15 @@ d. 将新编译的内核烧录到设备中。
 
 ## 使用环境
 
-开发板：ArmSoM-Sige7
+开发板：[ArmSoM-Sige7](../armsom-sige7)
 
 代码仓库：[rknn-llm](https://github.com/ArmSoM/rknn-llm)
+
+## 样品购买
+ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+
+OEM&ODM,  请联系: sales@armsom.org
