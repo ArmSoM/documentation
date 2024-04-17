@@ -121,11 +121,11 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Audio</th>
-            <th><li>1x HDMI audio out</li><li>1x HP audio out</li><li>1x Type-C 3.1 (DP1.4) audio out</li></th>
+            <th><li>1x HDMI audio out</li><li>1x HP audio out</li><li>1x USB Type-C 3.0 (DP1.4) audio out</li></th>
         </tr>
         <tr>
             <th>USB</th>
-            <th><li>1x USB 3.1 (USB 3.1 Gen 1), equivalent to USB 3.2 Gen 1/USB 3.0, up to 5Gbps</li><li>1x USB Type-C 3.2（DP1.4/OTG）</li><li>1x USB 2.0 High（480Mbps）/Full（12Mbps）/Low-Speed（1.5Mbps） modes </li></th>
+            <th><li>1x USB 3.0 (USB 3.1 Gen 1), up to 5Gbps</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li><li>1x USB 2.0 High（480Mbps）/Full（12Mbps）/Low-Speed（1.5Mbps） modes </li></th>
         </tr>
         <tr>
             <th>40-pin</th>
@@ -492,7 +492,7 @@ armsom@armsom-sige7:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon8/pwm
 
 #### Type-C  
 
-The Sige7 features a full-featured USB Type‐C 3.1 port which supports up to 4Kp60 DP display.
+The Sige7 features a full-featured USB Type‐C 3.0 port which supports up to 8K@30fps DP display.
 
 #### 40Pin  
 

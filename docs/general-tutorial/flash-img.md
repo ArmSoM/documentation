@@ -71,9 +71,9 @@ This method is suitable for burning the system to the SD card, and is available 
 
 Burning the image to eMMC requires the use of RKDevTool burning tool and RK Driver Assistant (DriverAssitant)
 
-Click to enter the link: [Baidu network disk link](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1xobYSZsGutYoqUHfN6SUJeQGqvtlfkmF)
 
-![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
+![google-flash-tool](/img/general-tutorial/google-flash-tool.png)
 
 ##### 2.2.2. Install DriverAssitant
 
@@ -113,7 +113,7 @@ Start burning the system
 
 1. Select the Download Image item
 2. Confirm that the board has entered Maskrom mode
-3. Click on a blank cell to select the MiniLoaderAll and Image files to be used. The corresponding MiniLoaderAll and Image are stored in Baidu Cloud Disk.
+3. Click on a blank cell to select the MiniLoaderAll and Image files to be used. The corresponding MiniLoaderAll and Image are stored in google drive.
 4. Select the target medium EMMC in the Storage option, select Force writing by address, and click Execute.
 5. Wait for the writing to complete, and then the device will automatically restart, as shown on the right side of the picture above Download image OK
 
@@ -124,9 +124,9 @@ Start burning the system
 
 Burning the image to eMMC requires the use of the burning tool SDDiskTool_version number.exe
 
-Click to enter the link: [Baidu network disk link](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1xobYSZsGutYoqUHfN6SUJeQGqvtlfkmF)
 
-![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
+![google-SDDiskTool](/img/general-tutorial/google-sd-disk-tool.png)
 
 After decompressing the compressed package, you can use it without installation. Double-click SD_Firmware_Tool.exe to enter the software interface.
 
@@ -143,7 +143,7 @@ Wait patiently for the SD card to be burned completely. When the image size is l
 
 :::tip Tips
 1. When you click Create, there will be a certain probability that an error message will be reported saying that it cannot be burned. You can close the error window and start creating again. If it still doesn't work, try formatting the SD card.
-2. The firmware downloaded from Baidu Netdisk needs to be decompressed before loading, and Windows PC needs to run the tool with administrator rights before it can be executed.
+2. The firmware downloaded from google drive needs to be decompressed before loading, and Windows PC needs to run the tool with administrator rights before it can be executed.
 :::
 
 ### 3.2. USB cable burning to eMMC

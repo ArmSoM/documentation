@@ -17,21 +17,21 @@ Our commitment is to equip the open-source community with superb hardware, robus
 
 ### Single Board Computer: 
 
-|ArmSoM Single Board Computer(SBC)|	Direction	|
+|ArmSoM Single Board Computer(SBC)|	description	|
 |---------|--------------|
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7.jpg)	|
 |[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-w3](/img/lm/w3.jpg)	|
 
 ### Compute Module and maker kit:
 
-|ArmSoM Compute Module and maker kit |	Direction	|
+|ArmSoM Compute Module and maker kit |	description	|
 |---------|--------------|
 |[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]	| ![ArmSoM-AIM7](/img/aim/aim7.png)	|
 |[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]	| ![ArmSoM-lm7](/img/lm/lm7.png)	|
 
 ### Accessories
 
-|ArmSoM Accessories|	Direction	|
+|ArmSoM Accessories|	description	|
 |---------|--------------|
 |[display-10-hd](./armsom-display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
 

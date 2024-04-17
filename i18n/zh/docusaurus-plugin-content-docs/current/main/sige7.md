@@ -111,7 +111,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>视频输出</th>
-            <th><li>1x HDMI OUT2.1，支持 8K@60fps</li><li>1x MIPI DSI分辨率可达 4K@60fps</li><li>1x DP1.4分辨率可达 8K@30fps</li></th>
+            <th><li>1x HDMI OUT2.1，支持 8K@60fps</li><li>1x MIPI DSI 分辨率最高可达 4K@60fps</li><li>1x DP1.4 分辨率最高可达 8K@30fps</li></th>
         </tr>
         <tr>
             <th>视频输入</th>
@@ -119,11 +119,11 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>音频</th>
-            <th><li>1x HDMI音频输出</li><li>1x HP-OUT 音频输出</li><li>1x Type-C 3.1 (DP1.4)音频输出</li></th>
+            <th><li>1x HDMI音频输出</li><li>1x HP-OUT 音频输出</li><li>1x USB Type-C 3.0 (DP1.4)音频输出</li></th>
         </tr>
         <tr>
             <th>USB接口</th>
-            <th><li>1x USB3.1（USB3.1 Gen1），支持USB3.1 Gen1，相当于USB3.2 Gen1和USB3.0，高达5Gbps数据速率</li><li>1x USB Type-C 3.2（DP1.4/OTG）</li><li>1x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
+            <th><li>1x USB3.0（支持USB3.1 Gen1），高达5Gbps数据速率</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li><li>1x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
         </tr>
         <tr>
             <th>40-pin</th>
@@ -536,7 +536,7 @@ armsom@armsom-sige7:/# cat /sys/class/hwmon/hwmon9/pwm1
 
 #### Type-C
 
-Sige7 配备全功能 USB Type‑C™ 3.1 端口，支持高达 4Kp60 的 DP 显示
+Sige7 配备全功能 USB Type‑C™ 3.0 端口，支持高达 8K@30fps 的 DP 显示
 
 #### 40Pin
 

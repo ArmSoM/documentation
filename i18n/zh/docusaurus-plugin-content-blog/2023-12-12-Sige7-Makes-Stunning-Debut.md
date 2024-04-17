@@ -107,11 +107,11 @@ Sige7 - 连接创新，无限可能
         </tr>
         <tr>
             <th>音频</th>
-            <th><li>1x HDMI音频输出</li><li>1x HP-OUT 音频输出</li><li>1x Type-C 3.1 (DP1.4)音频输出</li></th>
+            <th><li>1x HDMI音频输出</li><li>1x HP-OUT 音频输出</li><li>1x Type-C 3.0 (DP1.4)音频输出</li></th>
         </tr>
         <tr>
             <th>USB接口</th>
-            <th><li>2x USB3.1（USB3.1 Gen1），支持USB3.1 Gen1，相当于USB3.2 Gen1和USB3.0，高达5Gbps数据速率</li><li>1x USB Type-C 3.2（DP1.4/OTG）</li></th>
+            <th><li>2x USB3.0（USB3.1 Gen1），高达5Gbps数据速率</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li></th>
         </tr>
         <tr>
             <th>40-pin</th>

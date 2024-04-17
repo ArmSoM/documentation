@@ -17,23 +17,27 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 
 ### 单板计算机: 
 
-|ArmSoM 单板计算机(SBC)|	Direction	|
+|ArmSoM 单板计算机(SBC)|	简述	|
 |---------|--------------|
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7.jpg)	|
 |[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-w3](/img/lm/w3.jpg)	|
 
 ### 核心板 / 计算模组:
 
-|ArmSoM Compute Module and maker kit |	Direction	|
+|ArmSoM Compute Module and maker kit |	简述	|
 |---------|--------------|
 |[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]	| ![ArmSoM-AIM7](/img/aim/aim7.png)	|
 |[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]	| ![ArmSoM-lm7](/img/lm/lm7.png)	|
 
 ### 配件
 
-|ArmSoM 配件|	Direction	|
+|ArmSoM 配件|	简述	|
 |---------|--------------|
 |[display-10-hd](./armsom-display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
+
+## 通用文档
+
+[通用文档里面包含 armsom 的系列教程/使用文档](../general-tutorial/flash-img) 
 
 
 ## 文档中心
