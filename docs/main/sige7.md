@@ -57,6 +57,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 ### Hardware Interface
 
 ![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.webp)
+![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
 :::tip
 There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port is for power input.
@@ -133,7 +134,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Other</th>
-            <th><li>1x 5V fan interface</li><li>1x battery connector for low power RTC chip HYM8563TS </li><li>2x LEDs - blue LED blinks on system start, red LED user controllable</li></th>
+            <th><li>1x 5V fan interface</li><li>1x battery connector for low power RTC chip HYM8563TS </li><li>2x LEDs - green LED blinks on system start, red LED user controllable</li></th>
         </tr>
         <tr>
             <th>Power Input</th>
@@ -315,19 +316,19 @@ Network disk address: [Google Drive link](https://drive.google.com/drive/folders
 
 **debain bullseye**  
 
-Firmware location: 3. Linux image/debian/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
+Firmware location: 3. Linux image/debian/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1bHQG3pr3tHi_2uybN6RvQA1o4lnUpeGN) 
 
 ### Third Party System  
 
 **Ubuntu**  
 
-Image location: 3. Linux Images/ubuntu/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
+Image location: 3. Linux Images/ubuntu/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1EZTUdc2kWo-syYDAXCwyIh00EcwGAT21) 
 
 [joshua-ubuntu-rockchip-download](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
 
 **istoreos**  
 
-Firmware location: 3. Linux image/openwrt/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
+Firmware location: 3. Linux image/openwrt/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1ZzaR2m36Nos1TCaKmTBy6ALmIpQLsaBZ)
 
 **armbian**
 
@@ -338,6 +339,10 @@ Firmware location: 3. Linux image/armbian/ArmSoM-Sige7 - [Google Drive link](htt
 jammy_edge_6.8.2_gnome_desktop: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.306/Armbian_community_24.5.0-trunk.306_Armsom-sige7_jammy_edge_6.8.2_gnome_desktop.img.xz)
 
 bookworm_edge_6.8.2_minimal: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.306/Armbian_community_24.5.0-trunk.306_Armsom-sige7_bookworm_edge_6.8.2_minimal.img.xz)
+
+jammy_6.1.43_gnome: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.433/Armbian_community_24.5.0-trunk.433_Armsom-sige7_jammy_vendor_6.1.43_gnome-amazingfated_desktop.img.xz)
+
+bookworm_6.1.43_minimal: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.433/Armbian_community_24.5.0-trunk.433_Armsom-sige7_bookworm_vendor_6.1.43_minimal.img.xz)
 
 ### Hardware Resources 
 

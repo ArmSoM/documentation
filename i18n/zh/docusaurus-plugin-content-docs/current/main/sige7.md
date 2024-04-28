@@ -53,6 +53,7 @@ Rockchip RK3588 design [ArmSoM-W3](./armsom-w3) LGA 核心板开发套件;
 ### 硬件接口
 
 ![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.webp)
+![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
 :::tip
 Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。
@@ -131,7 +132,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>其他</th>
-            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片HYM8563TS的供电</li><li>2x LED灯，系统正常时蓝色灯开始闪烁，红色灯由用户控制</li></th>
+            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片HYM8563TS的供电</li><li>2x LED灯，系统正常时绿色灯开始闪烁，红色灯由用户控制</li></th>
         </tr>
         <tr>
             <th>电源</th>
