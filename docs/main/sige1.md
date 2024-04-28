@@ -68,7 +68,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
         </tr>
          <tr>
             <th>VPU</th>
-            <th><li>video decoder：supports H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps</li><li>video encoder：supports H.264 and H.265 up to 4K@60fps, high-qualityJPEG encoder/decoder supports up to 4K@60fps..265和H.264编码。</li></th>
+            <th><li>video decoder：supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. It supports H.265, H.264, AVS2, etc. video standards.</li><li>video encoder：supports 60fps capture of 1080p high-definition video. It supports H.265 and H.264 encoding.</li></th>
         </tr>
         <tr >
             <th>RAM</th>
