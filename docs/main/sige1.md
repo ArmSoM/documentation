@@ -192,17 +192,17 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
-|2    | GND | 地 |
-|3    | PWM | PWM控制 |
+|2    | GND | GND |
+|3    | PWM | PWM control |
 
 #### EARPHONE
 0.8mm connector(CON3101)
 
 |Pin        | Assignment  | Description|
  :--------: | :---------: | :--------: | 
-|1          | AOR         | 右声道      |
-|2          | AOL         | 左声道      |
-|3          | GND         | 地          |
+|1          | AOR         | right channel      |
+|2          | AOL         | left channel      |
+|3          | GND         | GND          |
 
 ## Resources
 
