@@ -443,16 +443,15 @@ armsom@armsom-sige1:/# date
 
 ## Product Certificates
 
-### CE / FC / RoHS
+### CE / FCC / RoHS
 
-## Sample Purchase
+## Purchase Samples
+ArmSoM Official Website: [Link]
 
-ArmSoM Official Website:
- 
-ArmSoM  Official Store on AliExpress:
+ArmSoM Official AliExpress Store: [Link]
 
-ArmSoM Official Store on Taobao:
+ArmSoM Official Taobao Store: [Link]
 
-OEM&ODM,  请联系: sales@armsom.org
+For OEM & ODM, please contact: sales@armsom.org
 
 
