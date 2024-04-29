@@ -44,7 +44,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 - RAM: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
 - Storage: 64GB/128GB eMMC, default 64GB eMMC
 - Operating Voltage: Wide input voltage, 5V to 20V (±5% tolerance)
-- Operating temperature: 0°C ~ 70°C  
+- Operating temperature: 0°C ~ 80°C  
 - OS: 
   - Official: Android 12.0, Debian 11, Buildroot
   - 3rd party: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS

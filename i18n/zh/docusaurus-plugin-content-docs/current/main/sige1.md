@@ -27,7 +27,7 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
 - RAM：4GB 32bit LPDDR4x，默认4GB，RK3528 最大支持4GB
 - Flash：32GB eMMC，默认eMMC 32GB
 - 工作电压：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
-- 工作温度：0℃ ~ 70℃
+- 工作温度：0℃ ~ 80℃
 - 操作系统：
   - Rockchip官方支持：Android 9.0_box，Debian11，Buildroot
   - 第三方支持：Armbian
@@ -96,7 +96,8 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
         <tr>
             <th>USB接口</th>
-            <th><li>2x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
+            <th><li>2x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li>
+            <li>1x USB Type-C 2.0，支持OTG，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
         </tr>
         <tr>
             <th>40-pin</th>
@@ -279,7 +280,7 @@ Sige1 使用手册，帮助用户了解Sige1的基本使用和需要的准备工
 [系统镜像烧录](../general-tutorial/flash-img)
 ### 接口设置
 
-如果您是首次使用 ArmSoM-Sige1，请先熟悉下 [外设接口](#实物图)，以便于您更好的理解后续的内容。
+如果您是首次使用 ArmSoM-Sige1，请先熟悉下 [外设接口](#硬件接口)，以便于您更好的理解后续的内容。
 
 #### 调试串口
 

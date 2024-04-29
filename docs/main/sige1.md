@@ -27,7 +27,7 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
 - RAM: 4GB 32-bit LPDDR4x, default 4GB (RK3528 supports maximum 4GB)
 - Flash: 32GB eMMC, default eMMC 32GB
 - Operating Voltage: Wide range input voltage, from 4.5V to 18V (voltage error ±5%)
-- Operating Temperature: 0°C to 70°C
+- Operating Temperature: 0°C to 80°C
 - Operating System:
   - Officially Supported by Rockchip: Android 9.0_box, Debian11, Buildroot
   - Third-party Support: Armbian
@@ -67,7 +67,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
             <th><li>ARM Mali-450 GPU</li><li>Supports OpenGL ES 1.1/2.0 and OpenVG.</li></th>
         </tr>
          <tr>
-            <th>VPU</th>
+            <th>VPU/Codec</th>
             <th><li>video decoder：supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. It supports H.265, H.264, AVS2, etc. video standards.</li><li>video encoder：supports 60fps capture of 1080p high-definition video. It supports H.265 and H.264 encoding.</li></th>
         </tr>
         <tr >
@@ -103,6 +103,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
             <th>USB Ports</th>
             <th>
                 <li>2x USB2.0, supports High-Speed (480Mbps), Full-Speed (12Mbps), and Low-Speed (1.5Mbps) modes</li>
+                <li>1x USB Type-C 2.0, supports OTG, supports high-speed (480Mbps), full-speed (12Mbps) and low-speed (1.5Mbps) modes</li>
             </th>
         </tr>
         <tr>
