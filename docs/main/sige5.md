@@ -566,6 +566,7 @@ Fri 3rd Nov 10:36:01 UTC 2023
 ArmSoM-sige5 provides an M.2 connector:
 
 - The back of the product features an M.2 M Key connector with a PCIe 2.0 interface supporting 1 channel. The board includes a standard M.2 2280 mounting hole, allowing for the deployment of an M.2 2280 NVMe SSD.
+
   **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
 
 ```

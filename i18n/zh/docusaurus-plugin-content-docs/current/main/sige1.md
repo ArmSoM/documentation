@@ -416,7 +416,7 @@ armsom@armsom-sige1:/# echo activity > /sys/class/leds/red\:status/trigger
 
 #### RTC
 
-- Sige7配备了一颗RTC IC **hym8563**。
+- Sige1配备了一颗RTC IC **hym8563**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
 - 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc hym8563 设备已创建
 

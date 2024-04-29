@@ -8,7 +8,7 @@ slug: /armsom-sige1
 
 # Product Introduction:Sige1
 
-Let's get to know Sige7 in 5 minutes.
+Let's get to know Sige1 in 5 minutes.
 
 ## 简介
 
@@ -409,7 +409,7 @@ armsom@armsom-sige1:/# echo activity > /sys/class/leds/red\:status/trigger
 
 #### RTC
 
-- Sige7 is equipped with an RTC IC hym8563.
+- Sige1 is equipped with an RTC IC hym8563.
 - First, use a 2-pin header interface to insert the RTC battery for RTC IC power supply.
 - Please note that we should keep the RTC battery in the RTC connector and confirm that the rtc hym8563 device has been created.
 
