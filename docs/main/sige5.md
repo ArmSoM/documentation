@@ -159,6 +159,10 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
     </tbody>
 </table>
 
+### RK3567 Block Diagram
+
+![RK3576](/img/sige/rk3576.png)
+
 ### Hardware Pin Definitions
 
 #### 40-pin header
