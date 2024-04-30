@@ -281,13 +281,13 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
 
 #### Fan
-0.8mm connector
+0.8mm connector(CON3102)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
-|2    | GND | 地 |
-|3    | PWM | PWM控制 |
+|2    | GND | GND |
+|3    | PWM | PWM control |
 
 
 ## Resources
