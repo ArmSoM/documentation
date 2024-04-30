@@ -492,7 +492,7 @@ sige5 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
 ```
 // 查看当前转速 
-armsom@armsom-sige5:/# cat /sys/class/hwmon/hwmon9/pwm1
+armsom@armsom-sige5:/# cat /sys/class/hwmon/hwmon6/pwm1
 ```
 
 #### Type-C
@@ -523,9 +523,9 @@ armsom@armsom-sige5:/# echo activity > /sys/class/leds/red/trigger
 
 #### RTC
 
-- sige5配备了一颗RTC IC **hym8563**。
+- sige5配备了一颗RTC IC **LK8563S**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
-- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc hym8563 设备已创建
+- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc LK8563S 设备已创建
 
 ```bash
 armsom@armsom-sige5:/#  dmesg | grep rtc

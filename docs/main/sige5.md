@@ -134,7 +134,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Other</th>
-            <th><li>1x 5V fan interface</li><li>1x battery connector for low power RTC chip HYM8563TS </li><li>2x LEDs - green LED blinks on system start, red LED user controllable</li></th>
+            <th><li>1x 5V fan interface</li><li>1x battery connector for low power RTC chip LK8563S </li><li>2x LEDs - green LED blinks on system start, red LED user controllable</li></th>
         </tr>
         <tr>
             <th>Power Input</th>
@@ -498,7 +498,7 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
 The Sige5 features a 5V fan using a 0.8mm connector  
 
 ```  
-armsom@armsom-sige5:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon8/pwm1  
+armsom@armsom-sige5:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon6/pwm1  
 ```
 
 #### Type-C  
@@ -529,9 +529,9 @@ armsom@armsom-sige5:/# echo activity > /sys/class/leds/red/trigger
 
 #### RTC  
 
-- The Sige5 features an **hym8563** RTC chip.  
+- The Sige5 features an **LK8563S** RTC chip.  
 - First, insert the RTC battery using the 2-pin header to supply power to the RTC IC.
-- Note that we should keep the RTC battery in the RTC connector and confirm the rtc hym8563 device which has been created. 
+- Note that we should keep the RTC battery in the RTC connector and confirm the rtc LK8563S device which has been created. 
 
 ```bash 
 armsom@armsom-sige5:/# dmesg | grep rtc  
@@ -561,7 +561,7 @@ armsom@armsom-sige5:/# date
 Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
-#### M.2接口
+#### M.2
 
 ArmSoM-sige5 provides an M.2 connector:
 

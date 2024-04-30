@@ -132,7 +132,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>其他</th>
-            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片HYM8563TS的供电</li><li>2x LED灯，系统正常时绿色灯开始闪烁，红色灯由用户控制</li></th>
+            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片 LK8563S 的供电</li><li>2x LED灯，系统正常时绿色灯开始闪烁，红色灯由用户控制</li></th>
         </tr>
         <tr>
             <th>电源</th>
@@ -563,9 +563,9 @@ armsom@armsom-sige7:/# echo activity > /sys/class/leds/red/trigger
 
 #### RTC
 
-- Sige7配备了一颗RTC IC **hym8563**。
+- Sige7配备了一颗RTC IC **LK8563S**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
-- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc hym8563 设备已创建
+- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc LK8563S 设备已创建
 
 ```bash
 armsom@armsom-sige7:/#  dmesg | grep rtc
