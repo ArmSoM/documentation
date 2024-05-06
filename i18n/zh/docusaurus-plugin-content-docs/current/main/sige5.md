@@ -104,7 +104,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>视频输入</th>
-            <th><li>2x 2Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
+            <th><li>2x 4Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
         </tr>
         <tr>
             <th>音频</th>
