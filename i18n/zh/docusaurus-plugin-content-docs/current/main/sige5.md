@@ -41,6 +41,8 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 ### 硬件接口
 
 ![ArmSoM-Sige5 front & back](/img/sige/sige5-layout.jpg)
+![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
+
 
 :::tip
 Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。

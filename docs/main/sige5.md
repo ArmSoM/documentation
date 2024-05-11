@@ -42,6 +42,8 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 ### Hardware Interface
 
 ![ArmSoM-Sige5 front & back](/img/sige/sige5-layout.jpg)
+![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
+
 
 :::tip
 There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port is for power input.
