@@ -29,6 +29,10 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - 重量：
 - 大小：52.5mm × 65mm
 
+### rk3308b-s 框图
+
+![rk3308b-s](/img/sige/rk3308b-s.png)
+
 ## 硬件信息
 
 ### 硬件接口
