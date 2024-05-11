@@ -200,7 +200,7 @@ Before starting to use ArmSoM-P2pro, please prepare the following items
 
 ### Interface Setup 
 
-If this is your first time using the ArmSoM-P2pro, please familiarize yourself with the [Peripheral Interfaces](#Real-Pictures) first to better understand the following.
+If this is your first time using the ArmSoM-P2pro, please familiarize yourself with the [Peripheral Interfaces](#Hardware Interface) first to better understand the following.
 
 #### 100M Ethernet  
 

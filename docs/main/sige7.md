@@ -414,7 +414,19 @@ Before starting to use the ArmSoM-Sige7, please prepare the following items:
 
 ### Interface Setup 
 
-If this is your first time using the ArmSoM-Sige7, please familiarize yourself with the [Peripheral Interfaces](#Real-Pictures) to better understand the content below.
+If this is your first time using the ArmSoM-Sige7, please familiarize yourself with the [Peripheral Interfaces](#Hardware Interface) to better understand the content below.
+
+### Debug Serial Port
+
+Connect the USB to TTL serial cable as follows:
+
+![armsom-sige5-debug](/img/sige/armsom-sige7-debug.png)
+
+| sige5          | Connect | Serial Module |
+| -------------- | ------- | ------------ |
+| **GND** (pin 6)| <--->   | GND          |
+| **TX** (pin 8) | <--->   | RX           |
+| **RX** (pin 10)| <--->   | TX           |
 
 #### 2.5G Ethernet
 
