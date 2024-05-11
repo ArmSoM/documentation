@@ -157,6 +157,10 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     </tbody>
 </table>
 
+### RK3588框图
+
+![RK3588](/img/sige/rk3588.png)
+
 ### 引脚定义
 
 #### 40-pin 座子

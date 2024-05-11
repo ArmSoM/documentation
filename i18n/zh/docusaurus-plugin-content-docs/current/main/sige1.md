@@ -130,6 +130,10 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
     </tbody>
 </table>
 
+### RK3528框图
+
+![RK3528](/img/sige/rk3528.png)
+
 ### 引脚定义
 
 #### 40-pin 座子

@@ -156,6 +156,10 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
     </tbody>
 </table>
 
+### RK3528 Block Diagram
+
+![RK3528](/img/sige/rk3528.png)
+
 ### Hardware Pin Definitions
 
 #### 40-pin header
