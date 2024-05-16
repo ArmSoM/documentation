@@ -1,0 +1,182 @@
+---
+sidebar_label: "RKNN SDK Quick Start Guide"
+sidebar_position: 7
+---
+
+# RKNN SDK Quick Start Guide
+
+- Development Boards: ArmSoM-W3, ArmSoM-Sige7, ArmSoM-Sige5, ArmSoM-AIM7
+
+- OS: Debian11/12
+
+- Purpose: This article introduces how to use RK's NPU SDK.
+
+As a high-performance 8nm AIOT platform by Rockchip, the RK3576/RK3588 NPU boasts powerful capabilities, with a design capable of achieving efficient neural network inference calculations of up to 6TOPS. This makes RK3576/RK3588 excel in various artificial intelligence fields such as image recognition, speech recognition, and natural language processing.
+
+Moreover, the NPU of RK3576/RK3588 supports various learning frameworks, including TensorFlow, PyTorch, Caffe, MXNet, and others popular in artificial intelligence development. This provides developers with rich tools and libraries, enabling them to easily conduct model training and inference, effectively addressing various big data computation scenarios.
+
+## Typical Applications of RK3576/RK3588 NPU
+
+Computer Vision: The NPU can be used for tasks such as image recognition, object detection, and face recognition. It finds extensive applications in fields like security monitoring, autonomous driving, and medical image analysis.
+
+Natural Language Processing (NLP): The NPU accelerates tasks like text classification, sentiment analysis, and machine translation, making processing large-scale text data more efficient.
+
+Speech Recognition and Processing: In speech recognition, speech synthesis, and related tasks, the NPU enhances processing speed and accuracy, applied in intelligent voice assistants, speech interaction systems, and more.
+
+Smart Home and IoT: The NPU's low power consumption makes it suitable for IoT applications like smart home devices, intelligent surveillance cameras, and wearable devices, enabling device intelligence and automation.
+
+Healthcare: In medical image analysis, disease diagnosis, genomics, and other fields, the NPU speeds up the processing and analysis of large-scale data, assisting healthcare professionals in more accurate disease diagnosis and treatment plan formulation.
+
+Intelligent Transportation: In intelligent transportation systems, the NPU can be used for tasks like vehicle recognition, traffic flow monitoring, and intelligent traffic signal control, improving the efficiency and safety of transportation systems.
+
+## Rockchip NPU SDK
+
+Rockchip's NPU SDK consists of two parts: the PC-side tool, rknn-toolkit2, used for model conversion, inference, and performance evaluation on the PC side. Specifically, it converts mainstream models such as Caffe, TensorFlow, TensorFlow Lite, ONNX, DarkNet, PyTorch, etc., into RKNN models. These RKNN models can be used for inference simulation on the PC side, calculating time and memory overhead. On the board side, there is the rknn runtime environment, which includes a set of C API libraries, driver modules for communication with the NPU, executable programs, etc.
+
+The RKNN software stack helps users quickly deploy AI models to Rockchip chips. The overall framework is as follows:
+
+![rknn-llm](/img/general-tutorial/rknn-llm.png)
+
+To use RKNPU, users need to first run the RKNN-Toolkit2 tool on their computer to convert trained models into RKNN format models, then use RKNN C API or Python API for inference on the development board.
+
+- RKNN-Toolkit2 is a software development kit for model conversion, inference, and performance evaluation on PC and Rockchip NPU platforms.
+
+- RKNN-Toolkit-Lite2 provides a Python programming interface for Rockchip NPU platforms, helping users deploy RKNN models and accelerate AI application landing.
+
+- RKNN Runtime provides C/C++ programming interfaces for the Rockchip NPU platform, helping users deploy RKNN models and accelerate the landing of AI applications.
+
+- The RKNPU kernel driver is responsible for interacting with the NPU hardware. It is open source and can be found in the Rockchip kernel code.
+
+:::tip 
+
+RKNPU2 SDK v2.0.0-beta (for RK3576/RK3562/RK3566/RK3568/RK3588/RV1103/RV1106)
+https://github.com/airockchip/rknn-toolkit2
+
+Model zoo:
+https://github.com/airockchip/rknn_model_zoo
+
+docs:
+https://github.com/airockchip/rknn-toolkit2/tree/master/doc
+:::
+
+## Sharing Use Cases of RK3576/RK3588 NPU
+
+Steps for exporting rknn models
+
+Please refer to https://github.com/airockchip/rknn_model_zoo/tree/main/models/CV/object_detection/yolo
+
+### Precautions
+
+1. Use rknn-toolkit2 version greater than or equal to 1.4.0.
+2. When switching to your own trained model, pay attention to aligning post-processing parameters such as anchors, otherwise it may cause post-processing parsing errors.
+3. Official website and Rockchip pre-trained models detect 80 classes of objects. If using your own trained model, you need to change the OBJ_CLASS_NUM and NMS_THRESH post-processing parameters in include/postprocess.h.
+4. The demo requires support for librga.so. For compilation and usage, please refer to https://github.com/airockchip/librga.
+5. Due to hardware limitations, the post-processing part of the yolov5 model in this demo is moved to the CPU by default. The models provided in this demo use ReLU as the activation function. Compared to the Silu activation function, the accuracy slightly decreases while the performance significantly improves.
+
+### Android Demo
+
+#### Compilation
+
+First, import ANDROID_NDK_PATH, for example, `export ANDROID_NDK_PATH=~/opts/ndk/android-ndk-r18b`, then execute the following command:
+
+```
+./build-android.sh -t <target> -a <arch> [-b <build_type>]
+
+Example:
+./build-android.sh -t rk3568 -a arm64-v8a -b Release
+```
+
+#### Pushing executable files to the board
+
+Connect the USB port of the board to the PC, and copy the entire demo directory to `/data`:
+
+```sh
+adb root
+adb remount
+adb push install/rknn_yolov5_demo /data/
+```
+
+#### Running
+
+```sh
+adb shell
+cd /data/rknn_yolov5_demo/
+
+export LD_LIBRARY_PATH=./lib
+./rknn_yolov5_demo model/<TARGET_PLATFORM>/yolov5s-640-640.rknn model/bus.jpg
+```
+
+Aarch64 Linux Demo
+Compilation
+First, import GCC_COMPILER, for example, export GCC_COMPILER=~/opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu, then execute the following command:
+
+```
+./build-linux.sh -t <target> -a <arch> -b <build_type>]
+# Example:
+./build-linux.sh -t rk3588 -a aarch64 -b Release
+```
+
+#### Pushing executable files to the board
+Copy install/rknn_yolov5_demo_Linux to the /userdata/ directory on the board.
+
+If using Rockchip's EVB board, you can push the file to the board using adb:
+
+```
+adb push install/rknn_yolov5_demo_Linux /userdata/
+```
+
+- If using other boards, you can copy install/rknn_yolov5_demo_Linux to the /userdata/ directory on the board using scp or similar methods.
+
+
+
+#### Running
+
+```sh
+adb shell
+cd /userdata/rknn_yolov5_demo_Linux/
+
+export LD_LIBRARY_PATH=./lib
+./rknn_yolov5_demo model/<TARGET_PLATFORM>/yolov5s-640-640.rknn model/bus.jpg
+```
+
+Note: Try searching the location of librga.so and add it to LD_LIBRARY_PATH if the librga.so is not found on the lib folder.
+Using the following commands to add to LD_LIBRARY_PATH.
+
+```sh
+export LD_LIBRARY_PATH=./lib:<LOCATION_LIBRGA.SO>
+```
+
+### Running Commands for Video Stream Demo:
+
+- h264 Video
+```
+./rknn_yolov5_video_demo model/<TARGET_PLATFORM>/yolov5s-640-640.rknn xxx.h264 264
+```
+
+Note: H264 video stream is required. You can use the following command to convert:
+
+```
+ffmpeg -i xxx.mp4 -vcodec h264 xxx.h264
+```
+
+- H265 Video
+```
+./rknn_yolov5_video_demo model/<TARGET_PLATFORM>/yolov5s-640-640.rknn xxx.hevc 265
+```
+Note: H265 video stream is required. You can use the following command to convert:
+
+```
+ffmpeg -i xxx.mp4 -vcodec hevc xxx.hevc
+```
+- RTSP Video Stream
+```
+./rknn_yolov5_video_demo model/<TARGET_PLATFORM>/yolov5s-640-640.rknn <RTSP_URL> 265
+```
+
+#### Note
+
+- Choose the correct librga library based on the system's rga driver. For specific dependencies, please refer to: https://github.com/airockchip/librga
+- **rk3562 currently only supports h264 video streams**
+- **rtsp video stream demo is only supported on Linux system, not yet supported on Android**
+- The name of the h264 video stream input cannot be "out.h264" as it will be overwritten
+
