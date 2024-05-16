@@ -173,6 +173,8 @@ ffmpeg -i xxx.mp4 -vcodec hevc xxx.hevc
 ./rknn_yolov5_video_demo model/<TARGET_PLATFORM>/yolov5s-640-640.rknn <RTSP_URL> 265
 ```
 
+![rknn-video](/img/general-tutorial/rknn-video.png)
+
 #### Note
 
 - Choose the correct librga library based on the system's rga driver. For specific dependencies, please refer to: https://github.com/airockchip/librga
