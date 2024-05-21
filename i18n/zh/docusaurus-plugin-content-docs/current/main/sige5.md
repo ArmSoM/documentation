@@ -147,7 +147,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     </tbody>
 </table>
 
-### RK3567框图
+### RK3576框图
 
 ![RK3576](/img/sige/rk3576.png)
 
