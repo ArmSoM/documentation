@@ -261,16 +261,56 @@ root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 #### BT
 
 ```
-# 1. 激活蓝牙
+# 1. Activate Bluetooth
 root@linaro-alip:/# service bluetooth start
-# 2. 进入bluetoothctl
+# 2. Enter bluetoothctl
 root@linaro-alip:/# bluetoothctl
-# 3. 输入以下命令即可连接
+# 3. Enter the following command to connect
 root@linaro-alip:/# power on
 root@linaro-alip:/# agent on
 root@linaro-alip:/# default-agent
 root@linaro-alip:/# scan on
 root@linaro-alip:/# pair yourDeviceMAC
+```
+
+#### 音频
+
+**View sound cards in the system: ** 
+
+```bash
+root@linaro-alip:~# aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: rockchiprk3308a [rockchip,rk3308-acodec], device 0: dailink-multicodecs ff560000.acodec-0 [dailink-multicodecs ff560000.acodec-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 7: Loopback [Loopback], device 0: Loopback PCM [Loopback PCM]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 7: Loopback [Loopback], device 1: Loopback PCM [Loopback PCM]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+
+```
+
+**play music**
+
+```
+root@linaro-alip:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
+
 ```
 
 #### USB Interface  

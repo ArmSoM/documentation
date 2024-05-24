@@ -499,6 +499,13 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
   Subdevice #0: subdevice #0
 ```
 
+**play music**
+
+```
+armsom@armsom-sige5:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
+
+```
+
 #### Fan  
 
 The Sige5 features a 5V fan using a 0.8mm connector  

@@ -467,7 +467,7 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 
 #### 音频
 
-查看系统中的声卡。
+**查看系统中的声卡**
 
 ```bash
 armsom@armsom-sige5:/# aplay -l
@@ -481,6 +481,12 @@ card 1: rockchipes8316 [rockchip-es8316], device 0: fe470000.i2s-ES8316 HiFi es8
 card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
+```
+
+**播放音乐**
+
+```
+armsom@armsom-sige5:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
 ```
 
 #### 风扇
