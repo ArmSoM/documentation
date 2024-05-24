@@ -243,6 +243,36 @@ The debug serial port location is pin 9 and 11 of the 12-pin header
 
 ![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)  
 
+#### WIFI
+```
+# 1. Open the WIFI
+root@linaro-alip:/# nmcli r wifi on
+# 2. Scan WIFI
+root@linaro-alip:/# nmcli dev wifi
+# 3. Connect to WIFI network
+root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+```
+
+| p2pro wifi       | 2.4G  | 5G |
+| --------------- | ----- | ------ |
+| debian | Tx 25 Mbps Rx 46 Mbps | Tx 130 Mbps Rx 132 Mbps  |
+| istoreos  | Tx 131 Mbps Rx 130 Mbps | Tx 194 Mbps Rx 193 Mbps|
+
+#### BT
+
+```
+# 1. 激活蓝牙
+root@linaro-alip:/# service bluetooth start
+# 2. 进入bluetoothctl
+root@linaro-alip:/# bluetoothctl
+# 3. 输入以下命令即可连接
+root@linaro-alip:/# power on
+root@linaro-alip:/# agent on
+root@linaro-alip:/# default-agent
+root@linaro-alip:/# scan on
+root@linaro-alip:/# pair yourDeviceMAC
+```
+
 #### USB Interface  
 
 ArmSoM-P2pro provides a USB 2.0 port.

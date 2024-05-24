@@ -235,7 +235,7 @@ ping www.baidu.com
 $ sudo dhclient eth0
 ```
 
-**调试串口**
+#### 调试串口
 调试串口的位置在12pin-head的 9，11脚
 
 | P2pro       | 连接  | 串口模块 |
@@ -246,7 +246,37 @@ $ sudo dhclient eth0
 
 ![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)
 
-**USB接口**
+#### WIFI
+```
+# 1. Open the WIFI
+root@linaro-alip:/# nmcli r wifi on
+# 2. Scan WIFI
+root@linaro-alip:/# nmcli dev wifi
+# 3. Connect to WIFI network
+root@linaro-alip:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+```
+
+| p2pro wifi       | 2.4G  | 5G |
+| --------------- | ----- | ------ |
+| debian | Tx 25 Mbps Rx 46 Mbps | Tx 130 Mbps Rx 132 Mbps  |
+| istoreos  | Tx 131 Mbps Rx 130 Mbps | Tx 194 Mbps Rx 193 Mbps|
+
+#### BT
+
+```
+# 1. Activate Bluetooth
+root@linaro-alip:/# service bluetooth start
+# 2. Enter bluetoothctl
+root@linaro-alip:/# bluetoothctl
+# 3. Enter the following command to connect
+root@linaro-alip:/# power on
+root@linaro-alip:/# agent on
+root@linaro-alip:/# default-agent
+root@linaro-alip:/# scan on
+root@linaro-alip:/# pair yourDeviceMAC
+```
+
+#### USB接口
 ArmSoM-P2pro 提供一个 USB 2.0 端口。
 
 
