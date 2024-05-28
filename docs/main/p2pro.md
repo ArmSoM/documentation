@@ -310,7 +310,6 @@ card 7: Loopback [Loopback], device 1: Loopback PCM [Loopback PCM]
 
 ```
 root@linaro-alip:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
-
 ```
 
 #### USB Interface  

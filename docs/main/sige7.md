@@ -296,6 +296,10 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 
 ## Resources
 
+### arm-systemready
+
+Download : [Google Drive link](https://drive.google.com/drive/folders/1zzB_xiWJ-70kmDPCx9QHmmN5k6V8J4jE) 
+
 ### Source Code
 
 ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
