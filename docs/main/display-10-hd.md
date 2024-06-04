@@ -99,3 +99,13 @@ Shortcut keys: Ctrl + S to save, Ctrl + X to exit
 After editing, restart the device to change the Overlays settings to support the Display 10 HD. 
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
+
+## Easy to buy sample
+
+ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
+ 
+ArmSoM Aliexpress online shop: [https://ja.aliexpress.com/item/3256806439494827.html](https://ja.aliexpress.com/item/3256806439494827.html) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=770587380434](https://item.taobao.com/item.htm?id=770587380434)
+
+OEM&ODM, please contact: sales@armsom.org

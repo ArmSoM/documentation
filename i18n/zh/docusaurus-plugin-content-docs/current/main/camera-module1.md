@@ -113,10 +113,10 @@ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,
 
 
 ## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
+ArmSoM 独立站: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
  
-ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256806439494827.html](https://www.aliexpress.com/item/3256806439494827.html) 
+ArmSoM 速卖通官方店: [https://ja.aliexpress.com/item/3256806937514891.html](https://ja.aliexpress.com/item/3256806937514891.html) 
 
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=770587380434](https://item.taobao.com/item.htm?id=770587380434)
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?ft=t&id=802634842391](https://item.taobao.com/item.htm?ft=t&id=802634842391)
 
 OEM&ODM,  请联系: sales@armsom.org
