@@ -1,23 +1,25 @@
 ---
-sidebar_label: "Camera 4K"
-slug: /armsom-camera-4k
+sidebar_label: "Camera module 1"
+slug: /armsom-camera-module1
 sidebar_position: 15
 ---
-# ArmSoM Camera 4K
+# ArmSoM  Camera Module 1
 
-# 1. Camera Introduction
+## 1. Camera Introduction
 
 Armsom uses a high-performance ultra clear 4K camera ov13850.
 
 The OV13850 module has the following characteristics:
-+ Pixel size: 1.12 millimeters x 1.12 millimeters
-+ 13 million pixels, 30fps
-+ Supports image sizes of 13.2MP (4224 x 3136), 10MP (4224 x 2376), 2K (2112 x 1568), EIS1080P (2112 x 1188), EIS 720P (1408 x 792), etc
+* Pixel size: 1.12 millimeters x 1.12 millimeters
+* 13 million pixels, 30fps
+* Supports image sizes of 13.2MP (4224 x 3136), 10MP (4224 x 2376), 2K (2112 x 1568), EIS1080P (2112 x 1188), EIS 720P (1408 x 792), etc
 Dual Wire Serial Bus Control (SCCB)
-+ Up to 4-channel MIPI serial output
-+ Working temperature range: 0 ℃~60 ℃, storage temperature range: -30 ℃~80 ℃
+* Up to 4-channel MIPI serial output
+* Working temperature range: 0 ℃~60 ℃, storage temperature range: -30 ℃~80 ℃
 
-## Pinout
+![armsom-camera-module1](/img/accessories/armsom-camera-module1.png)
+
+### 1.1 Pinout
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| GND| Ground
@@ -52,7 +54,7 @@ Dual Wire Serial Bus Control (SCCB)
 |32| GND| Ground 
 |33| GND| Ground
 
-# 2. Enable Camera Overlay
+## 2. Enable Camera Overlay
 
 ### 2.1 Ubuntu22.04 image to enable camera overlay
 
@@ -91,9 +93,9 @@ Shortcut keys: Ctrl + S to save, Ctrl + X to exit
 
 After editing and saving, restart the device to change the Overlays settings to support the camera.
 
-# 3. Use the Camera
+## 3. Use the Camera
 
-### You can download cheese and then use the camera with the following commands:
+You can download cheese and then use the camera with the following commands:
 
 ```bash
 armsom@armsom: sudo apt update
@@ -101,7 +103,7 @@ armsom@armsom: sudo apt install cheese
 armsom@armsom: ./cheese
 ```
 
-### Or you can also preview the camera using terminal commands:
+Or you can also preview the camera using terminal commands:
 
 - Preview camera 1:
 
