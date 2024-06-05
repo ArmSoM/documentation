@@ -365,12 +365,15 @@ card 0: rockchiphdmi [rockchip,hdmi], device 0: rockchip,hdmi i2s-hifi-0 [rockch
 card 1: rk3528acodec [rk3528-acodec], device 0: ffb90000.sai-rk3528-hifi ffe10000.acodec-0 [ffb90000.sai-rk3528-hifi ffe10000.acodec-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
-
-//播放音乐
-
-armsom@armsom-sige1:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
-
 ```
+
+
+播放音乐
+
+```bash
+armsom@armsom-sige1:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
+```
+
 
 #### 风扇
 

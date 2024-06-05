@@ -523,6 +523,12 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
   Subdevice #0: subdevice #0
 ```
 
+播放音乐
+
+```bash
+armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
+```
+
 #### 风扇
 
 Sige7 配备一个 5V 的风扇，使用 0.8mm 的连接器
