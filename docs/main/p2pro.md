@@ -316,15 +316,73 @@ root@linaro-alip:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
 
 ArmSoM-P2pro provides a USB 2.0 port.
 
+#### Mic Interface
 
-### Third Party System  
+![armsom-p2pro-8mic](/img/link/armsom-p2pro-8mic.jpg)
 
-#### armbian  
+**View All Built-in Codec Gains**
 
-![armbian-logo](/img/armbian-logo.webp)
+```
+amixer contents
+```
 
-We are working on adapting armbian systems！Coming soon...
+The headphone output sound is too low
 
+Check the current left and right channel output gain of the codec:
+```
+amixer cget name='DAC HPOUT Left Volume'
+amixer cget name='DAC HPOUT Right Volume'
+```
+
+Adjust the base gain as needed:
+```
+amixer cset name='DAC HPOUT Left Volume' 18
+amixer cset name='DAC HPOUT Right Volume' 18
+```
+
+Adjust volume (percentage):
+
+```
+amixer cset name='Master Playback Volume' 40
+```
+
+**recording**
+
+Mic gain adjustment for built-in codec
+
+- Group 0: mic1/mic2; Group 1: mic3/mic4; Group 2: mic5/mic6; Group 3: mic7/mic8
+
+- The prefix "ADC MIC" indicates adjustment of the linear gain of the front-stage MIC PGA
+
+- The prefix "ADC ALC" indicates adjustment of the linear gain of the back-stage ALC
+
+```
+amixer cset name='ADC MIC Group 0 Right Gain'  3
+amixer cset name='ADC MIC Group 0 Left Gain'  3
+amixer cset name='ADC ALC Group 0 Left Volume'  31
+amixer cset name='ADC ALC Group 0 Right Volume'  31
+
+amixer cset name='ADC MIC Group 1 Right Gain'  3
+amixer cset name='ADC MIC Group 1 Left Gain'  3
+amixer cset name='ADC ALC Group 1 Left Volume'  31
+amixer cset name='ADC ALC Group 1 Right Volume'  31
+
+amixer cset name='ADC MIC Group 2 Right Gain'  3
+amixer cset name='ADC MIC Group 2 Left Gain'  3
+amixer cset name='ADC ALC Group 2 Left Volume'  31
+amixer cset name='ADC ALC Group 2 Right Volume'  31
+
+amixer cset name='ADC MIC Group 3 Right Gain'  3
+amixer cset name='ADC MIC Group 3 Left Gain'  3
+amixer cset name='ADC ALC Group 3 Left Volume'  31
+amixer cset name='ADC ALC Group 3 Right Volume'  31
+
+export ALSA_LIB_ADD_GAIN=3
+
+// When the sampling rate is greater than 16000hz, the recording command should add the parameters --period-size=1024 --buffer-size=4096
+arecord -D hw:0,0 -c 8 -r 44100 -f S16_LE --period-size=1024 --buffer-size=4096 test.wav
+
+```
 
 ## Easy to buy sample
 ArmSoM online shop: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)

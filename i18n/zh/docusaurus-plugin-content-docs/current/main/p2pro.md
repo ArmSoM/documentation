@@ -318,6 +318,73 @@ root@linaro-alip:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
 #### USB接口
 ArmSoM-P2pro 提供一个 USB 2.0 端口。
 
+#### mic接口
+
+![armsom-p2pro-8mic](/img/link/armsom-p2pro-8mic.jpg)
+
+**查看内置Codec增益所有状态**
+
+```
+amixer contents
+```
+
+耳机输出声音太小
+
+查看codec当前左右声道输出增益：
+```
+amixer cget name='DAC HPOUT Left Volume'
+amixer cget name='DAC HPOUT Right Volume'
+```
+
+根据所需调节基础增益：
+```
+amixer cset name='DAC HPOUT Left Volume' 18
+amixer cset name='DAC HPOUT Right Volume' 18
+```
+
+调节音量(百分比)：
+
+```
+amixer cset name='Master Playback Volume' 40
+```
+
+**录音**
+
+内置codec的mic增益调整
+
+- Group 0: mic1/mic2; Group 1: mic3/mic4; Group 2: mic5/mic6; Group 3: mic7/mic8
+
+- “ADC MIC”前缀表示调节前级MIC PGA线性放大增益
+
+- “ADC ALC”前缀表示调节后级ALC线性放大增益
+
+```
+amixer cset name='ADC MIC Group 0 Right Gain'  3
+amixer cset name='ADC MIC Group 0 Left Gain'  3
+amixer cset name='ADC ALC Group 0 Left Volume'  31
+amixer cset name='ADC ALC Group 0 Right Volume'  31
+
+amixer cset name='ADC MIC Group 1 Right Gain'  3
+amixer cset name='ADC MIC Group 1 Left Gain'  3
+amixer cset name='ADC ALC Group 1 Left Volume'  31
+amixer cset name='ADC ALC Group 1 Right Volume'  31
+
+amixer cset name='ADC MIC Group 2 Right Gain'  3
+amixer cset name='ADC MIC Group 2 Left Gain'  3
+amixer cset name='ADC ALC Group 2 Left Volume'  31
+amixer cset name='ADC ALC Group 2 Right Volume'  31
+
+amixer cset name='ADC MIC Group 3 Right Gain'  3
+amixer cset name='ADC MIC Group 3 Left Gain'  3
+amixer cset name='ADC ALC Group 3 Left Volume'  31
+amixer cset name='ADC ALC Group 3 Right Volume'  31
+
+export ALSA_LIB_ADD_GAIN=3
+
+// 采集数据 采样率大于16000hz时，录音命令要加上--period-size=1024 --buffer-size=4096参数
+arecord -D hw:0,0 -c 8 -r 44100 -f S16_LE --period-size=1024 --buffer-size=4096 test.wav
+
+```
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
