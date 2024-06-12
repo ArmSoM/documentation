@@ -15,34 +15,15 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 
 ## ArmSoM 产品列表
 
-### 单板计算机: 
-
-|ArmSoM 单板计算机(SBC)|	简述	|
-|---------|--------------|
-|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7.jpg)	|
-|[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-w3](/img/lm/w3.jpg)	|
-
-### 核心板 / 计算模组:
-
-|ArmSoM Compute Module and maker kit |	简述	|
-|---------|--------------|
-|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]	| ![ArmSoM-AIM7](/img/aim/aim7.png)	|
-|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]	| ![ArmSoM-lm7](/img/lm/lm7.png)	|
-
-### 配件
-
-|ArmSoM 配件|	简述	|
-|---------|--------------|
-|[display-10-hd](./armsom-display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
-
-## 通用文档
-
-[通用文档里面包含 armsom 的系列教程/使用文档](../general-tutorial/flash-img) 
-
+| Single Board Computer(SBC)| Compute Module and Maker kit	| IoT/Industrial Control | Accessories|
+|---------|--------------|--------------|---------|
+|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568] | [Camera-Module-1](./camera-module1)	|
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]||
 
 ## 文档中心
 
-此文档中心是由ArmSoM开发团队和社区共同维护的用于支持ArmSoM系列产品及其周边产品的教程和指南。
+欢迎来到官方 ArmSoM 文档中心 - 由我们的开发团队和用户社区维护的 ArmSoM 系列产品的教程和指南。
 
 在使用本文档的过程中，如果遇到相关问题，请通过 [论坛](http://forum.armsom.org/) 或者 [ArmSoM Discord](https://discord.gg/THfTEatpfK)，我们会第一时间回复。
 

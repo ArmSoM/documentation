@@ -15,26 +15,11 @@ Our commitment is to equip the open-source community with superb hardware, robus
 
 ## ArmSoM Products
 
-### Single Board Computer: 
-
-|ArmSoM Single Board Computer(SBC)|	description	|
-|---------|--------------|
-|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]	| ![ArmSoM-sige7](/img/sige/sige7.jpg)	|
-|[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]	| ![ArmSoM-w3](/img/lm/w3.jpg)	|
-
-### Compute Module and maker kit:
-
-|ArmSoM Compute Module and maker kit |	description	|
-|---------|--------------|
-|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]	| ![ArmSoM-AIM7](/img/aim/aim7.png)	|
-|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]	| ![ArmSoM-lm7](/img/lm/lm7.png)	|
-
-### Accessories
-
-|ArmSoM Accessories|	description	|
-|---------|--------------|
-|[display-10-hd](./armsom-display-10-hd) | ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)	|
-
+| Single Board Computer(SBC)| Compute Module and Maker kit	| IoT/Industrial Control | Accessories|
+|---------|--------------|--------------|---------|
+|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568] | [Camera-Module-1](./camera-module1)	|
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]||
 
 ## ArmSoM Documentation
 
