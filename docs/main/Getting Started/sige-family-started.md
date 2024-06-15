@@ -47,7 +47,7 @@ Before starting to use the ArmSoM-Sige7, please prepare the following items:
 
 ### Power Supply
 
-The table below shows the power specifications required for powering the ArmSoM-Sige series models. You can use any high-quality power supply that provides the correct power mode.
+The table below shows the power specifications required for powering the ArmSoM-Sige series. You can use any high-quality power supply that provides the correct power mode.
 
 | Model    | Recommended Power (Voltage/Current) | Power Mode |
 | -------- | ---------------------------------- | ---------- |
