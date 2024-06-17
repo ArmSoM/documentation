@@ -30,7 +30,7 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 - 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）
 - 工作温度：0℃ ~ 80℃
 - 操作系统：
-  - Rockchip官方支持：Android 14，Debian11，Buildroot
+  - Rockchip官方支持：Android 14，Debian12，Buildroot
   - 第三方支持：Armbian
 - PCB： 8 层 PCB 板设计
 - 重量：43g
@@ -134,7 +134,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>系统</th>
-            <th><li>Rockchip官方支持：Android 14.0，Debian11，Buildroot</li><li>第三方支持：Armbian</li></th>
+            <th><li>Rockchip官方支持：Android 14.0，Debian12，Buildroot</li><li>第三方支持：Armbian</li></th>
         </tr>
         <tr>
             <th>尺寸</th>

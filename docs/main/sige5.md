@@ -30,7 +30,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 - Operating Voltage: Wide input voltage range, from 4.5V to 23V (voltage error ±5%).
 - Operating Temperature: 0°C to 80°C
 - Operating Systems:
-  - Official Rockchip Support: Android 14, Debian 11, Buildroot
+  - Official Rockchip Support: Android 14, Debian 12, Buildroot
   - Third-party Support: Armbian
 - PCB: 8-layer PCB board design
 - Weight: 43g
@@ -148,7 +148,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>OS Support</th>
-            <th><li>Official：Android 14.0，Debian11，Buildroot</li><li>3rd Party：Armbian</li></th>
+            <th><li>Official：Android 14.0，Debian12，Buildroot</li><li>3rd Party：Armbian</li></th>
         </tr>
        <tr>
             <th>Dimensions</th>
