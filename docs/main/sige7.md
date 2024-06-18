@@ -122,7 +122,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Video In</th>
-            <th><li>2x 2-lane MIPI CSI, up to 2.5Gbps per lane</li></th>
+            <th><li>2x 4-lane MIPI CSI, up to 2.5Gbps per lane</li></th>
         </tr>
         <tr>
             <th>Audio</th>

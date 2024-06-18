@@ -82,7 +82,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
          <tr>
             <th>ISP</th>
-            <th><li>1路ISP，1600万像素</li></th>
+            <th><li>ISP，1600万像素</li></th>
         </tr>
         <tr >
             <th>RAM</th>
