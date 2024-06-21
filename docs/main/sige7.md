@@ -54,7 +54,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ## Getting started
 
-[Getting started](./sige7-started)
+[Getting started](./sige-family-started)
 
 ## Hardware
 

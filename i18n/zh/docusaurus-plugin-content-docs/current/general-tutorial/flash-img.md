@@ -16,7 +16,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 访问百度网盘资源介绍页面获取系统镜像: [百度网盘链接](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
 
 :::tip
-1. 官方镜像的默认账号/密码为armsom/armsom。
+1. 官方镜像的默认账号/密码为armsom/armsom，linaro/linaro。
 2. Debian系统是使用RK官方提供SDK适配编译的系统，对于有 ISP、GPU、编解码、NPU需求的用户更加合适。使用RKDevTool烧录到eMMC，或者使用SDDiskTool烧录到SD卡。
 3. Ubuntu，Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
 :::

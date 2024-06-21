@@ -14,7 +14,7 @@ Let's get to know Sige5 in 5 minutes.
 
 ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Rockchip RK3576, with a 6 TOPS computing power NPU and support for up to 16GB of large memory. It supports 4K video encoding and decoding, offers rich interfaces including dual gigabit Ethernet ports, WiFi 6 & BT5, and various video outputs. Compatible with multiple operating systems, it is suitable for ARM-based PCs, edge computing devices, personal mobile internet devices, and other digital multimedia applications.
 
-![ArmSoM-sige5](/img/sige/sige5.png)
+![ArmSoM-sige5](/img/sige/sige5.jpg)
 
 ### Key Parameter
 
@@ -25,8 +25,8 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 - VPU/Encoding & Decoding:
   - Hardware Decoding: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps.
   - Hardware Encoding: Supports H.264 and H.265 up to 4K@60fps, high-quality JPEG encoder/decoder supports up to 4K@60fps.
-- RAM: 8/16GB 32-bit LPDDR4x, default is 16GB. RK3576 supports a maximum of 16GB.
-- Flash: 32/128GB eMMC, default is 128GB eMMC.
+- RAM: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.
+- Flash: 32/128GB eMMC, default is 64GB eMMC.
 - Operating Voltage: Wide input voltage range, from 4.5V to 23V (voltage error ±5%).
 - Operating Temperature: 0°C to 80°C
 - Operating Systems:
@@ -87,11 +87,11 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
        <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB（max 16GB ）64bit LPDDR4/LPDDR4x，default 16GB LPDDR4x</li></th>
+            <th><li>8GB/16GB（max 16GB ）64bit LPDDR4/LPDDR4x，default 8GB LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/128GB eMMC，default 128GB eMMC</li><li>Supports MicroSD card expansion</li></th>
+            <th><li>32GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
@@ -302,7 +302,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 
 ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
 
-ArmSoM-Sige5 kernel: 
+ArmSoM-Sige5 kernel: [https://github.com/ArmSoM/linux-rockchip](https://github.com/ArmSoM/linux-rockchip/tree/linux-6.1-stan-rkr1)
 
 ArmSoM-Sige5 uboot: 
 

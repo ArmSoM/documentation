@@ -33,31 +33,8 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
 | LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
 |Board Dimensions| 92mm × 62mm | 92mm × 62mm | 92mm × 62mm|
 
-<!-- ## Comparison of Sige7/5/1 and RPI5 Specifications
-|        | Sige7  | Sige5 | Raspberry Pi5 | Sige1 |
-| --------- | ----- | --- |--- | --- | 
-| SoC Process | 8nm | 8nm | 16nm |  28nm |  
-| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | BCM2712 Cortex-A76x4 @2.4GHz | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
-| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU |VideoCore VII GPU @ 800 MHz| ARM Mali-450 GPU |
-| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | - |- |
-| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x | 1/2/4/8 GB LPDDR4X-4267 SDRAM |  2/4GB 32-bit LPDDR4x|
-| eMMC| 64GB/128GB eMMC | 32/128GB eMMC | - | 16/32GB eMMC |
-| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes| Yes| Yes|
-| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps | Dual 4kp60 HDMI display output| 1x HDMI OUT2.0b, supports 4K@60fps|
-| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| 4kp60 HEVC decoder| H.265, H.264, AVS2 4K@60fps|
-| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| - | H.264 and H.265 up to1080@60fps|
-| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | Dual-band 802.11ac Wi-Fi 5| SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
-| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - | 1× 2.0 port, additional HAT required | - |
-| Ethernet | 2x 2.5G Ethernet | 2x Gigabit Ethernet| Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet|
-| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 2× USB 3.0 (capable of simultaneous full throughput) <br/> 2× USB 2.0 | 2x USB 2.0|
-| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack | 1x USB-C Power jack & 1x USB2.0 OTG|
-| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | Dual 4-lane MIPI CSI/DSI transceivers | -|
-| 40-Pin Header| yes | yes | yes | yes |
-| LEDs | 2x LEDs | 2x LEDs | - | 2x LEDs|
-|Board Dimensions| 92mm × 62mm | 92mm × 62mm | 85.0 x 56.0 mm | 92mm × 62mm| -->
-
-
 ## 入门准备
+
 在开始使用 ArmSoM-Sige 系列之前，请准备好以下物品
 
 ### 工具准备
@@ -71,7 +48,7 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
       * 闪迪 TF 8G Class10 microSD 
       * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
   * 板载eMMC启动
-    * USB Type-C数据线，从 typec 端口在 Sige系列上写入镜像，您需要 Type-C 数据线连接 Sige系列和 PC。
+    * USB Type-C数据线，从 typec 端口在Sige系列上写入镜像，您需要Type-C数据线连接 Sige系列和 PC。
 
 您可以将 Sige 设置为带有桌面的交互式计算机，也可以将其设置为仅可通过网络访问的无头计算机。要将 Sige 设置为Headless计算机，您在初次安装操作系统时配置主机名、用户帐户、网络连接和 SSH 。如果您想直接使用 Sige，则需要以下附加配件：
 
@@ -80,9 +57,9 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
 * HDMI显示器和HDMI线
 * Ethernet 线（网线）
 * 摄像头模块
-  * 推荐使用[camera-module1](./armsom-camera-module1)模组。
+  * 推荐使用 [camera-module1](./armsom-camera-module1) 模组。
 * LCD显示屏
-  * 推荐使用[Display 10 HD](./armsom-display-10-hd)。
+  * 推荐使用 [Display 10 HD](./armsom-display-10-hd)。
 * 音频线, 0.8mm立式插座。
 * RTC 电池, 0.8mm立式插座。
 * 风扇，0.8mm立式插座。
@@ -104,7 +81,10 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
 [系统镜像烧录](./general-tutorial/flash-img)
 ### 接口设置
 
-如果您是首次使用 ArmSoM-Sige7，请先熟悉下 [外设接口](#硬件接口)，以便于您更好的理解后续的内容。
+如果您是首次使用 ArmSoM-Sige 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
+
+| 硬件接口  | [Sige7](./armsom-sige7#硬件接口) | [Sige5](./armsom-sige5#硬件接口) | [Sige1](./armsom-sige1#硬件接口) |
+| --------------- | ----- | ------ | ------ | 
 
 #### 调试串口
 
@@ -112,18 +92,18 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
 
-| Sige7       | 连接  | 串口模块 |
+| Sige7/5/1       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
 | **GND** (pin 6) | <---> | GND |
 | **TX** (pin 8)  | <---> | RX |
 | **RX** (pin 10) | <---> | TX |
 
 
-#### 2.5G 以太网口
+#### 以太网口
 
-如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-Sige7 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
+如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-SigeX 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
 
-- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 enP2p33s0 或 enP4p65s0 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
+- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 enPX 或 ethX 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
 
 ```bash
 ifconfig

@@ -14,7 +14,7 @@ slug: /armsom-sige5
 
 ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力NPU，最大可配16GB大内存。支持4K视频编解码，拥有丰富的接口，支持双千兆网口，WiFi6 & BT5和多种视频输出。支持多种操作系统，适用于基于ARM的PC和边缘计算设备、个人移动互联网设备和其他数字多媒体应用。
 
-![ArmSoM-sige5](/img/sige/sige5.png)
+![ArmSoM-sige5](/img/sige/sige5.jpg)
 
 ### 关键参数
 
@@ -25,8 +25,8 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 - VPU/编解码：
   - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps
   - 硬编码：支持H.264和H.265最高4K@60fps，高质量JPEG编码器/ 解码器最高支持 4k@60fps。
-- RAM：8/16GB 32bit LPDDR4x，默认16GB，RK3576 最大支持16GB
-- Flash：32/128GB eMMC，默认eMMC 128GB
+- RAM：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB
+- Flash：32/128GB eMMC，默认eMMC 64GB
 - 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）
 - 工作温度：0℃ ~ 80℃
 - 操作系统：
@@ -86,11 +86,11 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB（最高可配 16GB ）32bit LPDDR4/LPDDR4x，默认LPDDR4x 16GB</li></th>
+            <th><li>8GB/16GB（最高可配 16GB ）32bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/128GB eMMC，默认eMMC 128GB</li><li>支持MicroSD卡扩展</li></th>
+            <th><li>32GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
