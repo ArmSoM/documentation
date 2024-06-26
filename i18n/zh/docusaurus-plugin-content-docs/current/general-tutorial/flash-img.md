@@ -1,6 +1,7 @@
 ---
 sidebar_label: "系统镜像烧录"
 sidebar_position: 2
+slug: /general-tutorial/flash-img
 ---
 
 # 系统镜像烧录

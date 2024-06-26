@@ -278,7 +278,7 @@ Sige1 使用手册，帮助用户了解Sige1的基本使用和需要的准备工
 
 ### 烧录方式选择
 
-[系统镜像烧录](./general-tutorial/flash-img)
+[系统镜像烧录](/general-tutorial/flash-img)
 ### 接口设置
 
 如果您是首次使用 ArmSoM-Sige1，请先熟悉下 [外设接口](#硬件接口)，以便于您更好的理解后续的内容。

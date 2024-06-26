@@ -31,11 +31,12 @@ const config = {
     defaultLocale: "en",
     locales: ["en", "zh"],
     localeConfigs: {
-      en: {
+      "en": {
         htmlLang: "en-US",
       },
-      zh: {
-        htmlLang: "zh-CN",
+      "zh": {
+        htmlLang: "zh-Hans",
+        path: 'zh',
       },
     },
   },
@@ -173,6 +174,8 @@ const config = {
       },
       prism: {
         additionalLanguages: ['bash', 'diff', 'json'],
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
       typography: {
         fontFamily: [

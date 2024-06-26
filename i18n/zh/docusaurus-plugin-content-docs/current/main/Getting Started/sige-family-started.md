@@ -78,7 +78,7 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
 
 ### 烧录方式选择
 
-[系统镜像烧录](./general-tutorial/flash-img)
+[系统镜像烧录](/general-tutorial/flash-img)
 
 ### 接口设置
 
