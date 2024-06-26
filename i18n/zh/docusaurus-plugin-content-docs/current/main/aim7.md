@@ -88,27 +88,15 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
         </tr>
         <tr>
             <th>PCIe</th>
-            <th>
-              <li>PCIe 3.0 x4: 每通道最高支持 8Gbps 数据速率, 支持 4 种组合方式：1路 x4、2路 x2、4路 x1、1路 x2+2路 x1，每通道最高支持 8Gbps 数据速率</li>
-              <li>PCIe 2.1 x1: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li></th>
+            <th><li>PCIe 3.0 x4: 每通道最高支持 8Gbps 数据速率, 支持 4 种组合方式：1路 x4、2路 x2、4路 x1、1路 x2+2路 x1，每通道最高支持 8Gbps 数据速率</li><li>PCIe 2.1 x1: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li></th>
         </tr>
          <tr>
             <th>USB</th>
-            <th>
-            <li>1x USB 3.0 (Gen1)</li>
-            <li>3x USB 2.0</li>
-            </th>
+            <th><li>1x USB 3.0 (Gen1)</li><li>3x USB 2.0</li></th>
         </tr>
          <tr>
             <th rowspan="3">Others</th>
-            <th ><li>UART DEBUG x1, UART+flow control x2</li>
-            <li>SPI x2</li>
-            <li>I2C x4</li>
-            <li>can x1</li>
-            <li>I2S x2</li>
-            <li>SD 4.0, SDHOST 4.0, and SDIO 3.0</li>
-            <li>PWM x3, 多个 GPIO</li>
-            </th>
+            <th ><li>UART DEBUG x1, UART+flow control x2</li><li>SPI x2</li><li>I2C x4</li><li>can x1</li><li>I2S x2</li><li>SD 4.0, SDHOST 4.0, and SDIO 3.0</li><li>PWM x3, 多个 GPIO</li></th>
         </tr>
     </tbody>
 </table>

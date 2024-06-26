@@ -240,9 +240,9 @@ $ sudo dhclient eth0
 
 | P2pro       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
-| **GND** (pin 8) | <---> | GND |
-| **TX** (pin 9)  | <---> | RX |
-| **RX** (pin 11) | <---> | TX |
+| **GND** (pin 8) | ---> | GND |
+| **TX** (pin 9)  | ---> | RX |
+| **RX** (pin 11) | ---> | TX |
 
 ![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)
 

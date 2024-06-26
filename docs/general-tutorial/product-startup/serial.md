@@ -12,9 +12,9 @@ Connect the USB to TTL serial cable as follows:
 
 | ArmSoM Products | Connectivity | Serial Port Modules |
 | --------------- | ----- | ------ |
-| **GND** (pin 6) | <---> | GND |
-| **TX** (pin 8) | <---> | RX |
-| **RX** (pin 10) | <---> | TX |
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8) | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
 
 
 ### 2. Instructions for use

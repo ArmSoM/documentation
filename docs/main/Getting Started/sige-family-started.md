@@ -123,9 +123,9 @@ Connect the USB to TTL serial cable as follows:
 
 | sige5          | Connect | Serial Module |
 | -------------- | ------- | ------------ |
-| **GND** (pin 6)| <--->   | GND          |
-| **TX** (pin 8) | <--->   | RX           |
-| **RX** (pin 10)| <--->   | TX           |
+| **GND** (pin 6)| --->   | GND          |
+| **TX** (pin 8) | --->   | RX           |
+| **RX** (pin 10)| --->   | TX           |
 
 ### 2.5G Ethernet
 

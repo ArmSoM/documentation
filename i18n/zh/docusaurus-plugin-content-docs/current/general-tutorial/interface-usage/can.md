@@ -2,6 +2,7 @@
 sidebar_label: "CAN 使用"
 sidebar_position: 6
 ---
+
 # CAN 使用
 ## 1. CAN 简介
 
@@ -21,7 +22,6 @@ CAN在40PIN中的位置: CAN_TX对应40PIN中的第35编号，CAN_RX对应40PIN�
 CAN模块之间接线：CAN_TX接CAN_TX，CAN_RX接CAN_RX。
 
 ![can-real](/img/general-tutorial/interface-usage/can-real.png)
-
 
 ## 4. 内核配置
 - rockchip_linux_defconfig配置：
@@ -51,7 +51,7 @@ make savedefconfig
 
 ### 5.1 主要参数:
 
-- interrupts = <GIC_SPI 1 IRQ_TYPE_LEVEL_HIGH>;
+- interrupts
 转换完成，产生中断信号。
 
 - clock

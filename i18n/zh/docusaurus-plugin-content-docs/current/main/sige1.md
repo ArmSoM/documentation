@@ -81,10 +81,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
         <tr>
             <th>网络</th>
-            <th>
-              <li>1x 2.5G网口</li>
-              <li>1x 千兆网口</li>
-              <li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (rtl8852bs)</li></th>
+            <th><li>1x 2.5G网口</li><li>1x 千兆网口</li><li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (rtl8852bs)</li></th>
         </tr>
         <tr>
             <th>视频输出</th>
@@ -294,9 +291,9 @@ Sige1 使用手册，帮助用户了解Sige1的基本使用和需要的准备工
 
 | Sige1       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
-| **GND** (pin 6) | <---> | GND |
-| **TX** (pin 8)  | <---> | RX |
-| **RX** (pin 10) | <---> | TX |
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8)  | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
 
 
 #### 千兆/2.5G 以太网口

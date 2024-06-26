@@ -70,8 +70,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
          </tr>
          <tr>
              <th>GPU</th>
-             <th>
-             <li>ARM Mali G52 MC3 GPU</li><li>Fully compatible with OpenGL ES 1.1, 2.0 and 3.2, OpenCL up to 2.0 and Vulkan 1.1</li><li>Dedicated 2D hardware engine with MMU will maximize Improves display performance and provides very smooth operation. </li></th>
+             <th><li>ARM Mali G52 MC3 GPU</li><li>Fully compatible with OpenGL ES 1.1, 2.0 and 3.2, OpenCL up to 2.0 and Vulkan 1.1</li><li>Dedicated 2D hardware engine with MMU will maximize Improves display performance and provides very smooth operation. </li></th>
          </tr>
          <tr>
              <th>NPU</th>
@@ -397,9 +396,9 @@ Connect the USB to TTL serial cable as follows:
 
 | sige5          | Connect | Serial Module |
 | -------------- | ------- | ------------ |
-| **GND** (pin 6)| <--->   | GND          |
-| **TX** (pin 8) | <--->   | RX           |
-| **RX** (pin 10)| <--->   | TX           |
+| **GND** (pin 6)| --->   | GND          |
+| **TX** (pin 8) | --->   | RX           |
+| **RX** (pin 10)| --->   | TX           |
 
 ### Gigabit Ethernet Port
 

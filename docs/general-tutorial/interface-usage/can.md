@@ -52,7 +52,7 @@ make savedefconfig
 
 ### 5.1 Main Parameters:
 
-- interrupts = <GIC_SPI 1 IRQ_TYPE_LEVEL_HIGH>;
+- interrupts
   Generates an interrupt signal upon completion of transfer.
 
 - clock

@@ -99,7 +99,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
         <tr>
             <th>HDMI RX</th>
             <th>1</th>
-            <th colspan="2"><li>Support 3.4Gbps~6Gbps HDMI 2.0</li><li>Support 250Mbps~3.4Gbps HDMI 1.4b</li><li>Support HDCP2.3 and HDCP1.4</li></th>
+            <th colspan="2"><li>Support 3.4Gbps-6Gbps HDMI 2.0</li><li>Support 250Mbps-3.4Gbps HDMI 1.4b</li><li>Support HDCP2.3 and HDCP1.4</li></th>
         </tr>
         <tr>
             <th rowspan="4">Display output interface</th>
@@ -128,7 +128,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
             <th rowspan="3">Audio interface</th>
             <th>I2S</th>
             <th>≤4</th>
-            <th colspan="2"><li>8 lanes I2S0/I2S1：Support TX and RX，Audio resolution 16~32 bit, sampling rate up to 192KHz</li><li>2 lanes I2S2/I2S3：Support TX and RX，Audio resolution 16~32 bit, sampling rate up to 192KHz </li></th>
+            <th colspan="2"><li>8 lanes I2S0/I2S1：Support TX and RX，Audio resolution 16-32 bit, sampling rate up to 192KHz</li><li>2 lanes I2S2/I2S3：Support TX and RX，Audio resolution 16-32 bit, sampling rate up to 192KHz </li></th>
         </tr>
         <tr>
             <th>SPDIF</th>
@@ -138,7 +138,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
         <tr>
             <th>PDM</th>
             <th>≤2</th>
-            <th colspan="2"><li>Up to 8 channels, audio resolution 16~24 bit, sampling rate up to 192KHz</li><li>Support PDM master receive mode</li></th>
+            <th colspan="2"><li>Up to 8 channels, audio resolution 16-24 bit, sampling rate up to 192KHz</li><li>Support PDM master receive mode</li></th>
         </tr>
         <tr>
             <th>Network port</th>

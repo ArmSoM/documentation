@@ -41,16 +41,16 @@ const sidebars = {
       defaultStyle: true, // Use the default menu item styling
     },  {
       type: 'html',
-      value: 'follow us', // The HTML to be rendered
+      value: 'Follow us', // The HTML to be rendered
       defaultStyle: true, // Use the default menu item styling
-    },{
-      type: 'link',
-      label: 'Youtube', // The link label
-      href: 'https://www.youtube.com/@ArmSoM', // The external URL
     },{
       type: 'link',
       label: 'Twitter', // The link label
       href: 'https://twitter.com/Armsom_official', // The external URL
+    },{
+      type: 'link',
+      label: 'Mastodon', // The link label
+      href: 'https://mastodon.social/@armsom_jackson', // The external URL
     },{
       type: 'link',
       label: 'bilibili', // The link label

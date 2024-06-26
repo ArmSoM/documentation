@@ -237,9 +237,9 @@ The debug serial port location is pin 9 and 11 of the 12-pin header
 
 | P2pro           | Connection | Serial Module |
 | --------------- | ---------- | ------------- |
-| **GND** (pin 8) | <--->      | GND           |
-| **TX** (pin 9)  | <--->      | RX            |
-| **RX** (pin 11) | <--->      | TX            |
+| **GND** (pin 8) | --->      | GND           |
+| **TX** (pin 9)  | --->      | RX            |
+| **RX** (pin 11) | --->      | TX            |
 
 ![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)  
 

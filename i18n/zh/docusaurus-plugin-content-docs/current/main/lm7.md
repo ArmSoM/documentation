@@ -91,7 +91,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
         <tr>
             <th>HDMI RX</th>
             <th>1</th>
-            <th colspan="2"><li>支持 3.4Gbps~6Gbps HDMI 2.0</li><li>支持 250Mbps~3.4Gbps HDMI 1.4b</li><li>支持 HDCP2.3 及 HDCP1.4</li></th>
+            <th colspan="2"> <li>支持 3.4Gbps-6Gbps HDMI 2.0</li> <li>支持 250Mbps-3.4Gbps HDMI 1.4b</li> <li>支持 HDCP2.3 及 HDCP1.4</li></th>
         </tr>
         <tr>
             <th rowspan="4">显示输出接口</th>
@@ -118,7 +118,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
             <th rowspan="3">音频接口</th>
             <th>I2S</th>
             <th>≤4</th>
-            <th colspan="2"><li>8 lanes I2S0/I2S1：支持 TX 和 RX，音频分辨率 16~32 位，采样率达 192KHz</li><li>2 lanes I2S2/I2S3：支持 TX 和 RX，音频分辨率 16~32 位，采样率达 192KHz </li></th>
+            <th colspan="2"><li>8 lanes I2S0/I2S1：支持 TX 和 RX，音频分辨率 16-32 位，采样率达 192KHz</li><li>2 lanes I2S2/I2S3：支持 TX 和 RX，音频分辨率 16-32 位，采样率达 192KHz </li></th>
         </tr>
         <tr>
             <th>SPDIF</th>

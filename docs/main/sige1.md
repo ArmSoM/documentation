@@ -307,9 +307,9 @@ Connect the USB to TTL serial cable as shown below:
 
 | Sige1       | Connection  | Serial Module |
 | --------------- | ----- | ------ |
-| **GND** (pin 6) | <---> | GND |
-| **TX** (pin 8)  | <---> | RX |
-| **RX** (pin 10) | <---> | TX |
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8)  | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
 
 #### Gigabit/2.5G Ethernet Port
 

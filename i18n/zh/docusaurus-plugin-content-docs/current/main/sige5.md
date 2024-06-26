@@ -69,8 +69,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>GPU</th>
-            <th>
-            <li>ARM Mali G52 MC3 GPU</li><li>完全兼容 OpenGL ES 1.1、2.0 和 3.2、OpenCL 高达 2.0 和 Vulkan 1.1</li><li>带有 MMU 的专用 2D 硬件引擎将最大限度地提高显示性能并提供非常流畅的操作。</li></th>
+            <th><li>ARM Mali G52 MC3 GPU</li><li>完全兼容 OpenGL ES 1.1、2.0 和 3.2、OpenCL 高达 2.0 和 Vulkan 1.1</li><li>带有 MMU 的专用 2D 硬件引擎将最大限度地提高显示性能并提供非常流畅的操作。</li></th>
         </tr>
         <tr>
             <th>NPU</th>
@@ -382,9 +381,9 @@ sige5 使用手册，帮助用户了解sige5的基本使用和需要的准备工
 
 | sige5       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
-| **GND** (pin 6) | <---> | GND |
-| **TX** (pin 8)  | <---> | RX |
-| **RX** (pin 10) | <---> | TX |
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8)  | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
 
 
 #### 千兆以太网口
