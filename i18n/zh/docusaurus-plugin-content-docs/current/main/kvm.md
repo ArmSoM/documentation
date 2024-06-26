@@ -3,7 +3,7 @@ description: ArmSoM-KVM 采用 Rockchip RK3568 的 KVM over IP 工业控制网�
 keywords: [armsom, armsom-kvm, PIKVM, rockchip, RK3568]
 sidebar_label: "KVM"
 slug: /armsom-kvm
-sidebar_position: 6
+sidebar_position: 10
 ---
 
 # 产品简介

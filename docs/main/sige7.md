@@ -17,14 +17,13 @@ The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bi
 
 ![ArmSoM-sige7](/img/sige/sige7.jpg)
 
-:::tip Applications
-Rockchip RK3588 design [ArmSoM-Sige7](./armsom-sige7) AI SBC design;
+:::tip Rockchip RK3588
 
-Rockchip RK3588 design [ArmSoM-AIM7](./armsom-aim7) Core board fully compatible with Jetson Nano/TX2 NX;
+[ArmSoM-Sige7](./armsom-sige7) AI SBC;
 
-Rockchip RK3588 design [ArmSoM-LM7](./armsom-lm7) LGA core board ;
+[ArmSoM-AIM7](./armsom-aim7) AIM7 core board， [ArmSoM-AIM-IO](./armsom-aimio)  AIM Companion IO Board;
 
-Rockchip RK3588 design [ArmSoM-W3](./armsom-w3) LGA core board maker kit;
+[ArmSoM-LM7](./armsom-lm7) LGA core board, [ArmSoM-W3](./armsom-w3) LGA core board maker kit;
 
 With the powerful ecosystem and variety of extension modules, ArmSoM can help users easily go from ideas to prototype to mass production, making it an ideal creative platform for makers, dreamers and hobbyists.
 :::

@@ -2,7 +2,7 @@
 description: ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存，接口完全兼容 Jetson Nano。
 keywords: [armsom, armsom-AIM7, 创客套件, rockchip, rk3588产品介绍]
 sidebar_label: "AIM7"
-sidebar_position: 5
+sidebar_position: 6
 slug: /armsom-aim7
 ---
 
@@ -13,6 +13,16 @@ ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 ![ArmSoM-AIM7](/img/aim/aim7.png)
 
 AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
+
+:::tip Rockchip RK3588
+[ArmSoM-Sige7](./armsom-sige7) 单板计算机;
+
+[ArmSoM-AIM-IO](./armsom-aimio) AIM产品配套IO板;
+
+[ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LGA核心板开发套件;
+
+依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
+:::
 
 ### 关键参数
 

@@ -2,7 +2,7 @@
 description: ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit processor with a main frequency of up to 2.4GHz, 6 TOPS computing power NPU, and can be equipped with up to 32GB of large memory. While the interface is fully compatible with Jetson Nano
 keywords: [armsom, armsom-aim7, jetson nano, nvidia, rockchip]
 sidebar_label: "AIM7"
-sidebar_position: 5
+sidebar_position: 6
 slug: /armsom-aim7
 ---
 
@@ -14,7 +14,20 @@ ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit pr
 
 ![ArmSoM-AIM7](/img/aim/aim7.png)
 
-AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVR and other fields
+AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVR and other fields.
+
+![ArmSoM-sige7](/img/sige/sige7.jpg)
+
+:::tip Rockchip RK3588
+
+[ArmSoM-Sige7](./armsom-sige7) AI SBC;
+
+[ArmSoM-AIM7](./armsom-aim7) AIM7 core board， [ArmSoM-AIM-IO](./armsom-aimio)  AIM Companion IO Board;
+
+[ArmSoM-LM7](./armsom-lm7) LGA core board, [ArmSoM-W3](./armsom-w3) LGA core board maker kit;
+
+With the powerful ecosystem and variety of extension modules, ArmSoM can help users easily go from ideas to prototype to mass production, making it an ideal creative platform for makers, dreamers and hobbyists.
+:::
 
 ### Key Parameters 
 
