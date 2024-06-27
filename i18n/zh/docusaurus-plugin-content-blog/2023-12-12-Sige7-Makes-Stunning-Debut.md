@@ -44,7 +44,7 @@ Sige7 - 连接创新，无限可能
   - 第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS
 - PCB：12 层 PCB 板设计
 - 重量：
-- 大小：92mm × 62mm
+- 大小：92mm × 62mm x 14.6mm
 
 ### 硬件规格
 

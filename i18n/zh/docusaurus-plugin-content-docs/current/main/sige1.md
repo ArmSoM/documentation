@@ -33,7 +33,7 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
   - 第三方支持：Armbian
 - PCB： 6 层 PCB 板设计
 - 重量：38.9g
-- 大小：92mm × 62mm
+- 大小：92mm × 62mm x 14.6mm
 
 ## 硬件信息
 

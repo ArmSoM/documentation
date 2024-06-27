@@ -43,7 +43,7 @@ Super powerful computing performance, multi-core computing power surpasses Core 
    - Third-party support: Armbian, Ubuntu 20.04, Ubuntu22.04, Kylin OS
 - PCB: 12-layer PCB board design
 - weight:
-- Size: 92mm × 62mm
+- Size: 92mm × 62mm x 14.6mm
 
 ### 1.2. Hardware Specification
 <table>

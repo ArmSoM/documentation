@@ -32,7 +32,7 @@ This article gives an overview of the product information to you in as much deta
 | MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI |  -|
 | 40-Pin Header| yes | yes | yes |
 | LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
-|Board Dimensions| 92mm × 62mm | 92mm × 62mm | 92mm × 62mm|
+|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
 <!-- ## Comparison of Sige7/5 and RPI5 Specifications
 |        | Sige7  | Sige5 | Raspberry Pi5 |

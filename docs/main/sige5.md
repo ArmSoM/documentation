@@ -34,7 +34,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
   - Third-party Support: Armbian
 - PCB: 8-layer PCB board design
 - Weight: 43g
-- Dimensions: 92mm × 62mm
+- Dimensions: 92mm × 62mm x 14.6mm
 
 
 ## Hardware

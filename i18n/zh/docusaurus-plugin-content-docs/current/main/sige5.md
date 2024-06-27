@@ -34,7 +34,7 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
   - 第三方支持：Armbian
 - PCB： 8 层 PCB 板设计
 - 重量：43g
-- 大小：92mm × 62mm
+- 大小：92mm × 62mm x 14.6mm
 
 ## 硬件信息
 

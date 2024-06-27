@@ -49,7 +49,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
   - 3rd party: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
 - PCB: 12-layer
 - Weight: 46.6g
-- Size: 92mm × 62mm
+- Size: 92mm × 62mm x 14.6mm
 
 ## Getting started
 

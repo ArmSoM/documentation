@@ -33,7 +33,7 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
   - Third-party Support: Armbian
 - PCB: 6-layer PCB board design
 - Weight: 38.9g
-- Dimensions: 92mm × 62mm
+- Dimensions: 92mm × 62mm x 14.6mm
 
 ## Hardware
 
