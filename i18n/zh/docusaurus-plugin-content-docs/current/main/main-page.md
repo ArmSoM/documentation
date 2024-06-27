@@ -20,7 +20,7 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 |---------|--------------|--------------|---------|
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
 |[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-W3](./armsom-lm7#armsom-lm7-development-kit-armsom-w3)  [Rockchip RK3588]||
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-W3](./armsom-w3)  [Rockchip RK3588]||
 
 ## 文档中心
 

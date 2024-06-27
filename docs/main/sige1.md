@@ -297,7 +297,7 @@ Before starting to use the ArmSoM-Sige1, please prepare the following items:
 
 ### Interface Settings
 
-If you are using ArmSoM-Sige1 for the first time, please familiarize yourself with the [peripheral interfaces](#Physical-Diagram) first for better understanding of the content below.
+If you are using ArmSoM-Sige1 for the first time, please familiarize yourself with the [peripheral interfaces](#Interface Settings) first for better understanding of the content below.
 
 #### Debug Serial Port
 

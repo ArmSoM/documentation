@@ -386,7 +386,7 @@ Before using ArmSoM-sige5, please prepare the following items:
 
 ## Interface Settings
 
-If you are using ArmSoM-sige5 for the first time, please familiarize yourself with the [Peripheral Interfaces](#hardware-interfaces) for better understanding of the following content.
+If you are using ArmSoM-sige5 for the first time, please familiarize yourself with the for better understanding of the following content.
 
 ### Debug Serial Port
 

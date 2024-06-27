@@ -303,7 +303,7 @@ ArmSoM-Sige7 uboot: [https://github.com/ArmSoM/u-boot](https://github.com/ArmSoM
 
 openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
 
-RKNN-LLM: [RKNN-LLM](../general-tutorial/rknn-llm)
+RKNN-LLM: [RKNN-LLM](/general-tutorial/rknn-llm)
 
 ### 官方镜像
 
@@ -311,7 +311,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
-网盘地址：[百度网盘链接](../general-tutorial/cloud-disk)
+网盘地址：[百度网盘链接](/general-tutorial/cloud-disk)
 
 **debain bullseye**
 
@@ -346,7 +346,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 获取 Sige7 原理图、DXF等硬件资料
 
-点击进入链接: [百度网盘链接](../general-tutorial/cloud-disk)
+点击进入链接: [百度网盘链接](/general-tutorial/cloud-disk)
 
 * [ArmSoM-Sige7_1V1 原理图pdf](https://pan.baidu.com/s/1GUg1hSzNVVuuWlY-_vGloA?pwd=arms) - 原理图pdf
 
@@ -407,7 +407,7 @@ Sige7 使用手册，帮助用户了解Sige7的基本使用和需要的准备工
 
 ### 烧录方式选择
 
-[系统镜像烧录](../general-tutorial/flash-img)
+[系统镜像烧录](/general-tutorial/flash-img)
 ### 接口设置
 
 如果您是首次使用 ArmSoM-Sige7，请先熟悉下 [外设接口](#硬件接口)，以便于您更好的理解后续的内容。

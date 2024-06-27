@@ -1,9 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const {themes} = require('prism-react-renderer');
-const lightTheme = themes.github;
-const darkTheme = themes.dracula;
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ArmSoM docs',
@@ -31,12 +30,11 @@ const config = {
     defaultLocale: "en",
     locales: ["en", "zh"],
     localeConfigs: {
-      "en": {
+      en: {
         htmlLang: "en-US",
       },
-      "zh": {
-        htmlLang: "zh-Hans",
-        path: 'zh',
+      zh: {
+        htmlLang: "zh-CN",
       },
     },
   },
@@ -173,9 +171,9 @@ const config = {
         ],
       },
       prism: {
-        additionalLanguages: ['bash', 'diff', 'json'],
-        theme: lightTheme,
-        darkTheme: darkTheme,
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        additionalLanguages: ["bash"],
       },
       typography: {
         fontFamily: [

@@ -198,7 +198,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
-网盘地址：[百度网盘链接](../general-tutorial/cloud-disk)
+网盘地址：[百度网盘链接/general-tutorial/cloud-disk)
 
 **debain bullseye**
 
@@ -231,7 +231,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 获取 Sige1 原理图、DXF等硬件资料
 
-点击进入链接: [百度网盘链接](../general-tutorial/cloud-disk)
+点击进入链接: [百度网盘链接](/general-tutorial/cloud-disk)
 
 <!-- * [ArmSoM-Sige1_1V0 原理图pdf]() - 原理图pdf
 
