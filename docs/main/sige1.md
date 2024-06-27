@@ -35,6 +35,21 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
 - Weight: 38.9g
 - Dimensions: 92mm × 62mm x 14.6mm
 
+## Getting started
+
+<a href="./sige-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>Sige User Manual</h2>
+            <p>How to start using your Sige</p>
+        </div>
+    </div>
+</a>
+
+
 ## Hardware
 
 ### Hardware Interface

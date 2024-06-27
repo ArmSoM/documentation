@@ -36,6 +36,19 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 - Weight: 43g
 - Dimensions: 92mm × 62mm x 14.6mm
 
+## Getting started
+
+<a href="./sige-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>Sige User Manual</h2>
+            <p>How to start using your Sige</p>
+        </div>
+    </div>
+</a>
 
 ## Hardware
 

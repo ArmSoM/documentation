@@ -35,6 +35,21 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
 - 重量：38.9g
 - 大小：92mm × 62mm x 14.6mm
 
+## 使用手册
+
+<a href="./sige-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>Sige使用手册</h2>
+            <p>如何开始使用你的Sige</p>
+        </div>
+    </div>
+</a>
+
+
 ## 硬件信息
 
 ### 硬件接口

@@ -5,41 +5,19 @@ sidebar_position: 3
 slug: /sige-family-started
 ---
 
-# Sige 系列使用手册
+# Sige 使用手册
 
-Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的准备工作，我们会尽可能详细地向您介绍产品的信息。
-
-## Comparison of Sige7/5/1 Specifications
-
-|        | Sige7  | Sige5 | Sige1 |
-| --------- | ----- | --- | --- | 
-| SoC Process | 8nm | 8nm |  28nm |  
-| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
-| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | ARM Mali-450 GPU |
-| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | - |
-| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
-| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 16/32GB eMMC |
-| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes|  Yes|
-| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps |  1x HDMI OUT2.0b, supports 4K@60fps|
-| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| H.265, H.264, AVS2 4K@60fps|
-| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| H.264 and H.265 up to1080@60fps|
-| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |  SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
-| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - |  - |
-| Ethernet | 2x 2.5G Ethernet | 2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet|
-| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 2× USB 3.0 (capable of simultaneous full throughput) <br/> 2× USB 2.0 | 2x USB 2.0|
-| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB2.0 OTG|
-| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI |  -|
-| 40-Pin Header| yes | yes | yes |
-| LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
-|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
+Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备工作，开始使用你的ArmSoM-Sige🚀
 
 ## 入门准备
 
-在开始使用 ArmSoM-Sige 系列之前，请准备好以下物品
+在开始使用 ArmSoM-Sige 产品之前，请准备好以下物品
 
 ### 工具准备
 * 电源
 * 系统安装（二选一）
+  * 板载eMMC启动
+    * USB Type-C数据线，从 typec 端口在Sige系列上写入镜像，您需要Type-C数据线连接 Sige系列和 PC。
   * MicroSD卡/TF卡启动
     * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
     * 以下是经过ArmSoM团队测试验证的高速TF卡
@@ -47,8 +25,6 @@ Sige系列使用手册，帮助用户了解Sige系列的基本使用和需要的
       * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
       * 闪迪 TF 8G Class10 microSD 
       * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
-  * 板载eMMC启动
-    * USB Type-C数据线，从 typec 端口在Sige系列上写入镜像，您需要Type-C数据线连接 Sige系列和 PC。
 
 您可以将 Sige 设置为带有桌面的交互式计算机，也可以将其设置为仅可通过网络访问的无头计算机。要将 Sige 设置为Headless计算机，您在初次安装操作系统时配置主机名、用户帐户、网络连接和 SSH 。如果您想直接使用 Sige，则需要以下附加配件：
 
@@ -339,3 +315,27 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 #### MIPI DSI
 
 ArmSoM-Sige7 分辨率最高分辨率可达 4K@60Hz
+
+## Sige7/5/1规格比较
+
+|        | Sige7  | Sige5 | Sige1 |
+| --------- | ----- | --- | --- | 
+| SoC Process | 8nm | 8nm |  28nm |  
+| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
+| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | ARM Mali-450 GPU |
+| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | - |
+| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
+| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 16/32GB eMMC |
+| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes|  Yes|
+| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps |  1x HDMI OUT2.0b, supports 4K@60fps|
+| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| H.265, H.264, AVS2 4K@60fps|
+| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| H.264 and H.265 up to1080@60fps|
+| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |  SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
+| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - |  - |
+| Ethernet | 2x 2.5G Ethernet | 2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet|
+| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 2× USB 3.0 (capable of simultaneous full throughput) <br/> 2× USB 2.0 | 2x USB 2.0|
+| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB2.0 OTG|
+| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI |  -|
+| 40-Pin Header| yes | yes | yes |
+| LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
+|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |

@@ -29,7 +29,7 @@ Inside you'll find support to get started building your applications and systems
 
 ## Getting Help
 
-If you run into any problems using this documentation, ask your questions in our [forum](http://forum.armsom.org/) or [ArmSoM Discord](https://discord.gg/THfTEatpfK). We have an active technical support team responding regularly to assist you.
+If you run into any problems using this documentation, ask your questions in our [forum](http://forum.armsom.org/) or [Discord](https://discord.gg/THfTEatpfK). We have an active technical support team responding regularly to assist you.
 
 ## Community
 
@@ -46,7 +46,5 @@ ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
 
 ## Contact Us
-
-ArmSoM Wechat number: armsom-jackson 
 
 ArmSoM email: sales@armsom.org

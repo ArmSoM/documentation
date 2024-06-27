@@ -36,6 +36,20 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 - 重量：43g
 - 大小：92mm × 62mm x 14.6mm
 
+## 使用手册
+
+<a href="./sige-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>Sige使用手册</h2>
+            <p>如何开始使用你的Sige</p>
+        </div>
+    </div>
+</a>
+
 ## 硬件信息
 
 ### 硬件接口

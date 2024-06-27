@@ -53,7 +53,18 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ## Getting started
 
-[Getting started](./sige-family-started)
+<a href="./sige-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>Sige User Manual</h2>
+            <p>How to start using your Sige</p>
+        </div>
+    </div>
+</a>
+
 
 ## Hardware
 

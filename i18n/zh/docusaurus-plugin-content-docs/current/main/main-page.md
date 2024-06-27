@@ -15,7 +15,6 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 
 ## ArmSoM 产品
 
-### 产品
 | Single Board Computer(SBC)| Compute Module and Maker kit	| IoT/Industrial Control | Accessories|
 |---------|--------------|--------------|---------|
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
@@ -26,7 +25,7 @@ ArmSoM 最初成立于深圳，计划在未来三年内将总部迁至新加坡�
 
 欢迎来到官方 ArmSoM 文档中心 - 由我们的开发团队和用户社区维护的 ArmSoM 系列产品的教程和指南。
 
-在使用本文档的过程中，如果遇到相关问题，请通过 [论坛](http://forum.armsom.org/) 或者 [ArmSoM Discord](https://discord.gg/THfTEatpfK)，我们会第一时间回复。
+在使用本文档的过程中，如果遇到相关问题，请通过 [论坛](http://forum.armsom.org/) 或者 [ Discord](https://discord.gg/THfTEatpfK)，我们会第一时间回复。
 
 ## 加入社区
 
@@ -40,7 +39,5 @@ Discord社群: [ArmSoM Discord](https://discord.gg/THfTEatpfK) - 经验丰富的
 [ArmSoM 独立站](https://www.armsom.org/category/all-products) + [ArmSoM 速卖通官方店](https://www.aliexpress.com/store/1102800175) +  [ArmSoM 淘宝官方店](https://shop518100695.taobao.com/)
 
 ## 联系我们
-
-官方微信号: armsom-jackson
 
 官方邮箱: sales@armsom.org

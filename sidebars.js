@@ -25,15 +25,15 @@ const sidebars = {
       defaultStyle: true, // Use the default menu item styling
     }, {
       type: 'link',
-      label: '🌐 ArmSoM Offical Website', // The link label
+      label: '🌐 Offical Website', // The link label
       href: 'https://armsom.org', // The external URL
     },{
       type: 'link',
-      label: '💬 ArmSoM Forum', // The link label
+      label: '💬 Forum', // The link label
       href: 'https://forum.armsom.org', // The external URL
     }, {
       type: 'link',
-      label: '💭 ArmSoM Discord', // The link label
+      label: '💭 Discord', // The link label
       href: 'https://discord.com/invite/THfTEatpfK', // The external URL
     }, {
       type: 'html',
