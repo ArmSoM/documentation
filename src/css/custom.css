@@ -133,58 +133,57 @@
 .card-link {
   text-decoration: none!important;
   color: inherit; /* 保持链接默认颜色 */
-  .card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px); /* hover时微微上移 */
-    text-decoration: none;
-  }
-  
-  .icon {
-    /* background-color: #007bff; */
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .icon i {
-    font-size: 50px;
-  }
-  .icon i:hover {
-    text-decoration: none; /* 清除hover状态下的文本装饰 */
-  }
-  
-  .content {
-    flex: 1;
-    width: 100%;
-  }
-  
-  .card h2 {
-    color: #333333;
-    margin-top: 0;
-  }
-  
-  .card p {
-    color: #666666;
-    margin-bottom: 0;
-  }
-  
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* hover时微微上移 */
+  text-decoration: none;
+}
+
+.icon {
+  /* background-color: #007bff; */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon i {
+  font-size: 50px;
+}
+.icon i:hover {
+  text-decoration: none; /* 清除hover状态下的文本装饰 */
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}
+
+.card h2 {
+  color: #333333;
+  margin-top: 0;
+}
+
+.card p {
+  color: #666666;
+  margin-bottom: 0;
 }
