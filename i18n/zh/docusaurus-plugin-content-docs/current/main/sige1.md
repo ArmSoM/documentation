@@ -183,14 +183,14 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
-|2    | GND | 地 |
+|2    | GND | 地 | 
 |3    | PWM | PWM控制 |
 
 #### EARPHONE
 0.8mm 连接器(CON3101)
 
 |Pin        | Assignment  | Description|
- :--------: | :---------: | :--------: | 
+|:--------: | :---------: | :--------:  | 
 |1          | AOR         | 右声道      |
 |2          | AOL         | 左声道      |
 |3          | GND         | 地          |
@@ -199,11 +199,11 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 ### SDK源码
 
-ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
+ArmSoM github source code : [https://github.com/armbian/build](https://github.com/armbian/build)
 
 ArmSoM-Sige1 kernel: 
 
-ArmSoM-Sige1 uboot: 
+ArmSoM-Sige1 uboot: [https://github.com/rockchip-linux/u-boot.git](https://github.com/rockchip-linux/u-boot.git)
 
 openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
 
@@ -256,221 +256,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 * [ArmSoM-Sige1 元件datasheet]() -  datasheet下载 -->
 
-
-## 使用手册
-
-Sige1 使用手册，帮助用户了解Sige1的基本使用和需要的准备工作。 当您拿到产品的时候，您需要知道它的型号以及硬件版本，这些信息都可以在板子上的丝印找到。我们会尽可能详细地向您介绍产品的信息。
-
-### 入门准备
-在开始使用 ArmSoM-Sige1 之前，请准备好以下物品
-
-#### 工具准备
-* Sige1 主板
-* 电源: USB Type-C
-  * 支持 9V/2A, 12V/2A, 15V/2A
-* 系统安装（二选一）
-  * MicroSD卡/TF卡启动
-    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
-    * 以下是经过ArmSoM团队测试验证的高速TF卡
-      * SanDisk 32GB TF（MicroSD）（开发者推荐）
-      * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
-      * 闪迪 TF 8G Class10 microSD 
-      * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
-  * 板载eMMC启动
-    * USB Type-C数据线，从 typec 端口在 Sige1 上写入镜像，您需要 Type-C 数据线连接 Sige1 和 PC。
-
-#### 可选选项
-* USB 键盘鼠标
-* HDMI显示器和HDMI线
-  * Sige1配备了全尺寸 HDMI 接口，最高支持 8K@60 显示。
-  * HDMI EDID用于确定最佳显示分辨率。 在支持 1080p（或 4K/8K）的显示器和电视上，将选择此分辨率。 如果不支持 1080p，EDID会找到的下一个可用分辨率。
-* Ethernet 线（网线）
-  * Sige1 支持以太网上网，最高支持2.5Gb。
-  * 网线用于将 Sige1 连接到本地网络和互联网。
-* 音频线
-  * 可以使用0.8mm立式插座。
-* USB-A型转USB-C型数据线
-
-### 烧录方式选择
-
-[系统镜像烧录](/general-tutorial/flash-img)
-### 接口设置
-
-如果您是首次使用 ArmSoM-Sige1，请先熟悉下 [外设接口](#硬件接口)，以便于您更好的理解后续的内容。
-
-#### 调试串口
-
-如下所示连接 USB 转 TTL 串口线：
-
-![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
-
-| Sige1       | 连接  | 串口模块 |
-| --------------- | ----- | ------ |
-| **GND** (pin 6) | ---> | GND |
-| **TX** (pin 8)  | ---> | RX |
-| **RX** (pin 10) | ---> | TX |
-
-
-#### 千兆/2.5G 以太网口
-
-如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-Sige1 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
-
-- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 enP2p33s0 或 enP4p65s0 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
-
-```bash
-ifconfig
-ping mi.com
-```
-
-- 如果无法ping通，尝试
-
-```bash
-$ sudo dhclient enP2p33s0
-or
-$ sudo dhclient enP4p65s0
-```
-
-#### WIFI
-```
-# 1. Open the WIFI
-armsom@armsom-sige1:/# nmcli r wifi on
-# 2. Scan WIFI
-armsom@armsom-sige1:/# nmcli dev wifi
-# 3. Connect to WIFI network
-armsom@armsom-sige1:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
-```
-
-#### BT
-
-```
-# 1. 激活蓝牙
-armsom@armsom-sige1:/# service bluetooth start
-# 2. 进入bluetoothctl
-armsom@armsom-sige1:/# bluetoothctl
-# 3. 输入以下命令即可连接
-armsom@armsom-sige1:/# power on
-armsom@armsom-sige1:/# agent on
-armsom@armsom-sige1:/# default-agent
-armsom@armsom-sige1:/# scan on
-armsom@armsom-sige1:/# pair yourDeviceMAC
-```
-
-#### HDMI
-
-ArmSoM-Sige1 有HDMI 输出端口，支持 CEC 和 HDMI 2.1，分辨率最高支持 8Kp60。
-
-#### USB接口
-
-ArmSoM-Sige1 提供两个 USB 2.0 端口。
-
-
-#### 音频
-
-查看系统中的声卡。
-
-```bash
-armsom@armsom-sige1:/# aplay -l
-**** List of PLAYBACK Hardware Devices ****
-card 0: rockchiphdmi [rockchip,hdmi], device 0: rockchip,hdmi i2s-hifi-0 [rockchip,hdmi i2s-hifi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 1: rk3528acodec [rk3528-acodec], device 0: ffb90000.sai-rk3528-hifi ffe10000.acodec-0 [ffb90000.sai-rk3528-hifi ffe10000.acodec-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-```
-
-
-播放音乐
-
-```bash
-armsom@armsom-sige1:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
-```
-
-
-#### 风扇
-
-Sige1 配备一个 5V 的风扇，使用 0.8mm 的连接器
-
-目前风扇默认五个状态
-
-| 温度       | 状态  | PWM转速 |
-| --------------- | ----- | ------ |
-| 小于50° | 0 | 0 |
-| 50°-55°  | 1 | 50 |
-| 55°-60° | 2 | 100 |
-| 60°-65° | 3 | 150 |
-| 65°-70° | 4 | 200 |
-| 70°以上 | 5 | 250 |
-
-```
-// 查看当前转速 
-armsom@armsom-Sige1:/# cat /sys/class/hwmon/hwmon1/pwm1
-```
-
-#### Type-C
-
-Sige1 配备 USB Type‑C™ 2.0 端口，支持OTG
-
-#### 40Pin
-
-Sige1 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
-
-#### RGB LED
-
-Sige1 具有两个用户灯 LED 绿灯和红灯。
-
-- 用户绿灯
-  默认情况下，其常亮表示系统运行正常。
-
-- 用户红灯
-  默认情况下不亮，可由用户自行操控。
-
-用户可通过命令控制
-
-```
-armsom@armsom-sige1:/# sudo su
-armsom@armsom-sige1:/# echo timer > /sys/class/leds/red\:status/trigger
-armsom@armsom-sige1:/# echo activity > /sys/class/leds/red\:status/trigger
-```
-
-#### RTC
-
-- Sige1配备了一颗RTC IC **hym8563**。
-- 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
-- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc hym8563 设备已创建
-
-```bash
-armsom@armsom-Sige1:/#  dmesg | grep rtc
-[    6.407133] rtc-hym8563 6-0051: rtc information is valid
-[    6.412731] rtc-hym8563 6-0051: registered as rtc0
-[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
-```
-
-- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
-
-```bash
-armsom@armsom-sige1:/# hwclock -r
-2023-11-03 10:32:40.461910+00:00
-armsom@armsom-sige1:/# date
-2023年 11月 03日 星期五 10:33:12 UTC
-armsom@armsom-sige1:/# hwclock -w
-armsom@armsom-sige1:/# hwclock -r
-armsom@armsom-sige1:/# poweroff
-```
-
-- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动Sige7，检查RTC是否与系统时钟同步
-
-```bash
-armsom@armsom-sige1:/# hwclock -r
-2023-11-03 10:35:40.461910+00:00
-armsom@armsom-sige1:/# date
-2023年 11月 03日 星期五 10:36:01 UTC
-```
-
 ## 产品证书
 
 ### CE / FC / RoHS
-
 
 
 ## 样品购买

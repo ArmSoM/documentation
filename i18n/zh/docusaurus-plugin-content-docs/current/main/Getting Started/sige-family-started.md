@@ -98,43 +98,48 @@ $ sudo dhclient enP4p65s0
 #### WIFI
 ```
 # 1. Open the WIFI
-armsom@armsom-sige7:/# nmcli r wifi on
+armsom@armsom-sige:/# nmcli r wifi on
 # 2. Scan WIFI
-armsom@armsom-sige7:/# nmcli dev wifi
+armsom@armsom-sige:/# nmcli dev wifi
 # 3. Connect to WIFI network
-armsom@armsom-sige7:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
 
 #### BT
 
 ```
 # 1. 激活蓝牙
-armsom@armsom-sige7:/# service bluetooth start
+armsom@armsom-sige:/# service bluetooth start
 # 2. 进入bluetoothctl
-armsom@armsom-sige7:/# bluetoothctl
+armsom@armsom-sige:/# bluetoothctl
 # 3. 输入以下命令即可连接
-armsom@armsom-sige7:/# power on
-armsom@armsom-sige7:/# agent on
-armsom@armsom-sige7:/# default-agent
-armsom@armsom-sige7:/# scan on
-armsom@armsom-sige7:/# pair yourDeviceMAC
+armsom@armsom-sige:/# power on
+armsom@armsom-sige:/# agent on
+armsom@armsom-sige:/# default-agent
+armsom@armsom-sige:/# scan on
+armsom@armsom-sige:/# pair yourDeviceMAC
 ```
 
 #### HDMI
 
-ArmSoM-Sige7 有HDMI 输出端口，支持 CEC 和 HDMI 2.1，分辨率最高支持 8Kp60。
+| 型号 |Sige7       | Sige5  | Sige1 |
+| ----- |  ----- | ------ |- ---- | 
+| 分辨率  | 8Kp60 | 4Kp120 |4Kp60|
+
 
 #### USB接口
 
-ArmSoM-Sige7 提供一个 USB 2.0 和一个 USB 3.0 端口。
+|  型号  |Sige7       | Sige5  | Sige1 |
+| ----- |  ----- | ------ |- ---- | 
+| USB   | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 |2x USB2.0|
 
 **USB3.0 Camera**
 
 连接usb3.0摄像头后，您可以下载 cheese 然后使用以下命令使用摄像机:
 
 ```bash
-armsom@armsom-sige7: sudo apt update
-armsom@armsom-sige7: sudo apt install cheese
+armsom@armsom-sige: sudo apt update
+armsom@armsom-sige: sudo apt install cheese
 ```
 
 同时，您也可以使用终端命令打开相机预览:
@@ -159,7 +164,7 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 查看系统中的声卡。
 
 ```bash
-armsom@armsom-sige7:/# aplay -l
+armsom@armsom-sige:/# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
  Subdevices: 1/1
@@ -175,12 +180,12 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
 播放音乐
 
 ```bash
-armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
+armsom@armsom-sige:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
 ```
 
 #### 风扇
 
-Sige7 配备一个 5V 的风扇，使用 0.8mm 的连接器
+Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
 目前风扇默认五个状态
 
@@ -195,20 +200,16 @@ Sige7 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
 ```
 // 查看当前转速 
-armsom@armsom-sige7:/# cat /sys/class/hwmon/hwmon9/pwm1
+armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
-
-#### Type-C
-
-Sige7 配备全功能 USB Type‑C™ 3.0 端口，支持高达 8K@30fps 的 DP 显示
 
 #### 40Pin
 
-Sige7 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
+Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
 #### RGB LED
 
-Sige7 具有两个用户灯 LED 绿灯和红灯。
+Sige 具有两个用户灯 LED 绿灯和红灯。
 
 - 用户绿灯
   默认情况下，其常亮表示系统运行正常。
@@ -219,19 +220,19 @@ Sige7 具有两个用户灯 LED 绿灯和红灯。
 用户可通过命令控制
 
 ```
-armsom@armsom-sige7:/# sudo su
-armsom@armsom-sige7:/# echo timer > /sys/class/leds/red/trigger
-armsom@armsom-sige7:/# echo activity > /sys/class/leds/red/trigger
+armsom@armsom-sige:/# sudo su
+armsom@armsom-sige:/# echo timer > /sys/class/leds/red/trigger
+armsom@armsom-sige:/# echo activity > /sys/class/leds/red/trigger
 ```
 
 #### RTC
 
-- Sige7配备了一颗RTC IC **LK8563S**。
+- Sige配备了一颗RTC IC **LK8563S**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
 - 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc LK8563S 设备已创建
 
 ```bash
-armsom@armsom-sige7:/#  dmesg | grep rtc
+armsom@armsom-sige:/#  dmesg | grep rtc
 [    6.407133] rtc-hym8563 6-0051: rtc information is valid
 [    6.412731] rtc-hym8563 6-0051: registered as rtc0
 [    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
@@ -240,34 +241,34 @@ armsom@armsom-sige7:/#  dmesg | grep rtc
 - 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
 
 ```bash
-armsom@armsom-sige7:/# hwclock -r
+armsom@armsom-sige:/# hwclock -r
 2023-11-03 10:32:40.461910+00:00
-armsom@armsom-sige7:/# date
+armsom@armsom-sige:/# date
 2023年 11月 03日 星期五 10:33:12 UTC
-armsom@armsom-sige7:/# hwclock -w
-armsom@armsom-sige7:/# hwclock -r
-armsom@armsom-sige7:/# poweroff
+armsom@armsom-sige:/# hwclock -w
+armsom@armsom-sige:/# hwclock -r
+armsom@armsom-sige:/# poweroff
 ```
 
 - 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动Sige7，检查RTC是否与系统时钟同步
 
 ```bash
-armsom@armsom-sige7:/# hwclock -r
+armsom@armsom-sige:/# hwclock -r
 2023-11-03 10:35:40.461910+00:00
-armsom@armsom-sige7:/# date
+armsom@armsom-sige:/# date
 2023年 11月 03日 星期五 10:36:01 UTC
 ```
 
 #### M.2接口
 
-ArmSoM-Sige7 提供 M.2 连接器：
+只有ArmSoM-Sige7 提供 M.2 连接器：
 
 - 产品的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
   **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
 
 ```
-armsom@armsom-sige7:/# mkdir temp
-armsom@armsom-sige7:/# mount /dev/nvme0n1 temp
+armsom@armsom-sige:/# mkdir temp
+armsom@armsom-sige:/# mount /dev/nvme0n1 temp
 ```
 
 #### 摄像头
@@ -277,7 +278,7 @@ armsom@armsom-sige7:/# mount /dev/nvme0n1 temp
   摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
 
 ```bash
-armsom@armsom-sige7:/# dmesg | grep imx415
+armsom@armsom-sige:/# dmesg | grep imx415
 [    2.547754] imx415 3-001a: driver version: 00.01.08
 [    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
 [    2.547819] imx415 3-001a: Failed to get power-gpios
@@ -295,26 +296,26 @@ armsom@armsom-sige7:/# dmesg | grep imx415
   使用v4l2-ctl进行抓图
 ```
 // MIPI-CSI1
-armsom@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+armsom@armsom-sige:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
 
 // MIPI-CSI2
-armsom@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+armsom@armsom-sige:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
 ```
 
 使用gst-launch-1.0可直接录像
 ```
 // MIPI-CSI1
-armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 
 // MIPI-CSI2
-armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
 
 #### MIPI DSI
 
-ArmSoM-Sige7 分辨率最高分辨率可达 4K@60Hz
+ArmSoM-Sige7/5 分辨率最高分辨率可达 4K@60Hz
 
 ## Sige7/5/1规格比较
 
