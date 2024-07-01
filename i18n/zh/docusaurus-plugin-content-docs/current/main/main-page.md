@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /
 ---
 
-![ArmSoM Open source ](/img/banana.jpg)
+![ArmSoM Open source ](/img/banana.png)
 
 ArmSoM 诞生于对开源创新和自由的共同热情，由一群充满活力的年轻开发者团队于 2021 年创立。
 

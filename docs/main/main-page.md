@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /
 ---
 
-![ArmSoM Open source ](/img/banana.jpg)
+![ArmSoM Open source ](/img/banana.png)
 
 Born from a shared passion for open-source innovation and freedom, ArmSoM was established in 2021 by a team of spirited young developers.
 
