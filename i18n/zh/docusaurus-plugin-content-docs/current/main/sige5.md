@@ -63,7 +63,10 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 :::
 
 ### 硬件规格
-
+<details>
+    <summary>
+        Sige5 硬件规格
+    </summary>
 
 <table>
     <thead>
@@ -160,15 +163,25 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     </tbody>
 </table>
 
-### RK3576框图
+</details>
 
-![RK3576](/img/sige/rk3576.png)
+### RK3576框图
+<details>
+    <summary>
+        RK3576 框图
+    </summary>
+    <img
+  src="/img/sige/rk3576.png"
+  alt="rk3576 block diagram"
+  className="session-details-live-video"/>
+</details>
 
 ### 引脚定义
-
-#### 40-pin 座子
-
-<div className='gpio_style'>
+<details>
+    <summary>
+        40-pin 座子
+    </summary>
+    <div className='gpio_style'>
 
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
@@ -194,8 +207,12 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 | | GND | <div className='black'>39</div>  | <div className='green'>40</div> |  I3C0_SDA_PU_M0/UART10_RX_M2/ DP_HPDIN_M1/ SAI0_SDO0_M1 / GPIO0_C5_d | 21|
 
 </div>
+</details>
 
-#### MIPI CSI0
+<details>
+    <summary>
+        MIPI CSI0
+    </summary>
 0.5mm FPC 连接器
 
 |Pin |   MIPI-CSI |   描述   |
@@ -224,8 +241,12 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 |27         | MIPI_DPHY_CSI1/2_RST(GPIO3_C6)|   3.3V, GPIO |
 |28,29      | VCC_RX|   3.3V Power ouput |
 |30,31      | VCC_5V0|   5V Power ouput |
+</details>
 
-#### MIPI CSI1
+<details>
+    <summary>
+       MIPI CSI1
+    </summary>
 0.5mm FPC 连接器
 
 |Pin |   MIPI-CSI |   描述   |
@@ -254,8 +275,12 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 |27    | MIPI_DPHY_CSI3/4_RST|   3.3V, GPIO |
 |28,29 | VCC_RX|   3.3V Power ouput |
 |30,31 | VCC_5V0|   5V Power ouput |
+</details>
 
-#### MIPI DSI
+<details>
+    <summary>
+       MIPI DSI
+    </summary>
 0.5mm FPC 连接器 (J23)
 
 |Pin |   MIPI-DSI  |   描述     |
@@ -282,15 +307,33 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 |26                           | TP_RST_L  |   1.8V, GPIO |
 |28,29                        | VCC5V0_LCD |  5V Power ouput |
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
+</details>
 
-#### Fan
-0.8mm 连接器(CN32)
+<details>
+    <summary>
+        Fan
+    </summary>
+0.8mm 连接器(CON3102)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
-|2    | GND | 地 |
+|2    | GND | 地 | 
 |3    | PWM | PWM控制 |
+</details>
+
+<details>
+    <summary>
+        EARPHONE
+    </summary>
+0.8mm 连接器(CON3101)
+
+|Pin        | Assignment  | Description|
+|:--------: | :---------: | :--------:  | 
+|1          | AOR         | 右声道      |
+|2          | AOL         | 左声道      |
+|3          | GND         | 地          |
+</details>
 
 
 ## 开发资料

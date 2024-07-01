@@ -78,7 +78,11 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 :::
  
 ### Hardware Spec
-<table>
+<details>
+    <summary>
+        RK3576 Hardware Spec
+    </summary>
+    <table>
     <thead>
         <tr>
             <th>Category</th>
@@ -172,16 +176,27 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
     </tbody>
 </table>
+</details>
 
 ### RK3588 Block Diagram
 
-![RK3588](/img/sige/rk3588.png)
-
+<details>
+    <summary>
+        RK3588 Block Diagram
+    </summary>
+    <img
+  src="/img/sige/rk3588.png"
+  alt="rk3588 block diagram"
+  className="session-details-live-video"/>
+</details>
 
 ### Hardware Pin Definitions
 
-#### 40-pin header
-
+<details>
+    <summary>
+        40-pin header
+    </summary>
+   
 <div className='gpio_style'>
 
 | GPIO number |  Function |   Pin    |  Pin     |  Function  | GPIO number |
@@ -208,9 +223,13 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 |             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO3_B3 /  UART2_RTSN / I2S2_SDO_M1   |     107     |
 
 </div>
+</details>
 
-#### MIPI CSI0
-
+<details>
+    <summary>
+        MIPI CSI0
+    </summary>
+    
 0.5mm FPC connector
 
 |Pin |   MIPI-CSI |   Description   |
@@ -239,9 +258,12 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 |27         | CM_RST_L(GPIO4_A0)|   3.3V, GPIO |
 |28,29      | VCC_RX|   3.3V Power ouput |
 |30,31      | VCC_5V0|   5V Power ouput |
+</details>
 
-#### MIPI CSI1
-
+<details>
+    <summary>
+        MIPI CSI1
+    </summary>
 0.5mm FPC connector
 
 |Pin |   MIPI-CSI |   Description   |
@@ -270,8 +292,13 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 |27    | CM2_RST_L(GPIO4_A0)|   3.3V, GPIO |
 |28,29 | VCC_RX|   3.3V Power ouput |
 |30,31 | VCC_5V0|   5V Power ouput |
+</details>
 
-#### MIPI DSI
+<details>
+    <summary>
+        MIPI DSI
+    </summary>
+
 0.5mm FPC connector (J23)
 
 |Pin |   MIPI-DSI  |   Description     |
@@ -298,15 +325,33 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 |26                           | TP_RST (GPIO0_C6)|   1.8V, GPIO |
 |28,29                        | VCC5V0_LCD |  5V Power ouput |
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
+</details>
+<details>
+    <summary>
+        Fan
+    </summary>
 
-#### Fan
-0.8mm connector(CN32)
+0.8mm connector(CON3102)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | GND |
 |3    | PWM | PWM control |
+</details>
+<details>
+    <summary>
+        EARPHONE
+    </summary>
+
+0.8mm connector(CON3101)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | AOR         | right channel      |
+|2          | AOL         | left channel      |
+|3          | GND         | GND          |
+</details>
 
 ## Resources
 

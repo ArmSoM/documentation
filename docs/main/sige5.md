@@ -64,7 +64,11 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 
 ### Hardware Spec
 
-
+<details>
+    <summary>
+        RK3528 Hardware Spec
+    </summary>
+   
 <table>
     <thead>
         <tr>
@@ -172,16 +176,26 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
     </tbody>
 </table>
+</details>
 
 ### RK3576 Block Diagram
-
-![RK3576](/img/sige/rk3576.png)
+<details>
+    <summary>
+        RK3576 Block Diagram
+    </summary>
+    <img
+  src="/img/sige/rk3576.png"
+  alt="rk3576 block diagram"
+  className="session-details-live-video"/>
+</details>
 
 ### Hardware Pin Definitions
 
-#### 40-pin header
-
-<div className='gpio_style'>
+<details>
+    <summary>
+        40-pin header
+    </summary>
+   <div className='gpio_style'>
 
 | GPIO number |  Function |   Pin    |  Pin     |  Function  | GPIO number |
 | :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
@@ -207,9 +221,13 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 | | GND | <div className='black'>39</div>  | <div className='green'>40</div> |  I3C0_SDA_PU_M0/UART10_RX_M2/ DP_HPDIN_M1/ SAI0_SDO0_M1 / GPIO0_C5_d | 21|
 
 </div>
+</details>
 
-#### MIPI CSI0
-
+<details>
+    <summary>
+        MIPI CSI1
+    </summary>
+  
 0.5mm FPC connector
 
 |Pin |   MIPI-CSI |   Description   |
@@ -239,38 +257,13 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |28,29      | VCC_RX|   3.3V Power ouput |
 |30,31      | VCC_5V0|   5V Power ouput |
 
-#### MIPI CSI1
+</details>
 
-0.5mm FPC connector
 
-|Pin |   MIPI-CSI |   Description   |
-|:--------: | :---------------------: | :--------: | 
-|1,4,7,10,13,16,24,25,26,27,32,33        |  GND       |   Power Ground &  Signal Ground |
-|2     | MIPI_DPHY_CSI3_RX_D3N   |     MIPI RX Lane3 iuput N |
-|3     | MIPI_DPHY_CSI3_RX_D3P   |   MIPI RX Lane3 iuput P |
-|5     | MIPI_DPHY_CSI3_RX_D2N |   MIPI RX Lane2 iuput N |
-|6     | MIPI_DPHY_CSI3_RX_D2P|   MIPI RX Lane2 iuput P |
-|8     | MIPI_DPHY_CSI4_RX_CLKN|   MIPI RX Clock iuput N |
-|9     | MIPI_DPHY_CSI4_RX_CLKP |   MIPI RX Clock iuput P |
-|11    | MIPI_DPHY_CSI3_RX_D1N |   MIPI RX Lane1 iuput N |
-|12    | MIPI_DPHY_CSI3_RX_D1P |   MIPI RX Lane1 iuput P |
-|14    | MIPI_DPHY_CSI3_RX_D0N|    MIPI RX Lane0 iuput N |
-|15    | MIPI_DPHY_CSI3_RX_D0P |    MIPI RX Lane0 iuput P |
-|17    | MIPI_DPHY_CSI3_RX_CLKN|   MIPI RX Clock iuput N |
-|18    | MIPI_DPHY_CSI3_RX_CLKP|  MIPI RX Clock iuput P |
-|19    | MIPI_CSI3_RX_XVS        |    |
-|20    | MIPI_DPHY_CSI4_CAM_CLKOUT_CON|    1.8V, CLock ouput for Sensor / GPIO |
-|21    | MIPI_CSI3_RX_XHS        |    |
-|22    | MIPI_DPHY_CSI3_CAM_CLKOUT |   1.8V, CLock ouput for Sensor |
-|23    | MIPI_DPHY_CSI3_PDN_H |    1.8V, GPIO |
-|24    | I2C4_SCL_M3_MIPI_CSI3 |   1.8V, I2C Clock, pulled up to 1.8V with 2.2K on sige5 |
-|25    | I2C4_SDA_M3_MIPI_CSI3 |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on sige5 |
-|26    | MIPI_DPHY_CSI4_PDN_H|  1.8V, GPIO |
-|27    | MIPI_DPHY_CSI3/4_RST|   3.3V, GPIO |
-|28,29 | VCC_RX|   3.3V Power ouput |
-|30,31 | VCC_5V0|   5V Power ouput |
-
-#### MIPI DSI
+<details>
+    <summary>
+       MIPI DSI
+    </summary>
 0.5mm FPC connector
 
 |Pin |   MIPI-DSI  |   Description     |
@@ -298,7 +291,12 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |28,29                        | VCC5V0_LCD |  5V Power ouput |
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
 
-#### Fan
+</details>
+<details>
+    <summary>
+        Fan
+    </summary>
+
 0.8mm connector(CON3102)
 
 |Pin |Assignment |   Description |
@@ -306,6 +304,20 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | GND |
 |3    | PWM | PWM control |
+</details>
+<details>
+    <summary>
+        EARPHONE
+    </summary>
+
+0.8mm connector(CON3101)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | AOR         | right channel      |
+|2          | AOL         | left channel      |
+|3          | GND         | GND          |
+</details>
 
 
 ## Resources
