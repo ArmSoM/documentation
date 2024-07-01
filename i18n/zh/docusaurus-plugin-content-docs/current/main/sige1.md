@@ -40,7 +40,7 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
 <a href="./sige-family-started" class="card-link">
     <div class="card">
         <div class="icon">
-            <i>📝</i>
+            <i>✈️</i>
         </div>
         <div class="content">
             <h2>Sige使用手册</h2>
@@ -48,7 +48,6 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
         </div>
     </div>
 </a>
-
 
 ## 硬件信息
 
@@ -129,7 +128,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
         <tr>
             <th>系统</th>
-            <th><li>Rockchip官方支持：Android 9.0_box，Debian11，Buildroot</li><li>第三方支持：Armbian，Istoreos</li></th>
+            <th><li>Rockchip官方支持：Android 9.0_box，Debian11</li><li>第三方支持：Armbian，Istoreos</li></th>
         </tr>
         <tr>
             <th>尺寸</th>
@@ -199,13 +198,43 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 ### SDK源码
 
-ArmSoM github source code : [https://github.com/armbian/build](https://github.com/armbian/build)
+<div class="cards">
+    <a href="https://github.com/armbian/build" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>Armbian源码</h2>
+                <p>适用于 ARM 开发板的 Linux</p>
+            </div>
+        </div>
+    </a>
 
-ArmSoM-Sige1 kernel: 
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>Sige1 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
 
-ArmSoM-Sige1 uboot: [https://github.com/rockchip-linux/u-boot.git](https://github.com/rockchip-linux/u-boot.git)
-
-openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>Sige1 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### 官方镜像
 
@@ -213,48 +242,79 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
-网盘地址：[百度网盘链接/general-tutorial/cloud-disk)
+网盘地址：
 
-**debain bullseye**
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>百度网盘链接</span>
+</a>
 
-固件位置：3. Linux镜像/debian/ArmSoM-Sige1 - 
+**Debain bullseye**
 
-**安卓14**
+固件位置：3. Linux镜像/debian/ArmSoM-Sige1 - [百度网盘](https://pan.baidu.com/s/11rAILx3rdqwaeaQhhzDXKQ?pwd=arms)
 
-固件位置：4. 安卓镜像/ArmSoM-Sige1 - 
+**Android9 BOX**
 
-**openwrt**
+固件位置：4. 安卓镜像/ArmSoM-Sige1 - [百度网盘](https://pan.baidu.com/s/183xx4V1_-WiKn5jipoWitQ?pwd=arms)
 
-固件位置：3. Linux镜像/openwrt/ArmSoM-Sige1- [百度网盘](https://pan.baidu.com/s/1nvlyxaDbpAlKoZYknDSe4g?pwd=arms )
+**Openwrt**
+
+固件位置：3. Linux镜像/openwrt/ArmSoM-Sige1- [百度网盘](https://pan.baidu.com/s/1fjdLardr3EwCH_QWqUHfHQ?pwd=arms)
 
 ### 第三方镜像
 
-**armbian**
-
-![armbian-logo](/img/armbian-logo.webp)
-
-固件位置：3. Linux镜像/armbian/ArmSoM-Sige1 - 
-
-[armbian/community/releases](https://github.com/armbian/community/releases) 
-
-**Ubuntu**  
-
-固件位置: 3. Linux Images/ubuntu/ArmSoM-Sige1 - 
-
+|        |   | Description|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://www.armbian.com/bananapi-m7/ )     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7(bpi-m7) :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 
 获取 Sige1 原理图、DXF等硬件资料
 
-点击进入链接: [百度网盘链接](/general-tutorial/cloud-disk)
+<div class="cards">
+    <a href="https://github.com/armbian/build" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>Sige1 SCH</h2>
+            </div>
+        </div>
+</a>
 
-<!-- * [ArmSoM-Sige1_1V0 原理图pdf]() - 原理图pdf
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Sige1 2D</h2>
+        </div>
+    </div>
+</a>
 
-* [ArmSoM-Sige1_1V1 底部，顶部]() - 2D CAD 文件下载
-
-* [ArmSoM-Sige1_1V1 位号图]() -  位号图下载
-
-* [ArmSoM-Sige1 元件datasheet]() -  datasheet下载 -->
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>Sige1 SMD</h2>
+        </div>
+    </div>
+</a>
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+</div>
 
 ## 产品证书
 

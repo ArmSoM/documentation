@@ -16,7 +16,6 @@ ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit pr
 
 AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVR and other fields.
 
-![ArmSoM-sige7](/img/sige/sige7.jpg)
 
 :::tip Rockchip RK3588
 
