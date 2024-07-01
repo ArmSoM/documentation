@@ -60,8 +60,11 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 ### 硬件规格
 
-
-<table>
+<details>
+    <summary>
+        RK3528 硬件规格
+    </summary>
+    <table>
     <thead>
         <tr>
             <th>类别</th>
@@ -140,22 +143,22 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
     </tbody>
 </table>
+</details>
 
 ### RK3528框图
 
 <details>
     <summary>
-        RK3528 Block Diagram
+        RK3528 框图
     </summary>
     <img
-  src="/static/img/sige/rk3528.png"
-  alt="chat-sdk"
+  src="./img/sige/rk3528.png"
+  alt="rk3528 block diagram"
   className="session-details-live-video"/>
 </details>
 
 
 ### 引脚定义
-
 
 <details>
     <summary>
@@ -190,14 +193,10 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 </div>
 </details>
 
-#### Fan
-
 <details>
     <summary>
         Fan
     </summary>
-
-0.8mm 连接器(CON3102)
 
 0.8mm 连接器(CON3102)
 

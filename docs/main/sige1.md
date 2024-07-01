@@ -186,7 +186,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
     </summary>
     <img
   src="/img/sige/rk3528.png"
-  alt="chat-sdk"
+  alt="rk3528 block diagram"
   className="session-details-live-video"/>
 </details>
 
