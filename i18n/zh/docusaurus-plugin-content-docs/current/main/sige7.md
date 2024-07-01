@@ -51,7 +51,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 <a href="./sige-family-started" class="card-link">
     <div class="card">
         <div class="icon">
-            <i>📝</i>
+            <i>✈️</i>
         </div>
         <div class="content">
             <h2>Sige使用手册</h2>

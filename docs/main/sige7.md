@@ -56,7 +56,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 <a href="./sige-family-started" class="card-link">
     <div class="card">
         <div class="icon">
-            <i>📝</i>
+            <i>✈️</i>
         </div>
         <div class="content">
             <h2>Sige User Manual</h2>

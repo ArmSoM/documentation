@@ -41,7 +41,7 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 <a href="./sige-family-started" class="card-link">
     <div class="card">
         <div class="icon">
-            <i>📝</i>
+            <i>✈️</i>
         </div>
         <div class="content">
             <h2>Sige使用手册</h2>

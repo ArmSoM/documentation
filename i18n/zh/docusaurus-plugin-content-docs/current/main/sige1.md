@@ -157,14 +157,12 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
   className="session-details-live-video"/>
 </details>
 
-
 ### 引脚定义
 
 <details>
     <summary>
         40-pin 座子
     </summary>
-
 <div className='gpio_style'>
 
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
@@ -197,7 +195,6 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
     <summary>
         Fan
     </summary>
-
 0.8mm 连接器(CON3102)
 
 |Pin |Assignment |   Description |
@@ -211,7 +208,6 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
     <summary>
         EARPHONE
     </summary>
-
 0.8mm 连接器(CON3101)
 
 |Pin        | Assignment  | Description|

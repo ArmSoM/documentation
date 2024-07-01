@@ -41,7 +41,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 <a href="./sige-family-started" class="card-link">
     <div class="card">
         <div class="icon">
-            <i>📝</i>
+            <i>✈️</i>
         </div>
         <div class="content">
             <h2>Sige User Manual</h2>
