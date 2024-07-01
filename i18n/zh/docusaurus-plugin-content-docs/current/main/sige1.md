@@ -143,11 +143,24 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 ### RK3528框图
 
-![RK3528](/img/sige/rk3528.png)
+<details>
+    <summary>
+        RK3528 Block Diagram
+    </summary>
+    <img
+  src="/static/img/sige/rk3528.png"
+  alt="chat-sdk"
+  className="session-details-live-video"/>
+</details>
+
 
 ### 引脚定义
 
-#### 40-pin 座子
+
+<details>
+    <summary>
+        40-pin 座子
+    </summary>
 
 <div className='gpio_style'>
 
@@ -175,8 +188,17 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 | |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_A7_d /  UART1_RX_M0 / I2S1_SDO0   |     107     |
 
 </div>
+</details>
 
 #### Fan
+
+<details>
+    <summary>
+        Fan
+    </summary>
+
+0.8mm 连接器(CON3102)
+
 0.8mm 连接器(CON3102)
 
 |Pin |Assignment |   Description |
@@ -184,8 +206,13 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | 地 | 
 |3    | PWM | PWM控制 |
+</details>
 
-#### EARPHONE
+<details>
+    <summary>
+        EARPHONE
+    </summary>
+
 0.8mm 连接器(CON3101)
 
 |Pin        | Assignment  | Description|
@@ -193,6 +220,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 |1          | AOR         | 右声道      |
 |2          | AOL         | 左声道      |
 |3          | GND         | 地          |
+</details>
 
 ## 开发资料
 

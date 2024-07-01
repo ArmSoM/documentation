@@ -341,6 +341,10 @@ Network disk address: [Google Drive link](https://drive.google.com/drive/folders
 
 Firmware location: 3. Linux image/debian/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1bHQG3pr3tHi_2uybN6RvQA1o4lnUpeGN) 
 
+**Android 12**
+
+Image location: 4. Android Images/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/file/d/1SX3IO14Kdy-3wIOqLpmG9oSfuj1XAOzT/view?usp=drive_link)
+
 ### Third Party System  
 
 **Ubuntu**  
