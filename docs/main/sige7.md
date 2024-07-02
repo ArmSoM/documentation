@@ -361,16 +361,55 @@ Download : [Google Drive link](https://drive.google.com/drive/folders/1zzB_xiWJ-
 
 ### Source Code
 
-ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
 
-ArmSoM-Sige7 kernel: [https://github.com/ArmSoM/ubuntu-linux-rockchip](https://github.com/ArmSoM/ubuntu-linux-rockchip)
+<div class="cards">
+<a href="https://github.com/armbian/build" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Armbian Source Code</h2>
+            <p>Linux for ARM development boards</p>
+        </div>
+    </div>
+</a>
 
-ArmSoM-Sige7 uboot: [https://github.com/ArmSoM/u-boot](https://github.com/ArmSoM/u-boot)
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
 
-openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
-
-RKNN-LLM: [RKNN-LLM](../general-tutorial/rknn-llm)
-
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### Official Image
 
@@ -380,45 +419,77 @@ ArmSoM team uses Debian bullseye as the official operating system.
 
 The following systems have been tested and verified by ArmSoM official:
 
-Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
+Network disk address: 
+<a href="[/general-tutorial/cloud-disk](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)" class="btn">
+  <span>Google Drive link</span>
+</a>
 
-**debain bullseye**  
-
-Firmware location: 3. Linux image/debian/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1bHQG3pr3tHi_2uybN6RvQA1o4lnUpeGN) 
-
-**Android 12**
-
-Image location: 4. Android Images/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/file/d/1SX3IO14Kdy-3wIOqLpmG9oSfuj1XAOzT/view?usp=drive_link)
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1bHQG3pr3tHi_2uybN6RvQA1o4lnUpeGN)    |
+|![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/file/d/1SX3IO14Kdy-3wIOqLpmG9oSfuj1XAOzT/view?usp=drive_link)  |
 
 ### Third Party System  
 
-**Ubuntu**  
-
-Image location: 3. Linux Images/ubuntu/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1EZTUdc2kWo-syYDAXCwyIh00EcwGAT21) 
-
-[joshua-ubuntu-rockchip-download](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
-
-**istoreos**  
-
-Firmware location: 3. Linux image/openwrt/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1ZzaR2m36Nos1TCaKmTBy6ALmIpQLsaBZ)
-
-**armbian**
-
-![armbian-logo](/img/armbian-logo.webp)
-
-Firmware location: 3. Linux image/armbian/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
-
-jammy_edge_6.8.2_gnome_desktop: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.306/Armbian_community_24.5.0-trunk.306_Armsom-sige7_jammy_edge_6.8.2_gnome_desktop.img.xz)
-
-bookworm_edge_6.8.2_minimal: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.306/Armbian_community_24.5.0-trunk.306_Armsom-sige7_bookworm_edge_6.8.2_minimal.img.xz)
-
-jammy_6.1.43_gnome: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.433/Armbian_community_24.5.0-trunk.433_Armsom-sige7_jammy_vendor_6.1.43_gnome-amazingfated_desktop.img.xz)
-
-bookworm_6.1.43_minimal: [armbian-releases](https://github.com/armbian/community/releases/download/24.5.0-trunk.433/Armbian_community_24.5.0-trunk.433_Armsom-sige7_bookworm_vendor_6.1.43_minimal.img.xz)
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian固件下载](https://www.armbian.com/bananapi-m7/)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![istoreos](https://avatars.githubusercontent.com/u/107662817?s=48&v=4) | istoreos for Sige7 :    <br/>Provide a user-friendly router and NAS system that everyone can use.|[Google Drive link](https://drive.google.com/drive/folders/1ZzaR2m36Nos1TCaKmTBy6ALmIpQLsaBZ?usp=drive_link)  |
 
 ### Hardware Resources 
 
-* [ArmSoM-Sige7_1V1 Schematics pdf](https://drive.google.com/file/d/1Ii0Ep-616JgdENhtjnCNix_exlq1Ax9Z/view?usp=drive_link) - Schematics pdf
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>Google Drive link</span>
+</a>
+<br/>
+
+<div class="cards">
+    <a href="https://drive.google.com/file/d/1Ii0Ep-616JgdENhtjnCNix_exlq1Ax9Z/view?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>Sige7 SCH</h2>
+            </div>
+        </div>
+</a>
+
+<a href="https://drive.google.com/drive/folders/1nLe93JpHQ83welST-KUr-j9DrSCuE-JV?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Sige7 2D</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://drive.google.com/file/d/1CAIkXP9vTAlQEQWiOLY9ytuNbfACrvga/view?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>Sige7 SMD</h2>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1GHKJTWVRvuEXB0BPwlfFD4GWyQCOWf6D" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+</div>
+<br/>
+
 
 :::tip Version change history
 V1.1 
@@ -428,12 +499,6 @@ V1.1
 * CAM：DEL R6352, CSI _1 I2C3 change t o I2C4；
 * WIFI Module: AP6275S change to AP6275P;
 :::
-
-* [ArmSoM-Sige7_1V1 Top, Bottom](https://drive.google.com/drive/folders/1nLe93JpHQ83welST-KUr-j9DrSCuE-JV?usp=drive_link) - Download 2D CAD files
-
-* [ArmSoM-Sige7_1V1 SMD](https://drive.google.com/file/d/1CAIkXP9vTAlQEQWiOLY9ytuNbfACrvga/view?usp=drive_link) -  Download components Position Reference of Sige7 V1.1
-
-* [ArmSoM-Sige7 datasheet](https://drive.google.com/drive/folders/1GHKJTWVRvuEXB0BPwlfFD4GWyQCOWf6D) -  datasheet
 
 ## Product Certificate
 
