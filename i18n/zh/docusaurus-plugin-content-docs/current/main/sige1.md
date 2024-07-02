@@ -301,7 +301,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 获取 Sige1 原理图、DXF等硬件资料
 
 <div class="cards">
-    <a href="https://github.com/armbian/build" class="card-link">
+<a href="https://pan.baidu.com/s/1WZhoCA9uZwSPNJ0DCy_XmA?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -311,8 +311,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
             </div>
         </div>
 </a>
-
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://pan.baidu.com/s/1p5lFRYs_CcvB84-suGySxw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -322,8 +321,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://pan.baidu.com/s/1jZ5TVk-0hOu1ZMSxieHGlA?pwd=arms " class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -333,7 +331,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://pan.baidu.com/s/1wivpDMO6xqmve42fJRFBMQ?pwd=arms " class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

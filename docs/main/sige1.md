@@ -185,7 +185,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
         RK3528 Block Diagram
     </summary>
     <img
-  src="/img/sige/rk3528.png"
+  src="./img/sige/rk3528.png"
   alt="rk3528 block diagram"
   className="session-details-live-video"/>
 </details>
@@ -335,7 +335,7 @@ Network disk address:
 ### Hardware Resources 
 
 <div class="cards">
-    <a href="https://github.com/armbian/build" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1909scIZ6N-CPXg3YwFqUfujchpkX3L1P?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -346,7 +346,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://drive.google.com/drive/folders/1poEmG7qoPGusLg_GnVWMICXeKwuxaa4P?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -357,7 +357,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://drive.google.com/drive/folders/1Ct6q76S8NnV-qSxd3fAYVfTs0NFxAXHD?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -367,7 +367,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://drive.google.com/drive/folders/1PT0hqobvGlA_5Gm8v4IIqTvYyT7BJ6Kg?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
