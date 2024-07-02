@@ -226,7 +226,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 
 <details>
     <summary>
-        Fan
+        FAN
     </summary>
 
 0.8mm connector(CON3102)
@@ -240,7 +240,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 
 <details>
     <summary>
-        EARPHONE
+        HPOUT
     </summary>
 
 0.8mm connector(CON3101)
@@ -250,6 +250,19 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 |1          | AOR         | right channel      |
 |2          | AOL         | left channel      |
 |3          | GND         | GND          |
+</details>
+
+<details>
+    <summary>
+        VRTC
+    </summary>
+
+0.8mm connector(CON2200)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | Positive pole      |
+|2          | -         | Negative pole    |
 </details>
 
 ## Resources
@@ -307,24 +320,19 @@ Network disk address:
   <span>Google Drive link</span>
 </a>
 
-**debain bullseye**  
-
-Firmware location: 3. Linux image/debian/ArmSoM-Sige1 - [Google Drive link](https://drive.google.com/file/d/1AuSBQweaRfcMlGBoiq0Hy8mOIMUEZPrn/view?usp=drive_link)
-
-**Android9 BOX**
-
-Image location: 4. Android Images/ArmSoM-Sige1 - [Google Drive link](https://drive.google.com/file/d/1SX3IO14Kdy-3wIOqLpmG9oSfuj1XAOzT/view?usp=drive_link)
-
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/>  Debian 11 continues to uphold Debian's tradition by offering a stable and reliable operating system environment. It has undergone rigorous testing and stability assurances, making it suitable for servers, desktops, and embedded devices alike.| [Google Drive link](https://drive.google.com/drive/folders/1D7a_VybIE5v_MGIGHn4d1GhY_rkSLqFw?usp=drive_link)  |
+|![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>The Android 9 Box version is an Android operating system specifically designed for TV boxes. It is based on Android 9 Pie, focusing on optimizing user experience and performance for large-screen devices. | [Google Drive link](https://drive.google.com/drive/folders/1mXIWv7NN0G-tN3LRs1LQsN9B4Kg6Fj9X?usp=drive_link)      |
 
 ### Third Party System  
 
-|        |   | Description|
+| logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://www.armbian.com/bananapi-m7/ )     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7(bpi-m7) :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige1 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige1 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### Hardware Resources 
-
 
 <div class="cards">
     <a href="https://github.com/armbian/build" class="card-link">

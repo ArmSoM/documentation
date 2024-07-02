@@ -49,7 +49,7 @@ ArmSoM Sige系列产品开源资料的逐步完善中，涉及到多个方面，
 | M.2 Key E PCIe  |  ✅可外接WIFI模块, 4G模块  |
 | MicroSD卡扩展  | ✅ | 
 | 40-PIN | ✅兼容树莓派40PIN  |
-| Fan | ✅  |
+| FAN | ✅  |
 | RTC | ✅ |
 | PoE供电 | ❌ |
 | 尺寸 | 92mm × 62mm x 14.6mm |

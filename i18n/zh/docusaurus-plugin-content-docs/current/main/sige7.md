@@ -292,7 +292,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 |28,29                        | VCC5V0_LCD |  5V Power ouput |
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
 
-#### Fan
+#### FAN
 0.8mm 连接器(CN32)
 
 |Pin |Assignment |   Description |

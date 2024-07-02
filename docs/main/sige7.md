@@ -328,7 +328,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 </details>
 <details>
     <summary>
-        Fan
+        FAN
     </summary>
 
 0.8mm connector(CON3102)
@@ -341,7 +341,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 </details>
 <details>
     <summary>
-        EARPHONE
+        HPOUT
     </summary>
 
 0.8mm connector(CON3101)

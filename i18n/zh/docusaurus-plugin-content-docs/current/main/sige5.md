@@ -311,7 +311,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 <details>
     <summary>
-        Fan
+        FAN
     </summary>
 0.8mm 连接器(CON3102)
 
@@ -324,7 +324,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 <details>
     <summary>
-        EARPHONE
+        HPOUT
     </summary>
 0.8mm 连接器(CON3101)
 

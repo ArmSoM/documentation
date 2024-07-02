@@ -193,7 +193,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 <details>
     <summary>
-        Fan
+        FAN
     </summary>
 0.8mm 连接器(CON3102)
 
@@ -206,7 +206,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 <details>
     <summary>
-        EARPHONE
+        HPOUT
     </summary>
 0.8mm 连接器(CON3101)
 
@@ -215,6 +215,19 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 |1          | AOR         | 右声道      |
 |2          | AOL         | 左声道      |
 |3          | GND         | 地          |
+</details>
+
+<details>
+    <summary>
+        VRTC
+    </summary>
+
+0.8mm connector(CON2200)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | 正极  |
+|2          | -         | 负极  |
 </details>
 
 ## 开发资料
@@ -285,9 +298,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ### 第三方镜像
 
-|        |   | Description|
+| logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://www.armbian.com/bananapi-m7/ )     |
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://github.com/armbian/community/releases)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7(bpi-m7) :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料

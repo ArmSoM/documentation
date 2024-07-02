@@ -198,7 +198,7 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
   Subdevice #0: subdevice #0
 ```
 
-### Fan  
+### FAN  
 
 The Sige7 features a 5V fan using a 0.8mm connector  
 
