@@ -20,14 +20,14 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 
 - SOC：瑞芯微 RK3576
 - CPU：集成了四核Cortex-A72@ 2.2GHz和四核Cortex-A53@ 1.8GHz以及单独的NEON协处理器。
-- GPU：ARM Mali G52 MC3 GPU
-- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
+- GPU：ARM Mali G52 MC3 GPU。
+- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算。
 - VPU/编解码：
-  - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps
+  - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps。
   - 硬编码：支持H.264和H.265最高4K@60fps，高质量JPEG编码器/ 解码器最高支持 4k@60fps。
-- RAM：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB
-- Flash：32/128GB eMMC，默认eMMC 64GB
-- 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）
+- RAM：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB。
+- Flash：32/128GB eMMC，默认eMMC 64GB。
+- 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）。
 - 工作温度：0℃ ~ 80℃
 - 操作系统：
   - Rockchip官方支持：Android 14，Debian12，Buildroot
@@ -56,7 +56,6 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 
 ![ArmSoM-Sige5 front & back](/img/sige/sige5-layout.jpg)
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
-
 
 :::tip
 Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源接口。
@@ -213,18 +212,18 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     <summary>
         MIPI CSI0
     </summary>
-0.5mm FPC 连接器
+0.5mm FPC 连接器(J12)
 
 |Pin |   MIPI-CSI |   描述   |
  :--------: | :---------------------: | :--------: | 
 |1,4,7,10,13,16,24,25,26,27,32,33        |  GND       |   Power Ground &  Signal Ground |
 |2     | MIPI_DPHY_CSI1_RX_D3N   |     MIPI RX Lane3 iuput N |
 |3     | MIPI_DPHY_CSI1_RX_D3P                  |   MIPI RX Lane3 iuput P |
-|5          | MIPI_DPHY_CSI1_RX_D2N |   MIPI RX Lane2 iuput N |
-|6          | MIPI_DPHY_CSI1_RX_D2P|   MIPI RX Lane2 iuput P |
-|8          | MIPI_DPHY_CSI2_RX_CLKN|   MIPI RX Clock iuput N |
-|9         | MIPI_DPHY_CSI2_RX_CLKP |   MIPI RX Clock iuput P |
-|11         |  MIPI_DPHY_CSI1_RX_D1N |   MIPI RX Lane1 iuput N |
+|5     | MIPI_DPHY_CSI1_RX_D2N |   MIPI RX Lane2 iuput N |
+|6     | MIPI_DPHY_CSI1_RX_D2P|   MIPI RX Lane2 iuput P |
+|8     | MIPI_DPHY_CSI2_RX_CLKN|   MIPI RX Clock iuput N |
+|9     | MIPI_DPHY_CSI2_RX_CLKP |   MIPI RX Clock iuput P |
+|11    |  MIPI_DPHY_CSI1_RX_D1N |   MIPI RX Lane1 iuput N |
 |12         | MIPI_DPHY_CSI1_RX_D1P |   MIPI RX Lane1 iuput P |
 |14         | MIPI_DPHY_CSI1_RX_D0N|    MIPI RX Lane0 iuput N |
 |15         | MIPI_DPHY_CSI1_RX_D0P |    MIPI RX Lane0 iuput P |
@@ -247,7 +246,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     <summary>
        MIPI CSI1
     </summary>
-0.5mm FPC 连接器
+0.5mm FPC 连接器(J25)
 
 |Pin |   MIPI-CSI |   描述   |
 |:--------: | :---------------------: | :--------: | 
@@ -313,7 +312,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     <summary>
         FAN
     </summary>
-0.8mm 连接器(CON3102)
+0.8mm 连接器(CN32)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
@@ -326,7 +325,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     <summary>
         HPOUT
     </summary>
-0.8mm 连接器(CON3101)
+0.8mm 连接器(CN2)
 
 |Pin        | Assignment  | Description|
 |:--------: | :---------: | :--------:  | 
@@ -335,18 +334,58 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 |3          | GND         | 地          |
 </details>
 
+<details>
+    <summary>
+        VRTC
+    </summary>
+0.8mm connector(J26)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | 正极  |
+|2          | -         | 负极  |
+</details>
+
 
 ## 开发资料
 
-### SDK源码
+<div class="cards">
+    <a href="https://github.com/armbian/build" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>Armbian 源码</h2>
+                <p>Linux for ARM development boards</p>
+            </div>
+        </div>
+    </a>
 
-ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
 
-ArmSoM-Sige5 kernel: 
-
-ArmSoM-Sige5 uboot: 
-
-openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### 官方镜像
 
@@ -354,242 +393,35 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
-网盘地址：[百度网盘链接](/general-tutorial/cloud-disk)
+网盘地址：
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>百度网盘链接</span>
+</a>
 
-**debain bullseye**
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [Google Drive link](https://drive.google.com/drive/folders/193R1osroKtvxWnvoCBYvl7nrcQh3nLVa?usp=drive_link)  |
+|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [Google Drive link](https://drive.google.com/drive/folders/13eq1ZRBrfKl7HwDGmJIHRF7vo4l6PLhv?usp=drive_link)  |
 
-固件位置：3. Linux镜像/debian/ArmSoM-Sige5 - 
-
-**安卓14**
-
-固件位置：4. 安卓镜像/ArmSoM-Sige5 - 
-
-**openwrt**
-
-固件位置：3. Linux镜像/openwrt/ArmSoM-Sige5 - 
 
 ### 第三方镜像
 
-**armbian**
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
-![armbian-logo](/img/armbian-logo.webp)
-
-固件位置：3. Linux镜像/armbian/ArmSoM-Sige5 - 
-
-[armbian/community/releases](https://github.com/armbian/community/releases) 
-
-**Ubuntu**  
-
-固件位置: 3. Linux Images/ubuntu/ArmSoM-Sige5 - 
-
-
-#### HDMI
-
-ArmSoM-sige5 有HDMI 输出端口，支持 CEC 和 HDMI 2.1，分辨率最高支持 4Kp120。
-
-#### USB接口
-
-ArmSoM-sige5 提供一个 USB 2.0 和一个 USB 3.0 端口。
-
-**USB3.0 Camera**
-
-连接usb3.0摄像头后，您可以下载 cheese 然后使用以下命令使用摄像机:
-
-```bash
-armsom@armsom-sige5: sudo apt update
-armsom@armsom-sige5: sudo apt install cheese
-```
-
-同时，您也可以使用终端命令打开相机预览:
-```bash
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
-```
-
-命令拍照:
-```bash
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
-```
-
-命令拍摄视频:
-```bash
-gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
-```
-
-![armsom-sige5-gst](/img/sige/armsom-sige7-gst.png)
-
-#### 音频
-
-**查看系统中的声卡**
-
-```bash
-armsom@armsom-sige5:/# aplay -l
-**** List of PLAYBACK Hardware Devices ****
-card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
- Subdevices: 1/1
- Subdevice #0: subdevice #0
-card 1: rockchipes8316 [rockchip-es8316], device 0: fe470000.i2s-ES8316 HiFi es8316.7-0011-0 [fe470000.i2s-ES8316 HiFi es8316.7-0011-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-```
-
-**播放音乐**
-
-```
-armsom@armsom-sige5:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
-```
-
-#### 风扇
-
-sige5 配备一个 5V 的风扇，使用 0.8mm 的连接器
-
-目前风扇默认五个状态
-
-| 温度       | 状态  | PWM转速 |
-| --------------- | ----- | ------ |
-| 小于50° | 0 | 0 |
-| 50°-55°  | 1 | 50 |
-| 55°-60° | 2 | 100 |
-| 60°-65° | 3 | 150 |
-| 65°-70° | 4 | 200 |
-| 70°以上 | 5 | 250 |
-
-```
-// 查看当前转速 
-armsom@armsom-sige5:/# cat /sys/class/hwmon/hwmon6/pwm1
-```
-
-#### Type-C
-
-sige5 配备全功能 USB Type‑C™ 3.0 端口，支持高达 4K@120fps 的 DP 显示
-
-#### 40Pin
-
-sige5 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
-
-#### RGB LED
-
-sige5 具有两个用户灯 LED 绿灯和红灯。
-
-- 用户绿灯
-  默认情况下，其常亮表示系统运行正常。
-
-- 用户红灯
-  默认情况下不亮，可由用户自行操控。
-
-用户可通过命令控制
-
-```
-armsom@armsom-sige5:/# sudo su
-armsom@armsom-sige5:/# echo timer > /sys/class/leds/red/trigger
-armsom@armsom-sige5:/# echo activity > /sys/class/leds/red/trigger
-```
-
-#### RTC
-
-- sige5配备了一颗RTC IC **LK8563S**。
-- 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
-- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc LK8563S 设备已创建
-
-```bash
-armsom@armsom-sige5:/#  dmesg | grep rtc
-[    6.407133] rtc-hym8563 6-0051: rtc information is valid
-[    6.412731] rtc-hym8563 6-0051: registered as rtc0
-[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
-```
-
-- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
-
-```bash
-armsom@armsom-sige5:/# hwclock -r
-2023-11-03 10:32:40.461910+00:00
-armsom@armsom-sige5:/# date
-2023年 11月 03日 星期五 10:33:12 UTC
-armsom@armsom-sige5:/# hwclock -w
-armsom@armsom-sige5:/# hwclock -r
-armsom@armsom-sige5:/# poweroff
-```
-
-- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动sige5，检查RTC是否与系统时钟同步
-
-```bash
-armsom@armsom-sige5:/# hwclock -r
-2023-11-03 10:35:40.461910+00:00
-armsom@armsom-sige5:/# date
-2023年 11月 03日 星期五 10:36:01 UTC
-```
-
-#### M.2接口
-
-ArmSoM-sige5 提供 M.2 连接器：
-
-- 产品的背面有一个带有1通道 PCIe 2.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
-  **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
-
-```
-armsom@armsom-sige5:/# mkdir temp
-armsom@armsom-sige5:/# mount /dev/nvme0n1 temp
-```
-
-#### 摄像头
-
-##### MIPI-CSI
-
-  摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
-
-```bash
-armsom@armsom-sige5:/# dmesg | grep imx415
-[    2.547754] imx415 3-001a: driver version: 00.01.08
-[    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
-[    2.547819] imx415 3-001a: Failed to get power-gpios
-[    2.547826] imx415 3-001a: could not get default pinstate
-[    2.547831] imx415 3-001a: could not get sleep pinstate
-[    2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator
-[    2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator
-[    2.547945] imx415 3-001a: supply avdd not found, using dummy regulator
-[    2.613843] imx415 3-001a: Detected imx415 id 0000e0
-[    2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5
-[   18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0
-[   18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203)
-```
-
-  使用v4l2-ctl进行抓图
-```
-// MIPI-CSI1
-armsom@armsom-sige5:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
-
-// MIPI-CSI2
-armsom@armsom-sige5:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
-```
-
-使用gst-launch-1.0可直接录像
-```
-// MIPI-CSI1
-armsom@armsom-sige5:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
-
-// MIPI-CSI2
-armsom@armsom-sige5:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
-```
-![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
-
-
-#### MIPI DSI
-
-ArmSoM-sige5 分辨率最高分辨率可达 4K@120Hz
 
 ## 产品证书
 
 ### CE / FC / RoHS
 
 
-
 ## 样品购买
-ArmSoM 独立站: 
+ArmSoM 独立站: [https://www.armsom.org/product-page/Sige5](https://www.armsom.org/product-page/Sige5)
  
-ArmSoM 速卖通官方店: 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
 
-ArmSoM 淘宝官方店:
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
 
 OEM&ODM,  请联系: sales@armsom.org

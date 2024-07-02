@@ -284,24 +284,17 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
   <span>百度网盘链接</span>
 </a>
 
-**Debain bullseye**
-
-固件位置：3. Linux镜像/debian/ArmSoM-Sige1 - [百度网盘](https://pan.baidu.com/s/11rAILx3rdqwaeaQhhzDXKQ?pwd=arms)
-
-**Android9 BOX**
-
-固件位置：4. 安卓镜像/ArmSoM-Sige1 - [百度网盘](https://pan.baidu.com/s/183xx4V1_-WiKn5jipoWitQ?pwd=arms)
-
-**Openwrt**
-
-固件位置：3. Linux镜像/openwrt/ArmSoM-Sige1- [百度网盘](https://pan.baidu.com/s/1fjdLardr3EwCH_QWqUHfHQ?pwd=arms)
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/11rAILx3rdqwaeaQhhzDXKQ?pwd=arms)  |
+|![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>Android 9 Box版本是专为电视盒子（TV Box）设计的Android操作系统版本。它基于Android 9 Pie版本，专注于优化在大屏幕设备上的用户体验和性能表现。| [百度网盘](https://pan.baidu.com/s/183xx4V1_-WiKn5jipoWitQ?pwd=arms)     |
 
 ### 第三方镜像
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://github.com/armbian/community/releases)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7(bpi-m7) :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige1 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige1 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 

@@ -225,10 +225,43 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 
 <details>
     <summary>
+        MIPI CSI0
+    </summary>
+0.5mm FPC connector(J12)
+
+|Pin |   MIPI-CSI |   描述   |
+ :--------: | :---------------------: | :--------: | 
+|1,4,7,10,13,16,24,25,26,27,32,33        |  GND       |   Power Ground &  Signal Ground |
+|2     | MIPI_DPHY_CSI1_RX_D3N   |     MIPI RX Lane3 iuput N |
+|3     | MIPI_DPHY_CSI1_RX_D3P   |   MIPI RX Lane3 iuput P |
+|5     | MIPI_DPHY_CSI1_RX_D2N |   MIPI RX Lane2 iuput N |
+|6     | MIPI_DPHY_CSI1_RX_D2P|   MIPI RX Lane2 iuput P |
+|8     | MIPI_DPHY_CSI2_RX_CLKN|   MIPI RX Clock iuput N |
+|9     | MIPI_DPHY_CSI2_RX_CLKP |   MIPI RX Clock iuput P |
+|11    |  MIPI_DPHY_CSI1_RX_D1N |   MIPI RX Lane1 iuput N |
+|12    | MIPI_DPHY_CSI1_RX_D1P |   MIPI RX Lane1 iuput P |
+|14    | MIPI_DPHY_CSI1_RX_D0N|    MIPI RX Lane0 iuput N |
+|15    | MIPI_DPHY_CSI1_RX_D0P |    MIPI RX Lane0 iuput P |
+|17    | MIPI_DPHY_CSI1_RX_CLKN|   MIPI RX Clock iuput N |
+|18    | MIPI_DPHY_CSI1_RX_CLKP|  MIPI RX Clock iuput P |
+|19    | MIPI_CSI1_RX_XVS        |    |
+|20    | MIPI_DPHY_CSI2_CAM_CLKOUT_CON |    1.8V, CLock ouput for Sensor |
+|21    | MIPI_CSI1_RX_XHS        |    |
+|22    | MIPI_DPHY_CSI1_CAM_CLKOUT |   1.8V, CLock ouput for Sensor |
+|23    | MIPI_DPHY_CSI1_PDN_H(GPIO3_D0) |    1.8V, GPIO |
+|24    | I2C5_SCL_M3_MIPI_CSI1 |   1.8V, I2C Clock, pulled up to 1.8V with 2.2K on sige5 |
+|25    | I2C5_SDA_M3_MIPI_CSI1 |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on sige5 |
+|26    | MIPI_DPHY_CSI2_PDN_H(GPIO3_C7)|  1.8V, GPIO |
+|27    | MIPI_DPHY_CSI1/2_RST(GPIO3_C6)|   3.3V, GPIO |
+|28,29 | VCC_RX|   3.3V Power ouput |
+|30,31 | VCC_5V0|   5V Power ouput |
+</details>
+
+<details>
+    <summary>
         MIPI CSI1
     </summary>
-  
-0.5mm FPC connector
+0.5mm FPC connector(J25)
 
 |Pin |   MIPI-CSI |   Description   |
 |:--------: | :---------------------: | :--------: | 
@@ -256,15 +289,13 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |27         | MIPI_DPHY_CSI1/2_RST(GPIO3_C6)|   3.3V, GPIO |
 |28,29      | VCC_RX|   3.3V Power ouput |
 |30,31      | VCC_5V0|   5V Power ouput |
-
 </details>
-
 
 <details>
     <summary>
        MIPI DSI
     </summary>
-0.5mm FPC connector
+0.5mm FPC connector(J23)
 
 |Pin |   MIPI-DSI  |   Description     |
  :--------: | :---------------------: | :--------: | 
@@ -292,12 +323,12 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |31,32                        | VCC_1V8 |  1.8V Power ouput |
 
 </details>
+
 <details>
     <summary>
         FAN
     </summary>
-
-0.8mm connector(CON3102)
+0.8mm connector(CN32)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
@@ -305,12 +336,12 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |2    | GND | GND |
 |3    | PWM | PWM control |
 </details>
+
 <details>
     <summary>
         HPOUT
     </summary>
-
-0.8mm connector(CON3101)
+0.8mm connector(CN2)
 
 |Pin        | Assignment  | Description|
  :--------: | :---------: | :--------: | 
@@ -319,19 +350,60 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |3          | GND         | GND          |
 </details>
 
+<details>
+    <summary>
+        VRTC
+    </summary>
+0.8mm connector(J26)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | Positive pole      |
+|2          | -         | Negative pole    |
+</details>
+
 
 ## Resources
 
 ### Source Code
 
-ArmSoM github source code : [https://github.com/ArmSoM/armsom-build](https://github.com/ArmSoM/armsom-build)
+<div class="cards">
+    <a href="https://github.com/armbian/build" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>Armbian Source Code</h2>
+                <p>Linux for ARM development boards</p>
+            </div>
+        </div>
+    </a>
 
-ArmSoM-Sige5 kernel: [https://github.com/ArmSoM/linux-rockchip](https://github.com/ArmSoM/linux-rockchip/tree/linux-6.1-stan-rkr1)
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
 
-ArmSoM-Sige5 uboot: 
-
-openwrt(istoreos): [https://github.com/istoreos/istoreos](https://github.com/istoreos/istoreos)
-
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### Official Image
 
@@ -341,331 +413,80 @@ ArmSoM team uses Debian bullseye as the official operating system.
 
 The following systems have been tested and verified by ArmSoM official:
 
-Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
+Network disk address: 
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>Google Drive link</span>
+</a>
 
-**debain bullseye**  
-
-Firmware location: 3. Linux image/debian/ArmSoM-sige5 - 
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/193R1osroKtvxWnvoCBYvl7nrcQh3nLVa?usp=drive_link)  |
+|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.| [Google Drive link](https://drive.google.com/drive/folders/13eq1ZRBrfKl7HwDGmJIHRF7vo4l6PLhv?usp=drive_link)  |
 
 ### Third Party System  
 
-**Ubuntu**  
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige1 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige1 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
-Image location: 3. Linux Images/ubuntu/ArmSoM-sige5 - 
-
-
-**istoreos**  
-
-Firmware location: 3. Linux image/openwrt/ArmSoM-sige5 - 
-
-**armbian**
-
-![armbian-logo](/img/armbian-logo.webp)
-
-Firmware location: 3. Linux image/armbian/ArmSoM-sige5 - 
 
 ### Hardware Resources 
 
-The sige5 user manual helps users understand the basic operation of sige5 and the necessary preparations. When you receive the product, you need to know its model and hardware version, which can be found on the board's silk screen. We will introduce the product information to you in as much detail as possible.
-
-## Getting Started
-
-Before using ArmSoM-sige5, please prepare the following items:
-
-### Tools Preparation
-- sige5 mainboard
-- Power supply: USB Type-C PD
-  - Supports 9V/2A, 12V/2A, 15V/2A
-- System installation (choose one):
-  - MicroSD card/TF card boot
-    - MicroSD card/TF card, Class 10 or above, at least 8GB SDHC, and a card reader
-    - The following are high-speed TF cards verified and tested by the ArmSoM team:
-      - SanDisk 32GB TF (MicroSD) (recommended for developers)
-      - SanDisk 32GB TF (MicroSD) for dashcams & surveillance cameras (recommended for long-term use)
-      - SanDisk TF 8G Class10 microSD
-      - SanDisk TF 128G Class10 microSD XC TF 128G 48MB/S
-  - Onboard eMMC boot
-    - USB Type-C data cable, to write the image from the type-C port on sige5, you need a Type-C data cable to connect sige5 and PC.
-
-### Optional Accessories
-- USB keyboard and mouse
-- HDMI monitor and HDMI cable
-  - sige5 comes with a full-size HDMI port, supporting up to 8K@60 display.
-  - HDMI EDID is used to determine the optimal display resolution. On monitors and TVs that support 1080p (or 4K/8K), this resolution will be chosen. If 1080p is not supported, EDID will find the next available resolution.
-- Ethernet cable (network cable)
-  - sige5 supports Ethernet networking, with a maximum of 2.5Gb.
-  - The network cable is used to connect sige5 to the local network and the Internet.
-- Camera module
-  - sige5 supports camera function.
-  - It is recommended to use the imx415 module, which can be purchased from the official ArmSoM store on Taobao.
-- LCD display
-  - sige5 supports LCD display function.
-  - It is recommended to use the ArmSoM Display 10.1 HD, which can be purchased from the official ArmSoM store on Taobao.
-- Audio cable
-  - A 0.8mm vertical socket can be used.
-- USB-A to USB-C data cable
-
-## Choosing the Burning Method
-
-[Flash System Image](../general-tutorial/flash-img)
-
-## Interface Settings
-
-If you are using ArmSoM-sige5 for the first time, please familiarize yourself with the for better understanding of the following content.
-
-### Debug Serial Port
-
-Connect the USB to TTL serial cable as follows:
-
-![armsom-sige5-debug](/img/sige/armsom-sige7-debug.png)
-
-| sige5          | Connect | Serial Module |
-| -------------- | ------- | ------------ |
-| **GND** (pin 6)| --->   | GND          |
-| **TX** (pin 8) | --->   | RX           |
-| **RX** (pin 10)| --->   | TX           |
-
-### Gigabit Ethernet Port
-
-If you are using a wired Ethernet connection for internet access, please insert the Ethernet cable into the RJ45 port on ArmSoM-sige5. The system desktop will then prompt a wired connection.
-
-- Use the command `ifconfig` to check if the Ethernet is working properly. It will display the network card `enP2p33s0` or `enP4p65s0` and the Ethernet IP address. Additionally, use the `ping` tool to check network connectivity.
-
-```bash
-ifconfig
-ping mi.com
-```
-
-- If ping fails, try:
-
-```bash
-$ sudo dhclient enP2p33s0
-or
-$ sudo dhclient enP4p65s0
-```
-
-#### WIFI
-```
-# 1. Open the WIFI
-armsom@armsom-sige5:/# nmcli r wifi on
-# 2. Scan WIFI
-armsom@armsom-sige5:/# nmcli dev wifi
-# 3. Connect to WIFI network
-armsom@armsom-sige5:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
-```
-
-#### BT
-
-```
-# 1. Activate Bluetooth
-armsom@armsom-sige5:/# service bluetooth start
-# 2. Enter bluetoothctl
-armsom@armsom-sige5:/# bluetoothctl
-# 3. Enter the following command to connect
-armsom@armsom-sige5:/# power on
-armsom@armsom-sige5:/# agent on
-armsom@armsom-sige5:/# default-agent
-armsom@armsom-sige5:/# scan on
-armsom@armsom-sige5:/# pair yourDeviceMAC
-```
-
-
-#### HDMI
-
-The ArmSoM-Sige5 has an HDMI output port which supports CEC and HDMI 2.1, maximum resolution up to 4Kp120.
-
-#### USB
-
-The ArmSoM-Sige5 provides one USB 2.0 and one USB 3.0 port.  
-
-**USB3.0 Camera**
-
-After connecting a USB 3.0 camera, you can download cheese and use the camera with the following commands:
-
-```bash
-armsom@armsom-sige5: sudo apt update
-armsom@armsom-sige5: sudo apt install cheese
-```
-
-You can also preview the camera in the terminal:
-```bash  
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
-```
-
-Take Photo:
-```bash
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg; 
-```
-
-Record video: 
-```bash
-gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
-```
-
-![armsom-sige5-gst](/img/sige/armsom-sige7-gst.png)
-
-
-#### Audio
-
-View sound cards in the system:  
-
-```bash 
-armsom@armsom-sige5:/# aplay -l  
-**** List of PLAYBACK Hardware Devices ****  
-card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]  
- Subdevices: 1/1  
- Subdevice #0: subdevice #0  
-card 1: rockchipes8316 [rockchip-es8316], device 0: fe470000.i2s-ES8316 HiFi es8316.7-0011-0 [fe470000.i2s-ES8316 HiFi es8316.7-0011-0]  
-  Subdevices: 1/1  
-  Subdevice #0: subdevice #0  
-card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]  
-  Subdevices: 1/1  
-  Subdevice #0: subdevice #0
-```
-
-**play music**
-
-```
-armsom@armsom-sige5:/# aplay -D plughw:0,0  ./usr/share/sounds/alsa/Rear_Right.wav
-```
-
-#### FAN  
-
-The Sige5 features a 5V fan using a 0.8mm connector  
-
-```  
-armsom@armsom-sige5:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon6/pwm1  
-```
-
-#### Type-C  
-
-The Sige5 features a full-featured USB Type‐C 3.0 port which supports up to 8K@30fps DP display.
-
-#### 40Pin  
-
-The Sige5 provides a 40-pin GPIO header, compatible with most sensors on the market.   
-
-#### RGB LED  
-
-The Sige5 has two user LEDs - green and red.  
-
-- User Green LED  
-  Constantly indicates running kernel by default.   
-
-- User Red LED
-  Off by default, can be controlled by user.  
-
-Users can control with commands:   
-
-```  
-armsom@armsom-sige5:/# sudo su  
-armsom@armsom-sige5:/# echo timer > /sys/class/leds/red/trigger  
-armsom@armsom-sige5:/# echo activity > /sys/class/leds/red/trigger
-```
-
-#### RTC  
-
-- The Sige5 features an **LK8563S** RTC chip.  
-- First, insert the RTC battery using the 2-pin header to supply power to the RTC IC.
-- Note that we should keep the RTC battery in the RTC connector and confirm the rtc LK8563S device which has been created. 
-
-```bash 
-armsom@armsom-sige5:/# dmesg | grep rtc  
-[ 6.407133] rtc-hym8563 6-0051: rtc information is valid  
-[ 6.412731] rtc-hym8563 6-0051: registered as rtc0  
-[ 6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)  
-```
-
-- Find rtc0, then use the following commands to set system time and sync to rtc0:  
-
-```bash
-armsom@armsom-sige5:/# hwclock -r  
-2023-11-03 10:32:40.461910+00:00  
-armsom@armsom-sige5:/# date  
-Fri 3rd Nov 10:33:12 UTC 2023
-armsom@armsom-sige5:/# hwclock -w  
-armsom@armsom-sige5:/# hwclock -r  
-armsom@armsom-sige5:/# poweroff  
-```
-
-- Turn off the RTC battery for 10+ minutes, insert the battery again and boot Sige5, and check if RTC synced with system clock:   
-
-```bash
-armsom@armsom-sige5:/# hwclock -r  
-2023-11-03 10:35:40.461910+00:00  
-armsom@armsom-sige5:/# date
-Fri 3rd Nov 10:36:01 UTC 2023
-```
-
-#### M.2
-
-ArmSoM-sige5 provides an M.2 connector:
-
-- The back of the product features an M.2 M Key connector with a PCIe 2.0 interface supporting 1 channel. The board includes a standard M.2 2280 mounting hole, allowing for the deployment of an M.2 2280 NVMe SSD.
-
-  **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
-
-```
-armsom@armsom-sige5:/# mkdir temp
-armsom@armsom-sige5:/# mount /dev/nvme0n1 temp
-```
-
-
-#### Camera  
-
-##### MIPI-CSI
-
-Use the IMX415 module for the camera. After connecting and powering on the camera module you can view the boot log:  
-
-```bash
-armsom@armsom-sige5:/# dmesg | grep imx415
-[    2.547754] imx415 3-001a: driver version: 00.01.08
-[    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
-[    2.547819] imx415 3-001a: Failed to get power-gpios
-[    2.547826] imx415 3-001a: could not get default pinstate
-[    2.547831] imx415 3-001a: could not get sleep pinstate
-[    2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator
-[    2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator
-[    2.547945] imx415 3-001a: supply avdd not found, using dummy regulator
-[    2.613843] imx415 3-001a: Detected imx415 id 0000e0
-[    2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5
-[   18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0
-[   18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203)
-```
-
-    Use v4l2-ctl for image capture:  
-```
-// MIPI-CSI1
-armsom@armsom-sige5:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
-
-// MIPI-CSI2
-armsom@armsom-sige5:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
-```
-
-Record video directly with gst-launch-1.0:  
-```
-// MIPI-CSI1
-armsom@armsom-sige5:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
-
-// MIPI-CSI2
-armsom@armsom-sige5:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
-```
-![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
-
-
-#### MIPI DSI
-
-ArmSoM-sige5 supports a maximum resolution of 4K@120Hz.
+<div class="cards">
+    <a href="https://github.com/armbian/build" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>Sige5 SCH</h2>
+            </div>
+        </div>
+</a>
+
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 2D</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 SMD</h2>
+        </div>
+    </div>
+</a>
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+</div>
 
 ## Product Certificates
 
 ### CE / FCC / RoHS
 
 ## Purchase Samples
-ArmSoM Official Website: [Link]
+ArmSoM Official Website: [https://www.armsom.org/product-page/Sige5](https://www.armsom.org/product-page/Sige5)
 
-ArmSoM Official AliExpress Store: [Link]
+ArmSoM Official AliExpress Store: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
 
-ArmSoM Official Taobao Store: [Link]
+ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
 
 For OEM & ODM, please contact: sales@armsom.org
