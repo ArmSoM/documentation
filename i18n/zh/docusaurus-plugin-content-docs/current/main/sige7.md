@@ -431,7 +431,6 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 获取 Sige7 原理图、DXF等硬件资料
 
-点击进入链接: 
 <a href="/general-tutorial/cloud-disk" class="btn">
   <span>百度网盘链接</span>
 </a>

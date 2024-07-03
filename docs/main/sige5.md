@@ -434,7 +434,7 @@ Network disk address:
 ### Hardware Resources 
 
 <div class="cards">
-    <a href="https://github.com/armbian/build" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1bLvY1DO9aUiPn9H7wr-rzbrvpmllA9Q4?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -445,7 +445,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://drive.google.com/drive/folders/1b9Ld5kFnt2Y5iGB0-T5BdTbkYjsGP10I?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -456,7 +456,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://drive.google.com/drive/folders/1DhyWlQ9UoaBgt2DWAo7fMDRtFJPUF33g?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -466,7 +466,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://drive.google.com/drive/folders/10T912p9Hdw1Q_KSdCebgYZf943-0Yu2F?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

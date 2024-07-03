@@ -411,6 +411,60 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
+### 硬件资料
+
+获取 Sige5 原理图、DXF等硬件资料
+
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>百度网盘链接</span>
+</a>
+<br/>
+
+<div class="cards">
+    <a href="https://pan.baidu.com/s/10Jz2k7Z5G0AtF8b28p7AUg?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>Sige5 SCH</h2>
+            </div>
+        </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1UihK2Aj5_tjarhI703b2zQ?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 2D</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1D4Z-Ski-Ddmq3MZiD1MDgg?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 SMD</h2>
+        </div>
+    </div>
+</a>
+<a href="https://pan.baidu.com/s/1n45RwVD6rY9DjszMMPCjag?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+</div>
+<br/>
 
 ## 产品证书
 
