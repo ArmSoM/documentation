@@ -67,9 +67,12 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 ![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
 ![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
 
-### Hardware Specification
-
-<table>
+### Hardware Spec
+<details>
+    <summary>
+        LM7 Hardware Spec
+    </summary>
+    <table>
     <thead>
         <tr>
             <th>Type</th>
@@ -216,8 +219,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
         </tr>
     </tbody>
 </table>
-
-
+</details>
 
 :::info   
 
@@ -232,21 +234,68 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 [ArmSoM-LM7 Development Kit (ArmSoM-W3)](./armsom-w3)
 
 ### Hardware Interface (W3)
-
-![ArmSoM-LM7 development kit](/img/lm/armsom-lm7-development-kit.jpg)
+<details>
+    <summary>
+        Hardware Interface (W3)
+    </summary>
+    <img
+  src="/img/lm/armsom-lm7-development-kit.jpg"
+  alt="W3 Hardware Interface"
+  className="session-details-live-video"/>
+</details>
 
 
 ## Resources
 
 ### Source Code
+<div class="cards">
+<a href="https://github.com/armbian/build" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Armbian Source Code</h2>
+            <p>Linux for ARM development boards</p>
+        </div>
+    </div>
+</a>
 
-[ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>W3 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
 
-[ArmSoM-W3 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
-
-[ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)
-
-
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>W3 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### Official Images  
 
@@ -254,56 +303,104 @@ Based on Debian bullseye works as official operating system by the ArmSom team.
 
 The following systems have been tested and verified by ArmSoM officially:  
 
-Download link: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
+Download link:
+<a href="https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM" class="btn">
+  <span>Google Drive link</span>
+</a>
 
-**Debian bullseye**  
-
-Image location: 3. Linux Images/debian/ArmSoM-LM7(Development Kit ArmSoM-W3) - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
-
-**Android 12**
-
-Image location: 4. Android Images/ArmSoM-LM7(Development Kit ArmSoM-W3) - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for LM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1IPJigG2iL6M36XgtTbrcIGDuLUTBWPqp?usp=drive_link)    |
+|![Android](/img/sige/android.png) | Android12 for LM7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/11-saIVSrTQEZcH8GF246M78P4rVnrkzg?usp=drive_link)  |
 
 #### Release Information
 
-View the initial official release announcement for ArmSoM-W3 here:  
-[System Release Notice for ArmSoM-W3](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139)
+View the initial official release announcement for ArmSoM-W3 here:  [System Release Notice for ArmSoM-W3](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139)
 
 ### Third Party Systems  
 
-**armbian**
-![armbian-logo](/img/armbian-logo.webp)  
-
-[Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160.img](https://pan.baidu.com/s/1URvyxKoox207rWwsMJmCyQ?pwd=arms)  
-
-[Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160_cinnamon_desktop.img](https://pan.baidu.com/s/1w7v7b1BJ1ubJYrIlFchqUw?pwd=arms)  
-
-[Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160.img](https://pan.baidu.com/s/1-6qgLxC7CbiNObRmJdFTDQ?pwd=arms)  
-
-[Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160_xfce_desktop.img](https://pan.baidu.com/s/1Pr0IJNrffxx7aLJ-eZLUUA?pwd=arms )
-
-**Ubuntu**  
-
-Image location: 3. Linux Images/ubuntu/ArmSoM-Sige7 - [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
-
-[joshua-ubuntu-rockchip-download](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for LM7 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://github.com/armbian/community/releases) |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for LM7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
 
 
 ### LM7 Hardware Resources 
 
-[ArmSoM-LM7 Pin Function Table](https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr) - Download pin function table
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>LM7 Pin Function Table</h2>
+            </div>
+        </div>
+</a>
 
-[ArmSoM-LM7 Package](https://drive.google.com/drive/folders/15i-GmX1vapcVh2PAS43DNhpAcBUlI_k_) - Download package info
+<a href="https://drive.google.com/drive/folders/15i-GmX1vapcVh2PAS43DNhpAcBUlI_k_" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>LM7 Package</h2>
+        </div>
+    </div>
+</a>
+</div>
+<br/>
 
 #### Development Kit (W3) Resources
 
-[ArmSoM-W3_1V1 Schematics pdf, orcad source](https://drive.google.com/drive/folders/1wFF2CYDOXdhUoD1SUIXKUEbdkLbys2EQ) - Download schematics pdf and source files (orcad)
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>Schematics</h2>
+                <p>source files (orcad)</p>
+            </div>
+        </div>
+</a>
 
-[ArmSoM-W3_1V1 PCB PADS](https://drive.google.com/drive/folders/1aZ7q5XIbRim5XJZavd2R1YbVmWRGpWFY) - Download PCB source files (PADS) 
-
-[ArmSoM-W3 Top, Bottom](https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv) - Download 2D CAD files
-
-[ArmSoM-W3_1V1 Assembly Drawing](https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv) - Download components Position Reference of W3 V1.1
+<a href="https://drive.google.com/drive/folders/1aZ7q5XIbRim5XJZavd2R1YbVmWRGpWFY" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>PCB PADS</h2>
+            <p>PCB source files (PADS) </p>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>2D</h2>
+            <p>2D CAD files </p>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>SMD</h2>
+            <p>components Position Reference of W3</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### Note  
 

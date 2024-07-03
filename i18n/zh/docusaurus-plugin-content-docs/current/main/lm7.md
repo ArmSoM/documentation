@@ -61,6 +61,10 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ### 硬件规格
 
+<details>
+    <summary>
+        LM7 硬件规格
+    </summary>
 <table>
     <thead>
         <tr>
@@ -206,6 +210,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
         </tr>
     </tbody>
 </table>
+</details>
 
 :::info
 
@@ -217,12 +222,54 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 ## 开发资料
 
 ### SDK源码
+<div class="cards">
+<a href="https://github.com/ArmSoM/armsom-w3-bsp" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Source Code</h2>
+            <p>ArmSoM bsp</p>
+        </div>
+    </div>
+</a>
 
-[ArmSoM-W3 BSP](https://github.com/ArmSoM/armsom-w3-bsp)
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>W3 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
 
-[ArmSoM-W3 kernel](https://github.com/ArmSoM/ubuntu-linux-rockchip)
-
-[ArmSoM-W3 uboot](https://github.com/ArmSoM/u-boot)
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>W3 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### 官方镜像
 
@@ -230,40 +277,25 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
-网盘地址：[百度网盘链接](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+网盘地址：
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>百度网盘链接</span>
+</a>
 
-**debain bullseye**
-
-固件位置：3. Linux镜像/debian/ArmSoM-LM7(Development Kit ArmSoM-W3) - [百度网盘链接](https://pan.baidu.com/s/1fbImGcfnfG4rCvNtgXDLsw?pwd=arms) 
-
-**安卓12**
-
-固件位置：4. 安卓镜像/ArmSoM-LM7(Development Kit ArmSoM-W3) - [百度网盘链接](https://pan.baidu.com/s/1UYyrFEhOhZ5qgwGND4-EVA?pwd=arms ) 
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for W3 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1fbImGcfnfG4rCvNtgXDLsw?pwd=arms)   |
+|![Android](/img/sige/android.png) | Android12 for W3 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1UYyrFEhOhZ5qgwGND4-EVA?pwd=arms)  |
 
 **发布信息**
 
-ArmSoM-W3 的首次官方发布通告请在以下链接查看：
-[ArmSoM-W3 系统发布通知](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139)
+ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系统发布通知](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139)
 
 ### 第三方系统
-
-#### armbian
-![armbian-logo](/img/armbian-logo.webp)
-
-[Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160.img](https://pan.baidu.com/s/1URvyxKoox207rWwsMJmCyQ?pwd=arms)
-
-[Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160_cinnamon_desktop.img](https://pan.baidu.com/s/1w7v7b1BJ1ubJYrIlFchqUw?pwd=arms)
-
-[Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160.img](https://pan.baidu.com/s/1-6qgLxC7CbiNObRmJdFTDQ?pwd=arms)
-
-[Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160_xfce_desktop.img](https://pan.baidu.com/s/1Pr0IJNrffxx7aLJ-eZLUUA?pwd=arms )
-
-#### Joshua-Riek/ubuntu-rockchip
-
-固件位置: 3. Linux Images/ubuntu/ArmSoM-Sige7 - [百度网盘](https://pan.baidu.com/s/1KRlG_lHbbmv8oBcxNOveQQ?pwd=arms ) 
-
-[joshua-ubuntu-rockchip-download](https://joshua-riek.github.io/ubuntu-rockchip-download/boards/armsom-sige7.html)
-
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian固件下载](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)       | ubuntu-rockchip for Sige7 :    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 
@@ -273,13 +305,53 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：
 
 [ArmSoM-LM7 封装](https://pan.baidu.com/s/1wIp67X337sZ5VEN-HnN-wA?pwd=arms ) - 封装下载
 
-[ArmSoM-W3_1V1 原理图pdf，orcad源文件](https://pan.baidu.com/s/1DV2GP11qEcxgJsmts5LtuA?pwd=arms ) - 原理图pdf，源文件（orcad）下载
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>W3 Schematics</h2>
+                <p>source files (orcad)</p>
+            </div>
+        </div>
+</a>
 
-[ArmSoM-W3_1V1 PCB PADS](https://pan.baidu.com/s/1H45A34d7bLm00fh1Oj0ynA?pwd=arms ) - PCB源文件（PADS）下载
-
-[ArmSoM-W3 Top, Bottom](https://pan.baidu.com/s/1KKVkZcszuTWFLTrPl4541g?pwd=arms) - 2D CAD 文件下载
-
-[ArmSoM-W3_1V1 位号图](https://pan.baidu.com/s/1zZ59b95ROjsHF3TlcG-cNA?pwd=arms) -  位号图下载
+<a href="https://drive.google.com/drive/folders/1aZ7q5XIbRim5XJZavd2R1YbVmWRGpWFY" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>W3 PCB</h2>
+            <p>PCB source files (PADS) </p>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>W3 2D</h2>
+            <p>2D CAD files </p>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>W3 SMD</h2>
+            <p>components Position Reference of W3</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### 注意
 
