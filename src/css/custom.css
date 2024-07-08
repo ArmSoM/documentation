@@ -74,10 +74,15 @@
   /* background-color: orange; */
 }
 
+.armsom-color {
+  color: #34C5DD;
+}
+
 .navbar__logo img {
   height: 100%;
   /* margin-top: -8px; */
 }
+
 .navbar__inner {
   margin: 0 auto;
   width: 1300px!important;
@@ -86,6 +91,7 @@
 .sidebar-hr{
   margin: 0;
 }
+
 .menu__link--active{
   font-weight: bold;
 }

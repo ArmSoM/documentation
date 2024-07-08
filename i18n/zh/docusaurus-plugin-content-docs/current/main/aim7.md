@@ -122,7 +122,7 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 | DP接口    | 1 个 DP1.4a | 1 个 DP1.2  |
 | eDP/DP接口    | **1 个 eDP 1.4/ 1 个 HDMI OUT2.1**  | 1 个 eDP 1.4/1 个 DP接口  | 
 |  DSI接口    | 1 个 DSI (1 x2)  | 1 个 DSI (1 x2)   | 
-| 操作系统支持    |支持debian，ubuntu，armbian，Openwrt     | NVIDIA JetPack软件套件 | 
+| 操作系统支持    |支持Debian，Ubuntu，Armbian    | NVIDIA JetPack软件套件 | 
 | 大小   |  69.6 mm x 45 mm |69.6 mm x 45 mm  |
 |规格尺寸|260 引脚边缘连接器| 260 引脚边缘连接器| 
 
