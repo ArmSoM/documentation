@@ -15,7 +15,7 @@ Let's get to know Sige7 in 5 minutes.
 
 The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
 
-![ArmSoM-sige7](/img/sige/sige7.jpg)
+![ArmSoM-sige7](/img/sige/sige7-bananer.png)
 
 :::tip Rockchip RK3588
 
