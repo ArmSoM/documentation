@@ -70,7 +70,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ### Hardware Interface
 
-![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.webp)
+![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.jpg)
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
 :::tip

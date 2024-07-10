@@ -64,7 +64,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 ### 硬件接口
 
-![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.webp)
+![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.jpg)
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
 :::tip

@@ -174,7 +174,7 @@ Thanks to 8K video encode and decode technology,it brings the ultimate visual en
 
 Sige7同时可作为RK3588极客开发套件
 
-![Sige7-layout](/img/sige/armsom-sige7-layout.webp)
+![Sige7-layout](/img/sige/armsom-sige7-layout.jpg)
 * **多样且通用**： 考虑到不同类型的外设和传感器的连接需求，提供丰富的接口类型，包括数字输入输出、模拟输入输出、通信接口（如UART、SPI、I2C）、USB等，满足各种应用场景的需求。
 
 * **易用**： 清晰的标识、颜色区分、物理形状等方面的设计可以降低用户的误操作，提高开发效率。
