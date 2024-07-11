@@ -278,7 +278,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/1mVDdZPVIWT8UERq6jMdyhA?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/19uViHwajeW3p-3HY6xxMpg?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 
