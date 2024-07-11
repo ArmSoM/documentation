@@ -62,7 +62,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
 
 <details>
     <summary>
-        RK3528 硬件规格
+        Sige1 硬件规格
     </summary>
     <table>
     <thead>
@@ -280,7 +280,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 网盘地址：
 
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="https://pan.baidu.com/s/19uViHwajeW3p-3HY6xxMpg?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
