@@ -109,6 +109,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 ```
 
 开始烧录系统
+
 ![rkdevtool-install-emmc](/img/general-tutorial/rkdevtool-install-emmc.png)
 
 1. 选择Download Image项

@@ -394,15 +394,14 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="https://pan.baidu.com/s/1mVDdZPVIWT8UERq6jMdyhA?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [Google Drive link](https://drive.google.com/drive/folders/193R1osroKtvxWnvoCBYvl7nrcQh3nLVa?usp=drive_link)  |
-|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [Google Drive link](https://drive.google.com/drive/folders/13eq1ZRBrfKl7HwDGmJIHRF7vo4l6PLhv?usp=drive_link)  |
-
+|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1jMlQQxMsChx7wVuT5_koSQ?pwd=arms)  |
+|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/1nQt_MNnEWcYrWB6vT2fxbQ?pwd=arms)  |
 
 ### 第三方镜像
 
@@ -415,13 +414,13 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 获取 Sige5 原理图、DXF等硬件资料
 
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="https://pan.baidu.com/s/1mVDdZPVIWT8UERq6jMdyhA?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/10Jz2k7Z5G0AtF8b28p7AUg?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/1NoI-Tl_TDcPZjkWa5lr0sA?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -432,7 +431,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1UihK2Aj5_tjarhI703b2zQ?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/13u7q1g_UzdvnB_HfZ7Sdmg?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -442,7 +441,6 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-
 <a href="https://pan.baidu.com/s/1D4Z-Ski-Ddmq3MZiD1MDgg?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
@@ -453,7 +451,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1n45RwVD6rY9DjszMMPCjag?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1NeRLi-EQJnarfr7JecbnWg?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

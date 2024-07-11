@@ -283,11 +283,12 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 <a href="/general-tutorial/cloud-disk" class="btn">
   <span>百度网盘链接</span>
 </a>
+<br/>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/11rAILx3rdqwaeaQhhzDXKQ?pwd=arms)  |
-|![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>Android 9 Box版本是专为电视盒子（TV Box）设计的Android操作系统版本。它基于Android 9 Pie版本，专注于优化在大屏幕设备上的用户体验和性能表现。| [百度网盘](https://pan.baidu.com/s/183xx4V1_-WiKn5jipoWitQ?pwd=arms)     |
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/1ETLbE47Q-j3qFPmIR_Wz0w?pwd=arms)  |
+|![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>Android 9 Box版本是专为电视盒子（TV Box）设计的Android操作系统版本。它基于Android 9 Pie版本，专注于优化在大屏幕设备上的用户体验和性能表现。| [百度网盘](https://pan.baidu.com/s/1sZUN_VAXjSPyo3376lDGrQ?pwd=arms)     |
 
 ### 第三方镜像
 
@@ -301,7 +302,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 获取 Sige1 原理图、DXF等硬件资料
 
 <div class="cards">
-<a href="https://pan.baidu.com/s/1WZhoCA9uZwSPNJ0DCy_XmA?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1XWl4ybT9nXCxRil8Avztxg?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -311,7 +312,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
             </div>
         </div>
 </a>
-<a href="https://pan.baidu.com/s/1p5lFRYs_CcvB84-suGySxw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1Vwrg71j_VEb_RWB0z71Xvg?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -321,17 +322,17 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1jZ5TVk-0hOu1ZMSxieHGlA?pwd=arms " class="card-link">
+<a href="https://pan.baidu.com/s/1-EvAD7jWs2L3Qc4XYXPFWQ?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
         </div>
         <div class="content">
-            <h2>Sige1 SMD</h2>
+            <h2>Sige1 位号图</h2>
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1wivpDMO6xqmve42fJRFBMQ?pwd=arms " class="card-link">
+<a href="https://pan.baidu.com/s/1O_pDcWoXn8_L4GD_ZHMnxA?pwd=arms " class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
