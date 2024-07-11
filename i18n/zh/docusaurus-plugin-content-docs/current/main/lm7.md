@@ -278,14 +278,14 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="https://pan.baidu.com/s/1mVDdZPVIWT8UERq6jMdyhA?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for W3 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1fbImGcfnfG4rCvNtgXDLsw?pwd=arms)   |
-|![Android](/img/sige/android.png) | Android12 for W3 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1UYyrFEhOhZ5qgwGND4-EVA?pwd=arms)  |
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for W3 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/12-OpwqE97jDgtJQSdE7dhQ?pwd=arms)   |
+|![Android](/img/sige/android.png) | Android12 for W3 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1Vn1I-f5eJNRfcOgfoxsvmQ?pwd=arms)  |
 
 **发布信息**
 
@@ -301,12 +301,12 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系�
 
 获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
-[ArmSoM-LM7 引脚功能表格](https://pan.baidu.com/s/1E8Jb8mRqKdrFxWH5tXMYTg?pwd=arms) - 引脚功能表格下载
+[ArmSoM-LM7 引脚功能表格](https://pan.baidu.com/s/1AQzunn1xkaZuGPDZ2xm8HA?pwd=arms) - 引脚功能表格下载
 
-[ArmSoM-LM7 封装](https://pan.baidu.com/s/1wIp67X337sZ5VEN-HnN-wA?pwd=arms ) - 封装下载
+[ArmSoM-LM7 封装](https://pan.baidu.com/s/1Nc6Vn69qGHjM7OoVajX6lw?pwd=arms) - 封装下载
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr" class="card-link">
+    <a href="https://pan.baidu.com/s/14Q2V7cpsuSdQslvESCSbwg?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -318,7 +318,7 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系�
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1aZ7q5XIbRim5XJZavd2R1YbVmWRGpWFY" class="card-link">
+<a href="https://pan.baidu.com/s/1yDK_N6rX1hzJPMUGxGBDug?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -329,7 +329,8 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系�
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+
+<a href="https://pan.baidu.com/s/1e0YIAYYj4hwJQxsiJEKkcw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -340,7 +341,8 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系�
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+
+<a href="https://pan.baidu.com/s/1voD9aF5iUpnYs4saAi6ITQ?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>

@@ -350,7 +350,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 ### arm-systemready
 
-Download : [百度网盘](https://pan.baidu.com/s/15KAZp5aF0HVZcJCEd25utw?pwd=arms) 
+Download : [百度网盘](https://pan.baidu.com/s/1j-CK2_rPYRhdzsaClP-P6g?pwd=arms) 
 
 ### SDK源码
 
@@ -410,15 +410,14 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="[/general-tutorial/cloud-disk](https://pan.baidu.com/s/1mVDdZPVIWT8UERq6jMdyhA?pwd=arms)" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1oRa1GMqjBwpGRnioOdrdSg?pwd=arms)   |
-|![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/16dO9cXSmq9w0nXFkckdAkw?pwd=arms)  |
-|![istoreos](https://avatars.githubusercontent.com/u/107662817?s=48&v=4) | istoreos for Sige7 :    <br/>提供一个人人会用的的路由、NAS系统 （目前活跃的分支是 istoreos-22.03）。| [百度网盘](https://pan.baidu.com/s/1nvlyxaDbpAlKoZYknDSe4g?pwd=arms )  |
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1ybboIDeGolq71ZCLWr7E9A?pwd=arms)   |
+|![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1btSeFT_-qs-0bz1wUcLZ6A?pwd=arms)  |
 
 ### 第三方镜像
 
@@ -426,18 +425,19 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 |:--------: | :---------: | :--------:  | 
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian固件下载](https://www.armbian.com/bananapi-m7/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+| lede | lede for Sige7 :    <br/>OpenWRT是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://github.com/coolsnowwolf/lede)  |
 
 ### 硬件资料
 
 获取 Sige7 原理图、DXF等硬件资料
 
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="https://pan.baidu.com/s/1mVDdZPVIWT8UERq6jMdyhA?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1GUg1hSzNVVuuWlY-_vGloA?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/18EjA6vzhfCRcO5CQ9oYhag?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -448,7 +448,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/10UYqMjc3IjTlguOVMv7JXw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1rqpumvtvASduXpq9Qi-B1Q?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -459,7 +459,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1Nk5RWFABTPvNcvISxS2c7Q?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1isHPcVGh5fHimA-sJXJICQ?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -469,7 +469,8 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1SBVyAAxlQHdpzCAu6ZWJXQ?pwd=arms" class="card-link">
+
+<a href="https://pan.baidu.com/s/1ueEtkxfKgDqIE7JhGRMuPw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
@@ -496,7 +497,6 @@ V1.1
 ### CE / FC / RoHS
 
 ![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
-
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
