@@ -24,8 +24,8 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
 - VPU/Decoding:
   - Hardware Decoding: Supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. Supports video standards including H.265, H.264, AVS2, etc.
   - Hardware Encoding: Supports 60fps capture of 1080p high-definition video. Supports H.265 and H.264 encoding.
-- RAM: 4GB 32-bit LPDDR4x, default 4GB (RK3528 supports maximum 4GB)
-- Flash: 32GB eMMC, default eMMC 32GB
+- RAM: 1GB / 2GB / 4GB 32-bit LPDDR4x, default 2GB 
+- Flash: 0GB / 8GB / 16GB / 32GB / 64GB eMMC, default eMMC 8GB
 - Operating Voltage: Wide range input voltage, from 4.5V to 18V (voltage error ±5%)
 - Operating Temperature: 0°C to 80°C
 - Operating System:
@@ -48,7 +48,6 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
         </div>
     </div>
 </a>
-
 
 ## Hardware
 
@@ -175,7 +174,6 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
         </tr>
     </tbody>
 </table>
-
 </details>
 
 ### RK3528 Block Diagram

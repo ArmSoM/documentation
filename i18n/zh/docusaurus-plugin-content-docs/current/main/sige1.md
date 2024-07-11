@@ -24,8 +24,8 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
 - VPU/编解码：
   - 硬解码：支持以60fps播放4K超高清视频，支持高达10位像素，支持H.265、H.264、AVS2等视频标准。
   - 硬编码：支持以60fps捕捉1080p高清视频，支持H.265和H.264编码。
-- RAM：4GB 32bit LPDDR4x，默认4GB，RK3528 最大支持4GB
-- Flash：32GB eMMC，默认eMMC 32GB
+- RAM：1GB / 2GB / 4GB 32bit LPDDR4x，默认2GB
+- Flash：0GB / 8GB / 16GB / 32GB / 64GB eMMC，默认eMMC 8GB
 - 工作电压：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
 - 工作温度：0℃ ~ 80℃
 - 操作系统：

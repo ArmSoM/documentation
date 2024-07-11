@@ -62,6 +62,10 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 ![aim7-product](/img/aim/aim7-product.jpg)
 
 ### 硬件规格
+<details>
+    <summary>
+        AIM7 硬件规格
+    </summary>
 
 <table>
     <thead>
@@ -101,9 +105,14 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
     </tbody>
 </table>
 
-
+</details>
 
 ### 竞品规格参数对比
+
+<details>
+    <summary>
+        AIM7 硬件规格
+    </summary>
 
 | 规格                                 |  ArmSoM-AIM7              | Jetson Nano (NVIDIA)                |
 |--------------------------------------|-----------------------------------|--------------------------------|
@@ -126,10 +135,12 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 | 大小   |  69.6 mm x 45 mm |69.6 mm x 45 mm  |
 |规格尺寸|260 引脚边缘连接器| 260 引脚边缘连接器| 
 
+</details>
 
 ### 功能接口定义
 
 #### Video input interface
+
 **Two  MIPI DC (DPHY/CPHY) combo PHY**
 * Support USE DPHY or CPHY
 * Each MIPI DPHY V2.0, 4 lanes, 4.5 Gbps per lane
