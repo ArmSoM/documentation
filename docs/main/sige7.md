@@ -434,7 +434,8 @@ Network disk address:
 |:--------: | :---------: | :--------:  | 
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian](https://www.armbian.com/bananapi-m7/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
-|![istoreos](https://avatars.githubusercontent.com/u/107662817?s=48&v=4) | istoreos for Sige7 :    <br/>Provide a user-friendly router and NAS system that everyone can use.|[Google Drive link](https://drive.google.com/drive/folders/1ZzaR2m36Nos1TCaKmTBy6ALmIpQLsaBZ?usp=drive_link)  |
+|lede | lede for Sige7 :    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。|[Google Drive link](https://drive.google.com/drive/folders/1ZzaR2m36Nos1TCaKmTBy6ALmIpQLsaBZ?usp=drive_link)  |
+|Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux is an independently developed with the general-purpose of GNU/Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required. | [download](https://github.com/kwankiu/archlinux-installer/releases) | 
 
 ### Hardware Resources 
 
