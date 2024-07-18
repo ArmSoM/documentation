@@ -419,14 +419,14 @@ ArmSoM team uses Debian bullseye as the official operating system.
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1bHQG3pr3tHi_2uybN6RvQA1o4lnUpeGN)    |
-|![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/file/d/1SX3IO14Kdy-3wIOqLpmG9oSfuj1XAOzT/view?usp=drive_link)  |
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1-dj3S95kHlRemunNpnltn2qtwk9sZtRB?usp=drive_link)    |
+|![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/19MuIZF_DpydbgKHNJpRjeOZ1jLd5wtKz?usp=drive_link)  |
 
 ### Third Party System  
 
@@ -445,7 +445,7 @@ Network disk address:
 <br/>
 
 <div class="cards">
-    <a href="https://drive.google.com/file/d/1Ii0Ep-616JgdENhtjnCNix_exlq1Ax9Z/view?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1AGvCexVvBLNmA7CGPvxmofr4jsAUD7aw?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -456,7 +456,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1nLe93JpHQ83welST-KUr-j9DrSCuE-JV?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1AGvCexVvBLNmA7CGPvxmofr4jsAUD7aw?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -467,7 +467,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/file/d/1CAIkXP9vTAlQEQWiOLY9ytuNbfACrvga/view?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1AGvCexVvBLNmA7CGPvxmofr4jsAUD7aw?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -477,7 +477,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1GHKJTWVRvuEXB0BPwlfFD4GWyQCOWf6D" class="card-link">
+<a href="https://drive.google.com/drive/folders/1AGvCexVvBLNmA7CGPvxmofr4jsAUD7aw?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

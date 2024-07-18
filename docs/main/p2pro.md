@@ -124,7 +124,7 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 
 The following systems have been tested and verified by ArmSoM official:
 
-Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
+Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link) 
 
 **debain bullseye**  
 
@@ -144,13 +144,50 @@ We are working on adapting armbian systems！Coming soon...
 
 ### Hardware Resources
 
-[ArmSoM-p2pro v1.1 Schematic pdf](https://drive.google.com/drive/folders/1-PiEzL9dguSznAxjfnkexjCKf08A07Sc)
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1909scIZ6N-CPXg3YwFqUfujchpkX3L1P?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>p2pro SCH</h2>
+            </div>
+        </div>
+</a>
 
-[ArmSoM-p2pro v1.1 Bottom&Top](https://drive.google.com/drive/folders/1rdJszKp6YXAMPEHMod3zUpfXJPYdX7yp)
+<a href="https://drive.google.com/drive/folders/1poEmG7qoPGusLg_GnVWMICXeKwuxaa4P?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>p2pro 2D</h2>
+        </div>
+    </div>
+</a>
 
-[ArmSoM-p2pro v1.1 Component diagram](https://drive.google.com/drive/folders/1dFL5A4Y_AIQvg8WBvP8Y9yPGmMEp9eRJ) 
-
-[ArmSoM-p2pro v1.1 datasheet](https://drive.google.com/drive/folders/1tykssd5rnPnps8AoJ0eVFfM6lm8U7qCe)  
+<a href="https://drive.google.com/drive/folders/1Ct6q76S8NnV-qSxd3fAYVfTs0NFxAXHD?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>p2pro SMD</h2>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1PT0hqobvGlA_5Gm8v4IIqTvYyT7BJ6Kg?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+</div>
 
 :::tip Version Change History
 v1.0 is an internal version (fail to disclose now)  

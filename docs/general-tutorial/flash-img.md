@@ -14,7 +14,7 @@ The system image includes the linux kernel, basic programs, etc., and is necessa
 
 ## 1. Obtain system image
 
-Visit the Google Drive resource introduction page to obtain the system image: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM?usp=drive_link)
+Visit the Google Drive resource introduction page to obtain the system image: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link?usp=drive_link)
 
 :::tip
 1. The default account/password of the official image is armsom/armsom.

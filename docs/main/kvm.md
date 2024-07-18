@@ -96,7 +96,7 @@ ArmSoM team uses Debian bullseye as the official operating system.
 
 The following systems have been tested and verified by ArmSoM official:
 
-Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM) 
+Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link) 
 
 **debain bullseye**  
 

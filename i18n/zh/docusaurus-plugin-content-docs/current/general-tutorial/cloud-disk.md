@@ -11,7 +11,7 @@ ArmSoM 发布的所有产品软件资源都会同步到百度网盘供用户下�
 
 ## 1. 下载地址
 
-点击进入链接: [百度网盘链接](https://pan.baidu.com/s/19uViHwajeW3p-3HY6xxMpg?pwd=arms)
+点击进入链接: [百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms )
 
 ![ArmSoM baidu-cloud-all](/img/general-tutorial/baidu-cloud-all.png)
 

@@ -320,8 +320,8 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/>  Debian 11 continues to uphold Debian's tradition by offering a stable and reliable operating system environment. It has undergone rigorous testing and stability assurances, making it suitable for servers, desktops, and embedded devices alike.| [Google Drive link](https://drive.google.com/drive/folders/1D7a_VybIE5v_MGIGHn4d1GhY_rkSLqFw?usp=drive_link)  |
-|![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>The Android 9 Box version is an Android operating system specifically designed for TV boxes. It is based on Android 9 Pie, focusing on optimizing user experience and performance for large-screen devices. | [Google Drive link](https://drive.google.com/drive/folders/1mXIWv7NN0G-tN3LRs1LQsN9B4Kg6Fj9X?usp=drive_link)      |
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/>  Debian 11 continues to uphold Debian's tradition by offering a stable and reliable operating system environment. It has undergone rigorous testing and stability assurances, making it suitable for servers, desktops, and embedded devices alike.| [Google Drive link](https://drive.google.com/drive/folders/1UsUqiYN2mzTEx_H2eBlRiNChdmZge0EO?usp=drive_link)  |
+|![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>The Android 9 Box version is an Android operating system specifically designed for TV boxes. It is based on Android 9 Pie, focusing on optimizing user experience and performance for large-screen devices. | [Google Drive link](https://drive.google.com/drive/folders/1ZDfZGnfNyN2fsciE2lMQwuXcvaoRZofP?usp=drive_link)      |
 
 ### Third Party System  
 
@@ -333,7 +333,7 @@ Network disk address:
 ### Hardware Resources 
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1909scIZ6N-CPXg3YwFqUfujchpkX3L1P?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -344,7 +344,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1poEmG7qoPGusLg_GnVWMICXeKwuxaa4P?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -355,7 +355,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1Ct6q76S8NnV-qSxd3fAYVfTs0NFxAXHD?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -365,7 +365,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1PT0hqobvGlA_5Gm8v4IIqTvYyT7BJ6Kg?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

@@ -11,7 +11,7 @@ There are abundant software and hardware resources in the network disk, includin
 
 ## 1. Download address
 
-Click to enter the link: [Google Drive link](https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM)
+Click to enter the link: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link)
 
 ![ArmSoM google-cloud-all](/img/general-tutorial/google-cloud-all.png)
 

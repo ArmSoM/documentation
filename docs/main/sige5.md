@@ -420,8 +420,8 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/193R1osroKtvxWnvoCBYvl7nrcQh3nLVa?usp=drive_link)  |
-|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.| [Google Drive link](https://drive.google.com/drive/folders/13eq1ZRBrfKl7HwDGmJIHRF7vo4l6PLhv?usp=drive_link)  |
+|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/164aAYUQe8yGcXjiZs9kjpnntF-eigywX?usp=drive_link)  |
+|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.| [Google Drive link](https://drive.google.com/drive/folders/1mzg_qaYFtXKfHLTMN5ILX9ZZBBGfT_xQ?usp=drive_link)  |
 
 ### Third Party System  
 
@@ -434,7 +434,7 @@ Network disk address:
 ### Hardware Resources 
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1bLvY1DO9aUiPn9H7wr-rzbrvpmllA9Q4?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1DFfLAtIjYqWCKZrP6XGkbytzasOrc2jm?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -445,7 +445,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1b9Ld5kFnt2Y5iGB0-T5BdTbkYjsGP10I?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1DFfLAtIjYqWCKZrP6XGkbytzasOrc2jm?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -456,7 +456,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1DhyWlQ9UoaBgt2DWAo7fMDRtFJPUF33g?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1DFfLAtIjYqWCKZrP6XGkbytzasOrc2jm?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -466,7 +466,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/10T912p9Hdw1Q_KSdCebgYZf943-0Yu2F?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1DFfLAtIjYqWCKZrP6XGkbytzasOrc2jm?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

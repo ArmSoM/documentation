@@ -304,14 +304,14 @@ Based on Debian bullseye works as official operating system by the ArmSom team.
 The following systems have been tested and verified by ArmSoM officially:  
 
 Download link:
-<a href="https://drive.google.com/drive/folders/1aCoC6-5zoMaNBGwwgr_pYIs219aFijFM" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for LM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1IPJigG2iL6M36XgtTbrcIGDuLUTBWPqp?usp=drive_link)    |
-|![Android](/img/sige/android.png) | Android12 for LM7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/11-saIVSrTQEZcH8GF246M78P4rVnrkzg?usp=drive_link)  |
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for LM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1wz2BPS8s1iXNWlOUGyPmnBSDG32arWdT?usp=drive_link)    |
+|![Android](/img/sige/android.png) | Android12 for LM7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/1vMC1qNUY-fHiyqqK_xYNom2goQ52gVNA?usp=drive_link)  |
 
 #### Release Information
 
@@ -328,7 +328,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
 ### LM7 Hardware Resources 
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr" class="card-link">
+    <a href="https://docs.google.com/spreadsheets/d/1hcwwZbGElfGMAEaGHhuznplZgvGaaYRy/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -339,7 +339,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/15i-GmX1vapcVh2PAS43DNhpAcBUlI_k_" class="card-link">
+<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -355,7 +355,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
 #### Development Kit (W3) Resources
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1ipRaYndHppGDPHmDfMgtcpbWCNPVkkBr" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -367,7 +367,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1aZ7q5XIbRim5XJZavd2R1YbVmWRGpWFY" class="card-link">
+<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -378,7 +378,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -389,7 +389,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1sKteAmZWcZEaKss57S364_BdjAcX1bhv" class="card-link">
+<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
