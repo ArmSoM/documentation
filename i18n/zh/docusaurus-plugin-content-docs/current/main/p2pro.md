@@ -171,9 +171,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 | Openwrt | Openwrt for P2pro :    <br/>Openwrt是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。|[百度网盘](https://pan.baidu.com/s/1aJgNfJLOLmYV_C1UrVy5dA?pwd=arms)  |
 
 ### 硬件资料
-链接：https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms 
-提取码：arms 
---来自百度网盘超级会员V5的分享
+
 获取 P2pro 原理图、DXF等硬件资料
 
 <a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="btn">

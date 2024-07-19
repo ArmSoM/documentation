@@ -334,6 +334,7 @@ Table 7. eDP/HDMI pin descriptions
     <summary>
         SDIO
     </summary>
+
 * Compatible with SDIO3.0 protocol
 * 4-bit data bus width
 
@@ -355,6 +356,7 @@ Table 8. SDIO pin descriptions
     <summary>
         GMAC
     </summary>
+
 Table 9. Gigabit Ethernet pin descriptions
 
 |Pin| 	Pin name	|Signal description	|Direction	|Pin type|
@@ -376,6 +378,7 @@ Table 9. Gigabit Ethernet pin descriptions
     <summary>
         USB3.0
     </summary>
+
 * Embedded two USB 3.0 OTG interfaces which combo with DP TX (USB3OTG_0 and USB3OTG_1)
 * Embedded one USB 3.0 Host interface which combos with Combo PIPE PHY2 (USB3OTG_2)
 
@@ -394,6 +397,7 @@ Table 10. USB 3.0 GEN1 pin descriptions
     <summary>
         USB 2.0 Host
     </summary>
+
     * Compatible with USB 2.0 specification
     * Support two USB 2.0 Hosts
     * Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
@@ -416,6 +420,7 @@ Table 11. USB 2.0 pin descriptions
     <summary>
         PCIe
     </summary>
+
 **PCIe 2.1 interface**
 * Compatible with PCI Express Base Specification Revision 2.1
 * Support one lane for each PCIe 2.1 interface
@@ -497,7 +502,8 @@ Table 13. PCIe 3.0 pin descriptions
     <summary>
         SPI interface
     </summary>
-    * Support 5 SPI Controllers (SPI0-SPI4)
+
+* Support 5 SPI Controllers (SPI0-SPI4)
 * Support two chip-select output
 * Support serial-master and serial-slave mode, software-configurable
   
@@ -540,6 +546,7 @@ Table 15. I2C pin descriptions
     <summary>
         UART interface
     </summary>
+
 * Support 10 UART interfaces (UART0-UART9)
 * Embedded two 64-byte FIFO for TX and RX operation respectively
 * Support transmitting or receiving 5-bit, 6-bit, 7-bit, and 8-bit serial data
@@ -568,6 +575,7 @@ Table 16. UART pin descriptions
     <summary>
         CAN bus
     </summary>
+
 * Support transmitting or receiving CAN standard frame
 * Support transmitting or receiving CAN extended frame
 * Support transmitting or receiving data frame, remote frame, overload frame, error frame, and frame interval
@@ -585,6 +593,7 @@ Table 14. CAN pin descriptions
     <summary>
         GPIO
     </summary>
+
 * All GPIOs can be used to generate interrupt
 * Support level trigger and edge trigger interrupt
 * Support configurable polarity of level trigger interrupt

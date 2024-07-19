@@ -59,7 +59,8 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
     <summary>
       P2pro Hardware Spec
     </summary>
-    |         Model         |                        ArmSoM-p2 pro                         |
+
+|         Model         |                        ArmSoM-p2 pro                         |
 | :-------------------: | :----------------------------------------------------------: |
 |          SoC          |                      RockChip RK3308B-S                      |
 |          CPU          |               Quad-core ARM Cortex-A35@1.3GHz                |
@@ -77,6 +78,7 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 |      Dimensions       |                        65mm x 52.5mm                         |
 |        Weight         |                             30g                              |
 | Operating Temperature |                          0°C ~ 70°C                          |
+
 </details>
 
 

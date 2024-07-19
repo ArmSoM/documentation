@@ -60,6 +60,12 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
 :::
 ### Hardware Spec
+
+<details>
+    <summary>
+        AIM7 Hardware Spec
+    </summary>
+
 <div className='gpio_style'>
 
 | Specifications   |ArmSoM-AIM7(Rockchip)                                       | Jetson Nano (NVIDIA)                                         | 
@@ -84,9 +90,15 @@ All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 | Form Factor      | 260-pin edge connector                                       | 260-pin edge connector     |
 </div>
 
+</details>
+
 ### Hardware Pin Definitions
 
-#### Video input interface
+<details>
+    <summary>
+        Video input interface
+    </summary>
+
 **Two  MIPI DC (DPHY/CPHY) combo PHY**
 * Support USE DPHY or CPHY
 * Each MIPI DPHY V2.0, 4 lanes, 4.5 Gbps per lane
@@ -178,8 +190,12 @@ Table 4. CSI4 pin descriptions
 |228| CAM4_MCLK|	Camera, CSI 4 Data 1–|	Input|	MIPI D-PHY|
 |230| CAM4_PWDN|	Camera, CSI 4 Data 1+|	Input	|MIPI D-PHY|
 
+</details>
 
-#### Video output processor
+<details>
+    <summary>
+        Video output processor
+    </summary>
 
 **HDMI/eDP TX interface**
 
@@ -266,8 +282,14 @@ Table 7. eDP/HDMI pin descriptions
 |100|	HDMI_SCL / EDP_TX0_AUXP|	HDMI/EDP DDC SCL|	Output|	Open-Drain,3.3V|
 |96|	HDMI_CEC|	HDMI/EDP Hot Plug Detect|	Input	|Open Drain–3.3V|
 |94|	HDMI_HPD|	HDMI/EDP CEC|	Bidir|	Open Drain–1.8V|
+</details>
 
-#### SDIO
+
+<details>
+    <summary>
+        SDIO
+    </summary>
+
 * Compatible with SDIO3.0 protocol
 * 4-bit data bus width
 
@@ -283,9 +305,12 @@ Table 8. SDIO pin descriptions
 |227|	SDMMC_CMD|	SD Card or SDIO Command	|Bidir|	CMOS – 1.8V/3.3V
 |229|	SDMMC_CLK|	SD Card or SDIO Clock	|Output|	CMOS – 1.8V/3.3V
 |126|	SDMMC_DET|	SD Card or SDIO DET	|Output|	CMOS – 1.8V/3.3V
+</details>
 
-
-#### GMAC
+<details>
+    <summary>
+        GMAC
+    </summary>
 
 Table 9. Gigabit Ethernet pin descriptions
 
@@ -302,8 +327,12 @@ Table 9. Gigabit Ethernet pin descriptions
 |200|GND|	Ground  |	|	|
 |202|	GBE_MDI3_N	|GbE Transformer Data 3–	|Bidir	|MDI|
 |204|	GBE_MDI3_P	|GbE Transformer Data 3+	|Bidir	|MDI|
+</details>
 
-#### USB3.0
+<details>
+    <summary>
+        USB3.0
+    </summary>
 
 * Embedded two USB 3.0 OTG interfaces which combo with DP TX (USB3OTG_0 and USB3OTG_1)
 * Embedded one USB 3.0 Host interface which combos with Combo PIPE PHY2 (USB3OTG_2)
@@ -317,14 +346,18 @@ Table 10. USB 3.0 GEN1 pin descriptions
 |163|	PCIE20_2_RXP/SATA30_2_RXP/USBSS_RX_P	|USB SS Receive+ (USB 3.0 Ctrl #0)	|Input	|USB SS PHY|
 |166|	PCIE20_2_TXN/SATA30_2_TXN/USBSS_TX_N	|USB SS Transmit- (USB 3.0 Ctrl #0)	|Output	|USB SS PHY|
 |168|	PCIE20_2_TXP/SATA30_2_TXP/USBSS_TX_P	|USB SS Transmit+ (USB 3.0 Ctrl #0)	|Output	|USB SS PHY|
+</details>
 
-#### USB 2.0 Host
+<details>
+    <summary>
+        USB 2.0 Host
+    </summary>
 
-* Compatible with USB 2.0 specification
-* Support two USB 2.0 Hosts
-* Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
-* Support Enhanced Host Controller Interface Specification (EHCI), Revision 1.0
-* Support Open Host Controller Interface Specification (OHCI), Revision 1.0a
+    * Compatible with USB 2.0 specification
+    * Support two USB 2.0 Hosts
+    * Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
+    * Support Enhanced Host Controller Interface Specification (EHCI), Revision 1.0
+    * Support Open Host Controller Interface Specification (OHCI), Revision 1.0a
 
 Table 11. USB 2.0 pin descriptions
 
@@ -336,8 +369,12 @@ Table 11. USB 2.0 pin descriptions
 |117|	USB1_D_P|	USB 2.0 Port 1 Data+	|Bidir	|USB PHY|
 |121|	USB2_D_N|	USB 2.0 Port 2 Data–	|Bidir	|USB PHY|
 |123|	USB2_D_P|	USB 2.0 Port 2 Data+	|Bidir	|USB PHY|
+</details>
 
-#### PCIe
+<details>
+    <summary>
+        PCIe
+    </summary>
 
 **PCIe 2.1 interface**
 * Compatible with PCI Express Base Specification Revision 2.1
@@ -414,10 +451,12 @@ Table 13. PCIe 3.0 pin descriptions
 |199|PCIE_30X1_1_WAKE    |PCIe Wake. 47kΩ pull-up to 3.3V on themodule.|Input|	Open Drain – 3.3V|
 |211	|PCIE_30X1_1_CLKREQ|PCIe #0 Clock Request (PCIe Ctrl #0). 47kΩpull-up to 3.3V on the module.|Bidir|Open Drain – 3.3V|
 |197|PCIE_30X1_1_RST |PCIe #0 Reset (PCIe Ctrl #0). 4.7kΩ pull-up to3.3V on the module.|Bidir|	Open Drain – 3.3V|
+</details>
 
-
-
-#### SPI interface
+<details>
+    <summary>
+        SPI interface
+    </summary>
 
 * Support 5 SPI Controllers (SPI0-SPI4)
 * Support two chip-select output
@@ -438,9 +477,12 @@ Table 14. SPI pin descriptions
 |108|	SPI1_MISO	|SPI 1 Master In / Slave Out	|Bidir	|CMOS – 1.8|
 |110|	SPI1_CS0	|SPI 1 Chip Select 0	        |Bidir	|CMOS – 1.8|
 |112|	SPI1_CS1	|SPI 1 Chip Select 1	        |Bidir	|CMOS – 1.8|
+</details>
 
-#### I2C interface
-
+<details>
+    <summary>
+        I2C interface
+    </summary>
 Table 15. I2C pin descriptions
 
 |Pin| 	Pin name	|Signal description|	Direction|Pin type|
@@ -453,8 +495,12 @@ Table 15. I2C pin descriptions
 |234|	I2C2_SDA	|General I2C 2 Data. 2.2kΩ pull-up to 1.8V on the module.|	Bidir|	Open Drain – 1.8V
 |213|	CAM_I2C_SCL	|Camera I2C Clock. 2.2kΩ pull-up to 3.3V on the module.|	Bidir|	Open Drain – 3.3V
 |215|	CAM_I2C_SDA	|Camera I2C Data. 2.2kΩ pull-up to 3.3V on the module.|	Bidir|	Open Drain – 3.3V
+</details>
 
-#### UART interface
+<details>
+    <summary>
+        UART interface
+    </summary>
 
 * Support 10 UART interfaces (UART0-UART9)
 * Embedded two 64-byte FIFO for TX and RX operation respectively
@@ -478,8 +524,12 @@ Table 16. UART pin descriptions
 |209|	UART1_CTS	|UART #1 Clear to Send	    |Input|	CMOS – 1.8V
 |236|	UART2_TXD	|UART #2 Transmit	        |Output|	CMOS – 1.8V
 |238|	UART2_RXD	|UART #2 Receive	        |Input|	CMOS – 1.8V
+</details>
 
-#### CAN bus
+<details>
+    <summary>
+        CAN bus
+    </summary>
 
 * Support transmitting or receiving CAN standard frame
 * Support transmitting or receiving CAN extended frame
@@ -492,8 +542,12 @@ Table 14. CAN pin descriptions
 |141 |GND|	Ground  |	|	|
 |145|	CAN_TX	 |CAN PHY	    | Output            |	CMOS – 3.3V
 |143|	CAN_RX	 |CAN PHY 	|Input              |	CMOS – 3.3V 
+</details>
 
-#### GPIO
+<details>
+    <summary>
+        GPIO
+    </summary>
 
 * All GPIOs can be used to generate interrupt
 * Support level trigger and edge trigger interrupt
@@ -521,10 +575,12 @@ Table 15. GPIO pin descriptions
 |218|GPIO12/I2S2_MCLK_M1/MIPI_CAM3_PDN|	GPIO #12 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 |228|GPIO13/GPIO3_B1/PWM2/MIPI_CAM4_CLKOUT|	GPIO #13 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
 |230|GPIO14/GPIO3_A1/PWM11_IR/MIPI_CAM4_PDN | GPIO #14 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
+</details>
 
-
-#### i2s interface
-
+<details>
+    <summary>
+        i2s interface
+    </summary>
 Table 16. i2s pin descriptions
 
 |Pin| 	Pin name|	Signal description|	Direction|	Pin type
@@ -537,8 +593,12 @@ Table 16. i2s pin descriptions
 |224|	I2S1_FS	|I2S Audio Port 1 Left/Right Clock	|Bidir|	CMOS – 1.8V
 |220|	I2S1_DOUT|	I2S Audio Port 1 Data Out	|Output|	CMOS – 1.8V
 |222|	I2S1_DIN |	I2S Audio Port 1 Data In	|Input	|CMOS – 1.8V
+</details>
 
-#### pin define
+<details>
+    <summary>
+        引脚定义
+    </summary>
 
 |ArmSoM-AIM7 function |	Pin number	|Pin number|	ArmSoM-AIM7 function|
 |------------------|-------------------------|-------------------------|-------------------------|
@@ -672,6 +732,8 @@ Table 16. i2s pin descriptions
 |VDD_IN|	255|	256|	VDD_IN|
 |VDD_IN|	257|	258|	VDD_IN|
 |VDD_IN|	259|	260|	VDD_IN  |
+
+</details>
 
 
 ## Resources
