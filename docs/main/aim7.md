@@ -579,7 +579,7 @@ Table 15. GPIO pin descriptions
 
 <details>
     <summary>
-        i2s interface
+        I2C interface
     </summary>
 Table 16. i2s pin descriptions
 
@@ -597,7 +597,7 @@ Table 16. i2s pin descriptions
 
 <details>
     <summary>
-        引脚定义
+      Pin Definitions
     </summary>
 
 |ArmSoM-AIM7 function |	Pin number	|Pin number|	ArmSoM-AIM7 function|

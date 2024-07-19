@@ -624,7 +624,7 @@ Table 15. GPIO pin descriptions
 
 <details>
     <summary>
-        i2s interface
+        I2S interface
     </summary>
 Table 16. i2s pin descriptions
 
