@@ -31,10 +31,6 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 - Weight: 
 - Size: 52.5mm × 65mm 
 
-### rk3308b-s Block Diagram
-
-![rk3308b-s](/img/sige/rk3308b-s.png)
-
 ## Hardware
 
 ### Hardware Interface
@@ -45,9 +41,25 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 The PoE module and eMMC module of P2pro are not equipped by default. They are optional choices.
 :::
 
-### Hardware Specifications  
+### rk3308b-s Block Diagram
 
-|         Model         |                        ArmSoM-p2 pro                         |
+<details>
+    <summary>
+      rk3308b-s 框图
+    </summary>
+    <img
+  src="/img/sige/rk3308b-s.png"
+  alt="rk3308b-s block diagram"
+  className="session-details-live-video"/>
+</details>
+
+### Hardware Spec  
+
+<details>
+    <summary>
+      P2pro Hardware Spec
+    </summary>
+    |         Model         |                        ArmSoM-p2 pro                         |
 | :-------------------: | :----------------------------------------------------------: |
 |          SoC          |                      RockChip RK3308B-S                      |
 |          CPU          |               Quad-core ARM Cortex-A35@1.3GHz                |
@@ -65,14 +77,17 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 |      Dimensions       |                        65mm x 52.5mm                         |
 |        Weight         |                             30g                              |
 | Operating Temperature |                          0°C ~ 70°C                          |
+</details>
 
 
 ### Hardware Pin Definition   
 
-#### 40-pin Header   
-
-<div className='gpio_style'>   
-
+<details>
+    <summary>
+        40-PIN GPIO
+    </summary>
+   
+<div className='gpio_style'>
 
 | GPIO number |               Function               |               Pin               |               Pin               |            Function             | GPIO number |
 | :---------: | :----------------------------------: | :-----------------------------: | :-----------------------------: | :-----------------------------: | :---------: |
@@ -98,11 +113,14 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 |             |                MICP8                 | <div className='green'>39</div> | <div className='green'>40</div> |              MICN8              |             |
 
 </div>  
-
-#### 12 PIN GPIO   
-
-<div className='gpio_style'>   
-
+</details>
+ 
+<details>
+    <summary>
+        12-PIN GPIO
+    </summary>
+   
+<div className='gpio_style'>
 
 | GPIO number |                           Function                           |               Pin               |               Pin               |          Function          | GPIO number |
 | :---------: | :----------------------------------------------------------: | :-----------------------------: | :-----------------------------: | :------------------------: | :---------: |
@@ -113,34 +131,49 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 |     55      | JTAG_TMS / <div className='orange-txt'>UART2_TX_M0</div> / GPIO1_C7 / SPI2_TX | <div className='green'>9</div>  | <div className='green'>10</div> | PWM2 / GPIO0_B7 / I2C3_SDA |     15      |
 |     54      | JTAG_TCK / <div className='orange-txt'>UART2_RX_M0</div> / GPIO1_C6 / SPI2_RX | <div className='green'>11</div> | <div className='green'>12</div> |  PWM3 / GPIO0_C0 / IR_RX   |     16      |
 </div>   
+  
+</details>
 
 ## Resources
 
 ### Source Code
 
-[ArmSoM-P2pro BSP](https://github.com/ArmSoM/armsom-p2pro-bsp)
+<div class="cards">
+<a href="https://github.com/ArmSoM/armsom-p2pro-bsp" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Source Code</h2>
+            <p>Linux for ARM development boards</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### Official Image
 
+ArmSoM team uses Debian bullseye as the official operating system.
+
+#### Download
+
 The following systems have been tested and verified by ArmSoM official:
 
-Network disk address: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link) 
+Network disk address: 
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
+  <span>Google Drive link</span>
+</a>
 
-**debain bullseye**  
-
-Firmware location: 3. Linux image/debian/ArmSoM-P2pro  
-
-**istoreos**  
-
-Firmware location: 3. Linux image/openwrt/ArmSoM-P2pro  
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for P2pro :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1uKe4JgGLnHWENoazhCLPNLfYF2_ZQm_S?usp=drive_link)    |
 
 ### Third Party System  
 
-#### armbian  
-
-![armbian-logo](/img/armbian-logo.webp)
-
-We are working on adapting armbian systems！Coming soon...
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|Openwrt | Openwrt for P2pro :    <br/>Openwrt is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/1T_mqbMyNoy6g-qCfVH99te1kco1brn6r?usp=drive_link)  |
 
 ### Hardware Resources
 
@@ -188,12 +221,11 @@ We are working on adapting armbian systems！Coming soon...
     </div>
 </a>
 </div>
+<br/>
 
 :::tip Version Change History
 v1.0 is an internal version (fail to disclose now)  
 :::
-
-
 
 ## User Manual
 

@@ -45,7 +45,7 @@ Video support HDMI,VGA,DP and DVI,support 4 expansion boards
 ![armsom-kvm-video-interface](/img/link/armsom-kvm-video-interface.png)
 :::
 
-### Hardware Specifications
+### Hardware Spec
 
 |Model|ArmSoM-KVM|
 | :--------: | :----------:|

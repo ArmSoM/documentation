@@ -59,7 +59,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 :::tip
 All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
 :::
-### Hardware Specification
+### Hardware Spec
 <div className='gpio_style'>
 
 | Specifications   |ArmSoM-AIM7(Rockchip)                                       | Jetson Nano (NVIDIA)                                         | 

@@ -80,7 +80,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 ### Hardware Spec
 <details>
     <summary>
-        RK3576 Hardware Spec
+        Sige7 Hardware Spec
     </summary>
     <table>
     <thead>
@@ -357,7 +357,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 
 ### arm-systemready
 
-Download : [Google Drive link](https://drive.google.com/drive/folders/1zzB_xiWJ-70kmDPCx9QHmmN5k6V8J4jE) 
+github : [SystemReady](https://github.com/ArmSoM/SystemReady) 
 
 ### Source Code
 
@@ -434,7 +434,7 @@ Network disk address:
 |:--------: | :---------: | :--------:  | 
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian](https://www.armbian.com/bananapi-m7/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
-|lede | lede for Sige7 :    <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/1ZzaR2m36Nos1TCaKmTBy6ALmIpQLsaBZ?usp=drive_link)  |
+|lede | lede for Sige7 :    <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/18QOdyAiE4nyGD_CU57gSvQolHOXH2x5A?usp=drive_link)  |
 |Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux is an independently developed with the general-purpose of GNU/Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required. |Simply flash the image and follow the instructions prompted by the installer.<br/>NOTE: This installer requires an internet connection. (The Ethernet drivers may take some time to load and the installer will retry several times, this is normal.) [download](https://github.com/kwankiu/archlinux-installer/releases) | 
 
 ### Hardware Resources 

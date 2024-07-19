@@ -29,10 +29,6 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - 重量：
 - 大小：52.5mm × 65mm
 
-### rk3308b-s 框图
-
-![rk3308b-s](/img/sige/rk3308b-s.png)
-
 ## 硬件信息
 
 ### 硬件接口
@@ -42,7 +38,24 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 P2pro的POE模块和eMMC模块为选配，默认没有
 :::
 
+
+### rk3308b-s 框图
+<details>
+    <summary>
+      rk3308b-s 框图
+    </summary>
+    <img
+  src="./img/sige/rk3308b-s.png"
+  alt="rk3308b-s block diagram"
+  className="session-details-live-video"/>
+</details>
+
+
 ### 硬件规格
+<details>
+    <summary>
+      P2pro 硬件规格
+    </summary>
 
 |Model|ArmSoM-p2 pro|
 | :--------: | :----------:|
@@ -63,10 +76,14 @@ P2pro的POE模块和eMMC模块为选配，默认没有
 |重量 |30g|
 |工作温度	| 0℃ ~ 70℃|
 
+</details>
+
 ### 引脚定义
 
-#### 40-pin 座子
-
+<details>
+    <summary>
+        40 PIN GPIO
+    </summary>
 <div className='gpio_style'>
 
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
@@ -93,9 +110,12 @@ P2pro的POE模块和eMMC模块为选配，默认没有
 |      |    MICP8   | <div className='green'>39</div>  | <div className='green'>40</div> |  MICN8  |     |
 
 </div>
+</details>
 
-#### 12 PIN GPIO
-
+<details>
+    <summary>
+        12 PIN GPIO
+    </summary>
 <div className='gpio_style'>
 
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
@@ -107,14 +127,25 @@ P2pro的POE模块和eMMC模块为选配，默认没有
 |      55   |   JTAG_TMS / <div className='orange-txt'>UART2_TX_M0</div>  / GPIO1_C7 / SPI2_TX  |  <div className='green'>9</div>  | <div className='green'>10</div> |  PWM2  / GPIO0_B7 / I2C3_SDA  |     15      |
 |     54 |  JTAG_TCK / <div className='orange-txt'>UART2_RX_M0</div> / GPIO1_C6 / SPI2_RX | <div className='green'>11</div>  | <div className='green'>12</div> |  PWM3  / GPIO0_C0 / IR_RX |     16   |
 </div>
-
+</details>
 
 
 ## 开发资料
-
 ### SDK源码
 
-[ArmSoM-P2pro BSP](https://github.com/ArmSoM/armsom-p2pro-bsp)
+<div class="cards">
+    <a href="https://github.com/ArmSoM/armsom-p2pro-bsp" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>P2pro源码</h2>
+                <p>适用于 ARM 开发板的 Linux</p>
+            </div>
+        </div>
+    </a>
+</div>
 
 ### 官方镜像
 
@@ -122,46 +153,80 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
-网盘地址：[百度网盘链接](https://pan.baidu.com/s/1f_YDt4S8Zu5URH1zv_UjIw?pwd=arms)
+网盘地址：
 
-**debain bullseye**
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+  <span>百度网盘链接</span>
+</a>
+<br/>
 
-固件位置：3. Linux镜像/debian/ArmSoM-P2pro
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for P2pro :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/1P1qoG5AKONyQAcoR90JOSw?pwd=arms)  |
 
-**istoreos**
+### Third Party System  
 
-固件位置：3. Linux镜像/openwrt/ArmSoM-P2pro  
-
-<!-- #### 发布信息
-
-ArmSoM-P2pro 的首次官方发布通告请在以下链接查看：
-[ArmSoM-P2pro 系统发布通知](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139) -->
-
-### 第三方系统
-
-#### armbian
-![armbian-logo](/img/armbian-logo.webp)
-
-<!-- [Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160.img](https://pan.baidu.com/s/1URvyxKoox207rWwsMJmCyQ?pwd=arms)
-
-[Armbian_23.11.0-trunk_Armsom-w3_bookworm_legacy_5.10.160_cinnamon_desktop.img](https://pan.baidu.com/s/1w7v7b1BJ1ubJYrIlFchqUw?pwd=arms)
-
-[Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160.img](https://pan.baidu.com/s/1-6qgLxC7CbiNObRmJdFTDQ?pwd=arms)
-
-[Armbian_23.11.0-trunk_Armsom-w3_jammy_legacy_5.10.160_xfce_desktop.img](https://pan.baidu.com/s/1Pr0IJNrffxx7aLJ-eZLUUA?pwd=arms ) -->
-
-社区适配中~
-
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+| Openwrt | Openwrt for P2pro :    <br/>Openwrt是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。|[百度网盘](https://pan.baidu.com/s/1aJgNfJLOLmYV_C1UrVy5dA?pwd=arms)  |
 
 ### 硬件资料
+链接：https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms 
+提取码：arms 
+--来自百度网盘超级会员V5的分享
+获取 P2pro 原理图、DXF等硬件资料
 
-[ArmSoM-p2pro v1.1 原理图pdf](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
+<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="btn">
+  <span>百度网盘链接</span>
+</a>
+<br/>
 
-[ArmSoM-p2pro v1.1 底部&顶部](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms) 
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>P2pro SCH</h2>
+            </div>
+        </div>
+</a>
 
-[ArmSoM-p2pro v1.1 位号图](https://pan.baidu.com/s/1OGoqm8hKBFHANQ6FymMmaA?pwd=arms)
+<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>P2pro 2D</h2>
+        </div>
+    </div>
+</a>
 
-[ArmSoM-p2pro v1.1 datasheet](https://pan.baidu.com/s/1GBr2kwJ_-Xor_3thJ0iu5A?pwd=arms)  
+<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>P2pro SMD</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+</div>
+<br/>
 
 :::tip 版本更改记录
 v1.0 为内部版本暂不公布

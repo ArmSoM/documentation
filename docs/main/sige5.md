@@ -66,7 +66,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 
 <details>
     <summary>
-        RK3528 Hardware Spec
+        Sige5 Hardware Spec
     </summary>
    
 <table>

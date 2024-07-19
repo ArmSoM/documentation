@@ -350,7 +350,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 ### arm-systemready
 
-Download : [百度网盘](https://pan.baidu.com/s/1j-CK2_rPYRhdzsaClP-P6g?pwd=arms) 
+github : [SystemReady](https://github.com/ArmSoM/SystemReady) 
 
 ### SDK源码
 
