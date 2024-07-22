@@ -740,13 +740,76 @@ Table 16. i2s pin descriptions
 
 ### Source Code
 
+<div class="cards">
+<a href="https://github.com/armbian/build" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Armbian Source Code</h2>
+            <p>Linux for ARM development boards</p>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>AIM7 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>AIM7 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
+        </div>
+    </div>
+</a>
+</div>
+
 ### Official Images  
+
+Based on Debian bullseye works as official operating system by the ArmSom team.
+
+The following systems have been tested and verified by ArmSoM officially:  
+
+Download link:
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
+  <span>Google Drive link</span>
+</a>
+
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian11.png) | debian11 for AIM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/12c5tbYR4bVs-bQVZTr60XMrww9U56tXk?usp=drive_link)    |
 
 ### Third Party Systems  
 
-### Hardware Resources 
-
-## User Manual
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for AIM7 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://github.com/armbian/community/releases) |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for AIM7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
 
 ## Easy to buy sample
 

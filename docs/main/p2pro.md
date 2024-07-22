@@ -45,7 +45,7 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 
 <details>
     <summary>
-      rk3308b-s 框图
+      rk3308b-s Block Diagram
     </summary>
     <img
   src="/img/sige/rk3308b-s.png"
@@ -344,7 +344,7 @@ root@linaro-alip:/# scan on
 root@linaro-alip:/# pair yourDeviceMAC
 ```
 
-#### 音频
+#### Audio
 
 **View sound cards in the system: ** 
 
