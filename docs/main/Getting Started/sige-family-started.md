@@ -118,7 +118,7 @@ Insert the power supply into the port labeled "DCIN". Please make sure to use th
     </a>
 </div>
 
-### Interface Usage
+## Interface Usage
 
 If you are using ArmSoM-Sige products for the first time, please familiarize yourself with each product's hardware interfaces to better understand the following content.
 
@@ -137,7 +137,7 @@ Connect the USB to TTL serial cable as follows:
 | **TX** (pin 8) | --->   | RX           |
 | **RX** (pin 10)| --->   | TX           |
 
-#### Ethernet Port
+### Ethernet
 
 If you are using a wired Ethernet connection, align the Ethernet cable with the RJ45 port on the ArmSoM-SigeX, and the system desktop will prompt a wired connection.
 
@@ -221,12 +221,24 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
 
+### M.2 Key M
+
+The ArmSoM-Sige7/5 provides an M.2 Key M connector:
+
+- The product features an M.2 Key M connector on the back. The board includes a standard M.2 2280 mounting hole for deploying an M.2 2280 NVMe SSD.  
+  **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
+
+```
+armsom@armsom-sige:/# mkdir temp
+armsom@armsom-sige:/# mount /dev/nvme0n1 temp
+```
+
 ### Audio
 
 View sound cards in the system:  
 
 ```bash 
-armsom@armsom-sige7:/# aplay -l  
+armsom@armsom-sige:/# aplay -l  
 **** List of PLAYBACK Hardware Devices ****  
 card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]  
  Subdevices: 1/1  
@@ -239,25 +251,33 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
   Subdevice #0: subdevice #0
 ```
 
-### FAN  
+### FAN
 
-The Sige7 features a 5V fan using a 0.8mm connector  
+Sige products are equipped with a 5V fan using a 0.8mm connector.
 
-```  
-armsom@armsom-sige7:/# echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon8/pwm1  
+The fan currently operates in five default states:
+
+| Temperature Range | State | PWM Speed |
+| ----------------- | ----- | --------- |
+| Less than 50°C    | 0     | 0         |
+| 50°C - 55°C       | 1     | 50        |
+| 55°C - 60°C       | 2     | 100       |
+| 60°C - 65°C       | 3     | 150       |
+| 65°C - 70°C       | 4     | 200       |
+| Above 70°C        | 5     | 250       |
+
+```
+// Check current fan speed
+armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
 
-### Type-C  
+### 40 PPIN  
 
-The Sige7 features a full-featured USB Type‐C 3.0 port which supports up to 8K@30fps DP display.
+Sige products  provides a 40-pin GPIO header, compatible with most sensors on the market.   
 
-### 40Pin  
+### RGB LED
 
-The Sige7 provides a 40-pin GPIO header, compatible with most sensors on the market.   
-
-### RGB LED  
-
-The Sige7 has two user LEDs - green and red.  
+Sige features two user indicator LEDs: a green LED and a red LED. 
 
 - User Green LED  
   Constantly indicates running kernel by default.   
@@ -268,19 +288,19 @@ The Sige7 has two user LEDs - green and red.
 Users can control with commands:   
 
 ```  
-armsom@armsom-sige7:/# sudo su  
-armsom@armsom-sige7:/# echo timer > /sys/class/leds/red/trigger  
-armsom@armsom-sige7:/# echo activity > /sys/class/leds/red/trigger
+armsom@armsom-sige:/# sudo su  
+armsom@armsom-sige:/# echo timer > /sys/class/leds/red/trigger  
+armsom@armsom-sige:/# echo activity > /sys/class/leds/red/trigger
 ```
 
 ### RTC  
 
-- The Sige7 features an **hym8563** RTC chip.  
+- The sige features an **hym8563** RTC chip.  
 - First, insert the RTC battery using the 2-pin header to supply power to the RTC IC.
 - Note that we should keep the RTC battery in the RTC connector and confirm the rtc hym8563 device which has been created. 
 
 ```bash 
-armsom@armsom-sige7:/# dmesg | grep rtc  
+armsom@armsom-sige:/# dmesg | grep rtc  
 [ 6.407133] rtc-hym8563 6-0051: rtc information is valid  
 [ 6.412731] rtc-hym8563 6-0051: registered as rtc0  
 [ 6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)  
@@ -307,22 +327,7 @@ armsom@armsom-sige7:/# date
 Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
-
-### M.2 Key M
-
-The ArmSoM-Sige7 provides an M.2 Key M connector:  
-
-- There is an M.2 Key M connector on the back with a 4-lane PCIe 3.0 interface. The board has a standard M.2 2280 mounting hole to deploy M.2 2280 NVMe SSDs.  
-  **<font color='red'>Note: This M.2 interface does NOT support M.2 SATA SSDs.</font>**  
-
-```  
-armsom@armsom-sige7:/# mkdir temp  
-armsom@armsom-sige7:/# mount /dev/nvme0n1 temp
-```
-
-### Camera  
-
-#### MIPI-CSI
+### MIPI-CSI
 
 Use the IMX415 module for the camera. After connecting and powering on the camera module you can view the boot log:  
 
@@ -361,22 +366,10 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-##### USB3.0 Camera  
-
-After connecting the usb3.0 camera, open the Qt V4L2 test Utility app for testing  
-
-![armsom-w3-usb-camera-qtv4l2](/img/lm/armsom-w3-usb-camera-qtv4l2.png)  
-
-Open video node: video21  
-
-![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/armsom-w3-usb-camera-qtv4l2-select-video.png)  
-
-Click the camera button and you will see the camera screen  
-
-![armsom-w3-usb-camera-qtv4l2-play](/img/lm/armsom-w3-usb-camera-qtv4l2-play.png)
+[ArmSoM camera-module1](../Accessories/camera-module1.md)
  
 ### MIPI DSI  
 
-The ArmSoM-Sige7 supports up to 4K@60Hz resolution over MIPI DSI
+ArmSoM-Sige7/5 supports up to 4K@60Hz resolution over MIPI DSI
 
 [ArmSoM Display 10 HD](../Accessories/display-10-hd.md)

@@ -38,11 +38,11 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 </details>
 
-# 入门准备
+## 入门准备
 
 在开始使用 ArmSoM-Sige 产品之前，请准备好以下物品
 
-## 工具准备
+### 工具准备
 * 电源
 * 系统安装（二选一）
   * 板载eMMC启动
@@ -69,7 +69,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 * RTC 电池, 0.8mm立式插座。
 * 风扇，0.8mm立式插座。
 
-## 电源
+### 电源
 
 下表显示了为ArmSoM-Sige系列型号供电所需的电源规格。您可以使用任何提供正确电源模式的高质量电源。
 
@@ -166,7 +166,7 @@ armsom@armsom-sige:/# pair yourDeviceMAC
 | 分辨率  | 8Kp60 | 4Kp120 |4Kp60|
 
 
-### USB接口
+### USB
 
 |  型号  |Sige7       | Sige5  | Sige1 |
 | ----- |  ----- | ------ |- ---- | 
@@ -198,7 +198,19 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
 
-### 音频接口
+### M.2 Key M
+
+ArmSoM-Sige7/5 提供 M.2 Key M 连接器：
+
+- 产品的背面有一个带有M.2 Key M 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
+  **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
+
+```
+armsom@armsom-sige:/# mkdir temp
+armsom@armsom-sige:/# mount /dev/nvme0n1 temp
+```
+
+### 音频
 
 查看系统中的声卡。
 
@@ -242,7 +254,7 @@ Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
 
-### 40Pin
+### 40 PPIN
 
 Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
@@ -298,23 +310,9 @@ armsom@armsom-sige:/# date
 2023年 11月 03日 星期五 10:36:01 UTC
 ```
 
-### M.2 Key M
+### MIPI-CSI
 
-只有ArmSoM-Sige7 提供 M.2 Key M 连接器：
-
-- 产品的背面有一个带有四通道 PCIe 3.0 接口的 M.2 Key M 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
-  **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
-
-```
-armsom@armsom-sige:/# mkdir temp
-armsom@armsom-sige:/# mount /dev/nvme0n1 temp
-```
-
-#### 摄像头
-
-##### MIPI-CSI
-
-  摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
+摄像头采用IMX415模组，摄像头模组连接并上电后可以查看启动日志。
 
 ```bash
 armsom@armsom-sige:/# dmesg | grep imx415
@@ -351,7 +349,10 @@ armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,f
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+[ArmSoM camera-module1](../Accessories/camera-module1.md)
 
 #### MIPI DSI
 
 ArmSoM-Sige7/5 分辨率最高分辨率可达 4K@60Hz
+
+[ArmSoM Display 10 HD](../Accessories/display-10-hd.md)
