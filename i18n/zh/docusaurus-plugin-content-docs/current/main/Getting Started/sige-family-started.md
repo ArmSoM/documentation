@@ -9,11 +9,40 @@ slug: /sige-family-started
 
 Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备工作，开始使用你的ArmSoM-Sige🚀
 
-## 入门准备
+<details>
+    <summary>
+        Sige7/5/1规格比较
+    </summary>
+
+|        | Sige7  | Sige5 | Sige1 |
+| --------- | ----- | --- | --- | 
+| SoC Process | 8nm | 8nm |  28nm |  
+| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
+| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | ARM Mali-450 GPU |
+| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | - |
+| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
+| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 16/32GB eMMC |
+| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes|  Yes|
+| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps |  1x HDMI OUT2.0b, supports 4K@60fps|
+| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| H.265, H.264, AVS2 4K@60fps|
+| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| H.264 and H.265 up to1080@60fps|
+| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |  SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
+| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - |  - |
+| Ethernet | 2x 2.5G Ethernet | 2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet|
+| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 2× USB 3.0 (capable of simultaneous full throughput) <br/> 2× USB 2.0 | 2x USB 2.0|
+| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB2.0 OTG|
+| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI |  -|
+| 40-Pin Header| yes | yes | yes |
+| LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
+|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
+
+</details>
+
+# 入门准备
 
 在开始使用 ArmSoM-Sige 产品之前，请准备好以下物品
 
-### 工具准备
+## 工具准备
 * 电源
 * 系统安装（二选一）
   * 板载eMMC启动
@@ -40,7 +69,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 * RTC 电池, 0.8mm立式插座。
 * 风扇，0.8mm立式插座。
 
-### 电源
+## 电源
 
 下表显示了为ArmSoM-Sige系列型号供电所需的电源规格。您可以使用任何提供正确电源模式的高质量电源。
 
@@ -52,18 +81,28 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 将电源插入标有“DCIN”的端口, 请确保使用正确端口！
 
-### 烧录方式选择
+## 烧录方式选择
+<div class="cards">
+    <a href="./sige-family-started" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>🎇</i>
+            </div>
+            <div class="content">
+                <h2>系统镜像烧录</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
-[系统镜像烧录](/general-tutorial/flash-img)
-
-### 接口设置
+## 接口使用
 
 如果您是首次使用 ArmSoM-Sige 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
 
 | 硬件接口  | [Sige7](./armsom-sige7#硬件接口) | [Sige5](./armsom-sige5#硬件接口) | [Sige1](./armsom-sige1#硬件接口) |
 | --------------- | ----- | ------ | ------ | 
 
-#### 调试串口
+### 调试串口
 
 如下所示连接 USB 转 TTL 串口线：
 
@@ -76,7 +115,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 | **RX** (pin 10) | ---> | TX |
 
 
-#### 以太网口
+### 以太网口
 
 如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-SigeX 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
 
@@ -95,7 +134,7 @@ or
 $ sudo dhclient enP4p65s0
 ```
 
-#### WIFI
+### WIFI
 ```
 # 1. Open the WIFI
 armsom@armsom-sige:/# nmcli r wifi on
@@ -105,7 +144,7 @@ armsom@armsom-sige:/# nmcli dev wifi
 armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
 
-#### BT
+### BT
 
 ```
 # 1. 激活蓝牙
@@ -120,14 +159,14 @@ armsom@armsom-sige:/# scan on
 armsom@armsom-sige:/# pair yourDeviceMAC
 ```
 
-#### HDMI
+### HDMI
 
 | 型号 |Sige7       | Sige5  | Sige1 |
 | ----- |  ----- | ------ |- ---- | 
 | 分辨率  | 8Kp60 | 4Kp120 |4Kp60|
 
 
-#### USB接口
+### USB接口
 
 |  型号  |Sige7       | Sige5  | Sige1 |
 | ----- |  ----- | ------ |- ---- | 
@@ -159,7 +198,7 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
 
-#### 音频
+### 音频接口
 
 查看系统中的声卡。
 
@@ -183,7 +222,7 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
 armsom@armsom-sige:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
 ```
 
-#### 风扇
+### FAN
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
@@ -203,11 +242,11 @@ Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
 
-#### 40Pin
+### 40Pin
 
 Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
-#### RGB LED
+### RGB LED
 
 Sige 具有两个用户灯 LED 绿灯和红灯。
 
@@ -225,7 +264,7 @@ armsom@armsom-sige:/# echo timer > /sys/class/leds/red/trigger
 armsom@armsom-sige:/# echo activity > /sys/class/leds/red/trigger
 ```
 
-#### RTC
+### RTC
 
 - Sige配备了一颗RTC IC **LK8563S**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
@@ -259,11 +298,11 @@ armsom@armsom-sige:/# date
 2023年 11月 03日 星期五 10:36:01 UTC
 ```
 
-#### M.2接口
+### M.2 Key M
 
-只有ArmSoM-Sige7 提供 M.2 连接器：
+只有ArmSoM-Sige7 提供 M.2 Key M 连接器：
 
-- 产品的背面有一个带有四通道 PCIe 3.0 接口的 M.2 M Key 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
+- 产品的背面有一个带有四通道 PCIe 3.0 接口的 M.2 Key M 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
   **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
 
 ```
@@ -316,27 +355,3 @@ armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,f
 #### MIPI DSI
 
 ArmSoM-Sige7/5 分辨率最高分辨率可达 4K@60Hz
-
-## Sige7/5/1规格比较
-
-|        | Sige7  | Sige5 | Sige1 |
-| --------- | ----- | --- | --- | 
-| SoC Process | 8nm | 8nm |  28nm |  
-| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
-| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | ARM Mali-450 GPU |
-| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | - |
-| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
-| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 16/32GB eMMC |
-| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes|  Yes|
-| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps |  1x HDMI OUT2.0b, supports 4K@60fps|
-| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| H.265, H.264, AVS2 4K@60fps|
-| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| H.264 and H.265 up to1080@60fps|
-| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |  SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
-| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - |  - |
-| Ethernet | 2x 2.5G Ethernet | 2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet|
-| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 2× USB 3.0 (capable of simultaneous full throughput) <br/> 2× USB 2.0 | 2x USB 2.0|
-| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB2.0 OTG|
-| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI |  -|
-| 40-Pin Header| yes | yes | yes |
-| LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
-|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |

@@ -1,7 +1,9 @@
 ---
 sidebar_label: "RKLLM"
 sidebar_position: 6
+slug: /general-tutorial/rknn-llm
 ---
+
 # RKLLM
 ## 1. Introduction to RKLLM
 RKLLM software stack can help users to quickly deploy AI models to Rockchip chips. The overall framework is as follows:

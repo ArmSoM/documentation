@@ -6,13 +6,14 @@ slug: /sige-family-started
 ---
 # Sige Family User Manual 
 
-The Sige Family user manual helps users understand the basic usage and preparation work needed for Sige Family. 
+The Sige user manual helps users understand the basic usage of Sige products and the necessary preparations to start using your ArmSoM-Sige🚀
 
-This article gives an overview of the product information to you in as much detail as possible.
+<details>
+    <summary>
+        Comparison of Sige7/5/1 Specifications
+    </summary>
 
-## Comparison of Sige7/5/1 Specifications
-
-|        | Sige7  | Sige5 | Sige1 |
+    |        | Sige7  | Sige5 | Sige1 |
 | --------- | ----- | --- | --- | 
 | SoC Process | 8nm | 8nm |  28nm |  
 | CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
@@ -33,6 +34,8 @@ This article gives an overview of the product information to you in as much deta
 | 40-Pin Header| yes | yes | yes |
 | LEDs | 2x LEDs | 2x LEDs | 2x LEDs|
 |Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
+
+</details>
 
 <!-- ## Comparison of Sige7/5 and RPI5 Specifications
 |        | Sige7  | Sige5 | Raspberry Pi5 |
@@ -57,43 +60,36 @@ This article gives an overview of the product information to you in as much deta
 | LEDs | 2x LEDs | 2x LEDs | - | 2x LEDs|
 |Board Dimensions| 92mm × 62mm | 92mm × 62mm | 85.0 x 56.0 mm |  -->
 
+## Getting Started
 
+Before starting to use the ArmSoM-Sige product, please prepare the following items:
 
+### Tools Required
+* Power supply
+* System installation (choose one):
+  * Onboard eMMC boot
+    * USB Type-C cable for writing images to the Sige series from the typec port, you need a Type-C data cable to connect the Sige series and PC.
+  * MicroSD card/TF card boot
+    * MicroSD card/TF card, Class 10 or higher, with at least 8GB SDHC and a card reader
+    * The following high-speed TF cards have been tested and verified by the ArmSoM team:
+      * SanDisk 32GB TF (MicroSD) (recommended for developers)
+      * SanDisk 32GB TF (MicroSD) for dashcams & security monitoring dedicated storage card (recommended for long-term operation)
+      * SanDisk TF 8G Class 10 microSD
+      * SanDisk TF 128G Class 10 microSD XC TF 128G 48MB/S
 
-### Tool Preparation
+You can configure Sige as an interactive computer with a desktop or as a headless computer accessible only via network. To set up Sige as a headless computer, configure the hostname, user account, network connection, and SSH during the initial OS installation. If you want to use Sige directly, you will need the following additional accessories:
 
-Before starting to use the ArmSoM-Sige7, please prepare the following items:
-* Sige7 main board
-* Power supply: USB Type-C PD
-  * Support 9V/2A, 12V/2A, 15V/2A
-* System installation (choose one)
-  * MicroSD /TF card boot
-    * MicroSD card/TF, Class 10 or above, at least 8GB SDHC and a card reader
-    * High speed TF cards tested by the ArmSoM team:  
-      * SanDisk 32GB TF (MicroSD) (developer recommended)
-      * SanDisk 32GB TF (MicroSD) Dashcam & Security Camera Storage Card (recommended for long-term operation)  
-      * Sandisk TF 8G Class10 microSD 
-      * Sandisk TF 128G Class10 microSD XC TF 128G 48MB/S：
-  * Onboard eMMC boot  
-    * USB Type-C data cable to write image from Type-C port on Sige7 to eMMC. You need to connect Sige7 to a PC using the Type-C cable.  
-
-### Optional Accessories 
-* USB keyboard and mouse
-* HDMI display and HDMI cable
-  * Sige7 features a full-sized HDMI port, and supports up to 8K@60 display
-  * HDMI EDID is used to determine optimum display resolution. 1080p (or 4K/8K) will be selected on displays and TVs that support it. If 1080p is not supported, EDID will find the next available resolution.
-* Ethernet cable 
-  * Sige7 supports 2.5Gb Ethernet
-  * The network cable is used to connect Sige7 to a local network and the Internet
-* Camera module
-  * Sige7 supports camera function
-  * We recommend using the imx415 module, available through the ArmSoM Taobao store or AliExpress or email to sales@armsom.org
-* LCD display
-  * Sige7 supports LCD display
-  * We recommend the ArmSoM Display 10.1 HD, available through the ArmSoM Taobao store or AliExpress or email to sales@armsom.org
-* Audio cable
-  * Available for 0.8mm vertical socket
-* USB-A to USB-C data cable
+**Optional Accessories**
+* Keyboard & Mouse
+* HDMI Monitor and HDMI Cable
+* Ethernet Cable
+* Camera Module
+  * Recommended: [camera-module1](./armsom-camera-module1) module.
+* LCD Display
+  * Recommended: [Display 10 HD](./armsom-display-10-hd).
+* Audio Cable, 0.8mm vertical socket.
+* RTC Battery, 0.8mm vertical socket.
+* Fan, 0.8mm vertical socket.
 
 ### Power Supply
 
@@ -109,11 +105,25 @@ Insert the power supply into the port labeled "DCIN". Please make sure to use th
 
 ## Image Flashing
 
-[Flash System Image](../general-tutorial/flash-img)
+<div class="cards">
+    <a href="./sige-family-started" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>🎇</i>
+            </div>
+            <div class="content">
+                <h2>Flash System Image</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
-## Interface Setup 
+### Interface Usage
 
-If this is your first time using the ArmSoM-Sige7, please familiarize yourself with the [Peripheral Interfaces](#Hardware Interface) to better understand the content below.
+If you are using ArmSoM-Sige products for the first time, please familiarize yourself with each product's hardware interfaces to better understand the following content.
+
+| Hardware Interface | [Sige7](./armsom-sige7#hardware-interfaces) | [Sige5](./armsom-sige5#hardware-interfaces) | [Sige1](./armsom-sige1#hardware-interfaces) |
+| --------------- | ----- | ------ | ------ | 
 
 ### Debug Serial Port
 
@@ -121,34 +131,63 @@ Connect the USB to TTL serial cable as follows:
 
 ![armsom-sige5-debug](/img/sige/armsom-sige7-debug.png)
 
-| sige5          | Connect | Serial Module |
+| Sige7/5/1          | Connect | Serial Module |
 | -------------- | ------- | ------------ |
 | **GND** (pin 6)| --->   | GND          |
 | **TX** (pin 8) | --->   | RX           |
 | **RX** (pin 10)| --->   | TX           |
 
-### 2.5G Ethernet
+#### Ethernet Port
 
-If using wired Ethernet, insert the network cable into the RJ45 port on the ArmSoM-Sige7 and the wired connection will pop up on the desktop.  
+If you are using a wired Ethernet connection, align the Ethernet cable with the RJ45 port on the ArmSoM-SigeX, and the system desktop will prompt a wired connection.
 
-- Use the `ifconfig` command to check if Ethernet is working normally - it will display the NIC enP2p33s0 or enP4p65s0 and Ethernet IP address. Also use the `ping` tool to test network connectivity.
+- Use the `ifconfig` command to check if Ethernet is functioning correctly. It will display network interfaces such as `enPX` or `ethX` along with the Ethernet IP address. Additionally, use the `ping` tool to verify network connectivity.
 
 ```bash
 ifconfig
 ping mi.com
 ```
 
-- If unable to ping,please try: 
+- If ping fails, try the following:
 
-```bash 
+```bash
 $ sudo dhclient enP2p33s0
-or  
+or
 $ sudo dhclient enP4p65s0
+```
+
+### WIFI
+```  
+# 1. Switch to super user mode
+armsom@armsom-sige7:/# sudo su
+# 2. Open the WIFI
+root@armsom-sige7:/# nmcli r wifi on
+# 3. Scan WIFI
+root@armsom-sige7:/# nmcli dev wifi
+# 4. Connect to WIFI network
+root@armsom-sige7:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+```
+
+### BT  
+
+```
+# 1. Activate bluetooth  
+armsom@armsom-sige7:/# service bluetooth start
+# 2. Enter to bluetoothctl
+armsom@armsom-sige7:/# bluetoothctl
+# 3. Input the below commands to connect
+armsom@armsom-sige7:/# power on
+armsom@armsom-sige7:/# agent on
+armsom@armsom-sige7:/# default-agent
+armsom@armsom-sige7:/# scan on
+armsom@armsom-sige7:/# pair yourDeviceMAC
 ```
 
 ### HDMI
 
-The ArmSoM-Sige7 has an HDMI output port which supports CEC and HDMI 2.1, maximum resolution up to 8Kp60.
+| Model | Sige7 | Sige5 | Sige1 |
+| ----- | ----- | ------ | ------ | 
+| Resolution | 8Kp60 | 4Kp120 | 4Kp60 |
 
 ### USB
 
@@ -156,7 +195,9 @@ The ArmSoM-Sige7 provides one USB 2.0 and one USB 3.0 port.
 
 **USB3.0 Camera**
 
-After connecting a USB 3.0 camera, you can download cheese and use the camera with the following commands:
+|  Model  |Sige7       | Sige5  | Sige1 |
+| ----- |  ----- | ------ |- ---- | 
+| USB   | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 |2x USB2.0|
 
 ```bash
 armsom@armsom-sige7: sudo apt update
@@ -266,11 +307,12 @@ armsom@armsom-sige7:/# date
 Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
-### M.2
 
-The ArmSoM-Sige7 provides an M.2 connector:  
+### M.2 Key M
 
-- There is an M.2 M Key connector on the back with a 4-lane PCIe 3.0 interface. The board has a standard M.2 2280 mounting hole to deploy M.2 2280 NVMe SSDs.  
+The ArmSoM-Sige7 provides an M.2 Key M connector:  
+
+- There is an M.2 Key M connector on the back with a 4-lane PCIe 3.0 interface. The board has a standard M.2 2280 mounting hole to deploy M.2 2280 NVMe SSDs.  
   **<font color='red'>Note: This M.2 interface does NOT support M.2 SATA SSDs.</font>**  
 
 ```  
@@ -318,7 +360,23 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,
 armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
+
+##### USB3.0 Camera  
+
+After connecting the usb3.0 camera, open the Qt V4L2 test Utility app for testing  
+
+![armsom-w3-usb-camera-qtv4l2](/img/lm/armsom-w3-usb-camera-qtv4l2.png)  
+
+Open video node: video21  
+
+![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/armsom-w3-usb-camera-qtv4l2-select-video.png)  
+
+Click the camera button and you will see the camera screen  
+
+![armsom-w3-usb-camera-qtv4l2-play](/img/lm/armsom-w3-usb-camera-qtv4l2-play.png)
  
 ### MIPI DSI  
 
 The ArmSoM-Sige7 supports up to 4K@60Hz resolution over MIPI DSI
+
+[ArmSoM Display 10 HD](../Accessories/display-10-hd.md)

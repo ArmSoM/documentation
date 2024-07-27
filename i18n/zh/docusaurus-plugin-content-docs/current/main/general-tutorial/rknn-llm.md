@@ -1,6 +1,7 @@
 ---
 sidebar_label: "RKLLM 简介"
 sidebar_position: 6
+slug: /general-tutorial/rknn-llm
 ---
 # RKLLM
 ## 1. RKLLM 简介

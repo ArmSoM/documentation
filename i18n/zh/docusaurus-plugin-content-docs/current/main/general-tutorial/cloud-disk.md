@@ -1,6 +1,7 @@
 ---
 sidebar_label: "百度网盘资源介绍"
 sidebar_position: 1
+slug: /general-tutorial/cloud-disk
 ---
 
 # 百度网盘资源介绍
