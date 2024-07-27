@@ -83,7 +83,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 ## 烧录方式选择
 <div class="cards">
-    <a href="./sige-family-started" class="card-link">
+    <a href="./general-tutorial/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>🎇</i>

@@ -106,7 +106,7 @@ Insert the power supply into the port labeled "DCIN". Please make sure to use th
 ## Image Flashing
 
 <div class="cards">
-    <a href="./sige-family-started" class="card-link">
+    <a href="./general-tutorial/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>🎇</i>
