@@ -2,7 +2,7 @@
 description: ArmSoM-AIM-IO
 keywords: [armsom, ArmSoM-AIM-IO, maker kit, rockchip]
 sidebar_label: "AIM-IO"
-sidebar_position: 7
+sidebar_position: 4
 slug: /armsom-aimio
 ---
 

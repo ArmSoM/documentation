@@ -1,8 +1,8 @@
 ---
 description: ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存，接口完全兼容 Jetson Nano。
-keywords: [armsom, armsom-AIM7, 创客套件, rockchip, rk3588产品介绍]
+keywords: [armsom, armsom-AIM7, RK3588核心板, rockchip]
 sidebar_label: "AIM7"
-sidebar_position: 6
+sidebar_position: 3
 slug: /armsom-aim7
 ---
 
@@ -114,8 +114,9 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 
 | 规格                                 |  ArmSoM-AIM7              | Jetson Nano (NVIDIA)                |
 |--------------------------------------|-----------------------------------|--------------------------------|
-| CPU核数    |<div className='armsom-color'>四核ARM® Cortex®A76+四核 ARM® Cortex®A55</div> | 四核 ARM® Cortex®A57 MPCore 处理器    | 
-| GPU核数    | ARM Mali-G610 MP4                 |128核Maxwell架构GPU   | 
+| CPU   |<div className='armsom-color'>四核ARM® Cortex®A76+四核 ARM® Cortex®A55</div> | 四核 ARM® Cortex®A57 MPCore 处理器    | 
+| GPU    | ARM Mali-G610 MP4                 |128核Maxwell架构GPU   | 
+| NPU | 6TOPs（INT8） | - |
 | 内存容量   |8GB/32GB 64位 LPDDR4x, 2112Mhz  | 4GB 64位 LPDDR4, 1600MHz   | 
 | 存储支持  |  microSD卡、32GB/64GB eMMC 5.1 闪存   | microSD卡、16GB eMMC 5.1闪存  |
 | 视频编码  |  <div className='armsom-color'>8K@30fps H.265 / H.264</div>  | 250 MP/sec，1x 4K@30 (HEVC)，2x 1080p@60 (HEVC)，4x 1080p@30 (HEVC)  |

@@ -2,7 +2,7 @@
 description: ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit processor with a main frequency of up to 2.4GHz, 6 TOPS computing power NPU, and can be equipped with up to 32GB of large memory. While the interface is fully compatible with Jetson Nano
 keywords: [armsom, armsom-aim7, jetson nano, nvidia, rockchip]
 sidebar_label: "AIM7"
-sidebar_position: 6
+sidebar_position: 3
 slug: /armsom-aim7
 ---
 
@@ -88,8 +88,9 @@ All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 
 | Specifications   |ArmSoM-AIM7(Rockchip)                                       | Jetson Nano (NVIDIA)                                         | 
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CPU Cores  |<div className='armsom-color'>Quad-core ARM®Cortex®-A76 + Quad-core ARM®Cortex®-A55</div> | Quad-core ARM® Cortex®-A57 MPCore processor  | 
-| GPU Cores        |  ARM Mali-G610 MP4  |128-core Maxwell GPU                                         |
+| CPU  |<div className='armsom-color'>Quad-core ARM®Cortex®-A76 + Quad-core ARM®Cortex®-A55</div> | Quad-core ARM® Cortex®-A57 MPCore processor  | 
+| GPU        |  ARM Mali-G610 MP4  |128-core Maxwell GPU  |
+| NPU | 6TOPs（INT8） | - |
 | Memory           |8GB/32GB 64-bit LPDDR4x, 2112MHz   | 4GB 64-bit LPDDR4, 1600MHz                                   | 
 | Storage          |  microSD card, 32GB eMMC 5.1 flash storage | microSD card, 16GB eMMC 5.1 flash storage                    |
 | Video Encoding   | <div className='armsom-color'>8K@30fps H.265 / H.264</div>| 250 MP/sec, 1x 4K@30 (HEVC), 2x 1080p@60 (HEVC), 4x 1080p@30 (HEVC) | 

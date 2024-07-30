@@ -1,6 +1,6 @@
 ---
 description: ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力NPU，最大可配16GB大内存。支持8K视频编解码，拥有丰富的接口，支持双千兆网口，WIFI6/BT5。
-keywords: [armsom, armsom-sige5, maker kit, rockchip, rk3576产品介绍]
+keywords: [armsom, armsom-sige5, RK3576开发板, rockchip, rk3576 SBC]
 sidebar_label: "Sige5"
 sidebar_position: 2
 slug: /armsom-sige5
