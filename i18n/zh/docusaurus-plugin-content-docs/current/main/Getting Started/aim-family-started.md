@@ -1,10 +1,53 @@
----
-sidebar_label: "系统镜像烧录"
-sidebar_position: 2
-slug: /general-tutorial/flash-img
+--- 
+keywords: [armsom, armsom-aim, som, maker kit, Rockchip]
+sidebar_label: "AIM Family Getting Started"
+sidebar_position: 3
+slug: /aim-family-started
 ---
 
-# 系统镜像烧录
+# AIM 使用手册
+
+AIM 使用手册，帮助用户了解AIM开发套件的基本使用和需要的准备工作，开始使用你的AI Module🚀
+
+## 入门准备
+
+在开始使用AIM开发套件之前，请准备好以下物品
+
+### 工具准备
+* 电源
+* 系统安装（二选一）
+  * 板载eMMC启动
+    * USB Type-C数据线，从 typec 端口在AIM开发套件上写入镜像，您需要Type-C数据线连接AIM开发套件和 PC。
+  * MicroSD卡/TF卡启动
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
+    * 以下是经过ArmSoM团队测试验证的高速TF卡
+      * SanDisk 32GB TF（MicroSD）（开发者推荐）
+      * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
+      * 闪迪 TF 8G Class10 microSD 
+      * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
+
+您可以将AIM开发套件设置为带有桌面的交互式计算机，也可以将其设置为仅可通过网络访问的无头计算机。要将AIM开发套件设置为Headless计算机，您在初次安装操作系统时配置主机名、用户帐户、网络连接和 SSH 。如果您想直接使用 AIM开发套件，则需要以下附加配件：
+
+**可选选项**
+* 键盘 & 鼠标
+* HDMI显示器和HDMI线
+* DP显示器和DP线
+* Ethernet 线（网线）
+* 摄像头模块
+  * 推荐使用 [camera-module1](./armsom-camera-module1) 模组。
+* LCD显示屏
+  * 推荐使用 [Display 10 HD](./armsom-display-10-hd)。
+
+### 电源
+
+下表显示了为AIM开发套件供电所需的电源规格。您可以使用任何提供正确电源模式的高质量电源。
+
+| 型号       | 推荐电源（电压/电流）  | 供电模式
+| --------- | ----- | --- |
+| AIM7 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A |  DC适配器，2.5mm|
+| AIM5 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A |  DC适配器，2.5mm|
+
+## 系统镜像烧录
 
 ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以根据自己需求选择相应的镜像下载
 
@@ -12,7 +55,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 系统镜像包括了linux内核，基本的程序等，是运行ArmSoM系列产品必须项， 所以我们需要在运行产品前为产品安装镜像
 :::
 
-## 1. 获取系统镜像
+### 1. 获取系统镜像
 
 访问百度网盘资源介绍页面获取系统镜像: [百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 
@@ -22,9 +65,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 3. Ubuntu，Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
 :::
 
-## 2. 烧录Ubuntu，Armbian，Openwrt系统
+### 2. 烧录Ubuntu，Armbian，Openwrt系统
 
-### 2.1. 读卡器烧录到microSD
+#### 2.1. 读卡器烧录到microSD
 
 **通过 Etcher 刷入操作系统镜像到 microSD**
 
@@ -65,9 +108,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 3. 点击文件夹图标按钮然后选择要刷写的镜像
 4. 完成上述操作后，单击 Write 按钮开始刷写镜像，然后等待写入镜像完成。
 
-### 2.2. USB线烧录到eMMC
+#### 2.2. USB线烧录到eMMC
 
-#### 2.2.1. 工具获取和安装
+##### 2.2.1. 工具获取和安装
 
 烧录镜像到eMMC需要使用到 RKDevTool 烧录工具和 RK驱动助手(DriverAssitant)
 
@@ -75,7 +118,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
-##### 2.2.2. 安装DriverAssitant
+###### 2.2.2. 安装DriverAssitant
 
 解压DriverAssitant软件压缩包，双击 DriverInstall.exe 进入驱动安装界面。
 
@@ -83,7 +126,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
 
-##### 2.2.3. 安装RKDevTool
+###### 2.2.3. 安装RKDevTool
 
 瑞芯微专用USB烧录工具，Windows平台，可以使用USB接口将系统镜像下载到产品中。
 
@@ -91,7 +134,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 软件主要有三大部分，分别是下载镜像（可根据地址烧录镜像）、升级固件和高级功能
 
-#### 2.1.4. MASKROM/Loader模式烧录镜像
+##### 2.1.4. MASKROM/Loader模式烧录镜像
 
 该模式适合产品未烧录系统或烧录的系统损坏无法运行 **（适应一切状况）**
 
@@ -118,10 +161,10 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 4. 在 Storage 选项中选择目标介质EMMC，并选择 强制按地址写 后点击 执行
 5. 等待写入完成，随后设备将自动重启，如上图右侧 Download image OK
 
-## 3. 烧录Debian系统
+### 3. 烧录Debian系统
 
-### 3.1. 读卡器烧录到microSD
-#### 安装SDDiskTool
+#### 3.1. 读卡器烧录到microSD
+##### 安装SDDiskTool
 
 烧录镜像到eMMC需要使用到烧录工具 SDDiskTool_版本号.exe
 
@@ -132,7 +175,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 解压压缩包后无需安装即可使用，双击 SD_Firmware_Tool.exe 进入软件界面。
 
 
-#### 烧录镜像
+##### 烧录镜像
 
 打开烧录SDDiskTool的可执行文件SD_Firmware_Tool.exe并插入SD卡。
 
@@ -148,7 +191,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 :::
 
 
-### 3.2. USB线烧录到eMMC
+#### 3.2. USB线烧录到eMMC
 
 
 

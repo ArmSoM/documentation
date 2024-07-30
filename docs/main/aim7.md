@@ -50,6 +50,20 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - weight: 
 - Size: 69.6 mm x 45 mm
 
+## Getting started
+
+<a href="./aim-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>✈️</i>
+        </div>
+        <div class="content">
+            <h2>AIM User Manual</h2>
+            <p>How to start using your AI Module</p>
+        </div>
+    </div>
+</a>
+
 ## Hardware
 
 ### Hardware Interface
@@ -59,6 +73,10 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 :::tip
 All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
 :::
+
+### AIM7 Block Diagram
+![aim7-product](/img/aim/aim7-product.jpg)
+
 ### Hardware Spec
 
 <details>

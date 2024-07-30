@@ -56,8 +56,6 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
 :::
 
-### 硬件规格
-
 ### 产品框图
 ![aim7-product](/img/aim/aim7-product.jpg)
 
@@ -783,6 +781,55 @@ Table 16. i2s pin descriptions
 ## 开发资料
 
 ### SDK源码
+
+<div class="cards">
+<a href="https://github.com/armbian/build" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Armbian Source Code</h2>
+            <p>Linux for ARM development boards</p>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>Sige5 uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
+        </div>
+    </div>
+</a>
+</div>
 
 ### 官方镜像
 

@@ -72,7 +72,7 @@ This method is suitable for burning the system to the SD card, and is available 
 
 Burning the image to eMMC requires the use of RKDevTool burning tool and RK Driver Assistant (DriverAssitant)
 
-Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1xobYSZsGutYoqUHfN6SUJeQGqvtlfkmF)
+Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link)
 
 ![google-flash-tool](/img/general-tutorial/google-flash-tool.png)
 
@@ -125,7 +125,7 @@ Start burning the system
 
 Burning the image to eMMC requires the use of the burning tool SDDiskTool_version number.exe
 
-Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1xobYSZsGutYoqUHfN6SUJeQGqvtlfkmF)
+Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link)
 
 ![google-SDDiskTool](/img/general-tutorial/google-sd-disk-tool.png)
 
