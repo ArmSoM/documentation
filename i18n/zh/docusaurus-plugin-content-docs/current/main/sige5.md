@@ -11,7 +11,7 @@ slug: /armsom-sige5
 让我们在 5 分钟内了解 Sige5。
 
 ## 简介
-
+<!-- 
 ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力NPU，最大可配16GB大内存。支持4K视频编解码，拥有丰富的接口，支持双千兆网口，WiFi6 & BT5和多种视频输出。支持多种操作系统，适用于基于ARM的PC和边缘计算设备、个人移动互联网设备和其他数字多媒体应用。
 
 ![ArmSoM-sige5](/img/sige/sige5.jpg)
@@ -476,4 +476,4 @@ ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https:/
 
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=790341533736](https://item.taobao.com/item.htm?id=790341533736)
 
-OEM&ODM,  请联系: sales@armsom.org
+OEM&ODM,  请联系: sales@armsom.org -->

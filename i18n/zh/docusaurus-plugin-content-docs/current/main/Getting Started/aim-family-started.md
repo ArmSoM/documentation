@@ -108,7 +108,7 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 3. 点击文件夹图标按钮然后选择要刷写的镜像
 4. 完成上述操作后，单击 Write 按钮开始刷写镜像，然后等待写入镜像完成。
 
-#### 2.2. USB线烧录到eMMC
+#### 2.2. USB线烧录到eMMC (windows)
 
 ##### 2.2.1. 工具获取和安装
 
@@ -140,23 +140,34 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 我们打开 RKDevTool 烧录工具，并设置产品进入烧录模式。
 
+**进入Loader模式**
 ```
-请参照产品相关说明进行操作，不同产品进入 Maskrom 模式的方式基本相同。
-
 1. 准备Type-C线，用于镜像烧录
 2. 将所有有可能给产品供电的接线都断开，如电源线，USB线等
 3. 使用一根Type-C线一端连接到产品的OTG接口，另一端连接电脑的usb接口，然后打开软件RKDevTool
-4. 按住MASKROM/Recovery按键，然后使用 DC 给产品供电
-5. 等待软件提示 发现一个MASKROM/LOADER设备（如下图所示），即可松开按键
+4. 短接12pin 上的10（FC REC），9(GND)然后使用 DC 给产品供电
+5. 等待软件提示 发现一个LOADER设备（如下图所示），即可松开按键
 6. 如果不成功，重复2-5步骤。
 ```
+
+**进入MASKROM模式**
+```
+1. 准备Type-C线，用于镜像烧录
+2. 将所有有可能给产品供电的接线都断开，如电源线，USB线等
+3. 使用一根Type-C线一端连接到产品的OTG接口，另一端连接电脑的usb接口，然后打开软件RKDevTool
+4. 短接核心板上的焊点，然后使用 DC 给产品供电
+5. 等待软件提示 发现一个LOADER设备（如下图所示），即可松开按键
+6. 如果不成功，重复2-5步骤。
+```
+
+![aim7-maskrom](/img/aim/aim7-maskrom.png)
 
 开始烧录系统
 
 ![rkdevtool-install-emmc](/img/general-tutorial/rkdevtool-install-emmc.png)
 
 1. 选择Download Image项
-2. 确认板子已经进入Maskrom模式
+2. 确认板子已经进入Maskrom/Loader模式
 3. 点击空白单元格选择待使用的 MiniLoaderAll 和 Image 文件，对应的 MiniLoaderAll 和 Image 存放在百度网盘。
 4. 在 Storage 选项中选择目标介质EMMC，并选择 强制按地址写 后点击 执行
 5. 等待写入完成，随后设备将自动重启，如上图右侧 Download image OK
