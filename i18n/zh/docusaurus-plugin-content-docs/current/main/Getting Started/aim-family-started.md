@@ -71,7 +71,7 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 **通过 Etcher 刷入操作系统镜像到 microSD**
 
-该方法适用于烧录系统到SD卡， Windows、MacOS、Linux x64 操作系统都可用。
+该方法适用于烧录系统到SD卡，Windows、MacOS、Linux x64 操作系统都可用。
 
 :::tip 准备
     1. 一个 microSD 卡
@@ -203,8 +203,6 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 
 #### 3.2. USB线烧录到eMMC
-
-
 
 我们打开 RKDevTool 烧录工具，并设置产品进入烧录模式。
 
