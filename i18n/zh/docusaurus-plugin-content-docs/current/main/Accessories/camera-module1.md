@@ -66,7 +66,7 @@ OV13850 模块具有以下特点：
     </a>
 </div>
 
-##  1. 启用Camera的overlay
+<!-- ##  1. 启用Camera的overlay
 
 ### 1.1 Ubuntu22.04镜像启用camera的overlay
 - 使用nano 打开/boot/firmware/ubuntuEnv.txt文件：
@@ -120,7 +120,7 @@ gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink
 ```
-
+ -->
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)

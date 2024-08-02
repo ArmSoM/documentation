@@ -65,7 +65,7 @@ Dual Wire Serial Bus Control (SCCB)
     </a>
 </div>
 
-## 2. Enable Camera Overlay
+<!-- ## 2. Enable Camera Overlay
 
 ### 2.1 Ubuntu22.04 image to enable camera overlay
 
@@ -126,7 +126,7 @@ gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,
 
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink 
-```
+``` -->
 
 ## Easy to buy sample
 ArmSoM online shop: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
