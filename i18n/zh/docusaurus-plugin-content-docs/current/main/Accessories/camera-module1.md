@@ -54,7 +54,7 @@ OV13850 模块具有以下特点：
 |30-31| VCC_5V0 |VCCIO 
 <br/>
 <div class="cards">
-    <a href="https://drive.google.com/file/d/1A4pPL4b7qqqc8NED2NxWfeoRC7hlyvSu/view?usp=drive_link" class="card-link">
+    <a href="https://pan.baidu.com/s/1fxOL8wt1ZGHRL4MsrtnOQg?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📚</i>
