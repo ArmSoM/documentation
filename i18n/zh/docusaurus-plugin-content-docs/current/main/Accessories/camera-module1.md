@@ -30,10 +30,10 @@ OV13850 模块具有以下特点：
 |5| CSI_RX_D2N| Channel 2 differential negative signal
 |6| CSI_RX_D2P| Channel 2 differential positive signal
 |7| GND |Ground 
-|8| CSI_RX_CLK1N| Output clock differential negative signal
-|9| CSI_RX_CLK1P| output clock differential negative signal
+|8| NC | NC
+|9| NC | NC
 |10| GND| Ground 
-|11| CSI_RX_D1N| Channel 1 differential negative signal
+|11| CSI_RX_D1N | Channel 1 differential negative signal
 |12| CSI_RX_D1P |Channel 1 differential positive signal
 |13| GND| Ground 
 |14| CSI_RX_D0N |Channel 0 differential negative signal 
@@ -43,18 +43,28 @@ OV13850 模块具有以下特点：
 |18| CSI_RX_CLK1P|output clock differential positive signal
 |19| MIPI_VSYNC| Frame synchronization signal
 |20| MIPI_CLKOUT |clock signal
-|21| MIPI_HSYNC| Line synchronization signal
-|22| MIPI_CLKOUT| clock signal
+|21| NC | NC
+|22| NC | NC
 |23| MIPI_CSI_PDN| control signal
 |24| I2C_SCL| I2C clock signal
 |25| I2C_SDA| I2C data signal 
-|26| MIPI_CSI_PDN| control signal 
+|26|  NC | NC
 |27| RESET| Global reset signal
-|28-29| VCC_RX2 |VCCIO 
+|28-29| VCC_3V3 |VCCIO 
 |30-31| VCC_5V0 |VCCIO 
-|32| GND| Ground 
-|33| GND| Ground
-
+<br/>
+<div class="cards">
+    <a href="https://drive.google.com/file/d/1A4pPL4b7qqqc8NED2NxWfeoRC7hlyvSu/view?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>ArmSoM Cammera Module 1</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
 ##  1. 启用Camera的overlay
 
