@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige Family Getting Started"
-sidebar_position: 3
+sidebar_position: 1
 slug: /sige-family-started
 ---
 
@@ -117,24 +117,75 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 ### 以太网口
 
-如果您使用的是以太网有线上网方式，请将网线对准 ArmSoM-SigeX 上的 RJ45 端口插入，系统桌面就会弹出有线连接。
-
-- 通过命令 ifconfig 检查以太网是否正常，它会显示网卡 enPX 或 ethX 以及以太网 IP 地址。 此外，使用工具 ping 判断是否连通网络。
+1. 首先将网线的一端插入 ArmSoM-SigeX 的以太网接口，网线的另一端接入路由器，并确保
+网络是畅通的
+2. 系统启动后会通过 DHCP 自动给以太网卡分配 IP 地址，不需要其他任何配置
+3. 在ArmSoM-SigeX 的 Linux 系统中查看 IP 地址的命令如下所示
 
 ```bash
-ifconfig
-ping mi.com
+armsom@armsom-sige7:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enP4p65s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether c6:9c:b0:7e:2b:1f brd ff:ff:ff:ff:ff:ff permaddr aa:a6:84:1b:0d:21
+    inet 192.168.10.54/24 brd 192.168.10.255 scope global dynamic noprefixroute enP4p65s0
+       valid_lft 86221sec preferred_lft 86221sec
+    inet6 fe80::5bb0:d96f:926d:b334/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: enP2p33s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether be:ed:22:01:47:d9 brd ff:ff:ff:ff:ff:ff permaddr a2:fb:fa:79:de:fb
+4: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state DORMANT group default qlen 1000
+    link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
 ```
+ArmSoM-SigeX 启动后查看 IP 地址有三种方法：
 
-- 如果无法ping通，尝试
+- 接 HDMI 显示器，然后登录系统使用终端输入 ip a 命令查看 IP 地址
+- 接[调试串口](#调试串口)终端输入 ip a 命令来查看 IP 地址
+- 如果没有调试串口，也没有 HDMI 显示器，还可以通过路由器的管理界面来查看ArmSoM-SigeX 网口的 IP 地址。不过这种方法经常有人会无法正常看到ArmSoM-SigeX 的 IP 地址。如果看不到，调试方法如下所示：
+    - 首先检查 Linux 系统是否已经正常启动，如果ArmSoM-SigeX的绿灯常亮，一般是正常启动了，如果只亮红灯，说明系统都没正常启动。
+    - 检查网线有没有插紧，或者换根网线试下。
+    - 换个路由器试下，路由器的问题有遇到过很多，比如路由器无法正常分配IP 地址，或者已正常分配 IP 地址但在路由器中看不到。
+    - 如果没有路由器可换就只能连接 HDMI 显示器或者使用调试串口来查看 IP地址。
 
+:::tip
+另外需要注意的是ArmSoM-SigeX  DHCP 自动分配 IP 地址是不需要任何设置的。
+:::
+
+
+4. 使用工具 ping 判断是否连通网络。
+
+测试网络连通性的命令如下，ping 命令可以通过 Ctrl+C 快捷键来中断运行
 ```bash
-$ sudo dhclient enP2p33s0
-or
-$ sudo dhclient enP4p65s0
+armsom@armsom-sige7:~$ ping www.baidu.com
+PING www.a.shifen.com (183.2.172.185): 56 data bytes
+64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+^C
+--- www.a.shifen.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ```
 
 ### WIFI
+
+ArmSoM-Sige 系列产品都是onboard WIFI模块，不需要外接网口设备，使用[标准4代天线](https://www.armsom.org/product-page/sige7-metal-shell)
+
+**服务器版镜像通过命令连接 WIFI**
+
+1. 先登录 linux 系统，有下面三种方式
+ - 如果ArmSoM-SigeX 连接了网线，可以通过 ssh 远程登录 linux 系统
+ - 如果ArmSoM-SigeX 连接好了调试串口，可以使用串口终端登录 linux 系统
+ - 如果连接了ArmSoM-SigeX 到HDMI显示器，可以通过HDMI显示的终端登录到linux
+系统
+
+2. 使用 nmcli dev wifi 命令扫描周围的 WIFI 热点
+
 ```
 # 1. Open the WIFI
 armsom@armsom-sige:/# nmcli r wifi on
@@ -143,6 +194,138 @@ armsom@armsom-sige:/# nmcli dev wifi
 # 3. Connect to WIFI network
 armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 ```
+
+![wifi-nmcli-scan](/img/general-tutorial/wifi-nmcli-scan.png)
+
+3. 使用 nmcli 命令连接扫描到的 WIFI
+
+ - wifi_name 需要换成想连接的 WIFI 热点的名字
+ - wifi_passwd 需要换成想连接的 WIFI 热点的密码
+
+```
+armsom@armsom-sige7:~$ nmcli dev wifi connect "ydtx_5G" password "ydtx123456"
+Device 'wlan0' successfully activated with "wlan0b6d10bba-e1d5-4b6d-a17f-7d5ab44bbb6f"。
+```
+
+4. 通过 ip addr show wlan0 命令可以查看 wifi 的 IP 地址
+
+```
+armsom@armsom-sige7:~$ ip addr show wlan0
+4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.9/24 brd 192.168.10.255 scope global dynamic noprefixroute wlan0
+       valid_lft 86321sec preferred_lft 86321sec
+    inet6 fe80::850d:3119:e0:afa3/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+```
+
+5. 使用 ping 命令可以测试 wifi 网络的连通性，ping 命令可以通过 Ctrl+C 快捷键来中断运行
+
+```
+armsom@armsom-sige7:~$ ping www.baidu.com
+PING www.a.shifen.com (183.2.172.185): 56 data bytes
+64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+^C
+--- www.a.shifen.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+```
+
+**服务器版镜像通过图形化方式连接 WIFI**
+
+1. 登录 linux 系统，有下面三种方式
+- 如果开发板连接了网线，可以通过 ssh 远程登录 linux 系统
+- 如果开发板连接好了调试串口，可以使用串口终端登录 linux 系统（串口软件请使用 MobaXterm，使用 minicom 无法显示图形界面）
+- 如果连接了开发板到HDMI显示器，可以通过HDMI显示的终端登录到linux系统
+
+2. 在命令行中输入 nmtui 命令打开 wifi 连接的界面
+
+![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
+
+```
+armsom@armsom-sige7:~$ nmtui
+```
+
+3. 选择 Activate a connect 后回车
+
+![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
+
+4. 选择想要连接的 WIFI 热点，输入密码。WIFI 连接成功后会在已连接的 WIFI 名称前显示一个“*”
+
+![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+5. 通过 ip addr show wlan0 命令可以查看 wifi 的 IP 地址
+
+```
+armsom@armsom-sige7:~$ ip addr show wlan0
+4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.9/24 brd 192.168.10.255 scope global dynamic noprefixroute wlan0
+       valid_lft 86316sec preferred_lft 86316sec
+    inet6 fe80::a422:3494:3147:92d/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+```
+
+6. 使用 ping 命令可以测试 wifi 网络的连通性，ping 命令可以通过 Ctrl+C 快捷键来中断运行
+
+```bash
+armsom@armsom-sige7:~$ ping www.baidu.com
+PING www.a.shifen.com (183.2.172.185): 56 data bytes
+64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+^C
+--- www.a.shifen.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+```
+
+**桌面版镜像的测试方法**
+
+1. 点击桌面上的网络配置图标（测试 WIFI 时请不要连接网线）
+2. 连接好 WIFI 后，可以打开浏览器查看是否能上网
+
+![wifi-desktop-set](/img/general-tutorial/wifi-desktop-set.png)
+
+**网络设置**
+<div class="cards">
+<a href="/general-tutorial/product-startup/#3-登录方式" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>🎾</i>
+        </div>
+        <div class="content">
+            <h2>登录方式</h2>
+            <p>串口访问，ssh访问</p>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/network-set#6-静态网络配置" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>🌐</i>
+        </div>
+        <div class="content">
+            <h2>设置静态IP地址</h2>
+        </div>
+    </div>
+</a>
+<a href="/general-tutorial/network-set#6-创建WIFI热点" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>WIFI 热点</h2>
+        </div>
+    </div>
+</a>
+</div>
+
 
 ### BT
 

@@ -1,6 +1,7 @@
 ---
 sidebar_label: "网络设置"
 sidebar_position: 4
+slug: /general-tutorial/network-set
 ---
 
 # 网络设置
@@ -13,7 +14,7 @@ ArmSoM系列产品都搭配了以太网口或WIFI模块，PCIE转以太网模块
 如下 192.168.10.100
 
 ```
-armsom@armsom-w3:~$ ip a
+armsom@armsom-sige7:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -43,7 +44,7 @@ sudo ping + ip地址
 
 * 成功联网就可以看到有一连串的数据，如下
 ```
-armsom@armsom-w3:~$ sudo ping 192.168.10.1
+armsom@armsom-sige7:~$ sudo ping 192.168.10.1
 ping: socket: Address family not supported by protocol
 PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
 64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=0.649 ms
@@ -67,7 +68,7 @@ sudo ping xxx.com
 * 以baidu.com为例，成功联网就可以看到有一连串的数据，如图下
 
 ```
-armsom@armsom-w3:~$ sudo ping www.baidu.com
+armsom@armsom-sige7:~$ sudo ping www.baidu.com
 ping: socket: Address family not supported by protocol
 PING www.a.shifen.com (183.2.172.185) 56(84) bytes of data.
 64 bytes from 183.2.172.185 (183.2.172.185): icmp_seq=1 ttl=52 time=7.83 ms
@@ -81,7 +82,7 @@ PING www.a.shifen.com (183.2.172.185) 56(84) bytes of data.
 * 进入图形配置
 
 ```
-armsom@armsom-w3:~$ sudo nmtui
+armsom@armsom-sige7:~$ sudo nmtui
 ```
 
 * 移动键盘方向键移动到 Active a connection 按 Enter键 进入wifi设置
@@ -94,7 +95,7 @@ armsom@armsom-w3:~$ sudo nmtui
 * 列出wifi列表
 
 ```
-armsom@armsom-w3:~$ nmcli dev wifi list
+armsom@armsom-sige7:~$ nmcli dev wifi list
 ```
 
 * 连接wifi
@@ -103,11 +104,11 @@ armsom@armsom-w3:~$ nmcli dev wifi list
 
 ```
 # 第一次连接
-armsom@armsom-w3:~$ sudo nmcli dev wifi connect armsom password 'armsom88' ifname wlan0
+armsom@armsom-sige7:~$ sudo nmcli dev wifi connect armsom password 'armsom88' ifname wlan0
 Device 'wlan0' successfully activated with '7867c3af-dca2-4e9a-9721-a20f7a0e1b46'.
 
 # 第一次连接成功后，再连接或切换wifi后
-armsom@armsom-w3:~$ sudo nmcli dev wifi connect armsom
+armsom@armsom-sige7:~$ sudo nmcli dev wifi connect armsom
 ```
 
 ## 4. 桌面端连接
@@ -125,7 +126,7 @@ todo
 * 设置静态地址前的ip地址
 
 ```
-armsom@armsom-w3:~$ sudo ifconfig
+armsom@armsom-sige7:~$ sudo ifconfig
 enP4p65s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.10.100  netmask 255.255.255.0  broadcast 192.168.10.255
         ether 92:be:6d:d5:e7:b4  txqueuelen 1000  (Ethernet)
@@ -146,7 +147,7 @@ enP4p65s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 * 进入图形配置
 ```
-armsom@armsom-w3:~$ nmtui 
+armsom@armsom-sige7:~$ nmtui 
 ```
 
 移动键盘方向键移动到 Edit a connection 按 Enter键 进入wifi设置
@@ -273,7 +274,7 @@ sudo nmcli c up ifname eth0
 
 配置完后，ip就改变了
 ```
-armsom@armsom-w3:~$ ip addr
+armsom@armsom-sige7:~$ ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -286,4 +287,21 @@ armsom@armsom-w3:~$ ip addr
     link/ether 2c:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
 4: wlan1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
     link/ether 2e:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
+```
+
+## 7. 创建WIFI热点
+
+create_ap是一个帮助快速创建Linux上的WIFI热点的脚本，并且支持bridge和NAT模式，能够自动结合hostapd, dnsmasq和iptables完成WIFI热点的设置，避免了用户进行复杂的配置，github地址如下： https://github.com/oblique/create_ap
+
+```
+root@armsom-sige7:/home/armsom/create_ap# make install
+```
+
+
+### 7.1 create_ap 以 NAT 模式创建 WIFI 热点的方法
+
+1. 输入下面的命令以 NAT 模式创建名称为 armsom、密码为 armsom 的 WIFI 热点
+
+```
+armsom@armsom-sige7:~$ sudo create_ap -m nat wlan0 enP2p33s0 armsom armsom
 ```

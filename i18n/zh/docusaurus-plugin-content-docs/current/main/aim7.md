@@ -841,6 +841,9 @@ Table 16. i2s pin descriptions
 ## 使用手册
 
 ## 样品购买
+
+CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
+
 ArmSoM 独立站: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
 
 ArmSoM 速卖通官方店: 

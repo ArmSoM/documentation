@@ -10,11 +10,11 @@ slug: /armsom-sige5
 
 Let's get to know Sige5 in 5 minutes.
 
-<!-- ## Overview
+ ## Overview
 
 ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Rockchip RK3576, with a 6 TOPS computing power NPU and support for up to 16GB of large memory. It supports 4K video encoding and decoding, offers rich interfaces including dual gigabit Ethernet ports, WiFi 6 & BT5, and various video outputs. Compatible with multiple operating systems, it is suitable for ARM-based PCs, edge computing devices, personal mobile internet devices, and other digital multimedia applications.
 
-![ArmSoM-sige5](/img/sige/sige5.jpg)
+![ArmSoM-sige5](/img/sige/sige5.png)
 
 ### Key Parameter
 
@@ -36,6 +36,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 - Weight: 43g
 - Dimensions: 92mm × 62mm x 14.6mm
 
+<!--
 ## Getting started
 
 <a href="./sige-family-started" class="card-link">
