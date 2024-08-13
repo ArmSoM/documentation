@@ -1,6 +1,6 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
-sidebar_label: "Sige Family Getting Started"
+sidebar_label: "Sige系列使用手册"
 sidebar_position: 1
 slug: /sige-family-started
 ---
@@ -534,7 +534,7 @@ armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,f
 
 [ArmSoM camera-module1](../Accessories/camera-module1.md)
 
-#### MIPI DSI
+### MIPI DSI
 
 ArmSoM-Sige7/5 分辨率最高分辨率可达 4K@60Hz
 

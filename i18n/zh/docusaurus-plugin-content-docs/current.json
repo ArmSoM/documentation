@@ -1,5 +1,11 @@
 {
-    "sidebar.main.category.General tutorial": {
+    "sidebar.main.category.Getting Started": {
+        "message": "使用手册"
+    },
+    "sidebar.main.category.Accessories": {
+        "message": "配件"
+    },
+    "sidebar.main.category.general-tutorial": {
         "message": "通用教程"
     },
     "sidebar.general-tutorial.category.Start the system": {

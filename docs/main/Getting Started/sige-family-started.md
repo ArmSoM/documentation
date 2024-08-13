@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige Family Getting Started"
-sidebar_position: 3
+sidebar_position: 2
 slug: /sige-family-started
 ---
 # Sige Family User Manual 
@@ -13,7 +13,7 @@ The Sige user manual helps users understand the basic usage of Sige products and
         Comparison of Sige7/5/1 Specifications
     </summary>
 
-    |        | Sige7  | Sige5 | Sige1 |
+|        | Sige7  | Sige5 | Sige1 |
 | --------- | ----- | --- | --- | 
 | SoC Process | 8nm | 8nm |  28nm |  
 | CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3528 <br/> Cortex-A53 x4 @1.5GHz | 
@@ -327,7 +327,7 @@ armsom@armsom-sige7:/# date
 Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
-### MIPI-CSI
+### MIPI CSI
 
 Use the IMX415 module for the camera. After connecting and powering on the camera module you can view the boot log:  
 
@@ -366,10 +366,10 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-[ArmSoM camera-module1](../Accessories/camera-module1.md)
+[ArmSoM camera-module1](./armsom-camera-module1)
  
 ### MIPI DSI  
 
 ArmSoM-Sige7/5 supports up to 4K@60Hz resolution over MIPI DSI
 
-[ArmSoM Display 10 HD](../Accessories/display-10-hd.md)
+[ArmSoM Display 10 HD](./armsom-display-10-hd)

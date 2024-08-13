@@ -55,10 +55,6 @@ const sidebars = {
       type: 'link',
       label: 'bilibili', // The link label
       href: 'https://space.bilibili.com/101696800', // The external URL
-    },{
-      type: 'html',
-      value: '<hr role="separator" aria-orientation="horizontal" class="sidebar-hr">', // The HTML to be rendered
-      defaultStyle: true, // Use the default menu item styling
     },
     // {
     //   type: 'category',
