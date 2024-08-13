@@ -292,7 +292,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ![wifi-desktop-set](/img/general-tutorial/wifi-desktop-set.png)
 
 **网络设置**
-<!-- <div class="cards">
+<div class="cards">
 <a href="./general-tutorial/product-startup/#3-登录方式" class="card-link">
     <div class="card">
         <div class="icon">
@@ -324,7 +324,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
         </div>
     </div>
 </a>
-</div> -->
+</div>
 
 
 ### BT
