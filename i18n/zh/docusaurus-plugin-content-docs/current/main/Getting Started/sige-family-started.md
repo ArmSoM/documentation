@@ -77,6 +77,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 | --------- | ----- | --- |
 | Sige7 | 5V/3A, 9V/2A, 12V/2A, 15V/2A |  USB-PD |
 | Sige5 | 5V/3A, 9V/2A, 12V/2A, 15V/2A |  USB-PD |
+| Sige3    | 5V/3A, 9V/2A, 12V/2A, 15V/2A      | USB-PD     |
 | Sige1 | 5V/2.5A，12V/2A | Non-PD |
 
 将电源插入标有“DCIN”的端口, 请确保使用正确端口！
@@ -199,8 +200,8 @@ armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password
 
 3. 使用 nmcli 命令连接扫描到的 WIFI
 
- - wifi_name 需要换成想连接的 WIFI 热点的名字
- - wifi_passwd 需要换成想连接的 WIFI 热点的密码
+ - wifi_name 换成需要连接的 WIFI 热点的名字
+ - wifi_passwd 换成需要连接的 WIFI 热点的密码
 
 ```
 armsom@armsom-sige7:~$ nmcli dev wifi connect "ydtx_5G" password "ydtx123456"
@@ -344,10 +345,27 @@ armsom@armsom-sige:/# pair yourDeviceMAC
 
 ### HDMI
 
-| 型号 |Sige7       | Sige5  | Sige1 |
-| ----- |  ----- | ------ |- ---- | 
-| 分辨率  | 8Kp60 | 4Kp120 |4Kp60|
+| 型号 |Sige7 | Sige5  | Sige3 | Sige1 |
+| ----- |  ----- | ------ |----- | ----- |
+| 分辨率  | 8Kp60 | 4Kp120 |4Kp60|4Kp60|
 
+1. 使用 HDMI 线连接 ArmSoM-Sige 和 HDMI 显示器
+2. 启动 linux 系统后如果 HDMI 显示器有图像输出说明 HDMI 接口使用正常
+
+:::tip
+注意，很多笔记本电脑虽然带有 HDMI 接口，但是笔记本的 HDMI 接口一般只有输出功能，并没有 HDMI in 的功能，也就是说并不能将其他设备的 HDMI 输出显示到笔记本的屏幕上。
+当想把开发板的 HDMI 接到笔记本电脑 HDMI 接口时，请先确认清楚您的笔记本是支持 HDMI in 的功能。
+当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
+:::
+
+**HDMI 转 VGA 显示测试**
+1. 需要准备下面的配件
+- HDMI 转 VGA 转换器
+- 一根 VGA 线，支持 VGA 接口的显示器
+
+2. HDMI 转 VGA 显示测试如下所示
+
+![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
 ### USB
 

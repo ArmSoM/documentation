@@ -99,6 +99,7 @@ The table below shows the power specifications required for powering the ArmSoM-
 | -------- | ---------------------------------- | ---------- |
 | Sige7    | 5V/3A, 9V/2A, 12V/2A, 15V/2A      | USB-PD     |
 | Sige5    | 5V/3A, 9V/2A, 12V/2A, 15V/2A      | USB-PD     |
+| Sige3    | 5V/3A, 9V/2A, 12V/2A, 15V/2A      | USB-PD     |
 | Sige1    | 5V/2.5A, 12V/2A                    | Non-PD     |
 
 Insert the power supply into the port labeled "DCIN". Please make sure to use the correct port!
@@ -185,9 +186,9 @@ armsom@armsom-sige7:/# pair yourDeviceMAC
 
 ### HDMI
 
-| Model | Sige7 | Sige5 | Sige1 |
-| ----- | ----- | ------ | ------ | 
-| Resolution | 8Kp60 | 4Kp120 | 4Kp60 |
+| Model | Sige7 | Sige5 |Sige3 |  Sige1 |
+| ----- | ----- | ------ | ------ |------ | 
+| Resolution | 8Kp60 | 4Kp120 | 4Kp60 |4Kp60 |
 
 ### USB
 
