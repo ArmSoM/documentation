@@ -358,7 +358,7 @@ armsom@armsom-sige:/# pair yourDeviceMAC
 当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
 :::
 
-**HDMI 转 VGA 显示测试**
+#### HDMI 转 VGA 显示测试
 1. 需要准备下面的配件
 - HDMI 转 VGA 转换器
 - 一根 VGA 线，支持 VGA 接口的显示器
@@ -367,29 +367,73 @@ armsom@armsom-sige:/# pair yourDeviceMAC
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+:::tip
+使用 HDMI 转 VGA 显示时，ArmSoM-Sige产品和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
+:::
+
 ### USB
 
-|  型号  |Sige7       | Sige5  | Sige1 |
+|  型号  |Sige7       | Sige5  | Sige3 | Sige1 |
 | ----- |  ----- | ------ |- ---- | 
-| USB   | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 |2x USB2.0|
+| USB   | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 |2x USB2.0|
 
-**USB3.0 Camera**
+:::info
+USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
+:::
 
-连接usb3.0摄像头后，您可以下载 cheese 然后使用以下命令使用摄像机:
+#### 连接 USB 鼠标或键盘测试
+1. 将 USB 接口的键盘插入ArmSoM-Sige产品的 USB 接口中
+2. 连接ArmSoM-Sige产品到 HDMI 显示器
+3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
 
-```bash
-armsom@armsom-sige: sudo apt update
-armsom@armsom-sige: sudo apt install cheese
+#### 连接 USB 存储设备测试
+1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-Sige产品的 USB 接口中
+2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
 ```
+armsom@armsom-sige7:/# cat /proc/partitions | grep "sd*"
+major minor  #blocks  name
+   8        0  122880000 sda
+```
+3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
+
+```
+armsom@armsom-sige7:/# sudo mount /dev/sda1 /test/
+```
+
+4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
+
+```
+armsom@armsom-sige7:/test# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /test
+```
+
+####  USB 摄像头
+
+1. 准备一个支持 UVC 协议的 USB 摄像头，然后将USB 摄像头插入到 ArmSoM-Sige产品的 USB 接口中
+
+2. 通过 v4l2-ctl 命令可以看到 USB 摄像头的设备节点信息为/dev/video0
+
+```
+armsom@armsom-sige7:/# v4l2-ctl --list-devices
+罗技高清网络摄像机 C93 (usb-xhci-hcd.5.auto-1):
+        /dev/video40
+        /dev/video41
+        /dev/media4
+```
+
+3. 在桌面系统中可以使用 Cheese/V4L2 test bench 直接打开 USB 摄像头
+
+![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
+
 
 同时，您也可以使用终端命令打开相机预览:
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
+armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
 ```
 
 命令拍照:
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
+armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
 ```
 
 命令拍摄视频:
@@ -401,7 +445,7 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 
 ### M.2 Key M
 
-ArmSoM-Sige7/5 提供 M.2 Key M 连接器：
+ArmSoM-Sige7/5/3 提供 M.2 Key M 连接器：
 
 - 产品的背面有一个带有M.2 Key M 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
   **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
@@ -416,7 +460,7 @@ armsom@armsom-sige:/# mount /dev/nvme0n1 temp
 查看系统中的声卡。
 
 ```bash
-armsom@armsom-sige:/# aplay -l
+armsom@armsom-sige7:/# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
  Subdevices: 1/1
@@ -432,7 +476,7 @@ card 2: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [roc
 播放音乐
 
 ```bash
-armsom@armsom-sige:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
+armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
 ```
 
 ### FAN
@@ -554,6 +598,6 @@ armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,f
 
 ### MIPI DSI
 
-ArmSoM-Sige7/5 分辨率最高分辨率可达 4K@60Hz
+ArmSoM-Sige7/5/3 分辨率最高分辨率可达 4K@60Hz
 
 [ArmSoM Display 10 HD](../Accessories/display-10-hd.md)
