@@ -11,7 +11,7 @@ slug: /armsom-active-cooling-kit
 ![sige-heatsink](/img/accessories/sige-heatsink.png)
 
 - 材质：AL6063-T5
-- 工艺： 喷砂 + 氧化亮黑
+- 工艺：喷砂 + 氧化亮黑
 
 ## 3505S冷却风扇
 
