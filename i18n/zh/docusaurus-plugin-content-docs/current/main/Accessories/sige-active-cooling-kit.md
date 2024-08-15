@@ -75,3 +75,25 @@ slug: /armsom-active-cooling-kit
     - PIN 2: 黑色导线(BLACK WIRED)---(-) 
     - PIN 3: 红色导线(RED WIRED)---(+)  
 
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1CvUflC1Vf7lX9fmMoArXLA?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>armsom-active-cooling-kit.stp</h2>
+            </div>
+        </div>
+    </a>
+</div>
+
+## 样品购买
+
+ArmSoM 独立站: [https://www.armsom.org/product-page/sige-active-cooling-kit](https://www.armsom.org/product-page/sige-active-cooling-kit)
+ 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256807357737339.html](https://www.aliexpress.com/item/3256807357737339.html) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=770587380434](https://item.taobao.com/item.htm?id=770587380434)
+
+OEM&ODM,  请联系: sales@armsom.org

@@ -72,3 +72,26 @@ After continuous operation at a specified constant temperature, the average life
     - PIN 1: Blue Wire (BLUE WIRED) --- (PWM)
     - PIN 2: Black Wire (BLACK WIRED) --- (-)
     - PIN 3: Red Wire (RED WIRED) --- (+)
+
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1CvUflC1Vf7lX9fmMoArXLA?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>armsom-active-cooling-kit.stp</h2>
+            </div>
+        </div>
+    </a>
+</div>
+
+## Easy to buy sample
+
+ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
+ 
+ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806439494827.html](https://aliexpress.com/item/3256806439494827.html) 
+
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=824930133991](https://item.taobao.com/item.htm?id=824930133991)
+
+OEM&ODM, please contact: sales@armsom.org
