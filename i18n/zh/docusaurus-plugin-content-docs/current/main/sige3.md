@@ -16,4 +16,4 @@ ArmSoM-Sige3
 
 ### Key Parameter
 
-- SoC: Rockchip RK3568
+- SoC: Rockchip RK3568B2
