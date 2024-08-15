@@ -74,7 +74,7 @@ After continuous operation at a specified constant temperature, the average life
     - PIN 3: Red Wire (RED WIRED) --- (+)
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1CvUflC1Vf7lX9fmMoArXLA?pwd=arms" class="card-link">
+    <a href="https://drive.google.com/file/d/1DQ92d9owV1JzpOhPE3L9g2yUZR8_7SDt/view?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📚</i>
