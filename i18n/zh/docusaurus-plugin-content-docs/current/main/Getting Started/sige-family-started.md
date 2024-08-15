@@ -109,7 +109,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
 
-| Sige7/5/1       | 连接  | 串口模块 |
+| Sige7/5/3/1       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
 | **GND** (pin 6) | ---> | GND |
 | **TX** (pin 8)  | ---> | RX |

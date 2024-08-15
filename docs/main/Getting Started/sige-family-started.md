@@ -10,7 +10,7 @@ The Sige user manual helps users understand the basic usage of Sige products and
 
 <details>
     <summary>
-        Comparison of Sige7/5/1 Specifications
+        Comparison of Sige7/5/3/1 Specifications
     </summary>
 
 |        | Sige7  | Sige5 | Sige3 |Sige1 |
@@ -132,7 +132,7 @@ Connect the USB to TTL serial cable as follows:
 
 ![armsom-sige5-debug](/img/sige/armsom-sige7-debug.png)
 
-| Sige7/5/1          | Connect | Serial Module |
+| Sige7/5/3/1          | Connect | Serial Module |
 | -------------- | ------- | ------------ |
 | **GND** (pin 6)| --->   | GND          |
 | **TX** (pin 8) | --->   | RX           |
@@ -224,7 +224,7 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 
 ### M.2 Key M
 
-The ArmSoM-Sige7/5 provides an M.2 Key M connector:
+The ArmSoM-Sige7/5/3 provides an M.2 Key M connector:
 
 - The product features an M.2 Key M connector on the back. The board includes a standard M.2 2280 mounting hole for deploying an M.2 2280 NVMe SSD.  
   **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
