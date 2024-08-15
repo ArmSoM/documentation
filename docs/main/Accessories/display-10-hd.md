@@ -100,6 +100,19 @@ After editing, restart the device to change the Overlays settings to support the
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
 
+<div class="cards">
+    <a href="https://drive.google.com/file/d/13BqkwRQGyNxGWXQ_LBf9IrNkQIbPgAB4/view?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>armsom-10HD.dwg</h2>
+            </div>
+        </div>
+    </a>
+</div>
+
 ## Easy to buy sample
 
 ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)

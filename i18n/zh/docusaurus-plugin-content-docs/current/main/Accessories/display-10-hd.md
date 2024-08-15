@@ -98,6 +98,18 @@ overlays=armsom-sige7-display-10hd
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
 
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1gwBWVhTw9nfQnBvsymUV1g?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>armsom-10HD.dwg</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
