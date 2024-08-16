@@ -36,7 +36,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 - Weight: 43g
 - Dimensions: 92mm × 62mm x 14.6mm
 
-<!--
+
 ## Getting started
 
 <a href="./sige-family-started" class="card-link">
@@ -363,8 +363,8 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |2          | -         | Negative pole    |
 </details>
 
-
 ## Resources
+<!--
 
 ### Source Code
 
@@ -405,7 +405,8 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
     </div>
 </a>
 </div>
-
+ -->
+ 
 ### Official Image
 
 ArmSoM team uses Debian bullseye as the official operating system.
@@ -431,7 +432,7 @@ Network disk address:
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://github.com/armbian/community/releases)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
-
+<!-- 
 ### Hardware Resources 
 
 <div class="cards">
@@ -477,7 +478,7 @@ Network disk address:
         </div>
     </div>
 </a>
-</div>
+</div> -->
 
 ## Product Certificates
 
@@ -490,4 +491,4 @@ ArmSoM Official AliExpress Store: [https://www.aliexpress.com/store/1102800175](
 
 ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=790341533736](https://item.taobao.com/item.htm?id=790341533736)
 
-For OEM & ODM, please contact: sales@armsom.org -->
+For OEM & ODM, please contact: sales@armsom.org

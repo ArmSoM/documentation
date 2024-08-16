@@ -35,8 +35,6 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 - PCB： 8 层 PCB 板设计
 - 重量：43g
 - 大小：92mm × 62mm x 14.6mm
-
-<!--
  
 ## 使用手册
 
@@ -350,7 +348,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 
 ## 开发资料
-
+<!--
 <div class="cards">
     <a href="https://github.com/armbian/build" class="card-link">
         <div class="card">
@@ -388,7 +386,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     </div>
 </a>
 </div>
-
+ -->
 ### 官方镜像
 
 ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
@@ -412,7 +410,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
-### 硬件资料
+<!-- ### 硬件资料
 
 获取 Sige5 原理图、DXF等硬件资料
 
@@ -464,7 +462,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
     </div>
 </a>
 </div>
-<br/>
+<br/> -->
 
 ## 产品证书
 
@@ -478,4 +476,4 @@ ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https:/
 
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=790341533736](https://item.taobao.com/item.htm?id=790341533736)
 
-OEM&ODM,  请联系: sales@armsom.org -->
+OEM&ODM,  请联系: sales@armsom.org

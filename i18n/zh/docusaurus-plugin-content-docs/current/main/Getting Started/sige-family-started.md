@@ -600,4 +600,31 @@ armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,f
 
 ArmSoM-Sige7/5/3 分辨率最高分辨率可达 4K@60Hz
 
-[ArmSoM Display 10 HD](../Accessories/display-10-hd.md)
+1. 按照下图将连接好排线
+
+![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
+
+2. 打开 10.1 寸 MIPI LCD 屏幕配置的方法
+
+- linux 镜像默认是没有打开 mipi lcd 屏幕的配置的，如果需要使用 mipi lcd 屏幕，需要手动打开才行。
+
+- 使用nano 打开/boot/armbianEnv.txt文件：
+
+```bash
+sudo nano /boot/armbianEnv.txt
+```
+
+- 在该文件中找到或者添加 "overlays=" 这个关键词。
+
+```bash
+// 根据您手上的产品选择
+overlays=armsom-sige7-display-10hd // Sige7
+overlays=armsom-sige5-display-10hd // Sige5
+overlays=armsom-sige3-display-10hd // Sige3
+```
+
+快捷键：Ctrl + S保存    Ctrl + X退出
+
+编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
+
+![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)

@@ -369,8 +369,37 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 
 [ArmSoM camera-module1](./armsom-camera-module1)
  
-### MIPI DSI  
+Certainly! Here's the translation of your instructions into English:
 
-ArmSoM-Sige7/5 supports up to 4K@60Hz resolution over MIPI DSI
+### MIPI DSI
 
-[ArmSoM Display 10 HD](./armsom-display-10-hd)
+The ArmSoM-Sige7/5/3 supports a maximum resolution of up to 4K@60Hz.
+
+1. Connect the cables as shown in the image below.
+
+![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
+
+2. Configuring the 10.1-inch MIPI LCD screen
+
+- By default, the Linux image does not have the MIPI LCD screen configuration enabled. To use the MIPI LCD screen, you need to enable it manually.
+
+- Use `nano` to open the `/boot/armbianEnv.txt` file:
+
+```bash
+sudo nano /boot/armbianEnv.txt
+```
+
+- In this file, find or add the keyword "overlays=".
+
+```bash
+// Choose according to your product
+overlays=armsom-sige7-display-10hd // Sige7
+overlays=armsom-sige5-display-10hd // Sige5
+overlays=armsom-sige3-display-10hd // Sige3
+```
+
+Shortcut keys: Ctrl + S to save    Ctrl + X to exit
+
+After editing, restart the device to apply the Overlays settings and support Display 10 HD.
+
+![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
