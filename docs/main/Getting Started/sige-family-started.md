@@ -121,53 +121,232 @@ Insert the power supply into the port labeled "DCIN". Please make sure to use th
 
 ## Interface Usage
 
-If you are using ArmSoM-Sige products for the first time, please familiarize yourself with each product's hardware interfaces to better understand the following content.
+If you are using ArmSoM-Sige products for the first time, please familiarize yourself with the hardware interfaces of each product to better understand the following content.
 
-| Hardware Interface | [Sige7](./armsom-sige7#hardware-interfaces) | [Sige5](./armsom-sige5#hardware-interfaces) | [Sige1](./armsom-sige1#hardware-interfaces) |
-| --------------- | ----- | ------ | ------ | 
+| Hardware Interface | [Sige7](./armsom-sige7#hardware-interface) | [Sige5](./armsom-sige5#hardware-interface) | [Sige1](./armsom-sige1#hardware-interface) |
+| ------------------ | ------------------------------------------ | ----------------------------------------- | ----------------------------------------- |
 
 ### Debug Serial Port
 
 Connect the USB to TTL serial cable as follows:
 
-![armsom-sige5-debug](/img/sige/armsom-sige7-debug.png)
+![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
 
-| Sige7/5/3/1          | Connect | Serial Module |
-| -------------- | ------- | ------------ |
-| **GND** (pin 6)| --->   | GND          |
-| **TX** (pin 8) | --->   | RX           |
-| **RX** (pin 10)| --->   | TX           |
+| Sige7/5/3/1       | Connection | Serial Module |
+| ----------------- | ---------- | ------------- |
+| **GND** (pin 6)   | --->       | GND           |
+| **TX** (pin 8)    | --->       | RX            |
+| **RX** (pin 10)   | --->       | TX            |
 
-### Ethernet
+### Ethernet Port
 
-If you are using a wired Ethernet connection, align the Ethernet cable with the RJ45 port on the ArmSoM-SigeX, and the system desktop will prompt a wired connection.
-
-- Use the `ifconfig` command to check if Ethernet is functioning correctly. It will display network interfaces such as `enPX` or `ethX` along with the Ethernet IP address. Additionally, use the `ping` tool to verify network connectivity.
+1. First, plug one end of the network cable into the Ethernet port of the ArmSoM-SigeX, and connect the other end to a router. Ensure that the network is functional.
+2. After the system boots, it will automatically assign an IP address to the Ethernet port via DHCP without any additional configuration.
+3. To check the IP address in the ArmSoM-SigeX Linux system, use the following command:
 
 ```bash
-ifconfig
-ping mi.com
+armsom@armsom-sige7:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enP4p65s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether c6:9c:b0:7e:2b:1f brd ff:ff:ff:ff:ff:ff permaddr aa:a6:84:1b:0d:21
+    inet 192.168.10.54/24 brd 192.168.10.255 scope global dynamic noprefixroute enP4p65s0
+       valid_lft 86221sec preferred_lft 86221sec
+    inet6 fe80::5bb0:d96f:926d:b334/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: enP2p33s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether be:ed:22:01:47:d9 brd ff:ff:ff:ff:ff:ff permaddr a2:fb:fa:79:de:fb
+4: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state DORMANT group default qlen 1000
+    link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
 ```
 
-- If ping fails, try the following:
+There are three ways to check the IP address of ArmSoM-SigeX after it starts:
+
+- Connect an HDMI monitor, log into the system, and use the terminal command `ip a` to view the IP address.
+- Use the [debug serial port](#debug-serial-port) terminal and enter the `ip a` command to check the IP address.
+- If neither the debug serial port nor HDMI monitor is available, you can check the IP address of the ArmSoM-SigeX Ethernet port through the router’s management interface. However, this method may sometimes fail to display the ArmSoM-SigeX IP address. If you cannot see it, try the following troubleshooting steps:
+  - Check if the Linux system has started properly. If the green light on the ArmSoM-SigeX is steady, it generally means the system has booted correctly; if only the red light is on, the system has not booted properly.
+  - Ensure the network cable is securely connected, or try a different cable.
+  - Try using a different router. Common issues with routers include inability to assign IP addresses or assigning them correctly but not showing them in the router's interface.
+  - If no alternative router is available, use an HDMI monitor or the debug serial port to check the IP address.
+
+:::tip
+Note that DHCP automatically assigning an IP address to the ArmSoM-SigeX requires no additional configuration.
+:::
+
+4. Use the `ping` tool to check network connectivity.
+
+The command to test network connectivity is shown below. You can stop the `ping` command with the Ctrl+C shortcut.
 
 ```bash
-$ sudo dhclient enP2p33s0
-or
-$ sudo dhclient enP4p65s0
+armsom@armsom-sige7:~$ ping www.baidu.com
+PING www.a.shifen.com (183.2.172.185): 56 data bytes
+64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+^C
+--- www.a.shifen.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ```
 
 ### WIFI
-```  
-# 1. Switch to super user mode
-armsom@armsom-sige7:/# sudo su
-# 2. Open the WIFI
-root@armsom-sige7:/# nmcli r wifi on
-# 3. Scan WIFI
-root@armsom-sige7:/# nmcli dev wifi
-# 4. Connect to WIFI network
-root@armsom-sige7:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
-```
+
+The ArmSoM-Sige series products come with an onboard WIFI module, so there's no need for external network devices. They use a [standard 4th-generation antenna](https://www.armsom.org/product-page/sige7-metal-shell).
+
+**Connecting to WIFI via Command Line on Server Image**
+
+1. First, log in to the Linux system using one of the following methods:
+   - If the ArmSoM-SigeX is connected to a network cable, you can log in remotely via SSH.
+   - If the ArmSoM-SigeX is connected via a debug serial port, use a serial terminal to log in to the Linux system.
+   - If the ArmSoM-SigeX is connected to an HDMI monitor, you can log in to the Linux system via the HDMI display.
+
+2. Use the `nmcli dev wifi` command to scan for available WIFI hotspots:
+
+   ```bash
+   # 1. Enable WIFI
+   armsom@armsom-sige:/# nmcli r wifi on
+   # 2. Scan for WIFI
+   armsom@armsom-sige:/# nmcli dev wifi
+   # 3. Connect to a WIFI network
+   armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+   ```
+
+   ![wifi-nmcli-scan](/img/general-tutorial/wifi-nmcli-scan.png)
+
+3. Use the `nmcli` command to connect to the scanned WIFI:
+
+   - Replace `wifi_name` with the name of the WIFI hotspot you want to connect to.
+   - Replace `wifi_password` with the password for the WIFI hotspot.
+
+   ```bash
+   armsom@armsom-sige7:~$ nmcli dev wifi connect "ydtx_5G" password "ydtx123456"
+   Device 'wlan0' successfully activated with "wlan0b6d10bba-e1d5-4b6d-a17f-7d5ab44bbb6f".
+   ```
+
+4. Use the `ip addr show wlan0` command to view the WIFI IP address:
+
+   ```bash
+   armsom@armsom-sige7:~$ ip addr show wlan0
+   4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+       link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
+       inet 192.168.10.9/24 brd 192.168.10.255 scope global dynamic noprefixroute wlan0
+          valid_lft 86321sec preferred_lft 86321sec
+       inet6 fe80::850d:3119:e0:afa3/64 scope link noprefixroute
+          valid_lft forever preferred_lft forever
+   ```
+
+5. Use the `ping` command to test the WIFI network connectivity. You can interrupt the `ping` command with the Ctrl+C shortcut:
+
+   ```bash
+   armsom@armsom-sige7:~$ ping www.baidu.com
+   PING www.a.shifen.com (183.2.172.185): 56 data bytes
+   64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+   64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+   64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+   64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+   ^C
+   --- www.a.shifen.com ping statistics ---
+   4 packets transmitted, 4 packets received, 0% packet loss
+   round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+   ```
+
+**Connecting to WIFI via GUI on Server Image**
+
+1. Log in to the Linux system using one of the following methods:
+   - If the development board is connected to a network cable, you can log in remotely via SSH.
+   - If the development board is connected via a debug serial port, use a serial terminal to log in to the Linux system (use MobaXterm for serial software, as minicom cannot display the graphical interface).
+   - If the development board is connected to an HDMI monitor, log in to the Linux system via the HDMI display.
+
+2. Enter the `nmtui` command in the terminal to open the WIFI connection interface:
+
+   ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
+
+   ```bash
+   armsom@armsom-sige7:~$ nmtui
+   ```
+
+3. Select "Activate a connection" and press Enter:
+
+   ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
+
+4. Choose the WIFI hotspot you want to connect to and enter the password. After a successful connection, an asterisk “*” will appear next to the connected WIFI name:
+
+   ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+5. Use the `ip addr show wlan0` command to view the WIFI IP address:
+
+   ```bash
+   armsom@armsom-sige7:~$ ip addr show wlan0
+   4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+       link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
+       inet 192.168.10.9/24 brd 192.168.10.255 scope global dynamic noprefixroute wlan0
+          valid_lft 86316sec preferred_lft 86316sec
+       inet6 fe80::a422:3494:3147:92d/64 scope link noprefixroute
+          valid_lft forever preferred_lft forever
+   ```
+
+6. Use the `ping` command to test the WIFI network connectivity. You can interrupt the `ping` command with the Ctrl+C shortcut:
+
+   ```bash
+   armsom@armsom-sige7:~$ ping www.baidu.com
+   PING www.a.shifen.com (183.2.172.185): 56 data bytes
+   64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+   64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+   64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+   64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+   ^C
+   --- www.a.shifen.com ping statistics ---
+   4 packets transmitted, 4 packets received, 0% packet loss
+   round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+   ```
+
+**Testing Method for Desktop Image**
+
+1. Click the network configuration icon on the desktop (ensure not to connect a network cable while testing WIFI).
+2. After connecting to WIFI, open a browser to check if you can access the internet:
+
+   ![wifi-desktop-set](/img/general-tutorial/wifi-desktop-set.png)
+
+**Network Settings**
+<div class="cards">
+<a href="./general-tutorial/product-startup/#3-Login method" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>🎾</i>
+        </div>
+        <div class="content">
+            <h2>Login Methods</h2>
+            <p>Serial port access, SSH access</p>
+        </div>
+    </div>
+</a>
+<a href="./general-tutorial/network-set#6-static-network-configuration" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>🌐</i>
+        </div>
+        <div class="content">
+            <h2>Set Static IP Address</h2>
+        </div>
+    </div>
+</a>
+<a href="./general-tutorial/network-set#7-创建WIFI热点" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>WIFI Hotspot</h2>
+        </div>
+    </div>
+</a>
+</div>
 
 ### BT  
 
@@ -183,39 +362,92 @@ armsom@armsom-sige7:/# default-agent
 armsom@armsom-sige7:/# scan on
 armsom@armsom-sige7:/# pair yourDeviceMAC
 ```
-
 ### HDMI
 
-| Model | Sige7 | Sige5 |Sige3 |  Sige1 |
-| ----- | ----- | ------ | ------ |------ | 
-| Resolution | 8Kp60 | 4Kp120 | 4Kp60 |4Kp60 |
+| Model | Sige7 | Sige5 | Sige3 | Sige1 |
+| ----- | ----- | ----- | ----- | ----- |
+| Resolution | 8Kp60 | 4Kp120 | 4Kp60 | 4Kp60 |
 
+1. Connect the ArmSoM-Sige to an HDMI display using an HDMI cable.
+2. After booting the Linux system, if the HDMI display shows an image, the HDMI interface is functioning correctly.
+
+:::tip
+Note that many laptops, while having HDMI ports, typically have HDMI output only and do not support HDMI in. This means you cannot display the HDMI output from another device on the laptop's screen. Before connecting the development board's HDMI to a laptop's HDMI port, ensure your laptop supports HDMI in functionality. If there is no display, first check if your system is a desktop version; server versions might only show a terminal.
+:::
+
+#### HDMI to VGA Display Test
+1. Required accessories:
+- HDMI to VGA converter
+- A VGA cable and a display with a VGA port
+
+2. The HDMI to VGA display test is shown below:
+
+![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+:::tip
+When using HDMI to VGA conversion, no additional configuration is needed for the ArmSoM-Sige products or the Linux system. If you encounter issues, check the HDMI to VGA converter, VGA cable, and display for problems.
+:::
 ### USB
 
-The ArmSoM-Sige7 provides one USB 2.0 and one USB 3.0 port.  
+| Model | Sige7 | Sige5 | Sige3 | Sige1 |
+| ----- | ----- | ----- | ----- | ----- |
+| USB | 1x Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1x Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1x Type-C 3.0, 1x USB3.0, 1x USB2.0 | 2x USB2.0 |
 
-**USB3.0 Camera**
+:::info
+USB interfaces can be expanded by using a USB hub.
+:::
 
-|  Model  |Sige7       | Sige5  | Sige1 |
-| ----- |  ----- | ------ |- ---- | 
-| USB   | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 |2x USB2.0|
+#### Testing USB Mouse or Keyboard
+1. Insert a USB keyboard into the ArmSoM-Sige product's USB port.
+2. Connect the ArmSoM-Sige product to an HDMI display.
+3. If the mouse or keyboard operates the system normally, the USB interface is working correctly (the mouse will only work in desktop versions of the system).
 
+#### Testing USB Storage Device
+1. Insert a USB flash drive or USB external hard drive into the ArmSoM-Sige product's USB port.
+2. Run the following command; if you see `sdX` output, the USB drive is recognized successfully:
+```
+armsom@armsom-sige7:/# cat /proc/partitions | grep "sd*"
+major minor  #blocks  name
+   8        0  122880000 sda
+```
+3. Use the `mount` command to mount the USB drive to `/mnt` and view the files on the USB drive:
+```
+armsom@armsom-sige7:/# sudo mount /dev/sda1 /test/
+```
+4. After mounting, use the `df -h` command to check the USB drive's capacity usage and mount point:
+```
+armsom@armsom-sige7:/test# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /test
+```
+
+#### USB Camera
+
+1. Prepare a USB camera that supports the UVC protocol and connect it to the ArmSoM-Sige product's USB port.
+
+2. Use the `v4l2-ctl` command to view the USB camera's device node information, which should be `/dev/video0`:
+```
+armsom@armsom-sige7:/# v4l2-ctl --list-devices
+Logitech HD Webcam C93 (usb-xhci-hcd.5.auto-1):
+        /dev/video40
+        /dev/video41
+        /dev/media4
+```
+
+3. On a desktop system, you can use Cheese/V4L2 test bench to open the USB camera directly.
+
+![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
+
+You can also use terminal commands to preview the camera:
 ```bash
-armsom@armsom-sige7: sudo apt update
-armsom@armsom-sige7: sudo apt install cheese
+armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
 ```
 
-You can also preview the camera in the terminal:
-```bash  
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
-```
-
-Take Photo:
+To capture a photo:
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg; 
+armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
 ```
 
-Record video: 
+To record a video:
 ```bash
 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
 ```
@@ -272,7 +504,7 @@ The fan currently operates in five default states:
 armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
 
-### 40 PPIN  
+### 40 PIN  
 
 Sige products  provides a 40-pin GPIO header, compatible with most sensors on the market.   
 
@@ -401,5 +633,3 @@ overlays=armsom-sige3-display-10hd // Sige3
 Shortcut keys: Ctrl + S to save    Ctrl + X to exit
 
 After editing, restart the device to apply the Overlays settings and support Display 10 HD.
-
-![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)

@@ -204,7 +204,7 @@ armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password
  - wifi_passwd 换成需要连接的 WIFI 热点的密码
 
 ```
-armsom@armsom-sige7:~$ nmcli dev wifi connect "ydtx_5G" password "ydtx123456"
+armsom@armsom-sige7:~$ nmcli dev wifi connect "wifi_name" password "wifi_passwd"
 Device 'wlan0' successfully activated with "wlan0b6d10bba-e1d5-4b6d-a17f-7d5ab44bbb6f"。
 ```
 
@@ -499,7 +499,7 @@ Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 ```
 
-### 40 PPIN
+### 40 PIN
 
 Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
@@ -626,5 +626,3 @@ overlays=armsom-sige3-display-10hd // Sige3
 快捷键：Ctrl + S保存    Ctrl + X退出
 
 编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
-
-![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)

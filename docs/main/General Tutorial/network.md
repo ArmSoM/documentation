@@ -195,16 +195,109 @@ default 192.168.10.1 0.0.0.0 UG 100 0 0 enP4p65s0
 #You can see our gateway address ---- 192.168.10.1
 ```
 
-* 192.168.10.13/24 where /24 represents the mask 255.255.255.0,
+* 192.168.10.13/24, where /24 indicates a subnet mask of 255.255.255.0.
 
-* DNS servers Nationwide DNS–>114.114.114.114 Global DNS–>8.8.8.8
+* DNS servers: National DNS–>114.114.114.114, Global DNS–>8.8.8.8
 
-* search domain can inherit DNS servers settings,
+* The search domain can follow the DNS server settings.
 
 * Multiple DNS servers and search domains can be set.
 
-* After setting up, you can move to the back and click OK to complete the setting.
+* After completing the settings, proceed to click OK to finish the setup.
 
-* After completing the settings, you need to activate the settings for the network to take effect. Click Activate a connection to enter the connection, press enter once to cancel the connection, and press enter again to reconnect.
- 
-*
+* After finishing the setup, you need to activate the settings for the network to take effect. Click Activate a connection, enter the connection, press Enter once to disconnect, and press Enter again to reconnect.
+
+* After reconnecting, the IP address will change to the one you set.
+```
+```
+root@armsom-w3:/home/armsom# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: enP4p65s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 92:be:6d:d5:e7:b4 brd ff:ff:ff:ff:ff:ff permaddr be:87:f6:b4:e5:ad
+    inet 192.168.10.13/24 brd 192.168.10.255 scope global noprefixroute enP4p65s0
+       valid_lft forever preferred_lft forever
+3: wlP2p33s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 2c:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
+4: wlan1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 2e:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
+```
+```
+We can also use `ping mi.com` to check if the external network connection is successful:
+```
+root@armsom-w3:/home/armsom# ping mi.com
+ping: socket: Address family not supported by protocol
+PING sgp.ali.cdn.b2cop.lb.mi.com (161.117.94.231) 56(84) bytes of data.
+64 bytes from 161.117.94.231 (161.117.94.231): icmp_seq=1 ttl=87 time=48.8 ms
+64 bytes from 161.117.94.231 (161.117.94.231): icmp_seq=2 ttl=87 time=49.5 ms
+```
+### 6.1. nmcli
+
+Using `enP4p65s0` as an example, this step is similar to editing the network in `nmtui`, but performed via command line instead of graphical interface. Various command options are available; here, we cover only some basics. Feel free to explore more.
+
+```
+# List connection configurations. eth0 is currently connected as Wired connection 1.
+
+root@armsom-w3:/home/armsom# nmcli c s
+NAME                UUID                                  TYPE      DEVICE
+Wired connection 1  e01f934d-7fae-344f-90bf-e2483db3f3e5  ethernet  enP4p65s0
+armsom                d3d9a6ff-9c9c-44f8-a366-6a69af1edd1a  wifi      --
+armsom 1              7867c3af-dca2-4e9a-9721-a20f7a0e1b46  wifi      --
+```
+
+Then modify `Wired connection 1`:
+
+```
+# Set static IP
+sudo nmcli c modify 'Wired connection 1' [ + | - ] option option-value  # or
+
+sudo nmcli c m 'Wired connection 1' ipv4.address 192.168.10.13/24     # Modify IP address and subnet mask
+sudo nmcli c m 'Wired connection 1' ipv4.method manual                  # Change to static configuration, default is auto
+sudo nmcli c m 'Wired connection 1' ipv4.gateway 192.168.10.1        # Modify default gateway
+sudo nmcli c m 'Wired connection 1' ipv4.dns 8.8.8.8                        # Modify DNS
+sudo nmcli c m 'Wired connection 1' +ipv4.dns 114.114.114.114           # Add another DNS
+sudo nmcli c m 'Wired connection 1' ipv6.method disabled                            # Disable IPv6
+sudo nmcli c m 'Wired connection 1' connection.autoconnect yes              # Enable autoconnect on boot
+
+Note: You must first modify `ipv4.address` before modifying `ipv4.method`!
+Use empty quotes `""` to reset options to default values (e.g., `ipv4.method`):
+
+```
+```
+# Activate configuration
+sudo nmcli c up ifname eth0
+```
+
+After configuration, the IP address will be updated:
+```
+armsom@armsom-sige7:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: enP4p65s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 92:be:6d:d5:e7:b4 brd ff:ff:ff:ff:ff:ff permaddr be:87:f6:b4:e5:ad
+    inet 192.168.10.14/24 brd 192.168.10.255 scope global noprefixroute enP4p65s0
+       valid_lft forever preferred_lft forever
+3: wlP2p33s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 2c:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
+4: wlan1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 2e:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
+```
+
+## 7. Create Wi-Fi Hotspot
+
+`create_ap` is a script for quickly creating Wi-Fi hotspots on Linux, supporting both bridge and NAT modes. It automates the setup using `hostapd`, `dnsmasq`, and `iptables`, avoiding complex configurations. GitHub address: https://github.com/oblique/create_ap
+
+```
+root@armsom-sige7:/home/armsom/create_ap# make install
+```
+
+### 7.1 Create Wi-Fi Hotspot in NAT Mode with `create_ap`
+
+1. Run the following command to create a Wi-Fi hotspot named `armsom` with password `armsom` in NAT mode:
+```
+armsom@armsom-sige7:~$ sudo create_ap -m nat wlan0 enP2p33s0 armsom armsom
+```
