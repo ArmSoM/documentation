@@ -270,7 +270,18 @@ Before starting to use ArmSoM-P2pro, please prepare the following items
 
 ### Image Flashing 
 
-[Flash System Image](/general-tutorial/flash-img)
+<div class="cards">
+    <a href="./general-tutorial/flash-img" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>🎇</i>
+            </div>
+            <div class="content">
+                <h2>Flash System Image</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
 
 ### Interface Setup 
