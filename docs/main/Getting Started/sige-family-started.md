@@ -326,26 +326,6 @@ The ArmSoM-Sige series products come with an onboard WIFI module, so there's no 
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set#6-static-network-configuration" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>🌐</i>
-        </div>
-        <div class="content">
-            <h2>Set Static IP Address</h2>
-        </div>
-    </div>
-</a>
-<a href="./general-tutorial/network-set#7-创建WIFI热点" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📘</i>
-        </div>
-        <div class="content">
-            <h2>WIFI Hotspot</h2>
-        </div>
-    </div>
-</a>
 </div>
 
 ### BT  

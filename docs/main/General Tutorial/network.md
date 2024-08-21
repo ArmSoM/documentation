@@ -287,7 +287,7 @@ armsom@armsom-sige7:~$ ip addr
     link/ether 2e:05:47:8e:4a:6c brd ff:ff:ff:ff:ff:ff
 ```
 
-## 7. Create Wi-Fi Hotspot
+## 7. Create WiFi Hotspot
 
 `create_ap` is a script for quickly creating Wi-Fi hotspots on Linux, supporting both bridge and NAT modes. It automates the setup using `hostapd`, `dnsmasq`, and `iptables`, avoiding complex configurations. GitHub address: https://github.com/oblique/create_ap
 
