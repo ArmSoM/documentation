@@ -1,6 +1,7 @@
 ---
 sidebar_label: "Network setting"
 sidebar_position: 4
+slug: /general-tutorial/network-set
 ---
 
 # Network settings
