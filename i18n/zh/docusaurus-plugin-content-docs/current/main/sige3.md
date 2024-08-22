@@ -18,7 +18,7 @@ Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以
 ### 关键参数
 
 - SOC：瑞芯微 RK3568B2
-- RK3568B2 四核Cortex-A55 @ 2GHz
+- CPU: 四核Cortex-A55 @ 2GHz
 - GPU：ARM Mali G52
 - VPU/编解码：
   - 硬解码：H.265/VP9 (HEVC) 硬件解码（最高 4Kp60）

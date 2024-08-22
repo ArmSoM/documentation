@@ -802,7 +802,7 @@ Table 16. i2s pin descriptions
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>Sige5 kernel</h2>
+            <h2>AIM7 kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -814,7 +814,7 @@ Table 16. i2s pin descriptions
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>Sige5 uboot</h2>
+            <h2>AIM7 uboot</h2>
             <p>rockchip-linux/u-boot</p>
         </div>
     </div>

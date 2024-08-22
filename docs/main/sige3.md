@@ -17,7 +17,7 @@ The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-powe
 ### Key Specifications
 
 - SOC: Rockchip RK3568B2
-- RK3568B2 Quad-core Cortex-A55 @ 2GHz
+- CPU: Quad-core Cortex-A55 @ 2GHz
 - GPU: ARM Mali G52
 - VPU/Codec:
   - Hardware Decoding: H.265/VP9 (HEVC) hardware decoding (up to 4Kp60)
@@ -181,7 +181,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
 | 41 | SPI0_MISO / PDM_SDI2 /  I2S1_SDI1 / GPIO4_B3_d  | <div className='green'>21</div>  | <div className='green'>22</div> | |   |
 | 43 | SPI0_CLK / I2S1_SDI0 /  GPIO4_B4_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CSN0 / PWR_CTRL1  /SPI0_CS0_M2 | 44 |
 | |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |  PWM6_M0 / SPI0_CSN1 / PDM_SDI3 / GPIO4_C1_d |     145      |
-|  150 | I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3_d |  <div className='green'>27</div>  | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4_d  | 148 |
+|150| I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3_d |  <div className='green'>27</div>  | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4_d  | 148 |
 |  |   | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |
 | |  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO4_C0/PWM5_M0 / FEPHY_LED_LINK_M0 / UART3_TX_M1  |    144     |
 | 103  | GPIO4_B7 / PWM4_M0 /  FEPHY_LED_SPD_M0 / UART3_RX_M1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |
