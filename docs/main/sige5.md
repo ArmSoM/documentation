@@ -24,7 +24,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 - NPU: Up to 6 TOPs computing power (INT8), supports INT4/INT8/INT16 mixed operations.
 - VPU/Encoding & Decoding:
   - Hardware Decoding: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps.
-  - Hardware Encoding: Supports H.264 and H.265 up to 4K@60fps, high-quality JPEG encoder/decoder supports up to 4K@60fps.
+  - Hardware Encoding: Supports H.264 and H.265 up to 4K@60fps, high-quality JPEG encoder
 - RAM: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.
 - Flash: 32/64/128GB eMMC, default is 64GB eMMC.
 - Operating Voltage: Wide input voltage range, from 4.5V to 23V (voltage error ±5%).
