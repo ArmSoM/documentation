@@ -19,7 +19,7 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
 ### Key Parameter
 
 - SoC: Rockchip RK3528
-- CPU: RK3528 Quad-core Cortex-A53
+- CPU: RK3528 Quad-core Cortex-A53 up to 2.0GHz
 - GPU: ARM Mali-450 GPU
 - VPU/Decoding:
   - Hardware Decoding: Supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. Supports video standards including H.265, H.264, AVS2, etc.
