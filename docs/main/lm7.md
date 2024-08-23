@@ -51,6 +51,20 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - Weight: About 13.4g  
 - Size: 45mm × 50mm × 4.5mm (top: 2.2mm + PCB: 1.2mm + bottom: 1.1mm)
 
+## Getting started
+
+<a href="./armsom-w3#user-manual" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>LM7 Development Kit User Manual</h2>
+            <p>How to Get Started with Your Development Kit</p>
+        </div>
+    </div>
+</a>
+
 ## Hardware
 
 ### Hardware Interface

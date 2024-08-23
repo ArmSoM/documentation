@@ -363,10 +363,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 |2          | -         | Negative pole    |
 </details>
 
-## Resources
-<!--
-
-### Source Code
+## Resourcess
 
 <div class="cards">
     <a href="https://github.com/armbian/build" class="card-link">
@@ -387,7 +384,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>Sige5 kernel</h2>
+            <h2> kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -399,13 +396,13 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>Sige5 uboot</h2>
+            <h2> uboot</h2>
             <p>rockchip-linux/u-boot</p>
         </div>
     </div>
 </a>
 </div>
- -->
+
  
 ### Official Image
 
@@ -432,7 +429,6 @@ Network disk address:
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://github.com/armbian/community/releases)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
-<!-- 
 ### Hardware Resources 
 
 <div class="cards">
@@ -478,7 +474,7 @@ Network disk address:
         </div>
     </div>
 </a>
-</div> -->
+</div>
 
 ## Product Certificates
 

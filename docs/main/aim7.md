@@ -74,8 +74,6 @@ All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 ### AIM7 Block Diagram
 ![aim7-product](/img/aim/aim7-product.jpg)
 
-Here is the translation of the hardware specifications into English:
-
 ### Hardware Spec
 <details>
     <summary>

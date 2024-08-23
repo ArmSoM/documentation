@@ -45,6 +45,20 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - 重量：约 13.4克
 - 大小：45mm × 50mm × 4.5mm (top: 2.2mm+PCB: 1.2mm +bottom: 1.1mm)
 
+## Getting started
+
+<a href="./armsom-w3#使用手册" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>LM7开发套件使用手册</h2>
+            <p>如何开始使用你的ArmSoM-W3</p>
+        </div>
+    </div>
+</a>
+
 ## 硬件信息
 
 ### 硬件接口
@@ -301,6 +315,8 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系�
 [ArmSoM-LM7 引脚功能表格](https://pan.baidu.com/s/1AQzunn1xkaZuGPDZ2xm8HA?pwd=arms) - 引脚功能表格下载
 
 [ArmSoM-LM7 封装](https://pan.baidu.com/s/1Nc6Vn69qGHjM7OoVajX6lw?pwd=arms) - 封装下载
+
+#### LM7开发套件（W3）硬件资料
 
 <div class="cards">
     <a href="https://pan.baidu.com/s/14Q2V7cpsuSdQslvESCSbwg?pwd=arms" class="card-link">

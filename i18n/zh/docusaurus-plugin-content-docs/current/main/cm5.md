@@ -53,7 +53,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 ![ArmSoM-CM5-front & back](/img/cm/armsom-cm5-front&back1.jpg)
 
 :::tip
-设计为板对板连接器
+- 设计为板对板连接器
 - 由于 RK3576 芯片 PIN 限制，仅支持 1 HDMI 和 1 DSI，Raspberry Pi CM4 多支持 2 HDMI、2 DSI
 - AmrSoM-CM5 比 Raspberry Pi CM4 多一组PCIE，USB3
 
@@ -62,22 +62,10 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 
 
 ### 产品框图
-<details>
- <summary>
-        CM5 产品框图
-    </summary>
-    <img
-  src="./img/cm/cm5-product.png"
-  alt="rk3576 block diagram"
-  className="session-details-live-video"/>
-</details>
+
+![ArmSoM-CM5-product](/img/cm/cm5-product.png)
 
 ### 硬件规格
-<details>
-    <summary>
-        CM5 硬件规格
-    </summary>
-
 <table>
     <thead>
         <tr>
@@ -152,8 +140,6 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
     </tbody>
 </table>
 
-</details>
-
 ### RK3576框图
 <details>
     <summary>
@@ -204,3 +190,58 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
     </div>
 </a>
 </div>
+
+### 官方镜像
+
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+
+以下系统已由ArmSoM官方测试验证：
+
+网盘地址：
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
+  <span>百度网盘链接</span>
+</a>
+
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian12.png) | debian12 for CM5-IO :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1jMlQQxMsChx7wVuT5_koSQ?pwd=arms)  |
+
+### 第三方镜像
+
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for CM5 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+
+### 硬件资料
+
+获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
+
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
+  <span>百度网盘链接</span>
+</a>
+
+<br/>
+
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1jpJ8Euc7uwz3x871T77zFg?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>CM5 Schematics</h2>
+            </div>
+        </div>
+    </a>
+</div>
+
+## 样品购买
+
+ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+
+ArmSoM 速卖通官方店: 
+
+ArmSoM 淘宝官方店: 
+
+OEM&ODM,  请联系: sales@armsom.org

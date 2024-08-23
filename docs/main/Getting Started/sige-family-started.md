@@ -601,8 +601,6 @@ armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,
 
 [ArmSoM camera-module1](./armsom-camera-module1)
  
-Certainly! Here's the translation of your instructions into English:
-
 ### MIPI DSI
 
 The ArmSoM-Sige7/5/3 supports a maximum resolution of up to 4K@60Hz.
