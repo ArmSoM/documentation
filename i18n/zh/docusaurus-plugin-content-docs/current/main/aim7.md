@@ -15,11 +15,9 @@ ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
 :::tip Rockchip RK3588
-[ArmSoM-Sige7](./armsom-sige7) 单板计算机;
-
-[ArmSoM-AIM-IO](./armsom-aimio) AIM产品配套IO板;
-
-[ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LGA核心板开发套件;
+- [ArmSoM-Sige7](./armsom-sige7) 单板计算机;
+- [ArmSoM-AIM-IO](./armsom-aimio) AIM产品配套IO板;
+- [ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LM7 核心板开发套件;
 
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
 :::
@@ -845,8 +843,8 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12.png) | debian12 for AIM7 :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1jMlQQxMsChx7wVuT5_koSQ?pwd=arms)  |
-|![Android](/img/sige/android.png) | Android14 for AIM7 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/1nQt_MNnEWcYrWB6vT2fxbQ?pwd=arms)  |
+|![debian-bullseye](/img/sige/debian12.png) | debian11 for AIM7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
+|![Android](/img/sige/android.png) | Android14 for AIM7 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
 
 ### 第三方镜像
 
@@ -857,7 +855,38 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ### 硬件资料
 
-## 使用手册
+获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
+
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+  <span>百度网盘链接</span>
+</a>
+
+<br/>
+
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1-DEu3MmXodcU8BqK9ksW8Q?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>AIM7 Schematics</h2>
+            </div>
+        </div>
+    </a>
+
+<a href="https://pan.baidu.com/s/1p-ajkk5ebjpczLOyTWnKKA?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>AIM7 2D</h2>
+        </div>
+    </div>
+</a>
+
+</div>
 
 ## 样品购买
 

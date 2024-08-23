@@ -17,11 +17,9 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 ![ArmSoM-lm7](/img/lm/lm7.png)
 
 :::tip Rockchip RK3588
-[ArmSoM-Sige7](./armsom-sige7) 单板计算机;
-
-[ArmSoM-AIM7](./armsom-aim7) AI核心板, [ArmSoM-AIM-IO](./armsom-aimio) AIM7配套IO板;
-
-[ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LGA核心板开发套件 ;
+- [ArmSoM-Sige7](./armsom-sige7) 单板计算机;
+- [ArmSoM-AIM7](./armsom-aim7) AI核心板, [ArmSoM-AIM-IO](./armsom-aimio) AIM7配套IO板;
+- [ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LM7 核心板开发套件 ;
 
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
 :::
@@ -217,7 +215,6 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 表中接口数量为硬件设计或CPU理论最大值，其中多数功能引脚为复用关系，为方便配置请参考LM7的**[《引脚功能表格》](#硬件资料)**表格； 
 
 :::
-
 
 ## 开发资料
 

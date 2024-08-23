@@ -17,11 +17,9 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 ![ArmSoM-sige7](/img/sige/sige7-bananer.png)
 
 :::tip Rockchip RK3588
-[ArmSoM-Sige7](./armsom-sige7) 单板计算机;
-
-[ArmSoM-AIM7](./armsom-aim7) AI核心板, [ArmSoM-AIM-IO](./armsom-aimio) AIM7配套IO板;
-
-[ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LGA核心板开发套件;
+- [ArmSoM-Sige7](./armsom-sige7) 单板计算机;
+- [ArmSoM-AIM7](./armsom-aim7) AI核心板, [ArmSoM-AIM-IO](./armsom-aimio) AIM7配套IO板;
+- [ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LM7 核心板开发套件;
 
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
 :::
@@ -410,7 +408,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 

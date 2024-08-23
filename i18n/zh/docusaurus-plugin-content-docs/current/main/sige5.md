@@ -16,6 +16,13 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 
 ![ArmSoM-sige5](/img/sige/sige5.png)
 
+:::tip Rockchip RK3576
+- [ArmSoM-Sige5](./armsom-sige5) 单板计算机;
+- [ArmSoM-CM5](./armsom-lm7) 计算模组, [ArmSoM-CM5-IO](./armsom-w3) CM5开发套件;
+
+依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
+:::
+
 ### 关键参数
 
 - SOC：瑞芯微 RK3576
