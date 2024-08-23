@@ -77,8 +77,55 @@ All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 ### AIM7 Block Diagram
 ![aim7-product](/img/aim/aim7-product.jpg)
 
-### Hardware Spec
+Here is the translation of the hardware specifications into English:
 
+### Hardware Spec
+<details>
+    <summary>
+        AIM7 Hardware Specifications
+    </summary>
+
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Function</th>
+      </tr>
+    </thead>
+    <tbody align="left">
+        <tr>
+            <th>Display</th>
+            <th><li>1x DP interface</li><li>1x HDMI/eDP combo interface</li> <li>Up to 7680 x 4320@60 Hz for HDMI and DP, and 3840 x 2160@60 Hz for eDP</li></th>
+        </tr>
+        <tr>
+            <th>Camera</th>
+            <th><li>3x 4-lane or 5x 2-lane MIPI CSI interfaces, each lane up to 2.5Gbps</li></th>
+        </tr>
+        <tr>
+            <th>Network</th>
+            <th>
+              <li>1 GMAC, with RGMII / RMII interface</li>
+              <li>Supports 10/100/1000Mbps data transfer rate</li>
+            </th>
+        </tr>
+        <tr>
+            <th>PCIe</th>
+            <th><li>PCIe 3.0 x4: Each channel supports up to 8Gbps data rate, supports 4 configuration modes: 1x4, 2x2, 4x1, 1x2+2x1, each channel supports up to 8Gbps data rate</li><li>PCIe 2.1 x1: Each PCIe 2.1 interface supports 1 lane, up to 5Gbps data rate</li></th>
+        </tr>
+         <tr>
+            <th>USB</th>
+            <th><li>1x USB 3.0 (Gen1)</li><li>3x USB 2.0</li></th>
+        </tr>
+         <tr>
+            <th rowspan="3">Others</th>
+            <th ><li>UART DEBUG x1, UART+flow control x2</li><li>SPI x2</li><li>I2C x4</li><li>CAN x1</li><li>I2S x2</li><li>SD 4.0, SDHOST 4.0, and SDIO 3.0</li><li>PWM x3, multiple GPIOs</li></th>
+        </tr>
+    </tbody>
+</table>
+
+</details>
+
+### Competitor Specifications Comparison
 <details>
     <summary>
         AIM7 Hardware Spec

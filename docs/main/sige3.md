@@ -173,7 +173,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
 |     131     | I2C1_SCL_M0 / UART3_CTSN / I2S1_SDI2 /  GPIO4_A3_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
 |     1     | REF_CLK_OUT_M0 /GPIO0_A1  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  <div className='orange-txt'>UART0_TX_M0</div> / JTAG_MCU_TCK_M1 / JTAG_CPU_TCK_M1  / GPIO4_D0_d |     152      |
 |             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART0_RX_M0</div> / JTAG_MCU_TMS_M1 / JTAG_CPU_TMS_M1 /   GPIO4_C7_u  |     151      |
-|     0     |  GPIO0_A0  | <div className='green'>11</div>  | <div className='green'>12</div> |  I2S1_SCLK  / UART1_RTSN / GPIO4_A5_d   |     133     |
+|     0     |  GPIO0_A0  | <div className='green'>11</div>  | <div className='green'>12</div> | GPIO4_A5_d / I2S1_SCLK  / UART1_RTSN   |     133     |
 |  | | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
 |  | | <div className='green'>15</div>  | <div className='green'>16</div> |   |          |
 |  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |    |         |
