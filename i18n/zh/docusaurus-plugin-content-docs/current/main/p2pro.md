@@ -26,7 +26,7 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - 操作系统：
   - Rockchip官方支持：Debian11，Buildroot
   - 第三方支持：istoreos(openwrt)
-- 重量：
+- 重量：42g
 - 大小：52.5mm × 65mm
 
 ## 硬件信息

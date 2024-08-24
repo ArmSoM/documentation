@@ -28,7 +28,7 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 - Operating system: 
   - Officially supported by Rockchip: Debian11, Buildroot
   - Third party support: istoreos (openwrt)
-- Weight: 
+- Weight: 42g
 - Size: 52.5mm × 65mm 
 
 ## Hardware
