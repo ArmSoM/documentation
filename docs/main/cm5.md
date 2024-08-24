@@ -25,7 +25,7 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
 - **Operating Voltage:** Wide input voltage range from 4.5V to 23V (voltage tolerance ±5%).
 - **Operating Temperature:** 0℃ ~ 80℃
-- **Weight:**
+- **Weight:** 12g
 - **Dimensions:**
     - CM5: 55 x 40 mm
     - CM5-IO: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 inches)

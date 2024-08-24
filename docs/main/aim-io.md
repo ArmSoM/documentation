@@ -37,6 +37,7 @@ The AIM-IO Board is a companion board for AIM modules designed to assist develop
 * MIPI CSI2/3: 1x 4 lanes MIPI CSI，Maximum 2.5Gbps per lane.
 * Firmware flashing and device mode via USB Type-C
 * Dimensions: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 in)
+* Weight: 78.4g
 
 ## Getting started
 

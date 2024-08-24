@@ -30,7 +30,7 @@ The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-powe
   - Rockchip official support: Debian11, Buildroot
   - Third-party support: Armbian
 - PCB: 8-layer PCB design
-- Weight: 
+- Weight: 42.3g
 - Dimensions: 92mm × 62mm x 14.6mm
 
 ## Getting started

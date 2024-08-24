@@ -44,7 +44,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
    - Rockchip official support: Android 12.0, Debian11, Buildroot
    - Third-party support: Armbian 23.07, Ubuntu 20.04, Ubuntu22.04, Kylin OS
 - PCB: 12-layer PCB board design
-- weight: 
+- weight: 17.3g
 - Size: 69.6 mm x 45 mm
 
 ## Getting started
@@ -414,11 +414,11 @@ Table 10. USB 3.0 GEN1 pin descriptions
         USB 2.0 Host
     </summary>
 
-    * Compatible with USB 2.0 specification
-    * Support two USB 2.0 Hosts
-    * Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
-    * Support Enhanced Host Controller Interface Specification (EHCI), Revision 1.0
-    * Support Open Host Controller Interface Specification (OHCI), Revision 1.0a
+* Compatible with USB 2.0 specification
+* Support two USB 2.0 Hosts
+* Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
+* Support Enhanced Host Controller Interface Specification (EHCI), Revision 1.0
+* Support Open Host Controller Interface Specification (OHCI), Revision 1.0a
 
 Table 11. USB 2.0 pin descriptions
 

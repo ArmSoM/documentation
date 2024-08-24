@@ -395,11 +395,11 @@ Table 10. USB 3.0 GEN1 pin descriptions
         USB 2.0 Host
     </summary>
 
-    * Compatible with USB 2.0 specification
-    * Support two USB 2.0 Hosts
-    * Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
-    * Support Enhanced Host Controller Interface Specification (EHCI), Revision 1.0
-    * Support Open Host Controller Interface Specification (OHCI), Revision 1.0a
+* Compatible with USB 2.0 specification
+* Support two USB 2.0 Hosts
+* Supports high-speed (480 Mbps), full-speed (12 Mbps) and low-speed (1.5 Mbps) mode
+* Support Enhanced Host Controller Interface Specification (EHCI), Revision 1.0
+* Support Open Host Controller Interface Specification (OHCI), Revision 1.0a
 
 Table 11. USB 2.0 pin descriptions
 

@@ -11,3 +11,5 @@ slug: /armsom-aim5
 ## Overview
 
 ArmSoM-AIM5 uses Rockchip RK3576,
+
+13.5g
