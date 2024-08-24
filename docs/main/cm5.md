@@ -19,8 +19,8 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
 - **GPU:** ARM Mali G52 MC3 GPU.
 - **NPU:** Up to 6 TOPS (INT8) computing power, supporting INT4/INT8/INT16 mixed precision computation.
 - **VPU/Video Codec:**
-  - **Decoding:** Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K @ 30fps or 4K @ 120fps.
-  - **Encoding:** Supports H.264 and H.265 up to 4K @ 60fps, high-quality JPEG encoder.
+  - **Decoding:** Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
+  - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
 - **RAM:** 8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
 - **Operating Voltage:** Wide input voltage range from 4.5V to 23V (voltage tolerance ±5%).
@@ -60,7 +60,7 @@ You can use the Raspberry Pi CM4 baseboard.
 
 ### CM5 Block Diagram
 
-![aim7-product](/img/aim/aim7-product.jpg)
+![ArmSoM-CM5-product](/img/cm/cm5-product.png)
 
 ### Hardware Spec
 
@@ -90,7 +90,7 @@ You can use the Raspberry Pi CM4 baseboard.
         </tr>
          <tr>
             <th>VPU/Codec</th>
-            <th><li>Hardware decoding: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps</li><li>Hardware encoding: Supports H.264 and H.265 up to 4K@60fps, high-quality JPEG encoder.</li></th>
+            <th><li>Hardware decoding: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.</li><li>Hardware encoding: Supports H.264 and H.265，JPEG up to 4K@60fps.</li></th>
         </tr>
          <tr>
             <th>ISP</th>

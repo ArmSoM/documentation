@@ -21,8 +21,8 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 - GPU：ARM Mali G52 MC3 GPU。
 - NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算。
 - VPU/编解码：
-  - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps。
-  - 硬编码：支持H.264和H.265最高4K@60fps，高质量JPEG编码器
+  - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
+  - 硬编码：支持H.264和H.265，JPEG最高4K@60fps。
 - RAM：8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
 - Flash：32/64/128GB eMMC，默认eMMC 64GB。
 - 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）
@@ -92,7 +92,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
         </tr>
          <tr>
             <th>VPU/编解码</th>
-            <th><li>硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps</li><li>硬编码：支持H.264和H.265最高4K@60fps，高质量JPEG编码器。</li></th>
+            <th><li>硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps，高质量JPEG解码器最高4K@60fps。</li><li>硬编码：支持H.264和H.265，JPEG最高4K@60fps</li></th>
         </tr>
          <tr>
             <th>ISP</th>
