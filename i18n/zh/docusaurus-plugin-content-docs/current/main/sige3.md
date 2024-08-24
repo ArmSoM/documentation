@@ -31,7 +31,7 @@ Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以
   - Rockchip官方支持：Debian11，Buildroot
   - 第三方支持：Armbian
 - PCB： 8 层 PCB 板设计
-- 重量：
+- 重量：42.3g
 - 大小：92mm × 62mm x 14.6mm
 
 ## 使用手册

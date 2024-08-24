@@ -41,7 +41,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
   - Rockchip官方支持：Android 12.0，Debian11，Buildroot
   - 第三方支持：Armbian 23.07，Ubuntu 20.04，Ubuntu22.04，Kylin OS
 - PCB：12 层 PCB 板设计
-- 重量：
+- 重量：17.3g
 - 大小：69.6 mm x 45 mm
 
 ## 硬件信息
