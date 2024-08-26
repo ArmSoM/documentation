@@ -888,6 +888,14 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 </div>
 
+## 产品证书
+
+### CE / FC / RoHS
+
+## 供货声明
+
+ArmSoM-AIM7 将至少生产到 2034 年 8 月。
+
 ## 样品购买
 
 CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www.crowdsupply.com/armsom/rk3588-ai-module7)

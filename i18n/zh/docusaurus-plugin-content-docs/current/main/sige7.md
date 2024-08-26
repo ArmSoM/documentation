@@ -497,6 +497,10 @@ V1.1
 
 ![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
 
+## 供货声明
+
+ArmSoM-Sige7 将至少生产到 2034 年 1 月。
+
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
  

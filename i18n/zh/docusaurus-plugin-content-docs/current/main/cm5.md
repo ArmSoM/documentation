@@ -236,6 +236,14 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
     </a>
 </div>
 
+## 产品证书
+
+### CE / FC / RoHS
+
+## 供货声明
+
+ArmSoM-CM5 将至少生产到 2034 年 8 月。
+
 ## 样品购买
 
 ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)

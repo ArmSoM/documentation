@@ -352,6 +352,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ### CE / FC / RoHS
 
+## 供货声明
+
+ArmSoM-Sige3 将至少生产到 2034 年 9 月。
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/Sige3](https://www.armsom.org/product-page/Sige3)
