@@ -30,7 +30,7 @@ The AIM-IO Board is a companion board for AIM modules designed to assist develop
 * Gigabit Ethernet
 * GPIO: 40-pin expansion header
 * POE: 5 V Power Over Ethernet
-* Power Connector: DC Barrel jack for 5V power input
+* Power Connector: DC Barrel jack for 12V power input
 * Expansion: M.2 (E-key, PCIe/USB/SDIO/UART), microSD
 * MIPI DSI: 1x 4 lanes MIPI DSI up to 4K@60fps (x4)
 * MIPI CSI0/1: 2x 2 lanes MIPI CSI，Maximum 2.5Gbps per lane.

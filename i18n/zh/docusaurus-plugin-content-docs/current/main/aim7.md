@@ -44,6 +44,19 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 - 重量：17.3g
 - 大小：69.6 mm x 45 mm
 
+## Getting started
+<a href="./armsom-aimio#使用手册" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>AIM-IO使用手册</h2>
+            <p>如何开始使用你的AIM-IO</p>
+        </div>
+    </div>
+</a>
+
 ## 硬件信息
 
 ### 硬件接口
