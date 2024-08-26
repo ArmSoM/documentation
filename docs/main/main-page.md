@@ -17,10 +17,10 @@ Our commitment is to equip the open-source community with superb hardware, robus
 
 | Single Board Computer(SBC)| Compute Module and Maker kit	| IoT/Industrial Control | Accessories|
 |---------|--------------|--------------|---------|
-|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
-|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-W3](./armsom-w3)  [Rockchip RK3588] |  | [Active Cooling Kit](./armsom-active-cooling-kit) |
-|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|||
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Camera-Module-1](./armsom-camera-module1)	|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-W3](./armsom-w3)  [Rockchip RK3588] |  | [Active Cooling Kit](./armsom-active-cooling-kit) |
+|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|||
 
 ## ArmSoM Documentation
 
