@@ -14,7 +14,7 @@ CM5-IO是 ArmSoM CM5的 IO 板，尺寸为 100x80x29 毫米，它是一款专为
 
 ### 硬件接口
 
-![AIM-IO](/img/aim/aim-io.png)
+![ArmSoM-CM5-IO](/img/cm/cm5-io-layout.png)
 
 :::tip
 CM5-IO Board 使用12V DC供电。
