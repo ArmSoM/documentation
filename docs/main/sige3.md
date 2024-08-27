@@ -14,7 +14,7 @@ Let's get to know Sige3 in 5 minutes.
 
 The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-power quad-core application processor designed for personal mobile internet devices and AloT devices. The Sige3 supports up to 4K@60 HDMI, MIPI DSI, MIPI CSI, USB ports, Gigabit Ethernet, 2.5G network port, PCIe 3.0, 40-pin GPIO expansion header, and RTC.
 
-<!-- ![ArmSoM-Sige3](/img/sige/sige3.png) -->
+![ArmSoM-Sige3](/img/sige/sige3.png)
 
 ### Key Specifications
 
@@ -53,7 +53,8 @@ The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-powe
 
 ### Hardware Interface
 
-<!-- ![ArmSoM-Sige1 front & back](/img/sige/sige1-layout.jpg) -->
+![ArmSoM-Sige3 front & back](/img/sige/sige3-layout.jpg)
+
 :::tip
 On the Sige3, there are two Type-C interfaces that look identical, but only one of them (Type-C DC IN) serves as the power input interface.
 :::
@@ -246,8 +247,8 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
                 <i>📚</i>
             </div>
             <div class="content">
-                <h2>Armbian Source Code</h2>
-                <p>Linux for ARM development boards</p>
+                <h2>Armbian </h2>
+                <p>Armbian Linux build framework</p>
             </div>
         </div>
     </a>

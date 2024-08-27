@@ -15,7 +15,7 @@ Let's get to know Sige3 in 5 minutes.
 ArmSoM-Sige3 采用的Rockchip RK3568B2 是一款高性能低功耗四核应用处理器，专为个人移动互联网设备和 AloT 设备而设计。
 Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以太网、2.5G网口、PCIe 3.0、40 pin GPIO 扩展座、RTC。 
 
-<!-- ![ArmSoM-Sige3](/img/sige/sige3.png) -->
+![ArmSoM-Sige3](/img/sige/sige3.png)
 
 ### 关键参数
 
@@ -54,7 +54,7 @@ Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以
 
 ### 硬件接口
 
-<!-- ![ArmSoM-Sige3 front & back](/img/sige/Sige3-layout.jpg) -->
+![ArmSoM-Sige3 front & back](/img/sige/Sige3-layout.jpg)
 
 :::tip
 Sige3上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源接口。
