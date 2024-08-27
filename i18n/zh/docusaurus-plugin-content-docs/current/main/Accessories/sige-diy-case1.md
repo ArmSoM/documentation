@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Sige DIY Case 1"
-slug: /sige-diy-case
+slug: /sige-diy-case1
 sidebar_position: 16
 ---
 

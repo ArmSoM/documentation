@@ -12,14 +12,6 @@ CM5-IO是 ArmSoM CM5的 IO 板，尺寸为 100x80x29 毫米，它是一款专为
 
 ## 硬件信息
 
-### 硬件接口
-
-![ArmSoM-CM5-IO](/img/cm/cm5-io-layout.png)
-
-:::tip
-CM5-IO Board 使用12V DC供电。
-:::
-
 ### 硬件规格
 
 CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统和嵌入式板开发。
@@ -39,6 +31,13 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 - 尺寸：100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
 - 重量:  
 
+### 硬件接口
+
+![ArmSoM-CM5-IO](/img/cm/cm5-io-layout.png)
+
+:::tip
+CM5-IO Board 使用12V DC供电。
+:::
 ### 引脚定义
 
 <details>
@@ -126,3 +125,127 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 |  4   |    VC4     |     RX2     |
 
 </details>
+
+## 开发资料
+
+### SDK源码
+
+<div class="cards">
+<a href="https://github.com/armbian/build" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Armbian源码</h2>
+            <p>适用于 ARM 开发板的 Linux</p>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📗</i>
+        </div>
+        <div class="content">
+            <h2>CM5-IO kernel</h2>
+            <p>Improved Rockchip Linux</p>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>CM5-IO uboot</h2>
+            <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+</div>
+
+### 官方镜像
+
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+
+以下系统已由ArmSoM官方测试验证：
+
+网盘地址：
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+  <span>百度网盘链接</span>
+</a>
+
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1jMlQQxMsChx7wVuT5_koSQ?pwd=arms)  |
+|![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/1nQt_MNnEWcYrWB6vT2fxbQ?pwd=arms)  |
+
+### 第三方镜像
+
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+
+### 硬件资料
+
+获取CM5-IO开发套件原理图、PCB、DXF等硬件资料，快速投入开发
+
+待开放,请联系 sales@armsom.org
+
+<!-- <div class="cards">
+    <a href="https://pan.baidu.com/s/14Q2V7cpsuSdQslvESCSbwg?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>CM5-IO Schematics</h2>
+                <p>source files (orcad)</p>
+            </div>
+        </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1yDK_N6rX1hzJPMUGxGBDug?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>CM5-IO PCB</h2>
+            <p>PCB source files (PADS) </p>
+        </div>
+    </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1e0YIAYYj4hwJQxsiJEKkcw?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>CM5-IO 2D</h2>
+            <p>2D CAD files </p>
+        </div>
+    </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1voD9aF5iUpnYs4saAi6ITQ?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>CM5-IO SMD</h2>
+            <p>components Position Reference of CM5-IO</p>
+        </div>
+    </div>
+</a>
+</div> -->
+
+## 使用手册
+
