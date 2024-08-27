@@ -16,7 +16,7 @@ CM5-IO是 ArmSoM CM5的 IO 板，尺寸为 100x80x29 毫米，它是一款专为
 
 CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统和嵌入式板开发。
 
-- 1x HDMI输出
+- 1x HDMI输出, 1x DP输出
 - 4x USB 3.0 Type-A
 - 千兆以太网
 - 通过USB Type-C进行固件闪存和设备模式

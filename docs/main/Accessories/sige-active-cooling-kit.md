@@ -1,11 +1,15 @@
 ---
 sidebar_label: "Active Cooling Kit"
 sidebar_position: 15
-slug: /armsom-active-cooling-kit
+slug: /sige-active-cooling-kit
 ---
-# ArmSoM-Sige Active Cooling Kit
+# Sige Active Cooling Kit
+
+The Sige Active Cooling Kit is a dedicated active cooling solution designed for the ArmSoM-Sige. It combines an aluminum heatsink with a temperature-controlled fan to keep your ArmSoM-Sige operating at a comfortable temperature even under heavy loads.
 
 ## Heatsink
+
+![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
 
 ![sige-heatsink](/img/accessories/sige-heatsink.png)
 
@@ -73,6 +77,8 @@ After continuous operation at a specified constant temperature, the average life
     - PIN 2: Black Wire (BLACK WIRED) --- (-)
     - PIN 3: Red Wire (RED WIRED) --- (+)
 
+## Documents
+
 <div class="cards">
     <a href="https://drive.google.com/file/d/1DQ92d9owV1JzpOhPE3L9g2yUZR8_7SDt/view?usp=drive_link" class="card-link">
         <div class="card">
@@ -80,7 +86,7 @@ After continuous operation at a specified constant temperature, the average life
                 <i>📚</i>
             </div>
             <div class="content">
-                <h2>armsom-active-cooling-kit.stp</h2>
+                <h2>armsom-active-cooling-kit mechanical drawing</h2>
             </div>
         </div>
     </a>

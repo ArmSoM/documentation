@@ -1,12 +1,16 @@
 ---
 sidebar_label: "Active Cooling Kit"
 sidebar_position: 15
-slug: /armsom-active-cooling-kit
+slug: /sige-active-cooling-kit
 ---
 
-# ArmSoM-Sige 主动散热套件
+# Sige系列主动散热套件
+
+Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方案。它结合了铝制散热器和温控鼓风机，即使在重负载下也能让您的 ArmSoM-Sige 保持舒适的工作温度。
 
 ## 散热器
+
+![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
 
 ![sige-heatsink](/img/accessories/sige-heatsink.png)
 
@@ -75,6 +79,7 @@ slug: /armsom-active-cooling-kit
     - PIN 2: 黑色导线(BLACK WIRED)---(-) 
     - PIN 3: 红色导线(RED WIRED)---(+)  
 
+## 文件
 <div class="cards">
     <a href="https://pan.baidu.com/s/1CvUflC1Vf7lX9fmMoArXLA?pwd=arms" class="card-link">
         <div class="card">
@@ -82,7 +87,7 @@ slug: /armsom-active-cooling-kit
                 <i>📚</i>
             </div>
             <div class="content">
-                <h2>armsom-active-cooling-kit.stp</h2>
+                <h2>sige-active-cooling-kit 机械图纸</h2>
             </div>
         </div>
     </a>

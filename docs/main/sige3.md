@@ -14,6 +14,8 @@ Let's get to know Sige3 in 5 minutes.
 
 The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-power quad-core application processor designed for personal mobile internet devices and AloT devices. The Sige3 supports up to 4K@60 HDMI, MIPI DSI, MIPI CSI, USB ports, Gigabit Ethernet, 2.5G network port, PCIe 3.0, 40-pin GPIO expansion header, and RTC.
 
+<!-- ![ArmSoM-Sige3](/img/sige/sige3.png) -->
+
 ### Key Specifications
 
 - SOC: Rockchip RK3568B2
@@ -350,6 +352,64 @@ Network disk address:
 ## Product Certificates
 
 ### CE / FCC / RoHS
+
+## Supply Statement
+
+The ArmSoM-Sige3 will be produced at least until September 2034.
+
+## Accessories
+
+The official accessories designed for the ArmSoM-Sige are intended to help you achieve optimal performance from your computer.
+
+<div class="cards">
+<a href="./sige-active-cooling-kit" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Sige Active Cooling Kit</h2>
+        <p>The active cooling kit ensures that the ArmSoM-Sige runs smoothly even under high load conditions.</p>
+    </div>
+</div>
+</a>
+
+<a href="./sige-diy-case1" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Sige DIY Case 1</h2>
+        <p>Sige DIY Case 1 combines high-quality construction with a sleek, minimalist design. The metal casing adds a premium touch.</p>
+    </div>
+</div>
+</a>
+
+<a href="./armsom-display-10-hd" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Display-10-HD</h2>
+        <p>The ArmSoM-Sige 10.1-inch touchscreen display is perfect for interactive projects such as tablets, entertainment systems, and information dashboards.</p>
+    </div>
+</div>
+</a>
+
+<a href="./armsom-camera-module1" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Camera Module 1</h2>
+        <p>The camera module 1, compatible with the OV13850 sensor, is a low-power camera module.</p>
+    </div>
+</div>
+</a>
+</div>
 
 ## Purchase Samples
 ArmSoM Official Website: [https://www.armsom.org/product-page/Sige3](https://www.armsom.org/product-page/Sige3)

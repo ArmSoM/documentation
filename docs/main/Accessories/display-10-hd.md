@@ -8,6 +8,8 @@ slug: /armsom-display-10-hd
 
 The display model  ArmSoM Display 10 HD1 is a ALL O‘ clock TFT LCD (Thin Film Transistor Liquid Crystal Display) module. This model is Composed of a TFT LCD panel, a driving circuit and a back light, and also has a 10.1 inch diagonally measured active display area with FHD(1200 horizontal by 1920 vertical pixel) resolution in a stripe arrangement. Display 16.7M colors by 8 bit R.G.B signal input.
 
+Suitable for interactive projects such as tablets, entertainment systems, and information dashboards.
+
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
 ## General information 

@@ -15,7 +15,7 @@
   --ifm-color-primary-lightest: #34C5DD;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --doc-sidebar-width: 280px!important;
+  --doc-sidebar-width: 250px!important;
   --ifm-container-width-xl: 1520px!important;
 }
 .markdown h1:first-child{
@@ -135,16 +135,16 @@
     var(--ifm-color-emphasis-100) 100%
   );
 }
+
 .cards{
   display: flex;
+  flex-wrap: wrap; 
   justify-content: flex-start;
 }
 
 .card-link {
   text-decoration: none!important;
   color: inherit; /* 保持链接默认颜色 */
-  
-  padding-right: 30px;
 }
 .card {
   background-color: #ffffff;
@@ -152,13 +152,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  max-width: 350px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
   text-decoration: none;
+  margin:0 30px 20px 0;
 }
 
 .card:hover {

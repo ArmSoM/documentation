@@ -7,6 +7,8 @@ slug: /armsom-display-10-hd
 
 ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器）模块。 该型号由 TFT LCD 面板、驱动电路和背光组成，并具有 10.1 英寸对角线测量的活动显示区域，分辨率为 FHD（水平 1200 x 垂直 1920 像素），分辨率为条纹排列。 通过8位R.G.B信号输入显示16.7M颜色。
 
+可用于平板电脑、娱乐系统和信息仪表板等交互式项目。
+
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
 ## 参数 
