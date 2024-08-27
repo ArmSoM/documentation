@@ -148,7 +148,7 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
         </div>
         <div class="content">
             <h2>Source Code</h2>
-            <p>Linux for ARM development boards</p>
+            <p>Armbian Linux build framework</p>
         </div>
     </div>
 </a>

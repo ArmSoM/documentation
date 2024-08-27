@@ -364,7 +364,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
             </div>
             <div class="content">
                 <h2>Armbian 源码</h2>
-                <p>Linux for ARM development boards</p>
+                <p>Armbian Linux build framework</p>
             </div>
         </div>
     </a>

@@ -266,8 +266,8 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
             <i>📚</i>
         </div>
         <div class="content">
-            <h2>Armbian Source Code</h2>
-            <p>Linux for ARM development boards</p>
+            <h2>Armbian </h2>
+            <p>Armbian Linux build framework</p>
         </div>
     </div>
 </a>
