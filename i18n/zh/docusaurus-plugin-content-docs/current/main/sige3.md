@@ -54,7 +54,7 @@ Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以
 
 ### 硬件接口
 
-![ArmSoM-Sige3 front & back](/img/sige/Sige3-layout.jpg)
+![ArmSoM-Sige3 front & back](/img/sige/sige3-layout.jpg)
 
 :::tip
 Sige3上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源接口。
