@@ -18,7 +18,7 @@ Our commitment is to equip the open-source community with superb hardware, robus
 | Single Board Computer(SBC)| Compute Module and Maker kit	| IoT/Industrial Control | Accessories|
 |---------|--------------|--------------|---------|
 |[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
-|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]s|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Camera-Module-1](./armsom-camera-module1)	|
+|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Camera-Module-1](./armsom-camera-module1)	|
 |[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|  | [Active Cooling Kit](./armsom-active-cooling-kit) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]||
 

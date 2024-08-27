@@ -107,7 +107,22 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 0.8mm connector(J27)
 
 |Pin        | Assignment  | Description|
+
  :--------: | :---------: | :--------: | 
 |1          | +         | 正极  |
 |2          | -         | 负极  |
+</details>
+
+<details>
+    <summary>
+        PoE In(J5)
+    </summary>
+
+| Pin  | Assignment | Description |
+| :--: | :--------: | :---------: |
+|  1   |    VC1     |     TX1     |
+|  2   |    VC2     |     RX1     |
+|  3   |    VC3     |     TX2     |
+|  4   |    VC4     |     RX2     |
+
 </details>
