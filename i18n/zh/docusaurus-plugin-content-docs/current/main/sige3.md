@@ -199,7 +199,7 @@ Sige3上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
     <summary>
         FAN
     </summary>
-0.8mm 连接器(CON3102)
+0.8mm 连接器(CON3400)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
@@ -212,7 +212,7 @@ Sige3上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
     <summary>
         HPOUT
     </summary>
-0.8mm 连接器(CON3101)
+0.8mm 连接器(CON3200)
 
 |Pin        | Assignment  | Description|
 |:--------: | :---------: | :--------:  | 

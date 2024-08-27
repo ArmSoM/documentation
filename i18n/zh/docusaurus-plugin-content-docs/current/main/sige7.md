@@ -334,6 +334,20 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 <details>
     <summary>
+        HPOUT
+    </summary>
+
+0.8mm 连接器(CN2)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | AOR         | right channel      |
+|2          | AOL         | left channel      |
+|3          | GND         | GND          |
+</details>
+
+<details>
+    <summary>
         VRTC
     </summary>
 0.8mm connector(J2)

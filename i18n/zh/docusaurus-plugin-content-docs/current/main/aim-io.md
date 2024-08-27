@@ -396,7 +396,7 @@ USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
 
 #### 连接 USB 鼠标或键盘测试
 1. 将 USB 接口的键盘插入ArmSoM-AIM产品的 USB 接口中
-2. 连接ArmSoM-Sige产品到 HDMI 显示器
+2. 连接ArmSoM-AIM产品到 HDMI 显示器
 3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
 
 #### 连接 USB 存储设备测试

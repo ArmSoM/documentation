@@ -328,7 +328,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         FAN
     </summary>
 
-0.8mm connector(CON3102)
+0.8mm connector(CN32)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
@@ -341,13 +341,26 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         HPOUT
     </summary>
 
-0.8mm connector(CON3101)
+0.8mm connector(CN2)
 
 |Pin        | Assignment  | Description|
  :--------: | :---------: | :--------: | 
 |1          | AOR         | right channel      |
 |2          | AOL         | left channel      |
 |3          | GND         | GND          |
+</details>
+
+<details>
+    <summary>
+        VRTC
+    </summary>
+
+0.8mm connector(J2)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | Positive pole      |
+|2          | -         | Negative pole    |
 </details>
 
 ## Resources

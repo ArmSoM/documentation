@@ -197,7 +197,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
         FAN
     </summary>
 
-0.8mm connector(CON3102)
+0.8mm connector(CON3400)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
@@ -211,7 +211,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
         HPOUT
     </summary>
 
-0.8mm connector(CON3101)
+0.8mm connector(CON3200)
 
 |Pin        | Assignment  | Description|
  :--------: | :---------: | :--------: | 
