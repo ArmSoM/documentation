@@ -16,7 +16,7 @@ It not only protects your Sige product but also provides some heat dissipation. 
 
 - Shell Material: Aluminum (AL6063)
 - Surface Treatment: Sandblasted Anodizing
-- Shell Color: Purple
+- Shell Color: Purple / Black
 - Weight: 0.111kg
 - Shell Dimensions: 101.5*66*23mm
 
