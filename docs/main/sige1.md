@@ -54,6 +54,8 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
 ### Hardware Interface
 
 ![ArmSoM-Sige1 front & back](/img/sige/sige1-layout.jpg)
+![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
+
 :::tip
 On the Sige1, there are two Type-C interfaces that look identical, but only one of them (Type-C DC IN) serves as the power input interface.
 :::

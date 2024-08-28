@@ -54,6 +54,8 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
 ### 硬件接口
 
 ![ArmSoM-Sige1 front & back](/img/sige/sige1-layout.jpg)
+![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
+
 :::tip
 Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源接口。
 :::
