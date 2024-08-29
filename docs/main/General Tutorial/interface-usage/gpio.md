@@ -149,8 +149,10 @@ The node name corresponding to gpio0-13 is fiq-debugger. This node is multiplexe
 
 ## 5. GPIO Control
 
-Here, we introduce how to control GPIO in user space based on sysfs:
-The method of controlling GPIO through sysfs is mainly based on the GPIO control interface files provided by the kernel. In other words, it is done by reading and writing the files under the /sys/class/gpio directory to control the corresponding GPIO interface.
+### 5.1 GPIO sysfs interface
+
+Controlling GPIO in user space based on sysfs:
+The method of controlling GPIO through sysfs is mainly based on the GPIO control interface file provided by the kernel. In other words, it controls the corresponding gpio interface by reading and writing files in the/sys/class/gpio directory.
 
 ```bash
 echo 109 > /sys/class/gpio/export                  # Export the corresponding GPIO
@@ -162,3 +164,31 @@ echo 109 > /sys/class/gpio/unexport                # Release the requested GPIO
 
 Note: Only when the GPIO3_B5 pin is not multiplexed by other peripherals, we can export it and then use.
 
+### 5.2 GPIOD Usage
+
+libgpiod is a character device interface, and GPIO access control is achieved by manipulating character device files (such as/dev/gpiodchip0) and providing command tools, C libraries, and Python encapsulation through libgpiod.
+
+To use libgpiod, it is necessary to install the libgpiod library on the board:
+```bash
+#Install the gpiod command-line tool
+sudo apt install gpiod
+```
+
+The usage of the gpiod tool is different from that of the sysfs interface. gpiod is measured in units of controllers and then detailed down to port numbers and index numbers, where gpiod uses two data points to determine the pins
+
+| Pin    | Controller       | Port       | Index        | gpiod    |
+| -------- | ----------- | ----------- | ------------ | ------------ |
+| GPIO3_C1 | 3           | C           | 1            | 3 17(2x8+1)  |
+| GPIO3_B7 | 3           | B           | 7            | 3 15(1X8+7)  |
+| GPIO1_B2 | 1           | B           | 2            | 1 10(1x8+1)  |
+
+Taking GPO3_C3 as an example, the commonly used command lines are as follows:
+```bash
+gpiodetect                  # List all GPIO controllers
+gpioinfo 3       # List the first set of controller pin groups
+gpioset 3 19=0             # Set pin 3 of the first group controller number to low level
+gpioget 3 19                  # Obtain the pin status of controller number 3 in the first group
+gpiomon 3 19      # Monitor the pin status of controller number 3 in the first group
+```
+
+`Not all pins can be controlled using libgpiod, such as some already used pins like LED`

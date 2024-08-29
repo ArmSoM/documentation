@@ -134,7 +134,10 @@ pin 21 (gpio0-21): (MUX UNCLAIMED) gpio0:21
 gpio0-13对应的节点名是 fiq-debugger，此节点使用pinctrl配置复用为debug串口功能，pinctrl的值是uart2m0-xfer。
 
 ## 5. GPIO控制
-这里介绍一下在用户空间基于sysfs控制gpio的方式：
+
+### 5.1 GPIO系统接口
+
+基于sysfs的用户空间GPIO控制：
 sysfs控制gpio的方式主要是基于内核提供的gpio控制接口文件。也就是通过读写/sys/class/gpio目录下的文件来控制对应的gpio接口。
 
 ```bash
@@ -145,3 +148,32 @@ cat /sys/class/gpio/gpio109/value                  # 获取gpio当前状态值�
 echo 109 > /sys/class/gpio/unexport                # 释放申请的gpio
 ```
 注意：只有当GPIO3_B5脚没有被其它外设复用时, 我们才可以通过export导出该引脚去使用
+
+### 5.2 GPIOD使用
+
+libgpiod是一种字符设备接口，GPIO访问控制是通过操作字符设备文件（比如 /dev/gpiodchip0 ）实现的， 并通过libgpiod提供一些命令工具、c库以及python封装。
+
+使用libgpiod之前需要在板卡上安装libgpiod库：
+```bash
+#安装gpiod命令行工具
+sudo apt install gpiod
+```
+
+gpiod工具的使用方法与sysfs接口的不同，gpiod是以控制器为单位，然后再详细到端口号和索引号，即gpiod使用两个数据确定引脚
+
+| 引脚    | 控制器       | 端口号       | 索引号        | gpiod的使用结果    |
+| -------- | ----------- | ----------- | ------------ | ------------ |
+| GPIO3_C1 | 3           | C           | 1            | 3 17(2x8+1)  |
+| GPIO3_B7 | 3           | B           | 7            | 3 15(1X8+7)  |
+| GPIO1_B2 | 1           | B           | 2            | 1 10(1x8+1)  |
+
+以GPO3_C3为例，常用的命令行如下：
+```bash
+gpiodetct#列出所有GPIO控制器
+gpioinfo 3#列出第一组控制器引脚组
+gpioset 3 19=0#将第一组控制器编号的引脚3设置为低电平
+gpioget 3 19#获取第一组中3号控制器的引脚状态
+gpiomon 3 19#监控第一组中3号控制器的引脚状态
+```
+
+`Rockchip Pin的ID按照 控制器(bank)+端口(port)+索引序号(pin) 组成,其中端口号和索引号会合并成一个数值传入到gpiod里去,并不是所有的引脚都能够使用libgpiod控制，例如led之类的一些已经被使用的引脚。`
