@@ -93,6 +93,10 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
     </a>
 </div>
 
+## 安装介绍
+
+[ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
+
 ## 样品购买
 
 ArmSoM 独立站: [https://www.armsom.org/product-page/sige-active-cooling-kit](https://www.armsom.org/product-page/sige-active-cooling-kit)

@@ -92,6 +92,10 @@ After continuous operation at a specified constant temperature, the average life
     </a>
 </div>
 
+## Assembly Instructions
+
+[ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
+
 ## Easy to buy sample
 
 ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)

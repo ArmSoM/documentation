@@ -27,6 +27,10 @@ It not only protects your Sige product but also provides some heat dissipation. 
 - Sige5 3mm Thermal Pad
 - Sige7 2mm Thermal Pad
 
+## Assembly Instructions
+
+[ArmSoM YouTube Channel](https://www.youtube.com/watch?v=_eyMxCYa3jU)
+
 ## Easy to buy sample
 ArmSoM online shop: [Sige Diy Case 1](https://www.armsom.org/product-page/sige7-metal-shell)
  

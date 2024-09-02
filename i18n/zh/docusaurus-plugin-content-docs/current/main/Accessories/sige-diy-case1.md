@@ -27,6 +27,10 @@ ArmSoM-Sige 外壳将高品质结构与简洁、简约的设计相结合，金�
 - Sige5 3mm散热垫
 - Sige7 2mm散热垫
 
+## 安装介绍
+
+[ArmSoM YouTube Channel](https://www.youtube.com/watch?v=_eyMxCYa3jU)
+
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
