@@ -34,7 +34,7 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
 
 ## Getting started
 
-<a href="./aim-family-started" class="card-link">
+<a href="./armsom-cm5-io" class="card-link">
     <div class="card">
         <div class="icon">
             <i>✈️</i>
