@@ -383,7 +383,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             <i>📗</i>
         </div>
         <div class="content">
-            <h2> kernel</h2>
+            <h2>kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
