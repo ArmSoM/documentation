@@ -355,7 +355,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 
 ## 开发资料
-<!--
+
 <div class="cards">
     <a href="https://github.com/armbian/build" class="card-link">
         <div class="card">
@@ -375,7 +375,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>Sige5 kernel</h2>
+            <h2>Armbian kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -387,13 +387,13 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>Sige5 uboot</h2>
+            <h2>Armbian uboot</h2>
             <p>rockchip-linux/u-boot</p>
         </div>
     </div>
 </a>
 </div>
- -->
+
 ### 官方镜像
 
 ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。

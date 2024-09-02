@@ -12,6 +12,8 @@ slug: /armsom-cm5
 
 The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-generation 8nm high-performance AIOT platform. It integrates a quad-core Cortex-A72 @ 2.2GHz and a quad-core Cortex-A53 @ 1.8GHz, along with a dedicated NEON co-processor, a 6 TOPS NPU, and supports up to 16GB of large memory. It supports 4K video encoding and decoding, features a rich set of interfaces, and supports various operating systems.
 
+![ArmSoM-CM5](/img/cm/cm5.png)
+
 ### Key Specifications
 
 - **SOC:** Rockchip RK3576
@@ -152,6 +154,17 @@ You can use the Raspberry Pi CM4 baseboard.
 ## Resources
 
 <div class="cards">
+<a href="https://github.com/armbian/build" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Armbian </h2>
+            <p>Armbian Linux build framework</p>
+        </div>
+    </div>
+</a>
 <a href="https://github.com/armbian/linux-rockchip" class="card-link">
     <div class="card">
         <div class="icon">
