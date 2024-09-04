@@ -60,6 +60,30 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
 You can use the Raspberry Pi CM4 baseboard.
 :::
 
+### ArmSoM CM5 vs Raspberry Pi CM4
+
+Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
+
+| Specification           | ArmSoM CM5                        | Raspberry Pi CM4               |
+|-------------------------|----------------------------------|--------------------------------|
+| **Processor**           | **RK3576 SoC**                    | Broadcom BCM2711               |
+| **CPU Architecture**    | **Quad-core ARM Cortex-A72 & Quad-core Cortex-A53** | Quad-core ARM Cortex-A72      |
+| **GPU**                 | **ARM Mali G52 MC3 GPU**          | VideoCore VI                   |
+| **Memory**              | **Up to 16GB LPDDR5**             | 1GB, 2GB, 4GB, 8GB LPDDR4      |
+| **Storage**             | eMMC storage (optional capacities) | No built-in storage, supports microSD cards |
+| **Display Output**      | 1x HDMI 2.0, 1x DP               | 2x HDMI 2.0                    |
+| **Video Resolution**    | **Supports 4K@120fps**            | Supports 4K@30fps              |
+| **Network Interface**   | 1x Gigabit Ethernet port          | 1x Gigabit Ethernet port       |
+| **USB Ports**           | **1x USB3.0，1x USB2.0**   | 1x USB 2.0                  |
+| **GPIO**                | 40-pin GPIO                       | 40-pin GPIO                    |
+| **Expandability**       | **2x PCIe/SATA/USB 3.0 SS**     | 1x PCIe 2.0                    |
+| **Camera Interface**    | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI |
+| **Display Interface**   | 1x 4-lane MIPI DSI                | 2x 4-lane MIPI DSI             |
+| **Power Input**         | 5V                                | 5V                             |
+| **Dimensions**          | 55mm x 40mm                       | 55mm x 40mm                    |
+| **Operating System Support** | Debian, Android, Ubuntu, etc. | Raspberry Pi OS, Ubuntu, others|
+| **Primary Use Cases**   | AI development, embedded systems, industrial control, DIY projects, education, IoT | DIY projects, education, IoT, etc. |
+
 ### CM5 Block Diagram
 
 ![ArmSoM-CM5-product](/img/cm/cm5-product.png)

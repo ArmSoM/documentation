@@ -18,10 +18,9 @@ The cm5-io board is an expansion board specifically designed for the CM5 computi
 
 - 1x HDMI output, 1x DP output
 - 4x USB 3.0 Type-A
-- Gigabit Ethernet
+- Gigabit Ethernet RJ45 with PoE support
 - Firmware flashing and device mode via USB Type-C
 - GPIO: 40-pin header
-- POE: 5V Power Over Ethernet
 - Power connector: DC Barrel jack for 12V power input
 - Expansion: M.2 (M-key, supports PCIe), microSD
 - MIPI DSI: 1x 4-lane MIPI DSI, supports up to 4K@60fps (x4)

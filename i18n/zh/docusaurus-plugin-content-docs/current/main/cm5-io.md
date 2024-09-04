@@ -3,7 +3,7 @@ description: ArmSoM-CM5-IO
 keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "CM5-IO"
 sidebar_position: 6
-slug: /armsom-CM5-IO
+slug: /armsom-cm5-io
 ---
 
 # CM5-IO 产品简介
@@ -18,10 +18,9 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 
 - 1x HDMI输出, 1x DP输出
 - 4x USB 3.0 Type-A
-- 千兆以太网
+- 支持 PoE 的千兆以太网 RJ45
 - 通过USB Type-C进行固件闪存和设备模式
 - GPIO：40针扩展头
-- POE：5V Power Over Ethernet
 - 电源连接器：DC Barrel插孔，用于12V电源输入
 - 扩展：M.2（M键，支持PCIe）、microSD
 - MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
@@ -249,21 +248,78 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ## 使用手册
 
-在开始使用 CM5-IO 之前，请准备好以下物品
+在开始使用 CM5-IO 之前，请准备好以下物品。
 
-#### 工具准备
-* CM5-IO, CM5 主板
-* 电源（三选一）
-  * 支持 9V/2A、12V/2A、15V/2A 和 20V/2A 的 USB Type-C PD 2.0
-  * 支持 DC 12V适配器，2.5mm
-  * 支持 PoE 12V
+:::tip
+下文用 CM5 Kit 表示 CM5 + CM5-IO
+:::
+
+### 工具准备
+* 电源
 * 系统安装（二选一）
+  * 板载eMMC启动
+    * USB Type-C数据线，从 typec 端口在CM5 kit上写入镜像，您需要Type-C数据线连接 CM5 kit和 PC。
   * MicroSD卡/TF卡启动
-    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器，
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
     * 以下是经过ArmSoM团队测试验证的高速TF卡
       * SanDisk 32GB TF（MicroSD）（开发者推荐）
       * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
       * 闪迪 TF 8G Class10 microSD 
       * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
-  * 板载eMMC启动
-    * USB A型转 C型数据线，从 typec 端口在 CM5-IO 上写入镜像或使用 fastboot/adb 命令，您需要 USB A转type C数据线连接 CM5-IO 和 PC。
+
+您可以将 CM5 Kit 设置为带有桌面的交互式计算机，也可以将其设置为仅可通过网络访问的无头计算机。要将 CM5 Kit 设置为Headless计算机，您在初次安装操作系统时配置主机名、用户帐户、网络连接和 SSH 。如果您想直接使用 CM5 Kit，则需要以下附加配件：
+
+**可选选项**
+* 键盘 & 鼠标
+* HDMI显示器和HDMI线
+* Ethernet 线（网线）
+* 摄像头模块
+  * 4lan 摄像头推荐使用 [camera-module1](./armsom-camera-module1) 模组。
+  * 2lan 摄像头使用树莓派 [camera-module-v2](https://www.raspberrypi.com/products/camera-module-v2/) 
+* LCD显示屏
+  * 推荐使用 [Display 10 HD](./armsom-display-10-hd)。
+* 音频线, 0.8mm立式插座。
+* RTC 电池, 0.8mm立式插座。
+* 风扇，0.8mm立式插座。
+
+### 电源
+
+* 支持 DC 12V适配器，2.5mm
+
+### 烧录方式选择
+<div class="cards">
+    <a href="./general-tutorial/flash-img" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>🎇</i>
+            </div>
+            <div class="content">
+                <h2>系统镜像烧录</h2>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+## 接口使用
+
+如果您是首次使用 CM5 Kit，请先熟悉下各产品[硬件接口](./armsom-cm5-io#硬件接口)，以便于您更好的理解后续的内容。
+
+### 调试串口
+
+如下所示连接 USB 转 TTL 串口线：
+
+![cm5io-debug](/img/cm/cm5io-debug.png)
+
+| CM5-IO       | 连接  | 串口模块 |
+| --------------- | ----- | ------ |
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8)  | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
+
+### 以太网口
+
+1. 首先将网线的一端插入 CM5 Kit 的以太网接口，网线的另一端接入路由器，并确保
+网络是畅通的
+2. 系统启动后会通过 DHCP 自动给以太网卡分配 IP 地址，不需要其他任何配置
+3. 在CM5 Kit的 Linux 系统中查看 IP 地址的命令如下所示
