@@ -61,6 +61,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 
 您可以使用 Raspberry Pi CM4 底板。
 :::
+
 ### ArmSoM CM5 vs 树莓派 CM4
 以下是 ArmSoM CM5 和 树莓派 CM4 的规格对比表格：
 
