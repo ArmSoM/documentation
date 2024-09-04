@@ -32,7 +32,7 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 
 ### 硬件接口
 
-![ArmSoM-CM5-IO](/img/cm/CM5-IO-layout.png)
+![ArmSoM-CM5-IO](/img/cm/cm5-io-layout.png)
 
 :::tip
 CM5-IO Board 使用12V DC供电。
