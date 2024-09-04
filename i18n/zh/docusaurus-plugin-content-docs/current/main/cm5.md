@@ -71,7 +71,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 | **GPU**                | **ARM Mali G52 MC3 GPU**                        | VideoCore VI                   |
 | **内存**               | **最高支持 16GB LPDDR5**             | 1GB、2GB、4GB、8GB LPDDR4       |
 | **存储**               | eMMC 存储（可选容量）            | 无内置存储，支持microSD卡       |
-| **显示输出**           | 1x HDMI 2.0, 1x DP               | 2x HDMI 2.0                    |
+| **显示输出**           | 1x HDMI 2.1, 1x DP               | 2x HDMI 2.0                    |
 | **视频分辨率**         | **支持4K@120fps**                     | 支持4K@30fps                   |
 | **网络接口**           | 1x 千兆以太网接口                 | 1x 千兆以太网接口               |
 | **USB接口**            | **1x USB3.0，1x USB2.0**          | 1xUSB2.0       |

@@ -71,7 +71,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 | **GPU**                 | **ARM Mali G52 MC3 GPU**          | VideoCore VI                   |
 | **Memory**              | **Up to 16GB LPDDR5**             | 1GB, 2GB, 4GB, 8GB LPDDR4      |
 | **Storage**             | eMMC storage (optional capacities) | No built-in storage, supports microSD cards |
-| **Display Output**      | 1x HDMI 2.0, 1x DP               | 2x HDMI 2.0                    |
+| **Display Output**      | 1x HDMI 2.1, 1x DP               | 2x HDMI 2.0                    |
 | **Video Resolution**    | **Supports 4K@120fps**            | Supports 4K@30fps              |
 | **Network Interface**   | 1x Gigabit Ethernet port          | 1x Gigabit Ethernet port       |
 | **USB Ports**           | **1x USB3.0，1x USB2.0**   | 1x USB 2.0                  |
