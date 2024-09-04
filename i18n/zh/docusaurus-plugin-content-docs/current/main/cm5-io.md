@@ -3,7 +3,7 @@ description: ArmSoM-CM5-IO
 keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "CM5-IO"
 sidebar_position: 6
-slug: /armsom-cm5-io
+slug: /armsom-CM5-IO
 ---
 
 # CM5-IO 产品简介
@@ -33,7 +33,7 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 
 ### 硬件接口
 
-![ArmSoM-CM5-IO](/img/cm/cm5-io-layout.png)
+![ArmSoM-CM5-IO](/img/cm/CM5-IO-layout.png)
 
 :::tip
 CM5-IO Board 使用12V DC供电。
@@ -249,3 +249,21 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ## 使用手册
 
+在开始使用 CM5-IO 之前，请准备好以下物品
+
+#### 工具准备
+* CM5-IO, CM5 主板
+* 电源（三选一）
+  * 支持 9V/2A、12V/2A、15V/2A 和 20V/2A 的 USB Type-C PD 2.0
+  * 支持 DC 12V适配器，2.5mm
+  * 支持 PoE 12V
+* 系统安装（二选一）
+  * MicroSD卡/TF卡启动
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器，
+    * 以下是经过ArmSoM团队测试验证的高速TF卡
+      * SanDisk 32GB TF（MicroSD）（开发者推荐）
+      * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
+      * 闪迪 TF 8G Class10 microSD 
+      * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
+  * 板载eMMC启动
+    * USB A型转 C型数据线，从 typec 端口在 CM5-IO 上写入镜像或使用 fastboot/adb 命令，您需要 USB A转type C数据线连接 CM5-IO 和 PC。
