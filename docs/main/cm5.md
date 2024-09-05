@@ -175,6 +175,11 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
   className="session-details-live-video"/>
 </details>
 
+### Hardware Pin Definitions
+
+![ArmSoM-cm5-pinlist-1](/img/cm/cm5-pinlist-1.png)
+![ArmSoM-cm5-pinlist-2](/img/cm/cm5-pinlist-2.png)
+
 ## Resources
 
 <div class="cards">

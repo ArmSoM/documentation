@@ -175,6 +175,11 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
   className="session-details-live-video"/>
 </details>
 
+### 引脚定义
+
+![ArmSoM-cm5-pinlist-1](/img/cm/cm5-pinlist-1.png)
+![ArmSoM-cm5-pinlist-2](/img/cm/cm5-pinlist-2.png)
+
 ## 开发资料
 
 <div class="cards">
@@ -269,6 +274,17 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
             </div>
         </div>
     </a>
+    <a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>Comparison Table</h2>
+                <p>ArmSoM-CM5 & raspberrypi-CM4 & BPI-CM4 Pinlist </p>
+            </div>
+        </div>
+</a>
 </div>
 
 ## 产品证书
