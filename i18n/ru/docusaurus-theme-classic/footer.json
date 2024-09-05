@@ -1,50 +1,50 @@
 {
   "link.title.About": {
     "description": "The label of footer link with title=About linking to http://www.armsom.org/",
-    "message": "关于"
+    "message": "О нас"
   },
   "link.title.Support": {
     "description": "The label of footer link with title=Support linking to http://www.armsom.org/",
-    "message": "支持"
+    "message": "Поддержка"
   },
   "link.title.Community": {
     "description": "The label of footer link with title=Support linking to http://www.armsom.org/",
-    "message": "社区"
+    "message": "Сообщество"
   },
   "link.item.label.Home": {
     "description": "The label of footer link with label=Home linking to http://www.armsom.org/",
-    "message": "主页"
+    "message": "Главная"
   },
   "link.item.label.News": {
     "description": "The label of footer link with label=News linking to http://www.armsom.org/news",
-    "message": "新闻"
+    "message": "Новости"
   },
   "link.item.label.Products": {
     "description": "The label of footer link with label=Products linking to http://www.armsom.org/product",
-    "message": "产品"
+    "message": "Продукты"
   },
   "link.item.label.Services": {
     "description": "The label of footer link with label=Community linking to http://www.armsom.org/services",
-    "message": "服务"
+    "message": "Услуги"
   },
   "link.item.label.Forum": {
     "description": "The label of footer link with label=Forum linking to http://forum.armsom.org",
-    "message": "论坛"
+    "message": "Форум"
   },
   "link.item.label.Blog": {
     "description": "The label of footer link with label=Blog linking to http://docs.armsom.org/blog",
-    "message": "博客"
+    "message": "Блог"
   },
   "link.item.label.Twitter": {
     "description": "The label of footer link with label=Twitter linking to https://twitter.com/armsom",
-    "message": "推特"
+    "message": "Твиттер"
   },
   "link.item.label.YouTube": {
     "description": "The label of footer link with label=YouTube linking to https://www.youtube.com/channel/UCVJQJTAx11UBYwOVD-1r94w",
-    "message": "油管"
+    "message": "Ютуб"
   },
   "link.item.label.bilibili": {
     "description": "The label of footer link with label=bilibili linking to https://space.bilibili.com/101696800",
-    "message": "哔哩哔哩"
+    "message": "Билибили"
   }
 }
