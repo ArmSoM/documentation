@@ -25,7 +25,7 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
   - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
 - **RAM:** 8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
-- **Operating Voltage:** Wide input voltage range from 4.5V to 23V (voltage tolerance ±5%).
+- **Operating Voltage:** Wide input voltage range from 4.5V to 5.5V (voltage tolerance ±5%).
 - **Operating Temperature:** 0℃ ~ 80℃
 - **Weight:** 12g
 - **Dimensions:**
@@ -261,6 +261,17 @@ Network disk address:
             </div>
             <div class="content">
                 <h2>CM5 SCH</h2>
+            </div>
+        </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>Comparison Table</h2>
+                <p>ArmSoM-CM5 & raspberrypi-CM4 & BPI-CM4 Pinlist </p>
             </div>
         </div>
 </a>
