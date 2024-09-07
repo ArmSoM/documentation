@@ -167,11 +167,16 @@ The cm5-io board uses a 12V DC power supply.
 
 ### Official Images
 
-The ArmSoM team provides an official operating system based on Debian Bullseye.
+ArmSoM team uses Debian bullseye as the official operating system.
 
-The following systems have been tested and verified by ArmSoM:
+#### Download
 
-- **Baidu Drive Link**: [Baidu Netdisk](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+The following systems have been tested and verified by ArmSoM official:
+
+Network disk address: 
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>Google Drive link</span>
+</a>
 
 | Logo | Description | Download |
 |:----:|:-----------:|:--------:|

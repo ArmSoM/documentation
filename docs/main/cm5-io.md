@@ -134,19 +134,18 @@ The cm5-io board uses a 12V DC power supply.
             <i>📚</i>
         </div>
         <div class="content">
-            <h2>Armbian源码</h2>
-            <p>适用于 ARM 开发板的 Linux</p>
+            <h2>Armbian </h2>
+            <p>Armbian Linux build framework</p>
         </div>
     </div>
 </a>
-
 <a href="https://github.com/armbian/linux-rockchip" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>cm5-io kernel</h2>
+            <h2>CM5 kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -158,8 +157,20 @@ The cm5-io board uses a 12V DC power supply.
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>cm5-io uboot</h2>
+            <h2>CM5 uboot</h2>
             <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
         </div>
     </div>
 </a>
@@ -167,11 +178,16 @@ The cm5-io board uses a 12V DC power supply.
 
 ### Official Images
 
-The ArmSoM team provides an official operating system based on Debian Bullseye.
+ArmSoM team uses Debian bullseye as the official operating system.
 
-The following systems have been tested and verified by ArmSoM:
+#### Download
 
-- **Baidu Drive Link**: [Baidu Netdisk](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+The following systems have been tested and verified by ArmSoM official:
+
+Network disk address: 
+<a href="/general-tutorial/cloud-disk" class="btn">
+  <span>Google Drive link</span>
+</a>
 
 | Logo | Description | Download |
 |:----:|:-----------:|:--------:|
