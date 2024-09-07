@@ -594,7 +594,7 @@ armsom@armsom-sige:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,f
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-[ArmSoM camera-module1](../Accessories/camera-module1.md)
+[ArmSoM camera-module1](./armsom-camera-module1)
 
 ### MIPI DSI
 

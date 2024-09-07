@@ -315,7 +315,7 @@ The ArmSoM-Sige series products come with an onboard WIFI module, so there's no 
 
 **Network Settings**
 <div class="cards">
-<a href="./general-tutorial/product-startup/#3-Login method" class="card-link">
+<a href="./general-tutorial/product-startup/#3-login-method" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🎾</i>
@@ -326,7 +326,7 @@ The ArmSoM-Sige series products come with an onboard WIFI module, so there's no 
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set/#6-Static network configuration" class="card-link">
+<a href="./general-tutorial/network-set/#6-static-network-configuration" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🌐</i>
@@ -336,7 +336,7 @@ The ArmSoM-Sige series products come with an onboard WIFI module, so there's no 
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set/#7-Create WiFi Hotspot" class="card-link">
+<a href="./general-tutorial/network-set/#7-create-wifi-hotspot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
