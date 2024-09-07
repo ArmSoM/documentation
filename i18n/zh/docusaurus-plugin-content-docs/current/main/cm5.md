@@ -300,30 +300,6 @@ ArmSoM-CM5 将至少生产到 2034 年 8 月。
 我们为 ArmSoM-Sige 设计的官方配件旨在帮助您从计算机获得最佳性能。
 
 <div class="cards">
-<a href="./sige-active-cooling-kit" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige 主动散热套件</h2>
-        <p>在高负载下使用 ArmSoM-Sige, 主动散热套件可确保它在最繁忙的工作中平稳运行。</p>
-    </div>
-</div>
-</a>
-
-<a href="./sige-diy-case1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige Diy Case 1</h2>
-        <p>Sige Diy Case 1 将高品质结构与简洁、简约的设计相结合，金属外壳使其更高端。</p>
-    </div>
-</div>
-</a>
-
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
     <div class="card-image">

@@ -291,29 +291,6 @@ ArmSoM-CM5 will remain in production until at least August 2034.
 The official accessories designed for the ArmSoM-Sige are intended to help you achieve optimal performance from your computer.
 
 <div class="cards">
-<a href="./sige-active-cooling-kit" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige Active Cooling Kit</h2>
-        <p>The active cooling kit ensures that the ArmSoM-Sige runs smoothly even under high load conditions.</p>
-    </div>
-</div>
-</a>
-
-<a href="./sige-diy-case1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige DIY Case 1</h2>
-        <p>Sige DIY Case 1 combines high-quality construction with a sleek, minimalist design. The metal casing adds a premium touch.</p>
-    </div>
-</div>
-</a>
 
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
