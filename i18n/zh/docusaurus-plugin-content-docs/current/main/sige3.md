@@ -134,7 +134,7 @@ Sige3上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
         <tr>
             <th>按键</th>
-            <th><li>1x Reset键，支持重启</li><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
+            <th><li>1x Reset键，支持重启</li><li>1x Maskrom键，支持进入maskrom烧录模式</li><li>1x PWRON键，支持休眠唤醒</li></th>
         </tr>
         <tr>
             <th>系统</th>

@@ -16,6 +16,13 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 
 ![ArmSoM-CM5](/img/cm/cm5.png)
 
+:::tip Rockchip RK3576
+- [ArmSoM-Sige5](./armsom-sige5) 单板计算机;
+- [ArmSoM-CM5](./armsom-cm5) RK3576 CM5计算模组, [ArmSoM-CM5-IO](./armsom-cm5-io) CM5配套IO板;
+
+依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
+:::
+
 ### 关键参数
 
 - SOC：瑞芯微 RK3576
