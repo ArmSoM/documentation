@@ -8,7 +8,7 @@ slug: /armsom-sige3
 
 # Sige3 产品简介
 
-Let's get to know Sige3 in 5 minutes.
+让我们在 5 分钟内了解 Sige3。
 
 ## 简介
 

@@ -100,8 +100,8 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 如果您是首次使用 ArmSoM-Sige 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
 
-| 硬件接口  | [Sige7](./armsom-sige7#硬件接口) | [Sige5](./armsom-sige5#硬件接口) | [Sige1](./armsom-sige1#硬件接口) |
-| --------------- | ----- | ------ | ------ | 
+| 硬件接口  | [Sige7](./armsom-sige7#硬件接口) | [Sige5](./armsom-sige5#硬件接口) |[Sige3](./armsom-sige3#硬件接口) | [Sige1](./armsom-sige1#硬件接口) |
+| --------------- | ----- | ------ | ------ |  ------ | 
 
 ### 调试串口
 
@@ -373,8 +373,8 @@ armsom@armsom-sige:/# pair yourDeviceMAC
 
 ### USB
 
-|  型号  |Sige7       | Sige5  | Sige3 | Sige1 |
-| ----- |  ----- | ------ |- ---- | 
+|  型号  |Sige7 | Sige5  | Sige3 | Sige1 |
+| ----- |  ----- | ------ |----- | ----- | 
 | USB   | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 | 1* Type-C 3.0, 1x USB3.0, 1x USB2.0 |2x USB2.0|
 
 :::info

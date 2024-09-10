@@ -61,3 +61,5 @@ For more details or to get involved, please visit the following links:
 - [Mainline Kernel Code](https://github.com/armbian/linux-rockchip/tree/rk3576-6.1-dev-2024_04_19)
 - [U-Boot Support](https://github.com/ArmSoM/u-boot/tree/rk3576)
 - [rkbin Firmware](https://github.com/armbian/rkbin/commit/4f56cdc8310582bd737b54bdbd7e2d8ee160896f)
+
+Let's work together to push the mainline kernel support for ArmSoM-Sige5 even further!
