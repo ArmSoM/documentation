@@ -265,27 +265,46 @@ Network disk address:
 
 ### Hardware Resources 
 
+<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="btn">
+  <span>CM5 Hardware Resources</span>
+</a>
+<br/>
+
+[ArmSoM-CM5 pin table](https://docs.google.com/spreadsheets/d/1TFBTV2u73eYIFKA2MqlkeFjA-SvN_Uhu/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true) - pin table
+
 <div class="cards">
-    <a href="https://drive.google.com/file/d/1LkyRpXwdVZcPW52BoCguoiNpkSB397gw/view?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1wbW_VyTEyQRrsDF8cvCp1zK1SsZ819un?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
-                <i>📄</i>
+                <i>📦</i>
             </div>
             <div class="content">
-                <h2>CM5 SCH</h2>
+                <h2>CM5</h2>
+                <p>SCH,2D</p>
             </div>
         </div>
-</a>
-<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="card-link">
+    </a>
+    <a href="https://drive.google.com/drive/folders/10bCEK2t1BuOJRAULnoEAem338c2W71xT?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📗</i>
             </div>
             <div class="content">
-                <h2>Comparison Table</h2>
-                <p>ArmSoM-CM5 & raspberrypi-CM4 & BPI-CM4 Pinlist </p>
+                <h2>CM5-IO</h2>
+                <p>SCH,PCB,2D,SMD</p>
             </div>
         </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1FXvNMlOzZeEF601KSCylwkihR7lqFTtw?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
+        </div>
+    </div>
 </a>
 </div>
 
