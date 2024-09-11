@@ -359,30 +359,17 @@ ArmSoM-Sige1 将至少生产到 2034 年 8 月。
 我们为 ArmSoM-Sige 设计的官方配件旨在帮助您从计算机获得最佳性能。
 
 <div class="cards">
-<a href="./sige-active-cooling-kit" class="card-link">
+<a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
+        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
     </div>
     <div class="card-content">
-        <h2>Sige 主动散热套件</h2>
-        <p>主动散热套件可确保Sige在最繁忙的工作中平稳运行。</p>
+        <h2>Camera-module1</h2>
+        <p>camera-module1使用OV13850，是低功耗相机模块</p>
     </div>
 </div>
 </a>
-
-<a href="./sige-diy-case1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige Diy Case 1</h2>
-        <p>将高品质结构与简洁、简约的设计相结合，金属外壳使其更高端。</p>
-    </div>
-</div>
-</a>
-
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
     <div class="card-image">
@@ -394,15 +381,25 @@ ArmSoM-Sige1 将至少生产到 2034 年 8 月。
     </div>
 </div>
 </a>
-
-<a href="./armsom-camera-module1" class="card-link">
+<a href="./sige-diy-case1" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
     </div>
     <div class="card-content">
-        <h2>Camera-module1</h2>
-        <p>camera-module1适用OV13850，是低功耗相机模块</p>
+        <h2>Sige Diy Case 1</h2>
+        <p>将高品质结构与简洁、简约的设计相结合，金属外壳使其更高端。</p>
+    </div>
+</div>
+</a>
+<a href="./sige-active-cooling-kit" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Sige 主动散热套件</h2>
+        <p>主动散热套件可确保Sige在最繁忙的工作中平稳运行。</p>
     </div>
 </div>
 </a>

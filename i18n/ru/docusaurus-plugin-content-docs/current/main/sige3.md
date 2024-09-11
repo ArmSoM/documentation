@@ -370,8 +370,8 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
         <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
     </div>
     <div class="card-content">
-        <h2>Sige Active Cooling Kit</h2>
-        <p>The active cooling kit ensures that the ArmSoM-Sige runs smoothly even under high load conditions.</p>
+        <h2> Active Cooling Kit</h2>
+        <p>The active cooling kit ensures Sige runs smoothly even during the most demanding tasks.</p>
     </div>
 </div>
 </a>
@@ -383,7 +383,7 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
     </div>
     <div class="card-content">
         <h2>Sige DIY Case 1</h2>
-        <p>Sige DIY Case 1 combines high-quality construction with a sleek, minimalist design. The metal casing adds a premium touch.</p>
+        <p>Combining high-quality construction with a clean, minimalist design, the metal casing adds a premium touch.</p>
     </div>
 </div>
 </a>
@@ -395,7 +395,7 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
     </div>
     <div class="card-content">
         <h2>Display-10-HD</h2>
-        <p>The ArmSoM-Sige 10.1-inch touchscreen display is perfect for interactive projects such as tablets, entertainment systems, and information dashboards.</p>
+        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
     </div>
 </div>
 </a>

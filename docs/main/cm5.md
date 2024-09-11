@@ -314,7 +314,7 @@ ArmSoM-CM5 will remain in production until at least August 2034.
 
 ## Accessories
 
-The official accessories designed for the ArmSoM-Sige are intended to help you achieve optimal performance from your computer.
+The official accessories designed for the ArmSoM-CM5-IO are intended to help you achieve optimal performance from your computer.
 
 <div class="cards">
 
@@ -325,7 +325,7 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
     </div>
     <div class="card-content">
         <h2>Display-10-HD</h2>
-        <p>The ArmSoM-Sige 10.1-inch touchscreen display is perfect for interactive projects such as tablets, entertainment systems, and information dashboards.</p>
+        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
     </div>
 </div>
 </a>

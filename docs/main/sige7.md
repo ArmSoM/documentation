@@ -525,42 +525,6 @@ The ArmSoM-Sige7 will be produced at least until January 2034.
 The official accessories designed for the ArmSoM-Sige are intended to help you achieve optimal performance from your computer.
 
 <div class="cards">
-<a href="./sige-active-cooling-kit" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige Active Cooling Kit</h2>
-        <p>The active cooling kit ensures that the ArmSoM-Sige runs smoothly even under high load conditions.</p>
-    </div>
-</div>
-</a>
-
-<a href="./sige-diy-case1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige DIY Case 1</h2>
-        <p>Sige DIY Case 1 combines high-quality construction with a sleek, minimalist design. The metal casing adds a premium touch.</p>
-    </div>
-</div>
-</a>
-
-<a href="./armsom-display-10-hd" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Display-10-HD</h2>
-        <p>The ArmSoM-Sige 10.1-inch touchscreen display is perfect for interactive projects such as tablets, entertainment systems, and information dashboards.</p>
-    </div>
-</div>
-</a>
-
 <a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
@@ -569,6 +533,39 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
     <div class="card-content">
         <h2>Camera Module 1</h2>
         <p>The camera module 1, compatible with the OV13850 sensor, is a low-power camera module.</p>
+    </div>
+</div>
+</a>
+<a href="./armsom-display-10-hd" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Display-10-HD</h2>
+        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
+    </div>
+</div>
+</a>
+<a href="./sige-diy-case1" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Sige DIY Case 1</h2>
+        <p>Combining high-quality construction with a clean, minimalist design, the metal casing adds a premium touch.</p>
+    </div>
+</div>
+</a>
+<a href="./sige-active-cooling-kit" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Active Cooling Kit</h2>
+        <p>The active cooling kit ensures Sige runs smoothly even during the most demanding tasks.</p>
     </div>
 </div>
 </a>
