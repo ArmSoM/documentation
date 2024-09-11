@@ -187,6 +187,11 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 ![ArmSoM-cm5-pinlist-1](/img/cm/cm5-pinlist-1.png)
 ![ArmSoM-cm5-pinlist-2](/img/cm/cm5-pinlist-2.png)
 
+<a href="https://pan.baidu.com/s/1Cl3m1eBwcBnNsEkdmXg7GA?pwd=hv4b" class="btn">
+  <span>ArmSoM-CM5&raspberrypi-CM4&BPI-CM4 Pinlist对比表</span>
+</a>
+<br/>
+
 ## 开发资料
 
 <div class="cards">
@@ -262,35 +267,46 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ### 硬件资料
 
-获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
-
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
-  <span>百度网盘链接</span>
+<a href="https://pan.baidu.com/s/17kzaNI43PizM5xRj95umLQ?pwd=a61j" class="btn">
+  <span>CM5 硬件资料</span>
 </a>
-
 <br/>
 
+[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/1ZGnyvCLyr8PhN7--xndwqw?pwd=8a1a) - 引脚功能表格下载
+
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1jpJ8Euc7uwz3x871T77zFg?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/1Ks4Fmj5Vc8iW1p88cYt0ug?pwd=7k8h" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
             </div>
             <div class="content">
-                <h2>CM5 Schematics</h2>
+                <h2>CM5</h2>
+                <p>SCH,2D</p>
             </div>
         </div>
     </a>
-    <a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="card-link">
+    <a href="https://pan.baidu.com/s/1GEicsdw1GANgWJBXLiyTdg?pwd=wfxn" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📗</i>
             </div>
             <div class="content">
-                <h2>Comparison Table</h2>
-                <p>ArmSoM-CM5 & raspberrypi-CM4 & BPI-CM4 Pinlist </p>
+                <h2>CM5-IO</h2>
+                <p>SCH,PCB,2D,SMD</p>
             </div>
         </div>
+</a>
+<a href="https://pan.baidu.com/s/1HJdf25HnlB-lZjcKeHs7rQ?pwd=643d" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
+        </div>
+    </div>
 </a>
 </div>
 
@@ -304,7 +320,7 @@ ArmSoM-CM5 将至少生产到 2034 年 8 月。
 
 ## 配件
 
-我们为 ArmSoM-Sige 设计的官方配件旨在帮助您从计算机获得最佳性能。
+我们为 ArmSoM-CM5-IO 设计的官方配件旨在帮助您从计算机获得最佳性能。
 
 <div class="cards">
 <a href="./armsom-display-10-hd" class="card-link">
@@ -314,7 +330,7 @@ ArmSoM-CM5 将至少生产到 2034 年 8 月。
     </div>
     <div class="card-content">
         <h2>Display-10-hd</h2>
-        <p>ArmSoM-Sige 10.1 英寸触摸屏显示器，可用于平板电脑、娱乐系统和信息仪表板等交互式项目。</p>
+        <p>10.1 英寸触摸屏显示器，可用于娱乐系统和信息仪表板等交互式项目。</p>
     </div>
 </div>
 </a>

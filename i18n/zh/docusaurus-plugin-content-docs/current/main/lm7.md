@@ -310,6 +310,12 @@ ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系�
 
 ### 硬件资料
 
+<a href="https://pan.baidu.com/s/1yUDpAlh5cOLIkffZSTDUkw?pwd=2daw" class="btn">
+  <span>LM7 硬件资料</span>
+</a>
+
+<br/>
+
 获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
 [ArmSoM-LM7 引脚功能表格](https://pan.baidu.com/s/1AQzunn1xkaZuGPDZ2xm8HA?pwd=arms) - 引脚功能表格下载

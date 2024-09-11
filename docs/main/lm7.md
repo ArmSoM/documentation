@@ -338,6 +338,12 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
 
 ### LM7 Hardware Resources 
 
+<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I" class="btn">
+  <span>LM7 Hardware Resources</span>
+</a>
+
+<br/>
+
 <div class="cards">
     <a href="https://docs.google.com/spreadsheets/d/1hcwwZbGElfGMAEaGHhuznplZgvGaaYRy/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true" class="card-link">
         <div class="card">

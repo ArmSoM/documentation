@@ -366,7 +366,7 @@ ArmSoM-Sige1 将至少生产到 2034 年 8 月。
     </div>
     <div class="card-content">
         <h2>Sige 主动散热套件</h2>
-        <p>在高负载下使用 ArmSoM-Sige, 主动散热套件可确保它在最繁忙的工作中平稳运行。</p>
+        <p>主动散热套件可确保Sige在最繁忙的工作中平稳运行。</p>
     </div>
 </div>
 </a>
@@ -378,7 +378,7 @@ ArmSoM-Sige1 将至少生产到 2034 年 8 月。
     </div>
     <div class="card-content">
         <h2>Sige Diy Case 1</h2>
-        <p>Sige Diy Case 1 将高品质结构与简洁、简约的设计相结合，金属外壳使其更高端。</p>
+        <p>将高品质结构与简洁、简约的设计相结合，金属外壳使其更高端。</p>
     </div>
 </div>
 </a>
@@ -390,7 +390,7 @@ ArmSoM-Sige1 将至少生产到 2034 年 8 月。
     </div>
     <div class="card-content">
         <h2>Display-10-hd</h2>
-        <p>ArmSoM-Sige 10.1 英寸触摸屏显示器，可用于平板电脑、娱乐系统和信息仪表板等交互式项目。</p>
+        <p>10.1 英寸触摸屏显示器，可用于娱乐系统和信息仪表板等交互式项目。</p>
     </div>
 </div>
 </a>
