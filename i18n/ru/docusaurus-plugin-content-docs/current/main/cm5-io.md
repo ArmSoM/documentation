@@ -196,7 +196,7 @@ Get schematics, PCB, DXF, and other hardware documentation for the cm5-io develo
 
 *Coming Soon. Please contact sales@armsom.org for more information.*
 
-### Getting Started
+## Getting Started
 
 The user manual for the CM5 development kit  to help software engineers master the use of the development board.
 
