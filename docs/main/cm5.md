@@ -342,3 +342,13 @@ The official accessories designed for the ArmSoM-CM5-IO are intended to help you
 </div>
 </a>
 </div>
+
+## Purchase Samples
+
+ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+
+ArmSoM Official AliExpress Store: 
+
+ArmSoM Official Taobao Store: 
+
+For OEM & ODM, please contact: sales@armsom.org

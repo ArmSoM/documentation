@@ -815,3 +815,13 @@ overlays=armsom-cm5-io-display-10hd // cm5-kit
 Shortcut keys: Ctrl + S to save, Ctrl + X to exit
 
 After editing, restart the device to apply the Overlays settings for Display 10 HD.
+
+## Purchase Samples
+
+ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+
+ArmSoM Official AliExpress Store: 
+
+ArmSoM Official Taobao Store: 
+
+For OEM & ODM, please contact: sales@armsom.org
