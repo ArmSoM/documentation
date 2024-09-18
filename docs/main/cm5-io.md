@@ -768,9 +768,7 @@ root@armsom-cm5:/# dmesg | grep imx219
 [    4.049680] imx219 4-0010: driver version: 00.01.02
 [    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
 [    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
-[    4.074477] rock
-
-chip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
+[    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
 ```
 
 Capture an image using `v4l2-ctl`

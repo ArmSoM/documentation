@@ -561,45 +561,45 @@ Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
 ### MIPI CSI
+### Using ArmSoM Camera-Module1
 
-Use the IMX415 module for the camera. After connecting and powering on the camera module you can view the boot log:  
+The camera uses the [camera-module1](./armsom-camera-module1). After connecting and powering on the camera module, you can view the boot log.
 
-```bash  
-armsom@armsom-sige7:/# dmesg | grep imx415  
-[ 2.547754] imx415 3-001a: driver version: 00.01.08  
-[ 2.547767] imx415 3-001a: Get hdr mode failed! no hdr default  
-[ 2.547819] imx415 3-001a: Failed to get power-gpios
-[ 2.547826] imx415 3-001a: could not get default pinstate
-[ 2.547831] imx415 3-001a: could not get sleep pinstate
-[ 2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator  
-[ 2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator  
-[ 2.547945] imx415 3-001a: supply avdd not found, using dummy regulator  
-[ 2.613843] imx415 3-001a: Detected imx415 id 0000e0  
-[ 2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5  
-[ 18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0  
-[ 18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203) 
+```bash
+root@armsom-sige7:/# dmesg | grep ov13850
+[    2.302905] ov13850 5-0010: driver version: 00.01.05
+[    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
+[    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
+[    2.303153] ov13850 5-0010: supply dovdd not found, using dummy regulator
+[    2.303186] ov13850 5-0010: supply dvdd not found, using dummy regulator
+[    2.303213] ov13850 5-0010: could not get default pinstate
+[    2.303220] ov13850 5-0010: could not get sleep pinstate
+[    2.308532] ov13850 5-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
+[    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
-  Use v4l2-ctl for image capture:  
-```  
-// MIPI-CSI1  
-armsom@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll  
+### Capture images using `v4l2-ctl`
 
-// MIPI-CSI2
-armsom@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+```bash
+# MIPI-CSI1
+root@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll 
+# MIPI-CSI0
+root@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-Record video directly with gst-launch-1.0:  
-```  
-// MIPI-CSI1  
-armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink  
+### Record video using `gst-launch-1.0`
 
-// MIPI-CSI2
-armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+```bash
+# MIPI-CSI1
+root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+# MIPI-CSI0
+root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
+
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-[ArmSoM camera-module1](./armsom-camera-module1)
+[ArmSoM Camera-Module1](./armsom-camera-module1)
  
 ### MIPI DSI
 
