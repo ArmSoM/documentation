@@ -595,6 +595,7 @@ root@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,
 root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 # MIPI-CSI0
 root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+root@armsom-sige3:/# gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
