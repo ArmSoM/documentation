@@ -42,12 +42,6 @@ const config = {
   presets: [
     [
       'classic',
-      {
-        googleAnalytics: {
-          trackingID: 'G-QQ44YV4TM6',
-          anonymizeIP: true,
-        },
-      },
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -80,6 +74,10 @@ const config = {
           //   return items.filter((item) => !item.url.includes('/page/'));
           // },
         },
+          googleAnalytics: {
+            trackingID: 'G-QQ44YV4TM6',
+            anonymizeIP: true,
+          },
       }),
     ],
   ],
