@@ -59,7 +59,7 @@ Dual Wire Serial Bus Control (SCCB)
                 <i>📚</i>
             </div>
             <div class="content">
-                <h2>ArmSoM Cammera Module 1</h2>
+                <h2>ArmSoM Camera Module 1</h2>
             </div>
         </div>
     </a>
