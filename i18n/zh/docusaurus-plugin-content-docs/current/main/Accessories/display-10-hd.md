@@ -59,7 +59,7 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 |31-32| LEDK |LED Cathode 
 |33-38| NC |OPEN 
 |39-40| LEDA |LED Anode
-
+## Resources
 <div class="cards">
     <a href="https://pan.baidu.com/s/1gwBWVhTw9nfQnBvsymUV1g?pwd=arms" class="card-link">
         <div class="card">
@@ -68,6 +68,16 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
             </div>
             <div class="content">
                 <h2>armsom-10HD.dwg</h2>
+            </div>
+        </div>
+    </a>
+      <a href="https://pan.baidu.com/s/1FwKmGfFqMuH5QpmNfw4vZQ?pwd=kxtv" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📜</i>
+            </div>
+            <div class="content">
+                <h2>armsom-10HD.pdf</h2>
             </div>
         </div>
     </a>

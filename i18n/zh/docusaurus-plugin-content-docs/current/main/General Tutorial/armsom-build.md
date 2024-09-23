@@ -8,9 +8,9 @@ sidebar_position: 6
 目录包含有 build、config、docker、overlay、packages、scripts等
 
 **支持的开发板**
-- [Armsom Sige7](https://docs.armsom.org/armsom-sige7)
-- [Armsom W3](https://docs.armsom.org/armsom-lm7)
-- [Armsom AIM7](https://docs.armsom.org/armsom-aim7)
+- [ArmSoM Sige7](https://docs.armsom.org/armsom-sige7)
+- [ArmSoM W3](https://docs.armsom.org/armsom-lm7)
+- [ArmSoM AIM7](https://docs.armsom.org/armsom-aim7)
 
   **持续更新中...**
 

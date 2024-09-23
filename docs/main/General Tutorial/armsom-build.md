@@ -7,9 +7,9 @@ sidebar_position: 6
 armsom-build是armsom团队推出的一套开源bsp，可以构建出armsom系列产品的镜像。目前只支持构建Ubuntu22.04镜像，后续将增加对Debian镜像的构建与支持。
 目录包含有 build、config、docker、overlay、packages、scripts、等目录
 ## 支持的开发板
-- [Armsom Sige7](https://docs.armsom.org/armsom-sige7)
-- [Armsom W3](https://docs.armsom.org/armsom-lm7)
-- [Armsom Aim7](https://docs.armsom.org/armsom-aim7)
+- [ArmSoM Sige7](https://docs.armsom.org/armsom-sige7)
+- [ArmSoM W3](https://docs.armsom.org/armsom-lm7)
+- [ArmSoM AIM7](https://docs.armsom.org/armsom-aim7)
 
   **持续更新中...**
 ## 支持的kernel版本

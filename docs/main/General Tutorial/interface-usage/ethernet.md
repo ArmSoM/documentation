@@ -14,7 +14,7 @@ The ArmSoM series of products mainly use two Ethernet chips:
 
 ## 2. RTL8211F-CG Chip
 
-The ArmSoM-Aim7 in the ArmSoM series uses the RTL8211F-CG Gigabit Ethernet chip.
+The ArmSoM-AIM7 in the ArmSoM series uses the RTL8211F-CG Gigabit Ethernet chip.
 
 ### 2.1 Driver
 

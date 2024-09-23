@@ -198,7 +198,7 @@ d. 将新编译的内核烧录到设备中。
 
 ## 使用环境
 
-开发板：[ArmSoM-Sige7](../armsom-sige7)
+开发板：[ArmSoM-Sige7](../armsom-sige7) / [ArmSoM-Sige5](../armsom-sige5)
 
 代码仓库：[rknn-llm](https://github.com/ArmSoM/rknn-llm)
 

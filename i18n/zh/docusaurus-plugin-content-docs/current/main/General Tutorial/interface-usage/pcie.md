@@ -31,7 +31,7 @@ RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应
 ## 3. RK3588 DTS配置
 ### 3.1 ArmSoM-W3上的PCIe接口
 - 这里以ArmSoM-W3开发板为例，讲解RK3588的PCIe配置
-- Armsom-W3开发板上有 1 个 PCIe3.0 x 4 接口和两个PCIe2.0接口，如图：
+- ArmSoM-W3开发板上有 1 个 PCIe3.0 x 4 接口和两个PCIe2.0接口，如图：
 
 ![pcie-armsom-w3](/img/general-tutorial/interface-usage/pcie-armsom-w3.png)
 
