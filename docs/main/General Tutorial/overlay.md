@@ -31,7 +31,7 @@ Some of the pins on the 40PIN can be reused for multiple functions, which can be
 Taking the 11 and 15 pins in the 40PIN on Sige7 to open the serial port function as an example:
 - View the serial ports opened by the system
 ```bash
-root@bananapim7 :/boot# ls /dev/ttyS*
+root@armsom-sige7 :/boot# ls /dev/ttyS*
 /dev/ttyS6
 ```
 - Open overlay
@@ -40,7 +40,7 @@ The serial ports corresponding to pins 11 and 15 on the 40PIN are UART 7_m1, and
 
 Edit/boot/armbianEnv. txt file:
 ```bash
-root@bananapim7 :/boot# cat armbianEnv.txt
+root@armsom-sige7 :/boot# cat armbianEnv.txt
 verbosity=1
 bootlogo=false
 console=both
@@ -55,7 +55,7 @@ Only the line `overlays=` has been added here.
 
 Configuration takes effect after restart:
 ```bash
-root@bananapim7 :/boot# ls /dev/ttyS*
+root@armsom-sige7 :/boot# ls /dev/ttyS*
 /dev/ttyS6 /dev/ttyS7
 ```
 :::tip 

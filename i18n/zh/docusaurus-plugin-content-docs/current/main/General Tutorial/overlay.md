@@ -48,7 +48,7 @@ overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 以sige7上40PIN里面的11、15脚打开串口功能为例：
 - 查看系统打开的串口
 ```bash
-root@bananapim7:/boot# ls /dev/ttyS*
+root@armsom-sige7:/boot# ls /dev/ttyS*
 /dev/ttyS6
 ```
 
@@ -58,7 +58,7 @@ root@bananapim7:/boot# ls /dev/ttyS*
 
 编辑/boot/armbianEnv.txt文件：
 ```bash
-root@bananapim7:/boot# cat armbianEnv.txt
+root@armsom-sige7:/boot# cat armbianEnv.txt
 verbosity=1
 bootlogo=false
 console=both
@@ -73,7 +73,7 @@ usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
 
 重启之后配置生效：
 ```bash
-root@bananapim7:/boot# ls /dev/ttyS*
+root@armsom-sige7:/boot# ls /dev/ttyS*
 /dev/ttyS6 /dev/ttyS7
 ```
 
