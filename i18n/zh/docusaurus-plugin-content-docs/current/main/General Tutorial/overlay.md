@@ -40,3 +40,51 @@ overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 ```
 
 ​	编辑好之后重启设备来更改overlays设置。
+
+## 4. 40-PIN 功能测试
+
+40PIN上的引脚有些一个引脚可以复用多种功能，可以按需配置功能，具体引脚功能可以查看板卡的`40-pin header`
+
+以sige7上40PIN里面的11、15脚打开串口功能为例：
+- 查看系统打开的串口
+```bash
+root@bananapim7:/boot# ls /dev/ttyS*
+/dev/ttyS6
+```
+
+- 开启 Overlay
+
+11、15脚对应的串口是uart7_m1,对应的overlay文件是/boot/dtb/rockchip/overlay/rk3588-uart7-m1.dtbo。
+
+编辑/boot/armbianEnv.txt文件：
+```bash
+root@bananapim7:/boot# cat armbianEnv.txt
+verbosity=1
+bootlogo=false
+console=both
+overlay_prefix=rockchip-rk3588
+overlays=rk3588-uart7-m1
+fdtfile=rockchip/rk3588-bananapi-m7.dtb
+rootdev=UUID=a61c17cd-2e49-4302-879c-6cb86ebf07d1
+rootfstype=ext4
+usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
+```
+这里只是添加了`overlays=`这一行。
+
+重启之后配置生效：
+```bash
+root@bananapim7:/boot# ls /dev/ttyS*
+/dev/ttyS6 /dev/ttyS7
+```
+
+:::tip 
+
+40PIN中的功能默认都是关闭的，需要手动打开才能使用
+
+在/boot/armbianEnv.txt 中加入配置，然后重启 Linux 系统生效
+
+如果只需要打开一个功能，那么就填写一个即可，如果多个功能，在`overlays=`后面用空格隔开
+overlays=uart2-m0 uart3-m1 uart4-m2 uart7-m1
+
+类似uart7-m1和uart7-m2不能同时使用
+:::
