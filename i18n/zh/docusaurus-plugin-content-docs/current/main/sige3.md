@@ -301,7 +301,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige3 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://github.com/armbian/community/releases)     |
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige3 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://www.armbian.com/armsom-sige3)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige3 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料

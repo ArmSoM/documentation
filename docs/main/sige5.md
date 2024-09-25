@@ -124,7 +124,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             <th>Network</th>
             <th>
                 <li>2x Gigabit Ethernet port</li>
-                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3  (<a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
+                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3  <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>
@@ -432,7 +432,7 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://github.com/armbian/community/releases)     |
+|![armbian-logo](/img/armbian-logo.webp) | Armbian for Sige5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://www.armbian.com/armsom-sige5/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### Hardware Resources 
@@ -489,6 +489,10 @@ Network disk address:
 ## Supply Statement
 
 The ArmSoM-Sige5 will be produced at least until July 2034.
+
+### Version Change
+
+- Starting from September 25, 2024, orders for ArmSoM-Sige5 will ship with version 1.2, featuring an updated WiFi module (SYN43752 replacing RTL8852BS).
 
 ## Accessories
 
