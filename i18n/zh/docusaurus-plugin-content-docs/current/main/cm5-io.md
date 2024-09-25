@@ -194,20 +194,48 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 获取CM5-IO开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
-待开放,请联系 sales@armsom.org
+<a href="https://pan.baidu.com/s/17kzaNI43PizM5xRj95umLQ?pwd=a61j" class="btn">
+  <span>CM5 硬件资料</span>
+</a>
+<br/>
 
-<!-- <div class="cards">
-    <a href="https://pan.baidu.com/s/14Q2V7cpsuSdQslvESCSbwg?pwd=arms" class="card-link">
+[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/1ZGnyvCLyr8PhN7--xndwqw?pwd=8a1a) - 引脚功能表格下载
+
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1Ks4Fmj5Vc8iW1p88cYt0ug?pwd=7k8h" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
             </div>
             <div class="content">
-                <h2>CM5-IO Schematics</h2>
-                <p>source files (orcad)</p>
+                <h2>CM5</h2>
+                <p>SCH,2D</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://pan.baidu.com/s/1GEicsdw1GANgWJBXLiyTdg?pwd=wfxn" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>CM5-IO</h2>
+                <p>SCH,PCB,2D,SMD</p>
             </div>
         </div>
 </a>
+<a href="https://pan.baidu.com/s/1HJdf25HnlB-lZjcKeHs7rQ?pwd=643d" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
+        </div>
+    </div>
+</a>
+</div>
 
 <a href="https://pan.baidu.com/s/1yDK_N6rX1hzJPMUGxGBDug?pwd=arms" class="card-link">
     <div class="card">
@@ -244,7 +272,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-</div> -->
+</div>
 
 ## 使用手册
 
