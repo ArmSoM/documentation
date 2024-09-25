@@ -561,7 +561,7 @@ Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
 ### MIPI CSI
-### Using ArmSoM Camera-Module1
+#### Using ArmSoM Camera-Module1
 
 The camera uses the [camera-module1](./armsom-camera-module1). After connecting and powering on the camera module, you can view the boot log.
 
@@ -579,7 +579,7 @@ root@armsom-sige7:/# dmesg | grep ov13850
 [    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
-### Capture images using `v4l2-ctl`
+#### Capture images using `v4l2-ctl`
 
 ```bash
 # MIPI-CSI1
@@ -588,7 +588,7 @@ root@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,
 root@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-### Record video using `gst-launch-1.0`
+#### Record video using `gst-launch-1.0`
 
 ```bash
 # MIPI-CSI1
