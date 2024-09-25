@@ -27,6 +27,10 @@ ArmSoM-Sige 外壳将高品质结构与简洁、简约的设计相结合，金�
 - Sige5 3mm散热垫
 - Sige7 2mm散热垫
 
+:::tip
+请注意，Sige DIY Case 1 和 Sige Active Cooling Kit 不能一起使用。
+:::
+
 ## 安装介绍
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=_eyMxCYa3jU)

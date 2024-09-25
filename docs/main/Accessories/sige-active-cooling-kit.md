@@ -92,6 +92,10 @@ After continuous operation at a specified constant temperature, the average life
     </a>
 </div>
 
+:::tip
+Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be used together.
+:::
+
 ## Assembly Instructions
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
