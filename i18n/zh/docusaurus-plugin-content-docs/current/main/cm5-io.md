@@ -237,43 +237,6 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 </a>
 </div>
 
-<a href="https://pan.baidu.com/s/1yDK_N6rX1hzJPMUGxGBDug?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📃</i>
-        </div>
-        <div class="content">
-            <h2>CM5-IO PCB</h2>
-            <p>PCB source files (PADS) </p>
-        </div>
-    </div>
-</a>
-
-<a href="https://pan.baidu.com/s/1e0YIAYYj4hwJQxsiJEKkcw?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📃</i>
-        </div>
-        <div class="content">
-            <h2>CM5-IO 2D</h2>
-            <p>2D CAD files </p>
-        </div>
-    </div>
-</a>
-
-<a href="https://pan.baidu.com/s/1voD9aF5iUpnYs4saAi6ITQ?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📃</i>
-        </div>
-        <div class="content">
-            <h2>CM5-IO SMD</h2>
-            <p>components Position Reference of CM5-IO</p>
-        </div>
-    </div>
-</a>
-</div>
-
 ## 使用手册
 
 在开始使用 CM5-IO 之前，请准备好以下物品。
