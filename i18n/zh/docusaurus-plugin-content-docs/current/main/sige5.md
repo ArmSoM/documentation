@@ -120,7 +120,10 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>网络</th>
-            <th><li>2x GbE网口</li><li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (rtl8852bs)</li></th>
+            <th>
+            <li>2x GbE网口</li>
+            <li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3  (<a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
+            </th>
         </tr>
         <tr>
             <th>视频输出</th>

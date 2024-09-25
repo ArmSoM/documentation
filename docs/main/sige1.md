@@ -104,7 +104,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
             <th>
                 <li>1x 2.5G Ethernet port</li>
                 <li>1x Gigabit Ethernet port</li>
-                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3  (<a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
+                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>

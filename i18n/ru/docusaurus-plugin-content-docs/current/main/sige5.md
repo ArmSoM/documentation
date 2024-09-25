@@ -117,7 +117,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             <th>Network</th>
             <th>
                 <li>2x Gigabit Ethernet port</li>
-                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 (rtl8852bs)</li>
+                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3  (<a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>
