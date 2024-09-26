@@ -883,3 +883,22 @@ ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805434864544
 ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714794342755](https://item.taobao.com/item.htm?id=714794342755)
 
 OEM&ODM, please contact: sales@armsom.org
+
+## Notes
+
+:::caution [Electrostatic Protection]
+1. Before handling the device, please ensure you wear an anti-static wrist strap or take electrostatic discharge measures to prevent damage to the development board.
+2. Assembly should be performed in an electrostatic-safe environment, avoiding operations in dry and low-humidity conditions.
+3. When not in use, store the device in an anti-static bag and keep it in a suitably temperature-controlled, low-humidity environment to prevent static electricity buildup.
+4. When handling the device, avoid friction or collisions to prevent the generation of static electricity that could cause damage.
+5. When holding the device, try to avoid direct contact with the chips on the mainboard to prevent static damage.
+6. Do not plug or unplug wires or other devices while the device is operating to avoid damage from electrical surges.
+7. When connecting or disconnecting the GPIO/MIPI expansion interfaces, make sure to turn off the power and disconnect the power cable to prevent damage from electrical current.
+
+:::
+
+:::danger [Heat Management]
+
+Without effective cooling measures, the surface temperature of the main chip may exceed 60 degrees. When handling the device, please avoid direct contact with the SoC and surrounding power inductors to prevent burns. Ensure that the environment is well-ventilated during operation to prevent localized heat buildup, which could lead to overheating. Additionally, do not place the device in direct sunlight. It is recommended to choose between the official [cooling fan](./sige-active-cooling-kit), [heat sink](./sige-diy-case1), or third-party cooling kits based on specific usage conditions to ensure optimal cooling performance.
+
+:::
