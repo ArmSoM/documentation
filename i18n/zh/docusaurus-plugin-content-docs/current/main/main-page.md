@@ -42,3 +42,7 @@ Discord社群: [ArmSoM Discord](https://discord.gg/THfTEatpfK) - 经验丰富的
 ## 联系我们
 
 官方邮箱: sales@armsom.org
+
+## 贡献力量
+
+我们诚挚邀请大家为ArmSoM文档提供反馈、提交修复、丰富内容，展示您的创作。

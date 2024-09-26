@@ -8,6 +8,10 @@ slug: /sige-active-cooling-kit
 
 Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方案。它结合了铝制散热器和温控鼓风机，即使在重负载下也能让您的 ArmSoM-Sige 保持舒适的工作温度。
 
+:::tip
+请注意，Sige DIY Case 1 和 Sige Active Cooling Kit 不能一起使用。
+:::
+
 ## 散热器
 
 ![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
@@ -92,10 +96,6 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
         </div>
     </a>
 </div>
-
-:::tip
-请注意，Sige DIY Case 1 和 Sige Active Cooling Kit 不能一起使用。
-:::
 
 ## 安装介绍
 

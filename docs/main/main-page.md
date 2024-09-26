@@ -50,3 +50,6 @@ ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 ## Contact Us
 
 ArmSoM email: sales@armsom.org
+
+## Contribution
+We sincerely invite everyone to provide feedback on the ArmSoM documentation, submit fixes, enrich the content, and showcase your creations.
