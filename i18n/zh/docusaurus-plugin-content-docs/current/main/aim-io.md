@@ -43,7 +43,7 @@ AIM-IO板是专为AIM模块开发者设计的扩展板，旨在帮助完成系�
 
 <details>
     <summary>
-       AIM7 40-pin 座子
+       AIM7 40-PIN 座子
     </summary>
 <div className='gpio_style'>
 

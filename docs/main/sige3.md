@@ -12,7 +12,7 @@ Let's get to know Sige3 in 5 minutes.
 
 ## Overview
 
-The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-power quad-core application processor designed for personal mobile internet devices and AloT devices. The Sige3 supports up to 4K@60 HDMI, MIPI DSI, MIPI CSI, USB ports, Gigabit Ethernet, 2.5G network port, PCIe 3.0, 40-pin GPIO expansion header, and RTC.
+The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-power quad-core application processor designed for personal mobile internet devices and AloT devices. The Sige3 supports up to 4K@60 HDMI, MIPI DSI, MIPI CSI, USB ports, Gigabit Ethernet, 2.5G network port, PCIe 3.0, 40-PIN GPIO expansion header, and RTC.
 
 ![ArmSoM-Sige3](/img/sige/sige3-b.jpg)
 
@@ -119,8 +119,8 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
             <th><li>2x USB2.0, supports High Speed (480Mbps), Full Speed (12Mbps), and Low Speed (1.5Mbps)</li><li>1x USB Type-C 3.0</li></th>
         </tr>
         <tr>
-            <th>40-pin</th>
-            <th><li>Compatible with Raspberry Pi 40-pin, supports various peripherals</li><li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>
+            <th>40-PIN</th>
+            <th><li>Compatible with Raspberry Pi 40-PIN, supports various peripherals</li><li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>
         </tr>
         <tr>
             <th>Other</th>
@@ -173,7 +173,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
 | USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
 | USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
 | MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
-| 40-Pin Header| yes | yes | yes | yes |
+| 40-PIN Header| yes | yes | yes | yes |
 | LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
 |Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
@@ -195,7 +195,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
 
 <details>
     <summary>
-        40-pin header
+        40-PIN header
     </summary>
 <div className='gpio_style'>
 

@@ -114,7 +114,7 @@ Sige7 - 连接创新，无限可能
             <th><li>2x USB3.0（USB3.1 Gen1），高达5Gbps数据速率</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li></th>
         </tr>
         <tr>
-            <th>40-pin</th>
+            <th>40-PIN</th>
             <th><li>和树莓派40pin可完全兼容，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
         </tr>
         <tr>

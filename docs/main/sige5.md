@@ -151,9 +151,9 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             </th>
         </tr>
         <tr>
-            <th>40-pin</th>
+            <th>40-PIN</th>
             <th>
-                <li>Compatible with Raspberry Pi 40-pin GPIO, supports various accessory peripherals</li>
+                <li>Compatible with Raspberry Pi 40-PIN GPIO, supports various accessory peripherals</li>
                 <li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li>
             </th>
         </tr>
@@ -208,7 +208,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 | USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
 | USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
 | MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
-| 40-Pin Header| yes | yes | yes | yes |
+| 40-PIN Header| yes | yes | yes | yes |
 | LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
 |Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
@@ -229,7 +229,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 
 <details>
     <summary>
-        40-pin header
+        40-PIN header
     </summary>
    <div className='gpio_style'>
 

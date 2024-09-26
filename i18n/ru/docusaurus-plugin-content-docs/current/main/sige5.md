@@ -144,9 +144,9 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
             </th>
         </tr>
         <tr>
-            <th>40-pin</th>
+            <th>40-PIN</th>
             <th>
-                <li>Compatible with Raspberry Pi 40-pin GPIO, supports various accessory peripherals</li>
+                <li>Compatible with Raspberry Pi 40-PIN GPIO, supports various accessory peripherals</li>
                 <li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li>
             </th>
         </tr>
@@ -193,7 +193,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 
 <details>
     <summary>
-        40-pin header
+        40-PIN header
     </summary>
    <div className='gpio_style'>
 

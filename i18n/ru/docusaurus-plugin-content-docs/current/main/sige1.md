@@ -128,9 +128,9 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
             </th>
         </tr>
         <tr>
-            <th>40-pin</th>
+            <th>40-PIN</th>
             <th>
-                <li>Compatible with Raspberry Pi 40-pin GPIO, supports various accessory peripherals</li>
+                <li>Compatible with Raspberry Pi 40-PIN GPIO, supports various accessory peripherals</li>
                 <li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li>
             </th>
         </tr>
@@ -194,7 +194,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 
 <details>
     <summary>
-        40-pin header
+        40-PIN header
     </summary>
 <div className='gpio_style'>
 

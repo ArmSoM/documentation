@@ -31,7 +31,7 @@ The Sige user manual helps users understand the basic usage of Sige products and
 | USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
 | USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
 | MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
-| 40-Pin Header| yes | yes | yes | yes |
+| 40-PIN Header| yes | yes | yes | yes |
 | LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
 |Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
@@ -56,7 +56,7 @@ The Sige user manual helps users understand the basic usage of Sige products and
 | USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 2× USB 3.0 (capable of simultaneous full throughput) <br/> 2× USB 2.0 |
 | USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack | 
 | MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | Dual 4-lane MIPI CSI/DSI transceivers |
-| 40-Pin Header| yes | yes | yes | 
+| 40-PIN Header| yes | yes | yes | 
 | LEDs | 2x LEDs | 2x LEDs | - | 2x LEDs|
 |Board Dimensions| 92mm × 62mm | 92mm × 62mm | 85.0 x 56.0 mm |  -->
 
@@ -506,7 +506,7 @@ armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 
 ### 40 PIN  
 
-Sige products  provides a 40-pin GPIO header, compatible with most sensors on the market.   
+Sige products  provides a 40-PIN GPIO header, compatible with most sensors on the market.   
 
 ### RGB LED
 

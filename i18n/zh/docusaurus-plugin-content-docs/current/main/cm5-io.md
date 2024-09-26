@@ -41,7 +41,7 @@ CM5-IO Board 使用12V DC供电。
 
 <details>
     <summary>
-        40-pin 座子
+       40-PIN 座子
     </summary>
 <div className='gpio_style'>
 
@@ -102,10 +102,9 @@ CM5-IO Board 使用12V DC供电。
         VRTC
     </summary>
 
-0.8mm connector(J27)
+0.8mm 连接器(J27)
 
 |Pin        | Assignment  | Description|
-
  :--------: | :---------: | :--------: | 
 |1          | +         | 正极  |
 |2          | -         | 负极  |

@@ -20,7 +20,7 @@ The cm5-io board is an expansion board specifically designed for the CM5 computi
 - 4x USB 3.0 Type-A
 - Gigabit Ethernet RJ45 with PoE support
 - Firmware flashing and device mode via USB Type-C
-- GPIO: 40-pin header
+- GPIO: 40-PIN header
 - Power connector: DC Barrel jack for 12V power input
 - Expansion: M.2 (M-key, supports PCIe), microSD
 - MIPI DSI: 1x 4-lane MIPI DSI, supports up to 4K@60fps (x4)
@@ -42,7 +42,7 @@ The cm5-io board uses a 12V DC power supply.
 
 <details>
     <summary>
-        40-pin header
+        40-PIN header
     </summary>
 <div className='gpio_style'>
 

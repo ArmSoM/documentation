@@ -28,7 +28,7 @@ The AIM-IO Board is a companion board for AIM modules designed to assist develop
 * 1x HDMI-out
 * 4x USB 3.0 Type-A
 * Gigabit Ethernet
-* GPIO: 40-pin expansion header
+* GPIO: 40-PIN expansion header
 * POE: 5 V Power Over Ethernet
 * Power Connector: DC Barrel jack for 12V power input
 * Expansion: M.2 (E-key, PCIe/USB/SDIO/UART), microSD

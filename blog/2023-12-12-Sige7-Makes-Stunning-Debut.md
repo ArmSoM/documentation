@@ -112,7 +112,7 @@ Super powerful computing performance, multi-core computing power surpasses Core 
             <th><li>2x USB3.0（USB3.1 Gen1）, up to 5Gbps data rate  </li><li>1x USB Type-C 3.0（DP1.4/OTG/PD Fast charger）</li></th>
         </tr>
         <tr>
-            <th>40-pin</th>
+            <th>40-PIN</th>
              <th><li>Fully compatible with Raspberry Pi 40pin, connect to a variety of accessory peripherals</li><li>Support UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
         </tr>
         <tr>

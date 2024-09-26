@@ -75,7 +75,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 | **Video Resolution**    | **Supports 4K@120fps**            | Supports 4K@30fps              |
 | **Network Interface**   | 1x Gigabit Ethernet port          | 1x Gigabit Ethernet port       |
 | **USB Ports**           | **1x USB3.0，1x USB2.0**   | 1x USB 2.0                  |
-| **GPIO**                | 40-pin GPIO                       | 40-pin GPIO                    |
+| **GPIO**                | 40-PIN GPIO                       | 40-PIN GPIO                    |
 | **Expandability**       | **2x PCIe/SATA/USB 3.0 **     | 1x PCIe 2.0                    |
 | **Camera Interface**    | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI |
 | **Display Interface**   | 1x 4-lane MIPI DSI                | 2x 4-lane MIPI DSI             |

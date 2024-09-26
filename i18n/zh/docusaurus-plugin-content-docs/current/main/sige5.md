@@ -142,7 +142,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
             <th><li>1x USB3.0（支持USB3.1 Gen1），高达5Gbps数据速率</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li><li>1x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
         </tr>
         <tr>
-            <th>40-pin</th>
+            <th>40-PIN</th>
             <th><li>和树莓派40pin兼容部分引脚功能，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
         </tr>
         <tr>
@@ -196,7 +196,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 | USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
 | USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
 | MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
-| 40-Pin Header| yes | yes | yes | yes |
+| 40-PIN Header| yes | yes | yes | yes |
 | LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
 |Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
@@ -216,7 +216,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 ### 引脚定义
 <details>
     <summary>
-        40-pin 座子
+        40-PIN 座子
     </summary>
     <div className='gpio_style'>
 

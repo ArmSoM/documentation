@@ -43,7 +43,7 @@ overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 
 ## 4. 40-PIN 功能测试
 
-40PIN上的引脚有些一个引脚可以复用多种功能，可以按需配置功能，具体引脚功能可以查看板卡的`40-pin header`
+40PIN上的引脚有些一个引脚可以复用多种功能，可以按需配置功能，具体引脚功能可以查看板卡的`40-PIN header`
 
 以sige7上40PIN里面的11、15脚打开串口功能为例：
 - 查看系统打开的串口
