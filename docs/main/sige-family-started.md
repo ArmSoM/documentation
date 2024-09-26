@@ -687,3 +687,124 @@ overlays=armsom-sige3-display-10hd // Sige3
 Shortcut keys: Ctrl + S to save    Ctrl + X to exit
 
 After editing, restart the device to apply the Overlays settings and support Display 10 HD.
+
+## CPU/GPU/NPU/DDR
+
+The following example uses Sige7 to illustrate how to set the fixed frequency and performance modes for CPU, GPU, NPU, and DDR.
+
+### Fixed Frequency Settings
+#### CPU Fixed Frequency
+The ArmSoM-Sige7 CPU consists of 4 A55 cores and 4 A76 cores, managed in three separate groups. The nodes are as follows:
+
+```
+/sys/devices/system/cpu/cpufreq/policy0: (corresponding to 4 A55: CPU0-3)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+/sys/devices/system/cpu/cpufreq/policy4: (corresponding to 2 A76: CPU4-5)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+/sys/devices/system/cpu/cpufreq/policy6: (corresponding to 2 A76: CPU6-7)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_frequencies // Get current supported CPU frequencies
+408000 600000 816000 1008000 1200000 1416000 1608000 1800000 2016000 2208000 2400000 
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_governors // Get CPU operating modes
+conservative ondemand userspace powersave performance schedutil 
+```
+
+The default is the automatic frequency scaling mode: schedutil (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 2016000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_setspeed // Set frequency to 2016000
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq // Verify if set successfully
+2016000
+```
+The other two CPU groups can be set similarly by operating the corresponding nodes.
+
+#### GPU Fixed Frequency
+##### GPU Node Path
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/fb000000.gpu/    
+available_frequencies  cur_freq  governor  max_freq  name              power      target_freq  trans_stat
+available_governors    device    load      min_freq  polling_interval  subsystem  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/available_frequencies  // Get supported GPU frequencies
+1000000000 900000000 800000000 700000000 600000000 500000000 400000000 300000000 200000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/available_governors // Get GPU operating modes
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+The default is the automatic frequency scaling mode: simple_ondemand (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/fb000000.gpu/governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 1000000000 > /sys/class/devfreq/fb000000.gpu/userspace/set_freq // Set frequency to 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/cur_freq  // Verify if set successfully
+1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/load   // Check GPU load
+28@300000000Hz
+```
+
+#### DDR Fixed Frequency
+##### DDR Node Path
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/dmc/  
+available_frequencies  cur_freq  downdifferential  load      min_freq  polling_interval  subsystem      target_freq  trans_stat  upthreshold
+available_governors    device    governor          max_freq  name      power             system_status  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/available_frequencies // Get supported DDR frequencies
+528000000 1068000000 1560000000 2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/available_governors // Get DDR operating modes
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+The default is the automatic frequency scaling mode: dmc_ondemand (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings 
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/dmc/governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 2112000000 > /sys/class/devfreq/dmc/userspace/set_freq  // Set frequency to 2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/cur_freq   // Verify if set successfully
+2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/load  // Check DDR load
+7@528000000Hz
+```
+
+#### NPU Fixed Frequency
+##### NPU Node Path
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/fdab0000.npu/
+available_frequencies  cur_freq  governor  max_freq  name              power      target_freq  trans_stat  userspace
+available_governors    device    load      min_freq  polling_interval  subsystem  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/available_frequencies     // Get supported NPU frequencies       
+200000000 300000000 400000000 500000000 600000000 700000000 800000000 900000000 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/available_governors // Get NPU operating modes 
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+The default is the automatic frequency scaling mode: simple_ondemand (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings 
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/fdab0000.npu/governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 1000000000 > /sys/class/devfreq/fdab0000.npu/userspace/set_freq // Set frequency to 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/cur_freq  // Verify if set successfully
+1000000000
+root@armsom-sige7:/ # cat /sys/kernel/debug/rknpu/load // Check NPU load
+NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
+```
+
+### Performance Modes for CPU/GPU/NPU/DDR
+
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo performance > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/fb000000.gpu/governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/dmc/governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/fdab0000.npu/governor
+```

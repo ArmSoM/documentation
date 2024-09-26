@@ -5,8 +5,6 @@ sidebar_position: 15
 ---
 # ArmSoM  Camera Module 1
 
-## 1. Camera Introduction
-
 ArmSoM uses a high-performance ultra clear 4K camera ov13850.
 
 The OV13850 module has the following characteristics:
@@ -19,7 +17,12 @@ Dual Wire Serial Bus Control (SCCB)
 
 ![armsom-camera-module1](/img/accessories/armsom-camera-module1.png)
 
-### 1.1 Pinout
+## Compatibility
+- Sige 3/5/7
+- CM5
+- AIM7
+
+## Pinout
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| GND| Ground
@@ -64,69 +67,6 @@ Dual Wire Serial Bus Control (SCCB)
         </div>
     </a>
 </div>
-
-<!-- ## 2. Enable Camera Overlay
-
-### 2.1 Ubuntu22.04 image to enable camera overlay
-
-- Use nano to open the /boot/firmware/ubuntuEnv.txt file:
-
-```bash
-sudo nano /boot/firmware/ubuntuEnv.txt
-```
-
-- Find the "overlays=" keyword in the file, and add the following: 
-
-```bash
-overlays=armsom-sige7-camera-imx415-4k
-```
-
-Shortcut keys: Ctrl + S to save, Ctrl + X to exit
-
-After editing and saving, restart the device to change the Overlays settings to support the camera.
-
-### 2.2 Armbian image to enable camera overlay
-
-- Use nano to open the /boot/armbianEnv.txt file:
-
-```bash 
-sudo nano /boot/armbianEnv.txt
-```
-
-- Find or add the "overlays=" keyword in the file.
-
-
-```bash
-overlays=armsom-sige7-camera-imx415-4k 
-```
-
-Shortcut keys: Ctrl + S to save, Ctrl + X to exit  
-
-After editing and saving, restart the device to change the Overlays settings to support the camera.
-
-## 3. Use the Camera
-
-You can download cheese and then use the camera with the following commands:
-
-```bash
-armsom@armsom: sudo apt update
-armsom@armsom: sudo apt install cheese  
-armsom@armsom: ./cheese
-```
-
-Or you can also preview the camera using terminal commands:
-
-- Preview camera 1:
-
-```bash
-gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink
-```
-
-- Preview camera 2: 
-
-```bash
-gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink 
-``` -->
 
 ## Easy to buy sample
 ArmSoM online shop: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)

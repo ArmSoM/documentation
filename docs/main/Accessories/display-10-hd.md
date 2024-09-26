@@ -12,6 +12,11 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
+## Compatibility
+- Sige 3/5/7
+- CM5
+- AIM7
+
 ## General information 
 - Outline Dimension:  143×228.70×2.25 (TYP.) mm 
 - Display area:  135.36(H)×216.58(V) mm 

@@ -11,6 +11,11 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
+### 兼容性
+- Sige 3/5/7
+- CM5
+- AIM7
+
 ## 参数 
 
 - 外形尺寸：143×228.70×2.25（典型值）mm
