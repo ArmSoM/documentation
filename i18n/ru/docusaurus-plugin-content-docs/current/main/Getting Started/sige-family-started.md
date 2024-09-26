@@ -10,7 +10,7 @@ The Sige user manual helps users understand the basic usage of Sige products and
 
 <details>
     <summary>
-        Comparison of Sige7/5/3/1 Specifications
+       Comparison of Specifications for Sige7/5/3/1
     </summary>
 
 |        | Sige7  | Sige5 | Sige3 |Sige1 |
