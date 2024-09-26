@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige系列使用手册"
-sidebar_position: 1
+sidebar_position: 20
 slug: /sige-family-started
 ---
 
@@ -678,3 +678,123 @@ overlays=armsom-sige3-display-10hd // Sige3
 快捷键：Ctrl + S保存    Ctrl + X退出
 
 编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
+
+## CPU/GPU/NPU/DDR
+
+以下以Sige7为例，CPU GPU NPU DDR定频和性能模式设置方法
+
+### CPU/GPU/NPU/DDR 定频
+#### CPU 定频
+ArmSoM-Sige7 的cpu是4个A55+4个A76，分为3组单独管理，节点分别是：
+
+```
+/sys/devices/system/cpu/cpufreq/policy0:（对应4个A55：CPU0-3）
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+/sys/devices/system/cpu/cpufreq/policy4:(对应2个A76：CPU4-5)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+/sys/devices/system/cpu/cpufreq/policy6:(对应2个A76：CPU6-7)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_frequencies // 获取当前CPU支持的频点
+408000 600000 816000 1008000 1200000 1416000 1608000 1800000 2016000 2208000 2400000 
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_governors // 获取cpu运行的模式
+conservative ondemand userspace powersave performance schedutil 
+```
+
+默认是自动变频模式：schedutil（恢复的话设置为该模式即可）
+
+##### 设置手动定频
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor // 手动定频模式：userspace
+root@armsom-sige7:/ # echo 2016000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_setspeed // 设置频率为2016000
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq // 确认是否设置成功
+2016000
+```
+其他两组CPU也是类似的方式进行设置，操作对应的节点即可。
+
+#### GPU定频
+##### GPU的节点路径
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/fb000000.gpu/    
+available_frequencies  cur_freq  governor  max_freq  name              power      target_freq  trans_stat
+available_governors    device    load      min_freq  polling_interval  subsystem  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/available_frequencies  // 获取GPU支持的频点                                                                        1000000000 900000000 800000000 700000000 600000000 500000000 400000000 300000000 200000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/available_governors // 获取GPU运行的模式
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+默认是自动变频模式：simple_ondemand（恢复的话设置为该模式即可）
+
+##### 设置手动定频
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/fb000000.gpu/governor // 手动定频模式：userspace
+root@armsom-sige7:/ # echo 1000000000 > /sys/class/devfreq/fb000000.gpu/userspace/set_freq // 设置频率为1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/cur_freq  // 确认是否设置成功
+1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/load   // 查看GPU的负载
+28@300000000Hz
+```
+
+#### DDR定频
+##### DDR的节点路径
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/dmc/  
+available_frequencies  cur_freq  downdifferential  load      min_freq  polling_interval  subsystem      target_freq  trans_stat  upthreshold
+available_governors    device    governor          max_freq  name      power             system_status  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/available_frequencies // 获取DDR支持的频点
+528000000 1068000000 1560000000 2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/available_governors // 获取DDR运行的模式
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+默认是自动变频模式：dmc_ondemand（恢复的话设置为该模式即可）
+
+##### 设置手动定频 
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/dmc/governor // 手动定频模式：userspace
+root@armsom-sige7:/ # echo 2112000000 > /sys/class/devfreq/dmc/userspace/set_freq  // 设置频率为2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/cur_freq   // 确认是否设置成功
+2112000000
+root@armsom-sige7_evb7:/ # cat /sys/class/devfreq/dmc/load  // 查看DDR的负载
+7@528000000Hz
+```
+
+#### NPU定频
+##### NPU的节点路径
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/fdab0000.npu/
+available_frequencies  cur_freq  governor  max_freq  name              power      target_freq  trans_stat  userspace
+available_governors    device    load      min_freq  polling_interval  subsystem  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/available_frequencies     // 获取NPU支持的频点       
+200000000 300000000 400000000 500000000 600000000 700000000 800000000 900000000 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/// 获取NPU运行的模式available_governors 
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+默认是自动变频模式：simple_ondemand（恢复的话设置为该模式即可）
+
+##### 设置手动定频 
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/fdab0000.npu/governor // 手动定频模式：userspace
+root@armsom-sige7:/ # echo 1000000000 > /sys/class/devfreq/fdab0000.npu/userspace/set_freq // 设置频率为1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/cur_freq  // 确认是否设置成功
+1000000000
+root@armsom-sige7_evb7:/ # cat /sys/kernel/debug/rknpu/load // 查看NPU的负载
+NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
+```
+
+### CPU/GPU/NPU/DDR性能模式
+
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo performance > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+root@armsom-sige7:/ # echo performance > sys/class/devfreq/fb000000.gpu/governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/dmc/governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/fdab0000.npu/governor
+```

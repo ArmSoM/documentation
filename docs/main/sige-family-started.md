@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige Family Getting Started"
-sidebar_position: 2
+sidebar_position: 20
 slug: /sige-family-started
 ---
 # Sige Family User Manual 
