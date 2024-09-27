@@ -12,6 +12,10 @@ It not only protects your Sige product but also provides some heat dissipation. 
 
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
+:::tip
+Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be used together.
+:::
+
 ## Technical Specifications
 
 - Shell Material: Aluminum (AL6063)

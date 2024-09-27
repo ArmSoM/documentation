@@ -12,6 +12,11 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
+## Compatibility
+- Sige 3/5/7
+- CM5
+- AIM7
+
 ## General information 
 - Outline Dimension:  143×228.70×2.25 (TYP.) mm 
 - Display area:  135.36(H)×216.58(V) mm 
@@ -60,7 +65,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 |31-32| LEDK |LED Cathode 
 |33-38| NC |OPEN 
 |39-40| LEDA |LED Anode
-
+## Resources
 <div class="cards">
     <a href="https://drive.google.com/file/d/13BqkwRQGyNxGWXQ_LBf9IrNkQIbPgAB4/view?usp=drive_link" class="card-link">
         <div class="card">
@@ -72,6 +77,17 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
             </div>
         </div>
     </a>
+    <a href="https://drive.google.com/drive/folders/1thrBg90Zbeda20YROLaKWQCQYW65OX6S" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📜</i>
+            </div>
+            <div class="content">
+                <h2>armsom-10HD.pdf</h2>
+            </div>
+        </div>
+    </a>
+
 </div>
 
 ## Easy to buy sample

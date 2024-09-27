@@ -3,40 +3,68 @@ sidebar_label: "overlay"
 sidebar_position: 5
 ---
 
-# 设备树设置
-
-## 1. 简介
-
-设备树Overlays使得用一个内核支持多个硬件配置成为可能，而且不需要明确地加载或屏蔽内核模块。
-
-## 2. 支持overlay的镜像
-
-目前支持overlay的镜像有：Ubuntu22.04，Armbian
-
-## 3. 如何启用一个overlay
-
-### 3.1 Ubuntu22.04镜像启用overlay
-
-- Ubuntu22.04镜像的overlay文件存放于板端的路径：/boot/firmware/dtbs/rockchip/overlay/*.dtbo
-
-- 在 /boot/firmware/ubuntuEnv.txt文件中找到 "overlays=" 这个关键词。如下是为 ArmSoM-Sige7 使用两个覆盖层的示例。
-
+# Device Tree Settings
+## 1.  brief introduction
+The device tree Overlays make it possible to support multiple hardware configurations with a single kernel without explicitly loading or masking kernel modules.
+## 2.  Supporting overlay images
+The currently supported overlay images are: Ubuntu 22.04, Armbian.
+## 3.  How to enable an overlay
+### 3.1 Ubuntu 22.04 Image Enable Overlay
+- The overlay file of Ubuntu 22.04 image is stored in the path on the board:/boot/firmware/dtbs/rockchip/overlay/*. dtbo
+- Find the keyword `overlays=` in the/boot/firmware/ubuntEnv. txt file. The following is an example of using two overlay layers for ArmSoM Sige7.
 ```bash
 overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 ```
+After editing, restart the device to change the overlay settings.
 
-​	编辑好之后重启设备来更改overlays设置。
-
-
-
-### 3.2 Armbian镜像启用overlay
-
-- Armbian镜像的overlay文件存放于板端的路径：/boot/dtb/rockchip/overlay/*.dtbo
-
-- 在 /boot/armbianEnv.txt 文件中找到或者添加 "overlays=" 这个关键词。如下是为 ArmSoM-Sige7 使用两个覆盖层的示例。
-
+### 3.2 Enable overlay for Armbian images
+- The overlay file of the Armbian image is stored in the path on the board:/boot/dtb/dockchip/overlay/*. dtbo
+- Find or add the keyword 'overlays=' in the/boot/armbianEnv. txt file. The following is an example of using two overlay layers for ArmSoM Sige7.
 ```bash
 overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 ```
+After editing, restart the device to change the overlay settings.
 
-​	编辑好之后重启设备来更改overlays设置。
+## 4.  40-PIN functional test
+Some of the pins on the 40PIN can be reused for multiple functions, which can be configured as needed. For specific pin functions, please refer to the `40 pin header` on the board.
+
+Taking the 11 and 15 pins in the 40PIN on Sige7 to open the serial port function as an example:
+- View the serial ports opened by the system
+```bash
+root@armsom-sige7 :/boot# ls /dev/ttyS*
+/dev/ttyS6
+```
+- Open overlay
+
+The serial ports corresponding to pins 11 and 15 on the 40PIN are UART 7_m1, and the corresponding overlay file is`/boot/dtb/rockchip/overlay/rk3588-uart7-m1.dtbo`.
+
+Edit/boot/armbianEnv. txt file:
+```bash
+root@armsom-sige7 :/boot# cat armbianEnv.txt
+verbosity=1
+bootlogo=false
+console=both
+overlay_prefix=rockchip-rk3588
+overlays=rk3588-uart7-m1
+fdtfile=rockchip/rk3588-bananapi-m7.dtb
+rootdev=UUID=a61c17cd-2e49-4302-879c-6cb86ebf07d1
+rootfstype=ext4
+usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
+```
+Only the line `overlays=` has been added here.
+
+Configuration takes effect after restart:
+```bash
+root@armsom-sige7 :/boot# ls /dev/ttyS*
+/dev/ttyS6 /dev/ttyS7
+```
+:::tip 
+The functions in the 40PIN are turned off by default and need to be manually turned on to use
+
+Add configuration in/boot/armbianEnv. txt and restart the Linux system to take effect
+
+If only one function needs to be opened, just fill in one. If there are multiple functions, separate them with spaces after `overlays=`
+overlays=uart2-m0 uart3-m1 uart4-m2 uart7-m1
+
+Similar to UART 7-m1 and UART 7-m2, they cannot be used simultaneously
+:::

@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige Family Getting Started"
-sidebar_position: 2
+sidebar_position: 20
 slug: /sige-family-started
 ---
 # Sige Family User Manual 
@@ -508,6 +508,61 @@ armsom@armsom-sige:/# cat /sys/class/hwmon/hwmon9/pwm1
 
 Sige products  provides a 40-PIN GPIO header, compatible with most sensors on the market.   
 
+#### Wiring-armbian Instructions
+
+Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wiring-armbian).
+
+- Test the output of the `gpio readall` command as shown below:
+
+```
+ +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  
+ | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |  
+ +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+  
+ |      |     |     3.3V |        |   |  1 || 2  |   |        | 5V       |     |      |  
+ |  139 |   0 |    SDA.7 |     IN | 1 |  3 || 4  |   |        | 5V       |     |      |  
+ |  138 |   1 |    SCL.7 |     IN | 1 |  5 || 6  |   |        | GND      |     |      |  
+ |  115 |   2 |    PWM15 |    OUT | 0 |  7 || 8  | 1 | ALT10  | GPIO0_B5 | 3   | 13   |  
+ |      |     |      GND |        |   |  9 || 10 | 1 | ALT10  | GPIO0_B6 | 4   | 14   |  
+ |  113 |   5 | GPIO3_C1 |     IN | 0 | 11 || 12 | 1 | IN     | GPIO3_B5 | 6   | 109  |  
+ |  111 |   7 | GPIO3_B7 |     IN | 0 | 13 || 14 |   |        | GND      |     |      |  
+ |  112 |   8 | GPIO3_C0 |     IN | 0 | 15 || 16 | 0 | IN     | GPIO3_A4 | 9   | 100  |  
+ |      |     |     3.3V |        |   | 17 || 18 | 1 | IN     | GPIO4_C4 | 10  | 148  |  
+ |   42 |  11 | SPI0_TXD |     IN | 1 | 19 || 20 |   |        | GND      |     |      |  
+ |   41 |  12 | SPI0_RXD |     IN | 1 | 21 || 22 |   |        | SARADC_IN4 |     |      |  
+ |   43 |  14 | SPI0_CLK |     IN | 1 | 23 || 24 | 1 | IN     | SPI0_CS0 | 15  | 44   |  
+ |      |     |      GND |        |   | 25 || 26 | 1 | IN     | SPI0_CS1 | 16  | 45   |  
+ |  150 |  17 | GPIO4_C6 |     IN | 1 | 27 || 28 | 0 | OUT    | GPIO4_C5 | 18  | 149  |  
+ |   63 |  19 | GPIO1_D7 |     IN | 1 | 29 || 30 |   |        | GND      |     |      |  
+ |   47 |  20 | GPIO1_B7 |     IN | 1 | 31 || 32 | 0 | IN     | GPIO3_C2 | 21  | 114  |  
+ |  103 |  22 | GPIO3_A7 |     IN | 1 | 33 || 34 |   |        | GND      |     |      |  
+ |  110 |  23 | GPIO3_B6 |     IN | 0 | 35 || 36 | 0 | IN     | GPIO3_B1 | 24  | 105  |  
+ |    0 |  25 | GPIO0_A0 |     IN | 1 | 37 || 38 | 0 | IN     | GPIO3_B2 | 26  | 106  |  
+ |      |     |      GND |        |   | 39 || 40 | 1 | IN     | GPIO3_B3 | 27  | 107  |  
+ +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+  
+ | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |  
+ +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  
+```
+
+- Set the GPIO pin to output mode. The third parameter requires the wPi number corresponding to the pin.
+
+```
+root@armsom-sige7:~/wiring-armbian# gpio mode 2 out
+```
+
+- Set the GPIO pin to output a low level. After setting, you can measure the voltage on the pin with a multimeter; if it reads 0V, the low level is set successfully.
+
+```
+root@armsom-sige7:~/wiring-armbian# gpio write 2 0
+```
+
+- Set the GPIO pin to output a high level. After setting, you can measure the voltage on the pin with a multimeter; if it reads 3.3V, the high level is set successfully.
+
+```
+root@armsom-sige7:~/wiring-armbian# gpio write 2 1
+```
+
+- The setup method for other pins is similar; just change the wPi number to the corresponding pin's number.
+
 ### RGB LED
 
 Sige features two user indicator LEDs: a green LED and a red LED. 
@@ -561,45 +616,46 @@ Fri 3rd Nov 10:36:01 UTC 2023
 ```
 
 ### MIPI CSI
+#### Using ArmSoM Camera-Module1
 
-Use the IMX415 module for the camera. After connecting and powering on the camera module you can view the boot log:  
+The camera uses the [camera-module1](./armsom-camera-module1). After connecting and powering on the camera module, you can view the boot log.
 
-```bash  
-armsom@armsom-sige7:/# dmesg | grep imx415  
-[ 2.547754] imx415 3-001a: driver version: 00.01.08  
-[ 2.547767] imx415 3-001a: Get hdr mode failed! no hdr default  
-[ 2.547819] imx415 3-001a: Failed to get power-gpios
-[ 2.547826] imx415 3-001a: could not get default pinstate
-[ 2.547831] imx415 3-001a: could not get sleep pinstate
-[ 2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator  
-[ 2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator  
-[ 2.547945] imx415 3-001a: supply avdd not found, using dummy regulator  
-[ 2.613843] imx415 3-001a: Detected imx415 id 0000e0  
-[ 2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5  
-[ 18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0  
-[ 18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203) 
+```bash
+root@armsom-sige7:/# dmesg | grep ov13850
+[    2.302905] ov13850 5-0010: driver version: 00.01.05
+[    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
+[    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
+[    2.303153] ov13850 5-0010: supply dovdd not found, using dummy regulator
+[    2.303186] ov13850 5-0010: supply dvdd not found, using dummy regulator
+[    2.303213] ov13850 5-0010: could not get default pinstate
+[    2.303220] ov13850 5-0010: could not get sleep pinstate
+[    2.308532] ov13850 5-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
+[    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
-  Use v4l2-ctl for image capture:  
-```  
-// MIPI-CSI1  
-armsom@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll  
+#### Capture images using `v4l2-ctl`
 
-// MIPI-CSI2
-armsom@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+```bash
+# MIPI-CSI1
+root@armsom-sige7:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll 
+# MIPI-CSI0
+root@armsom-sige7:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-Record video directly with gst-launch-1.0:  
-```  
-// MIPI-CSI1  
-armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink  
+#### Record video using `gst-launch-1.0`
 
-// MIPI-CSI2
-armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+```bash
+# MIPI-CSI1
+root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+# MIPI-CSI0
+root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+root@armsom-sige3:/# gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
+
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-[ArmSoM camera-module1](./armsom-camera-module1)
+[ArmSoM Camera-Module1](./armsom-camera-module1)
  
 ### MIPI DSI
 
@@ -631,3 +687,124 @@ overlays=armsom-sige3-display-10hd // Sige3
 Shortcut keys: Ctrl + S to save    Ctrl + X to exit
 
 After editing, restart the device to apply the Overlays settings and support Display 10 HD.
+
+## CPU/GPU/NPU/DDR
+
+The following example uses Sige7 to illustrate how to set the fixed frequency and performance modes for CPU, GPU, NPU, and DDR.
+
+### Fixed Frequency Settings
+#### CPU Fixed Frequency
+The ArmSoM-Sige7 CPU consists of 4 A55 cores and 4 A76 cores, managed in three separate groups. The nodes are as follows:
+
+```
+/sys/devices/system/cpu/cpufreq/policy0: (corresponding to 4 A55: CPU0-3)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+/sys/devices/system/cpu/cpufreq/policy4: (corresponding to 2 A76: CPU4-5)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+/sys/devices/system/cpu/cpufreq/policy6: (corresponding to 2 A76: CPU6-7)
+affected_cpus     cpuinfo_max_freq  cpuinfo_transition_latency  scaling_available_frequencies  scaling_cur_freq  scaling_governor  scaling_min_freq  stats
+cpuinfo_cur_freq  cpuinfo_min_freq  related_cpus                scaling_available_governors    scaling_driver    scaling_max_freq  scaling_setspeed
+
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_frequencies // Get current supported CPU frequencies
+408000 600000 816000 1008000 1200000 1416000 1608000 1800000 2016000 2208000 2400000 
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_governors // Get CPU operating modes
+conservative ondemand userspace powersave performance schedutil 
+```
+
+The default is the automatic frequency scaling mode: schedutil (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 2016000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_setspeed // Set frequency to 2016000
+root@armsom-sige7:/ # cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq // Verify if set successfully
+2016000
+```
+The other two CPU groups can be set similarly by operating the corresponding nodes.
+
+#### GPU Fixed Frequency
+##### GPU Node Path
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/fb000000.gpu/    
+available_frequencies  cur_freq  governor  max_freq  name              power      target_freq  trans_stat
+available_governors    device    load      min_freq  polling_interval  subsystem  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/available_frequencies  // Get supported GPU frequencies
+1000000000 900000000 800000000 700000000 600000000 500000000 400000000 300000000 200000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/available_governors // Get GPU operating modes
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+The default is the automatic frequency scaling mode: simple_ondemand (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/fb000000.gpu/governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 1000000000 > /sys/class/devfreq/fb000000.gpu/userspace/set_freq // Set frequency to 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/cur_freq  // Verify if set successfully
+1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fb000000.gpu/load   // Check GPU load
+28@300000000Hz
+```
+
+#### DDR Fixed Frequency
+##### DDR Node Path
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/dmc/  
+available_frequencies  cur_freq  downdifferential  load      min_freq  polling_interval  subsystem      target_freq  trans_stat  upthreshold
+available_governors    device    governor          max_freq  name      power             system_status  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/available_frequencies // Get supported DDR frequencies
+528000000 1068000000 1560000000 2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/available_governors // Get DDR operating modes
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+The default is the automatic frequency scaling mode: dmc_ondemand (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings 
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/dmc/governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 2112000000 > /sys/class/devfreq/dmc/userspace/set_freq  // Set frequency to 2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/cur_freq   // Verify if set successfully
+2112000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/dmc/load  // Check DDR load
+7@528000000Hz
+```
+
+#### NPU Fixed Frequency
+##### NPU Node Path
+```
+root@armsom-sige7:/ # ls /sys/class/devfreq/fdab0000.npu/
+available_frequencies  cur_freq  governor  max_freq  name              power      target_freq  trans_stat  userspace
+available_governors    device    load      min_freq  polling_interval  subsystem  timer        uevent
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/available_frequencies     // Get supported NPU frequencies       
+200000000 300000000 400000000 500000000 600000000 700000000 800000000 900000000 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/available_governors // Get NPU operating modes 
+dmc_ondemand userspace powersave performance simple_ondemand
+```
+The default is the automatic frequency scaling mode: simple_ondemand (to restore, set to this mode).
+
+##### Manual Fixed Frequency Settings 
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo userspace > /sys/class/devfreq/fdab0000.npu/governor // Manual fixed frequency mode: userspace
+root@armsom-sige7:/ # echo 1000000000 > /sys/class/devfreq/fdab0000.npu/userspace/set_freq // Set frequency to 1000000000
+root@armsom-sige7:/ # cat /sys/class/devfreq/fdab0000.npu/cur_freq  // Verify if set successfully
+1000000000
+root@armsom-sige7:/ # cat /sys/kernel/debug/rknpu/load // Check NPU load
+NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
+```
+
+### Performance Modes for CPU/GPU/NPU/DDR
+
+```
+root@armsom-sige7:/ $ su
+root@armsom-sige7:/ # echo performance > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/fb000000.gpu/governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/dmc/governor
+root@armsom-sige7:/ # echo performance > /sys/class/devfreq/fdab0000.npu/governor
+```

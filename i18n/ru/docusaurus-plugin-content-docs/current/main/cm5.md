@@ -14,6 +14,13 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
 
 ![ArmSoM-CM5](/img/cm/cm5.png)
 
+:::tip Rockchip RK3576
+- [ArmSoM-Sige5](./armsom-sige5) single-board computer;
+- [ArmSoM-CM5](./armsom-cm5) RK3576 CM5 Compute Module, [ArmSoM-CM5-IO](./armsom-cm5-io) CM5 companion IO board;
+
+Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM helps users easily transition from concept to prototype to mass production, making it an ideal creative platform for makers, dreamers, and hobbyists.
+:::
+
 ### Key Specifications
 
 - **SOC:** Rockchip RK3576
@@ -25,7 +32,7 @@ The ArmSoM-CM5 is a computing module powered by the Rockchip RK3576 second-gener
   - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
 - **RAM:** 8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
-- **Operating Voltage:** Wide input voltage range from 4.5V to 23V (voltage tolerance ±5%).
+- **Operating Voltage:** Wide input voltage range from 4.5V to 5.5V (voltage tolerance ±5%).
 - **Operating Temperature:** 0℃ ~ 80℃
 - **Weight:** 12g
 - **Dimensions:**
@@ -76,7 +83,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 | **Network Interface**   | 1x Gigabit Ethernet port          | 1x Gigabit Ethernet port       |
 | **USB Ports**           | **1x USB3.0，1x USB2.0**   | 1x USB 2.0                  |
 | **GPIO**                | 40-PIN GPIO                       | 40-PIN GPIO                    |
-| **Expandability**       | **2x PCIe/SATA/USB 3.0 **     | 1x PCIe 2.0                    |
+| **Expandability**       | **2x PCIe/SATA/USB 3.0**     | 1x PCIe 2.0                    |
 | **Camera Interface**    | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI |
 | **Display Interface**   | 1x 4-lane MIPI DSI                | 2x 4-lane MIPI DSI             |
 | **Power Input**         | 5V                                | 5V                             |
@@ -175,6 +182,11 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
   className="session-details-live-video"/>
 </details>
 
+### Hardware Pin Definitions
+
+![ArmSoM-cm5-pinlist-1](/img/cm/cm5-pinlist-1.png)
+![ArmSoM-cm5-pinlist-2](/img/cm/cm5-pinlist-2.png)
+
 ## Resources
 
 <div class="cards">
@@ -251,6 +263,112 @@ Network disk address:
 |![armbian-logo](/img/armbian-logo.webp) | Armbian for CM5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://www.armbian.com/armsom-cm5-io/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
+### Hardware Resources 
+
+<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="btn">
+  <span>CM5 Hardware Resources</span>
+</a>
+<br/>
+
+[ArmSoM-CM5 pin table](https://docs.google.com/spreadsheets/d/1TFBTV2u73eYIFKA2MqlkeFjA-SvN_Uhu/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true) - pin table
+
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1wbW_VyTEyQRrsDF8cvCp1zK1SsZ819un?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>CM5</h2>
+                <p>SCH,2D</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://drive.google.com/drive/folders/10bCEK2t1BuOJRAULnoEAem338c2W71xT?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>CM5-IO</h2>
+                <p>SCH,PCB,2D,SMD</p>
+            </div>
+        </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1FXvNMlOzZeEF601KSCylwkihR7lqFTtw?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
+        </div>
+    </div>
+</a>
+</div>
+
 ## Supply Declaration 
 
 ArmSoM-CM5 will remain in production until at least August 2034.
+
+## Accessories
+
+The official accessories designed for the ArmSoM-CM5-IO are intended to help you achieve optimal performance from your computer.
+
+<div class="cards">
+
+<a href="./armsom-display-10-hd" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Display-10-HD</h2>
+        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
+    </div>
+</div>
+</a>
+
+<a href="./armsom-camera-module1" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Camera Module 1</h2>
+        <p>The camera module 1, compatible with the OV13850 sensor, is a low-power camera module.</p>
+    </div>
+</div>
+</a>
+</div>
+
+## Purchase Samples
+
+ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+
+ArmSoM Official AliExpress Store: 
+
+ArmSoM Official Taobao Store: 
+
+For OEM & ODM, please contact: sales@armsom.org
+
+
+## Notes
+
+:::caution [Electrostatic Protection]
+1. Before handling the device, please ensure you wear an anti-static wrist strap or take electrostatic discharge measures to prevent damage to the development board.
+2. Assembly should be performed in an electrostatic-safe environment, avoiding operations in dry and low-humidity conditions.
+3. When not in use, store the device in an anti-static bag and keep it in a suitably temperature-controlled, low-humidity environment to prevent static electricity buildup.
+4. When handling the device, avoid friction or collisions to prevent the generation of static electricity that could cause damage.
+5. When holding the device, try to avoid direct contact with the chips on the mainboard to prevent static damage.
+6. Do not plug or unplug wires or other devices while the device is operating to avoid damage from electrical surges.
+7. When connecting or disconnecting the GPIO/MIPI expansion interfaces, make sure to turn off the power and disconnect the power cable to prevent damage from electrical current.
+
+:::
+
+:::danger [Heat Management]
+
+Without effective cooling measures, the surface temperature of the main chip may exceed 60 degrees. When handling the device, please avoid direct contact with the SoC and surrounding power inductors to prevent burns. Ensure that the environment is well-ventilated during operation to prevent localized heat buildup, which could lead to overheating. Additionally, do not place the device in direct sunlight. It is recommended to choose between the official [cooling fan](./sige-active-cooling-kit), [heat sink](./sige-diy-case1), or third-party cooling kits based on specific usage conditions to ensure optimal cooling performance.
+
+:::

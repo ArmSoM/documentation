@@ -7,6 +7,11 @@ slug: /sige-active-cooling-kit
 
 The Sige Active Cooling Kit is a dedicated active cooling solution designed for the ArmSoM-Sige. It combines an aluminum heatsink with a temperature-controlled fan to keep your ArmSoM-Sige operating at a comfortable temperature even under heavy loads.
 
+:::tip
+Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be used together.
+:::
+
+
 ## Heatsink
 
 ![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)

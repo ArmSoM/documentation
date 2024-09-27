@@ -134,19 +134,18 @@ The cm5-io board uses a 12V DC power supply.
             <i>📚</i>
         </div>
         <div class="content">
-            <h2>Armbian源码</h2>
-            <p>适用于 ARM 开发板的 Linux</p>
+            <h2>Armbian </h2>
+            <p>Armbian Linux build framework</p>
         </div>
     </div>
 </a>
-
 <a href="https://github.com/armbian/linux-rockchip" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>cm5-io kernel</h2>
+            <h2>CM5 kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -158,8 +157,20 @@ The cm5-io board uses a 12V DC power supply.
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>cm5-io uboot</h2>
+            <h2>CM5 uboot</h2>
             <p>rockchip-linux/u-boot</p>
+        </div>
+    </div>
+</a>
+
+<a href="/general-tutorial/rknn-llm" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📕</i>
+        </div>
+        <div class="content">
+            <h2>RKNN-LLM</h2>
+            <p>AI models to Rockchip chips</p>
         </div>
     </div>
 </a>
@@ -194,54 +205,92 @@ Network disk address:
 
 Get schematics, PCB, DXF, and other hardware documentation for the cm5-io development kit to quickly start your development.
 
-*Coming Soon. Please contact sales@armsom.org for more information.*
+
+<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="btn">
+  <span>CM5 Hardware Resources</span>
+</a>
+<br/>
+
+[ArmSoM-CM5 pin table](https://docs.google.com/spreadsheets/d/1TFBTV2u73eYIFKA2MqlkeFjA-SvN_Uhu/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true) - pin table
+
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1wbW_VyTEyQRrsDF8cvCp1zK1SsZ819un?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📦</i>
+            </div>
+            <div class="content">
+                <h2>CM5</h2>
+                <p>SCH,2D</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://drive.google.com/drive/folders/10bCEK2t1BuOJRAULnoEAem338c2W71xT?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>CM5-IO</h2>
+                <p>SCH,PCB,2D,SMD</p>
+            </div>
+        </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1FXvNMlOzZeEF601KSCylwkihR7lqFTtw?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
+        </div>
+    </div>
+</a>
+</div>
+
 
 ## Getting Started
 
-The user manual for the CM5 development kit  to help software engineers master the use of the development board.
+Preparing for CM5-IO Usage
 
-Before starting to use the cm5-io, please prepare the following items:
+:::tip
+In the following text, "CM5 Kit" refers to CM5 + CM5-IO.
+:::
 
-### Tool Preparation
-* cm5-io main board
-* Power supply (choose one of three)
-  * USB Type-C PD 2.0 supporting 9V/2A, 12V/2A, 15V/2A and 20V/2A
-  * DC 12V adapter, 2.5mm
-  * PoE 12V
-* System installation (choose one of two)
-  * MicroSD /TF card boot
-    * MicroSD card/TF card, Class 10 or above, at least 8GB SDHC, and card reader
-    * Here are some high speed TF cards tested and verified by the ArmSoM team:  
-      * SanDisk 32GB TF (MicroSD) (developer recommended)
-      * SanDisk 32GB TF (MicroSD) Car Recorder & Security Monitoring Special Storage Card (recommended for long-term operation)  
-      * Sandisk TF 8G Class10 microSD
-      * Sandisk TF 128G Class10 microSD XC TF 128G 48MB/S
-  * Onboard eMMC boot  
-    * USB A to C data cable, to write images to the cm5-io eMMC or use fastboot/adb commands over the type C port. You need a USB A to type C data cable connecting the cm5-io and PC.  
+### Tools Preparation
+* Power supply
+* System Installation (Choose one)
+  * **eMMC Boot**
+    * USB Type-C cable: Use a Type-C cable to write the image to the CM5 Kit through the Type-C port. You will need a Type-C cable to connect the CM5 Kit to your PC.
+  * **MicroSD/TF Card Boot**
+    * MicroSD/TF card: Class 10 or above, at least 8GB SDHC, and a card reader.
+    * Below are high-speed TF cards tested and verified by the ArmSoM team:
+      * SanDisk 32GB TF (MicroSD) (Recommended for developers)
+      * SanDisk 32GB TF (MicroSD) Dashcam & Surveillance-specific storage card (Recommended for long-term operation)
+      * SanDisk TF 8G Class10 microSD
+      * SanDisk TF 128G Class10 microSD XC TF 128G 48MB/S
 
-### Optional Accessories 
-* USB keyboard & mouse
-* HDMI display and HDMI cable
-  * The cm5-io is equipped with a full-size HDMI port, with maximum support for 8K@60 display.
-  * HDMI EDID is used to determine the best display resolution. This resolution will be selected on displays and TVs that support 1080p (or 4K/8K). If not for 1080p, EDID will find the next available resolution.
+You can set up the CM5 Kit as an interactive desktop computer or as a headless computer that can only be accessed over the network. To set up the CM5 Kit as a headless computer, configure the hostname, user account, network connection, and SSH during the initial OS installation. If you plan to use the CM5 Kit directly, you will need the following additional accessories:
+
+**Optional Accessories**
+* Keyboard & Mouse
+* HDMI monitor and HDMI cable
 * Ethernet cable
-  * The cm5-io supports ethernet internet access, up to 2.5G.
-  * The network cable is used to connect the cm5-io to the local network and internet.  
-* Camera module 
-  * The cm5-io supports camera capabilities.
-  * It is recommended to use the imx415 module, available through the ArmSoM Official Taobao store.
+* Camera module
+  * For a 4-lane camera, it's recommended to use the [camera-module1](./armsom-camera-module1).
+  * For a 2-lane camera, use the Raspberry Pi [camera-module-v2](https://www.raspberrypi.com/products/camera-module-v2/).
 * LCD display
-  * The cm5-io supports LCD display capabilities.
-  * It is recommended to use the ArmSoM Display 10.1 HD, available through the ArmSoM Official Taobao store. 
-* Audio cable
-  * Standard 3.5mm jack can be used to play audio via speakers or headphones.
-* WiFi/Bluetooth card
-  * ArmSoM supports common wireless modules on the market, please check the Wireless section of the supported list.
-  * It is recommended to use RTL8852be, AP6256
-* USB-A to USB-C data cable
+  * It's recommended to use the [Display 10 HD](./armsom-display-10-hd).
+* Audio cable, 0.8mm vertical socket.
+* RTC battery, 0.8mm vertical socket.
+* Fan, 0.8mm vertical socket.
 
-### Image Flashing Options  
+### Power Supply
 
+* Supports DC 12V adapter, 2.5mm
+
+### Choosing a Flashing Method
 <div class="cards">
     <a href="./general-tutorial/flash-img" class="card-link">
         <div class="card">
@@ -249,318 +298,591 @@ Before starting to use the cm5-io, please prepare the following items:
                 <i>🎇</i>
             </div>
             <div class="content">
-                <h2>Flash System Image</h2>
+                <h2>Flashing the System Image</h2>
             </div>
         </div>
     </a>
 </div>
 
-### Interface Settings  
+## Interface Usage
 
-For the first time using the cm5-io development kit, please first get familiar with the [Peripheral Interfaces](#cm5-io) to better understand the subsequent content.
+If you are using the CM5 Kit for the first time, please familiarize yourself with the [hardware interfaces](#hardware-interfaces) of each product, which will help you better understand the following content.
 
-#### 2.5G Ethernet  
+### Debugging Serial Port
 
-If you are using wired ethernet internet, please insert the network cable into the RJ45 port on the cm5-io, and then the wired connection prompt will pop up on the system desktop.  
+Connect the USB to TTL serial cable as shown below:
 
-How to manually configure ethernet?
-- Switch to root user  
+![cm5io-debug](/img/cm/cm5io-debug.png)
 
-```bash
-sudo su
-```
+| CM5-IO       | Connect  | Serial Module |
+| -------------|----------|---------------|
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8)  | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
 
-- Use the command -ifconfig to check if ethernet is working properly, then showing the eth0 or enP4p65s0 network card and ethernet IP address. Also use the ping tool to test connectivity to the network.  
+### Ethernet Port
 
-```bash 
-ifconfig
-ping www.baidu.com
-```
-
-- If unable to ping, please try:  
-
-```bash
-$ sudo dhclient eth0
-or 
-$ sudo dhclient enP4p65s0
-```
-
-#### Audio  
-
-View the sound cards in the system.  
-
-```bash
-armsom@cm5-io:/# aplay -l
-**** List of PLAYBACK Hardware Devices ****
-card 0: rockchipdp0 [rockchip,dp0], device 0: rockchip,dp0 spdif-hifi-0 [rockchip,dp0 spdif-hifi-0]
- Subdevices: 1/1
- Subdevice #0: subdevice #0
-card 1: rockchipes8316 [rockchip-es8316], device 0: fe470000.i2s-ES8316 HiFi es8316.7-0011-0 [fe470000.i2s-ES8316 HiFi es8316.7-0011-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 3: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-card 4: rockchiphdmi1 [rockchip-hdmi1], device 0: rockchip-hdmi1 i2s-hifi-0 [rockchip-hdmi1 i2s-hifi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
+1. First, insert one end of the Ethernet cable into the CM5 Kit's Ethernet port, and connect the other end to the router, ensuring that the network is functioning properly.
+2. After the system starts, an IP address will be automatically assigned to the Ethernet card via DHCP, with no additional configuration needed.
+3. To view the IP address in the Linux system on the CM5 Kit, use the following command:
 
 ```
+root@armsom-cm5:/# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether c6:9c:b0:7e:2b:1f brd ff:ff:ff:ff:ff:ff permaddr aa:a6:84:1b:0d:21
+    inet 192.168.10.78/24 brd 192.168.10.255 scope global dynamic noprefixroute enP4p65s0
+       valid_lft 86221sec preferred_lft 86221sec
+    inet6 fe80::5bb0:d96f:926d:b334/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether cc:64:1a:33:b5:40 brd ff:ff:ff:ff:ff:ff
+4: wlan1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether ce:64:1a:33:b5:40 brd ff:ff:ff:ff:ff:ff
+```
 
-#### USB Interface  
+After the CM5 Kit starts up, there are three ways to check the IP address:
 
-The cm5-io provides two USB 2.0 and two USB 3.0 ports.   
+- Connect an HDMI monitor, log into the system, and use the terminal to enter the `ip a` command to check the IP address.
+- Connect a [debug serial port](#Debugging Serial Port) and use the terminal to enter the `ip a` command to check the IP address.
+- If you do not have a debug serial port or an HDMI monitor, you can also check the IP address of the CM5 Kit's Ethernet port through the router's management interface. However, sometimes the IP address may not be visible on the router. If the IP address is not visible, troubleshoot as follows:
+    - First, check if the Linux system has started normally. If the green light on the CM5 Kit is steady, it has generally started correctly.
+    - Check if the Ethernet cable is securely connected, or try a different cable.
+    - Try using a different router, as issues have been encountered where routers cannot properly assign IP addresses or the assigned IP address does not show up on the router.
+    - If no other router is available, you will need to connect an HDMI monitor or use a debug serial port to check the IP address.
 
-#### Type-C  
-
-The cm5-io features a full-featured USB Type‐C 3.0 port which supports up to 8K@30fps DP display.
-
-#### HDMI  
-
-The cm5-io has two HDMI output ports, both supporting CEC and HDMI 2.1, with maximum resolutions of 8Kp60 and 4Kp60 respectively.  
-
-:::caution  
-Note: Please confirm the interface specifications of the HDMI cable before use.
+:::tip
+Note that DHCP automatic IP assignment on the CM5 Kit does not require any configuration.
 :::
 
-#### HDMI IN  
+4. Use the `ping` tool to check network connectivity.
 
-The cm5-io uses the native rk3588 hdmi rx interface.The hdmi in interface can be tested using v4l2 commands.  
-
-**View all video nodes**  
-
-```  
-ls /dev/video* 
-```
-
-**Find rk hdmirx device**  
-
-Execute command v4l2-ctl -d  to specify video node. Execute command -D to view node info. Check for rk_hdmirx device using driver name.
-```  
-armsom@cm5-io:/# v4l2-ctl -d /dev/video0 -D
-Driver Info:
-Driver name : rk_hdmirx
-Card type : rk_hdmirx
-Bus info : fdee0000.hdmirx-controller
-Driver version : 5.10.66
-Capabilities : 0x84201000
-Video Capture Multiplanar
-Streaming
-Extended Pix Format
-Device Capabilities
-Device Caps : 0x04201000
-Video Capture Multiplanar
-Streaming
-Extended Pix Format
-```
-
-**Query resolution and image formats**  
-
-Query current resolution and image formats:
-```
-armsom@cm5-io:/# v4l2-ctl -d /dev/video17 --get-fmt-video
-Format Video Capture Multiplanar:
-Width/Height : 3840/2160
-Pixel Format : 'NV16'
-Field : None
-Number of planes : 1
-Flags : premultiplied-alpha, 000000fe
-Colorspace : Unknown (1025fcdc)
-Transfer Function : Unknown (00000020)
-YCbCr Encoding : Unknown (000000ff)
-Quantization : Default
-Plane 0 :
-Bytes per Line : 3840
-Size Image : 16588800
-```
-
-**Capture image files**  
-
-Save image files to device and view with 7yuv etc:
-
-```
-v4l2-ctl --verbose -d /dev/video17 \
---set-fmt-video=width=3840,height=2160,pixelformat='NV16' \  
---stream-mmap=4 --stream-skip=3 \
---stream-to=/data/4k60_nv16.yuv \
---stream-count=5 --stream-poll
-```
-
-#### RGB LED  
-
-The cm5-io has a power LED and user LED.  
-
-- Power Indicator LED   
-  The power LED is green. On the cm5-io it is solid on by default when powered.
-
-- User Indicator LED   
-  The user LED is blue. By default its blinking state shows a running kernel.  
-
-The user can control via commands:
-
-```  
-armsom@cm5-io:/# sudo su
-root@cm5-io:/# echo timer > /sys/class/leds/blue:status/trigger
-root@cm5-io:/# echo activity > /sys/clas
-```
-
-#### RTC  
-
-- The cm5-io is equipped with an RTC IC **hym8563**.  
-- First, insert the RTC battery to power the RTC IC.
-- Note that we should keep the RTC battery in the RTC connector and confirm the rtc hym8563 device has been created
-
-```bash 
-armsom@cm5-io:/#  dmesg | grep rtc
-[    6.407133] rtc-hym8563 6-0051: rtc information is valid
-[    6.412731] rtc-hym8563 6-0051: registered as rtc0
-[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
-```
-
-- Locating rtc0, then use the following commands to set system time and sync to rtc0.  
+The command to test network connectivity is shown below. You can interrupt the `ping` command by pressing `Ctrl+C`.
 
 ```bash
-armsom@cm5-io:/# hwclock -r
+root@armsom-cm5:~$ ping www.baidu.com
+PING www.a.shifen.com (183.2.172.185): 56 data bytes
+64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+^C
+--- www.a.shifen.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+```
+
+### WiFi
+
+The CM5 Kit includes an onboard WiFi module, so no external network devices are required. It uses the [standard 4th generation antenna](https://www.armsom.org/product-page/sige7-metal-shell).
+
+**Connect to WiFi using the server image via command line**
+
+1. First, log in to the Linux system. You can do this in one of three ways:
+   - If the CM5 Kit is connected to a network cable, you can remotely log in via SSH.
+   - If the CM5 Kit is connected to a debug serial port, you can use a serial terminal to log in.
+   - If the CM5 Kit is connected to an HDMI display, you can log in using the terminal displayed on the HDMI screen.
+
+2. Use the `nmcli dev wifi` command to scan for nearby WiFi hotspots.
+
+   ```bash
+   # 1. Enable WiFi
+   root@armsom-cm5:/# nmcli r wifi on
+   # 2. Scan for WiFi
+   root@armsom-cm5:/# nmcli dev wifi
+   # 3. Connect to a WiFi network
+   root@armsom-cm5:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
+   ```
+
+   ![WiFi nmcli scan](/img/general-tutorial/wifi-nmcli-scan.png)
+
+3. Use the `nmcli` command to connect to the scanned WiFi network:
+
+   - Replace `wifi_name` with the name of the WiFi hotspot you want to connect to.
+   - Replace `wifi_password` with the password for that WiFi hotspot.
+
+   ```bash
+   root@armsom-cm5:~$ nmcli dev wifi connect "wifi_name" password "wifi_password"
+   Device 'wlan0' successfully activated with "wlan0b6d10bba-e1d5-4b6d-a17f-7d5ab44bbb6f".
+   ```
+
+4. Use the `ip addr show wlan0` command to view the IP address of the WiFi connection.
+
+   ```bash
+   root@armsom-cm5:~$ ip addr show wlan0
+   4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+       link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
+       inet 192.168.10.9/24 brd 192.168.10.255 scope global dynamic noprefixroute wlan0
+          valid_lft 86321sec preferred_lft 86321sec
+       inet6 fe80::850d:3119:e0:afa3/64 scope link noprefixroute
+          valid_lft forever preferred_lft forever
+   ```
+
+5. Use the `ping` command to test network connectivity over WiFi. You can interrupt the ping command using `Ctrl+C`.
+
+   ```bash
+   root@armsom-cm5:~$ ping www.baidu.com
+   PING www.a.shifen.com (183.2.172.185): 56 data bytes
+   64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+   64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+   64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+   64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+   ^C
+   --- www.a.shifen.com ping statistics ---
+   4 packets transmitted, 4 packets received, 0% packet loss
+   round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+   ```
+
+**Connect to WiFi using the server image via graphical interface**
+
+1. Log in to the Linux system. You can do this in one of three ways:
+   - If the CM5 Kit is connected to a network cable, you can remotely log in via SSH.
+   - If the CM5 Kit is connected to a debug serial port, you can use a serial terminal to log in (use MobaXterm, as Minicom cannot display the graphical interface).
+   - If the CM5 Kit is connected to an HDMI display, you can log in using the terminal displayed on the HDMI screen.
+
+2. In the command line, enter the `nmtui` command to open the WiFi connection interface.
+
+   ![WiFi nmtui](/img/general-tutorial/wifi-nmcli.png)
+
+   ```bash
+   root@armsom-cm5:~$ nmtui
+   ```
+
+3. Select "Activate a connection" and press Enter.
+
+   ![WiFi nmtui connect](/img/general-tutorial/wifi-nmcli-connect.png)
+
+4. Select the WiFi hotspot you want to connect to and enter the password. Once connected, an asterisk (*) will appear next to the connected WiFi network.
+
+   ![WiFi nmtui success](/img/general-tutorial/wifi-nmcli-success.png)
+
+5. Use the `ip addr show wlan0` command to view the WiFi connection's IP address.
+
+   ```bash
+   root@armsom-cm5:~$ ip addr show wlan0
+   4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+       link/ether b8:2d:28:5a:52:6a brd ff:ff:ff:ff:ff:ff
+       inet 192.168.10.9/24 brd 192.168.10.255 scope global dynamic noprefixroute wlan0
+          valid_lft 86316sec preferred_lft 86316sec
+       inet6 fe80::a422:3494:3147:92d/64 scope link noprefixroute
+          valid_lft forever preferred_lft forever
+   ```
+
+6. Use the `ping` command to test WiFi network connectivity. You can interrupt the ping command using `Ctrl+C`.
+
+   ```bash
+   root@armsom-cm5:~$ ping www.baidu.com
+   PING www.a.shifen.com (183.2.172.185): 56 data bytes
+   64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+   64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+   64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+   64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+   ^C
+   --- www.a.shifen.com ping statistics ---
+   4 packets transmitted, 4 packets received, 0% packet loss
+   round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+   ```
+
+**Test method for desktop image**
+
+1. Click the network configuration icon on the desktop (make sure the network cable is disconnected when testing WiFi).
+2. After successfully connecting to WiFi, you can open a browser to check if you can access the internet.
+
+   ![WiFi desktop set](/img/general-tutorial/wifi-desktop-set.png)
+
+**Network Settings**
+**Network Settings**
+<div class="cards">
+<a href="./general-tutorial/product-startup/#3-login-method" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>🎾</i>
+        </div>
+        <div class="content">
+            <h2>Login Methods</h2>
+            <p>Serial port access, SSH access</p>
+        </div>
+    </div>
+</a>
+<a href="./general-tutorial/network-set/#6-static-network-configuration" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>🌐</i>
+        </div>
+        <div class="content">
+            <h2>Set Static IP Address</h2>
+        </div>
+    </div>
+</a>
+<a href="./general-tutorial/network-set/#7-create-wifi-hotspot" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>WIFI Hotspot</h2>
+        </div>
+    </div>
+</a>
+</div>
+
+### Bluetooth
+
+```bash
+# 1. Activate Bluetooth
+root@armsom-cm5:/# service bluetooth start
+# 2. Enter bluetoothctl
+root@armsom-cm5:/# bluetoothctl
+# 3. Enter the following commands to connect
+root@armsom-cm5:/# power on
+root@armsom-cm5:/# agent on
+root@armsom-cm5:/# default-agent
+root@armsom-cm5:/# scan on
+root@armsom-cm5:/# pair yourDeviceMAC
+```
+
+### HDMI
+
+The CM5 Kit supports HDMI up to 4Kp120.
+
+1. Use an HDMI cable to connect the CM5 Kit to an HDMI display.
+2. After booting the Linux system, if the HDMI display has an image output, it indicates that the HDMI interface is working normally.
+
+:::tip
+Note: Many laptops have an HDMI port, but it usually only supports output, not HDMI input. This means it cannot display the HDMI output from other devices on the laptop screen. If you plan to connect the development board's HDMI to a laptop's HDMI port, please first confirm that your laptop supports HDMI input. If HDMI does not display anything, please check if the system you are using has a desktop version, as the server version will only display a terminal.
+:::
+
+#### HDMI to VGA Display Test
+
+1. You will need the following accessories:
+   - HDMI to VGA adapter
+   - A VGA cable and a monitor that supports VGA input
+
+2. The HDMI to VGA display test is shown below:
+
+![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+:::tip
+When using HDMI to VGA display, there is no need to configure anything on the CM5 Kit or Linux system. As long as the HDMI interface on the development board displays correctly, it should work. If you encounter issues, please check the HDMI to VGA adapter, VGA cable, and monitor.
+:::
+
+### USB
+
+#### USB Mouse or Keyboard Connection Test
+
+1. Insert a USB keyboard into the CM5 Kit's USB port.
+2. Connect the CM5 Kit to an HDMI display.
+3. If the mouse or keyboard can operate the system normally, it indicates that the USB port is working correctly (the mouse can only be used in a desktop version of the system).
+
+#### USB Storage Device Connection Test
+
+1. Insert a USB flash drive or USB external hard drive into the CM5 Kit's USB port.
+2. Run the following command. If you see an output for `sdX`, it indicates that the USB drive is recognized successfully:
+
+```bash
+root@armsom-cm5:/# cat /proc/partitions | grep "sd*"
+major minor  #blocks  name
+   8        0  122880000 sda
+```
+
+3. Use the `mount` command to mount the USB drive to `/mnt/`, and then you can view the files on the USB drive:
+
+```bash
+root@armsom-cm5:/# sudo mount /dev/sda1 /test/
+```
+
+4. After mounting, use the `df -h` command to check the USB drive’s capacity and mount point:
+
+```bash
+root@armsom-cm5:/test# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /test
+```
+
+#### USB Camera
+
+1. Prepare a USB camera that supports the UVC protocol, then insert the USB camera into the CM5 Kit's USB port.
+
+2. Use the `v4l2-ctl` command to see the device node information for the USB camera, which will be `/dev/video0`:
+
+```bash
+root@armsom-cm5:/# v4l2-ctl --list-devices
+Logitech HD Webcam C93 (usb-xhci-hcd.5.auto-1):
+        /dev/video40
+        /dev/video41
+        /dev/media4
+```
+
+3. On a desktop system, you can use Cheese/V4L2 Test Bench to directly open the USB camera:
+
+![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
+
+You can also use terminal commands to open the camera preview:
+
+```bash
+root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
+```
+
+Command to take a photo:
+
+```bash
+root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
+```
+
+Command to record a video:
+
+```bash
+gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
+```
+
+![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+
+### M.2 Key M
+
+The CM5 Kit features an M.2 Key M connector:
+
+- On the back of the product, there is an M.2 Key M connector. The board includes a standard M.2 2280 mounting hole for deploying an M.2 2280 NVMe SSD.  
+  **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
+
+```
+root@armsom-cm5:/# mkdir temp
+root@armsom-cm5:/# mount /dev/nvme0n1 temp
+```
+
+### Audio
+
+Check the sound cards in the system.
+
+```bash
+root@armsom-cm5:/# aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: rockchipes8388c [rockchip,es8388-codec], device 0: 2a610000.sai-ES8323 HiFi ES8323 HiFi-0 [2a610000.sai-ES8323 HiFi ES8323 HiFi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: rockchipdp0 [rockchip-dp0], device 0: rockchip-dp0 spdif-hifi-0 [rockchip-dp0 spdif-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: rockchiphdmi [rockchip-hdmi], device 0: rockchip-hdmi i2s-hifi-0 [rockchip-hdmi i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+```
+
+Play audio
+
+```bash
+root@armsom-cm5:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
+```
+
+### FAN
+
+The CM5 Kit comes with a 5V fan using a 0.8mm connector.
+
+The fan has five default states:
+
+| Temperature | State | PWM Speed |
+| ----------- | ----- | --------- |
+| Below 50°C   | 0     | 0         |
+| 50°C-55°C    | 1     | 50        |
+| 55°C-60°C    | 2     | 100       |
+| 60°C-65°C    | 3     | 150       |
+| 65°C-70°C    | 4     | 200       |
+| Above 70°C   | 5     | 250       |
+
+```bash
+// Check the current speed 
+root@armsom-cm5:/# cat /sys/class/hwmon/hwmon9/pwm1
+```
+
+### 40 PIN
+
+The CM5 Kit provides a 40-PIN GPIO header, compatible with most sensors on the market.
+
+### RGB LED
+
+The CM5 Kit has a green LED.
+
+- **User Green LED:** By default, it remains on to indicate that the system is operating normally.
+
+### RTC
+
+- The CM5 Kit is equipped with an RTC IC **LK8563S**.
+- First, insert the RTC battery into the 2-pin header to power the RTC IC.
+- Note: The RTC battery should remain in the RTC connector, and confirm that the rtc LK8563S device has been created.
+
+```bash
+root@armsom-cm5:/# dmesg | grep rtc
+[    3.476710] rtc-hym8563 2-0051: rtc information is valid
+[    3.488534] rtc-hym8563 2-0051: registered as rtc0
+[    3.490109] rtc-hym8563 2-0051: setting system clock to 2024-06-16T09:45:52 UTC (1718531152)
+```
+
+- Locate rtc0, then use the following commands to set the system time and synchronize it with rtc0.
+
+```bash
+root@armsom-cm5:/# hwclock -r
 2023-11-03 10:32:40.461910+00:00
-armsom@cm5-io:/# date
-11/03/2023 Friday 10:33:12 UTC
-armsom@cm5-io:/# hwclock -w
-armsom@cm5-io:/# hwclock -r
-armsom@cm5-io:/# poweroff
+root@armsom-cm5:/# date
+2023年 11月 03日 星期五 10:33:12 UTC
+root@armsom-cm5:/# hwclock -w
+root@armsom-cm5:/# hwclock -r
+root@armsom-cm5:/# poweroff
 ```
 
-- Removing RTC battery, after 10mins or longer insert battery and boot cm5-io, check if RTC is in sync with system clock  
+- Remove the RTC battery, wait for 10 minutes or longer, reinsert the RTC battery, and power on Sige7. Check if the RTC is synchronized with the system clock.
 
-```bash 
-armsom@cm5-io:/# hwclock -r
+```bash
+root@armsom-cm5:/# hwclock -r
 2023-11-03 10:35:40.461910+00:00
-armsom@cm5-io:/# date
-11/03/2023 Friday 10:36:01 UTC
+root@armsom-cm5:/# date
+2023年 11月 03日 星期五 10:36:01 UTC
 ```
 
-#### FAN  
+### MIPI-CSI
 
-The cm5-io is equipped with a 5V fan, using a 1.25mm connector  
-
-```
-armsom@cm5-io:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/export
-armsom@cm5-io:/# echo 10000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/period
-armsom@cm5-io:/# echo 5000 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/duty_cycle
-armsom@cm5-io:/# echo inversed  > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/polarity
-armsom@cm5-io:/# echo 1 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
-armsom@cm5-io:/# echo 0 > /sys/devices/platform/fd8b0010.pwm/pwm/pwmchip*/pwm0/enable
-```
-
-#### M.2 Interface  
-
-The cm5-io provides two M.2 connectors:  
-
-- There is an M.2 E Key connector on the front of the board with a 2230 mounting hole, providing PCIe 2.1 single-channel, USB, SATA, SDIO, PCM and UART signals, supporting standard industrial M.2 WiFi 6 modules.   
-  ArmSoM recommends using RTL8852BE, AP6256. Installed in the cm5-io M.2 E slot and then it can get online after wifi setup.  
-
-```
-# Load driver  
-armsom@cm5-io:/# insmod system/lib/modules/rtkm.ko
-armsom@cm5-io:/# insmod system/lib/modules/rtkm.ko
-armsom@cm5-io:/# insmod /usr/lib/modules/rtk_btusb.ko
-armsom@cm5-io:/# lsmod
-Module                  Size  Used by
-8852be               4030464  0
-rtkm                   16384  1 8852be
-rtk_btusb              57344  0
-```
-
-- There is an M.2 M Key connector on the back of the cm5-io with a quad-channel PCIe 3.0 interface. There is a standard M.2 2280 mounting hole on board that can deploy M.2 2280 NVMe SSDs.
-**<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**  
-
-```
-armsom@cm5-io:/# mkdir temp  
-armsom@cm5-io:/# mount /dev/nvme0n1 temp
-```
-
-#### WIFI
-```  
-# 1. Switch to super user mode
-armsom@cm5-io:/# sudo su
-# 2. Open the WIFI
-root@cm5-io:/# nmcli r wifi on
-# 3. Scan WIFI
-root@cm5-io:/# nmcli dev wifi
-# 4. Connect to WIFI network
-root@cm5-io:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
-```
-
-#### BT  
-
-```
-# 1. Activate bluetooth  
-armsom@cm5-io:/# service bluetooth start
-# 2. Enter to bluetoothctl
-armsom@cm5-io:/# bluetoothctl
-# 3. Input the below commands to connect
-armsom@cm5-io:/# power on
-armsom@cm5-io:/# agent on
-armsom@cm5-io:/# default-agent
-armsom@cm5-io:/# scan on
-armsom@cm5-io:/# pair yourDeviceMAC
-```
-
-#### MIC Recording  
+#### Basic Commands
 
 ```bash
-armsom@cm5-io:~# arecord -D hw:1,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
-Recording WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
-armsom@cm5-io:~# aplay t.wav
-Playing WAVE 't.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
+// Check the video formats supported by the video node
+root@armsom-cm5:/# v4l2-ctl -d /dev/video11 --get-fmt-video
+Format Video Capture Multiplanar:
+        Width/Height      : 1920/1080
+        Pixel Format      : 'RG10' (10-bit Bayer RGRG/GBGB)
+        Field             : None
+        Number of planes  : 1
+        Flags             : premultiplied-alpha, 0x000000fe
+        Colorspace        : Default
+        Transfer Function : Default
+        YCbCr/HSV Encoding: Unknown (0x000000ff)
+        Quantization      : Default
+        Plane 0           :
+           Bytes per Line : 2560
+           Size Image     : 2764800
+
+// Check the topology
+root@armsom-cm5:/# media-ctl -d /dev/media0 -p
 ```
 
-#### Camera  
+#### Using ArmSoM Camera Module 1
 
-##### MIPI-CSI   
-
-  The camera uses the IMX415 module. After connecting and powering on the camera module you can view the boot logs.  
+The camera uses the [camera-module1](./armsom-camera-module1) module. After connecting and powering the camera module, check the startup logs.
 
 ```bash
-armsom@cm5-io:/# dmesg | grep imx415
-[    2.547754] imx415 3-001a: driver version: 00.01.08
-[    2.547767] imx415 3-001a:  Get hdr mode failed! no hdr default
-[    2.547819] imx415 3-001a: Failed to get power-gpios
-[    2.547826] imx415 3-001a: could not get default pinstate
-[    2.547831] imx415 3-001a: could not get sleep pinstate
-[    2.547850] imx415 3-001a: supply dvdd not found, using dummy regulator
-[    2.547918] imx415 3-001a: supply dovdd not found, using dummy regulator
-[    2.547945] imx415 3-001a: supply avdd not found, using dummy regulator
-[    2.613843] imx415 3-001a: Detected imx415 id 0000e0
-[    2.613890] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_imx415 3-001a:bus type 5
-[   18.386174] imx415 3-001a: set fmt: cur_mode: 3864x2192, hdr: 0
-[   18.389067] imx415 3-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203)
+root@armsom-cm5:/# dmesg | grep ov13850
+[    2.302905] ov13850 5-0010: driver version: 00.01.05
+[    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
+[    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
+[    2.303153] ov13850 5-0010: supply dovdd not found, using dummy regulator
+[    2.303186] ov13850 5-0010: supply dvdd not found, using dummy regulator
+[    2.303213] ov13850 5-0010: could not get default pinstate
+[    2.303220] ov13850 5-0010: could not get sleep pinstate
+[    2.308532] ov13850 5-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
+[    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
-  Use v4l2-ctl for image capture  
+Capture an image using `v4l2-ctl`
+
+```bash
+// MIPI-CSI1
+root@armsom-cm5:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
-armsom@cm5-io:/# v4l2-ctl -d /dev/video11 --set-fmt-video=width=3840,height=2160,pixelformat=NV12 --stream-mmap=3 --stream-skip=60 --stream-to=/tmp/cif73.out --stream-count=3 --stream-poll
+
+Record video using `gst-launch-1.0`
+
+```bash
+// MIPI-CSI1
+root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 
-  Use gst-launch-1.0 for direct video recording  
+![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
+
+[ArmSoM camera-module1](./armsom-camera-module1)
+
+#### Using Raspberry Pi Camera Module 2
+
+The camera uses the [Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/) module. After connecting and powering the camera module, check the startup logs.
+
+```bash
+root@armsom-cm5:/# dmesg | grep imx219
+[    4.049680] imx219 4-0010: driver version: 00.01.02
+[    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
+[    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
+[    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
 ```
-armsom@cm5-io:/# gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3840,height=2160, framerate=30/1 ! xvimagesink
+
+Capture an image using `v4l2-ctl`
+
+```bash
+root@armsom-cm5:/# v4l2-ctl -d /dev/video11 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=1920,height=1080,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
-![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg) 
 
-##### USB3.0 Camera  
+Record video using `gst-launch-1.0`
 
-After connecting the usb3.0 camera, open the Qt V4L2 test Utility app for testing  
+```bash
+root@armsom-cm5:/# sudo apt-get update
+root@armsom-cm5:/# sudo apt-get install gstreamer1.0*
+root@armsom-cm5:/# gst-launch-1.0 v4l2src ! 'video/x-raw, format=NV12, width=1920, height=1080' ! autovideosink
+```
 
-![armsom-w3-usb-camera-qtv4l2](/img/lm/armsom-w3-usb-camera-qtv4l2.png)   
+### MIPI DSI
 
-Open video node: video21  
+The CM5 Kit supports resolutions up to 2K@60Hz.
 
-![armsom-w3-usb-camera-qtv4l2-select-video](/img/lm/armsom-w3-usb-camera-qtv4l2-select-video.png)  
+1. Connect the ribbon cable as shown in the image below:
 
-Click the camera button and you will see the camera screen  
+![cm5-io-display-10-hd](/img/cm/cm5-io-display-10-hd.png)
 
-![armsom-w3-usb-camera-qtv4l2-play](/img/lm/armsom-w3-usb-camera-qtv4l2-play.png)
+2. Configuring a 10.1-inch MIPI LCD screen:
 
-#### MIPI DSI  
+- The Linux image does not enable the MIPI LCD screen configuration by default. To use the MIPI LCD screen, you need to enable it manually.
 
-The cm5-io has a maximum resolution up to 4K@60Hz
+- Use `nano` to open the `/boot/armbianEnv.txt` file:
+
+```bash
+sudo nano /boot/armbianEnv.txt
+```
+
+- Find or add the "overlays=" keyword in the file.
+
+```bash
+// Select according to your product
+overlays=armsom-cm5-io-display-10hd // cm5-kit
+```
+
+Shortcut keys: Ctrl + S to save, Ctrl + X to exit
+
+After editing, restart the device to apply the Overlays settings for Display 10 HD.
+
+## Purchase Samples
+
+ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+
+ArmSoM Official AliExpress Store: 
+
+ArmSoM Official Taobao Store: 
+
+For OEM & ODM, please contact: sales@armsom.org
+
+
+## Notes
+
+:::caution [Electrostatic Protection]
+1. Before handling the device, please ensure you wear an anti-static wrist strap or take electrostatic discharge measures to prevent damage to the development board.
+2. Assembly should be performed in an electrostatic-safe environment, avoiding operations in dry and low-humidity conditions.
+3. When not in use, store the device in an anti-static bag and keep it in a suitably temperature-controlled, low-humidity environment to prevent static electricity buildup.
+4. When handling the device, avoid friction or collisions to prevent the generation of static electricity that could cause damage.
+5. When holding the device, try to avoid direct contact with the chips on the mainboard to prevent static damage.
+6. Do not plug or unplug wires or other devices while the device is operating to avoid damage from electrical surges.
+7. When connecting or disconnecting the GPIO/MIPI expansion interfaces, make sure to turn off the power and disconnect the power cable to prevent damage from electrical current.
+
+:::
+
+:::danger [Heat Management]
+
+Without effective cooling measures, the surface temperature of the main chip may exceed 60 degrees. When handling the device, please avoid direct contact with the SoC and surrounding power inductors to prevent burns. Ensure that the environment is well-ventilated during operation to prevent localized heat buildup, which could lead to overheating. Additionally, do not place the device in direct sunlight. It is recommended to choose between the official [cooling fan](./sige-active-cooling-kit), [heat sink](./sige-diy-case1), or third-party cooling kits based on specific usage conditions to ensure optimal cooling performance.
+
+:::

@@ -104,7 +104,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
             <th>
                 <li>1x 2.5G Ethernet port</li>
                 <li>1x Gigabit Ethernet port</li>
-                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3  (<a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
+                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>
@@ -178,6 +178,35 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 </table>
 </details>
 
+<details>
+    <summary>
+       Comparison of Specifications for Sige7/5/3/1
+    </summary>
+
+|        | Sige7  | Sige5 | Sige3 |Sige1 |
+| --------- | ----- | --- |--- | --- | 
+| SoC Process | 8nm | 8nm | 22nm | 28nm |  
+| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3568B2 <br/> Cortex-A55 x4 @2GHz | Rockchip RK3528 <br/> Cortex-A53 x4 @2GHz | 
+| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | Arm Mali‑G52‑2EE | ARM Mali-450 GPU |
+| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | 1TOP@INT8 | - |
+| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x | 2/4GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
+| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 32GB eMMC | 8 eMMC |
+| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes| Yes |   Yes|
+| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps | 1x MIPI DSI up to 2K@60fps <br/> 1x HDMI OUT2.0, supports 4K@60fps |  1x HDMI OUT2.0b, supports 4K@60fps|
+| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| 4KP60 H.265/H.264/VP9  |  H.265, H.264, AVS2 4K@60fps|
+| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| 1080P60 H.264/H.265 | H.264 and H.265 up to1080@60fps|
+| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |   SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
+| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 3.0 1-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 3.0 2-lanes <br/> M.2 Key M 2280 NVMe SSD Supported |  - |
+| Ethernet | 2x 2.5G Ethernet |   2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet| Gigabit Ethernet & 2.5G Ethernet|
+| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
+| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
+| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
+| 40-PIN Header| yes | yes | yes | yes |
+| LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
+|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
+
+</details>
+
 ### RK3528 Block Diagram
 
 <details>
@@ -211,7 +240,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 |  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |    |         |
 | 138 | SPI0_MOSI / PDM_SDI0 / I2S1_SDO3 / GPIO4_B2_d  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |   |
 | 139 | SPI0_MISO / PDM_SDI2 /  I2S1_SDI1 / GPIO4_B3_d  | <div className='green'>21</div>  | <div className='green'>22</div> | |   |
-| 140 | SPI0_CLK / I2S1_SDI0 /  GPIO4_B4_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CSN0 / PWR_CTRL1  / SPI0_CS0_M2 / GPIO4_B6_u| 142 |
+| 140 | SPI0_CLK / I2S1_SDI0 /  GPIO4_B4_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CSN0 / PWR_CTRL1  /SPI0_CS0_M2  / GPIO4_B6_u  | 142 |
 | |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |  PWM6_M0 / SPI0_CSN1 / PDM_SDI3 / GPIO4_C1_d |     145      |
 |  147 | I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3_d |  <div className='green'>27</div>  | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4_d  | 148 |
 |  |   | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |
@@ -392,42 +421,6 @@ The ArmSoM-Sige1 will be produced at least until August 2034.
 The official accessories designed for the ArmSoM-Sige are intended to help you achieve optimal performance from your computer.
 
 <div class="cards">
-<a href="./sige-active-cooling-kit" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2> Active Cooling Kit</h2>
-        <p>The active cooling kit ensures Sige runs smoothly even during the most demanding tasks.</p>
-    </div>
-</div>
-</a>
-
-<a href="./sige-diy-case1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige DIY Case 1</h2>
-        <p>Combining high-quality construction with a clean, minimalist design, the metal casing adds a premium touch.</p>
-    </div>
-</div>
-</a>
-
-<a href="./armsom-display-10-hd" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Display-10-HD</h2>
-        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
-    </div>
-</div>
-</a>
-
 <a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
@@ -439,7 +432,42 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
     </div>
 </div>
 </a>
+<a href="./armsom-display-10-hd" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Display-10-HD</h2>
+        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
+    </div>
 </div>
+</a>
+<a href="./sige-diy-case1" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Sige DIY Case 1</h2>
+        <p>Combining high-quality construction with a clean, minimalist design, the metal casing adds a premium touch.</p>
+    </div>
+</div>
+</a>
+<a href="./sige-active-cooling-kit" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Active Cooling Kit</h2>
+        <p>The active cooling kit ensures Sige runs smoothly even during the most demanding tasks.</p>
+    </div>
+</div>
+</a>
+</div>
+
+[0.8mm 连接器](https://item.taobao.com/item.htm?id=742624228081)
 
 ## Purchase Samples
 ArmSoM Official Website: [https://www.armsom.org/product-page/Sige1](https://www.armsom.org/product-page/Sige1)
@@ -450,4 +478,22 @@ ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=757023687970]
 
 For OEM & ODM, please contact: sales@armsom.org
 
+## Notes
+
+:::caution [Electrostatic Protection]
+1. Before handling the device, please ensure you wear an anti-static wrist strap or take electrostatic discharge measures to prevent damage to the development board.
+2. Assembly should be performed in an electrostatic-safe environment, avoiding operations in dry and low-humidity conditions.
+3. When not in use, store the device in an anti-static bag and keep it in a suitably temperature-controlled, low-humidity environment to prevent static electricity buildup.
+4. When handling the device, avoid friction or collisions to prevent the generation of static electricity that could cause damage.
+5. When holding the device, try to avoid direct contact with the chips on the mainboard to prevent static damage.
+6. Do not plug or unplug wires or other devices while the device is operating to avoid damage from electrical surges.
+7. When connecting or disconnecting the GPIO/MIPI expansion interfaces, make sure to turn off the power and disconnect the power cable to prevent damage from electrical current.
+
+:::
+
+:::danger [Heat Management]
+
+Without effective cooling measures, the surface temperature of the main chip may exceed 60 degrees. When handling the device, please avoid direct contact with the SoC and surrounding power inductors to prevent burns. Ensure that the environment is well-ventilated during operation to prevent localized heat buildup, which could lead to overheating. Additionally, do not place the device in direct sunlight. It is recommended to choose between the official [cooling fan](./sige-active-cooling-kit), [heat sink](./sige-diy-case1), or third-party cooling kits based on specific usage conditions to ensure optimal cooling performance.
+
+:::
 
