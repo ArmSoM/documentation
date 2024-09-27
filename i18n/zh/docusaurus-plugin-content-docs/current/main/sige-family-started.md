@@ -683,7 +683,7 @@ overlays=armsom-sige3-display-10hd // Sige3
 
 以下以Sige7为例，CPU GPU NPU DDR定频和性能模式设置方法
 
-### CPU/GPU/NPU/DDR 定频
+### 定频
 #### CPU 定频
 ArmSoM-Sige7 的cpu是4个A55+4个A76，分为3组单独管理，节点分别是：
 
@@ -789,7 +789,7 @@ root@armsom-sige7_evb7:/ # cat /sys/kernel/debug/rknpu/load // 查看NPU的负�
 NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 ```
 
-### CPU/GPU/NPU/DDR性能模式
+### 性能模式
 
 ```
 root@armsom-sige7:/ $ su

@@ -799,7 +799,7 @@ root@armsom-sige7:/ # cat /sys/kernel/debug/rknpu/load // Check NPU load
 NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 ```
 
-### Performance Modes for CPU/GPU/NPU/DDR
+### Performance Modes
 
 ```
 root@armsom-sige7:/ $ su
