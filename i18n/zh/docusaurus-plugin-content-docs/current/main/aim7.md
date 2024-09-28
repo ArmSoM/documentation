@@ -601,39 +601,6 @@ Table 14. CAN pin descriptions
 
 <details>
     <summary>
-        GPIO
-    </summary>
-
-* All GPIOs can be used to generate interrupt
-* Support level trigger and edge trigger interrupt
-* Support configurable polarity of level trigger interrupt
-* Support configurable rising edge, falling edge and both edge trigger interrupt
-* Support configurable pull direction (a weak pull-up and a weak pull-down)
-* Support configurable drive strength
-
-Table 15. GPIO pin descriptions
-
-|Pin| 	Pin name|	Signal description|	Direction	|Pin type
-|---|------------|-------------------|--------------|--------------|
-|87|GPIO0/GPIO1_C5/VBUS_DET|	GPIO #0 or USB 0 VBUS Enable #0	|Bidir	|CMOS – 1.8V
-|118|GPIO01/GPIO3_A7/CAM1_PWDN|	GPIO #1 or Generic Clocks|	Bidir|	CMOS – 1.8V
-|124|GPIO02/GPIO3_A3/MIPI_CAM2_PDN |	GPIO #2|	Bidir|	CMOS – 1.8V
-|126|GPIO03/GPIO3_D0/PCIE20X1_2_WAKEN_M0 |	GPIO #3	|Bidir|	CMOS – 1.8V
-|127|GPIO04/GPIO4_A4/PCIE_30X1_0_WAKE |	GPIO #4	|Bidir|	CMOS – 1.8V
-|128|GPIO05/GPIO4_B0/PCIE30X2_PERSTN_M1	 |	GPIO #5	|Bidir|	CMOS – 1.8V
-|130|GPIO06/GPIO4_A7/PCIE_30X2_WAKE|	GPIO #6|	Bidir|	CMOS – 1.8V
-|206|GPIO07/GPIO3_A0/PWM10|	GPIO #7 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
-|208|GPIO08/GPIO1_C6/PWM15_IR|	GPIO #8 or Fan Tach	|Bidir|	CMOS – 1.8V
-|211|I2S1_MCLK_M0/PCIE30X1_1_CLKREQN_M1|	GPIO #9 or Audio Codec Master Clock|	Bidir|	CMOS – 1.8V
-|212|GPIO10/GPIO4_A3/PCIE_30X1_0_CLKREQ |	GPIO #10	|Bidir|	CMOS – 1.8V
-|216|GPIO11/GPIO3_B0/MIPI_CAM3_CLKOUT|	GPIO #11 or Generic Clocks	|Bidir|	CMOS – 1.8V
-|218|GPIO12/I2S2_MCLK_M1/MIPI_CAM3_PDN|	GPIO #12 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
-|228|GPIO13/GPIO3_B1/PWM2/MIPI_CAM4_CLKOUT|	GPIO #13 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
-|230|GPIO14/GPIO3_A1/PWM11_IR/MIPI_CAM4_PDN | GPIO #14 or Pulse Width Modulator	|Bidir|	CMOS – 1.8V
-</details>
-
-<details>
-    <summary>
         I2S interface
     </summary>
 Table 16. i2s pin descriptions
@@ -648,6 +615,38 @@ Table 16. i2s pin descriptions
 |224|	I2S1_FS	|I2S Audio Port 1 Left/Right Clock	|Bidir|	CMOS – 1.8V
 |220|	I2S1_DOUT|	I2S Audio Port 1 Data Out	|Output|	CMOS – 1.8V
 |222|	I2S1_DIN |	I2S Audio Port 1 Data In	|Input	|CMOS – 1.8V
+</details>
+
+<details>
+    <summary>
+       40-PIN 座子
+    </summary>
+<div className='gpio_style'>
+
+| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
+ :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
+|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
+|     139     | I2S1_SDO2_M0 / I2C7_SDA_M3 / UART8_CTSN_M0 / PWM15_IR_M1 / CAN1_TX_M1 / GPIO4_B3 /| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
+|     138     | I2S1_SDO1_M0 / I2C7_SCL_M3 / UART8_RTSN_M0 /  PWM14_M1   / CAN1_RX_M1 / GPIO4_B2  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
+|     115     | SPI1_CS1_M1 / I2C8_SDA_M4 / UART7_CTSN_M1 / PWM15_IR_M0 / GPIO3_C3  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  GPIO0_B5 / <div className='orange-txt'>UART2_TX_M0</div> / I2C1_SCL_M0 / I2S1_MCLK_M1 / JTAG_TCK_M2|     13      |
+|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART2_RX_M0</div> / I2C1_SDA_M0 / I2S1_SCLK_M1 /  JTAG_TMS_M2|     14      |
+|     113     |  SPI1_CLK_M1 / UART7_RX_M1 / GPIO3_C1  | <div className='green'>11</div>  | <div className='green'>12</div> |  GPIO3_B5  / CAN1_RX_M0 / PWM12_M0  /UART3_TX_M1 / I2S2_SCLK_M1 |     109     |
+|     111     |  SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+|     112     |   SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1  / GPIO3_C0  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1   |     100     |
+|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  GPIO4_C4 / PWM5_M2 / SPI3_MISO_M0 |    148     |
+|     42      | SPI0_MOSI_M2 / UART4_RX_M2 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
+|     41      | SPI0_MISO_M2 / GPIO1_B1  | <div className='green'>21</div>  | <div className='green'>22</div> | SARADC_IN4          |             |
+|     43      | SPI0_CLK_M2 / UART4_TX_M2 / GPIO1_B3  | <div className='green'>23</div>  | <div className='green'>24</div> |  GPIO1_B4 / UART7_RX_M2  / SPI0_CS0_M2 |     44      |
+|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     45      |
+|     150     | SPI3_CLK_M0 / I2C0_SDA_M1 / PWM7_IR_M3 / GPIO4_C6  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO4_C5 / PWM6_M2 / I2C0_SCL_M1 /
+|     63      | UART1_CTSN_M1 / PWM15_IR_M3 / GPIO1_D7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
+|     47      | SPDIF_TX_M0 / UART1_RX_M1 / PWM13_M2 / GPIO1_B7  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_C2 / PWM14_M0 / UART7_RTSN_M1 / I2C8_SCL_M4 / SPI1_CS0_M1  |    114     |
+|     103     | PWM8_M0 / GPIO3_A7  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
+|     110     | I2S2_LRCK_M1 / UART3_RX_M1 / PWM13_M0 / CAN1_TX_M0 / GPIO3_B6  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO3_B1 / PWM2_M1 / UART2_TX_M2 |     105     |
+|      0      | REFCLK_OUT / GPIO0_A0	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO3_B2 /PWM3_IR_M1 / UART2_RX_M2 / I2S2_SDI_M1   |     106     |
+|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO3_B3 /  UART2_RTSN / I2S2_SDO_M1   |     107     |
+
+</div>
 </details>
 
 <details>
