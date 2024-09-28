@@ -169,7 +169,7 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for P2pro :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1uKe4JgGLnHWENoazhCLPNLfYF2_ZQm_S?usp=drive_link)    |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for P2pro :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1uKe4JgGLnHWENoazhCLPNLfYF2_ZQm_S?usp=drive_link)    |
 
 ### Third Party System  
 

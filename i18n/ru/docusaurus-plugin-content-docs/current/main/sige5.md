@@ -454,7 +454,7 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12.png) | debian12 for Sige5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/164aAYUQe8yGcXjiZs9kjpnntF-eigywX?usp=drive_link)  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for Sige5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/164aAYUQe8yGcXjiZs9kjpnntF-eigywX?usp=drive_link)  |
 |![Android](/img/sige/android.png) | Android14 for Sige5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.| [Google Drive link](https://drive.google.com/drive/folders/1mzg_qaYFtXKfHLTMN5ILX9ZZBBGfT_xQ?usp=drive_link)  |
 
 ### Third Party System  

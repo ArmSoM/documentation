@@ -256,7 +256,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12.png) | debian12 for CM5-IO :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1MOrCsh5ef4wPTUN4a_WQMQ?pwd=iukg)  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for CM5-IO :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1MOrCsh5ef4wPTUN4a_WQMQ?pwd=iukg)  |
 
 ### 第三方镜像
 

@@ -464,7 +464,7 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1-dj3S95kHlRemunNpnltn2qtwk9sZtRB?usp=drive_link)    |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1-dj3S95kHlRemunNpnltn2qtwk9sZtRB?usp=drive_link)    |
 |![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/19MuIZF_DpydbgKHNJpRjeOZ1jLd5wtKz?usp=drive_link)  |
 
 ### Third Party System  

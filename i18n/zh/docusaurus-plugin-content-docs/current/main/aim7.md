@@ -856,7 +856,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12.png) | debian11 for AIM7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian11 for AIM7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
 |![Android](/img/sige/android.png) | Android14 for AIM7 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
 
 ### 第三方镜像

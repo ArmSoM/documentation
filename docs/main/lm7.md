@@ -321,7 +321,7 @@ Download link:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for LM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1wz2BPS8s1iXNWlOUGyPmnBSDG32arWdT?usp=drive_link)    |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for LM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1wz2BPS8s1iXNWlOUGyPmnBSDG32arWdT?usp=drive_link)    |
 |![Android](/img/sige/android.png) | Android12 for LM7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/1vMC1qNUY-fHiyqqK_xYNom2goQ52gVNA?usp=drive_link)  |
 
 #### Release Information

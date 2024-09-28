@@ -191,7 +191,7 @@ Network disk address:
 
 | Logo | Description | Download |
 |:----:|:-----------:|:--------:|
-| ![debian-bullseye](/img/sige/debian12.png) | **Debian 12 for CM5:** <br/> Debian 12 introduces thousands of new and updated packages, supporting various desktop environments and processor architectures (including 32-bit and 64-bit PCs, ARM, MIPS, and PowerPC). One of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
+| ![debian-bullseye](/img/sige/debian12-1.png) | **Debian 12 for CM5:** <br/> Debian 12 introduces thousands of new and updated packages, supporting various desktop environments and processor architectures (including 32-bit and 64-bit PCs, ARM, MIPS, and PowerPC). One of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
 | ![Android](/img/sige/android.png) | **Android 14 for CM5:** <br/> The latest OS upgrade makes your device more personalized, secure, and accessible. It offers improved photo quality, new themes, and AI-generated wallpapers. Privacy updates protect your health, safety, and data while expanding accessibility features. | [Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
 
 ### Third-Party Images

@@ -162,7 +162,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11.png) | debian11 for P2pro :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/1P1qoG5AKONyQAcoR90JOSw?pwd=arms)  |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for P2pro :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/1P1qoG5AKONyQAcoR90JOSw?pwd=arms)  |
 
 ### Third Party System  
 
