@@ -353,6 +353,7 @@ Network disk address:
 |:--------: | :---------: | :--------:  | 
 |![debian-bullseye](/img/sige/debian11.png) | debian11 for Sige1 :  <br/>  Debian 11 continues to uphold Debian's tradition by offering a stable and reliable operating system environment. It has undergone rigorous testing and stability assurances, making it suitable for servers, desktops, and embedded devices alike.| [Google Drive link](https://drive.google.com/drive/folders/1UsUqiYN2mzTEx_H2eBlRiNChdmZge0EO?usp=drive_link)  |
 |![Android9-box](/img/sige/Android9-box.png) | Android9 Box for Sige1 :    <br/>The Android 9 Box version is an Android operating system specifically designed for TV boxes. It is based on Android 9 Pie, focusing on optimizing user experience and performance for large-screen devices. | [Google Drive link](https://drive.google.com/drive/folders/1ZDfZGnfNyN2fsciE2lMQwuXcvaoRZofP?usp=drive_link)      |
+|lede | lede for Sige1 :    <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/1t4EUzbjOvpiOZrX7knhP-OsjHctC15EK)  |
 
 ### Third Party System  
 
