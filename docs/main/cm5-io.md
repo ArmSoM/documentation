@@ -198,7 +198,7 @@ Network disk address:
 
 | Logo | Description | Download |
 |:----:|:-----------:|:--------:|
-| ![armbian-logo](/img/armbian-logo.webp) | **Armbian for CM5:** <br/> Armbian is a build framework that allows users to create ready-to-use images with a working kernel based on various user-space configurations for single-board computers. It provides a variety of pre-built images for some supported SBCs, typically based on Debian or Ubuntu. | [Armbian Image](https://www.armbian.com/armsom-cm5-io/) |
+| ![armbian-logo](/img/armbian-logo.png) | **Armbian for CM5:** <br/> Armbian is a build framework that allows users to create ready-to-use images with a working kernel based on various user-space configurations for single-board computers. It provides a variety of pre-built images for some supported SBCs, typically based on Debian or Ubuntu. | [Armbian Image](https://www.armbian.com/armsom-cm5-io/) |
 | ![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4) | **Ubuntu-Rockchip for CM5:** <br/> This project aims to provide the default Ubuntu experience for Rockchip RK3588 devices. Get started right away by choosing the appropriate Ubuntu server or desktop image, and enjoy a familiar environment. | [Ubuntu-Rockchip Image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
 
 ### Hardware Resources 
