@@ -25,23 +25,24 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 
 ### 关键参数
 
-- SOC：瑞芯微 RK3576
-- CPU：集成了四核Cortex-A72@ 2.2GHz和四核Cortex-A53@ 1.8GHz以及单独的NEON协处理器。
-- GPU：ARM Mali G52 MC3 GPU。
-- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算。
-- VPU/编解码：
-  - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
-  - 硬编码：支持H.264和H.265，JPEG最高4K@60fps。
-- RAM：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB。
-- Flash：32/64/128GB eMMC，默认eMMC 64GB。
-- 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）。
-- 工作温度：0℃ ~ 80℃
-- 操作系统：
-  - Rockchip官方支持：Android 14，Debian12，Buildroot
-  - 第三方支持：Armbian
-- PCB： 8 层 PCB 板设计
-- 重量：43g
-- 大小：92mm × 62mm x 14.6mm
+- **SOC**：瑞芯微 RK3576
+- **CPU**：集成了四核Cortex-A72@ 2.2GHz和四核Cortex-A53@ 1.8GHz以及单独的NEON协处理器。
+- **GPU**：ARM Mali G52 MC3 GPU。
+- **NPU**：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算。
+- **VPU/编解码**：
+  - **硬解码**：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
+  - **硬编码**：支持H.264和H.265，JPEG最高4K@60fps。
+- **RAM**：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB。
+- **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
+- **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
+- **工作电压**：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）。
+- **工作温度**：0℃ ~ 80℃
+- **操作系统**：
+  - **Rockchip官方支持**：Android 14，Debian12，Buildroot
+  - **第三方支持**：Armbian
+- **PCB**： 8 层 PCB 板设计
+- **重量**：43g
+- **大小**：92mm × 62mm x 14.6mm
  
 ## 使用手册
 

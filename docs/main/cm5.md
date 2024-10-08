@@ -32,6 +32,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
   - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
 - **RAM:** 8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
+- **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage:** Wide input voltage range from 4.5V to 5.5V (voltage tolerance ±5%).
 - **Operating Temperature:** 0℃ ~ 80℃
 - **Weight:** 12g
@@ -149,7 +150,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
             <th>Network</th>
             <th>
               <li>1x GMAC, provides RGMII/RMII interface</li>
-              <li>Supports 10/100/1000Mbps data transfer rates</li>
+               <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>

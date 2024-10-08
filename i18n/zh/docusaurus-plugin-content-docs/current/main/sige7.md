@@ -26,23 +26,23 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 ### 关键参数
 
-- SOC：瑞芯微 RK3588
-- CPU：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
-- GPU：ARM Mali-G610 MP4
-- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
-- VPU/编解码：
-  - 硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
-  - 硬编码：8K@30fps H.265 / H.264
-- RAM：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
-- Flash：64GB/128GB eMMC，默认eMMC 64GB
-- 工作电压：具有宽范围的输入电压，从5V到20V（电压误差±5%）
-- 工作温度：0℃ ~ 80℃
-- 操作系统：
-  - Rockchip官方支持：Android 12.0，Debian11，Buildroot
-  - 第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS
-- PCB：12 层 PCB 板设计
-- 重量：46.6g
-- 大小：92mm × 62mm x 14.6mm
+- **SOC**：瑞芯微 RK3588
+- **CPU**：RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程
+- **GPU**：ARM Mali-G610 MP4
+- **NPU**：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算
+- **VPU/编解码**：
+  - **硬解码**：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
+  - **硬编码**：8K@30fps H.265 / H.264
+- **RAM**：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
+- **Flash**：64GB/128GB eMMC，默认eMMC 64GB
+- **工作电压**：具有宽范围的输入电压，从5V到20V（电压误差±5%）
+- **工作温度**：0℃ ~ 80℃
+- **操作系统**：
+  - **Rockchip官方支持**：Android 12.0，Debian11，Buildroot
+  - **第三方支持**：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS
+- **PCB**：12 层 PCB 板设计
+- **重量**：46.6g
+- **大小**：92mm × 62mm x 14.6mm
 
 ## 使用手册
 

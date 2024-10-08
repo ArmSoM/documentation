@@ -18,22 +18,23 @@ The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-
 
 ### Key Parameter
 
-- SoC: Rockchip RK3528
-- CPU: RK3528 Quad-core Cortex-A53 up to 2.0GHz
-- GPU: ARM Mali-450 GPU
-- VPU/Decoding:
-  - Hardware Decoding: Supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. Supports video standards including H.265, H.264, AVS2, etc.
-  - Hardware Encoding: Supports 60fps capture of 1080p high-definition video. Supports H.265 and H.264 encoding.
-- RAM: 1GB / 2GB / 4GB 32-bit LPDDR4x, default 2GB 
-- Flash: 0GB / 8GB / 16GB / 32GB / 64GB eMMC, default eMMC 8GB
-- Operating Voltage: Wide range input voltage, from 4.5V to 18V (voltage error ±5%)
-- Operating Temperature: 0°C to 80°C
-- Operating System:
-  - Officially Supported by Rockchip: Android 9.0_box, Debian11, Buildroot
-  - Third-party Support: Armbian
-- PCB: 6-layer PCB board design
-- Weight: 38.9g
-- Dimensions: 92mm × 62mm x 14.6mm
+- **SoC**: Rockchip RK3528
+- **CPU**: RK3528 Quad-core Cortex-A53 up to 2.0GHz
+- **GPU**: ARM Mali-450 GPU
+- **VPU/Decoding**:
+  - **Hardware Decoding**: Supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. Supports video standards including H.265, H.264, AVS2, etc.
+  - **Hardware Encoding**: Supports 60fps capture of 1080p high-definition video. Supports H.265 and H.264 encoding.
+- **RAM**: 1GB / 2GB / 4GB 32-bit LPDDR4x, default 2GB 
+- **Flash**: 0GB / 8GB / 16GB / 32GB / 64GB eMMC, default eMMC 8GB
+- **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
+- **Operating Voltage**: Wide range input voltage, from 4.5V to 18V (voltage error ±5%)
+- **Operating Temperature**: 0°C to 80°C
+- **Operating System**:
+  - **Officially Supported by Rockchip**: Android 9.0_box, Debian11, Buildroot
+  - **Third-party Support**: Armbian
+- **PCB**: 6-layer PCB board design
+- **Weight**: 38.9g
+- **Dimensions**: 92mm × 62mm x 14.6mm
 
 ## Getting started
 

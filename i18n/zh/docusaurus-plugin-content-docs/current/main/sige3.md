@@ -19,22 +19,23 @@ Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以
 
 ### 关键参数
 
-- SOC：瑞芯微 RK3568B2
-- CPU: 四核Cortex-A55 @ 2GHz
-- GPU：ARM Mali G52
-- VPU/编解码：
-  - 硬解码：H.265/VP9 (HEVC) 硬件解码（最高 4Kp60）
-  - 硬编码：H.264 硬件解码（最高 1080p60）
-- RAM：2/4/8 GB 32bit LPDDR4x，默认4GB
-- Flash：8/16/32/64 GB eMMC，默认eMMC 32GB
-- 工作电压：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
-- 工作温度：0℃ ~ 80℃
-- 操作系统：
-  - Rockchip官方支持：Debian11，Buildroot
-  - 第三方支持：Armbian
-- PCB： 8 层 PCB 板设计
-- 重量：42.3g
-- 大小：92mm × 62mm x 14.6mm
+- **SOC**：瑞芯微 RK3568B2
+- **CPU**: 四核Cortex-A55 @ 2GHz
+- **GPU**：ARM Mali G52
+- **VPU/编解码**：
+  - **硬解码**：H.265/VP9 (HEVC) 硬件解码（最高 4Kp60）
+  - **硬编码**：H.264 硬件解码（最高 1080p60）
+- **RAM**：2/4/8 GB 32bit LPDDR4x，默认4GB
+- **Flash**：8/16/32/64 GB eMMC，默认eMMC 32GB
+- **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
+- **工作电压**：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
+- **工作温度**：0℃ ~ 80℃
+- **操作系统**：
+  - **Rockchip官方支持**：Debian11，Buildroot
+  - **第三方支持**：Armbian
+- **PCB**： 8 层 PCB 板设计
+- **重量**：42.3g
+- **大小**：92mm × 62mm x 14.6mm
 
 ## 使用手册
 

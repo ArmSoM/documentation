@@ -25,23 +25,24 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 
 ### Key Parameter
 
-- SoC: Rockchip RK3576
-- CPU: Integrated with four Cortex-A72 cores @ 2.2GHz and four Cortex-A53 cores @ 1.8GHz, along with a separate NEON co-processor.
-- GPU: ARM Mali G52 MC3 GPU
-- NPU: Up to 6 TOPs computing power (INT8), supports INT4/INT8/INT16 mixed operations.
-- VPU/Encoding & Decoding:
-  - Hardware Decoding: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
-  - Hardware Encoding: Supports H.264 and H.265，JPEG up to 4K@60fps.
-- RAM: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.
-- Flash: 32/64/128GB eMMC, default is 64GB eMMC.
-- Operating Voltage: Wide input voltage range, from 4.5V to 23V (voltage error ±5%).
-- Operating Temperature: 0°C to 80°C
-- Operating Systems:
-  - Official Rockchip Support: Android 14, Debian 12, Buildroot
-  - Third-party Support: Armbian
-- PCB: 8-layer PCB board design
-- Weight: 43g
-- Dimensions: 92mm × 62mm x 14.6mm
+- **SoC**: Rockchip RK3576
+- **CPU**: Integrated with four Cortex-A72 cores @ 2.2GHz and four Cortex-A53 cores @ 1.8GHz, along with a separate NEON co-processor.
+- **GPU**: ARM Mali G52 MC3 GPU
+- **NPU**: Up to 6 TOPs computing power (INT8), supports INT4/INT8/INT16 mixed operations.
+- **VPU/Codec**:
+  - **Hardware Decoding**: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
+  - **Hardware Encoding**: Supports H.264 and H.265，JPEG up to 4K@60fps.
+- **RAM**: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.
+- **Flash**: 32/64/128GB eMMC, default is 64GB eMMC.
+- **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
+- **Operating Voltage**: Wide input voltage range, from 4.5V to 23V (voltage error ±5%).
+- **Operating Temperature**: 0°C to 80°C
+- **Operating Systems**:
+  - **Official Rockchip Support**: Android 14, Debian 12, Buildroot
+  - **Third-party Support**: Armbian
+- **PCB**: 8-layer PCB board design
+- **Weight**: 43g
+- **Dimensions**: 92mm × 62mm x 14.6mm
 
 
 ## Getting started

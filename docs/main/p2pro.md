@@ -18,18 +18,18 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 
 ### Key Parameters
 
-- SoC: Rockchip RK3308
-- CPU: Quad-core ARM Cortex-A35@ 1.2GHz, 28nm
-- RAM: 512MB DDR3
-- Flash: 8GB eMMC, optional
-- WiFi&Bluetooth: 802.11 a/b/g/n/ac & BT5.0 (AP6256)
-- Operating voltage: Wide range input voltage, 5V (voltage tolerance ±5%)  
-- Operating temperature: 0°C ~ 70°C
-- Operating system: 
-  - Officially supported by Rockchip: Debian11, Buildroot
-  - Third party support: istoreos (openwrt)
-- Weight: 42g
-- Size: 52.5mm × 65mm 
+- **SoC**: Rockchip RK3308
+- **CPU**: Quad-core ARM Cortex-A35@ 1.2GHz, 28nm
+- **RAM**: 512MB DDR3
+- **Flash**: 8GB eMMC, optional
+- **WiFi&Bluetooth**: 802.11 a/b/g/n/ac & BT5.0 (AP6256)
+- **Operating voltage**: Wide range input voltage, 5V (voltage tolerance ±5%)  
+- **Operating temperature**: 0°C ~ 70°C
+- **Operating system**: 
+  - **Officially supported by Rockchip**: Debian11, Buildroot
+  - **Third party support**: istoreos (openwrt)
+- **Weight**: 42g
+- **Size**: 52.5mm × 65mm 
 
 ## Hardware
 

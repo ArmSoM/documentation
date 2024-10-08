@@ -18,22 +18,23 @@ ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用
 
 ### 关键参数
 
-- SOC：瑞芯微 RK3528
-- CPU：RK3528 四核Cortex-A53
-- GPU：ARM Mali-450 GPU
-- VPU/编解码：
-  - 硬解码：支持以60fps播放4K超高清视频，支持高达10位像素，支持H.265、H.264、AVS2等视频标准。
-  - 硬编码：支持以60fps捕捉1080p高清视频，支持H.265和H.264编码。
-- RAM：1GB / 2GB / 4GB 32bit LPDDR4x，默认2GB
-- Flash：0GB / 8GB / 16GB / 32GB / 64GB eMMC，默认eMMC 8GB
-- 工作电压：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
-- 工作温度：0℃ ~ 80℃
-- 操作系统：
-  - Rockchip官方支持：Android 9.0_box，Debian11，Buildroot
-  - 第三方支持：Armbian
-- PCB： 6 层 PCB 板设计
-- 重量：38.9g
-- 大小：92mm × 62mm x 14.6mm
+- **SOC**：瑞芯微 RK3528
+- **CPU**：RK3528 四核Cortex-A53
+- **GPU**：ARM Mali-450 GPU
+- **VPU/编解码**：
+  - **硬解码**：支持以60fps播放4K超高清视频，支持高达10位像素，支持H.265、H.264、AVS2等视频标准。
+  - **硬编码**：支持以60fps捕捉1080p高清视频，支持H.265和H.264编码。
+- **RAM**：1GB / 2GB / 4GB 32bit LPDDR4x，默认2GB
+- **Flash**：0GB / 8GB / 16GB / 32GB / 64GB eMMC，默认eMMC 8GB
+- **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
+- **工作电压**：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
+- **工作温度**：0℃ ~ 80℃
+- **操作系统**：
+  - **Rockchip官方支持**：Android 9.0_box，Debian11，Buildroot
+  - **第三方支持**：Armbian
+- **PCB**： 6 层 PCB 板设计
+- **重量**：38.9g
+- **大小**：92mm × 62mm x 14.6mm
 
 ## 使用手册
 

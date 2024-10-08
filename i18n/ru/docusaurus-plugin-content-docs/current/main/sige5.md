@@ -29,7 +29,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 - CPU: Integrated with four Cortex-A72 cores @ 2.2GHz and four Cortex-A53 cores @ 1.8GHz, along with a separate NEON co-processor.
 - GPU: ARM Mali G52 MC3 GPU
 - NPU: Up to 6 TOPs computing power (INT8), supports INT4/INT8/INT16 mixed operations.
-- VPU/Encoding & Decoding:
+- VPU/Codec:
   - Hardware Decoding: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
   - Hardware Encoding: Supports H.264 and H.265，JPEG up to 4K@60fps.
 - RAM: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.

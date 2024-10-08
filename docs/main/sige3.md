@@ -18,22 +18,23 @@ The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-powe
 
 ### Key Specifications
 
-- SOC: Rockchip RK3568B2
-- CPU: Quad-core Cortex-A55 @ 2GHz
-- GPU: ARM Mali G52
-- VPU/Codec:
-  - Hardware Decoding: H.265/VP9 (HEVC) hardware decoding (up to 4Kp60)
-  - Hardware Encoding: H.264 hardware encoding (up to 1080p60)
-- RAM: 2/4/8 GB 32-bit LPDDR4x, default 4GB
-- Flash: 8/16/32/64 GB eMMC, default eMMC 32GB
-- Operating Voltage: Wide input voltage range from 4.5V to 18V (voltage tolerance ±5%)
-- Operating Temperature: 0℃ ~ 80℃
-- Operating System:
-  - Rockchip official support: Debian11, Buildroot
-  - Third-party support: Armbian
-- PCB: 8-layer PCB design
-- Weight: 42.3g
-- Dimensions: 92mm × 62mm x 14.6mm
+- **SOC**: Rockchip RK3568B2
+- **CPU**: Quad-core Cortex-A55 @ 2GHz
+- **GPU**: ARM Mali G52
+- **VPU/Codec**:
+  - **Hardware Decoding**: H.265/VP9 (HEVC) hardware decoding (up to 4Kp60)
+  - **Hardware Encoding**: H.264 hardware encoding (up to 1080p60)
+- **RAM**: 2/4/8 GB 32-bit LPDDR4x, default 4GB
+- **Flash**: 8/16/32/64 GB eMMC, default eMMC 32GB
+- **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
+- **Operating Voltage**: Wide input voltage range from 4.5V to 18V (voltage tolerance ±5%)
+- **Operating Temperature**: 0℃ ~ 80℃
+- **Operating System**:
+  - **Rockchip official support**: Debian11, Buildroot
+  - **Third-party support**: Armbian
+- **PCB**: 8-layer PCB design
+- **Weight**: 42.3g
+- **Dimensions**: 92mm × 62mm x 14.6mm
 
 ## Getting started
 

@@ -16,18 +16,18 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 
 ### 关键参数
 
-- SOC：瑞芯微 RK3308
-- CPU：四核ARM Cortex-A35@ 1.2GHz，28纳米制程
-- RAM：512MB DDR3
-- Flash：8GB eMMC，选配
-- WiFi&蓝牙：802.11 a/b/g/n/ac & BT5.0 (AP6256)
-- 工作电压：具有宽范围的输入电压，5V（电压误差±5%）
-- 工作温度：0℃ ~ 70℃
-- 操作系统：
-  - Rockchip官方支持：Debian11，Buildroot
-  - 第三方支持：istoreos(openwrt)
-- 重量：42g
-- 大小：52.5mm × 65mm
+- **SOC**：瑞芯微 RK3308
+- **CPU**：四核ARM Cortex-A35@ 1.2GHz，28纳米制程
+- **RAM**：512MB DDR3
+- **Flash**：8GB eMMC，选配
+- **WiFi&蓝牙**：802.11 a/b/g/n/ac & BT5.0 (AP6256)
+- **工作电压**：具有宽范围的输入电压，5V（电压误差±5%）
+- **工作温度**：0℃ ~ 70℃
+- **操作系统**：
+  - **Rockchip官方支持**：Debian11，Buildroot
+  - **第三方支持**：istoreos(openwrt)
+- **重量**：42g
+- **大小**：52.5mm × 65mm
 
 ## 硬件信息
 
