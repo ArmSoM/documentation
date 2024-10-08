@@ -21,6 +21,13 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 - Material: AL6063-T5
 - Finish: Sandblasting + Oxidized Glossy Black
 
+## Compatibility
+
+- Sige1 2mm Thermal Pad
+- Sige3 2mm Thermal Pad
+- Sige5 2mm Thermal Pad
+- Sige7 1mm Thermal Pad
+
 ## 3505S Cooling Fan
 
 ![sige-active-cooling-fan](/img/accessories/sige-active-cooling-fan.png)
@@ -103,9 +110,9 @@ After continuous operation at a specified constant temperature, the average life
 
 ## Easy to buy sample
 
-ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
+ArmSoM online shop: [https://www.armsom.org/product-page/sige-active-cooling-kit](https://www.armsom.org/product-page/sige-active-cooling-kit)
  
-ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806439494827.html](https://aliexpress.com/item/3256806439494827.html) 
+ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256807357737339.html](https://aliexpress.com/item/3256807357737339.html) 
 
 ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=824930133991](https://item.taobao.com/item.htm?id=824930133991)
 

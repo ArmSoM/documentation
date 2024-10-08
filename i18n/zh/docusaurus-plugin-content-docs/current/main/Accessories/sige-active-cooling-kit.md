@@ -21,6 +21,13 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 - 材质：AL6063-T5
 - 工艺：喷砂 + 氧化亮黑
 
+## 兼容性
+
+- Sige1 2mm散热垫
+- Sige3 2mm散热垫
+- Sige5 2mm散热垫
+- Sige7 1mm散热垫
+
 ## 3505S冷却风扇
 
 ![sige-active-cooling-fan](/img/accessories/sige-active-cooling-fan.png)

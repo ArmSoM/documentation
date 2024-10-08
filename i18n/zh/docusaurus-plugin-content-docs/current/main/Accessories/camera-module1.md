@@ -73,7 +73,7 @@ OV13850 模块具有以下特点：
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
  
-ArmSoM 速卖通官方店: [https://ja.aliexpress.com/item/3256806937514891.html](https://ja.aliexpress.com/item/3256806937514891.html) 
+ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256806937514891.html](https://aliexpress.com/item/3256806937514891.html) 
 
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?ft=t&id=802634842391](https://item.taobao.com/item.htm?ft=t&id=802634842391)
 
