@@ -30,23 +30,23 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ### Key Parameter
 
-- SoC: Rockchip RK3588
-- CPU: 4x Cortex-A76 @ 2.4GHz + 4x Cortex-A55 @ 1.8GHz, 8nm
-- GPU: ARM Mali-G610 MP4 
-- NPU: Up to 6 TOPS (INT8), supports INT4/INT8/INT16 mixed computing
-- VPU/Codec:
-  - Hardware Decode: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
-  - Hardware Encode: 8K@30fps H.265 / H.264
-- RAM: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
-- Storage: 64GB/128GB eMMC, default 64GB eMMC
-- Operating Voltage: Wide input voltage, 5V to 20V (±5% tolerance)
-- Operating temperature: 0°C ~ 80°C  
-- OS: 
-  - Official: Android 12.0, Debian 11, Buildroot
-  - 3rd party: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
-- PCB: 12-layer
-- Weight: 46.6g
-- Size: 92mm × 62mm x 14.6mm
+- **SoC**: Rockchip RK3588
+- **CPU**: 4x Cortex-A76 @ 2.4GHz + 4x Cortex-A55 @ 1.8GHz, 8nm
+- **GPU**: ARM Mali-G610 MP4 
+- **NPU**: Up to 6 TOPS (INT8), supports INT4/INT8/INT16 mixed computing
+- **VPU/Codec**:
+  - **Hardware Decode**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
+  - **Hardware Encode**: 8K@30fps H.265 / H.264
+- **RAM**: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
+- **Storage**: 64GB/128GB eMMC, default 64GB eMMC
+- **Operating Voltage**: Wide input voltage, 5V to 20V (±5% tolerance)
+- **Operating temperature**: 0°C ~ 80°C  
+- **OS**: 
+  - **Official**: Android 12.0, Debian 11, Buildroot
+  - **3rd party**: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
+- **PCB**: 12-layer
+- **Weight**: 46.6g
+- **Size**: 92mm × 62mm x 14.6mm
 
 ## Getting started
 

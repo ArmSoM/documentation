@@ -32,24 +32,24 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 
 ### Key Parameters 
 
-- SOC: Rockchip RK3588
-- CPU: RK3588 quad-core Cortex-A76 @ 2.4GHz + quad-core Cortex-A55 @ 1.8GHz, 8nm process  
-- GPU: ARM Mali-G610 MP4
-- NPU: Computing power up to 6 TOPS (INT8), supports INT4/INT8/INT16 mixed computing
-- VPU/Codec:  
-  - Hardware decoding: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
-  - Hardware encoding: 8K@30fps H.265 / H.264
-- RAM: 4GB/8GB/16GB (max 32GB) 64bit LPDDR4/LPDDR4x, default LPDDR4x 8GB
-- Flash: 16GB/32GB/64GB/128GB eMMC, default eMMC 32GB
-- Operating voltage: 4V (±5% voltage variation)  
-- Operating temperature: 0°C ~ 70°C
-- Interface type: LGA package, 506 pins in total
-- Operating systems: 
-  - Officially supported by Rockchip: Android 12.0, Debian 11, Buildroot
-  - Supported by the Third party : Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
-- PCB: 12-layer PCB design
-- Weight: About 13.4g  
-- Size: 45mm × 50mm × 4.5mm (top: 2.2mm + PCB: 1.2mm + bottom: 1.1mm)
+- **SOC**: Rockchip RK3588
+- **CPU**: RK3588 quad-core Cortex-A76 @ 2.4GHz + quad-core Cortex-A55 @ 1.8GHz, 8nm process  
+- **GPU**: ARM Mali-G610 MP4
+- **NPU**: Computing power up to 6 TOPS (INT8), supports INT4/INT8/INT16 mixed computing
+- **VPU/Codec**:  
+  - **Hardware decoding**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
+  - **Hardware encoding**: 8K@30fps H.265 / H.264
+- **RAM**: 4GB/8GB/16GB (max 32GB) 64bit LPDDR4/LPDDR4x, default LPDDR4x 8GB
+- **Flash**: 16GB/32GB/64GB/128GB eMMC, default eMMC 32GB
+- **Operating voltage**: 4V (±5% voltage variation)  
+- **Operating temperature**: 0°C ~ 70°C
+- **Interface type**: LGA package, 506 pins in total
+- **Operating systems**: 
+  - **Officially supported by Rockchip**: Android 12.0, Debian 11, Buildroot
+  - **Supported by the Third party**: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
+- **PCB**: 12-layer PCB design
+- **Weight**: About 13.4g  
+- **Size**: 45mm × 50mm × 4.5mm (top: 2.2mm + PCB: 1.2mm + bottom: 1.1mm)
 
 ## Getting started
 
