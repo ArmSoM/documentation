@@ -68,7 +68,7 @@ Dual Wire Serial Bus Control (SCCB)
     </a>
 </div>
 
-## Easy to buy sample
+## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
  
 ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806937514891.html](https://aliexpress.com/item/3256806937514891.html) 

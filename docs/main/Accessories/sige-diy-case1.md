@@ -35,7 +35,7 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=_eyMxCYa3jU)
 
-## Easy to buy sample
+## Purchase Samples 
 ArmSoM online shop: [Sige Diy Case 1](https://www.armsom.org/product-page/sige7-metal-shell)
  
 ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806616037097.html](https://aliexpress.com/item/3256806616037097.html)

@@ -183,7 +183,7 @@ Development board: [ArmSoM-Sige7](../armsom-sige7)
 
 Code repository: [rknn-llm](https://github.com/ArmSoM/rknn-llm)
 
-## Easy to buy sample
+## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
  
 ArmSoM Aliexpress online shop: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 

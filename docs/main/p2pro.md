@@ -466,7 +466,7 @@ arecord -D hw:0,0 -c 8 -r 44100 -f S16_LE --period-size=1024 --buffer-size=4096 
 
 ```
 
-## Easy to buy sample
+## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
  
 ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805779421715.html](https://www.aliexpress.com/item/3256805779421715.html) 

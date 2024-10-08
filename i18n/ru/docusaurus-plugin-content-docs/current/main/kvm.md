@@ -103,6 +103,6 @@ Network disk address: [Google Drive link](https://drive.google.com/drive/folders
 Firmware location: 3. Linux image/debian/ArmSoM-P2pro  
 
 
-## Easy to buy sample
+## Purchase Samples 
 
 OEM&ODM,  please contact: sales@armsom.org

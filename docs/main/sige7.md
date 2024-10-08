@@ -600,10 +600,10 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
 </a>
 </div>
 
-## Easy to buy sample
+## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
  
-ArmSoM Aliexpress online shop: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
+ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806184323776.html](https://aliexpress.com/item/3256806184323776.html) 
 
 ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
 

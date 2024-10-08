@@ -90,7 +90,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 
 </div>
 
-## Easy to buy sample
+## Purchase Samples 
 
 ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
  

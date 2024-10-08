@@ -434,7 +434,7 @@ Here are some tips for your design reference:
 
 :::
 
-## Easy to buy sample
+## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)
  
 ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805435700769.html](https://www.aliexpress.com/item/3256805435700769.html) 

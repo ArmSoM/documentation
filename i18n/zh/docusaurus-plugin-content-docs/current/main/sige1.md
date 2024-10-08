@@ -439,7 +439,7 @@ ArmSoM-Sige1 将至少生产到 2034 年 8 月。
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/Sige1](https://www.armsom.org/product-page/Sige1)
  
-ArmSoM 速卖通官方店: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
+ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807356692995.html](https://aliexpress.com/item/3256807356692995.html) 
 
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
 

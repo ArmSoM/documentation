@@ -43,7 +43,7 @@ Discord Community: [ArmSoM Discord](https://discord.gg/THfTEatpfK) - experienced
 
 ArmSoM Github: [ArmSoM Github](https://github.com/armsom)
 
-## Easy to buy sample
+## Purchase Samples 
 [ArmSoM online shop](https://www.armsom.org/category/all-products) + [ArmSoM Aliexpress online shop](https://www.aliexpress.com/store/1102800175) +  [ArmSoM Taobao shop](https://shop518100695.taobao.com/)
 
 

@@ -580,7 +580,7 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
 
 ArmSoM Official Website: [https://www.armsom.org/product-page/Sige5](https://www.armsom.org/product-page/Sige5)
 
-ArmSoM Official AliExpress Store: [https://www.aliexpress.com/store/1102800175](https://www.aliexpress.com/store/1102800175) 
+ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256806760032306.html](https://aliexpress.com/item/3256806760032306.html) 
 
 ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=790341533736](https://item.taobao.com/item.htm?id=790341533736)
 
