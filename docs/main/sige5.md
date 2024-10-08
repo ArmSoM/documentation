@@ -63,7 +63,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 
 ### Hardware Interface
 
-![ArmSoM-Sige5 front & back](/img/sige/sige5-layout.jpg)
+![ArmSoM-Sige5 front & back](/img/sige/sige5-layout-1.jpg)
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
 :::tip
