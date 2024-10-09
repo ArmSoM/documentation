@@ -441,7 +441,7 @@ ArmSoM 独立站: [https://www.armsom.org/product-page/Sige1](https://www.armsom
  
 ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807356692995.html](https://aliexpress.com/item/3256807356692995.html) 
 
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=824590173298](https://item.taobao.com/item.htm?id=824590173298)
 
 OEM&ODM,  请联系: sales@armsom.org
 

@@ -476,7 +476,7 @@ ArmSoM Official Website: [https://www.armsom.org/product-page/Sige1](https://www
 
 ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256807356692995.html](https://aliexpress.com/item/3256807356692995.html) 
 
-ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=824590173298](https://item.taobao.com/item.htm?id=824590173298)
 
 For OEM & ODM, please contact: sales@armsom.org
 
