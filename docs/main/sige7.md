@@ -436,6 +436,19 @@ github : [SystemReady](https://github.com/ArmSoM/SystemReady)
         </div>
     </div>
 </a>
+
+<a href="https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7.dts" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>Sige7 mainline linux</h2>
+            <p>torvalds linux</p>
+        </div>
+    </div>
+</a>
+
 <a href="/general-tutorial/rknn-llm" class="card-link">
     <div class="card">
         <div class="icon">

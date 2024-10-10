@@ -269,6 +269,19 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
         </div>
     </div>
 </a>
+
+<a href="https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3588-armsom-lm7.dtsi" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📘</i>
+        </div>
+        <div class="content">
+            <h2>LM7 mainline linux</h2>
+            <p>torvalds linux</p>
+        </div>
+    </div>
+</a>
+
 <a href="/general-tutorial/rknn-llm" class="card-link">
     <div class="card">
         <div class="icon">
