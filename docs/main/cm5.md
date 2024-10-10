@@ -348,9 +348,9 @@ The official accessories designed for the ArmSoM-CM5-IO are intended to help you
 
 ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
 
-ArmSoM Official AliExpress Store: 
+ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
 
-ArmSoM Official Taobao Store: 
+ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
 
 For OEM & ODM, please contact: sales@armsom.org
 
