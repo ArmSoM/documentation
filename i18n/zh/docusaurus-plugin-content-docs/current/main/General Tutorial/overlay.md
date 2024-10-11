@@ -41,6 +41,13 @@ overlays=armsom-sige7-camera-imx415-4k armsom-sige7-display-10hd
 
 ​	编辑好之后重启设备来更改overlays设置。
 
+:::tip 
+
+屏幕有显示之后还不能直接用触摸功能，需要加载TP的驱动 
+
+`insmod /lib/modules/6.1.75-vendor-rk35xx/kernel/drivers/input/touchscreen/gt9xx/goodix_gt9xx.ko`
+:::
+
 ## 4. 40-PIN 功能测试
 
 40PIN上的引脚有些一个引脚可以复用多种功能，可以按需配置功能，具体引脚功能可以查看板卡的`40-PIN header`
