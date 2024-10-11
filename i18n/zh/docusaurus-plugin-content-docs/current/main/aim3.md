@@ -46,7 +46,7 @@ ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗
 
 ### 硬件接口
 
-![ArmSoM-AIM7-front & back](/img/aim/AIM5/armsom-aim5-front&back.png)
+![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
 
 :::tip
 AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
