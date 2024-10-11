@@ -6,7 +6,7 @@ sidebar_position: 5
 slug: /armsom-cm5
 ---
 
-# Product Introduction:ArmSoM-CM5
+# Product Introduction: ArmSoM-CM5
 
 ## Overview
 

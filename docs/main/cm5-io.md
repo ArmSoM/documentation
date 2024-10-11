@@ -6,15 +6,15 @@ sidebar_position: 6
 slug: /armsom-cm5-io
 ---
 
-# cm5-io Product Introduction
+# CM5-IO Product Introduction
 
-The cm5-io is the IO board for the ArmSoM CM5, with dimensions of 100x80x29 mm. It is a miniature AI computer designed specifically for makers, learners, and developers, enabling the rapid application of AI technology to various smart devices.
+The CM5-IO is the IO board for the ArmSoM CM5, with dimensions of 100x80x29 mm. It is a miniature AI computer designed specifically for makers, learners, and developers, enabling the rapid application of AI technology to various smart devices.
 
 ## Hardware Information
 
 ### Hardware Specifications
 
-The cm5-io board is an expansion board specifically designed for the CM5 computing module, aimed at assisting in system and embedded board development.
+The CM5-IO board is an expansion board specifically designed for the CM5 computing module, aimed at assisting in system and embedded board development.
 
 - 1x HDMI output, 1x DP output
 - 4x USB 3.0 Type-A

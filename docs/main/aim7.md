@@ -6,7 +6,7 @@ sidebar_position: 3
 slug: /armsom-aim7
 ---
 
-# Product Introduction:AIM7
+# Product Introduction: AIM7
 
 ## Overview
 

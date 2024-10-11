@@ -6,7 +6,7 @@ sidebar_position: 2
 slug: /armsom-sige5
 ---
 
-# Product Introduction:Sige5
+# Product Introduction: Sige5
 
 Let's get to know Sige5 in 5 minutes.
 

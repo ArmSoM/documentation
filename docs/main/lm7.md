@@ -6,7 +6,7 @@ sidebar_position: 4
 slug: /armsom-lm7
 ---
 
-# Product Introduction:LM7
+# Product Introduction: LM7
 
 Let's get to know LM7 in 5 minutes.
 
