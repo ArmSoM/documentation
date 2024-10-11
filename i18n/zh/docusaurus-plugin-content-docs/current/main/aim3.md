@@ -1,35 +1,31 @@
 ---
-description: ArmSoM-AIM5
-keywords: [armsom, armsom-aim5, RK3576核心板, rockchip]
-sidebar_label: "AIM5"
+description: ArmSoM-AIM3
+keywords: [armsom, armsom-aim3, RK3576核心板, rockchip]
+sidebar_label: "AIM3"
 sidebar_position: 3
-slug: /armsom-aim5
+slug: /armsom-aim3
 ---
 
 # AIM5 产品简介
 
 ## 简介
-ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成了 4 个 Cortex-A72 和 4 个 Cortex-A53 及独立
-的 NEON 协处理器；内置了多种功能强大的嵌入式硬件引擎，为高端应用提供了优异的性能，支持 4K@120fps 的H.265、VP9、AVS2 和 AV1 解码器，支持 4k@60fps 的 H.264 解码器；还支持 4K@60fps 的 H.264 和 H.265编码器，内置 3D GPU，能够完全兼容 OpenGL ES1.1/2.0/3.2、OpenCL 2.0 和 Vulkan 1.1
-
-
-适用于 ARM PC、边缘计算、个人移动互联网设备及其它多媒体产品。
+ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗四核应用处理器，采用22nm制程工艺，CPU 采用了先进的 ARM Cortex-A55 架构，集成了强大的图像处理单元（GPU），支持高清视频解码和编码，支持4K解码和1080P编码，可用于轻量级人工智能应用
 
 ### 关键参数
 
-- SOC：瑞芯微 RK3576
-- CPU：集成了四核Cortex-A72@ 2.2GHz和四核Cortex-A53@ 1.8GHz以及单独的NEON协处理器。
-- GPU：ARM Mali G52 MC3 GPU。
-- NPU：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算。
+- SOC：瑞芯微 RK3568
+- CPU：四核Cortex-A55 @ 2GHz
+- GPU：ARM Mali G52
+- NPU：NPU 支持 INT8/INT16/FP16/BFP16，计算能力高达 1TOPs@INT8
 - VPU/编解码：
-  - 硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
-  - 硬编码：支持H.264和H.265，JPEG最高4K@60fps。
-- RAM：8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
-- Flash：32/64/128GB eMMC，默认eMMC 64GB。
-- 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）
-- 工作温度：0℃ ~ 80℃
+  - 硬解码：H.265/VP9 (HEVC) 硬件解码（最高 4Kp60）
+  - 硬编码：H.264 硬件解码（最高 1080p60）
+- RAM：2/4/8 GB 32bit LPDDR4x，默认4GB
+- Flash：8/16/32/64 GB eMMC，默认eMMC 32GB
+- 工作电压：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
+- 工作温度：0℃ ~ 60℃
 - 操作系统：
-  - Rockchip官方支持：Android 14，Debian12，Buildroot
+  - Rockchip官方支持：Android 12，Debian11，Buildroot
   - 第三方支持：Armbian
 - 大小：92mm × 62mm x 14.6mm
 
@@ -53,7 +49,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
 ![ArmSoM-AIM7-front & back](/img/aim/AIM5/armsom-aim5-front&back.png)
 
 :::tip
-AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
+AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
 :::
 
 ### 产品框图
@@ -62,7 +58,7 @@ AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 ### 硬件规格
 <details>
     <summary>
-        AIM5 硬件规格
+        AIM3 硬件规格
     </summary>
 
 <table>
@@ -79,7 +75,7 @@ AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
         </tr>
         <tr>
             <th>摄像头</th>
-            <th><li>1x 4-lane + 4x 2-lane MIPI CSI 接口，每线最高 2.5Gbps</li></th>
+            <th><li>2x 2-lane MIPI CSI 接口，每线最高 2.5Gbps</li></th>
         </tr>
         <tr>
             <th>网络</th>
@@ -90,7 +86,9 @@ AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>PCIe 2.0 x2: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li></th>
+            <th><li>PCIe 2.0 x2: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li>
+            <li>支持 10/100/1000Mbps 数据传输速率</li>
+            </th>
         </tr>
          <tr>
             <th>USB</th>
@@ -109,10 +107,10 @@ AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 
 <details>
     <summary>
-        AIM5 硬件规格
+        AIM3 硬件规格
     </summary>
 
-| 规格                                 |  ArmSoM-AIM5              | Jetson Nano (NVIDIA)                |
+| 规格                                 |  ArmSoM-AIM7              | Jetson Nano (NVIDIA)                |
 |--------------------------------------|-----------------------------------|--------------------------------|
 | CPU   |<div className='armsom-color'> 四核Cortex-A72+四核Cortex-A53</div> | 四核 ARM® Cortex®A57 MPCore 处理器    | 
 | GPU    | ARM Mali G52 MC3 GPU                 |128核Maxwell架构GPU   | 
@@ -376,15 +374,15 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian11 for AIM7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
-|![Android](/img/sige/android.png) | Android14 for AIM7 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian11 for AIM3 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
+|![Android](/img/sige/android.png) | Android12 for AIM3 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
 
 ### 第三方镜像
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM7 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for AIM7 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM3 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for AIM3 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 
@@ -403,7 +401,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
                 <i>📦</i>
             </div>
             <div class="content">
-                <h2>AIM7 Schematics</h2>
+                <h2>AIM3 Schematics</h2>
             </div>
         </div>
     </a>
@@ -414,7 +412,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>AIM7 2D</h2>
+            <h2>AIM3 2D</h2>
         </div>
     </div>
 </a>
