@@ -654,7 +654,7 @@ ArmSoM-Sige7/5/3 分辨率最高分辨率可达 4K@60Hz
 
 1. 按照下图将连接好排线
 
-![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
+![sige7-display-10-hd](/img/general-tutorial/display-10-hd.png)
 
 2. 打开 10.1 寸 MIPI LCD 屏幕配置的方法
 

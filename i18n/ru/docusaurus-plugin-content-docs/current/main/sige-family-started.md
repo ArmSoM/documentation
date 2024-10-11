@@ -663,7 +663,7 @@ The ArmSoM-Sige7/5/3 supports a maximum resolution of up to 4K@60Hz.
 
 1. Connect the cables as shown in the image below.
 
-![sige7-display-10-hd](/img/general-tutorial/display-10-hd.jpg)
+![sige7-display-10-hd](/img/general-tutorial/display-10-hd.png)
 
 2. Configuring the 10.1-inch MIPI LCD screen
 

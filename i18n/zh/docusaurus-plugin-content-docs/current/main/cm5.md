@@ -167,7 +167,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
         </tr>
          <tr>
             <th rowspan="3">Others</th>
-            <th ><li>UART DEBUG x1</li><li>FAN x1</li><li>RTC x1</li>s</th>
+            <th ><li>UART DEBUG x1</li><li>FAN x1</li><li>RTC x1</li></th>
         </tr>
     </tbody>
 </table>
