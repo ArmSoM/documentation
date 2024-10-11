@@ -6,7 +6,7 @@ sidebar_position: 3
 slug: /armsom-aim3
 ---
 
-# AIM5 产品简介
+# AIM3 产品简介
 
 ## 简介
 ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗四核应用处理器，采用22nm制程工艺，CPU 采用了先进的 ARM Cortex-A55 架构，集成了强大的图像处理单元（GPU），支持高清视频解码和编码，支持4K解码和1080P编码，可用于轻量级人工智能应用
@@ -331,7 +331,7 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>AIM5 kernel</h2>
+            <h2>AIM3 kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -343,7 +343,7 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>AIM5 uboot</h2>
+            <h2>AIM3 uboot</h2>
             <p>rockchip-linux/u-boot</p>
         </div>
     </div>
@@ -425,7 +425,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 ## 供货声明
 
-ArmSoM-AIM5 将至少生产到 2034 年 8 月。
+ArmSoM-AIM3 将至少生产到 2034 年 8 月。
 
 ## 样品购买
 
