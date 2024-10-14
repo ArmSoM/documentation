@@ -480,6 +480,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 |![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7(bpi-m7) :    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian固件下载](https://www.armbian.com/bananapi-m7/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 |Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux 是一个独立开发的通用 GNU/Linux 发行版，致力于通过滚动发布模式提供大多数软件的最新稳定版本。默认安装是一个最小的基础系统，由用户配置为仅添加所需的内容。| 只需刷新图像并按照安装程序提示的说明进行操作即可。<br/>注意：此安装程序需要互联网连接。（以太网驱动程序可能需要一些时间来加载，安装程序将重试多次，这是正常的。）  [download](https://github.com/kwankiu/archlinux-installer/releases) |
+| ![openSUSE](https://static.opensuse.org/favicon.svg) | 桌面用户、开发者以及系统管理员的匠之所选。| [download](https://build.opensuse.org/projects/openSUSE:Factory:ARM/packages/JeOS:JeOS-sige7/repositories/images/binaries) |
 
 ### 硬件资料
 
