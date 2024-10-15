@@ -43,7 +43,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 - **Operating temperature**: 0°C ~ 80°C  
 - **OS**: 
   - **Official**: Android 12.0, Debian 11, Buildroot
-  - **3rd party**: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
+  - **3rd party**: Armbian, Ubuntu 22.04, Ubuntu 24.04, Arch Linux, openSUSE
 - **PCB**: 12-layer
 - **Weight**: 46.6g
 - **Size**: 92mm × 62mm x 14.6mm

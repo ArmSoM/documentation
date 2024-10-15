@@ -39,7 +39,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 - **工作温度**：0℃ ~ 80℃
 - **操作系统**：
   - **Rockchip官方支持**：Android 12.0，Debian11，Buildroot
-  - **第三方支持**：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS
+  - **第三方支持**：Armbian, Ubuntu 22.04, Ubuntu 24.04, Arch Linux, openSUSE
 - **PCB**：12 层 PCB 板设计
 - **重量**：46.6g
 - **大小**：92mm × 62mm x 14.6mm
