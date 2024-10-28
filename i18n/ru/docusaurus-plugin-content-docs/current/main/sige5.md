@@ -17,7 +17,7 @@ ArmSoM-Sige5 adopts the second-generation 8nm high-performance AIOT platform Roc
 ![ArmSoM-sige5](/img/sige/sige5.png)
 
 :::tip Rockchip RK3576
-- [ArmSoM-Sige5](./armsom-sige5) single-board computer;
+- [ArmSoM-Sige5](./armsom-sige5) Single Board Computer;
 - [ArmSoM-CM5](./armsom-cm5) RK3576 CM5 Compute Module, [ArmSoM-CM5-IO](./armsom-cm5-io) CM5 companion IO board;
 
 Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM helps users easily transition from concept to prototype to mass production, making it an ideal creative platform for makers, dreamers, and hobbyists.

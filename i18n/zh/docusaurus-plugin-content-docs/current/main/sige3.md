@@ -340,7 +340,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 获取 Sige3 原理图、DXF等硬件资料
 
 <div class="cards">
-<a href="https://pan.baidu.com/s/1XWl4ybT9nXCxRil8Avztxg?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -350,7 +350,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
             </div>
         </div>
 </a>
-<a href="https://pan.baidu.com/s/1Vwrg71j_VEb_RWB0z71Xvg?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -360,7 +360,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1-EvAD7jWs2L3Qc4XYXPFWQ?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -370,7 +370,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1O_pDcWoXn8_L4GD_ZHMnxA?pwd=arms " class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

@@ -338,7 +338,7 @@ Network disk address:
 ### Hardware Resources 
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -349,7 +349,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -360,7 +360,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -370,7 +370,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
