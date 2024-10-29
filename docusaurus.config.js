@@ -63,11 +63,11 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          // lastmod: 'date',
+          // lastmod: '2024-10-29T10:22:05+00:00',
           // changefreq: 'weekly',
           // priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          // filename: 'sitemap.xml',
+          ignorePatterns: ['**/tags/**'],
+          filename: 'sitemap.xml',
           // createSitemapItems: async (params) => {
           //   const {defaultCreateSitemapItems, ...rest} = params;
           //   const items = await defaultCreateSitemapItems(rest);
@@ -86,7 +86,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'keywords', content: 'armsom, SBC, Open Source, Thin client, rockchip'},
+        {name: 'keywords', content: 'armsom, SBC, RK3576, Thin client, rockchip'},
         {name: 'twitter:card', content: 'summary_large_image'},
       ],
       // Replace with your project's social card
