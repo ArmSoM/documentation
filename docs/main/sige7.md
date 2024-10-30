@@ -623,6 +623,19 @@ ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://i
 
 OEM&ODM, please contact: sales@armsom.org
 
+## Expert perspective
+
+- [arm](https://www.arm.com/zh-TW/architecture/system-architectures/systemready-certification-program/ir): SystemReady IR is tailored to meet the needs of embedded Linux/BSD ecosystem on systems based on embedded Arm SoCs.
+- [cnx-software](https://www.cnx-software.com/2024/01/30/banana-pi-bpi-m7-thin-rockchip-rk3588-sbc-dual-2-5gbe-m-2-nvme-storage-hdmi-2-1): ArmSoM-Sige7 – A thin Rockchip RK3588 SBC with dual 2.5GbE, M.2 NVMe storage, HDMI 2.1, and more
+- [notebookcheck](https://www.notebookcheck.net/Banana-Pi-BPI-M7-debuts-as-new-Pico-ITX-sized-single-board-computer-with-8K-video-outputs.768533.0.html): ArmSoM-Sige7 debuts as new Pico-ITX sized single-board computer with 8K video outputs
+- [liliputing](https://liliputing.com/banana-pi-bpi-m7-router-board-now-available-for-165-rk3588-processor-dual-2-5-gb-ethernet-wifi-6-and-bt-5-2): ArmSoM-Sige7 router board now available for $165 (RK3588 processor, dual 2.5 Gb Ethernet, WiFi 6 and BT 5.2)
+- [itsfoss](https://itsfoss.com/arosom-sige7-review/): This SBC Puts Raspberry Pi 5 to Shame
+- [electronics-lab](https://www.electronics-lab.com/armsom-sige7-review-a-rockchip-rk3588-sbc-with-dual-2-5gbe-ethernet-nvme-storage-and-triple-display-output): ArmSom Sige7 Review- A Rockchip RK3588 SBC with Dual 2.5GbE Ethernet, NVMe Storage, and Triple Display Output
+- [magazinmehatronika](https://magazinmehatronika.com/banana-pi-bpi-m7-a-k-a-armsom-sige7-recenzija): Armsom Sige7 recenzija
+- [sk](https://www.sk.rs/arhiva/clanak/33374/armsom-sige7-lici-na-bananu-ali-nije): Armsom Sige7 
+- [Technically Unsure](https://www.youtube.com/watch?v=Cw91DFgMFQQ): ArmSoM Sige7 vs Raspberry Pi 5: The Ultimate Single-Board Battle – Who Reigns Supreme?
+- [habr](https://habr.com/ru/companies/selectel/articles/774782/): A single board that supports 32 GB of RAM. What kind of device is this?
+
 ## Notes
 
 :::caution [Electrostatic Protection]

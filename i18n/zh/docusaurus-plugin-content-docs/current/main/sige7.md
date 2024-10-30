@@ -617,6 +617,19 @@ ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https
 
 OEM&ODM,  请联系: sales@armsom.org
 
+## 专家视角
+
+- [arm](https://www.arm.com/zh-TW/architecture/system-architectures/systemready-certification-program/ir)：SystemReady IR 是为满足基于嵌入式 Arm SoC 的系统上的嵌入式 Linux/BSD 生态系统的需求而定制的。
+- [cnx-software](https://www.cnx-software.com/2024/01/30/banana-pi-bpi-m7-thin-rockchip-rk3588-sbc-dual-2-5gbe-m-2-nvme-storage-hdmi-2-1)：ArmSoM-Sige7 — 一款纤薄的瑞芯微 RK3588 单板计算机，具有双 2.5GbE、M.2 NVMe 存储、HDMI 2.1 等更多功能。
+- [notebookcheck](https://www.notebookcheck.net/Banana-Pi-BPI-M7-debuts-as-new-Pico-ITX-sized-single-board-computer-with-8K-video-outputs.768533.0.html)：ArmSoM-Sige7 作为一款新的 Pico-ITX 尺寸单板计算机首次亮相，具有 8K 视频输出。
+- [liliputing](https://liliputing.com/banana-pi-bpi-m7-router-board-now-available-for-165-rk3588-processor-dual-2-5-gb-ethernet-wifi-6-and-bt-5-2)：ArmSoM-Sige7 路由器主板现已上市，售价 165 美元（瑞芯微 RK3588 处理器、双 2.5Gb 以太网、WiFi 6 和蓝牙 5.2）。
+- [itsfoss](https://itsfoss.com/arosom-sige7-review/)：这款单板计算机让树莓派 5 相形见绌。
+- [electronics-lab](https://www.electronics-lab.com/armsom-sige7-review-a-rockchip-rk3588-sbc-with-dual-2-5gbe-ethernet-nvme-storage-and-triple-display-output)：ArmSom Sige7 评测——一款具有双 2.5GbE 以太网、NVMe 存储和三显输出的瑞芯微 RK3588 单板计算机。
+- [magazinmehatronika](https://magazinmehatronika.com/banana-pi-bpi-m7-a-k-a-armsom-sige7-recenzija)：ArmSoM Sige7 评测。
+- [sk](https://www.sk.rs/arhiva/clanak/33374/armsom-sige7-lici-na-bananu-ali-nije)：ArmSoM Sige7 评测。
+- [Technically Unsure](https://www.youtube.com/watch?v=Cw91DFgMFQQ)：ArmSoM Sige7 与树莓派 5：终极单板之战——谁是王者？
+- [habr](https://habr.com/ru/companies/selectel/articles/774782/)：一款支持 32GB 内存的单板计算机, 是一款什么样的设备？
+
 ## 注意事项
 
 :::caution [静电保护]
