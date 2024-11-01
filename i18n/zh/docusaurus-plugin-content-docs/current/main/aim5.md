@@ -31,7 +31,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
 - 操作系统：
   - Rockchip官方支持：Android 14，Debian12，Buildroot
   - 第三方支持：Armbian
-- 大小：92mm × 62mm x 14.6mm
+- 大小：69.6 mm x 45 mm
 
 ## Getting started
 <a href="./armsom-aimio#使用手册" class="card-link">
@@ -50,7 +50,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
 
 ### 硬件接口
 
-![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
+![ArmSoM-AIM7-front & back](/img/aim/aim5/armsom-aim5-front&back.png)
 
 :::tip
 AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
@@ -376,15 +376,14 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian11 for AIM7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
-|![Android](/img/sige/android.png) | Android14 for AIM7 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for AIM5 :  <br/>   Debian 12，代号为"bookworm"，最初在2023年6月10日发布的。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
+|![Android](/img/sige/android.png) | Android14 for AIM5 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
 
 ### 第三方镜像
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM7 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for AIM7 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM5 :    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian image](https://github.com/armbian/community/releases)     |
 
 ### 硬件资料
 
@@ -403,7 +402,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
                 <i>📦</i>
             </div>
             <div class="content">
-                <h2>AIM7 Schematics</h2>
+                <h2>AIM5 Schematics</h2>
             </div>
         </div>
     </a>
@@ -414,7 +413,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>AIM7 2D</h2>
+            <h2>AIM5 2D</h2>
         </div>
     </div>
 </a>
