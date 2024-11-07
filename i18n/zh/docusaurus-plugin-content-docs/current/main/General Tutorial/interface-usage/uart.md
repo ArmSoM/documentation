@@ -1,5 +1,6 @@
 ---
 sidebar_label: "UART 使用"
+slug: /general-tutorial/interface-usage/uart
 sidebar_position: 11
 ---
 # UART 使用
@@ -20,7 +21,7 @@ Rockchip UART (Universal Asynchronous Receiver/Transmitter) 基于16550A串口�
 - 在40PIN中可供复用的UART有:uart2-m2，uart3-m1，uart4-m2，uart7-m1，uart7-m2，uart8-m0
   
 ### 2.1 如何使用40PIN中的UART ？
-用户只需参考 [overlay](https://docs.armsom.org/zh/docs/general-tutorial/overlay) 设置，在overlay属性中添加上UART的overlay文件：
+用户只需参考 [overlay](../overlay) 设置，在overlay属性中添加上UART的overlay文件：
 
 例如：
 - 使用UART3：	

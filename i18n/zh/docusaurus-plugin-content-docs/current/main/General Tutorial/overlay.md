@@ -1,5 +1,6 @@
 ---
 sidebar_label: "overlay"
+slug: /general-tutorial/overlay
 sidebar_position: 5
 ---
 

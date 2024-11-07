@@ -1,5 +1,6 @@
 ---
 sidebar_label: "UART Usage"
+slug: /general-tutorial/interface-usage/uart
 sidebar_position: 11
 ---
 # UART Usage
@@ -24,7 +25,7 @@ Rockchip UART (Universal Asynchronous Receiver/Transmitter) is based on the 1655
 
 ### 2.1 How to use the UART in the 40PIN?
 
-Users only need to refer to the [overlay](https://docs.armsom.org/en/docs/general-tutorial/overlay) setting, and add the UART's overlay file in the overlay properties:
+Users only need to refer to the [overlay](../overlay) setting, and add the UART's overlay file in the overlay properties:
 
 For example:
 
