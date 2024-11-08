@@ -50,7 +50,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
 
 ### 硬件接口
 
-![ArmSoM-AIM7-front & back](/img/aim/aim5/armsom-aim5-front&back.png)
+![ArmSoM-AIM7-front & back](/img/aim/armsom-aim5-front&back.png)
 
 :::tip
 AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同

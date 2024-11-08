@@ -59,6 +59,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 ### Hardware Interface
 
 ![ArmSoM-CM5-front & back](/img/cm/armsom-cm5-front&back1.jpg)
+![ArmSoM-CM5-rpi-cm4-io](/img/cm/cm5-rpi-cm4-io.png)
 
 :::tip
 - Designed as a board-to-board connector.
@@ -254,14 +255,14 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for CM5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for CM5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. |  **CM5-IO**:[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)    <br/>  **CM5-RPI-CM4-IO**:[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)   |
 |![Android](/img/sige/android.png) | Android14 for CM5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.|[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
 
 ### Third Party System  
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for CM5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://www.armbian.com/armsom-cm5-io/)     |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for CM5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       |**CM5-IO**:[armbian image](https://www.armbian.com/armsom-cm5-io/)   <br/>  **CM5-RPI-CM4-IO**:[armbian image](https://www.armbian.com/armsom-cm5-rpi-cm4-io/)   |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### Hardware Resources 

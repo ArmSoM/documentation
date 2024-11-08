@@ -50,7 +50,7 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
 
 ### Hardware Interface
 
-![ArmSoM-AIM5-front & back](/img/aim/aim5/armsom-aim5-front&back.png)
+![ArmSoM-AIM5-front & back](/img/aim/armsom-aim5-front&back.png)
 
 :::tip
 All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
