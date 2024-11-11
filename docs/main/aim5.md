@@ -11,8 +11,8 @@ slug: /armsom-aim5
 ## Overview
 ArmSoM-AIM5 adopts Rockchip RK3576 second-generation 8nm high-performance AIOT platform processor, integrating 4 Cortex-A72 and 4 Cortex-A53 and independent NEON co processors; Built in multiple powerful embedded hardware engines, providing excellent performance for high-end applications and supporting 4K@120fps H.265, VP9, AVS2, and AV1 decoders, supporting 4k@60fps H.264 decoder; Also supported 4K@60fps H.264 and H.265 encoders, built-in 3D GPU, fully compatible with OpenGL ES1.1/2.0/3.2, OpenCL 2.0, and Vulkan 1.1.
 
-
 It is applicable to ARM PC, edge computing, personal mobile Internet devices and other multimedia products.
+![ArmSoM-AIM5](/img/aim/aim5.jpg)
 
 ### Key Parameters
 

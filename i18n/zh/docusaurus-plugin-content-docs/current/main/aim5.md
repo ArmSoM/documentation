@@ -12,8 +12,8 @@ slug: /armsom-aim5
 ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成了 4 个 Cortex-A72 和 4 个 Cortex-A53 及独立
 的 NEON 协处理器；内置了多种功能强大的嵌入式硬件引擎，为高端应用提供了优异的性能，支持 4K@120fps 的H.265、VP9、AVS2 和 AV1 解码器，支持 4k@60fps 的 H.264 解码器；还支持 4K@60fps 的 H.264 和 H.265编码器，内置 3D GPU，能够完全兼容 OpenGL ES1.1/2.0/3.2、OpenCL 2.0 和 Vulkan 1.1
 
-
 适用于 ARM PC、边缘计算、个人移动互联网设备及其它多媒体产品。
+![ArmSoM-AIM5](/img/aim/aim5.jpg)
 
 ### 关键参数
 
