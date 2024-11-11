@@ -19,6 +19,7 @@ Dual Wire Serial Bus Control (SCCB)
 
 ## Compatibility
 - Sige 3/5/7
+- LM7 & W3
 - CM5
 - AIM7
 

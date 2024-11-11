@@ -39,6 +39,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
   - **Hardware Encode**: 8K@30fps H.265 / H.264
 - **RAM**: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
 - **Storage**: 64GB/128GB eMMC, default 64GB eMMC
+- **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
 - **Operating Voltage**: Wide input voltage, 5V to 20V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
 - **OS**: 

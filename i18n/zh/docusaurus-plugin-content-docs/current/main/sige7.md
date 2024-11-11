@@ -35,6 +35,7 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
   - **硬编码**：8K@30fps H.265 / H.264
 - **RAM**：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
 - **Flash**：64GB/128GB eMMC，默认eMMC 64GB
+- **WIFI/BT**: 板载IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
 - **工作电压**：具有宽范围的输入电压，从5V到20V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
 - **操作系统**：
