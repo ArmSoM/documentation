@@ -837,6 +837,16 @@ overlays=armsom-cm5-io-display-10hd // cm5-kit
 
 编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
 
+## 样品购买
+
+ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+
+ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
+
+OEM&ODM,  请联系: sales@armsom.org
+
 ## 注意事项
 
 :::caution [静电保护]
