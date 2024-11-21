@@ -829,13 +829,21 @@ sudo nano /boot/armbianEnv.txt
 - 在该文件中找到或者添加 "overlays=" 这个关键词。
 
 ```bash
-// 根据您手上的产品选择
+// 根据您手上的产品选择 二选一
 overlays=armsom-cm5-io-display-10hd // cm5-kit
+overlays=armsom-cm5-rpi-cm4-io-display // cm5-rpi-cm4-io
 ```
 
 快捷键：Ctrl + S保存    Ctrl + X退出
 
-编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
+如果您还需要使用触摸需要加载对应的驱动
+
+```bash
+// 地址根据实际情况修改
+root@armsom-cm5-io:/home/armsom# insmod /usr/lib/modules/6.1.75-vendor-rk35xx/kernel/drivers/input/touchscreen/gt9xx/goodix_gt9xx.ko
+```
+
+重启设备来更改Overlays设置以支持Display 10 HD。
 
 ## 样品购买
 
