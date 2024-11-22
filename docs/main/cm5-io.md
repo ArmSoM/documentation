@@ -856,6 +856,13 @@ overlays=armsom-cm5-rpi-cm4-io-display // cm5-rpi-cm4-io
 
 Shortcut keys: Ctrl + S to save    Ctrl + X to exit
 
+```bash
+// Remount the file system
+root@armsom-cm5-io:/home/armsom# sudo mount -o remount 
+// or
+root@armsom-cm5-io:/home/armsom# sync
+```
+
 If you also need to use touch functionality, you will need to load the corresponding driver:
 
 ```bash

@@ -836,6 +836,13 @@ overlays=armsom-cm5-rpi-cm4-io-display // cm5-rpi-cm4-io
 
 快捷键：Ctrl + S保存    Ctrl + X退出
 
+```bash
+// 重新挂载文件系统
+root@armsom-cm5-io:/home/armsom# sudo mount -o remount /
+// or
+root@armsom-cm5-io:/home/armsom# sync
+```
+
 如果您还需要使用触摸需要加载对应的驱动
 
 ```bash
