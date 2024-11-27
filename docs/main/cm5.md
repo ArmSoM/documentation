@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-CM5
+description: The ArmSoM-CM5 is a compute module powered by the Rockchip RK3576 second-generation 8nm high-performance AIOT platform.
 keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "CM5"
 sidebar_position: 5

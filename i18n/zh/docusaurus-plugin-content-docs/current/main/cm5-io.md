@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-CM5-IO
+description: CM5-IO是 ArmSoM CM5的 IO 板，尺寸为 100x80x29 毫米
 keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "CM5-IO"
 sidebar_position: 6

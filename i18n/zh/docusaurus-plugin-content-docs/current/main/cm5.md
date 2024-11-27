@@ -1,9 +1,10 @@
 ---
-description: ArmSoM-CM5
+description: ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能AIOT平台，集成了四核Cortex-A72@ 2.2GHz和四核Cortex-A53@ 1.8GHz以及单独的NEON协处理器，6 TOPS算力NPU，最大可配16GB大内存。支持4K视频编解码，拥有丰富的接口，支持多种操作系统。
 keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "CM5"
 sidebar_position: 5
 slug: /armsom-cm5
+image: /img/cm/cm5.png
 ---
 
 # ArmSoM-CM5 产品简介

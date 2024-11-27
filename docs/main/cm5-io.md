@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-cm5-io
+description: The CM5-IO is the IO board for the ArmSoM CM5, with dimensions of 100x80x29 mm.
 keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "CM5-IO"
 sidebar_position: 6
