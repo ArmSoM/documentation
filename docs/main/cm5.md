@@ -4,6 +4,7 @@ keywords: [armsom, armsom-CM5, RK3576  Development Boards, RK3576 Core borad, ro
 sidebar_label: "CM5"
 sidebar_position: 5
 slug: /armsom-cm5
+image: /img/cm/cm5.png
 ---
 
 # Product Introduction: ArmSoM-CM5

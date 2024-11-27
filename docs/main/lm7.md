@@ -4,6 +4,7 @@ keywords: [armsom, armsom-LM7,armsom-w3, LGA, maker kit, rockchip, rk3588]
 sidebar_label: "LM7"
 sidebar_position: 4
 slug: /armsom-lm7
+image: /img/lm/lm7.png
 ---
 
 # Product Introduction: LM7

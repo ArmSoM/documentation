@@ -4,6 +4,7 @@ keywords: [armsom, armsom-p2pro, maker kit, rockchip, rk3308语音应用]
 sidebar_label: "P2pro"
 sidebar_position: 11
 slug: /armsom-p2pro
+image: /img/link/p2pro.jpg
 ---
 
 # P2pro 产品简介

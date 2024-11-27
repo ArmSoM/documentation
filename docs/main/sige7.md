@@ -4,6 +4,7 @@ keywords: [armsom, armsom-sige7, SBC, maker kit, Rockchip]
 sidebar_label: "Sige7"
 sidebar_position: 2
 slug: /armsom-sige7
+image: /img/sige/sige7-bananer.png
 ---
 
 

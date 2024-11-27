@@ -4,6 +4,7 @@ keywords: [armsom, armsom-sige5, RK3576开发板, rockchip, rk3576 SBC]
 sidebar_label: "Sige5"
 sidebar_position: 2
 slug: /armsom-sige5
+image: /img/sige/sige5.png
 ---
 
 # Sige5 产品简介

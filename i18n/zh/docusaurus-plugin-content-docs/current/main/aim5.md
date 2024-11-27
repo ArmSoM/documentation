@@ -4,6 +4,7 @@ keywords: [armsom, armsom-aim5, RK3576核心板, rockchip]
 sidebar_label: "AIM5"
 sidebar_position: 3
 slug: /armsom-aim5
+image: /img/aim/aim5.jpg
 ---
 
 # AIM5 产品简介

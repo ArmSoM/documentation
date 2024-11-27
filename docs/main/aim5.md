@@ -4,6 +4,7 @@ keywords: [armsom, armsom-aim5, RK3576  Development Boards, RK3576 Core borad, r
 sidebar_label: "AIM5"
 sidebar_position: 3
 slug: /armsom-aim5
+image: /img/aim/aim5.jpg
 ---
 
 # Product Introduction: AIM5

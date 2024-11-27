@@ -4,6 +4,7 @@ keywords: [armsom, armsom-aim7, jetson nano, nvidia, rockchip]
 sidebar_label: "AIM7"
 sidebar_position: 3
 slug: /armsom-aim7
+image: /img/aim/aim7.jpg
 ---
 
 # Product Introduction: AIM7

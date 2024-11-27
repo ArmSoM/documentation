@@ -4,6 +4,7 @@ keywords: [armsom, armsom-kvm, PIKVM, rockchip, RK3568]
 sidebar_label: "KVM"
 sidebar_position: 10
 slug: /armsom-kvm
+image: /img/link/armsom-kvm-interface.jpg
 ---
 
 # Product Introduction

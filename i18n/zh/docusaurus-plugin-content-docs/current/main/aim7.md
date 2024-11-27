@@ -4,6 +4,7 @@ keywords: [armsom, armsom-AIM7, RK3588核心板, rockchip]
 sidebar_label: "AIM7"
 sidebar_position: 3
 slug: /armsom-aim7
+image: /img/aim/aim7.jpg
 ---
 
 # AIM7 产品简介

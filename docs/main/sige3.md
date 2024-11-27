@@ -4,6 +4,7 @@ keywords: [armsom-sige3, RK3568B2 Development Boards, rk3568 SBC]
 sidebar_label: "Sige3"
 sidebar_position: 2
 slug: /armsom-sige3
+image: /img/sige/sige3-b.png
 ---
 
 # Product Introduction: Sige3

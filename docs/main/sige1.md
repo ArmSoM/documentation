@@ -4,6 +4,7 @@ keywords: [armsom, armsom-sige1, maker kit, rockchip, rk3528产品介绍]
 sidebar_label: "Sige1"
 sidebar_position: 2
 slug: /armsom-sige1
+image: /img/sige/sige1-b.png
 ---
 
 # Product Introduction: Sige1

@@ -4,6 +4,7 @@ keywords: [armsom-sige5, RK3576 Development Boards, rk3576 SBC]
 sidebar_label: "Sige5"
 sidebar_position: 2
 slug: /armsom-sige5
+image: /img/sige/sige5.png
 ---
 
 # Product Introduction: Sige5

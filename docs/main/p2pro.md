@@ -4,6 +4,7 @@ keywords: [armsom, armsom-p2pro, rockchip, open source router，open source hard
 sidebar_label: "P2pro"
 sidebar_position: 11
 slug: /armsom-p2pro
+image: /img/link/p2pro.jpg
 ---
 
 # Product Introduction
