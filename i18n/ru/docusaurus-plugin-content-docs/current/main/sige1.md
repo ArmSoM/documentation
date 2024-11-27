@@ -14,7 +14,7 @@ Let's get to know Sige1 in 5 minutes.
 
 The ArmSoM-Sige1 utilizes the Rockchip RK3528, a new-generation intelligent set-top box and multimedia application chip. It is applicable to IPTV/OTT boxes, cloud terminals, and integrated products. It is a high-performance, low-power 4K player with decoding capability supporting up to 8K. Additionally, it also supports the AVS2 and HDR VIVID standards.
 
-![ArmSoM-sige1](/img/sige/sige1-b.png)
+![ArmSoM-sige1](/img/sige/sige1-bananer.png)
 
 ### Key Parameter
 
