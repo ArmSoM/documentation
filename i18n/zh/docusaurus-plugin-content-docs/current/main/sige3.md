@@ -1,6 +1,5 @@
 ---
-description: ArmSoM-Sige3 采用的Rockchip RK3568B2 是一款高性能低功耗四核应用处理器，专为个人移动互联网设备和 AloT 设备而设计。
-Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以太网、2.5G网口、PCIe 3.0、40 pin GPIO 扩展座、RTC。 
+description: ArmSoM-Sige3 采用的Rockchip RK3568B2 是一款高性能低功耗四核应用处理器，专为个人移动互联网设备和 AloT 设备而设计。Sige3 最高支持 4K@60 的 HDMI、MIPI DSI、MIPI CSI、USB 端口、千兆以太网、2.5G网口、PCIe 3.0、40 pin GPIO 扩展座、RTC
 keywords: [armsom-sige3, RK3568 Development Boards, rk3568 SBC]
 sidebar_label: "Sige3"
 sidebar_position: 2
