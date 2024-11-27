@@ -4,6 +4,7 @@ keywords: [armsom, armsom-sige7, maker kit, rockchip, rk3588产品介绍]
 sidebar_label: "Sige7"
 sidebar_position: 2
 slug: /armsom-sige7
+image: /img/sige/sige7-bananer.png
 ---
 
 # Sige7 产品简介
