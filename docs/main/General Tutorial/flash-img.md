@@ -23,9 +23,70 @@ Visit the Google Drive resource introduction page to obtain the system image: [G
 3. Ubuntu, Armbian, Openwrt are more choices provided by ArmSoM for open source enthusiasts.
 :::
 
-## 2. Burn Ubuntu, Armbian, Openwrt system
+
+## 2. Burn Debian, Android system
 
 ### 2.1. Burn card reader to microSD
+#### Install SDDiskTool
+
+Burning the image to eMMC requires the use of the burning tool SDDiskTool_version number.exe
+
+Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link)
+
+![google-SDDiskTool](/img/general-tutorial/google-sd-disk-tool.png)
+
+After decompressing the compressed package, you can use it without installation. Double-click SD_Firmware_Tool.exe to enter the software interface.
+
+
+#### Burn image
+
+Open the executable file SD_Firmware_Tool.exe that burned SDDiskTool and insert the SD card.
+
+First select the correct SD card to be burned, then select the function mode to SD Boot, then select the image to be burned, and finally click to start creating the burned image to the SD card.
+
+![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
+
+Wait patiently for the SD card to be burned completely. When the image size is larger, the burning time will be longer accordingly.
+
+:::tip Tips
+1. When you click Create, there will be a certain probability that an error message will be reported saying that it cannot be burned. You can close the error window and start creating again. If it still doesn't work, try formatting the SD card.
+2. The firmware downloaded from google drive needs to be decompressed before loading, and Windows PC needs to run the tool with administrator rights before it can be executed.
+:::
+
+### 2.2. USB cable burning to eMMC
+
+We open the RKDevTool burning tool and set the product to enter burning mode.
+
+```
+1. Prepare Type-C cable for image burning
+2. Disconnect all connections that may provide power to the product, such as power cords, USB cables, etc.
+3. Use a Type-C cable to connect one end to the product's OTG interface and the other end to the computer's USB interface, then open the software RKDevTool
+4. Press and hold the Recovery button, and then use DC to power the product
+5. Wait for the software prompt to find a LOADER device (as shown in the figure below), then release the button
+6. If unsuccessful, repeat steps 2-5.
+```
+
+![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
+
+![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
+
+The flashing progress is displayed on the right, and it will prompt you after completion:
+![rkdevtool-success](/img/tools/rkdevtool-success.png)
+
+:::tip Analysis of programming failure
+If Download Boot Fail occurs during the programming process, or an error occurs during the programming process, as shown in the figure below, it is usually caused by poor connection of the USB cable used, inferior wire material, or insufficient driver capability of the computer USB port. Please replace the USB cable or Troubleshooting computer USB ports.
+:::
+
+:::note What is the difference between Maskrom mode programming and Loader mode programming?
+* Maskrom: When the Flash firmware is not burned, the chip will boot into the Maskrom mode, and the initial firmware can be burned;
+If the Loader fails to start normally during development and debugging, you can also enter Maskrom mode to burn firmware.
+* Loader: The principle is that the pin is detected to be pressed during uboot startup. In Loader mode, firmware can be programmed and upgraded.
+You can use tools to burn a partition image file separately to facilitate debugging.
+:::
+
+## 3. Burn Ubuntu, Armbian, Openwrt system
+
+### 3.1. Burn card reader to microSD
 
 **Flash the operating system image to microSD via Etcher**
 
@@ -66,9 +127,9 @@ This method is suitable for burning the system to the SD card, and is available 
 3. Click the folder icon button and select the image you want to flash
 4. After completing the above operations, click the Write button to start flashing the image, and then wait for the writing of the image to complete.
 
-### 2.2. USB cable burning to eMMC
+### 3.2. USB cable burning to eMMC
 
-#### 2.2.1. Tool acquisition and installation
+#### 3.2.1. Tool acquisition and installation
 
 Burning the image to eMMC requires the use of RKDevTool burning tool and RK Driver Assistant (DriverAssitant)
 
@@ -76,7 +137,7 @@ Click to enter the link: [google drive link](https://drive.google.com/drive/fold
 
 ![google-flash-tool](/img/general-tutorial/google-flash-tool.png)
 
-##### 2.2.2. Install DriverAssitant
+##### 3.2.2. Install DriverAssitant
 
 Unzip the DriverAssitant software compressed package and double-click DriverInstall.exe to enter the driver installation interface.
 
@@ -84,7 +145,7 @@ Click **Driver Installation** to start installing the driver. If you are not sur
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
 
-##### 2.2.3. Install RKDevTool
+##### 3.2.3. Install RKDevTool
 
 Rockchip's dedicated USB burning tool, Windows platform, can use the USB interface to download the system image to the product.
 
@@ -92,7 +153,7 @@ After decompressing the compressed package, you can use it without installation.
 
 The software mainly has three parts, namely downloading the image (the image can be burned according to the address), upgrading the firmware and advanced functions.
 
-#### 2.1.4. Burning image in MASKROM/Loader mode
+#### 3.2.4. Burning image in MASKROM/Loader mode
 
 This mode is suitable for products that have not been burned into the system or the burned system is damaged and cannot run ** (adaptable to all conditions) **
 
@@ -117,63 +178,3 @@ Start burning the system
 3. Click on a blank cell to select the MiniLoaderAll and Image files to be used. The corresponding MiniLoaderAll and Image are stored in google drive.
 4. Select the target medium EMMC in the Storage option, select Force writing by address, and click Execute.
 5. Wait for the writing to complete, and then the device will automatically restart, as shown on the right side of the picture above Download image OK
-
-## 3. Burn Debian system
-
-### 3.1. Burn card reader to microSD
-#### Install SDDiskTool
-
-Burning the image to eMMC requires the use of the burning tool SDDiskTool_version number.exe
-
-Click to enter the link: [google drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link)
-
-![google-SDDiskTool](/img/general-tutorial/google-sd-disk-tool.png)
-
-After decompressing the compressed package, you can use it without installation. Double-click SD_Firmware_Tool.exe to enter the software interface.
-
-
-#### Burn image
-
-Open the executable file SD_Firmware_Tool.exe that burned SDDiskTool and insert the SD card.
-
-First select the correct SD card to be burned, then select the function mode to SD Boot, then select the image to be burned, and finally click to start creating the burned image to the SD card.
-
-![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
-
-Wait patiently for the SD card to be burned completely. When the image size is larger, the burning time will be longer accordingly.
-
-:::tip Tips
-1. When you click Create, there will be a certain probability that an error message will be reported saying that it cannot be burned. You can close the error window and start creating again. If it still doesn't work, try formatting the SD card.
-2. The firmware downloaded from google drive needs to be decompressed before loading, and Windows PC needs to run the tool with administrator rights before it can be executed.
-:::
-
-### 3.2. USB cable burning to eMMC
-
-We open the RKDevTool burning tool and set the product to enter burning mode.
-
-```
-1. Prepare Type-C cable for image burning
-2. Disconnect all connections that may provide power to the product, such as power cords, USB cables, etc.
-3. Use a Type-C cable to connect one end to the product's OTG interface and the other end to the computer's USB interface, then open the software RKDevTool
-4. Press and hold the Recovery button, and then use DC to power the product
-5. Wait for the software prompt to find a LOADER device (as shown in the figure below), then release the button
-6. If unsuccessful, repeat steps 2-5.
-```
-
-![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
-
-![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
-
-The flashing progress is displayed on the right, and it will prompt you after completion:
-![rkdevtool-success](/img/tools/rkdevtool-success.png)
-
-:::tip Analysis of programming failure
-If Download Boot Fail occurs during the programming process, or an error occurs during the programming process, as shown in the figure below, it is usually caused by poor connection of the USB cable used, inferior wire material, or insufficient driver capability of the computer USB port. Please replace the USB cable or Troubleshooting computer USB ports.
-:::
-
-:::note What is the difference between Maskrom mode programming and Loader mode programming?
-* Maskrom: When the Flash firmware is not burned, the chip will boot into the Maskrom mode, and the initial firmware can be burned;
-If the Loader fails to start normally during development and debugging, you can also enter Maskrom mode to burn firmware.
-* Loader: The principle is that the pin is detected to be pressed during uboot startup. In Loader mode, firmware can be programmed and upgraded.
-You can use tools to burn a partition image file separately to facilitate debugging.
-:::
