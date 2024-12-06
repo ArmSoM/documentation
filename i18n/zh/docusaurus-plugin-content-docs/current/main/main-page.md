@@ -88,7 +88,7 @@ ArmSoM 提供模块化核心板与灵活的载板设计，旨在帮助客户快�
 
 ### 配件
 
-ArmSoM 提供了丰富的硬件扩展配件，包括显示模块、摄像头模块、定制外壳及主动散热解决方案，同时其单板计算机兼容树莓派 40Pin GPIO 接口的部分外设资源，为开发者构建多样化应用场景提供了强有力的支持。  
+ArmSoM 提供了丰富的硬件扩展配件，包括显示模块、摄像头模块、定制外壳及主动散热解决方案，同时兼容树莓派 40Pin GPIO 接口的部分外设资源，为开发者构建多样化应用场景提供了强有力的支持。  
 
 | [ArmSoM Display 10 HD](./armsom-display-10-hd)| [ArmSoM Camera module 1](./armsom-camera-module1)| [Active Cooling Kit](./sige-active-cooling-kit) | [Sige Diy Case 1](./sige-diy-case1)  |
 |---------|---------|---------|---------|

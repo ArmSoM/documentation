@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-aim, som, maker kit, Rockchip]
 sidebar_label: "AIM系列使用手册"
-sidebar_position: 2
+sidebar_position: 15
 slug: /aim-family-started
 ---
 

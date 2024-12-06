@@ -1,10 +1,10 @@
 ---
-sidebar_label: "系统镜像烧录"
-sidebar_position: 2
-slug: /general-tutorial/flash-img
+sidebar_label: "2. 系统镜像烧录"
+sidebar_position: 3
+slug: /getting-start/flash-img
 ---
 
-# 系统镜像烧录
+# 2. 系统镜像烧录
 
 ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以根据自己需求选择相应的镜像下载
 
@@ -12,7 +12,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 系统镜像包括了linux内核，基本的程序等，是运行ArmSoM系列产品必须项， 所以我们需要在运行产品前为产品安装镜像
 :::
 
-## 1. 获取系统镜像
+## 2.1. 获取系统镜像
 
 访问百度网盘资源介绍页面获取系统镜像: [百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 
@@ -22,9 +22,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 3. Ubuntu，Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
 :::
 
-## 2. 烧录Debian, 安卓系统
+## 2.2. 烧录Debian, 安卓系统
 
-### 2.1. 读卡器烧录到microSD
+### 2.2.1. 读卡器烧录到microSD
 #### 安装SDDiskTool
 
 烧录镜像到eMMC需要使用到烧录工具 SDDiskTool_版本号.exe
@@ -51,7 +51,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 2. 百度网盘下载的固件需要解压后才能加载，Windows PC需要在管理员权限运行工具才可执行。
 :::
 
-### 2.2. USB线烧录到eMMC
+### 2.2.2. USB线烧录到eMMC
 
 我们打开 RKDevTool 烧录工具，并设置产品进入烧录模式。
 
@@ -83,9 +83,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 :::
 
 
-## 3. 烧录Ubuntu，Armbian，Openwrt系统
+## 2.3. 烧录Ubuntu，Armbian，Openwrt系统
 
-### 3.1. 读卡器烧录到microSD
+### 2.3.1. 读卡器烧录到microSD
 
 **通过 Etcher 刷入操作系统镜像到 microSD**
 
@@ -126,9 +126,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 3. 点击文件夹图标按钮然后选择要刷写的镜像
 4. 完成上述操作后，单击 Write 按钮开始刷写镜像，然后等待写入镜像完成。
 
-### 3.2. USB线烧录到eMMC
+### 2.3.2. USB线烧录到eMMC
 
-#### 3.2.1. 工具获取和安装
+#### 2.3.2.1. 工具获取和安装
 
 烧录镜像到eMMC需要使用到 RKDevTool 烧录工具和 RK驱动助手(DriverAssitant)
 
@@ -136,7 +136,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
-##### 3.2.2. 安装DriverAssitant
+##### 2.3.2.2. 安装DriverAssitant
 
 解压DriverAssitant软件压缩包，双击 DriverInstall.exe 进入驱动安装界面。
 
@@ -144,7 +144,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
 
-##### 3.2.3. 安装RKDevTool
+##### 2.3.2.3. 安装RKDevTool
 
 瑞芯微专用USB烧录工具，Windows平台，可以使用USB接口将系统镜像下载到产品中。
 
@@ -152,7 +152,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 软件主要有三大部分，分别是下载镜像（可根据地址烧录镜像）、升级固件和高级功能
 
-#### 3.2.4. MASKROM/Loader模式烧录镜像
+#### 2.3.2.4. MASKROM/Loader模式烧录镜像
 
 该模式适合产品未烧录系统或烧录的系统损坏无法运行 **（适应一切状况）**
 

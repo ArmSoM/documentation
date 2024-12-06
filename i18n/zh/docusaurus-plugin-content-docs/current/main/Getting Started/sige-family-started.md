@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige系列使用手册"
-sidebar_position: 20
+sidebar_position: 14
 slug: /sige-family-started
 ---
 
@@ -84,7 +84,7 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 ## 烧录方式选择
 <div class="cards">
-    <a href="./general-tutorial/flash-img" class="card-link">
+    <a href="./getting-start/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>🎇</i>
@@ -294,7 +294,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 
 **网络设置**
 <div class="cards">
-<a href="./general-tutorial/product-startup/#3-登录方式" class="card-link">
+<a href="./getting-start/startup/#3-登录方式" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🎾</i>

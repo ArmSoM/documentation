@@ -1,12 +1,12 @@
 {
-    "sidebar.main.category.Getting Started": {
-        "message": "使用手册"
-    },
     "sidebar.main.category.Accessories": {
         "message": "配件"
     },
     "sidebar.main.category.General Tutorial": {
         "message": "通用教程"
+    },
+    "sidebar.main.category.ArmSoM Product": {
+        "message": "ArmSoM产品列表"
     },
     "sidebar.general-tutorial.category.Start the system": {
         "message": "访问系统"

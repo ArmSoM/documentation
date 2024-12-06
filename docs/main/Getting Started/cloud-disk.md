@@ -1,16 +1,16 @@
 ---
-sidebar_label: "Google Drive resource introduction"
-sidebar_position: 1
-slug: /general-tutorial/cloud-disk
+sidebar_label: "1. Google Drive resource introduction"
+sidebar_position: 2
+slug: /getting-start/cloud-disk
 ---
 
-# Google Drive resource introduction
+# 1. Google Drive resource introduction
 
 All product software resources released by ArmSoM will be synchronized to Google Drive for users to download, and supporting resources for ArmSoM series products are also saved in Google Drive.
 
 There are abundant software and hardware resources in the network disk, including [User Manual] (https://docs.armsom.org/) supporting images, various development documents and development software, image SDK source code and other resources.
 
-## 1. Download address
+## 1.1. Download address
 
 Click to enter the link: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link)
 
@@ -18,12 +18,12 @@ Click to enter the link: [Google Drive link](https://drive.google.com/drive/fold
 
 Google Drive resources mainly include the following parts:
 
-## 2. Google Drive resources
-### 2.0. Must read before using the board
+## 1.2. Google Drive resources
+### 1.2.0. Must read before using the board
 
 Mainly includes some precautions before using the product
 
-### 2.1. Development tools
+### 1.2.1. Development tools
 
 Stores tools and software packages that may be used during product use or development, such as serial port drivers, burning tools, etc. Please check the documentation in the folder for details.
 
@@ -47,22 +47,22 @@ Stores tools and software packages that may be used during product use or develo
 
 **IP scanning tool**: Query ip address
 
-### 2.2. Hardware information
+### 1.2.2. Hardware information
 It stores schematic diagrams, dimensional drawings, hardware design source files of development kits, etc. for each model of ArmSoM, and provides chip manuals for major devices.
 
-### 2.3. Linux image
+### 1.2.3. Linux image
 Stores the Linux system images supporting ArmSoM products, providing Ubuntu, Debian and Armbian system images respectively.
 
-### 2.4. Android Mirror
+### 1.2.4. Android Mirror
 Stores the Android system image supporting ArmSoM products
 
-### 2.5. RockChip official documentation
+### 1.2.5. RockChip official documentation
 Stores RockChip official documents, explaining each system peripheral in detail
 
-### 2.6. SDK source code
+### 1.2.6. SDK source code
 Store SDK source code compressed package
 
-### 2.7. Quality inspection report
+### 1.2.7. Quality inspection report
 Stores various quality inspection reports of ArmSoM products
 
 :::info

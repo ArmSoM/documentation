@@ -1,8 +1,9 @@
 ---
-sidebar_label: "Start the system"
-sidebar_position: 3
-slug: /general-tutorial/product-startup
+sidebar_label: "4. Start the system and log in"
+sidebar_position: 5
+slug: /getting-start/startup
 ---
+
 # Start the system
 
 There are two steps required when running the product at the beginning: burning the system and starting the system

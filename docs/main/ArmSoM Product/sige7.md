@@ -494,7 +494,7 @@ Network disk address:
 
 ### Hardware Resources 
 
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="/getting-start/cloud-disk" class="btn">
   <span>Google Drive link</span>
 </a>
 <br/>

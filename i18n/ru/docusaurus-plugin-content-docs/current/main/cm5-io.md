@@ -185,7 +185,7 @@ ArmSoM team uses Debian bullseye as the official operating system.
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="/general-tutorial/cloud-disk" class="btn">
+<a href="/getting-start/cloud-disk" class="btn">
   <span>Google Drive link</span>
 </a>
 
@@ -292,7 +292,7 @@ You can set up the CM5 Kit as an interactive desktop computer or as a headless c
 
 ### Choosing a Flashing Method
 <div class="cards">
-    <a href="./general-tutorial/flash-img" class="card-link">
+    <a href="./getting-start/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>🎇</i>
@@ -498,7 +498,7 @@ The CM5 Kit includes an onboard WiFi module, so no external network devices are 
 **Network Settings**
 **Network Settings**
 <div class="cards">
-<a href="./general-tutorial/product-startup/#3-login-method" class="card-link">
+<a href="./getting-start/startup/#3-login-method" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🎾</i>

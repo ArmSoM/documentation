@@ -1,7 +1,7 @@
 ---
-sidebar_label: "启动系统"
-sidebar_position: 3
-slug: /general-tutorial/product-startup
+sidebar_label: "4. 启动系统与系统登录"
+sidebar_position: 5
+slug: /getting-start/startup
 ---
 
 # 启动系统

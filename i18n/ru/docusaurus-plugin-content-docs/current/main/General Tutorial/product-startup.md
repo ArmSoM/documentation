@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Start the system"
 sidebar_position: 3
-slug: /general-tutorial/product-startup
+slug: /getting-start/startup
 ---
 # Start the system
 

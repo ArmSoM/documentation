@@ -1,10 +1,10 @@
 ---
-sidebar_label: "Flash Image"
-sidebar_position: 2
-slug: /general-tutorial/flash-img
+sidebar_label: "2. Flash Image"
+sidebar_position: 3
+slug: /getting-start/flash-img
 ---
 
-# Flash Image
+# 2. Flash Image
 
 The system images of the ArmSoM series products include a variety of root file systems. We can choose the corresponding image to download according to our needs.
 
@@ -13,7 +13,7 @@ The system images of the ArmSoM series products include a variety of root file s
 The system image includes the linux kernel, basic programs, etc., and is necessary to run ArmSoM series products, so we need to install the image for the product before running the product.
 :::
 
-## 1. Obtain system image
+## 2.1. Obtain system image
 
 Visit the Google Drive resource introduction page to obtain the system image: [Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link?usp=drive_link)
 
@@ -24,9 +24,9 @@ Visit the Google Drive resource introduction page to obtain the system image: [G
 :::
 
 
-## 2. Burn Debian, Android system
+## 2.2. Burn Debian, Android system
 
-### 2.1. Burn card reader to microSD
+### 2.2.1. Burn card reader to microSD
 #### Install SDDiskTool
 
 Burning the image to eMMC requires the use of the burning tool SDDiskTool_version number.exe
@@ -53,7 +53,7 @@ Wait patiently for the SD card to be burned completely. When the image size is l
 2. The firmware downloaded from google drive needs to be decompressed before loading, and Windows PC needs to run the tool with administrator rights before it can be executed.
 :::
 
-### 2.2. USB cable burning to eMMC
+### 2.2.2. USB cable burning to eMMC
 
 We open the RKDevTool burning tool and set the product to enter burning mode.
 
@@ -84,9 +84,9 @@ If the Loader fails to start normally during development and debugging, you can 
 You can use tools to burn a partition image file separately to facilitate debugging.
 :::
 
-## 3. Burn Ubuntu, Armbian, Openwrt system
+## 2.3. Burn Ubuntu, Armbian, Openwrt system
 
-### 3.1. Burn card reader to microSD
+### 2.3.1. Burn card reader to microSD
 
 **Flash the operating system image to microSD via Etcher**
 
@@ -127,9 +127,9 @@ This method is suitable for burning the system to the SD card, and is available 
 3. Click the folder icon button and select the image you want to flash
 4. After completing the above operations, click the Write button to start flashing the image, and then wait for the writing of the image to complete.
 
-### 3.2. USB cable burning to eMMC
+### 2.3.2. USB cable burning to eMMC
 
-#### 3.2.1. Tool acquisition and installation
+#### 2.3.2.1. Tool acquisition and installation
 
 Burning the image to eMMC requires the use of RKDevTool burning tool and RK Driver Assistant (DriverAssitant)
 
@@ -137,7 +137,7 @@ Click to enter the link: [google drive link](https://drive.google.com/drive/fold
 
 ![google-flash-tool](/img/general-tutorial/google-flash-tool.png)
 
-##### 3.2.2. Install DriverAssitant
+##### 2.3.2.2. Install DriverAssitant
 
 Unzip the DriverAssitant software compressed package and double-click DriverInstall.exe to enter the driver installation interface.
 
@@ -145,7 +145,7 @@ Click **Driver Installation** to start installing the driver. If you are not sur
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
 
-##### 3.2.3. Install RKDevTool
+##### 2.3.2.3. Install RKDevTool
 
 Rockchip's dedicated USB burning tool, Windows platform, can use the USB interface to download the system image to the product.
 
@@ -153,7 +153,7 @@ After decompressing the compressed package, you can use it without installation.
 
 The software mainly has three parts, namely downloading the image (the image can be burned according to the address), upgrading the firmware and advanced functions.
 
-#### 3.2.4. Burning image in MASKROM/Loader mode
+#### 2.3.2.4. Burning image in MASKROM/Loader mode
 
 This mode is suitable for products that have not been burned into the system or the burned system is damaged and cannot run ** (adaptable to all conditions) **
 

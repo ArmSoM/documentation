@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Google Drive resource introduction"
 sidebar_position: 1
-slug: /general-tutorial/cloud-disk
+slug: /getting-start/cloud-disk
 ---
 
 # Google Drive resource introduction

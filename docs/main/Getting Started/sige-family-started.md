@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-sige, SBC, maker kit, Rockchip]
 sidebar_label: "Sige Family Getting Started"
-sidebar_position: 20
+sidebar_position: 14
 slug: /sige-family-started
 ---
 # Sige Family User Manual 
@@ -107,7 +107,7 @@ Insert the power supply into the port labeled "DCIN". Please make sure to use th
 ## Image Flashing
 
 <div class="cards">
-    <a href="./general-tutorial/flash-img" class="card-link">
+    <a href="./getting-start/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>🎇</i>
@@ -315,7 +315,7 @@ The ArmSoM-Sige series products come with an onboard WIFI module, so there's no 
 
 **Network Settings**
 <div class="cards">
-<a href="./general-tutorial/product-startup/#3-login-method" class="card-link">
+<a href="./getting-start/startup/#3-login-method" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🎾</i>

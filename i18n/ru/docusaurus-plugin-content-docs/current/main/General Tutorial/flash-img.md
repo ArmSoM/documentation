@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Flash Image"
 sidebar_position: 2
-slug: /general-tutorial/flash-img
+slug: /getting-start/flash-img
 ---
 
 # Flash Image

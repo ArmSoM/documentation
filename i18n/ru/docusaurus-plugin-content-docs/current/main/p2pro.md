@@ -271,7 +271,7 @@ Before starting to use ArmSoM-P2pro, please prepare the following items
 ### Image Flashing 
 
 <div class="cards">
-    <a href="./general-tutorial/flash-img" class="card-link">
+    <a href="./getting-start/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>🎇</i>
