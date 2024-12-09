@@ -145,7 +145,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
         <tr>
             <th>Power</th>
             <th>
-                <li>Supports USB Type-C, 9V/2A, 12V/2A, 15V/2A</li>
+                <li>Supports USB Type-C, 5V/2.5A，12V/2A</li>
             </th>
         </tr>
         <tr>

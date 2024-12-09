@@ -127,7 +127,7 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
         <tr>
             <th>电源</th>
-            <th><li>支持USB Type-C, 9V/2A, 12V/2A, 15V/2A</li></th>
+            <th><li>支持USB Type-C, 5V/2.5A，12V/2A</li></th>
         </tr>
         <tr>
             <th>按键</th>
