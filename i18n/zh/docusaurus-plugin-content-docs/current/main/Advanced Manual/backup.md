@@ -1,20 +1,22 @@
 ---
-sidebar_label: "1. 文件系统备份"
+sidebar_label: "文件系统备份"
 sidebar_position: 2
 slug: /advanced-manual/backup
 ---
-# 一、Debian系统备份
+# 文件系统备份
+## 1. Debian系统备份
 
-## 开发板上的操作
 
-### 安装ssh、rsync
+## 1.1 ArmSoM产品上的操作
+
+### 1.1.1 安装ssh、rsync
 
 ```
 sudo apt-get install ssh
 sudo apt-get install rsync
 ```
 
-### 设置root用户密码
+### 1.1.2 设置root用户密码
 
 ```
 sudo passwd root
@@ -23,7 +25,7 @@ sudo passwd root
 passwd
 ```
 
-### 设定root登录
+### 1.1.3 设定root登录
 
 **PermitRootLogin是sshd服务的配置项之一，它决定了是否允许root用户通过SSH登录到系统。PermitRootLogin有以下几种取值:**
 
@@ -49,7 +51,7 @@ PermitRootLogin yes
 sudo systemctl restart sshd
 ```
 
-### 清除系统多余文件
+### 1.1.4 清除系统多余文件
 
 **配置开发板环境的时候会出现很多残余的缓存或者临时文件，可以先把板子上的空间清理一下。**
 
@@ -69,16 +71,16 @@ sudo rm -rf /var/cache/
 
 **这一步对固件大小没有要求的话也可以忽略**
 
-## Ubuntu主机上的操作
+## 1.2 Ubuntu主机上的操作
 
-### 安装ssh、rsync
+### 1.2.1 安装ssh、rsync
 
 ```
 sudo apt-get install ssh
 sudo apt-get install rsync
 ```
 
-### 同步开发板文件
+### 1.2.2 同步开发板文件
 
 **ping一下开发板，确保ubuntu主机和开发板能够ping通。** **接着在Ubuntu主机上创建一个目录,用于存放导出的开发板文件系统。**
 
@@ -103,7 +105,7 @@ sudo rsync -avx root@192.168.100.123:/ rootfs
 
 **同步的过程需要点时间，执行完命令后可以将开发板的文件系统同步到ubuntu主机上。**
 
-### 创建镜像文件
+### 1.2.3 创建镜像文件
 
 **先使用dd命令创建一个空镜像文件。**
 
@@ -120,7 +122,7 @@ lhd@armsom:~/3576_rootfs_test$ dd if=/dev/zero of=rk3576_rootfs.img  bs=1M count
 
 **这里count的实际大小可以根据开发板的系统大小调整，在开发板下执行**`df -h`	**计算得到系统的大小。**
 
-### 格式化镜像文件
+### 1.2.4 格式化镜像文件
 
 **使用以下命令格式化镜像文件，并加入linuxroot卷标**
 
@@ -130,7 +132,7 @@ sudo mkfs.ext4 -F -L linuxroot rk3576_rootfs.img
 
 **这条命令将会在 **`rk3576_rootfs.img` 文件上创建一个 ext4 文件系统，这个文件系统可以用于存储数据或者作为一个磁盘镜像文件。
 
-### 填充镜像文件
+### 1.2.5 填充镜像文件
 
 **挂载根文件镜像、并往里面拷入修改后的文件系统，使用以下命令完成操作：**
 
@@ -148,7 +150,7 @@ sudo cp -rfp rootfs/* rk3576_rootfs_mount
 sudo umount rk3576_mount
 ```
 
-### 精简镜像文件
+### 1.2.6 精简镜像文件
 
 **经过前面的流程rk3576\_rootfs.img镜像文件里就有开发板的文件系统了，但rk3576\_rootfs.img文件大小不是文件系统的实际大小，还要经过处理才能使用。**
 
@@ -165,9 +167,10 @@ rk3576_rootfs.img 上的文件系统大小已经调整为 1556652 个块（每�
 
 **至此，得到了一个包含完整原开发板的系统镜像。**
 
-## 部署固件
+## 1.3 部署固件
 
-**得到固件之后需要测试一下以及部署固件 重新烧录根文件系统镜像到开发板进行测试** ![](file:///D:/Download/%E6%92%B0%E5%86%99%E6%96%87%E6%A1%A3/csdn/md%E6%96%87%E6%A1%A3/lhd_csdn/3576Debian12%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD/rkdevtool.png?lastModify=1734076103)
+**得到固件之后需要测试一下以及部署固件 重新烧录根文件系统镜像到开发板进行测试** 
+![rkdevtool](/img/rkdevtool.png)
 
 **1.烧录没有部署应用的开发板固件**
 
@@ -175,9 +178,7 @@ rk3576_rootfs.img 上的文件系统大小已经调整为 1556652 个块（每�
 
 **3.进系统确定之前部署的文件是否存在**
 
-
-
-# 二、Armbian系统备份
+## 2. Armbian系统备份
 
 按下面脚本操作可以生成备份的镜像：
 
@@ -215,6 +216,9 @@ sudo rsync -aHWh -X --exclude="/dev/*" --exclude="/proc/*" --exclude="/run/*" --
 
 # 修改内核启动参数中的root分区uuid
 sudo sed -i "s|^rootdev=UUID.*$|rootdev=UUID=${rootfs_uuid}|g" ./rootfs_mount/boot/armbianEnv.txt
+
+# 开机自动resize分区大小
+sudo chroot ./rootfs_mount/ systemctl --no-reload enable armbian-resize-filesystem.service
 
 # 同步磁盘写操作
 sudo sync
