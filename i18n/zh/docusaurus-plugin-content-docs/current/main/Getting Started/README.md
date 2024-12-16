@@ -11,7 +11,7 @@ slug: /getting-start
 
 ### [2. 系统镜烧录](./getting-start/flash-img)
 
-### [3. 用户名及密码](./getting-start/name)
+### [3. 用户名及密码](./getting-start/username)
 
 ### [4. 启动系统与系统登录](./getting-start/startup)
 
