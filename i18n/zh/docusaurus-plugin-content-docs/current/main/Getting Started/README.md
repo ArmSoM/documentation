@@ -17,7 +17,7 @@ slug: /getting-start
 
 ### [5. 网络连接及静态配置](./getting-start/startup-network)
 
-### [6. vns远程桌面](./getting-start/vnc-connect)
+### [6. vnc远程桌面](./getting-start/vnc-connect)
 
 ### [7. apt更新软件源](./getting-start/apt-update)
 
