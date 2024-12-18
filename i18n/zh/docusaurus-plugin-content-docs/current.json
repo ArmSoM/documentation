@@ -5,6 +5,9 @@
     "sidebar.main.category.General Tutorial": {
         "message": "通用教程"
     },
+    "sidebar.main.category.Interface Usage": {
+        "message": "外设与接口"
+    },
     "sidebar.main.category.ArmSoM Product": {
         "message": "ArmSoM产品列表"
     },
