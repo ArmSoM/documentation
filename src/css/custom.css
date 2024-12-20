@@ -245,3 +245,39 @@
 .btn span {
   margin-left: 32px;
 }
+
+.gpio-table{
+  td{
+    padding: 2px;
+    text-align: center;
+    font-size: xx-small;
+  }
+  th{
+    padding: 5px 2px;
+    text-align: center;
+  }
+  .gpio-td{
+    background: #859900;
+  }
+  .spi-td{
+    background: #d33682;
+  }
+  .i2c-td{
+    background: #268bd2;
+  }
+  .uart-td{
+    background: #6c71c4;
+  }
+  .pwm-td{
+    background: #2aa198;
+  }
+  .gnd-td{
+    background: #063541;
+  }
+  .i2s-td{
+    background: #b58900;
+  }
+  .can-td{
+    background: #D8B7DD;
+  }
+}

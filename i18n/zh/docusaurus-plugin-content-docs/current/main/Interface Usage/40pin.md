@@ -1,0 +1,1896 @@
+---
+sidebar_label: "1. 40PIN"
+slug: /interface-usage/40pin
+sidebar_position: 1
+---
+
+
+# 1. 40PIN引脚
+
+ArmSoM 产品的 40Pin 接口设计，虽然常用接口（如 I2C、SPI、UART、PWM）的位置保持一致，但由于不同芯片的资源分配，部分引脚可能会空置或未定义功能。
+开发者在使用时，可以根据具体产品的40PIN的定义来使用。
+
+:::tip
+ArmSoM 40pin 的5v不支持输入。
+:::
+
+## 1.1 ArmSoM-Sige7
+<table class="gpio-table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>功能5</th>
+            <th>功能4</th>
+            <th>功能3</th>
+            <th>功能2</th>
+            <th>功能1</th>
+            <th>Pin</th>
+            <th>Pin</th>
+            <th>功能1</th>
+            <th>功能2</th>
+            <th>功能3</th>
+            <th>功能4</th>
+            <th>功能5</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>1</td>
+            <td class='red'>2</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>139</td>
+            <td class='i2s-td'>I2S1_SDO2_M0</td>
+            <td class='can-td'>CAN1_TX_M1</td>
+            <td class='i2c-td'>I2C7_SDA_M3</td>
+            <td class='pwm-td'>PWM15_M1</td>
+            <td class='gpio-td'>GPIO4_B3</td>
+            <td class='green'>3</td>
+            <td class='red'>4</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>138</td>
+            <td class='i2s-td'>I2S1_SDO1M0</td>
+            <td class='can-td'>CAN1_RX_M1</td>
+            <td class='i2c-td'>I2C7_SCL_M3</td>
+            <td class='pwm-td'>PWM14_M1</td>
+            <td  class='gpio-td'>GPIO4_B2</td>
+            <td class='green'>5</td>
+            <td class='black'>6</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_CS1_M1</td>
+            <td class='i2c-td'>I2C8_SDA_M4</td>
+            <td class='pwm-td'>PWM15_M0</td>
+            <td class='gpio-td'>GPIO3_C3</td>
+            <td class='green'>7</td>
+            <td class='green'>8</td>
+            <td class='gpio-td'>GPIO0_B5</td>
+            <td class='uart-td'>UART2_TX_M0</td>
+            <td class='i2c-td'>I2C1_SCL_M0</td>
+            <td>JTAG_TCK_M2</td>
+            <td class='i2s-td'>I2S1_MCLK_M1</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>9</td>
+            <td class='green'>10</td>
+            <td class='gpio-td'>GPIO0_B6</td>
+            <td class='uart-td'>UART2_RX_M0</td>
+            <td class='i2c-td'>I2C1_SDA_M0</td>
+            <td>JTAG_TMS_M2</td>
+            <td class='i2s-td'>I2S1_SCLK_M1</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>113</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_CLK_M1</td>
+            <td></td>
+            <td class='uart-td'>UART7_RX_M1</td>
+            <td class='gpio-td'>GPIO3_C1</td>
+            <td class='green'>11</td>
+            <td class='green'>12</td>
+            <td class='gpio-td'>GPIO3_B5</td>
+            <td class='uart-td'>UART3_TX_M1</td>
+            <td class='pwm-td'>PWM12_M0</td>
+            <td class='can-td'>CAN1_RX_M0</td>
+            <td class='i2s-td'>I2S2_SCLK_M1</td>
+            <td>109</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_MOSI_M1</td>
+            <td class='i2c-td'>I2C3_SCL_M1</td>
+            <td></td>
+            <td class='gpio-td'>GPIO3_B7</td>
+            <td class='green'>13</td>
+            <td class='black'>14</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_MISO_M1</td>
+            <td class='i2c-td'>I2C3_SDA_M1</td>
+            <td class='uart-td'>UART7_TX_M1</td>
+            <td class='gpio-td'>GPIO3_C0</td>
+            <td class='green'>15</td>
+            <td class='green'>16</td>
+            <td class='gpio-td'>GPIO3_A4</td>
+            <td class='uart-td'>UART8_RTSN_M1</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI4_CS1_M1</td>
+            <td class='i2s-td'>I2S3_SDI</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>17</td>
+            <td class='green'>18</td>
+            <td class='gpio-td'>GPIO4_C4</td>
+            <td></td>
+            <td class='pwm-td'>PWM5_M2</td>
+            <td class='spi-td'  class='spi-td'>SPI3_MISO_M0</td>
+            <td></td>
+            <td>148</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_MOSI_M2</td>
+            <td></td>
+            <td class='uart-td'>UART4_RX_M2</td>
+            <td class='gpio-td'>GPIO1_B2</td>
+            <td class='green'>19</td>
+            <td class='black'>20</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_MISO_M2</td>
+            <td></td>
+            <td></td>
+            <td class='gpio-td'>GPIO1_B1</td>
+            <td class='green'>21</td>
+            <td class='green'>22</td>
+            <td></td>
+            <td></td>
+            <td>SARADC_IN4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_CLK_M2</td>
+            <td></td>
+            <td class='uart-td'>UART4_TX_M2</td>
+            <td class='gpio-td'>GPIO1_B3</td>
+            <td class='green'>23</td>
+            <td class='green'>24</td>
+            <td class='gpio-td'>GPIO1_B4</td>
+            <td class='uart-td'>UART7_RX_M2</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_CS0_M2</td>
+            <td></td>
+            <td>44</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>25</td>
+            <td class='green'>26</td>
+            <td class='gpio-td'>GPIO1_B5</td>
+            <td class='uart-td'>UART7_TX_M2</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_CS1_M2</td>
+            <td></td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI3_CLK_M0</td>
+            <td class='i2c-td'>I2C0_SDA_M1</td>
+            <td class='pwm-td'>PWM7_M3</td>
+            <td class='gpio-td'>GPIO4_C6</td>
+            <td class='green'>27</td>
+            <td class='green'>28</td>
+            <td class='gpio-td'>GPIO4_C5</td>
+            <td></td>
+            <td class='pwm-td'>PWM6_M2</td>
+            <td></td>
+            <td class='i2c-td'>I2C0_SCL_M1</td>
+            <td>149</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td></td>
+            <td></td>
+            <td class='uart-td'>UART1_CTSN_M1</td>
+            <td class='pwm-td'>PWM15_M3</td>
+            <td class='gpio-td'>GPIO1_D7</td>
+            <td class='green'>29</td>
+            <td class='black'>30</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td></td>
+                <td>SPDIF_TX_M0</td>
+                <td class='uart-td'>UART1_RX_M1</td>
+                <td class='pwm-td'>PWM13_M2</td>
+                <td class='gpio-td'>GPIO1_B7</td>
+                <td class='green'>31</td>
+                <td class='green'>32</td>
+                <td class='gpio-td'>GPIO3_C2</td>
+                <td class='uart-td'>UART7_RTSN_M1</td>
+                <td class='pwm-td'>PWM14_M0</td>
+                <td class='spi-td'  class='spi-td'>SPI1_CS0_M1</td>
+                <td class='i2c-td'>I2C8_SCL_M4</td>
+                <td>114</td>
+            </tr>
+            <tr>
+            <td>103</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='pwm-td'>PWM8_M0</td>
+            <td class='gpio-td'>GPIO3_A7</td>
+            <td class='green'>33</td>
+            <td class='black'>34</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>110</td>
+            <td class='i2s-td'>I2S2_LRCK_M1</td>
+            <td class='can-td'>CAN1_TX_M0</td>
+            <td class='uart-td'>UART3_RX_M1</td>
+            <td class='pwm-td'>PWM13_M0</td>
+            <td class='gpio-td'>GPIO3_B6</td>
+            <td class='green'>35</td>
+            <td class='green'>36</td>
+            <td class='gpio-td'>GPIO3_B1</td>
+            <td class='uart-td'>UART2_TX_M2</td>
+            <td class='pwm-td'>PWM2_M1</td>
+            <td></td>
+            <td></td>
+            <td>105</td>
+            </tr>
+            <tr>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>REFCLK_OUT</td>
+            <td class='gpio-td'>GPIO0_A0</td>
+            <td class='green'>37</td>
+            <td class='green'>38</td>
+            <td class='gpio-td'>GPIO3_B2</td>
+            <td class='uart-td'>UART2_RX_M2</td>
+            <td class='pwm-td'>PWM3_M1</td>
+            <td></td>
+            <td class='i2s-td'>I2S2_SDI_M1</td>
+            <td>106</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>39</td>
+            <td class='green'>40</td>
+            <td class='gpio-td'>GPIO3_B3</td>
+            <td class='uart-td'>UART2_RTSN</td>
+            <td></td>
+            <td></td>
+            <td class='i2s-td'>I2S2_SDO_M1</td>
+            <td>107</td>
+        </tr>
+    </tbody>
+</table> 
+
+## 1.2 ArmSoM-Sige5
+
+<table class="gpio-table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>功能5</th>
+            <th>功能4</th>
+            <th>功能3</th>
+            <th>功能2</th>
+            <th>功能1</th>
+            <th>Pin</th>
+            <th>Pin</th>
+            <th>功能1</th>
+            <th>功能2</th>
+            <th>功能3</th>
+            <th>功能4</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>1</td>
+            <td class='red'>2</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td ></td>
+            <td class='i2c-td'>I2C4_SDA_M3</td>
+            <td class='uart-td'>UART3_CTSN_M1</td>
+            <td class='uart-td'>UART2_RX_M2</td>
+            <td class='gpio-td'>GPIO3_B7</td>
+            <td class='green'>3</td>
+            <td class='red'>4</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td></td>
+            <td></td>
+            <td class='uart-td'>UART3_RTSN_M1</td>
+            <td class='uart-td'>UART2_TX_M2</td>
+            <td  class='gpio-td'>GPIO3_C0</td>
+            <td class='green'>5</td>
+            <td class='black'>6</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI2_CLK_M2</td>
+            <td class='pwm-td'>PWM1_CH0_M3</td>
+            <td class='uart-td'>UART1_CTSN_M2</td>
+            <td class='gpio-td'>GPIO3_A4</td>
+            <td class='green'>7</td>
+            <td class='green'>8</td>
+            <td class='gpio-td'>GPIO0_D4</td>
+            <td class='uart-td'>UART0_TX_M0</td>
+            <td>JTAG_TCK_M1</td>
+            <td ></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>9</td>
+            <td class='green'>10</td>
+            <td class='gpio-td'>GPIO0_B6</td>
+            <td class='uart-td'>UART2_RX_M0</td>
+            <td>JTAG_TMS_M2</td>
+            <td ></td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>11</td>
+            <td class='green'>12</td>
+            <td class='gpio-td'>GPIO0_C6</td>
+            <td class='i2c-td'>I2C3_SCL_M1</td>
+            <td class='spi-td'  class='spi-td'>SPI0_CSN0_M0</td>
+            <td>SAI0_SCLK_M1</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>13</td>
+            <td class='black'>14</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>15</td>
+            <td class='green'>16</td>
+            <td class='gpio-td'>GPIO2_B7</td>
+            <td class='uart-td'>UART7_RX_M0</td>
+            <td class='i2c-td'>I2C8_SDA_M2</td>
+            <td>SAI0_LRCK_M0</td>
+            <td>79</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>17</td>
+            <td class='green'>18</td>
+            <td class='gpio-td'>GPIO2_B6</td>
+            <td class='uart-td'>UART7_TX_M0</td>
+            <td class='i2c-td'>I2C8_SCL_M2</td>
+            <td></td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>149</td>
+            <td class='i2c-td'>I2C3_SDA_M3</td>
+            <td class='spi-td'  class='spi-td'>SPI4_MOSI_M0</td>
+            <td class='pwm-td'>PWM2_CH5_M1</td>
+            <td class='uart-td'>UART6_RX_M3</td>
+            <td class='gpio-td'>GPIO4_C5</td>
+            <td class='green'>19</td>
+            <td class='black'>20</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td class='can-td'>CAN1_TX_M1</td>
+            <td class='spi-td'  class='spi-td'>SPI4_MISO_M0</td>
+            <td class='i2c-td'>I2C6_SCL_M3</td>
+            <td class='pwm-td'>PWM2_CH2_M1</td>
+            <td class='gpio-td'>GPIO4_C6</td>
+            <td class='green'>21</td>
+            <td class='green'>22</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>SARADC_VIN4</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>151</td>
+            <td class='can-td'>CAN1_RX_M1</td>
+            <td class='spi-td'  class='spi-td'>SPI4_CLK_M0</td>
+            <td class='i2c-td'>I2C6_SDA_M3</td>
+            <td class='pwm-td'>PWM2_CH3_M1</td>
+            <td class='gpio-td'>GPIO4_C7</td>
+            <td class='green'>23</td>
+            <td class='green'>24</td>
+            <td class='gpio-td'>GPIO4_C4</td>
+            <td class='uart-td'>UART6_TX_M3</td>
+            <td class='spi-td'  class='spi-td'>SPI4_CSN0_M0</td>
+            <td class='pwm-td'>PWM2_CH6_M1</td>
+            <td>148</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class="black">25</td>
+            <td class='green'>26</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI2_MOSI_M2</td>
+            <td class='pwm-td'>PWM0_CH0_M3</td>
+            <td class='uart-td'>UART10_RX_M0</td>
+            <td class='gpio-td'>GPIO3_B0_d</td>
+            <td class='green'>27</td>
+            <td class='green'>28</td>
+            <td class='gpio-td'>GPIO2_D6</td>
+            <td class='uart-td'>UART8_RTSN_M0</td>
+            <td></td>
+            <td></td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='uart-td'>UART8_RTSN_M0</td>
+            <td class='gpio-td'>GPIO3_C7_D</td>
+            <td class='green'>29</td>
+            <td class='black'>30</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+                <td>128</td>
+                <td></td>
+                <td class='spi-td'  class='spi-td'>SPI3_CLK_M1</td>
+                <td class='i2c-td'>I2C3_SCL_M2</td>
+                <td class='uart-td'>UART5_RX_M0</td>
+                <td class='gpio-td'>GPIO3_D4_D</td>
+                <td class='green'>31</td>
+                <td class='green'>32</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <td>95</td>
+            <td>SPDIF_TX0_M2</td>
+            <td class='spi-td'  class='spi-td'>SPI3_CSN1_M0</td>
+            <td class='pwm-td'>PWM2_CH7_M2</td>
+            <td class='uart-td'>UART9_CTSN_M0</td>
+            <td class='gpio-td'>GPIO2_D7</td>
+            <td class='green'>33</td>
+            <td class='black'>34</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>20</td>
+            <td >PDM0_CLK0_M0</td>
+            <td>SAI0_MCLK_M1</td>
+            <td class='pwm-td'>PWM0_CH0_M0</td>
+            <td class='uart-td'>UART10_TX_M2</td>
+            <td class='gpio-td'>GPIO0_C4</td>
+            <td class='green'>35</td>
+            <td class='green'>36</td>
+            <td class='gpio-td'>GPIO0_C7</td>
+            <td class='i2c-td'>I2C3_SDA_M1</td>
+            <td class='spi-td'  class='spi-td'>SPI0_CLK_M0</td>
+            <td>SAI0_LRCK_M1</td>
+            <td>23</td>
+            </tr>
+            <tr>
+            <td>96</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI3_CLK_M0</td>
+            <td class='i2c-td'>I2C7_SCL_M1</td>
+            <td class='uart-td'>UART3_TX_M0</td>
+            <td class='gpio-td'>GPIO3_A0</td>
+            <td class='green'>37</td>
+            <td class='green'>38</td>
+            <td class='gpio-td'>GPIO0_D0</td>
+            <td class='spi-td'  class='spi-td'>SPI0_MOSI_M0</td>
+            <td>PDM0_SDI0_M0</td>
+            <td>SAI0_SDI0_M1</td>
+            <td>24</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>39</td>
+            <td class='green'>40</td>
+            <td class='gpio-td'>GPIO0_C5</td>
+            <td class='uart-td'>UART10_RX_M2</td>
+            <td>I3C0_SDA_M0</td>
+            <td>SAI0_SDO0_M1</td>
+            <td>21</td>
+        </tr>
+    </tbody>
+</table> 
+
+
+## 1.3 ArmSoM-Sige3
+
+<table class="gpio-table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>功能3</th>
+            <th>功能2</th>
+            <th>功能1</th>
+            <th>Pin</th>
+            <th>Pin</th>
+            <th>功能1</th>
+            <th>功能2</th>
+            <th>功能3</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class="red">1</td>
+            <td class="red">2</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td>PDM_SDI1_M2</td>
+            <td class='i2c-td'>I2C5_SDA_M0</td>
+            <td class='gpio-td'>GPIO3_B4</td>
+            <td class="green">3</td>
+            <td class="red">4</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>107</td>
+            <td>PDM_SDI0_M2</td>
+            <td class='i2c-td'>I2C5_SCL_M0</td>
+            <td class='gpio-td'>GPIO3_B3</td>
+            <td class="green">5</td>
+            <td class="black">6</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>91</td>
+            <td></td>
+            <td class='i2s-td'>I2S1_SDI0_M2</td>
+            <td class='gpio-td'>GPIO2_D3</td>
+            <td class="green">7</td>
+            <td class="green">8</td>
+            <td class='gpio-td'>GPIO0_D1</td>
+            <td class='uart-td'>UART2_TX_M0</td>
+            <td></td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class="black">9</td>
+            <td class="green">10</td>
+            <td class='gpio-td'>GPIO0_D0</td>
+            <td class='uart-td'>UART2_RX_M0</td>
+            <td></td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>97</td>
+            <td></td>
+            <td  class='spi-td'>SPI1_CS0_M1</td>
+            <td class='gpio-td'>GPIO3_A1</td>
+            <td class="green">11</td>
+            <td class="green">12</td>
+            <td class='gpio-td'>GPIO4_A5</td>
+            <td class='uart-td'>UART1_RTSN</td>
+            <td class='i2s-td'>I2S3_SCLK_M0</td>
+            <td>133</td>
+        </tr>
+        <tr>
+            <td>99</td>
+            <td></td>
+            <td class='i2s-td'>I2S3_SCLK_M0</td>
+            <td class='gpio-td'>GPIO3_A3</td>
+            <td class="green">13</td>
+            <td class="black">14</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td></td>
+            <td></td>
+            <td class='gpio-td'>GPIO3_A7</td>
+            <td class="green">15</td>
+            <td class="green">16</td>
+            <td class='gpio-td'>GPIO3_B0</td>
+            <td></td>
+            <td></td>
+            <td>104</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class="red">17</td>
+            <td class="green">18</td>
+            <td class='gpio-td'>GPIO3_B1</td>
+            <td class='uart-td'>UART4_RX_M1</td>
+            <td class='pwm-td'>PWM8_M0</td>
+            <td>105</td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td class='uart-td'>UART9_RTSn_M0</td>
+            <td  class='spi-td'>SPI2_MOSI</td>
+            <td class='gpio-td'>GPIO2_C3</td>
+            <td class="green">19</td>
+            <td class="black">20</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>82</td>
+            <td></td>
+            <td  class='spi-td'>SPI2_MISO</td>
+            <td class='gpio-td'>GPIO2_C2</td>
+            <td class="green">21</td>
+            <td class="green">22</td>
+            <td class='gpio-td'>GPIO3_B2</td>
+            <td class='uart-td'>UART4_TX_M1</td>
+            <td class='pwm-td'>PWM9_M0</td>
+            <td>106</td>
+        </tr>
+        <tr>
+            <td>81</td>
+            <td></td>
+            <td  class='spi-td'>SPI2_CLK</td>
+            <td class='gpio-td'>GPIO2_C1</td>
+            <td class="green">23</td>
+            <td class="green">24</td>
+            <td class='gpio-td'>GPIO2_C4</td>
+            <td class='uart-td'>UART9_CTSn_M0</td>
+            <td  class='spi-td'>SPI2_CS0</td>
+            <td>84</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class="black">25</td>
+            <td class="green">26</td>
+            <td class='gpio-td'>GPIO2_C5</td>
+            <td class='uart-td'>UART8_TX_M0</td>
+            <td  class='spi-td'>SPI2_CS1_M0</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td class='pwm-td'>PWM11_M0</td>
+            <td class='i2c-td'>I2C3_SDA_M1</td>
+            <td class='gpio-td'>GPIO3_B6</td>
+            <td class="green">27</td>
+            <td class="green">28</td>
+            <td class='gpio-td'>GPIO3_B5</td>
+            <td class='i2c-td'>I2C3_SCL_M1</td>
+            <td class='pwm-td'>PWM10_M0</td>
+            <td>109</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td class='pwm-td'>PWM12_M0</td>
+            <td class='uart-td'>UART3_TX_M1</td>
+            <td class='gpio-td'>GPIO3_B7</td>
+            <td class="green">29</td>
+            <td class="black">30</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td class='pwm-td'>PWM13_M0</td>
+            <td class='uart-td'>UART3_RX_M1</td>
+            <td class='gpio-td'>GPIO3_C0</td>
+            <td class="green">31</td>
+            <td class="green">32</td>
+            <td class='gpio-td'>GPIO3_C4</td>
+            <td class='uart-td'>UART7_TX_M1</td>
+            <td class='pwm-td'>PWM14_M0</td>
+            <td>116</td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td class='pwm-td'>PWM15_M0</td>
+            <td class='uart-td'>UART7_RX_M1</td>
+            <td class='gpio-td'>GPIO3_C5</td>
+            <td class="green">33</td>
+            <td class="black">34</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>134</td>
+            <td class='i2s-td'>I2S3_LRCK_M0</td>
+            <td class='i2s-td'>I2S1_LRCK</td>
+            <td class='gpio-td'>GPIO4_A6</td>
+            <td class="green">35</td>
+            <td class="green">36</td>
+            <td class='gpio-td'>GPIO3_C2</td>
+            <td class='uart-td'>UART5_TX_M1</td>
+            <td></td>
+            <td>114</td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td  class='spi-td'>SPI1_CLK_M1</td>
+            <td class='uart-td'>UART5_RX_M1</td>
+            <td class='gpio-td'>GPIO3_C3</td>
+            <td class="green">37</td>
+            <td class="green">38</td>
+            <td class='gpio-td'>GPIO3_A6</td>
+            <td class='i2s-td'>I2S3_SDI_M0</td>
+            <td></td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class="black">39</td>
+            <td class="green">40</td>
+            <td class='gpio-td'>GPIO3_A5</td>
+            <td class='i2s-td'>I2S3_SDO_M0</td>
+            <td></td>
+            <td>101</td>
+        </tr>
+    </tbody>
+</table>
+
+
+## 1.4 ArmSoM-Sige1
+
+<table class="gpio-table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>功能4</th>
+            <th>功能3</th>
+            <th>功能2</th>
+            <th>功能1</th>
+            <th>Pin</th>
+            <th>Pin</th>
+            <th>功能1</th>
+            <th>功能2</th>
+            <th>功能3</th>
+            <th>功能4</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>1</td>
+            <td class='red'>2</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>130</td>
+            <td class='i2c-td'>I2C1_SDA_M0</td>
+            <td class='i2s-td'>I2S1_SDI3</td>
+            <td class='uart-td'>UART3_RTSN</td>
+            <td class='gpio-td'>GPIO4_A2</td>
+            <td class='green'>3</td>
+            <td class='red'>4</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>131</td>
+            <td class='i2c-td'>I2C1_SCL_M0</td>
+            <td class='i2s-td'>I2S1_SDI2</td>
+            <td class='uart-td'>UART3_CTSN</td>
+            <td class='gpio-td'>GPIO4_A3</td>
+            <td class='green'>5</td>
+            <td class='black'>6</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td>REF_CLK_OUT_M0</td>
+            <td class='gpio-td'>GPIO0_A1</td>
+            <td class='green'>7</td>
+            <td class='green'>8</td>
+            <td class='gpio-td'>GPIO4_D0</td>
+            <td class='uart-td'>UART0_TX_M0</td>
+            <td>JTAG_MCU_TCK_M1</td>
+            <td>JTAG_CPU_TCK_M1</td>
+            <td>152</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>9</td>
+            <td class='green'>10</td>
+            <td class='gpio-td'>GPIO4_C7</td>
+            <td class='uart-td'>UART0_RX_M0</td>
+            <td>JTAG_MCU_TMS_M1</td>
+            <td>JTAG_CPU_TMS_M1</td>
+            <td>151</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='gpio-td'>GPIO0_A0</td>
+            <td class='green'>11</td>
+            <td class='green'>12</td>
+            <td class='gpio-td'>GPIO4_A5</td>
+            <td class='uart-td'>UART1_RTSN</td>
+            <td class='i2s-td'>I2S1_SCLK</td>
+            <td></td>
+            <td>133</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>13</td>
+            <td class='black'>14</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>15</td>
+            <td class='green'>16</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>17</td>
+            <td class='green'>18</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>138</td>
+            <td>PDM_SDI0</td>
+            <td class='spi-td'>SPI0_MOSI</td>
+            <td class='i2s-td'>I2S1_SDO3</td>
+            <td class='gpio-td'>GPIO4_B2</td>
+            <td class='green'>19</td>
+            <td class='black'>20</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>139</td>
+            <td>PDM_SDI2</td>
+            <td class='spi-td'>SPI0_MISO</td>
+            <td class='i2s-td'>I2S1_SDI1</td>
+            <td class='gpio-td'>GPIO4_B3</td>
+            <td class='green'>21</td>
+            <td class='green'>22</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>140</td>
+            <td></td>
+            <td class='spi-td'>SPI0_CLK</td>
+            <td class='i2s-td'>I2S1_SDI0</td>
+            <td class='gpio-td'>GPIO4_B4</td>
+            <td class='green'>23</td>
+            <td class='green'>24</td>
+            <td class='gpio-td'>GPIO4_B6</td>
+            <td class='spi-td'>SPI0_CSN0</td>
+            <td>PWR_CTRL1</td>
+            <td></td>
+            <td>142</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>25</td>
+            <td class='green'>26</td>
+            <td class='gpio-td'>GPIO4_C1</td>
+            <td class='pwm-td'>PWM6_M0</td>
+            <td class='spi-td'>SPI0_CSN1</td>
+            <td>PDM_SDI3</td>
+            <td>145</td>
+        </tr>
+        <tr>
+            <td>147</td>
+            <td>GPU_AVS</td>
+            <td class='i2c-td'>I2C0_SDA_M0</td>
+            <td class='pwm-td'>PWM0_M0</td>
+            <td class='gpio-td'>GPIO4_C3</td>
+            <td class='green'>27</td>
+            <td class='green'>28</td>
+            <td class='gpio-td'>GPIO4_C4</td>
+            <td class='pwm-td'>PWM1_M0</td>
+            <td class='i2c-td'>I2C0_SCL_M0</td>
+            <td>ARM_AVS</td>
+            <td>148</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>29</td>
+            <td class='black'>30</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>31</td>
+            <td class='green'>32</td>
+            <td class='gpio-td'>GPIO4_C0</td>
+            <td class='pwm-td'>PWM5_M0</td>
+            <td class='uart-td'>UART3_TX_M1</td>
+            <td>FEPHY_LED_LINK_M0</td>
+            <td>144</td>
+        </tr>
+        <tr>
+            <td>143</td>
+            <td>FEPHY_LED_SPD_M0</td>
+            <td class='pwm-td'>PWM4_M0</td>
+            
+            <td class='uart-td'>UART3_RX_M1</td>
+            <td class='gpio-td'>GPIO4_B7</td>
+            <td class='green'>33</td>
+            <td class='black'>34</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>134</td>
+            <td></td>
+            <td class='i2s-td'>I2S1_LRCK</td>
+            <td class='uart-td'>UART1_TX_M0</td>
+            <td class='gpio-td'>GPIO4_A6</td>
+            <td class='green'>35</td>
+            <td class='green'>36</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='green'>37</td>
+            <td class='green'>38</td>
+            <td class='gpio-td'>GPIO3_B2</td>
+            <td class='spi-td'>SPI0_CLK</td>
+            <td class='i2s-td'>I2S1_SDI0</td>
+            <td></td>
+            <td>106</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>39</td>
+            <td class='green'>40</td>
+            <td class='gpio-td'>GPIO4_A7</td>
+            <td class='uart-td'>UART1_RX_M0</td>
+            <td class='i2s-td'>I2S1_SDO0</td>
+            <td></td>
+            <td>135</td>
+        </tr>
+    </tbody>
+</table>
+
+## 1.5 ArmSoM-W3
+
+<table class="gpio-table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>功能5</th>
+            <th>功能4</th>
+            <th>功能3</th>
+            <th>功能2</th>
+            <th>功能1</th>
+            <th>Pin</th>
+            <th>Pin</th>
+            <th>功能1</th>
+            <th>功能2</th>
+            <th>功能3</th>
+            <th>功能4</th>
+            <th>功能5</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>1</td>
+            <td class='red'>2</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>139</td>
+            <td class='i2s-td'>I2S1_SDO2_M0</td>
+            <td class='can-td'>CAN1_TX_M1</td>
+            <td class='i2c-td'>I2C7_SDA_M3</td>
+            <td class='pwm-td'>PWM15_M1</td>
+            <td class='gpio-td'>GPIO4_B3</td>
+            <td class='green'>3</td>
+            <td class='red'>4</td>
+            <td>+5.0V</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>138</td>
+            <td class='i2s-td'>I2S1_SDO1M0</td>
+            <td class='can-td'>CAN1_RX_M1</td>
+            <td class='i2c-td'>I2C7_SCL_M3</td>
+            <td class='pwm-td'>PWM14_M1</td>
+            <td  class='gpio-td'>GPIO4_B2</td>
+            <td class='green'>5</td>
+            <td class='black'>6</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_CS1_M1</td>
+            <td class='i2c-td'>I2C8_SDA_M4</td>
+            <td class='pwm-td'>PWM15_M0</td>
+            <td class='gpio-td'>GPIO3_C3</td>
+            <td class='green'>7</td>
+            <td class='green'>8</td>
+            <td class='gpio-td'>GPIO0_B5</td>
+            <td class='uart-td'>UART2_TX_M0</td>
+            <td class='i2c-td'>I2C1_SCL_M0</td>
+            <td>JTAG_TCK_M2</td>
+            <td class='i2s-td'>I2S1_MCLK_M1</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>9</td>
+            <td class='green'>10</td>
+            <td class='gpio-td'>GPIO0_B6</td>
+            <td class='uart-td'>UART2_RX_M0</td>
+            <td class='i2c-td'>I2C1_SDA_M0</td>
+            <td>JTAG_TMS_M2</td>
+            <td class='i2s-td'>I2S1_SCLK_M1</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>113</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_CLK_M1</td>
+            <td></td>
+            <td class='uart-td'>UART7_RX_M1</td>
+            <td class='gpio-td'>GPIO3_C1</td>
+            <td class='green'>11</td>
+            <td class='green'>12</td>
+            <td class='gpio-td'>GPIO3_B5</td>
+            <td class='uart-td'>UART3_TX_M1</td>
+            <td class='pwm-td'>PWM12_M0</td>
+            <td class='can-td'>CAN1_RX_M0</td>
+            <td class='i2s-td'>I2S2_SCLK_M1</td>
+            <td>109</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_MOSI_M1</td>
+            <td class='i2c-td'>I2C3_SCL_M1</td>
+            <td></td>
+            <td class='gpio-td'>GPIO3_B7</td>
+            <td class='green'>13</td>
+            <td class='black'>14</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI1_MISO_M1</td>
+            <td class='i2c-td'>I2C3_SDA_M1</td>
+            <td class='uart-td'>UART7_TX_M1</td>
+            <td class='gpio-td'>GPIO3_C0</td>
+            <td class='green'>15</td>
+            <td class='green'>16</td>
+            <td class='gpio-td'>GPIO3_A4</td>
+            <td class='uart-td'>UART8_RTSN_M1</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI4_CS1_M1</td>
+            <td class='i2s-td'>I2S3_SDI</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>+3.3V</td>
+            <td class='red'>17</td>
+            <td class='green'>18</td>
+            <td class='gpio-td'>GPIO4_C4</td>
+            <td></td>
+            <td class='pwm-td'>PWM5_M2</td>
+            <td class='spi-td'  class='spi-td'>SPI3_MISO_M0</td>
+            <td></td>
+            <td>148</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_MOSI_M2</td>
+            <td></td>
+            <td class='uart-td'>UART4_RX_M2</td>
+            <td class='gpio-td'>GPIO1_B2</td>
+            <td class='green'>19</td>
+            <td class='black'>20</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_MISO_M2</td>
+            <td></td>
+            <td></td>
+            <td class='gpio-td'>GPIO1_B1</td>
+            <td class='green'>21</td>
+            <td class='green'>22</td>
+            <td></td>
+            <td></td>
+            <td>SARADC_IN4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_CLK_M2</td>
+            <td></td>
+            <td class='uart-td'>UART4_TX_M2</td>
+            <td class='gpio-td'>GPIO1_B3</td>
+            <td class='green'>23</td>
+            <td class='green'>24</td>
+            <td class='gpio-td'>GPIO1_B4</td>
+            <td class='uart-td'>UART7_RX_M2</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_CS0_M2</td>
+            <td></td>
+            <td>44</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>25</td>
+            <td class='green'>26</td>
+            <td class='gpio-td'>GPIO1_B5</td>
+            <td class='uart-td'>UART7_TX_M2</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI0_CS1_M2</td>
+            <td></td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td></td>
+            <td class='spi-td'  class='spi-td'>SPI3_CLK_M0</td>
+            <td class='i2c-td'>I2C0_SDA_M1</td>
+            <td class='pwm-td'>PWM7_M3</td>
+            <td class='gpio-td'>GPIO4_C6</td>
+            <td class='green'>27</td>
+            <td class='green'>28</td>
+            <td class='gpio-td'>GPIO4_C5</td>
+            <td></td>
+            <td class='pwm-td'>PWM6_M2</td>
+            <td></td>
+            <td class='i2c-td'>I2C0_SCL_M1</td>
+            <td>149</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td></td>
+            <td></td>
+            <td class='uart-td'>UART1_CTSN_M1</td>
+            <td class='pwm-td'>PWM15_M3</td>
+            <td class='gpio-td'>GPIO1_D7</td>
+            <td class='green'>29</td>
+            <td class='black'>30</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td></td>
+                <td>SPDIF_TX_M0</td>
+                <td class='uart-td'>UART1_RX_M1</td>
+                <td class='pwm-td'>PWM13_M2</td>
+                <td class='gpio-td'>GPIO1_B7</td>
+                <td class='green'>31</td>
+                <td class='green'>32</td>
+                <td class='gpio-td'>GPIO3_C2</td>
+                <td class='uart-td'>UART7_RTSN_M1</td>
+                <td class='pwm-td'>PWM14_M0</td>
+                <td class='spi-td'  class='spi-td'>SPI1_CS0_M1</td>
+                <td class='i2c-td'>I2C8_SCL_M4</td>
+                <td>114</td>
+            </tr>
+            <tr>
+            <td>103</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='pwm-td'>PWM8_M0</td>
+            <td class='gpio-td'>GPIO3_A7</td>
+            <td class='green'>33</td>
+            <td class='black'>34</td>
+            <td>GND</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>110</td>
+            <td class='i2s-td'>I2S2_LRCK_M1</td>
+            <td class='can-td'>CAN1_TX_M0</td>
+            <td class='uart-td'>UART3_RX_M1</td>
+            <td class='pwm-td'>PWM13_M0</td>
+            <td class='gpio-td'>GPIO3_B6</td>
+            <td class='green'>35</td>
+            <td class='green'>36</td>
+            <td class='gpio-td'>GPIO3_B1</td>
+            <td class='uart-td'>UART2_TX_M2</td>
+            <td class='pwm-td'>PWM2_M1</td>
+            <td></td>
+            <td></td>
+            <td>105</td>
+            </tr>
+            <tr>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>REFCLK_OUT</td>
+            <td class='gpio-td'>GPIO0_A0</td>
+            <td class='green'>37</td>
+            <td class='green'>38</td>
+            <td class='gpio-td'>GPIO3_B2</td>
+            <td class='uart-td'>UART2_RX_M2</td>
+            <td class='pwm-td'>PWM3_M1</td>
+            <td></td>
+            <td class='i2s-td'>I2S2_SDI_M1</td>
+            <td>106</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GND</td>
+            <td class='black'>39</td>
+            <td class='green'>40</td>
+            <td class='gpio-td'>GPIO3_B3</td>
+            <td class='uart-td'>UART2_RTSN</td>
+            <td></td>
+            <td></td>
+            <td class='i2s-td'>I2S2_SDO_M1</td>
+            <td>107</td>
+        </tr>
+    </tbody>
+</table> 
+
+## 1.6 ArmSoM-CM5-IO
+
+<table class="gpio-table">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>功能4</th>
+      <th>功能3</th>
+      <th>功能2</th>
+      <th>功能1</th>
+      <th>Pin</th>
+      <th>Pin</th>
+      <th>功能 1</th>
+      <th>功能 2</th>
+      <th>功能 3</th>
+      <th>功能 4</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+3.3V</td>
+      <td><div class="red">1</div></td>
+      <td><div class="red">2</div></td>
+      <td>+5.0V</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>140</td>
+      <td class='can-td'>CAN1_RX_M2</td>
+      <td class='i2c-td'>I2C3_SDA_M0</td>
+      <td class='uart-td'>UART2_RX_M1</td>
+      <td class='gpio-td'>GPIO4_B4</td>
+      <td><div class="green">3</div></td>
+      <td><div class="red">4</div></td>
+      <td>+5.0V</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>141</td>
+      <td class='can-td'>CAN1_TX_M2</td>
+      <td class='i2c-td'>I2C3_SCL_M0</td>
+      <td class='uart-td'>UART2_TX_M1</td>
+      <td class='gpio-td'>GPIO4_B5</td>
+      <td><div class="green">5</div></td>
+      <td><div class="black">6</div></td>
+      <td>GND</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td></td>
+      <td></td>
+      <td class='pwm-td'>PWM0_CH0_M0</td>
+      <td class='gpio-td'>GPIO0_C4</td>
+      <td><div class="green">7</div></td>
+      <td><div class="green">8</div></td>
+      <td class='gpio-td'>GPIO0_D4</td>
+      <td class='uart-td'>UART0_TX_M0</td>
+      <td></td>
+      <td></td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>GND</td>
+      <td><div class="black">9</div></td>
+      <td><div class="green">10</div></td>
+      <td class='gpio-td'>GPIO0_D5</td>
+      <td class='uart-td'>UART0_RX_M0</td>
+      <td></td>
+      <td></td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div class="green">11</div></td>
+      <td><div class="green">12</div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div class="green">13</div></td>
+      <td><div class="black">14</div></td>
+      <td>GND</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div class="green">15</div></td>
+      <td><div class="green">16</div></td>
+      <td class='gpio-td'>GPIO2_D1</td>
+      <td class='uart-td'>UART4_RX_M0</td>
+      <td class='i2c-td'>I2C6_SDA_M2</td>
+      <td class='pwm-td'>PWM2_CH1_M2</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+3.3V</td>
+      <td><div class="red">17</div></td>
+      <td><div class="green">18</div></td>
+      <td class='gpio-td'>GPIO2_D0</td>
+      <td class='uart-td'>UART4_TX_M0</td>
+      <td class='i2c-td'>I2C6_SCL_M2</td>
+      <td class='pwm-td'>PWM2_CH0_M2</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td class='i2c-td'>I2C7_SDA_M1</td>
+      <td class='spi-td'>SPI3_MOSI_M0</td>
+      <td class='uart-td'>UART3_RX_M0</td>
+      <td class='gpio-td'>GPIO3_A1</td>
+      <td><div class="green">19</div></td>
+      <td><div class="black">20</div></td>
+      <td>GND</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td class='can-td'>CAN1_TX_M3</td>
+      <td class='spi-td'>SPI3_MISO_M0</td>
+      <td class='uart-td'>UART3_CTSN_M0</td>
+      <td class='gpio-td'>GPIO3_A2</td>
+      <td><div class="green">21</div></td>
+      <td><div class="green">22</div></td>
+      <td></td>
+      <td></td>
+      <td>SARADC_VIN4</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td class='i2c-td'>I2C7_SCL_M1</td>
+      <td class='spi-td'>SPI3_CLK_M0</td>
+      <td class='uart-td'>UART3_TX_M0</td>
+      <td class='gpio-td'>GPIO3_A0</td>
+      <td><div class="green">23</div></td>
+      <td><div class="green">24</div></td>
+      <td class='gpio-td'>GPIO3_A3</td>
+      <td class='uart-td'>UART3_RTSN_M0</td>
+      <td class='can-td'>CAN1_RX_M3 </td>
+      <td class='spi-td'>SPI3_CSN0_M0</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>GND</td>
+      <td><div class="black">25</div></td>
+      <td><div class="green">26</div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td></td>
+      <td class='i2c-td'>I2C4_SDA_M3</td>
+      <td class='uart-td'>UART2_RX_M2</td>
+      <td class='gpio-td'>GPIO3_B7</td>
+      <td><div class="green">27</div></td>
+      <td><div class="green">28</div></td>
+      <td class='gpio-td'>GPIO2_D6</td>
+      <td class='pwm-td'>PWM2_CH6_M2</td>
+      <td>SPDIF_RX0_M2</td>
+      <td></td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>112</td>
+      <td></td>
+      <td class='i2c-td'>I2C4_SCL_M3</td>
+      <td class='uart-td'>UART2_TX_M2</td>
+      <td class='gpio-td'>GPIO3_C0</td>
+      <td><div class="green">29</div></td>
+      <td><div class="black">30</div></td>
+      <td>GND</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>126</td>
+      <td></td>
+      <td class='spi-td'>SPI3_MOSI_M1</td>
+      <td class='pwm-td'>PWM2_CH6_M3</td>
+      <td class='gpio-td'>GPIO3_D6</td>
+      <td><div class="green">31</div></td>
+      <td><div class="green">32</div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div class="green">33</div></td>
+      <td><div class="black">34</div></td>
+      <td>GND</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div class="green">35</div></td>
+      <td><div class="green">36</div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><div class="green">37</div></td>
+      <td><div class="green">38</div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>GND</td>
+      <td><div class="black">39</div></td>
+      <td><div class="green">40</div></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
