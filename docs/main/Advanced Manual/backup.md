@@ -176,6 +176,8 @@ rk3576_rootfs.img 上的文件系统大小已经调整为 1556652 个块（每�
 
 ## 2. Armbian system backup
 
+It is recommended to use the `armbian-config` tool to back up to an SD card. [Armbian-config Backup](/getting-start/armbian-config#103-example-usage)
+
 Follow the script below to generate a backup image：
 
 ```
