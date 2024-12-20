@@ -18,7 +18,7 @@ ArmSoM 40pin 的5v不支持输入。
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
+            <th>No.</th>
             <th>功能5</th>
             <th>功能4</th>
             <th>功能3</th>
@@ -31,7 +31,7 @@ ArmSoM 40pin 的5v不支持输入。
             <th>功能3</th>
             <th>功能4</th>
             <th>功能5</th>
-            <th>Number</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -363,7 +363,7 @@ ArmSoM 40pin 的5v不支持输入。
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
+            <th>No.</th>
             <th>功能5</th>
             <th>功能4</th>
             <th>功能3</th>
@@ -375,7 +375,7 @@ ArmSoM 40pin 的5v不支持输入。
             <th>功能2</th>
             <th>功能3</th>
             <th>功能4</th>
-            <th>Number</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -688,7 +688,7 @@ ArmSoM 40pin 的5v不支持输入。
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
+            <th>No.</th>
             <th>功能3</th>
             <th>功能2</th>
             <th>功能1</th>
@@ -697,7 +697,7 @@ ArmSoM 40pin 的5v不支持输入。
             <th>功能1</th>
             <th>功能2</th>
             <th>功能3</th>
-            <th>Number</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -950,7 +950,7 @@ ArmSoM 40pin 的5v不支持输入。
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
+            <th>No.</th>
             <th>功能4</th>
             <th>功能3</th>
             <th>功能2</th>
@@ -961,7 +961,7 @@ ArmSoM 40pin 的5v不支持输入。
             <th>功能2</th>
             <th>功能3</th>
             <th>功能4</th>
-            <th>Number</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -1254,7 +1254,7 @@ ArmSoM 40pin 的5v不支持输入。
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
+            <th>No.</th>
             <th>功能5</th>
             <th>功能4</th>
             <th>功能3</th>
@@ -1267,7 +1267,7 @@ ArmSoM 40pin 的5v不支持输入。
             <th>功能3</th>
             <th>功能4</th>
             <th>功能5</th>
-            <th>Number</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -1599,7 +1599,7 @@ ArmSoM 40pin 的5v不支持输入。
 <table class="gpio-table">
   <thead>
     <tr>
-      <th>Number</th>
+      <th>No.</th>
       <th>功能4</th>
       <th>功能3</th>
       <th>功能2</th>
@@ -1610,7 +1610,7 @@ ArmSoM 40pin 的5v不支持输入。
       <th>功能 2</th>
       <th>功能 3</th>
       <th>功能 4</th>
-      <th>Number</th>
+      <th>No.</th>
     </tr>
   </thead>
   <tbody>

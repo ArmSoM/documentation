@@ -18,20 +18,20 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
-            <th>Function 5</th>
-            <th>Function 4</th>
-            <th>Function 3</th>
-            <th>Function 2</th>
-            <th>Function 1</th>
+            <th>No.</th>
+            <th>F5</th>
+            <th>F4</th>
+            <th>F3</th>
+            <th>F2</th>
+            <th>F1</th>
             <th>Pin</th>
             <th>Pin</th>
-            <th>Function 1</th>
-            <th>Function 2</th>
-            <th>Function 3</th>
-            <th>Function 4</th>
-            <th>Function 5</th>
-            <th>Number</th>
+            <th>F1</th>
+            <th>F2</th>
+            <th>F3</th>
+            <th>F4</th>
+            <th>F5</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -363,19 +363,19 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
 <table class="gpio-table">
    <thead>
         <tr>
-            <th>Number</th>
-            <th>Function 5</th>
-            <th>Function 4</th>
-            <th>Function 3</th>
-            <th>Function 2</th>
-            <th>Function 1</th>
+            <th>No.</th>
+            <th>F5</th>
+            <th>F4</th>
+            <th>F3</th>
+            <th>F2</th>
+            <th>F1</th>
             <th>Pin</th>
             <th>Pin</th>
-            <th>Function 1</th>
-            <th>Function 2</th>
-            <th>Function 3</th>
-            <th>Function 4</th>
-            <th>Number</th>
+            <th>F1</th>
+            <th>F2</th>
+            <th>F3</th>
+            <th>F4</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -688,16 +688,16 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
 <table class="gpio-table">
     <thead>
     <tr>
-        <th>Number</th>
-        <th>Function 3</th>
-        <th>Function 2</th>
-        <th>Function 1</th>
+        <th>No.</th>
+        <th>F3</th>
+        <th>F2</th>
+        <th>F1</th>
         <th>Pin</th>
         <th>Pin</th>
-        <th>Function 1</th>
-        <th>Function 2</th>
-        <th>Function 3</th>
-        <th>Number</th>
+        <th>F1</th>
+        <th>F2</th>
+        <th>F3</th>
+        <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -868,7 +868,7 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
             <td class='i2c-td'>I2C3_SCL_M1</td>
             <td class='pwm-td'>PWM10_M0</td>
             <td>109</td>
-        </tr>f
+        </tr>
         <tr>
             <td>111</td>
             <td class='pwm-td'>PWM12_M0</td>
@@ -950,18 +950,18 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
-            <th>Function 4</th>
-            <th>Function 3</th>
-            <th>Function 2</th>
-            <th>Function 1</th>
+            <th>No.</th>
+            <th>F4</th>
+            <th>F3</th>
+            <th>F2</th>
+            <th>F1</th>
             <th>Pin</th>
             <th>Pin</th>
-            <th>Function 1</th>
-            <th>Function 2</th>
-            <th>Function 3</th>
-            <th>Function 4</th>
-            <th>Number</th>
+            <th>F1</th>
+            <th>F2</th>
+            <th>F3</th>
+            <th>F4</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -1254,20 +1254,20 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
 <table class="gpio-table">
     <thead>
         <tr>
-            <th>Number</th>
-            <th>Function 5</th>
-            <th>Function 4</th>
-            <th>Function 3</th>
-            <th>Function 2</th>
-            <th>Function 1</th>
+            <th>No.</th>
+            <th>F5</th>
+            <th>F4</th>
+            <th>F3</th>
+            <th>F2</th>
+            <th>F1</th>
             <th>Pin</th>
             <th>Pin</th>
-            <th>Function 1</th>
-            <th>Function 2</th>
-            <th>Function 3</th>
-            <th>Function 4</th>
-            <th>Function 5</th>
-            <th>Number</th>
+            <th>F1</th>
+            <th>F2</th>
+            <th>F3</th>
+            <th>F4</th>
+            <th>F5</th>
+            <th>No.</th>
         </tr>
     </thead>
     <tbody>
@@ -1599,7 +1599,7 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
 <table class="gpio-table">
   <thead>
     <tr>
-      <th>Number</th>
+      <th>No.</th>
       <th>功能4</th>
       <th>功能3</th>
       <th>功能2</th>
@@ -1610,7 +1610,7 @@ The 5V pin on the ArmSoM 40-pin header does not support input.
       <th>功能 2</th>
       <th>功能 3</th>
       <th>功能 4</th>
-      <th>Number</th>
+      <th>No.</th>
     </tr>
   </thead>
   <tbody>
