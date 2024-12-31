@@ -1,15 +1,16 @@
 ---
-sidebar_label: "GPIO Usage"
-sidebar_position: 7
+sidebar_label: "2.GPIO Usage"
+slug: /interface-usage/gpio
+sidebar_position: 2
 ---
 
-# GPIO Usage
+# 2.GPIO Usage
 
-## 1. Introduction to GPIO
+## 2.1 Introduction to GPIO
 
 GPIO, short for General-Purpose Input/Output, is a common digital input/output interface in computers and embedded systems. It allows software to control the digital inputs and outputs of hardware, such as switches, sensors, LEDs, etc. GPIO is typically supported by pins on a chip or processor, which can be programmed to configure these pins as inputs or outputs, and their input status can be read or output status controlled through corresponding software commands.
 
-## 2. GPIO Pin Number Calculation Method
+## 2.2 GPIO Pin Number Calculation Method
 
 RK3588 has a total of 5 GPIO banks: GPIO0~GPIO4, each of which is further numbered as A0~A7, B0~B7, C0~C7, D0~D7. The following formulas are commonly used to calculate the pin numbers:
 
@@ -21,7 +22,7 @@ RK3588 has a total of 5 GPIO banks: GPIO0~GPIO4, each of which is further number
 
 For example, the calculation for GPIO3_B5: 32 * 3 + 1 * 8 + 5 = 109 ---> This means that GPIO3_B5 corresponds to the GPIO number gpio-109.
 
-## 3. Multiplexing
+## 2.3 Multiplexing
 
 In addition to the general input/output function, GPIO pins may have other multiplexing functions.
 
@@ -70,9 +71,9 @@ In the system DTS configuration, GPIO1_C0 defaults to the I2C3_SDA_M0 function. 
 In this way, we have multiplexed GPIO1_C0 as the UART3_RX_M0 function.
 
 
-## 4. GPIO Debugging Methods
+## 2.4 GPIO Debugging Methods
 
-### 4.1 Read GPIO Status Information
+### 2.4.1 Read GPIO Status Information
 
 The Debugfs file system is designed to provide developers with more kernel data for debugging purposes. The debugging of GPIO can also be done using the Debugfs file system to obtain more kernel information. The GPIO interface in the Debugfs file system is /sys/kernel/debug/gpio, and you can read the information from this interface as follows:
 
@@ -112,7 +113,7 @@ gpiochip5: GPIOs 509-511, parent: platform/rk806-pinctrl.9.auto, rk806-gpio, can
 
 From the information read, we can see that the kernel lists the current status of the GPIO. For example, for the GPIO0 group, gpio-15 (GPIO0_B7) corresponds to the dts node led_rgb_b and outputs a low level (out lo).
 
-### 4.2 View pinmux-pins
+### 2.4.2 View pinmux-pins
 
 ```bash
 armsom@armsom:~$ sudo cat /sys/kernel/debug/pinctrl/pinctrl-rockchip-pinctrl/pinmux-pins
@@ -147,9 +148,9 @@ We can take pin 13 (gpio0-13): fiq-debugger (GPIO UNCLAIMED) function uart2 grou
 
 The node name corresponding to gpio0-13 is fiq-debugger. This node is multiplexed as the debug serial function using the pinctrl configuration, and the pinctrl value is uart2m0-xfer.
 
-## 5. GPIO Control
+## 2.5 GPIO Control
 
-### 5.1 GPIO sysfs interface
+### 2.5.1 GPIO sysfs interface
 
 Controlling GPIO in user space based on sysfs:
 The method of controlling GPIO through sysfs is mainly based on the GPIO control interface file provided by the kernel. In other words, it controls the corresponding gpio interface by reading and writing files in the/sys/class/gpio directory.
@@ -164,7 +165,7 @@ echo 109 > /sys/class/gpio/unexport                # Release the requested GPIO
 
 Note: Only when the GPIO3_B5 pin is not multiplexed by other peripherals, we can export it and then use.
 
-### 5.2 GPIOD Usage
+### 2.5.2 GPIOD Usage
 
 libgpiod is a character device interface, and GPIO access control is achieved by manipulating character device files (such as/dev/gpiodchip0) and providing command tools, C libraries, and Python encapsulation through libgpiod.
 
@@ -192,3 +193,68 @@ gpiomon 3 19      # Monitor the pin status of controller number 3 in the first g
 ```
 
 `Not all pins can be controlled using libgpiod, such as some already used pins like LED`
+
+## 2.6 Using `wiring-armbian`
+
+Download the `wiring-armbian` code from [wiring-armbian](https://github.com/ArmSoM/wiring-armbian).
+
+- Test the output of the `gpio readall` command as follows:
+
+```
+ +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+
+ | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
+ +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+
+ |      |     |     3.3V |        |   |  1 || 2  |   |        | 5V       |     |      |
+ |  139 |   0 |    SDA.7 |     IN | 1 |  3 || 4  |   |        | 5V       |     |      |
+ |  138 |   1 |    SCL.7 |     IN | 1 |  5 || 6  |   |        | GND      |     |      |
+ |  115 |   2 |    PWM15 |    OUT | 0 |  7 || 8  | 1 | ALT10  | GPIO0_B5 | 3   | 13   |
+ |      |     |      GND |        |   |  9 || 10 | 1 | ALT10  | GPIO0_B6 | 4   | 14   |
+ |  113 |   5 | GPIO3_C1 |     IN | 0 | 11 || 12 | 1 | IN     | GPIO3_B5 | 6   | 109  |
+ |  111 |   7 | GPIO3_B7 |     IN | 0 | 13 || 14 |   |        | GND      |     |      |
+ |  112 |   8 | GPIO3_C0 |     IN | 0 | 15 || 16 | 0 | IN     | GPIO3_A4 | 9   | 100  |
+ |      |     |     3.3V |        |   | 17 || 18 | 1 | IN     | GPIO4_C4 | 10  | 148  |
+ |   42 |  11 | SPI0_TXD |     IN | 1 | 19 || 20 |   |        | GND      |     |      |
+ |   41 |  12 | SPI0_RXD |     IN | 1 | 21 || 22 |   |        | SARADC_IN4 |     |      |
+ |   43 |  14 | SPI0_CLK |     IN | 1 | 23 || 24 | 1 | IN     | SPI0_CS0 | 15  | 44   |
+ |      |     |      GND |        |   | 25 || 26 | 1 | IN     | SPI0_CS1 | 16  | 45   |
+ |  150 |  17 | GPIO4_C6 |     IN | 1 | 27 || 28 | 0 | OUT    | GPIO4_C5 | 18  | 149  |
+ |   63 |  19 | GPIO1_D7 |     IN | 1 | 29 || 30 |   |        | GND      |     |      |
+ |   47 |  20 | GPIO1_B7 |     IN | 1 | 31 || 32 | 0 | IN     | GPIO3_C2 | 21  | 114  |
+ |  103 |  22 | GPIO3_A7 |     IN | 1 | 33 || 34 |   |        | GND      |     |      |
+ |  110 |  23 | GPIO3_B6 |     IN | 0 | 35 || 36 | 0 | IN     | GPIO3_B1 | 24  | 105  |
+ |    0 |  25 | GPIO0_A0 |     IN | 1 | 37 || 38 | 0 | IN     | GPIO3_B2 | 26  | 106  |
+ |      |     |      GND |        |   | 39 || 40 | 1 | IN     | GPIO3_B3 | 27  | 107  |
+ +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+
+ | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
+ +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+
+```
+
+- Set the GPIO pin to output mode. The third parameter should be the `wPi` number of the target pin.
+
+```
+root@armsom-sige7:~/wiring-armbian# gpio mode 2 out
+```
+
+- Set the GPIO pin to low level. After setting, use a multimeter to measure the pin voltage. If it is 0V, the low level setting is successful.
+
+```
+root@armsom-sige7:~/wiring-armbian# gpio write 2 0
+```
+
+- Set the GPIO pin to high level. After setting, use a multimeter to measure the pin voltage. If it is 3.3V, the high level setting is successful.
+
+```
+root@armsom-sige7:~/wiring-armbian# gpio write 2 1
+```
+
+- For other pins, follow the same steps and adjust the `wPi` number to match the target pin.
+
+---
+
+## 2.7 FAQs
+
+**Q1**: What should I do if the error `gpioset: error setting the GPIO line values: Device or resource busy` or `-bash: echo: write error: Device or resource busy` occurs when using GPIO?  
+**A1**: This error typically indicates that the GPIO pin is already occupied by another process or function. The likely cause is that the pin is configured as GPIO or assigned to another multiplexed function in the device tree, making it inaccessible.
+
+**Q2**: How should I troubleshoot if the measured voltage of a PIN is incorrect?  
+**A2**: If the measured voltage of the PIN is not as expected and external factors have been ruled out, check whether the IO voltage source connected to the PIN is functioning correctly and verify that the IO-Domain configuration for the PIN is correct.
