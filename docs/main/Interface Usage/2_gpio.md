@@ -1,5 +1,5 @@
 ---
-sidebar_label: "2.GPIO Usage"
+sidebar_label: "2. GPIO Usage"
 slug: /interface-usage/gpio
 sidebar_position: 2
 ---
