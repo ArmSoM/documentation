@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Display 使用"
-sidebar_position: 6
+sidebar_position: 21
 ---
 
 # Display 使用
