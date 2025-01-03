@@ -1,7 +1,7 @@
 ---
 sidebar_label: "5. UART Usage"
 slug: /interface-usage/uart
-sidebar_position: 7
+sidebar_position: 5
 ---
 # 5. UART Usage
 ## 5.1 Introduction to UART
