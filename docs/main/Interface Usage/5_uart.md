@@ -63,6 +63,11 @@ root@armsom-sige7:/home/armsom# sync
 root@armsom-sige7:/home/armsom# sudo reboot
 ```
 
+:::tip
+- Q: If the system is rebooted by directly pulling the power, is it possible that files are not updated or the overlay system fails to start?
+- A: When you abruptly disconnect the power or force a shutdown, there is a risk that files may not be properly synchronized from memory (RAM) to the storage device (e.g., hard drive or SSD). This happens because the operating system typically caches data in memory and writes it to the disk periodically. To avoid this issue, it is recommended to run the "sync" command before shutting down, ensuring that all data is written to the disk before pulling the power or shutting down.
+:::
+
 - **Verify UART is Enabled**
 
 After reboot, you can check whether the UART is working correctly by running the following command:

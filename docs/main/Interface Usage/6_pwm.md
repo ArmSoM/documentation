@@ -74,6 +74,11 @@ root@armsom-sige5:/home/armsom# sync
 root@armsom-sige5:/home/armsom# sudo reboot
 ```
 
+:::tip
+- Q: If the system is rebooted by directly pulling the power, is it possible that files are not updated or the overlay system fails to start?
+- A: When you abruptly disconnect the power or force a shutdown, there is a risk that files may not be properly synchronized from memory (RAM) to the storage device (e.g., hard drive or SSD). This happens because the operating system typically caches data in memory and writes it to the disk periodically. To avoid this issue, it is recommended to run the "sync" command before shutting down, ensuring that all data is written to the disk before pulling the power or shutting down.
+:::
+
 ## 6.3 Detailed PWM Usage
 
 For kernel and user-space usage of PWM, refer to the `Documentation/pwm.txt` file. Below is a focus on the user-space section. As described in the `pwm.txt` document, PWM provides user-space interfaces under the `/sys/class/pwm/` directory. Once the PWM driver is loaded successfully, a `pwmchip0` directory is created under `/sys/class/pwm/`. To enable PWM timer 0, write `0` to the `export` file. This creates a `pwm0` directory. Conversely, writing `0` to the `unexport` file disables the PWM timer and deletes the `pwm0` directory. The directory contains the following files:

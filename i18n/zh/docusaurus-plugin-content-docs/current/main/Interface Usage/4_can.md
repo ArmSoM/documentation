@@ -115,7 +115,7 @@ CAN接口在默认情况是关闭状态的，需要使能才能使用
 root@armsom-sige7:/home/armsom# sudo nano /boot/armbianEnv.txt
 ```
 
-这里以激活 can-m0 为例，将rk3588-can1-m0打开 如下图:
+这里以激活 can-m0 为例，将 rk3588-can1-m0 打开如下:
 
 ```
 overlays=rk3588-can1-m0
@@ -128,6 +128,11 @@ overlays=rk3588-can1-m0
 root@armsom-sige7:/home/armsom# sync
 root@armsom-sige7:/home/armsom# sudo reboot
 ```
+
+:::tip
+- Q: 如果直接拔掉电源进行重启，是否可能导致文件未修改或 overlay 系统启动失败？
+- A: 当直接拔掉电源或强制关机时，可能会出现文件未能及时从内存（RAM）同步到存储设备（如硬盘、SSD）的情况。这是因为操作系统通常会将数据暂存于内存中，并定期将这些数据写入磁盘。为避免此问题，建议在关机前执行 “sync” 命令，确保所有数据已写入磁盘，再拔掉电源或关机。
+:::
 
 ## 4.3 CAN 通信测试
 
