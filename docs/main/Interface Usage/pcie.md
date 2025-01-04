@@ -1,6 +1,6 @@
 ---
 sidebar_label: "PCIe Usage"
-sidebar_position: 9
+sidebar_position: 35
 ---
 
 # PCIe Usage

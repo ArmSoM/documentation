@@ -3,6 +3,7 @@ sidebar_label: "9. RTC 接口"
 slug: /interface-usage/rtc
 sidebar_position: 9
 ---
+
 # 9. RTC 接口
 ## 9.1 RTC 简介
 RTC：(Real_Time Clock)：实时时钟
@@ -23,7 +24,8 @@ HYM8563是一种低功耗实时时钟（RTC）芯片，用于提供精确的时�
 ![rtc-sch](/img/general-tutorial/interface-usage/rtc-sch.jpg)
 
 :::tip
-ArmSoM产品上已经有时钟芯片，接上rtc电源即可，RTC 电池，0.8mm立式插座。
+- ArmSoM产品上已经有时钟芯片，接上rtc电源即可
+- RTC 电池，座子封装是 0.8立贴(0.8mm 1x2P 直插)，网盘连接器规格书有详细规格书
 :::
 
 ### 9.2.2 rtc 引脚
@@ -88,66 +90,23 @@ root@armsom-sige5:/home/armsom# sudo i2cdetect -y 2
 
 可以看到I2C总线/dev/i2c-6上挂载了一个有效的I2C设备:RTC,其地址为0x51。
 
-## 9.3 RTC Testing
+## 9.3  RTC测试
+Linux系统下包含两个时间：系统时间和RTC时间。
 
-In a Linux system, there are two types of time: system time and RTC time.
-
-- **System Time**: Maintained by the operating system, it represents the current date and time, usually based on the system's boot timestamp.
-- **RTC Time**: Maintained by the hardware clock (typically an onboard real-time clock chip), it keeps track of time when the system is powered off. The RTC generally continues to run even without power.
-
-### 9.3.1 Using `hwclock` and `date` Commands
-
-In Linux, the `date` and `time` commands are used to manipulate system time, while the `hwclock` command is used to read and set RTC time.
-
-#### 9.3.2 View RTC Time
-
-To read the current RTC time, use the `hwclock -r` command:
+linux命令中的date和time等命令都是用来设置系统时间的，而hwclock命令是用来设置和读写RTC时间的。
 
 ```bash
 root@armsom-sige5:/home/armsom# hwclock -r
 2025-01-04 15:49:01.391974+08:00
-```
 
-This indicates that the RTC time is 2025-01-04 15:49:01, with the timezone information (+08:00 for UTC+8).
-
-#### 9.3.3 View System Time
-
-To view the current system time, use the `date` command:
-
-```bash
 root@armsom-sige5:/home/armsom# date
 2025年 01月 04日 星期六 15:49:21 CST
-```
 
-This indicates that the system time is 2025-01-04 15:49:21, in China Standard Time (CST).
+root@armsom-sige5:/home/armsom# sudo hwclock --systohc   # 同步系统时间到 RTC
 
-#### 9.3.4 Sync System Time to RTC
+root@armsom-sige5:/home/armsom# sudo hwclock --hctosys   # 同步 RTC 到系统时间
 
-If you want to synchronize the current system time to the RTC, use the following command:
-
-```bash
-root@armsom-sige5:/home/armsom# sudo hwclock --systohc
-```
-
-This command will write the current system time to the RTC.
-
-#### 9.3.5 Sync RTC to System Time
-
-To synchronize the RTC time to the system time, use the following command:
-
-```bash
-root@armsom-sige5:/home/armsom# sudo hwclock --hctosys
-```
-
-This will set the system time to the RTC time.
-
-#### 9.3.6 Power Off and Reboot
-
-After turning off the device and waiting for 3 minutes, reboot the system and check the system time again:
-
-```bash
-root@armsom-sige5:/home/armsom# date   # Sync RTC to system time
+// 关闭产品电源，等待3分钟后，重启系统
+root@armsom-sige5:/home/armsom# date   # 同步 RTC 到系统时间
 2025年 01月 04日 星期六 15:52:31 CST
 ```
-
-This shows that the system time was successfully updated from the RTC time.

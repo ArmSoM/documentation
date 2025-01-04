@@ -1,47 +1,54 @@
 ---
-sidebar_label: "9. RTC Usage"
+sidebar_label: "9. RTC Interface"
 slug: /interface-usage/rtc
 sidebar_position: 9
 ---
-# RTC Usage
+## 9. RTC Interface
 
-## 1. RTC Introduction
+### 9.1 RTC Introduction
 
-RTC: (Real-Time Clock)
+RTC (Real-Time Clock) is a timekeeping device that keeps track of the current date and time.
 
-HYM8563 is a low-power real-time clock (RTC) chip used to provide accurate time and date information. It provides a programmable clock output, an interrupt output, and a power-fail detector. All addresses and data are serially transmitted via the I2C bus interface. The maximum bus speed is 400Kbits/s, and the embedded address register will automatically increment after each read or write operation.
+The **HYM8563** is a low-power real-time clock (RTC) chip that provides accurate time and date information. It includes a programmable clock output, an interrupt output, and a power-down detector. All addresses and data are transferred serially via the I2C bus interface. The maximum bus speed is 400Kbits/s, and after each read or write operation, the embedded address register automatically increments.
 
-The following are the main features and functions of the HYM8563 chip:
+Here are the main features and functions of the **HYM8563** chip:
 
-- Clock and Calendar Functions: HYM8563 has clock and calendar functions, providing accurate time and date information. It supports the display and timing of years, months, days, weeks, hours, minutes, and seconds.
-- Battery Power Supply: To maintain the persistence of time and date, the HYM8563 chip has a built-in battery power supply circuit, allowing it to continue running even when the main power is disconnected.
-- Alarm Function: The chip integrates an alarm function, allowing users to set the alarm time and trigger an alarm when the specified time is reached.
-- Timer Function: The HYM8563 chip also has a timer function, enabling users to set the start time and duration of the timer, and triggering corresponding events when the timer expires.
-- Temperature Compensation: The chip has a temperature compensation function, which can automatically adjust the clock frequency according to the ambient temperature to maintain accurate timekeeping.
-- Communication Interface: HYM8563 communicates with the main controller chip or microprocessor through the I2C (Inter-Integrated Circuit) interface. This interface is simple and widely used in many embedded systems.
+- **Clock and Calendar Function**: The HYM8563 provides accurate time and date information, supporting the display and timing of year, month, day, weekday, hour, minute, and second.
+- **Battery-Powered**: The chip is equipped with a battery-powered circuit, which ensures continuous operation even when the main power supply is turned off.
+- **Alarm Function**: The chip integrates an alarm feature, allowing you to set an alarm time that triggers an alert when the specified time is reached.
+- **Timer Function**: It also includes a timer function, allowing you to set start times and durations, triggering events when the timer expires.
+- **Temperature Compensation**: The chip has temperature compensation, which automatically adjusts the clock frequency based on ambient temperature to maintain time accuracy.
+- **Communication Interface**: The HYM8563 communicates with the main controller or microprocessor via the I2C (Inter-Integrated Circuit) interface. This simple and easy-to-use interface is widely used in many embedded systems.
 
-## 2. HYM8563 Clock Debugging
+### 9.2 RTC Usage Example
 
-### 2.1 Schematic
-
+#### 9.2.1 Schematic Diagram
 ![rtc-sch](/img/general-tutorial/interface-usage/rtc-sch.jpg)
 
-## 2.2 Driver
+:::tip
+- The ArmSoM product already includes the clock chip, just connect the RTC power supply.
+- The RTC battery uses a 0.8mm 1x2P through-hole connector; the detailed specification can be found in the network disk connector datasheet.
+:::
 
-- kernel/drivers/rtc/rtc-hym8563.c
+#### 9.2.2 RTC Pinout
 
-### 2.3 Kernel Configuration
+| RTC Power | Pin  | Function |
+| --------- | ---- | -------- |
+| +         | 1    | Positive |
+| -         | 2    | Negative |
 
-- rockchip_linux_defconfig configuration:
+#### 9.2.3 Kernel Configuration
+
+- **rockchip_linux_defconfig** configuration:
 
 ```bash
-CONFIG_RTC_HCTOSYS=y                # Allow RTC time to be set to system time
+CONFIG_RTC_HCTOSYS=y                # Enable RTC time setting to system time
 CONFIG_RTC_HCTOSYS_DEVICE="rtc0"    # Default RTC device for time synchronization
-CONFIG_RTC_SYSTOHC=y                # Allow system time to be set to RTC
-CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # Default RTC device for time synchronization
+CONFIG_RTC_SYSTOHC=y                # Enable system time setting to RTC
+CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # Default RTC device for system time synchronization
 ```
 
-### 2.4 Device Tree Node Configuration
+#### 9.2.4 Device Tree Configuration
 
 ```bash
 &i2c6 {
@@ -68,46 +75,85 @@ CONFIG_RTC_SYSTOHC_DEVICE="rtc0"    # Default RTC device for time synchronizatio
 };
 ```
 
-### 2.5 Debugging
+#### 9.2.5 RTC Debugging
 
 - Check if the RTC is mounted on the I2C bus:
 
 ```bash
-sudo i2cdetect -y 6
-```
-
-```
-armsom@armsom:~$ sudo i2cdetect -y 6
-
-        0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+root@armsom-sige5:/home/armsom# sudo i2cdetect -y 2
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:                         -- -- -- -- -- -- -- --
 10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- UU -- -- -- -- -- -- -- -- -- -- -- -- --
 30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- UU -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- --
 ```
 
-We can see that an I2C device (RTC) with an address of 0x51 is mounted on the I2C bus /dev/i2c-6.
+You can see that an I2C device (RTC) is mounted on the `/dev/i2c-6` bus with address `0x51`.
 
-## 3. RTC Testing
+## 9.3 RTC Testing
 
-The Linux system includes two times: system time and RTC time.
+In a Linux system, there are two types of time: system time and RTC time.
 
-Commands like date and time in Linux are used to set the system time, while the hwclock command is used to set and read and write the RTC time.
+- **System Time**: Maintained by the operating system, it represents the current date and time, usually based on the system's boot timestamp.
+- **RTC Time**: Maintained by the hardware clock (typically an onboard real-time clock chip), it keeps track of time when the system is powered off. The RTC generally continues to run even without power.
+
+### 9.3.1 Using `hwclock` and `date` Commands
+
+In Linux, the `date` and `time` commands are used to manipulate system time, while the `hwclock` command is used to read and set RTC time.
+
+#### 9.3.2 View RTC Time
+
+To read the current RTC time, use the `hwclock -r` command:
 
 ```bash
-armsom@armsom:~$ sudo hwclock -r   #  View hardware time (RTC time)
-2024-02-27 17:16:05.631917+08:00
-
-armsom@armsom:~$ date  # View system time
-2024年 02月 27日 星期二 17:16:22 CST
-
-armsom@armsom:~$ sudo  date -s "2024-02-27 18:45:00"  # Reset system time
-2024年 02月 27日 星期二 18:45:00 CST
-
-armsom@armsom:~$ sudo hwclock -w   # Sync system time to RTC, time is not lost after power off
+root@armsom-sige5:/home/armsom# hwclock -r
+2025-01-04 15:49:01.391974+08:00
 ```
 
+This indicates that the RTC time is 2025-01-04 15:49:01, with the timezone information (+08:00 for UTC+8).
+
+#### 9.3.3 View System Time
+
+To view the current system time, use the `date` command:
+
+```bash
+root@armsom-sige5:/home/armsom# date
+2025年 01月 04日 星期六 15:49:21 CST
+```
+
+This indicates that the system time is 2025-01-04 15:49:21, in China Standard Time (CST).
+
+#### 9.3.4 Sync System Time to RTC
+
+If you want to synchronize the current system time to the RTC, use the following command:
+
+```bash
+root@armsom-sige5:/home/armsom# sudo hwclock --systohc
+```
+
+This command will write the current system time to the RTC.
+
+#### 9.3.5 Sync RTC to System Time
+
+To synchronize the RTC time to the system time, use the following command:
+
+```bash
+root@armsom-sige5:/home/armsom# sudo hwclock --hctosys
+```
+
+This will set the system time to the RTC time.
+
+#### 9.3.6 Power Off and Reboot
+
+After turning off the device and waiting for 3 minutes, reboot the system and check the system time again:
+
+```bash
+root@armsom-sige5:/home/armsom# date   # Sync RTC to system time
+2025年 01月 04日 星期六 15:52:31 CST
+```
+
+This shows that the system time was successfully updated from the RTC time.
