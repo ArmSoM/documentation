@@ -1,6 +1,7 @@
 ---
-sidebar_label: "RTC Usage"
-sidebar_position: 10
+sidebar_label: "9. RTC Usage"
+slug: /interface-usage/rtc
+sidebar_position: 9
 ---
 # RTC Usage
 

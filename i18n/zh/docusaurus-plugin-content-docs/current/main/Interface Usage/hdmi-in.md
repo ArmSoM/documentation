@@ -1,6 +1,6 @@
 ---
 sidebar_label: "HDMI-IN 使用"
-sidebar_position: 8
+sidebar_position: 24
 ---
 # HDMI-IN 使用
 ## 1. HDMI-IN简介

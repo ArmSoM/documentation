@@ -1,6 +1,6 @@
 ---
 sidebar_label: "HDMI-IN Usage"
-sidebar_position: 8
+sidebar_position: 24
 ---
 # HDMI-IN Usage
 
