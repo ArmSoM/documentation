@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Ethernet Usage"
-sidebar_position: 7
+sidebar_position: 20
 ---
 
 # Ethernet Usage
