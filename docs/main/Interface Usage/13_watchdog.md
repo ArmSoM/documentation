@@ -1,14 +1,14 @@
 ---
-sidebar_label: "12. Watchdog Usage"
+sidebar_label: "13. Watchdog Usage"
 slug: /interface-usage/watchdog
-sidebar_position: 12
+sidebar_position: 13
 ---
 
-# 12. Watchdog Introduction
+# 13. Watchdog Introduction
 
 **Watchdog** is a hardware or software mechanism used to monitor the system's operational status. Its main function is to ensure that the system can automatically recover or restart in case of failure, ensuring the stability and reliability of the system. It is especially important in scenarios such as embedded systems, servers, and IoT devices that require continuous operation over a long period.
 
-## 12.1 Working Principle
+## 13.1 Working Principle
 
 The working principle of a Watchdog typically involves the following:
 
@@ -16,7 +16,7 @@ The working principle of a Watchdog typically involves the following:
 
 2. **Kick Operation**: Normally, the system will periodically (usually every few seconds or minutes) send a signal to the Watchdog to indicate that the system is functioning normally. If the system fails or freezes and is unable to send the signal in time, the Watchdog will trigger a reset to restore the system’s operation.
 
-## 12.2 DTS & Config Configuration
+## 13.2 DTS & Config Configuration
 
 The Watchdog's DTS node is defined in the file `kernel/arch/arm64/boot/dts/rockchip/rk3576.dtsi`, as shown below:
 
@@ -45,7 +45,7 @@ Ensure that the following configuration is enabled:
 CONFIG_WATCHDOG = y
 ```
 
-## 12.3 Usage
+## 13.3 Usage
 
 The internal watchdog device is named `/dev/watchdog`, and users can control the device via the `echo` command.
 
@@ -57,7 +57,7 @@ echo 12 > /dev/watchdog
 echo V > /dev/watchdog
 ```
 
-### 12.3.1 Default Watchdog Timeout
+### 13.3.1 Default Watchdog Timeout
 
 By default, the system will automatically "kick" the watchdog. If a character other than the uppercase 'V' is written to `/dev/watchdog`, the user must manually "kick" the watchdog. If no characters are written within 44 seconds, the system will restart.
 
@@ -69,7 +69,7 @@ The default uses tclk 24M, wdt_torr is 0x3fffffff
 wdt_torr ranges from 0x00000fff to 0x7fffffff with 16 levels.
 ```
 
-### 12.3.2 Using a Shell Script to Kick the Watchdog
+### 13.3.2 Using a Shell Script to Kick the Watchdog
 
 The following shell script "kicks" the watchdog every 30 seconds.
 
@@ -89,7 +89,7 @@ while true; do
 done
 ```
 
-### 12.3.3 Using a C Program to Kick the Watchdog
+### 13.3.3 Using a C Program to Kick the Watchdog
 
 The following C program "kicks" the watchdog every 30 seconds.
 
@@ -130,7 +130,7 @@ int main() {
 }
 ```
 
-## 12.4 Advanced Settings
+## 13.4 Advanced Settings
 
 `DW_WDT_DEFAULT_SECONDS` is used to set the default timeout value for the Watchdog. By default, if the system doesn't "kick" the watchdog within this time, the Watchdog will trigger a reset. Modifying this value changes the timeout period that triggers the Watchdog.
 
@@ -142,7 +142,7 @@ If you want to set the default timeout to 1 second, you can modify it as follows
 #define DW_WDT_DEFAULT_SECONDS 1  // Set default timeout to 1 second
 ```
 
-## 12.5 External Watchdog
+## 13.5 External Watchdog
 
 External hardware watchdogs usually interact with the host system through device files. In a Linux system, if the device supports an external hardware watchdog, it will typically generate a device file named `wdt_XXX` in the `/dev/` directory, where `XXX` represents the specific hardware's name or identifier.
 
