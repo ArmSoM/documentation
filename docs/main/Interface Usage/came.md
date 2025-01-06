@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Camera Usage"
+sidebar_label: "Camera"
 sidebar_position: 21
 ---
 

@@ -1,5 +1,6 @@
 ---
 sidebar_label: "Camera 使用"
+slug: /interface-usage/came
 sidebar_position: 21
 ---
 
@@ -452,6 +453,7 @@ rkisp_mainpath (platform:rkisp1-vir1):
         /dev/media3
 ```
 其中/dev/video22和/dev/video31都是摄像头的设备。
+
 ### 6.6 查看设备的预览支持格式
 如下是video22节点： imx415 摄像头的查询结果：
 
