@@ -31,4 +31,4 @@ slug: /getting-start
 
 ### [12. Developing Programs with ArmSoM Boards](./getting-start/gcc_compile)
 
-### [13. Checking Board System Information](./getting-start/check_board_system_information)
+### [13. Checking Board System Information](./getting-start/check-board-information)

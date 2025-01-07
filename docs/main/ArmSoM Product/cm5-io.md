@@ -510,7 +510,7 @@ The CM5 Kit includes an onboard WiFi module, so no external network devices are 
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set/#6-static-network-configuration" class="card-link">
+<a href="./getting-start/startup-network#56-static-network-configuration" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🌐</i>
@@ -520,7 +520,7 @@ The CM5 Kit includes an onboard WiFi module, so no external network devices are 
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set/#7-create-wifi-hotspot" class="card-link">
+<a href="./getting-start/startup-network#57-create-wifi-hotspot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>

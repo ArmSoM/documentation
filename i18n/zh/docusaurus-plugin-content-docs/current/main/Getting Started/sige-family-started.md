@@ -305,7 +305,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set#6-静态网络配置" class="card-link">
+<a href="./getting-start/startup-network#56-静态网络配置" class="card-link">
     <div class="card">
         <div class="icon">
             <i>🌐</i>
@@ -315,7 +315,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
         </div>
     </div>
 </a>
-<a href="./general-tutorial/network-set#7-创建WIFI热点" class="card-link">
+<a href="./getting-start/startup-network#57-创建wifi热点" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>

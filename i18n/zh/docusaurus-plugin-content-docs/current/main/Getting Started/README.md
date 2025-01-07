@@ -31,7 +31,7 @@ slug: /getting-start
 
 ### [12. 借助armsom板卡开发程序](./getting-start/gcc_compile)
 
-### [13. 查看板卡系统信息](./getting-start/check_board_system_information)
+### [13. 查看板卡系统信息](./getting-start/check-board-information)
 
 
 
