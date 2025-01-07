@@ -134,7 +134,7 @@ int main() {
 
 `DW_WDT_DEFAULT_SECONDS` is used to set the default timeout value for the Watchdog. By default, if the system doesn't "kick" the watchdog within this time, the Watchdog will trigger a reset. Modifying this value changes the timeout period that triggers the Watchdog.
 
-### Example Code Modification
+### 13.4.1 Example Code Modification
 
 If you want to set the default timeout to 1 second, you can modify it as follows:
 

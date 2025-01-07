@@ -122,7 +122,7 @@ int main() {
 
 `DW_WDT_DEFAULT_SECONDS` 是用于设置 Watchdog 超时的默认值。默认情况下，如果系统未在这个时间内喂狗，Watchdog 会触发重启。修改这个值会改变触发 Watchdog 超时的时间。
 
-### 代码修改示例
+### 13.4.1 代码修改示例
 假设你想将 Watchdog 的默认超时时间设置为 1 秒，可以这样修改：
 
 ```c
