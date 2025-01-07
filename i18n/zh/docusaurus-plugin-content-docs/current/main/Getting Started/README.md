@@ -29,7 +29,7 @@ slug: /getting-start
 
 ### [11. 配置文件、设备树](./getting-start/config-file_and_device-tree)
 
-### [12. 借助armsom板卡开发程序](./getting-start/developing_programs_by_armsom_borad)
+### [12. 借助armsom板卡开发程序](./getting-start/gcc_compile)
 
 ### [13. 查看板卡系统信息](./getting-start/check_board_system_information)
 

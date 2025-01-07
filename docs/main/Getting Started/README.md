@@ -29,6 +29,6 @@ slug: /getting-start
 
 ### [11. Configuration Files and Device Tree](./getting-start/config-file_and_device-tree)
 
-### [12. Developing Programs with ArmSoM Boards](./getting-start/developing_programs_by_armsom_borad)
+### [12. Developing Programs with ArmSoM Boards](./getting-start/gcc_compile)
 
 ### [13. Checking Board System Information](./getting-start/check_board_system_information)
