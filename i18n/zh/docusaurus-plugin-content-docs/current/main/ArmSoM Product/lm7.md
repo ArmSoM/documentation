@@ -282,7 +282,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
     </div>
 </a>
 
-<a href="/general-tutorial/rknn-llm" class="card-link">
+<a href="/advanced-manual/rknn-llm" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📕</i>

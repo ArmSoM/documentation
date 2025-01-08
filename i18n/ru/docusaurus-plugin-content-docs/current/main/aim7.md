@@ -837,7 +837,7 @@ Table 16. i2s pin descriptions
         </div>
     </div>
 </a>
-<a href="/general-tutorial/rknn-llm" class="card-link">
+<a href="/advanced-manual/rknn-llm" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📕</i>

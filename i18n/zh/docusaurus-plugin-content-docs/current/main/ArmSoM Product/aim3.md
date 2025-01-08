@@ -348,7 +348,7 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
         </div>
     </div>
 </a>
-<a href="/general-tutorial/rknn-llm" class="card-link">
+<a href="/advanced-manual/rknn-llm" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📕</i>

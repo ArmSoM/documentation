@@ -1,7 +1,7 @@
 ---
 sidebar_label: "RKLLM"
 sidebar_position: 6
-slug: /general-tutorial/rknn-llm
+slug: /advanced-manual/rknn-llm
 ---
 
 # RKLLM

@@ -233,7 +233,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
     </div>
 </a>
 
-<a href="/general-tutorial/rknn-llm" class="card-link">
+<a href="/advanced-manual/rknn-llm" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📕</i>
