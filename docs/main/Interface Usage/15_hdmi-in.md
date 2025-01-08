@@ -1,10 +1,12 @@
 ---
-sidebar_label: "HDMI-IN Usage"
-sidebar_position: 24
+sidebar_label: "15. HDMI-IN Usage"
+slug: /interface-usage/hdmi-in
+sidebar_position: 16
 ---
-# HDMI-IN Usage
 
-## 1. HDMI-IN Introduction
+# 15.HDMI-IN Usage
+
+## 15.1 HDMI-IN Introduction
 
 - The HDMI IN function can be implemented through a bridge chip that converts HDMI signals to MIPI signals for reception.
 
@@ -16,23 +18,23 @@ sidebar_position: 24
 
   Depending on the application scenario, the HDMI RX can adapt to the TIF framework or the Camera framework. Adapting to the TIF framework has lower image transmission delay, while adapting to the Camera framework allows the use of standard Camera APIs, making it easier to develop applications such as video recording and backend algorithm integration.
 
-## 2. HDMI-IN Driver Code and DTS Configuration
+## 15.2 HDMI-IN Driver Code and DTS Configuration
 
-### 2.1 Driver
+### 15.2.1 Driver
 
 ```bash
 kernel/drivers/media/platform/rockchip/hdmirx/*
 ```
 
-### 2.2 Kernel Config Configuration
+### 15.2.2 Kernel Config Configuration
 
 ```bash
 CONFIG_VIDEO_ROCKCHIP_HDMIRX=y
 ```
 
-## 2.3 DTS Configuration
+## 15.3 DTS Configuration
 
-### 2.3.1 HDMI RX Controller Configuration
+### 15.3.1 HDMI RX Controller Configuration
 
 ```c
 /* Should work with at least 128MB cma reserved above. */ 
@@ -55,7 +57,7 @@ CONFIG_VIDEO_ROCKCHIP_HDMIRX=y
 }
 ```
 
-### 2.3.2 Reserved Memory
+### 15.3.2 Reserved Memory
 
 The RK3588 HDMI RX module can only use physically contiguous memory, and at least 128MB of CMA memory needs to be reserved:
 Note: Calculated based on 3840x2160 resolution, RGB888 image format, and 4 rotating buffers.
@@ -77,17 +79,17 @@ reserved-memory {
 };
 ```
 
-## 3. HDMI-IN Debugging
+## 15.4 HDMI-IN Debugging
 
 The HDMI-IN device will be registered as a video device in the kernel, generating nodes such as /dev/video20. You can use the v4l2-ctl command to get device information and capture frames.
 
-### 3.1 View all video nodes
+### 15.4.1 View all video nodes
 
 ```bash
 ls /dev/video* 
 ```
 
-### 3.2 Find the **rk_hdmirx** device
+### 15.4.2 Find the **rk_hdmirx** device
 
 Use the v4l2-ctl -d argument to specify the video node, and the -D command to view the node information. Through the Driver name, you can confirm which node is the rk_hdmirx device:
 
@@ -114,9 +116,7 @@ Driver Info:
                 Extended Pix Format
 ```
 
-
-
-### 3.3 Get the resolution information of the external device input
+### 15.4.3 Get the resolution information of the external device input
 
 ```bash
 armsom@armsom:~$ v4l2-ctl -d /dev/video20  -V
@@ -137,7 +137,7 @@ Format Video Capture Multiplanar:
 
 You can see that the input source's pixel format is 'BGR3' at this time. The resolution is 1920 * 1080.
 
-### 3.4 HDMI-IN Audio and Video Capture
+### 15.4.4 HDMI-IN Audio and Video Capture
 
 You can use the following script to capture the audio and video input from HDMI-IN:
 

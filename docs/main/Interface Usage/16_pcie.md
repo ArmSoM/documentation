@@ -3,9 +3,9 @@ sidebar_label: "PCIe Usage"
 sidebar_position: 35
 ---
 
-# PCIe Usage
+# 16. PCIe Usage
 
-## 1. Introduction to PCIe
+## 16.1 Introduction to PCIe
 
 PCIe (Peripheral Component Interconnect Express) is a high-speed serial interface standard used to connect the motherboard and external devices. It is the successor to the PCI technology, aiming to provide higher bandwidth and better performance.
 
@@ -16,7 +16,7 @@ PCIe (Peripheral Component Interconnect Express) is a high-speed serial interfac
 
 In summary, PCIe is a high-speed, flexible, and widely-used serial interface standard that plays a critical role in modern computer systems, providing a reliable solution for connecting various external devices.
 
-## 2. PCIe Controllers on RK3588
+## 16.2 PCIe Controllers on RK3588
 
 - RK3588 has a total of 5 PCIe controllers, with the same hardware IP but different configurations. One of them is a 4-Lane DM mode that can support being used as an EP, while the other 2-Lane and 3 1-Lane controllers can only be used as RCs.
 - RK3588 has two types of PCIe PHYs, one of which is a PCIe 3.0 PHY with 2 ports and 4 lanes, while the other is a PCIe 2.0 PHY with 3 ports, each being a 2.0 1-Lane combined with SATA and USB.
@@ -27,16 +27,16 @@ The hardware resources of RK3588 PCIe and the corresponding relationships betwee
 
 ![pcie-node](/img/general-tutorial/interface-usage/pcie-node.png)
 
-## 3. RK3588 DTS Configuration
+## 16.3 RK3588 DTS Configuration
 
-### 3.1 PCIe Interfaces on ArmSoM-W3
+### 16.3.1 PCIe Interfaces on ArmSoM-W3
 
 - Here, we use the ArmSoM-W3 development board as an example to explain the PCIe configuration of RK3588.
 - The ArmSoM-W3 development board has 1 PCIe 3.0 x4 interface and two PCIe 2.0 interfaces, as shown in the figure:
 
 ![pcie-armsom-w3](/img/general-tutorial/interface-usage/pcie-armsom-w3.png)
 
-### 3.2 PCIe-related DTS Configuration on the ArmSoM-W3 Development Board:
+### 16.3.2 PCIe-related DTS Configuration on the ArmSoM-W3 Development Board:
 
 Generally, according to the schematic diagram, the power supply pins, reset pins, and the correct PCIe controller node and PHY node are configured in the DTS.
 
@@ -133,7 +133,7 @@ Generally, according to the schematic diagram, the power supply pins, reset pins
 
 - vcc3v3_pcie2x1l0, vcc3v3_pcie2x1l2, vcc3v3_pcie30: Power supply pin nodes
 
-## 4. How to Use PCIe Devices
+## 16.4 How to Use PCIe Devices
 
 Executing the `lspci` command will list information about all PCI devices, including the manufacturer, model, PCI address, etc. The output is typically provided in text form and sorted in order of bus address (BDF: Bus, Device, Function).
 
@@ -151,7 +151,7 @@ armsom@armsom:~$ lspci
 
 The PCIe interface is commonly used to connect high-speed solid-state drives (SSDs). Here, we use the Non-Volatile Memory (NVMe) controller produced by Intel Corporation as an example to explain the usage of the NVMe controller.
 
-### 4.1 Using the NVMe Controller
+### 16.4.1 Using the NVMe Controller
 
 1. Check if the NVMe device is recognized:
 
@@ -230,7 +230,7 @@ cat /proc/mounts  | grep nvme
 umount /mnt
 ```
 
-### 4.2 Read and Write Speed Test
+### 16.4.2 Read and Write Speed Test
 
 
  Use the dd command for read and write testing:

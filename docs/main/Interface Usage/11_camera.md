@@ -89,9 +89,49 @@ armsom@armsom-sige5:~$ dmesg | grep ov13850
 [    3.619848] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
-## 11.2 Check Camera Information
+## 11.2 RK3588 Hardware Path Block Diagram
 
-### 11.2.1 Check if Camera is Mounted on the I2C Bus
+![rockchip-camera-hardware-phy](/img/general-tutorial/interface-usage/camera-hardware-phy.png)
+
+- The RK3588 supports 2 ISP hardware modules, and each ISP device can virtualize multiple virtual nodes. The software reads the image data from DDR for each path in turn and processes it through the ISP. For multi-camera solutions, it is recommended to evenly distribute the data flow to the two ISPs.
+
+- Readback: refers to the data being collected into DDR after going through VICAP, and after the application obtains the data, the buffer address is pushed to the ISP, and then the ISP obtains the image data from DDR.
+
+## 11.3 RK3588 Camera Path:
+
+**Multi-sensor Support:**
+
+- A single hardware ISP supports up to 4 multiplexed paths, and the supported resolutions for ISP multiplexing are as follows:
+- 2 paths multiplexed: maximum resolution 3840x2160, DTS corresponding configuration 2 rkisp_vir devices.
+- 3 or 4 paths multiplexed: maximum resolution 2560x1536, DTS corresponding configuration 3 or 4 rkisp_vir devices.
+- The hardware supports collecting up to 7 sensor paths: 6 MIPI + 1 DVP, and the software path for multiple sensors is as follows:
+
+**The following diagram shows the RK3588 camera connection link, which can support up to 7 cameras.**
+![rockchip-camera-entity](/img/general-tutorial/interface-usage/camera-entity.png)
+
+## 11.4 Link Analysis:
+
+![rockchip-camera-entity-single](/img/general-tutorial/interface-usage/camera-entity-single.png)
+
+- In the figure: mipi camera2---> <font color="red" size="3">csi2_dphy1</font> ---> mipi2_csi2 ---> rkcif_mipi_lvds2--->rkcif_mipi_lvds2_sditf --->rkisp0_vir2
+
+- Corresponding node: imx415 ---> <font color="red" size="3">csi2_dphy0</font> ---> mipi2_csi2 ---> rkcif_mipi_lvds2--->rkcif_mipi_lvds2_sditf --->rkisp0_vir2
+
+- Link relationship: sensor---> csi2 dphy---->mipi csi host--->vicap
+
+- Solid link analysis: Camera sensor ---> dphy ---> mipi_csi2 module parses mipi protocol ---> vicap <font color="red" size="3">( rkcif node represents vicap )</font>
+
+- Dashed link analysis: vicap ---> rkcif_mipi_lvds2_sditf ---> isp
+
+:::tip
+
+The link relationship between each vicap node and the ISP is indicated by the XXX_sditf node that is virtually created to correspond to that relationship.
+:::
+
+
+## 11.5 Check Camera Information
+
+### 11.5.1 Check if Camera is Mounted on the I2C Bus
 
 ```bash
 root@armsom-sige5:/home/armsom# i2cdetect -y 5
@@ -106,13 +146,13 @@ root@armsom-sige5:/home/armsom# i2cdetect -y 5
 70: -- -- -- -- -- -- -- --
 ```
 
-### 11.2.2 Check Topology
+### 11.5.2 Check Topology
 
 ```bash
 root@armsom-sige5:/home/armsom# media-ctl -d /dev/media0 -p
 ```
 
-### 11.2.3 Check Files in Sys Filesystem
+### 11.5.3 Check Files in Sys Filesystem
 
 The kernel assigns device information description files for the camera in the `/sys/class/video4linux` directory.
 
@@ -131,7 +171,7 @@ armsom@armsom-sige5:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
 
 In the ArmSoM-Sige5, the dual-camera nodes are: video22 and video31.
 
-### 11.2.4 Find All Camera Devices
+### 11.5.4 Find All Camera Devices
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --list-devices
@@ -196,7 +236,7 @@ rkisp_mainpath (platform:rkisp1-vir1):
 
 Here, `/dev/video22` and `/dev/video31` are the camera devices.
 
-### 11.2.5 Check Supported Formats for Preview
+### 11.5.5 Check Supported Formats for Preview
 
 For the video22 node (IMX415 camera), the query result is as follows:
 
@@ -221,7 +261,7 @@ ioctl: VIDIOC_ENUM_FMT
                 Size: Stepwise 32x32 - 3840x2160 with step 8/8
 ```
 
-### 11.2.6 View All Device Information
+### 11.5.6 View All Device Information
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --all --device /dev/video22
@@ -283,7 +323,7 @@ Image Processing Controls
                      pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=356800000 flags=read-only, volatile
 ```
 
-### 11.2.7 Camera Preview
+### 11.5.7 Camera Preview
 
 On the ArmSoM-Sige7, the preview commands for dual cameras are:
 
@@ -301,7 +341,7 @@ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
-## 11.3 Camera Application Development
+## 11.6 Camera Application Development
 
 Customers can develop camera-related applications according to their needs. Below is an example of a dual-camera application developed using QT:
 

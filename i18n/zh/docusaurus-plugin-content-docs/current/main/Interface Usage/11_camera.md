@@ -18,7 +18,6 @@ MIPI-CSI 接口主要由以下组件组成：
 
 ## 11.1 Camera 使用实例
 
-
 ### 11.1.1 Camera 引脚
 
 ArmSoM 产品带MIPI-CSI的都支持适配了 [ArmSoM camera-module1](./armsom-camera-module1)模组
@@ -90,9 +89,45 @@ armsom@armsom-sige5:~$ dmesg | grep ov13850
 [    3.619848] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
-## 11.2 查看摄像头信息
+## 11.2 RK3588硬件通路框图
+![rockchip-camera-hardware-phy](/img/general-tutorial/interface-usage/camera-hardware-phy.png)
 
-### 11.2.1 查看Camera是否挂载到i2c总线下
+
+- rk3588支持2个isp硬件，每个isp设备可虚拟出多个虚拟节点，软件上通过回读的方式，依次从ddr读取每一路的图像数据进isp处理。对于多摄方案，建议将数据流平均分配到两个isp上。
+
+- 回读：指数据经过vicap采集到ddr，应用获取到数据后，将buffer地址推送给isp，isp再从ddr获取图像数据。
+## 11.3 RK3588 的camera通路:
+
+**多sensor支持：**
+
+- 单路硬件isp最多支持4路复用，isp复用情况支持分辨率如下：
+- 2路复用：最大分辨率3840x2160，dts对应配置2路rkisp_vir设备。
+- 3路或4路复用：最大分辨率2560x1536，dts对应配置3或4路rkisp_vir设备。
+- 硬件支持最多采集7路sensor：6mipi + 1dvp，多sensor软件通路如下：
+
+**下图是RK3588 camera连接链路示意图，可以支持7路camera。**
+![rockchip-camera-entity](/img/general-tutorial/interface-usage/camera-entity.png)
+
+##  11.4  链路解析
+![rockchip-camera-entity-single](/img/general-tutorial/interface-usage/camera-entity-single.png)
+
+- 图中：mipi camera2---> <font color="red" size="3">csi2_dphy1</font> ---> mipi2_csi2 ---> rkcif_mipi_lvds2--->rkcif_mipi_lvds2_sditf --->rkisp0_vir2
+	
+- 对应节点：imx415 ---> <font color="red" size="3">csi2_dphy0</font> ---> mipi2_csi2 ---> rkcif_mipi_lvds2--->rkcif_mipi_lvds2_sditf --->rkisp0_vir2
+	
+- 链接关系：sensor---> csi2 dphy---->mipi csi host--->vicap
+	
+- 实线链路解析： Camera sensor ---> dphy ---> 通过mipi_csi2模块解析mipi协议---> vicap <font color="red" size="3">( rkcif节点代表vicap )</font>
+	
+- 虚线链路解析：vicap ---> rkcif_mipi_lvds2_sditf --->  isp
+
+:::tip
+每个vicap节点与isp的链接关系，通过对应虚拟出的XXX_sditf来指明链接关系。
+:::
+
+## 11.5 查看摄像头信息
+
+### 11.5.1 查看Camera是否挂载到i2c总线下
 
 ```bash
 root@armsom-sige5:/home/armsom# i2cdetect -y 5
@@ -106,13 +141,13 @@ root@armsom-sige5:/home/armsom# i2cdetect -y 5
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- --
 ```
-### 11.2.2 查看拓扑结构
+### 11.5.2 查看拓扑结构
 
 ```bash
 root@armsom-sige5:/home/armsom# media-ctl -d /dev/media0 -p
 ```
 
-### 11.2.3 查看sys文件系统中文件信息
+### 11.5.3 查看sys文件系统中文件信息
 内核会为摄像头在目录/sys/class/video4linux下分配设备信息描述文件
 
 ```bash
@@ -128,7 +163,7 @@ armsom@armsom-sige5:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
 ```
 可以看到，在ArmSoM-Sige5中，双Camera的节点对应的是：video22和video31
 
-### 11.2.4 查找所有摄像头设备
+### 11.5.4 查找所有摄像头设备
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --list-devices
@@ -190,7 +225,7 @@ rkisp_mainpath (platform:rkisp1-vir1):
 ```
 其中/dev/video22和/dev/video31都是摄像头的设备。
 
-### 11.2.5 查看设备的预览支持格式
+### 11.5.5 查看设备的预览支持格式
 如下是video22节点： imx415 摄像头的查询结果：
 
 ```bash
@@ -213,7 +248,7 @@ ioctl: VIDIOC_ENUM_FMT
         [6]: 'NM12' (Y/CbCr 4:2:0 (N-C))
                 Size: Stepwise 32x32 - 3840x2160 with step 8/8
 ```
-### 11.2.6 查看设备的所有信息
+### 11.5.6 查看设备的所有信息
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --all --device /dev/video22
@@ -275,7 +310,7 @@ Image Processing Controls
                      pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=356800000 flags=read-only, volatile
 ```
 
-### 11.2.7 摄像头预览
+### 11.5.7 摄像头预览
 ArmSoM-Sige7中，双Camera的预览命令：
 
 - 预览摄像头1：
@@ -292,7 +327,7 @@ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
-## 11.3 Camera应用程序开发
+## 11.6 Camera应用程序开发
 客户可以根据自己的需求进行Camera相关的应用程序开发，如下是使用QT开发的双摄同显应用程序：
 
 ![rockchip-camera-two](/img/general-tutorial/interface-usage/camera-two.png)

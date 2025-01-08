@@ -1,9 +1,11 @@
 ---
-sidebar_label: "HDMI-IN 使用"
-sidebar_position: 24
+sidebar_label: "15. HDMI-IN 使用"
+slug: /interface-usage/hdmi-in
+sidebar_position: 16
 ---
-# HDMI-IN 使用
-## 1. HDMI-IN简介
+
+# 15. HDMI-IN 使用
+## 15.1 HDMI-IN简介
 - HDMI IN功能可以通过桥接芯⽚的⽅式实现，将HDMI信号转换成MIPI信号接收
 - RK3588芯⽚平台⾃带HDMI RX模块，可以直接接收HDMI信号，无需通过桥接芯⽚实现。
 - 在ArmSoM系列产品中，ArmSoM-W3支持HDMI-IN功能
@@ -12,22 +14,22 @@ sidebar_position: 24
 
 	根据应⽤场景需要，HDMI RX可适配TIF框架或是Camera框架，适配TIF框架图像传输延时更低，适配
 	Camera框架可以使⽤标准Camera API，更⽅便录像、对接后端算法等应⽤功能开发。
-## 2. HDMI-IN驱动代码和dts配置
-### 2.1 驱动
+## 15.2 HDMI-IN驱动代码和dts配置
+### 15.2.1 驱动
 
 ```bash
 kernel/drivers/media/platform/rockchip/hdmirx/*
 ```
 
-### 2.2 kernel Config配置
+### 15.2.2 kernel Config配置
 
 ```bash
 CONFIG_VIDEO_ROCKCHIP_HDMIRX=y
 ```
 
-## 2.3 DTS配置
+## 15.3 DTS配置
 
-### 2.3.1 HDMI RX控制器配置
+### 15.3.1 HDMI RX控制器配置
 
 ```c
 /* Should work with at least 128MB cma reserved above. */ 
@@ -48,9 +50,9 @@ CONFIG_VIDEO_ROCKCHIP_HDMIRX=y
 		};
 	};
 }
-
 ```
-### 2.3.2 预留内存
+
+### 15.3.2 预留内存
 RK3588 HDMI RX模块只能使用物理连续内存，需要预留至少128MB的CMA内存： 
 注：按3840x2160分辨率，RGB888图像格式，4个轮转Buffer计算。 
 
@@ -71,16 +73,16 @@ reserved-memory {
 };
 ```
 
-## 3. HDMI-IN调试
+## 15.4 HDMI-IN调试
 HDMI-IN 设备在内核中会被注册为 video 设备，生成的节点如：/dev/video20，可以通过 v4l2-ctl 命令来获取设备信息和抓帧。
 
-### 3.1 查看所有video节点
+### 15.4.1 查看所有video节点
 
 ```bash
 ls /dev/video* 
 ```
 
-### 3.2 查找**rk_hdmirx**设备
+### 15.4.2 查找**rk_hdmirx**设备
 
 使⽤v4l2-ctl -d参数指定vidoe节点，-D命令查看节点信息，通过Driver name确认哪个是节点是rk_hdmirx 设备：
 
@@ -107,9 +109,7 @@ Driver Info:
                 Extended Pix Format
 ```
 
-
-
-### 3.3  获取外部设备输入的分辨率信息
+### 15.4.3 获取外部设备输入的分辨率信息
 
 ```bash
 armsom@armsom:~$ v4l2-ctl -d /dev/video20  -V
@@ -130,7 +130,7 @@ Format Video Capture Multiplanar:
 
 可以看出此时输入源的像素格式为 ' BGR3' 。分辨率为 1920 * 1080
 
-### 3.4 HDMI-IN音视频捕获
+### 15.4.4 HDMI-IN音视频捕获
 
 可以使用如下脚本捕获HDMI-IN输入的音频和视频
 

@@ -1,10 +1,10 @@
 ---
-sidebar_label: "PCIe 使用"
-sidebar_position: 35
+sidebar_label: "16. PCIe 使用"
+sidebar_position: 17
 ---
 
-# PCIe 使用
-## 1. PCIe 简介
+# 16. PCIe 使用
+## 16.1 PCIe 简介
 PCIe（Peripheral Component Interconnect Express）是一种用于连接主板和外部设备的高速串行接口标准。它是 PCI 技术的后继者，旨在提供更高的带宽和更好的性能。
 
 - 高速传输： PCIe接口提供了高速的数据传输通道，可用于连接各种硬件设备，如图形卡、存储设备、网络适配器等。它的速度通常以每秒传输的数据位数（例如PCIe x1、x4、x8、x16等）来表示，每个通道的带宽可以根据需要扩展。
@@ -15,7 +15,7 @@ PCIe（Peripheral Component Interconnect Express）是一种用于连接主板�
 
 综上所述，PCIe 是一种高速、灵活且广泛应用的串行接口标准，它在现代计算机系统中发挥着关键作用，为连接各种外部设备提供了可靠的解决方案。
 
-## 2. RK3588的PCIe控制器
+## 16.2 RK3588的PCIe控制器
 - RK3588共有5个PCIe的控制器，硬件IP是⼀样的，配置不⼀样，其中⼀个4Lane DM模式可以⽀持作为EP
 使⽤，另外⼀个2Lane和3个1Lane控制器均只能作为RC使⽤。
 - RK3588有两种PCIe PHY，其中⼀种为pcie3.0PHY，含2个Port共4个Lane，另⼀种是pcie2.0的PHY有3
@@ -28,8 +28,8 @@ RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应
 
 ![pcie-node](/img/general-tutorial/interface-usage/pcie-node.png)
 
-## 3. RK3588 DTS配置
-### 3.1 ArmSoM-W3上的PCIe接口
+## 16.3 RK3588 DTS配置
+### 16.3.1 ArmSoM-W3上的PCIe接口
 - 这里以ArmSoM-W3开发板为例，讲解RK3588的PCIe配置
 - ArmSoM-W3开发板上有 1 个 PCIe3.0 x 4 接口和两个PCIe2.0接口，如图：
 
@@ -130,7 +130,7 @@ RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应
 	
 - vcc3v3_pcie2x1l0、vcc3v3_pcie2x1l2、vcc3v3_pcie30：供电引脚节点
   
-## 4. PCIe设备使用方法
+## 16.4 PCIe设备使用方法
 执行`lspci`命令会列出所有PCI设备的信息，包括设备的制造商、型号、PCI地址等。输出通常以文本形式提供，并按总线地址（BDF：Bus, Device, Function）的顺序排列。
 
 ```bash
@@ -147,7 +147,7 @@ armsom@armsom:~$ lspci
 
 pcie接口接高速固态硬盘（SSD）的情景较多，这里以Intel Corporation生产的非易失性内存（NVMe）控制器为例，详解NVMe控制器的使用方法。
 
-### 4.1 NVMe控制器使用
+### 16.4.1 NVMe控制器使用
 
 1. 检查NVMe设备是否被识别：
   - 运行以下命令，查看系统是否正确识别了NVMe设备
@@ -224,7 +224,7 @@ cat /proc/mounts  | grep nvme
 umount /mnt
 ```
 
-### 4.2 读写测速
+### 16.4.2 读写测速
 
 
  使用dd命令进行读写测试：
