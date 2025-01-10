@@ -145,4 +145,4 @@ Initially established in Shenzhen, the company plans to relocate its headquarter
 
 - [ArmSoM Official Website](https://www.armsom.org/category/all-products)  
 - [ArmSoM AliExpress Official Store](https://www.aliexpress.com/store/1102800175)  
-- [ArmSoM Taobao Official Store](https://shop518100695.taobao.com/)  
+- [ArmSoM Taobao Official Store](https://armsom.taobao.com/)  

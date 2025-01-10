@@ -137,4 +137,4 @@ ArmSoM 诞生于一群充满活力的年轻开发者团队对开源创新与自�
 公司最初成立于深圳，并计划在未来三年内将总部迁至新加坡，以吸引全球志同道合的人才。
 
 ### 样品购买
-[ArmSoM 独立站](https://www.armsom.org/category/all-products) + [ArmSoM 速卖通官方店](https://www.aliexpress.com/store/1102800175) +  [ArmSoM 淘宝官方店](https://shop518100695.taobao.com/)
+[ArmSoM 独立站](https://www.armsom.org/category/all-products) + [ArmSoM 速卖通官方店](https://www.aliexpress.com/store/1102800175) +  [ArmSoM 淘宝官方店](https://armsom.taobao.com/)
