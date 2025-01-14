@@ -461,7 +461,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1NoI-Tl_TDcPZjkWa5lr0sA?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/1e6GXLrLVjfQ_DH3pHcr5oA?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -472,7 +472,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/13u7q1g_UzdvnB_HfZ7Sdmg?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1e6GXLrLVjfQ_DH3pHcr5oA?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -482,7 +482,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1D4Z-Ski-Ddmq3MZiD1MDgg?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1e6GXLrLVjfQ_DH3pHcr5oA?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -492,7 +492,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1NeRLi-EQJnarfr7JecbnWg?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/1e6GXLrLVjfQ_DH3pHcr5oA?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
