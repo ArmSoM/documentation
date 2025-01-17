@@ -413,8 +413,6 @@ Network disk address:
 
 ## Product Certificates
 
-### CE / FCC / RoHS
-
 ## Supply Statement
 
 The ArmSoM-Sige1 will be produced at least until August 2034.
