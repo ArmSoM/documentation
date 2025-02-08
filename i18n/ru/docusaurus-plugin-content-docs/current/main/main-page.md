@@ -7,6 +7,10 @@ slug: /
 
 ![ArmSoM Open source ](/img/banana.png)
 
+:::tip Rockchip RK3588
+Welcome to the RK3588AI Module7 documentation! The RK3588AI Module7 is currently in the crowdfunding preheating stage. Stay tuned for the latest updates by subscribing to our campaign！ [crowdsupply](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
+:::
+
 Born from a shared passion for open-source innovation and freedom, ArmSoM was established in 2021 by a team of spirited young developers.
 
 Originally founded in Shenzhen, ArmSoM plans to relocate its headquarters to Singapore over the next three years in order to access a global pool of like-minded talent.

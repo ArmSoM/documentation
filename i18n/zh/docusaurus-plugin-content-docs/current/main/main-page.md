@@ -5,6 +5,10 @@ sidebar_position: 1
 slug: /
 ---
 
+:::tip
+欢迎阅读 RK3588AI Module7 文档！RK3588AI Module7 目前处于众筹预热阶段。请关注我们的众筹活动，获取最新动态！[crowdsupply](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
+:::
+
 ArmSoM 是一个开源硬件品牌，我们承诺为开源社区提供一流的硬件、强大的固件和详尽的文档。在秉承开源价值观的同时，ArmSoM 还提供可定制且可靠的 ODM 解决方案，以满足全球业务的需求。
 
 ![ArmSoM Open source ](/img/banana.png)

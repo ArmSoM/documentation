@@ -5,7 +5,11 @@ sidebar_position: 1
 slug: /
 ---
 
-ArmSoM is an open-source hardware brand committed to providing the open-source community with top-tier hardware, robust firmware, and comprehensive documentation. While upholding open-source values, ArmSoM also offers customizable and reliable ODM solutions to meet the demands of global businesses.  
+ArmSoM is an open-source hardware brand committed to providing the open-source community with top-tier hardware, robust firmware, and comprehensive documentation. While upholding open-source values, ArmSoM also offers customizable and reliable ODM solutions to meet the demands of global businesses. 
+
+:::tip
+Welcome to the RK3588AI Module7 documentation! The RK3588AI Module7 is currently in the crowdfunding preheating stage. Stay tuned for the latest updates by subscribing to our campaign！[crowdsupply](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
+:::
 
 ![ArmSoM Open Source](/img/banana.png)  
 
