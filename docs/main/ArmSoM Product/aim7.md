@@ -13,6 +13,10 @@ image: /img/aim/aim7.png
 
 ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit processor with a main frequency of up to 2.4GHz, 6 TOPS computing power NPU, and can be equipped with up to 32GB of large memory. While the interface is fully compatible with Jetson Nano, the PCIe interface has been upgraded to PCIe3.0 4-lane and PCIe2.1 1-lan.
 
+:::tip
+[Welcome to the RK3588AI Module7 documentation! The RK3588AI Module7 is currently in the crowdfunding preheating stage. Stay tuned for the latest updates by subscribing to our campaign！](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
+:::
+
 ![ArmSoM-AIM7](/img/aim/aim7.png)
 
 AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVR and other fields.
