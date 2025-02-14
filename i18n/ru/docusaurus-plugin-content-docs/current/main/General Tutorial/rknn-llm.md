@@ -103,7 +103,7 @@ conda -V
 
 Download the miniforge3 installation package
 ```
-wget -c https://mirrors.bfsu.edu.cn/github-release/condaforge/miniforge/LatestRelease/Miniforge3-Linux-x86_64.sh
+wget -c https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 Install miniforge3
