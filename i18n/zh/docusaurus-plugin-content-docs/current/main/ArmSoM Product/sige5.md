@@ -577,6 +577,11 @@ ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=790341533736](https
 
 OEM&ODM,  请联系: sales@armsom.org
 
+## 专家视角
+
+- [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8)：它看起来像 Raspberry Pi，但配备了用于 AI 的 NPU。
+
+
 ## 注意事项
 
 :::caution [静电保护]

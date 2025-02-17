@@ -475,3 +475,20 @@ ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805779421715
 ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
 
 OEM&ODM, please contact: sales@armsom.org
+
+## Expert perspective
+
+- [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8): It looks like a Raspberry Pi, but with an NPU for AI.
+
+## Notes
+
+:::caution [Electrostatic Protection]
+1. Before handling the device, please ensure you wear an anti-static wrist strap or take electrostatic discharge measures to prevent damage to the development board.
+2. Assembly should be performed in an electrostatic-safe environment, avoiding operations in dry and low-humidity conditions.
+3. When not in use, store the device in an anti-static bag and keep it in a suitably temperature-controlled, low-humidity environment to prevent static electricity buildup.
+4. When handling the device, avoid friction or collisions to prevent the generation of static electricity that could cause damage.
+5. When holding the device, try to avoid direct contact with the chips on the mainboard to prevent static damage.
+6. Do not plug or unplug wires or other devices while the device is operating to avoid damage from electrical surges.
+7. When connecting or disconnecting the GPIO/MIPI expansion interfaces, make sure to turn off the power and disconnect the power cable to prevent damage from electrical current.
+
+:::

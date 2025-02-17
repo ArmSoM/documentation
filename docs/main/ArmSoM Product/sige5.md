@@ -585,6 +585,10 @@ ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=790341533736]
 
 For OEM & ODM, please contact: sales@armsom.org
 
+## Expert perspective
+
+- [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8): It looks like a Raspberry Pi, but with an NPU for AI.
+
 ## Notes
 
 :::caution [Electrostatic Protection]
