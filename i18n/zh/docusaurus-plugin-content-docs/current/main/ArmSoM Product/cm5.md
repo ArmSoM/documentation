@@ -362,6 +362,11 @@ ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=842137173767](https
 
 OEM&ODM,  请联系: sales@armsom.org
 
+## 专家视角
+
+- [itsfoss ArmSoM-CM5](https://itsfoss.com/armsom-cm5)：ArmSoM CM5 Powerful Replacement for Raspberry Pi CM4
+
+
 ## 注意事项
 
 :::caution [静电保护]
