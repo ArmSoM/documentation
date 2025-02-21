@@ -77,7 +77,7 @@ ArmSoM 提供模块化核心板与灵活的载板设计，旨在帮助客户快�
 
 |[ArmSoM-CM5](./armsom-cm5) <br/>[Rockchip RK3576]|[ArmSoM-AIM5](./armsom-aim5) <br/> [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7) <br/> [Rockchip RK3588]|[ArmSoM-LM7](./armsom-lm7)  <br/>[Rockchip RK3588]|
 | --------- | ----- | --- |--- |
-|![armsom-cm5](/img/cm/armsom-cm5.png)|![arsmom-aim5](/img/aim/armsom-aim5.png)|![arsmom-aim7](/img/aim/armsom-aim5.png)|![arsmom-lm7](/img/lm/armsom-lm7.png)|
+|![armsom-cm5](/img/cm/armsom-cm5.png)|![arsmom-aim5](/img/aim/armsom-aim5.png)|![ArmSoM-AIM7](/img/aim/armsom-aim7.png)|![arsmom-lm7](/img/lm/armsom-lm7.png)|
 
 |[ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-AIM-IO](./armsom-aimio) [AIM Maker kit]|[ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]||
 | --------- | ----- | --- |

@@ -84,7 +84,7 @@ ArmSoM offers System on Module paired with flexible carrier board designs, enabl
 
 | [ArmSoM-CM5](./armsom-cm5) <br/> Rockchip RK3576 | [ArmSoM-AIM5](./armsom-aim5) <br/> Rockchip RK3576 | [ArmSoM-AIM7](./armsom-aim7) <br/> Rockchip RK3588 | [ArmSoM-LM7](./armsom-lm7) <br/> Rockchip RK3588 |  
 | -------------------- | -------------------- | -------------------- | -------------------- |  
-| ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) | ![ArmSoM-AIM7](/img/aim/armsom-aim5.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) |  
+| ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) | ![ArmSoM-AIM7](/img/aim/armsom-aim7.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) |  
 
 | [ArmSoM-CM5-IO](./armsom-cm5-io) <br/> CM5 Maker Kit | [ArmSoM-AIM-IO](./armsom-aimio) <br/> AIM Maker Kit | [ArmSoM-W3](./armsom-w3) <br/> LM7 Maker Kit |  
 | -------------------- | -------------------- | -------------------- |  
