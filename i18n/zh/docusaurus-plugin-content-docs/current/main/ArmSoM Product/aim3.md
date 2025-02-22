@@ -227,9 +227,7 @@ ArmSoM-AIM3 将至少生产到 2034 年 8 月。
 
 ## 样品购买
 
-CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
-
-ArmSoM 独立站: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
+ArmSoM 独立站: 
 
 ArmSoM 速卖通官方店: 
 

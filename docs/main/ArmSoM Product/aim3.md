@@ -111,11 +111,13 @@ ArmSoM provides Debian bullseye as base OS:
 
 | OS | Description | Download |
 |:---:|:---|:---:|
-| ![debian](/img/sige/debian12-1.png) | **Debian 12 for AIM3**<br>Stable release with long-term support | [Baidu Cloud](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms) |
-| ![android](/img/sige/android.png) | **Android 12 for AIM3**<br>Enhanced privacy controls & AI-powered features | Coming Soon |
+| ![debian](/img/sige/debian12-1.png) | **Debian 12 for AIM3**Stable release with long-term support | [Baidu Cloud](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms) |
+| ![android](/img/sige/android.png) | **Android 12 for AIM3**Enhanced privacy controls & AI-powered features | Coming Soon |
 
 ### Community Images
-| ![armbian](/img/armbian-logo.png) | **Armbian for AIM3**<br>Customizable Linux builds for SBCs | [GitHub Releases](https://github.com/armbian/community/releases) |
+| OS | Description | Download |
+|:---:|:---|:---:|
+| ![armbian](/img/armbian-logo.png) | **Armbian for AIM3**Customizable Linux builds for SBCs | [GitHub Releases](https://github.com/armbian/community/releases) |
 
 ## Certifications
 - CE/FCC/RoHS compliant
@@ -124,8 +126,7 @@ ArmSoM provides Debian bullseye as base OS:
 ArmSoM-AIM3 will remain in production until at least August 2034.
 
 ## Purchasing
-- CrowdSupply: [RK3568 AI Module](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
-- Official Store: [ArmSoM Store](https://www.armsom.org/product-page/aim7)
+- Official Store: 
 - OEM inquiries: sales@armsom.org
 
 ## Important Notes
