@@ -17,7 +17,7 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
 
 ### Key Parameters
 
-- SOC: Ruixin Micro RK3576
+- SOC: Rockchip RK3576
 - CPU: Integrated with quad core Cortex-A72 @ 2.2GHz and quad core Cortex-A53 @ 1.8GHz, as well as a separate NEON coprocessor.
 - GPU：ARM Mali G52 MC3 GPU。
 - NPU: With a computing power of up to 6TOPs (INT8), it supports mixed operations of INT4/INT8/INT16.
