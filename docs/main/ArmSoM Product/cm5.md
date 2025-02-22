@@ -38,7 +38,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 - **Operating Temperature:** 0℃ ~ 80℃
 - **Weight:** 12g
 - **Dimensions:**
-    - CM5: 55 x 40 mm
+    - CM5: 55 x 40 mm x 4.9mm
     - CM5-IO: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 inches)
 
 ## Getting started
