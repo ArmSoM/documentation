@@ -1,7 +1,7 @@
 ---
 sidebar_label: "14. Ethernet 使用"
 slug: /interface-usage/ethernet
-sidebar_position: 15
+sidebar_position: 14
 ---
 
 # 14. Ethernet 使用

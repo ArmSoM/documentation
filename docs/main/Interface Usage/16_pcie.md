@@ -1,6 +1,7 @@
 ---
-sidebar_label: "PCIe Usage"
-sidebar_position: 35
+sidebar_label: "16. PCIe Usage"
+slug: /interface-usage/pcie
+sidebar_position: 16
 ---
 
 # 16. PCIe Usage

@@ -1,7 +1,7 @@
 ---
 sidebar_label: "15. HDMI-IN Usage"
 slug: /interface-usage/hdmi-in
-sidebar_position: 16
+sidebar_position: 15
 ---
 
 # 15.HDMI-IN Usage
