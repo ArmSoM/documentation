@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Display 10 HD"
+sidebar_label: "10.1寸屏幕"
 sidebar_position: 17
 slug: /armsom-display-10-hd
 ---

@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Sige DIY Case 1"
+sidebar_label: "Sige 外壳"
 slug: /sige-diy-case1
 sidebar_position: 16
 ---
