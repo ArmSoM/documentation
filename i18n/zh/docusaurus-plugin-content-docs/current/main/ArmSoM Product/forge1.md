@@ -7,16 +7,35 @@ slug: /armsom-forge1
 image: /img/forge/forge1-bananer.png
 ---
 
-## 1. 概述
-ArmSom-Forge1采用Rockchip RK3506新一代高性能工业级嵌入式芯片，采用三核Cortex-A7 + 单核Cortex-M0的多核异构设计，主频分别为1.5GHz和200MHz。该芯片以其高集成度、低功耗、高实时性和丰富的接口资源，广泛应用于工业控制、工业通信、人机交互等领域。
+# Forge1 产品简介
+
+让我们在 5 分钟内了解 Forge1。
+
+##  概述
+RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音交互、音频输入/输出处理、图像输出处理和其他数字多媒体应用而设计。
+嵌入式2D硬件引擎和显示输出引擎，用于最小化CPU开销以满足图像显示要求。
+嵌入丰富的周边接口，如SAI、PDM、SPDIF、Audio DSM、Audio ADC、USB2 OTG、RMII、CAN等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
 
 
 ---
+## 使用手册
+
+<a href="./forge-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>✈️</i>
+        </div>
+        <div class="content">
+            <h2>Forge使用手册</h2>
+            <p>如何开始使用你的Forge</p>
+        </div>
+    </div>
+</a>
 
 ## 硬件信息
 
 ### 硬件接口
-
+![armsom-forge1-front-back](/img/forge1/armsom-forge1-front-back.jpg)
 
 ### 硬件规格
 
@@ -97,8 +116,6 @@ ArmSom-Forge1采用Rockchip RK3506新一代高性能工业级嵌入式芯片，�
 </table>
 </details>
 
-### RK3506框图
-
 ### 引脚定义
 
 <details>
@@ -137,7 +154,19 @@ ArmSom-Forge1采用Rockchip RK3506新一代高性能工业级嵌入式芯片，�
 ## 开发资料
 
 ### SDK源码
-
+<div class="cards">
+    <a href="https://github.com/ArmSoM/rk3506-rkr4.2-sdk" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>github源码</h2>
+                <p>适用于 ARM 开发板的 Linux</p>
+            </div>
+        </div>
+    </a>
+</div>
 
 ### 官方镜像
 
