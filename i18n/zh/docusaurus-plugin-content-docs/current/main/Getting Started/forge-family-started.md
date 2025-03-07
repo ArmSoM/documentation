@@ -197,4 +197,39 @@ ArmSoM-Forge1最大输出分辨率为1280x1280@60fps
 1. 按照下图将连接好排线
 
 
-### CAN
+### CAN FD
+查询当前⽹络设备:
+```bash
+root@armsom:/# ifconfig -a
+can0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
+          NOARP  MTU:16  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:10
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:45
+```
+CAN启动：
+
+```bash
+关闭CAN:
+ip link set can0 down
+设置仲裁段1M波特率，数据段3M波特率:
+ip link set can0 type can bitrate 1000000 dbitrate 3000000 fd on
+打印can0信息:
+ip -details link show can0
+启动CAN:
+ip link set can0 up
+```
+CAN FD发送:
+```bash
+发送（标准帧,数据帧,ID:123,date:DEADBEEF）:
+cansend can0 123##1DEADBEEF
+发送（扩展帧,数据帧,ID:00000123,date:DEADBEEF）:
+cansend can0 00000123##1DEADBEEF
+```
+CAN FD接收:
+```bash
+开启打印，等待接收:
+candump can0 &
+```

@@ -8,15 +8,30 @@ image: /img/forge/forge1-bananer.png
 ---
 
 ## 1. Overview
-ArmSom-Forge1 adopts the Rockchip RK3506 next-generation high-performance industrial-grade embedded chip, featuring a multi-core heterogeneous design with three Cortex-A7 cores and one Cortex-M0 core, with main frequencies of 1.5GHz and 200MHz respectively. This chip is widely used in industrial control, industrial communication, human-machine interaction, and other fields due to its high integration, low power consumption, high real-time performance, and rich interface resources.
+RK3506J is a high-performance three core Cortex-A7 application processor designed for intelligent voice interaction, audio input/output processing, image output processing, and other digital multimedia applications.
+Embedded 2D hardware engine and display output engine, used to minimize CPU overhead to meet image display requirements.
+Embedding rich peripheral interfaces such as SAI, PDM, SPDIF, Audio DSM, Audio ADC, USB2 OTG, RMII, CAN, etc., can meet different application development needs, reduce hardware development complexity and development costs.
 
 
 ---
+## 使用手册
+
+<a href="./forge-family-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>✈️</i>
+        </div>
+        <div class="content">
+            <h2>Forge User Manual</h2>
+            <p>How to start using your Forge</p>
+        </div>
+    </div>
+</a>
 
 ## Hardware Information
 
 ### Hardware Interfaces
-
+![armsom-forge1-front-back](/img/forge1/armsom-forge1-front-back.jpg)
 
 ### Hardware Specifications
 
@@ -137,7 +152,19 @@ ArmSom-Forge1 adopts the Rockchip RK3506 next-generation high-performance indust
 ## Development Materials
 
 ### SDK Source Code
-
+<div class="cards">
+    <a href="https://github.com/ArmSoM/rk3506-rkr4.2-sdk" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📚</i>
+            </div>
+            <div class="content">
+                <h2>github SDK</h2>
+                <p>Linux for ARM development boards</p>
+            </div>
+        </div>
+    </a>
+</div>
 
 ### Official Images
 
