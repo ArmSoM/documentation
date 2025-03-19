@@ -542,6 +542,16 @@ Network disk address:
         </div>
     </div>
 </a>
+<a href="https://www.printables.com/model/1234582-armsom-sige7-case" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>💡</i>
+        </div>
+        <div class="content">
+            <h2>Case 3D</h2>
+        </div>
+    </div>
+</a>
 </div>
 <br/>
 
@@ -625,7 +635,7 @@ ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://i
 
 OEM&ODM, please contact: sales@armsom.org
 
-## Expert perspective
+## What do others say about the Sige7?
 
 - [arm](https://www.arm.com/zh-TW/architecture/system-architectures/systemready-certification-program/ir): SystemReady IR is tailored to meet the needs of embedded Linux/BSD ecosystem on systems based on embedded Arm SoCs.
 - [cnx-software](https://www.cnx-software.com/2024/01/30/banana-pi-bpi-m7-thin-rockchip-rk3588-sbc-dual-2-5gbe-m-2-nvme-storage-hdmi-2-1): ArmSoM-Sige7 – A thin Rockchip RK3588 SBC with dual 2.5GbE, M.2 NVMe storage, HDMI 2.1, and more

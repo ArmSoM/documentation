@@ -476,7 +476,7 @@ ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=735000017740](https://i
 
 OEM&ODM, please contact: sales@armsom.org
 
-## Expert perspective
+## What do others say about the P2 pro?
 
 - [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8): It looks like a Raspberry Pi, but with an NPU for AI.
 

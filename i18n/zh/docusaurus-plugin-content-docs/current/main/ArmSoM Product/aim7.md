@@ -893,6 +893,11 @@ ArmSoM 淘宝官方店:
 
 OEM&ODM,  请联系: sales@armsom.org
 
+## 专家视角
+
+- [itsfoss](https://itsfoss.com/armsom-aim7-review/): ArmSoM AIM7: A Promising Upcoming Rockchip Device for AI Development
+- [taoofmac](https://taoofmac.com/space/blog/2025/03/12/2000): The ArmSom AI Module 7
+
 ## 注意事项
 
 :::caution [静电保护]

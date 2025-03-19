@@ -512,6 +512,16 @@ Network disk address:
         </div>
     </div>
 </a>
+<a href="https://www.printables.com/model/1234582-armsom-sige7-case" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>💡</i>
+        </div>
+        <div class="content">
+            <h2>Case 3D</h2>
+        </div>
+    </div>
+</a>
 </div>
 
 ## Product Certificates
@@ -585,7 +595,7 @@ ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=790341533736]
 
 For OEM & ODM, please contact: sales@armsom.org
 
-## Expert perspective
+## What do others say about the Sige5 ?
 
 - [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8): It looks like a Raspberry Pi, but with an NPU for AI.
 

@@ -922,6 +922,11 @@ ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714794342755](https://i
 
 OEM&ODM, please contact: sales@armsom.org
 
+## What do others say about the AIM7?
+
+- [itsfoss](https://itsfoss.com/armsom-aim7-review/): ArmSoM AIM7: A Promising Upcoming Rockchip Device for AI Development
+- [taoofmac](https://taoofmac.com/space/blog/2025/03/12/2000): The ArmSom AI Module 7
+
 ## Notes
 
 :::caution [Electrostatic Protection]

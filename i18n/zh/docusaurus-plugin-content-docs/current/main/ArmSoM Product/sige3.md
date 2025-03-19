@@ -381,6 +381,16 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
         </div>
     </div>
 </a>
+<a href="https://www.printables.com/model/1234582-armsom-sige7-case" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>💡</i>
+        </div>
+        <div class="content">
+            <h2>Case 3D</h2>
+        </div>
+    </div>
+</a>
 </div>
 
 ## 产品证书

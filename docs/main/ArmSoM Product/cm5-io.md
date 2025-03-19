@@ -882,9 +882,10 @@ ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=842137173767]
 
 For OEM & ODM, please contact: sales@armsom.org
 
-## Expert perspective
+## What do others say about the CM5?
 
 - [itsfoss ArmSoM-CM5](https://itsfoss.com/armsom-cm5)：ArmSoM CM5 Powerful Replacement for Raspberry Pi CM4
+- [Technically Unsure](https://www.youtube.com/watch?v=pfsBDO3XehA&list=PLtGrcSFVfrfRbFqx8nbtYvVVwbHp_Nza4): ArmSoM CM5 | Can it Beat the Raspberry Pi CM5?
 
 ## Notes
 
