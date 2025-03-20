@@ -897,6 +897,7 @@ OEM&ODM,  请联系: sales@armsom.org
 
 - [itsfoss](https://itsfoss.com/armsom-aim7-review/): ArmSoM AIM7: A Promising Upcoming Rockchip Device for AI Development
 - [taoofmac](https://taoofmac.com/space/blog/2025/03/12/2000): The ArmSom AI Module 7
+- [Technically Unsure](https://www.youtube.com/watch?v=J9VmcyJ_t4g&list=PLtGrcSFVfrfRr9KafWQoh2wvKzP9F2bYs): ArmSoM AIM7 & AIMIO (RK3588): Benchmarks & DeepSeek in Action
 
 ## 注意事项
 

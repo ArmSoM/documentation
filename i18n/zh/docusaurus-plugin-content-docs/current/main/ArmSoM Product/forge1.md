@@ -2,9 +2,8 @@
 description: ArmSoM-forge1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用芯片，可应用于IPTV/OTT盒子、云终端、融合类产品，是高性能低功耗的4K播放器，解码能力最高支持到8K，同时也支持了AVS2和HDR VIVID标准。
 keywords: [armsom, armsom-forge1, maker kit, rockchip, rk3506产品介绍]
 sidebar_label: "Forge1"
-sidebar_position: 2
+sidebar_position: 10
 slug: /armsom-forge1
-image: /img/forge/forge1-bananer.png
 ---
 
 # Forge1 产品简介
@@ -16,34 +15,14 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 嵌入式2D硬件引擎和显示输出引擎，用于最小化CPU开销以满足图像显示要求。
 嵌入丰富的周边接口，如SAI、PDM、SPDIF、Audio DSM、Audio ADC、USB2 OTG、RMII、CAN等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
 
-
----
-## 使用手册
-
-<a href="./forge-family-started" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>✈️</i>
-        </div>
-        <div class="content">
-            <h2>Forge使用手册</h2>
-            <p>如何开始使用你的Forge</p>
-        </div>
-    </div>
-</a>
-
 ## 硬件信息
 
 ### 硬件接口
-![armsom-forge1-front-back](/img/forge1/armsom-forge1-front-back.jpg)
+![armsom-forge1-front-back](/img/forge1/armsom-forge1-layout.jpg)
 
 ### 硬件规格
 
-<details>
-    <summary>
-        ArmSom-Forge1 硬件规格
-    </summary>
-    <table>
+<table>
     <thead>
         <tr>
             <th>类别</th>
@@ -65,27 +44,27 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
         </tr>
         <tr >
             <th>内存</th>
-            <th><li>256MB/512MB/1GB  DDR3/DDR3L 16bit</li></th>
+            <th><li>512MB DDR3L</li></th>
         </tr>
         <tr >
             <th>存储</th>
-            <th><li>256MB/512MB NAND</li><li>支持MicroSD卡扩展</li></th>
+            <th><li>512MB NAND</li><li>支持MicroSD卡扩展</li></th>
         </tr>
         <tr>
             <th>网络</th>
-            <th><li>12 × 百兆以太网（100 M bps）</li></th>
+            <th><li>2 × 百兆以太网</li></th>
         </tr>
         <tr>
             <th>视频输出</th>
-            <th><li>1 x RGB (1280×1280@60fps)</li><li>1 x MIPI_DSI_TX(2Lane 1.5Gbps)</li></th>
+            <th><li>1 x MIPI DSI (2Lane 1.5Gbps)</li></th>
         </tr>
         <tr>
             <th>音频</th>
-            <th><li>1 × Speaker 1 × MIC </li></th>
+            <th><li>1 × Speaker</li><li> 1 × MIC </li></th>
         </tr>
         <tr>
             <th>USB接口</th>
-            <th><li>1 × USB2.0 OTG（Type C）</li>
+            <th><li>1 × Type C（only pd & Programming）</li>
             <li>1 × USB2.0 HOST</li></th>
         </tr>
         <tr>
@@ -102,7 +81,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
         </tr>
         <tr>
             <th>系统</th>
-            <th><li>Rockchip官方支持：Android 9.0_box，Debian11</li><li>第三方支持：Armbian，Istoreos</li></th>
+            <th><li>Rockchip官方支持：buildroot</li></th>
         </tr>
         <tr>
             <th>尺寸</th>
@@ -114,14 +93,21 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
         </tr>
     </tbody>
 </table>
+
+### RK3506j 框图
+<details>
+    <summary>
+      RK3506j 框图
+    </summary>
+        <img
+  src="./img/forge1/rk3506j.png"
+  alt="rk3506j block diagram"
+  className="session-details-live-video"/>
 </details>
 
 ### 引脚定义
 
-<details>
-    <summary>
-        40-PIN 座子
-    </summary>
+####  40-PIN 座子
 <div className='gpio_style'>
 
 | GPIO Number |  功能 |   Pin    |  Pin     |  功能  | GPIO Number |
@@ -148,7 +134,6 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 | |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_A7_d /  UART1_RX_M0 / I2S1_SDO0   |     135     |
 
 </div>
-</details>
 
 
 ## 开发资料
@@ -178,22 +163,239 @@ ArmSoM团队以 buildroot bullseye 为基础作为官方操作系统。
 
 获取 forge1 原理图、DXF等硬件资料
 
+
+## Forge1 使用手册
+
+Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的准备工作，开始使用你的Forge1🚀
+
+### 工具准备
+* 电源（12V/2A）
+* 系统安装（二选一）
+  * 板载eMMC启动
+    * USB Type-C数据线，从 typec 端口在Forge系列上写入镜像，您需要Type-C数据线连接 Forge系列和 PC。
+  * MicroSD卡/TF卡启动
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
+
+**可选选项**
+* 调试串口
+* Ethernet 线（网线）
+
+### 烧录方式选择
+<div class="cards">
+    <a href="./getting-start/flash-img" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>🎇</i>
+            </div>
+            <div class="content">
+                <h2>系统镜像烧录</h2>
+            </div>
+        </div>
+    </a>
+</div>
+
+### 接口使用
+
+如果您是首次使用 ArmSoM-Forge1 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
+
+| 硬件接口  | [Forge1](./armsom-forge1#硬件接口) |
+| --------------- | ----- | 
+
+#### 调试串口
+
+如下所示连接 USB 转 TTL 串口线：
+
+![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
+
+| Forge1       | 连接  | 串口模块 |
+| --------------- | ----- | ------ |
+| **GND** (pin 6) | ---> | GND |
+| **TX** (pin 8)  | ---> | RX |
+| **RX** (pin 10) | ---> | TX |
+
+
+#### 以太网口
+
+1. 首先将网线的一端插入 ArmSoM-Forge1 的以太网接口，网线的另一端接入路由器，并确保
+网络是畅通的
+2. 系统启动后会通过 DHCP 自动给以太网卡分配 IP 地址，不需要其他任何配置
+3. 在ArmSoM-Forge1 的 Linux 系统中查看 IP 地址的命令如下所示
+
+```bash
+root@armsom:/# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: can0: <NOARP,ECHO> mtu 16 qdisc noop state DOWN group default qlen 10
+    link/can
+3: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
+    link/ether 9e:06:ad:d5:e3:91 brd ff:ff:ff:ff:ff:ff
+4: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 7e:09:de:1d:0c:46 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.150/24 brd 192.168.1.255 scope global dynamic noprefixroute eth1
+       valid_lft 43173sec preferred_lft 37773sec
+
+```
+4. 使用工具 ping 判断是否连通网络。
+
+测试网络连通性的命令如下，ping 命令可以通过 Ctrl+C 快捷键来中断运行
+```bash
+root@armsom:/# ping www.baidu.com
+PING www.baidu.com (183.2.172.17): 56 data bytes
+64 bytes from 183.2.172.17: seq=0 ttl=52 time=10.838 ms
+64 bytes from 183.2.172.17: seq=1 ttl=52 time=10.320 ms
+64 bytes from 183.2.172.17: seq=2 ttl=52 time=11.193 ms
+64 bytes from 183.2.172.17: seq=3 ttl=52 time=10.555 ms
+64 bytes from 183.2.172.17: seq=4 ttl=52 time=19.587 ms
+64 bytes from 183.2.172.17: seq=5 ttl=52 time=24.736 ms
+^C
+--- www.baidu.com ping statistics ---
+6 packets transmitted, 6 packets received, 0% packet loss
+round-trip min/avg/max = 10.320/14.538/24.736 ms
+```
+
+#### USB
+
+|  型号  | Forge1 |
+| ----- |  ----- |
+| USB   | 1* Type-C (PD & Programming), 1* USB 2.0 |
+
+**连接 USB 存储设备测试**
+1. 首先将 U 盘或者 USB 移动硬盘插入 Forge1 产品的 USB 接口中
+2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
+```
+root@armsom:/# cat /proc/partitions | grep "sd*"
+major minor  #blocks  name
+   8        0  122880000 sda
+```
+3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
+
+```
+root@armsom:/# sudo mount /dev/sda1 /test/
+```
+
+4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
+
+```
+root@armsom:/test# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /test
+```
+
+#### 音频
+
+查看系统中的声卡。
+
+```bash
+root@armsom:/# aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: rockchiprk730 [rockchip-rk730], device 0: dailink-multicodecs HiFi-0 [dailink-multicodecs HiFi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+```
+
+录音
+```bash
+arecord -D hw:0,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
+```
+
+播放音乐
+
+```bash
+aplay t.wav
+```
+
+#### RTC
+
+- Forge1配备了一颗RTC IC **LK8563S**。
+- 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
+- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc LK8563S 设备已创建
+
+```bash
+root@armsom:/#  dmesg | grep rtc
+[    6.407133] rtc-hym8563 6-0051: rtc information is valid
+[    6.412731] rtc-hym8563 6-0051: registered as rtc0
+[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
+```
+
+- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
+
+```bash
+root@armsom:/# hwclock -r
+2023-11-03 10:32:40.461910+00:00
+root@armsom:/# date
+2023年 11月 03日 星期五 10:33:12 UTC
+root@armsom:/# hwclock -w
+root@armsom:/# hwclock -r
+root@armsom:/# poweroff
+```
+
+- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动Forge1，检查RTC是否与系统时钟同步
+
+```bash
+root@armsom:/# hwclock -r
+2023-11-03 10:35:40.461910+00:00
+root@armsom:/# date
+2023年 11月 03日 星期五 10:36:01 UTC
+```
+
+#### MIPI DSI
+
+ArmSoM-Forge1最大输出分辨率为1280x1280@60fps
+
+#### CAN FD
+查询当前⽹络设备:
+```bash
+root@armsom:/# ifconfig -a
+can0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
+          NOARP  MTU:16  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:10
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:45
+```
+CAN启动：
+
+```bash
+关闭CAN:
+ip link set can0 down
+设置仲裁段1M波特率，数据段3M波特率:
+ip link set can0 type can bitrate 1000000 dbitrate 3000000 fd on
+打印can0信息:
+ip -details link show can0
+启动CAN:
+ip link set can0 up
+```
+CAN FD发送:
+```bash
+发送（标准帧,数据帧,ID:123,date:DEADBEEF）:
+cansend can0 123##1DEADBEEF
+发送（扩展帧,数据帧,ID:00000123,date:DEADBEEF）:
+cansend can0 00000123##1DEADBEEF
+```
+CAN FD接收:
+```bash
+开启打印，等待接收:
+candump can0 &
+```
+
 ## 产品证书
 
 ### CE / FC / RoHS
 
 ## 供货声明
 
-ArmSoM-Sige1 将至少生产到 2034 年 8 月。
+ArmSoM-Forge1 将至少生产到 2035 年 5 月。
 
 ## 配件
 
 ## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/Sige1](https://www.armsom.org/product-page/Sige1)
+ArmSoM 独立站: [https://www.armsom.org/product-page/forge1](https://www.armsom.org/product-page/forge1)
  
 ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807356692995.html](https://aliexpress.com/item/3256807356692995.html) 
 
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=824590173298](https://item.taobao.com/item.htm?id=824590173298)
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=895906881225](https://item.taobao.com/item.htm?id=895906881225)
 
 OEM&ODM,  请联系: sales@armsom.org
 
@@ -207,10 +409,4 @@ OEM&ODM,  请联系: sales@armsom.org
 5. 握持设备时，尽量避免直接接触主板上的芯片，以免静电损坏芯片。
 6. 使用设备时，请勿在运行过程中插拔电线或其他设备，以避免电流冲击导致的损害。
 7. 在插拔扩展GPIO/MIPI接口时，请先关闭电源并断开电源线，以避免电流对设备造成损害。
-:::
-
-:::danger [注意散热]
-
-在未采取有效散热措施的情况下，主芯片的表面温度可能超过 60 度。在处理设备时，请避免直接接触 SoC 及其周围的电源电感，以免造成烫伤。使用设备时，请确保环境通风良好，以防止局部热量聚集导致过热。同时，请勿将单板机放置在阳光直射的区域。建议根据具体使用情况，选择官方 [散热器风扇](./sige-active-cooling-kit)或[散热外壳](./sige-diy-case1)，或者第三方散热套件，以确保设备的良好散热性能。
-
 :::
