@@ -7,47 +7,151 @@ slug: /armsom-forge1
 image: /img/forge/forge1-bananer.png
 ---
 
-# Forge1 Product Introduction  
-Let's understand Forge1 in 5 minutes.  
+# Forge1 Product Introduction
+
+Let’s get to know Forge1 in 5 minutes.
 
 ## Overview  
-The **Forge1** is a high-performance embedded development board powered by **Rockchip RK3506J**, a tri-core Cortex-A7 application processor designed for intelligent voice interaction, audio I/O processing, image output, and multimedia applications. Key features include:  
-• **Embedded 2D hardware engine** and display output engine to minimize CPU overhead for graphics rendering.  
-• **Rich peripheral interfaces** (SAI, PDM, SPDIF, Audio ADC, USB2 OTG, RMII, CAN, etc.) to reduce hardware complexity and development costs.  
-• **Industrial-grade reliability** with an operating temperature range of **-40°C to 85°C**.  
+The RK3506J is a high-performance triple-core Cortex-A7 application processor designed for intelligent voice interaction, audio input/output processing, image output processing, and other digital multimedia applications.  
+It features an embedded 2D hardware engine and display output engine to minimize CPU overhead and meet image display requirements.  
+The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Audio DSM, Audio ADC, USB2 OTG, RMII, CAN, etc., enabling diverse application development while reducing hardware complexity and development costs.  
 
-## Hardware Specifications  
+## Hardware Information  
 
-### Key Components  
-| Category          | Details |  
-|-------------------|---------|  
-| **SOC**           | Rockchip RK3506J |  
-| **CPU**           | Tri-core Cortex-A7 @ 1.5GHz + Cortex-M0 @ 200MHz |  
-| **GPU**           | 2D Graphic Engine |  
-| **Memory**        | 512MB DDR3L |  
-| **Storage**       | 512MB NAND + MicroSD card expansion |  
-| **Networking**    | Dual 100M Ethernet ports |  
-| **Video Output**  | 1× MIPI DSI (2Lane, 1280×720@60fps) |  
-| **Audio**         | 1× Speaker, 1× MIC |  
-| **USB**           | 1× Type-C (PD & Programming), 1× USB2.0 HOST |  
-| **40-PIN Header** | Raspberry Pi-compatible GPIO (UART/SPI/I2C/PWM/5V/3.3V) |  
-| **Power**         | 12V/2A |  
-| **Dimensions**    | 92mm × 62mm |  
+### Hardware Interfaces  
+![armsom-forge1-front-back](/img/forge1/armsom-forge1-layout.jpg)  
 
-### Block Diagram  
+### Hardware Specifications  
+
+<table>  
+    <thead>  
+        <tr>  
+            <th>Category</th>  
+            <th>Specifications</th>  
+        </tr>  
+    </thead>  
+    <tbody align="left">  
+        <tr>  
+            <th>SOC</th>  
+            <th><li>RockChip RK3506J</li></th>  
+        </tr>  
+        <tr>  
+            <th>CPU</th>  
+            <th><li>RK3506 Triple-core Cortex-A7 Processor</li></th>  
+        </tr>  
+        <tr>  
+            <th>GPU</th>  
+            <th><li>2D Graphic Engine</li><li>Embedded high-performance 2D acceleration hardware</li></th>  
+        </tr>  
+        <tr>  
+            <th>Memory</th>  
+            <th><li>512MB DDR3L</li></th>  
+        </tr>  
+        <tr>  
+            <th>Storage</th>  
+            <th><li>512MB NAND</li><li>Supports MicroSD card expansion</li></th>  
+        </tr>  
+        <tr>  
+            <th>Networking</th>  
+            <th><li>2 × 100M Ethernet</li></th>  
+        </tr>  
+        <tr>  
+            <th>Video Output</th>  
+            <th><li>1 x MIPI DSI (2Lane 1.5Gbps)</li></th>  
+        </tr>  
+        <tr>  
+            <th>Audio</th>  
+            <th><li>1 × Speaker</li><li>1 × MIC</li></th>  
+        </tr>  
+        <tr>  
+            <th>USB Interfaces</th>  
+            <th><li>1 × Type C (PD & Programming only)</li>  
+            <li>1 × USB2.0 HOST</li></th>  
+        </tr>  
+        <tr>  
+            <th>40-PIN</th>  
+            <th><li>Partially compatible with Raspberry Pi 40-pin for peripheral connectivity</li><li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>  
+        </tr>  
+        <tr>  
+            <th>Power Supply</th>  
+            <th><li>12V/2A</li></th>  
+        </tr>  
+        <tr>  
+            <th>Buttons</th>  
+            <th><li>1x Maskrom Key (enters maskrom flashing mode)</li></th>  
+        </tr>  
+        <tr>  
+            <th>OS</th>  
+            <th><li>Officially supported by Rockchip: Buildroot</li></th>  
+        </tr>  
+        <tr>  
+            <th>Dimensions</th>  
+            <th><li>92 mm x 62mm</li></th>  
+        </tr>  
+        <tr>  
+            <th>Operating Temperature</th>  
+            <th><li>-40℃ ~ 85℃</li></th>  
+        </tr>  
+    </tbody>  
+</table>  
+
+### RK3506J Block Diagram  
 <details>  
-    <summary>RK3506J Block Diagram</summary>  
-    <img src="./img/forge1/rk3506j.png" alt="RK3506J Block Diagram"/>  
+    <summary>  
+      RK3506J Block Diagram  
+    </summary>  
+        <img  
+  src="./img/forge1/rk3506j.png"  
+  alt="rk3506j block diagram"  
+  className="session-details-live-video"/>  
 </details>  
+
+### Pin Definitions  
+
+#### 40-PIN Header  
+<div className='gpio_style'>  
+
+| GPIO Number |  Function  |   Pin    |  Pin     |  Function  | GPIO Number |  
+ :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: |   
+|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |  
+|     130     |   I2C1_SDA_M0 / UART3_RTSN / I2S1_SDI3 / GPIO4_A2_d | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |  
+|     131     | I2C1_SCL_M0 / UART3_CTSN / I2S1_SDI2 / GPIO4_A3_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |  
+|     1     | REF_CLK_OUT_M0 / GPIO0_A1  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  <div className='orange-txt'>UART0_TX_M0</div> / JTAG_MCU_TCK_M1 / JTAG_CPU_TCK_M1 / GPIO4_D0_d |     152      |  
+|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  <div className='orange-txt'>UART0_RX_M0</div> / JTAG_MCU_TMS_M1 / JTAG_CPU_TMS_M1 / GPIO4_C7_u  |     151      |  
+|     0     |  GPIO0_A0  | <div className='green'>11</div>  | <div className='green'>12</div> |  I2S1_SCLK / UART1_RTSN / GPIO4_A5_d   |     133     |  
+|  | | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |  
+|  | | <div className='green'>15</div>  | <div className='green'>16</div> |   |          |  
+|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |    |         |  
+| 138 | SPI0_MOSI / PDM_SDI0 / I2S1_SDO3 / GPIO4_B2_d  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |   |  
+| 139 | SPI0_MISO / PDM_SDI2 / I2S1_SDI1 / GPIO4_B3_d  | <div className='green'>21</div>  | <div className='green'>22</div> | |   |  
+| 140 | SPI0_CLK / I2S1_SDI0 / GPIO4_B4_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CSN0 / PWR_CTRL1 / GPIO4_B6_u | 142 |  
+| |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |  PWM6_M0 / SPI0_CSN1 / PDM_SDI3 / GPIO4_C1_d |     145      |  
+|  147 | I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3_d |  <div className='green'>27</div>  | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4_d  | 148 |  
+|  |   | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |  
+| |  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO4_C0 / PWM5_M0 / FEPHY_LED_LINK_M0 / UART3_TX_M1  |    144     |  
+| 143  | GPIO4_B7 / PWM4_M0 / FEPHY_LED_SPD_M0 / UART3_RX_M1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |  
+| 134  | UART1_TX_M0 / I2S1_LRCK / GPIO4_A6_d   | <div className='green'>35</div>  | <div className='green'>36</div> |   |          |  
+| | | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO3_B2 / SPI0_CLK / I2S1_SDI0    |     106     |  
+| |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_A7_d / UART1_RX_M0 / I2S1_SDO0   |     135     |  
+
+</div>  
 
 ## Development Resources  
 
-### SDK & OS Support  
-**GitHub Source Code**: [RK3506 Buildroot SDK](https://github.com/ArmSoM/rk3506-rkr4.2-sdk) (Supports Linux Kernel 6.1).  
-**Official OS**: Buildroot Bullseye (validated for industrial use).  
-
-### Hardware Documentation  
-• Schematics, DXF files, and pinout details are available for download.  
+### SDK Source Code  
+<div class="cards">  
+    <a href="https://github.com/ArmSoM/rk3506-rkr4.2-sdk" class="card-link">  
+        <div class="card">  
+            <div class="icon">  
+                <i>📚</i>  
+            </div>  
+            <div class="content">  
+                <h2>Source Code</h2>  
+                <p>For ARM development boards running Linux</p>  
+            </div>  
+        </div>  
+    </a>  
+</div>
 
 ## User Manual  
 

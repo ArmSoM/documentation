@@ -146,7 +146,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
                 <i>📚</i>
             </div>
             <div class="content">
-                <h2>github源码</h2>
+                <h2>源码</h2>
                 <p>适用于 ARM 开发板的 Linux</p>
             </div>
         </div>
