@@ -153,6 +153,56 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
     </a>  
 </div>
 
+### Official Image
+
+ArmSoM team uses Debian bullseye as the official operating system.
+
+#### Download
+
+The following systems have been tested and verified by ArmSoM official:
+
+Network disk address: 
+<a href="/getting-start/cloud-disk" class="btn">
+  <span>Google Drive link</span>
+</a>
+
+### Hardware Resources 
+
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>Forge1 SCH</h2>
+            </div>
+        </div>
+</a>
+
+<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Forge1 2D</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX?usp=drive_link" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>Forge1 SMD</h2>
+        </div>
+    </div>
+</a>
+</div>
+
 ## User Manual  
 
 ### Setup Guide  

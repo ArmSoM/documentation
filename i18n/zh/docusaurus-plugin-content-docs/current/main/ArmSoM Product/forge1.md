@@ -155,13 +155,53 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 
 ### 官方镜像
 
-ArmSoM团队以 buildroot bullseye 为基础作为官方操作系统。
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 
 以下系统已由ArmSoM官方测试验证：
 
+网盘地址：
+
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+  <span>百度网盘链接</span>
+</a>
+<br/>
+
 ### 硬件资料
 
-获取 forge1 原理图、DXF等硬件资料
+获取 Forge1 原理图、DXF等硬件资料
+
+<div class="cards">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>Forge1 SCH</h2>
+            </div>
+        </div>
+</a>
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>Forge1 2D</h2>
+        </div>
+    </div>
+</a>
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>Forge1 位号图</h2>
+        </div>
+    </div>
+</a>
+</div>
 
 
 ## Forge1 使用手册
