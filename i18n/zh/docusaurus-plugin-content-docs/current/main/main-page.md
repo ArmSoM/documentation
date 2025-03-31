@@ -90,6 +90,16 @@ ArmSoM 提供模块化核心板与灵活的载板设计，旨在帮助客户快�
 
 这种组合方式特别适合嵌入式开发、物联网设备、工业控制等领域，让用户轻松打造高性能硬件产品。
 
+### Forge系列工业开发板
+
+**“Forge”一词源自“锻造”**，它象征着创造与改造，是经过时间和力量的积淀，锻造出坚固、耐用的工艺品。Forge系列的诞生，正是为了以工业级标准，**锻造出更加耐用且可持续的硬件解决方案**。
+
+> ✅我们团队在长期与工业客户的互动中，了解了他们对产品的高要求，特别是在环境恶劣、长时间运行、极端条件下仍需保持稳定性的需求。因此，ArmSoM-Forge 系列专注于将 ArmSoM 的创新技术，注入更高标准的工业设计中，保证每一款产品都能在挑战性的应用环境中表现出色。
+
+| [ArmSoM-Forge1](./armsom-forge1)| 
+|---------|
+|![armsom-forge1](/img/forge/armsom-forge1.png)|
+
 ### 配件
 
 ArmSoM 提供了丰富的硬件扩展配件，包括显示模块、摄像头模块、定制外壳及主动散热解决方案，同时兼容树莓派 40Pin GPIO 接口的部分外设资源，为开发者构建多样化应用场景提供了强有力的支持。  
@@ -109,9 +119,9 @@ ArmSoM 提供了丰富的硬件扩展配件，包括显示模块、摄像头模�
 
 | Sige系列单板计算机 | 模块化核心板和载板 | IoT/Industrial Control | 配件 |
 |---------|--------------|--------------|---------|
-|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
-|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|  | [Active Cooling Kit](./sige-active-cooling-kit) |
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| |  [Sige Diy Case 1](./sige-diy-case1)  |
 
 ## 文档中心

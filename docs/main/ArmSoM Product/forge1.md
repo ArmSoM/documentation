@@ -19,7 +19,7 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
 ## Hardware Information  
 
 ### Hardware Interfaces  
-![armsom-forge1-front-back](/img/forge1/armsom-forge1-layout.jpg)  
+![armsom-forge1-front-back](/img/forge/armsom-forge1-layout.jpg)  
 
 ### Hardware Specifications  
 
@@ -101,7 +101,7 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
       RK3506J Block Diagram  
     </summary>  
         <img  
-  src="./img/forge1/rk3506j.png"  
+  src="./img/forge/rk3506j.png"  
   alt="rk3506j block diagram"  
   className="session-details-live-video"/>  
 </details>  

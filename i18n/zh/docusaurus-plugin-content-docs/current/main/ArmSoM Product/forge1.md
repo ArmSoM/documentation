@@ -18,7 +18,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 ## 硬件信息
 
 ### 硬件接口
-![armsom-forge1-front-back](/img/forge1/armsom-forge1-layout.jpg)
+![armsom-forge1-front-back](/img/forge/armsom-forge1-layout.jpg)
 
 ### 硬件规格
 
@@ -100,7 +100,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
       RK3506j 框图
     </summary>
         <img
-  src="./img/forge1/rk3506j.png"
+  src="./img/forge/rk3506j.png"
   alt="rk3506j block diagram"
   className="session-details-live-video"/>
 </details>

@@ -98,6 +98,18 @@ ArmSoM offers System on Module paired with flexible carrier board designs, enabl
 
 This modular approach is especially suited for embedded development, IoT devices, and industrial control applications, empowering users to create high-performance hardware products with ease.  
 
+
+### Forge Series Industrial Development Boards  
+
+**The term "Forge" originates from "forging"**, symbolizing creation and transformation—crafting robust, durable artifacts through the accumulation of time and force. The birth of the Forge Series embodies this philosophy, aiming to **forge more resilient and sustainable hardware solutions under industrial-grade standards**.  
+
+> ✅ Through long-term collaboration with industrial clients, we have deeply understood their stringent demands—particularly the need for unwavering stability in harsh environments, prolonged operation, and extreme conditions. Thus, the **ArmSoM-Forge Series** integrates ArmSoM's innovative technologies into higher-standard industrial designs, ensuring exceptional performance in the most challenging application scenarios.  
+
+| [ArmSoM-Forge1](./armsom-forge1)|  
+|---------|  
+|![armsom-forge1](/img/forge/armsom-forge1.png)|  
+
+
 ### Accessories  
 
 ArmSoM offers a wide range of hardware expansion accessories, including display modules, camera modules, custom enclosures, and active cooling solutions. Additionally, it supports compatibility with some Raspberry Pi 40-pin GPIO peripheral resources, providing strong support for developers to build diverse application scenarios. 
@@ -116,9 +128,9 @@ This professional accessory lineup, combined with GPIO interface support, makes 
 ### Product Catalog Table  
 | **Sige Series Single-Board Computers** | **System on Module and Carrier Boards** | **IoT/Industrial Control** | **Accessories** |  
 |---------|--------------|--------------|---------|  
-|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [display-10-hd](./armsom-display-10-hd)|
-|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|  | [Active Cooling Kit](./sige-active-cooling-kit) |
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| |  [Sige Diy Case 1](./sige-diy-case1)  |
 
 ## Documentation Center  
