@@ -473,7 +473,6 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 |:--------: | :---------: | :--------:  | 
 |![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1ybboIDeGolq71ZCLWr7E9A?pwd=arms)   |
 |![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1btSeFT_-qs-0bz1wUcLZ6A?pwd=arms)  |
-| [lede](https://github.com/coolsnowwolf/lede) | lede for Sige7 :    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://github.com/coolsnowwolf/lede)  |
 
 ### 第三方镜像
 
@@ -483,6 +482,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 |Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux 是一个独立开发的通用 GNU/Linux 发行版，致力于通过滚动发布模式提供大多数软件的最新稳定版本。默认安装是一个最小的基础系统，由用户配置为仅添加所需的内容。| 只需刷新图像并按照安装程序提示的说明进行操作即可。<br/>注意：此安装程序需要互联网连接。（以太网驱动程序可能需要一些时间来加载，安装程序将重试多次，这是正常的。）  [download](https://github.com/kwankiu/archlinux-installer/releases) |
 | ![openSUSE](https://static.opensuse.org/favicon.svg) | 桌面用户、开发者以及系统管理员的匠之所选。| [download](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
+| [lede](https://github.com/coolsnowwolf/lede) | lede for Sige7 :    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://github.com/coolsnowwolf/lede)  |
 
 ### 硬件资料
 
