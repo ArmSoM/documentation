@@ -15,6 +15,8 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 嵌入式2D硬件引擎和显示输出引擎，用于最小化CPU开销以满足图像显示要求。
 嵌入丰富的周边接口，如SAI、PDM、SPDIF、Audio DSM、Audio ADC、USB2 OTG、RMII、CAN等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
 
+![ArmSoM-Forge1](/img/forge/forge1-banner-zh.jpg)
+
 ## 硬件信息
 
 ### 硬件接口
