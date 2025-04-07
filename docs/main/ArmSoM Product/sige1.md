@@ -478,7 +478,7 @@ The official accessories designed for the ArmSoM-Sige are intended to help you a
 </a>
 </div>
 
-[0.8mm 连接器](https://item.taobao.com/item.htm?id=742624228081)
+[0.8mm Connectors](https://item.taobao.com/item.htm?id=742624228081)
 
 ## Purchase Samples
 ArmSoM Official Website: [https://www.armsom.org/product-page/Sige1](https://www.armsom.org/product-page/Sige1)

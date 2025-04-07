@@ -441,6 +441,10 @@ ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=895906881225](https
 
 OEM&ODM,  请联系: sales@armsom.org
 
+## 专家视角
+
+- [CNX](https://www.cnx-software.com/2025/03/26/armsom-forge1-industrial-rockchip-rk3506j-sbc/): $23 ArmSoM Forge1 industrial SBC is powered by Rockchip RK3506J SoC
+
 ## 注意事项
 
 :::caution [静电保护]
