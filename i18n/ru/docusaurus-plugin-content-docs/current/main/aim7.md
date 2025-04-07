@@ -863,7 +863,7 @@ Download link:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for AIM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/12c5tbYR4bVs-bQVZTr60XMrww9U56tXk?usp=drive_link)    |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for AIM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1Qx76r_cDufivFqfNwLmpsgJSmDdxMB9y)    |
 
 ### Third Party Systems  
 
