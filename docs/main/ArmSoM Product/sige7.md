@@ -466,7 +466,7 @@ github : [SystemReady](https://github.com/ArmSoM/SystemReady)
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 

@@ -443,7 +443,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
  
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 

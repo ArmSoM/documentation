@@ -817,7 +817,7 @@ Table 16. i2s pin descriptions
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 以下系统已由ArmSoM官方测试验证：
 

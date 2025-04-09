@@ -84,7 +84,7 @@ ArmSoM 与![ikasinfo](https://www.ikasinfo.com/)紧密合作，为客户提供�
 
 ## 系统镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 ### 官方镜像
 

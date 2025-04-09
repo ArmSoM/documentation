@@ -157,7 +157,7 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 

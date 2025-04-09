@@ -243,7 +243,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 

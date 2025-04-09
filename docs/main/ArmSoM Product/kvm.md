@@ -89,7 +89,7 @@ ArmSoM work closely with ikasinfo to provide total solutions to customers. IKASi
 
 ## System Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 ### Official Image
 

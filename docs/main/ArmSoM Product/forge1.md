@@ -157,7 +157,7 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 

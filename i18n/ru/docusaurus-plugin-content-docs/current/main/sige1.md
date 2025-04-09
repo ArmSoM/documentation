@@ -338,7 +338,7 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 
