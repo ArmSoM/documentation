@@ -16,6 +16,8 @@ The RK3506J is a high-performance triple-core Cortex-A7 application processor de
 It features an embedded 2D hardware engine and display output engine to minimize CPU overhead and meet image display requirements.  
 The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Audio DSM, Audio ADC, USB2 OTG, RMII, CAN, etc., enabling diverse application development while reducing hardware complexity and development costs.  
 
+![ArmSoM-Forge1](/img/forge/forge1-banner-en.jpg)
+
 ## Hardware Information  
 
 ### Hardware Interfaces  
