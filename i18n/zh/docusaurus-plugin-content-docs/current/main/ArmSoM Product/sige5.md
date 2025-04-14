@@ -579,7 +579,7 @@ ArmSoM-Sige5 将至少生产到 2034 年 7 月。
 </div>
 
 ## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/Sige5](https://www.armsom.org/product-page/Sige5)
+ArmSoM 独立站: [https://www.armsom.org/product-page/sige5](https://www.armsom.org/product-page/sige5)
  
 ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256806760032306.html](https://aliexpress.com/item/3256806760032306.html) 
 

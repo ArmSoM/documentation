@@ -157,7 +157,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤[系统镜像烧录方法](https://docs.armsom.org/zh/getting-start/flash-img)
+ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 以下系统已由ArmSoM官方测试验证：
 
