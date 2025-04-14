@@ -1,6 +1,6 @@
 ---
 slug: rk3576-ultralytics
-title: ArmSoM Sige5 & CM5：The New Benchmark for Edge Computing with Ultralytics YOLOv11 on RK3576
+title: ArmSoM Sige5 & CM5：RK3576 上 Ultralytics YOLOv11 边缘计算新标杆
 authors: [ArmSoM, keven]
 tags: [Sige5, CM5, SBC]
 ---
@@ -8,6 +8,8 @@ tags: [Sige5, CM5, SBC]
 # ​一、​ArmSoM Sige5 & CM5：Ultralytics YOLOv11 的 RK3576 边缘计算新标杆​​
 
 在计算机视觉技术加速落地的今天，ArmSoM 正式宣布其基于 ​​Rockchip RK3576​​ 的旗舰产品 ​​Sige5 开发板​​ 和 ​​CM5 核心板​​ 全面支持 Ultralytics YOLOv11 模型的 RKNN 部署。这一突破标志着边缘计算领域迎来新一代高性能、低功耗的 AI 解决方案，为工业检测、智能安防、机器人导航等场景提供“开箱即用”的硬核支持。
+
+![rockchip-rknn](/img/blog/rockchip-rknn.avif)  
 
 ## ​二、RKNN 工具包
 RKNN 工具包是由 Rockchip 提供的一套工具和库，用于促进在其硬件平台上部署深度学习模型。RKNN 或 Rockchip 神经网络是这些工具使用的专有格式。RKNN 模型旨在充分利用 Rockchip 的 NPU（神经处理单元）提供的硬件加速，确保在 RK3588、RK3576、RK3566、RV1103、RV1106 等设备和其他由 Rockchip 支持的系统上执行人工智能任务时的高性能。
