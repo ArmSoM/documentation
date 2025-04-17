@@ -20,6 +20,7 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 - 材质：AL6063-T5
 - 工艺：喷砂 + 氧化亮黑
+- 重量：30g
 
 ## 兼容性
 

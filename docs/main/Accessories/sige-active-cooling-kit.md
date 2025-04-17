@@ -20,6 +20,7 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 
 - Material: AL6063-T5
 - Finish: Sandblasting + Oxidized Glossy Black
+- ​​Weight: 30g​
 
 ## Compatibility
 

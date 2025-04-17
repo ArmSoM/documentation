@@ -29,7 +29,7 @@ The CM5-IO board is an expansion board specifically designed for the CM5 computi
 - MIPI CSI1: 1x 2-lane MIPI CSI, each lane up to 2.5Gbps
 - Others: HPOUT, FAN, VRTC
 - Dimensions: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 inches)
-- Weight:
+- Weight: 65.2g
 
 ### Hardware Interfaces
 
