@@ -279,7 +279,6 @@ You can now operate the terminal.
 
 | User | Username | Password |
 | -------- | -------- | -------- |
-| superuser | root | root |
 | Ordinary user | armsom | armsom |
 
 First enter the username (case sensitive) and then enter the password (there will be no text prompt when entering the password, so you need to pay attention to the Chinese input method and capitalization)
