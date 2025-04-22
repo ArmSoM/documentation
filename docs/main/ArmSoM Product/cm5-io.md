@@ -748,23 +748,23 @@ root@armsom-cm5:/# date
 
 ```bash
 // Check the video formats supported by the video node
-root@armsom-cm5:/# v4l2-ctl -d /dev/video11 --get-fmt-video
+root@armsom:/# v4l2-ctl -d /dev/video22 --get-fmt-video
 Format Video Capture Multiplanar:
-        Width/Height      : 1920/1080
-        Pixel Format      : 'RG10' (10-bit Bayer RGRG/GBGB)
+        Width/Height      : 2112/1568
+        Pixel Format      : 'NV12' (Y/UV 4:2:0)
         Field             : None
         Number of planes  : 1
-        Flags             : premultiplied-alpha, 0x000000fe
+        Flags             :
         Colorspace        : Default
         Transfer Function : Default
-        YCbCr/HSV Encoding: Unknown (0x000000ff)
-        Quantization      : Default
+        YCbCr/HSV Encoding: Default
+        Quantization      : Full Range
         Plane 0           :
-           Bytes per Line : 2560
-           Size Image     : 2764800
+           Bytes per Line : 2112
+           Size Image     : 4967424
 
 // Check the topology
-root@armsom-cm5:/# media-ctl -d /dev/media0 -p
+root@armsom-cm5:/# media-ctl -d /dev/media2 -p
 ```
 
 #### Using ArmSoM Camera Module 1
@@ -789,14 +789,14 @@ Capture an image using `v4l2-ctl`
 
 ```bash
 // MIPI-CSI1
-root@armsom-cm5:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+root@armsom-cm5:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
 Record video using `gst-launch-1.0`
 
 ```bash
 // MIPI-CSI1
-root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
