@@ -82,8 +82,11 @@ All GPIO pins maintain compatibility with NVIDIA Jetson TX2 & Nano development b
             </td>
         </tr>
         <tr>
-            <th>PCIe</th>
-            <td><li>PCIe 2.0 x2 (5Gbps per lane)</li></td>
+            <th>high-speed</th>
+            <th><li>1x PCIe 2.0</li>
+            <li>1x PCIe 3.0x2</li>
+            <li>1x SATA</li>
+            </th>
         </tr>
         <tr>
             <th>USB</th>
