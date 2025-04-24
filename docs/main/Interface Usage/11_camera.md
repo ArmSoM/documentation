@@ -134,7 +134,7 @@ The link relationship between each vicap node and the ISP is indicated by the XX
 ### 11.5.1 Check if Camera is Mounted on the I2C Bus
 
 ```bash
-root@armsom-sige5:/home/armsom# i2cdetect -y 5
+root@armsom:/# i2cdetect -y 5
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:                         -- -- -- -- -- -- -- --
 10: UU -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -238,38 +238,38 @@ Here, `/dev/video22` and `/dev/video31` are the camera devices.
 
 ### 11.5.5 Check Supported Formats for Preview
 
-For the video22 node (IMX415 camera), the query result is as follows:
+The following is the query result of the ov13850 camera on video22 node:
 
 ```bash
-armsom@armsom:~$ v4l2-ctl -d /dev/video22 --list-formats-ext
+root@armsom:/# v4l2-ctl -d /dev/video22 --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
         Type: Video Capture Multiplanar
 
         [0]: 'UYVY' (UYVY 4:2:2)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [1]: 'NV16' (Y/CbCr 4:2:2)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [2]: 'NV61' (Y/CrCb 4:2:2)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [3]: 'NV21' (Y/CrCb 4:2:0)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [4]: 'NV12' (Y/CbCr 4:2:0)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [5]: 'NM21' (Y/CrCb 4:2:0 (N-C))
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [6]: 'NM12' (Y/CbCr 4:2:0 (N-C))
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [1]: 'NV16' (Y/UV 4:2:2)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [2]: 'NV61' (Y/VU 4:2:2)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [3]: 'NV21' (Y/VU 4:2:0)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [4]: 'NV12' (Y/UV 4:2:0)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [5]: 'NM21' (Y/VU 4:2:0 (N-C))
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [6]: 'NM12' (Y/UV 4:2:0 (N-C))
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
 ```
 
 ### 11.5.6 View All Device Information
 
 ```bash
-armsom@armsom:~$ v4l2-ctl --all --device /dev/video22
+root@armsom:/# v4l2-ctl --all --device /dev/video22
 Driver Info:
-        Driver name      : rkisp_v6
+        Driver name      : rkisp_v10
         Card type        : rkisp_mainpath
-        Bus info         : platform:rkisp0-vir0
-        Driver version   : 2.3.0
+        Bus info         : platform:rkisp-vir1
+        Driver version   : 2.9.0
         Capabilities     : 0x84201000
                 Video Capture Multiplanar
                 Streaming
@@ -280,13 +280,13 @@ Driver Info:
                 Streaming
                 Extended Pix Format
 Media Driver Info:
-        Driver name      : rkisp0-vir0
+        Driver name      : rkisp-vir1
         Model            : rkisp0
         Serial           :
-        Bus info         :
-        Media version    : 5.10.160
+        Bus info         : platform:rkisp-vir1
+        Media version    : 6.1.99
         Hardware revision: 0x00000000 (0)
-        Driver version   : 5.10.160
+        Driver version   : 6.1.99
 Interface Info:
         ID               : 0x03000007
         Type             : V4L Video
@@ -298,46 +298,50 @@ Entity Info:
           Link 0x0200000a: from remote pad 0x1000004 of entity 'rkisp-isp-subdev' (Unknown V4L2 Sub-Device): Data, Enabled
 Priority: 2
 Format Video Capture Multiplanar:
-        Width/Height      : 3840/2160
-        Pixel Format      : 'NM12' (Y/CbCr 4:2:0 (N-C))
+        Width/Height      : 2112/1568
+        Pixel Format      : 'NV12' (Y/UV 4:2:0)
         Field             : None
-        Number of planes  : 2
+        Number of planes  : 1
         Flags             :
-        Colorspace        : sRGB
-        Transfer Function : Rec. 709
-        YCbCr/HSV Encoding: Rec. 709
+        Colorspace        : Default
+        Transfer Function : Default
+        YCbCr/HSV Encoding: Default
         Quantization      : Full Range
         Plane 0           :
-           Bytes per Line : 3840
-           Size Image     : 8294400
-        Plane 1           :
-           Bytes per Line : 3840
-           Size Image     : 4147200
-Selection Video Capture: crop, Left 0, Top 0, Width 3840, Height 2160, Flags:
-Selection Video Capture: crop_bounds, Left 0, Top 0, Width 3840, Height 2160, Flags:
-Selection Video Output: crop, Left 0, Top 0, Width 3840, Height 2160, Flags:
-Selection Video Output: crop_bounds, Left 0, Top 0, Width 3840, Height 2160, Flags:
+           Bytes per Line : 2112
+           Size Image     : 4967424
+Selection Video Capture: crop, Left 0, Top 0, Width 2112, Height 1568, Flags:
+Selection Video Capture: crop_bounds, Left 0, Top 0, Width 2112, Height 1568, Flags:
+Selection Video Output: crop, Left 0, Top 0, Width 2112, Height 1568, Flags:
+Selection Video Output: crop_bounds, Left 0, Top 0, Width 2112, Height 1568, Flags:
 
 Image Processing Controls
 
-                     pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=356800000 flags=read-only, volatile
+                     pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=120000000 flags=read-only, volatile
 ```
 
-### 11.5.7 Camera Preview
+### 11.5.7 Switch to other resolutions
 
-On the ArmSoM-Sige7, the preview commands for dual cameras are:
+OV13850 supports multiple resolutions of output, default is 2112/1568. Now change the output resolution to 4224x3136.
+```
+media-ctl -d /dev/media0 --set-v4l2 '"m00_b_ov13850 5-0010":0[fmt:SBGGR10_1X10/4224x3136]'
+media-ctl -d /dev/media2 --set-v4l2 '"rkcif-mipi-lvds1":0[fmt:SBGGR10_1X10/4224x3136]'
+```
+Other resolutions can also be set in the same way as above
 
-- Preview Camera 1:
+### 11.5.8 Camera capture
+In ArmSoM Sige7, the preview command for Camera is:
+
+- Start the RKAIQ 3A service：
 
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink
+systemctl restart rkaiq_3A.service
 ```
-
-- Preview Camera 2:
-
+- screenshot：
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink
+v4l2-ctl -d /dev/video22 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-skip=30 --stream-to=/mnt/output.yuv --stream-count=1 --stream-poll
 ```
+This way, you can use ISP to process the yuv file with good results
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 

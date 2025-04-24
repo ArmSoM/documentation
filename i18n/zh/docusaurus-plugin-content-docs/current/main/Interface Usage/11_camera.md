@@ -130,7 +130,7 @@ armsom@armsom-sige5:~$ dmesg | grep ov13850
 ### 11.5.1 查看Camera是否挂载到i2c总线下
 
 ```bash
-root@armsom-sige5:/home/armsom# i2cdetect -y 5
+root@armsom:/# i2cdetect -y 5
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:                         -- -- -- -- -- -- -- --
 10: UU -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -226,37 +226,37 @@ rkisp_mainpath (platform:rkisp1-vir1):
 其中/dev/video22和/dev/video31都是摄像头的设备。
 
 ### 11.5.5 查看设备的预览支持格式
-如下是video22节点： imx415 摄像头的查询结果：
+如下是video22节点 ov13850 摄像头的查询结果：
 
 ```bash
-armsom@armsom:~$ v4l2-ctl -d /dev/video22 --list-formats-ext
+root@armsom:/# v4l2-ctl -d /dev/video22 --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
         Type: Video Capture Multiplanar
 
         [0]: 'UYVY' (UYVY 4:2:2)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [1]: 'NV16' (Y/CbCr 4:2:2)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [2]: 'NV61' (Y/CrCb 4:2:2)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [3]: 'NV21' (Y/CrCb 4:2:0)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [4]: 'NV12' (Y/CbCr 4:2:0)
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [5]: 'NM21' (Y/CrCb 4:2:0 (N-C))
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
-        [6]: 'NM12' (Y/CbCr 4:2:0 (N-C))
-                Size: Stepwise 32x32 - 3840x2160 with step 8/8
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [1]: 'NV16' (Y/UV 4:2:2)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [2]: 'NV61' (Y/VU 4:2:2)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [3]: 'NV21' (Y/VU 4:2:0)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [4]: 'NV12' (Y/UV 4:2:0)
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [5]: 'NM21' (Y/VU 4:2:0 (N-C))
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
+        [6]: 'NM12' (Y/UV 4:2:0 (N-C))
+                Size: Stepwise 32x32 - 2112x1568 with step 8/8
 ```
 ### 11.5.6 查看设备的所有信息
 
 ```bash
-armsom@armsom:~$ v4l2-ctl --all --device /dev/video22
+root@armsom:/# v4l2-ctl --all --device /dev/video22
 Driver Info:
-        Driver name      : rkisp_v6
+        Driver name      : rkisp_v10
         Card type        : rkisp_mainpath
-        Bus info         : platform:rkisp0-vir0
-        Driver version   : 2.3.0
+        Bus info         : platform:rkisp-vir1
+        Driver version   : 2.9.0
         Capabilities     : 0x84201000
                 Video Capture Multiplanar
                 Streaming
@@ -267,13 +267,13 @@ Driver Info:
                 Streaming
                 Extended Pix Format
 Media Driver Info:
-        Driver name      : rkisp0-vir0
+        Driver name      : rkisp-vir1
         Model            : rkisp0
         Serial           :
-        Bus info         :
-        Media version    : 5.10.160
+        Bus info         : platform:rkisp-vir1
+        Media version    : 6.1.99
         Hardware revision: 0x00000000 (0)
-        Driver version   : 5.10.160
+        Driver version   : 6.1.99
 Interface Info:
         ID               : 0x03000007
         Type             : V4L Video
@@ -285,45 +285,49 @@ Entity Info:
           Link 0x0200000a: from remote pad 0x1000004 of entity 'rkisp-isp-subdev' (Unknown V4L2 Sub-Device): Data, Enabled
 Priority: 2
 Format Video Capture Multiplanar:
-        Width/Height      : 3840/2160
-        Pixel Format      : 'NM12' (Y/CbCr 4:2:0 (N-C))
+        Width/Height      : 2112/1568
+        Pixel Format      : 'NV12' (Y/UV 4:2:0)
         Field             : None
-        Number of planes  : 2
+        Number of planes  : 1
         Flags             :
-        Colorspace        : sRGB
-        Transfer Function : Rec. 709
-        YCbCr/HSV Encoding: Rec. 709
+        Colorspace        : Default
+        Transfer Function : Default
+        YCbCr/HSV Encoding: Default
         Quantization      : Full Range
         Plane 0           :
-           Bytes per Line : 3840
-           Size Image     : 8294400
-        Plane 1           :
-           Bytes per Line : 3840
-           Size Image     : 4147200
-Selection Video Capture: crop, Left 0, Top 0, Width 3840, Height 2160, Flags:
-Selection Video Capture: crop_bounds, Left 0, Top 0, Width 3840, Height 2160, Flags:
-Selection Video Output: crop, Left 0, Top 0, Width 3840, Height 2160, Flags:
-Selection Video Output: crop_bounds, Left 0, Top 0, Width 3840, Height 2160, Flags:
+           Bytes per Line : 2112
+           Size Image     : 4967424
+Selection Video Capture: crop, Left 0, Top 0, Width 2112, Height 1568, Flags:
+Selection Video Capture: crop_bounds, Left 0, Top 0, Width 2112, Height 1568, Flags:
+Selection Video Output: crop, Left 0, Top 0, Width 2112, Height 1568, Flags:
+Selection Video Output: crop_bounds, Left 0, Top 0, Width 2112, Height 1568, Flags:
 
 Image Processing Controls
 
-                     pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=356800000 flags=read-only, volatile
+                     pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=120000000 flags=read-only, volatile
 ```
 
-### 11.5.7 摄像头预览
+### 11.5.7 切换其他分辨率
+ov13850支持多个分辨率的输出，默认为2112/1568。现将输出分辨率改为4224x3136。
+```
+media-ctl -d /dev/media0 --set-v4l2 '"m00_b_ov13850 5-0010":0[fmt:SBGGR10_1X10/4224x3136]'
+media-ctl -d /dev/media2 --set-v4l2 '"rkcif-mipi-lvds1":0[fmt:SBGGR10_1X10/4224x3136]'
+```
+其他分辨率也可以按上面的方式来设置
+
+### 11.5.8 摄像头抓图
 ArmSoM-Sige7中，双Camera的预览命令：
 
-- 预览摄像头1：
+- 启动rkaiq 3A服务：
 
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink
+systemctl restart rkaiq_3A.service
 ```
-
-- 预览摄像头2：
-
+- 抓图：
 ```bash
-gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! videoconvert ! autovideosink
+v4l2-ctl -d /dev/video22 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-skip=30 --stream-to=/mnt/output.yuv --stream-count=1 --stream-poll
 ```
+这样可以拿isp处理好效果的yuv文件
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
@@ -333,5 +337,5 @@ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=3840,
 ![rockchip-camera-two](/img/general-tutorial/interface-usage/camera-two.png)
 
 :::tip
-目前armbian系统还不支持 3A服务，无法启动isp校正摄像头画面。如有摄像头功能要求的客户可使用debian系统，由rockchip官方支持，如debiam未支持的摄像头可联系armsom官方。
+目前armbian系统还不支持 3A服务，无法启动isp校正摄像头画面。如有摄像头功能要求的客户可使用debian系统，由rockchip官方支持，如debian未支持的摄像头可联系armsom官方。
 :::
