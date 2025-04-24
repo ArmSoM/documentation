@@ -789,14 +789,15 @@ Capture an image using `v4l2-ctl`
 
 ```bash
 // MIPI-CSI1
-root@armsom-cm5:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+root@armsom:/# systemctl restart rkaiq_3A.service
+root@armsom:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
 Record video using `gst-launch-1.0`
 
 ```bash
 // MIPI-CSI1
-root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
