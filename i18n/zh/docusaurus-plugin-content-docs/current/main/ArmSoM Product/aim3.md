@@ -87,9 +87,10 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
             </th>
         </tr>
         <tr>
-            <th>PCIe</th>
-            <th><li>PCIe 2.0 x2: 每 PCIe2.1 接口支持 1lane，最高支持 5Gbps 数据速率</li>
-            <li>支持 10/100/1000Mbps 数据传输速率</li>
+            <th>高速接口</th>
+            <th><li>一路PCIe 2.0</li>
+            <li>一路PCIe 3.0 x2</li>
+            <li>一路SATA</li>
             </th>
         </tr>
          <tr>
