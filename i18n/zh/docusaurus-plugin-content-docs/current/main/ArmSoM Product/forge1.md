@@ -157,7 +157,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
+ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 以下系统已由ArmSoM官方测试验证：
 
@@ -167,6 +167,10 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
   <span>百度网盘链接</span>
 </a>
 <br/>
+
+| logo  | Description  | Download|
+|:--------: | :---------: | :--------:  | 
+|buildroot | buildroot for Forge1 :  <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。|[百度网盘](https://pan.baidu.com/s/1ETLbE47Q-j3qFPmIR_Wz0w?pwd=arms)  |
 
 ### 硬件资料
 

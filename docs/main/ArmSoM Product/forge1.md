@@ -157,7 +157,7 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
+The ArmSoM team uses buildroot as the official operating system for Forge1. [How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 
@@ -167,6 +167,10 @@ Network disk address:
 <a href="/getting-start/cloud-disk" class="btn">
   <span>Google Drive link</span>
 </a>
+
+| logo | Description | Download|
+|:--------: | :---------: | :--------: |
+|buildroot | buildroot for Forge1: <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive link](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Hardware Resources 
 
