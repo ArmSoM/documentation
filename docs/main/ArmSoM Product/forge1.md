@@ -76,7 +76,7 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
         </tr>  
         <tr>  
             <th>Power Supply</th>  
-            <th><li>5V/2A</li></th>  
+            <th><li>DC IN 12V/1A</li><li>Typec 5V/2A</li></th>  
         </tr>  
         <tr>  
             <th>Buttons</th>  
@@ -211,15 +211,30 @@ Network disk address:
 
 ## User Manual  
 
-### Setup Guide  
-1. **Tools Required**:  
-   • 5V/2A power supply.  
-   • USB Type-C cable (for eMMC flashing) or MicroSD card (≥8GB, Class 10).  
-   • Optional: Debug serial port, Ethernet cable.  
+### Tools Preparation
+* ​​Power Supply (Choose either):​​
+  * DC IN 12V/1A
+  * Type-C 5V/2A
+* ​System Installation (Choose either):​​
+  * ​​Boot from onboard eMMC:​​
+  * USB Type-C data cable (to connect the Forge series device and a PC via the Type-C port for image burning).
+* ​Boot from MicroSD/TF card:​​
+  * MicroSD/TF card (Class 10 or higher, at least 8GB SDHC) and a card reader.
 
-2. **Flashing Methods**:  
-   • **eMMC Boot**: Use USB Type-C for direct flashing.  
-   • **MicroSD Boot**: Write OS image to SD card via reader.  
+## Image Flashing
+
+<div class="cards">
+    <a href="./getting-start/flash-img" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>🎇</i>
+            </div>
+            <div class="content">
+                <h2>Flash System Image</h2>
+            </div>
+        </div>
+    </a>
+</div>
 
 ### Interface Usage  
 
