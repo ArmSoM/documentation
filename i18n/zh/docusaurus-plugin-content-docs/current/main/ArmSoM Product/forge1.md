@@ -75,7 +75,7 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
         </tr>
         <tr>
             <th>电源</th>
-            <th><li>12V/2A</li></th>
+            <th><li>5V/2A</li></th>
         </tr>
         <tr>
             <th>按键</th>
@@ -215,7 +215,7 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
 Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的准备工作，开始使用你的Forge1🚀
 
 ### 工具准备
-* 电源（12V/2A）
+* 电源（5V/2A）
 * 系统安装（二选一）
   * 板载eMMC启动
     * USB Type-C数据线，从 typec 端口在Forge系列上写入镜像，您需要Type-C数据线连接 Forge系列和 PC。

@@ -76,7 +76,7 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
         </tr>  
         <tr>  
             <th>Power Supply</th>  
-            <th><li>12V/2A</li></th>  
+            <th><li>5V/2A</li></th>  
         </tr>  
         <tr>  
             <th>Buttons</th>  
@@ -213,7 +213,7 @@ Network disk address:
 
 ### Setup Guide  
 1. **Tools Required**:  
-   • 12V/2A power supply.  
+   • 5V/2A power supply.  
    • USB Type-C cable (for eMMC flashing) or MicroSD card (≥8GB, Class 10).  
    • Optional: Debug serial port, Ethernet cable.  
 
