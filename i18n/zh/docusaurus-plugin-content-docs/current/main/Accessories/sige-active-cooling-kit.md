@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Sige 主动散热套件"
-sidebar_position: 15
+sidebar_position: 16
 slug: /sige-active-cooling-kit
 ---
 

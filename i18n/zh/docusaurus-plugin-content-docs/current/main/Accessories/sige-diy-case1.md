@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Sige 外壳"
 slug: /sige-diy-case1
-sidebar_position: 16
+sidebar_position: 17
 ---
 
 # Sige Diy Case 1

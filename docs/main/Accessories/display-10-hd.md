@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Display 10 HD"
-sidebar_position: 16
+sidebar_position: 18
 slug: /armsom-display-10-hd
 ---
 # ArmSoM Display 10 HD

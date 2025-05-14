@@ -1,7 +1,7 @@
 ---
 sidebar_label: "摄像头module 1"
 slug: /armsom-camera-module1
-sidebar_position: 16
+sidebar_position: 15
 ---
 
 # ArmSoM Camera module 1

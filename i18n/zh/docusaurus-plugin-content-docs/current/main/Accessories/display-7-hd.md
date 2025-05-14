@@ -1,6 +1,6 @@
 ---
 sidebar_label: "7 寸屏幕"
-sidebar_position: 17
+sidebar_position: 19
 slug: /armsom-display-7-hd
 ---
 #  ArmSoM  Display 7 HD

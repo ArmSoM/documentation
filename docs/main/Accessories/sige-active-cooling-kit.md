@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Active Cooling Kit"
-sidebar_position: 15
+sidebar_position: 16
 slug: /sige-active-cooling-kit
 ---
 # Sige Active Cooling Kit
