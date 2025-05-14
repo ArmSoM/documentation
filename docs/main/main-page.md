@@ -114,9 +114,9 @@ This modular approach is especially suited for embedded development, IoT devices
 
 ArmSoM offers a wide range of hardware expansion accessories, including display modules, camera modules, custom enclosures, and active cooling solutions. Additionally, it supports compatibility with some Raspberry Pi 40-pin GPIO peripheral resources, providing strong support for developers to build diverse application scenarios. 
 
-| [ArmSoM Display 10 HD](./armsom-display-10-hd) | [ArmSoM Camera Module 1](./armsom-camera-module1) | [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) |  
-| --------- | --------- | --------- | --------- |  
-| ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) | ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) |  
+| [ArmSoM Display 10 HD](./armsom-display-10-hd) |[ArmSoM Display 7 HD](./armsom-display-7-hd) | [ArmSoM Camera Module 1](./armsom-camera-module1) | [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) |  
+| --------- | --------- | --------- | --------- |  --------- | 
+| ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) | ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) |  
 
 #### Benefits of Accessories  
 

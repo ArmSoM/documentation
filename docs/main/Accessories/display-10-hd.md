@@ -15,7 +15,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 ## Compatibility
 - Sige 3/5/7
 - CM5
-- AIM7
+- LM7 & W3
 
 ## General information 
 - Outline Dimension:  143×228.70×2.25 (TYP.) mm 

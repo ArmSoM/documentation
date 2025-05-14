@@ -395,6 +395,23 @@ ip link set can0 up
 ## Availability  
 The **Forge1** will remain in production until at least **May 2035**.  
 
+## Accessories
+We designed the official accessory ​​ArmSoM-Sige​​ to help you achieve optimal performance from your computer.
+
+<div class="cards">  
+  <a href="./armsom-display-7-hd" class="card-link">  
+    <div class="card">  
+      <div class="card-image">  
+        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>  
+      </div>  
+      <div class="card-content">  
+        <h2>Display-7-HD</h2>  
+        <p>A 7-inch touchscreen display designed for interactive projects such as entertainment systems and information dashboards.</p>  
+      </div>  
+    </div>  
+  </a>  
+</div>  
+
 ## Purchase Samples
 ArmSoM Official Website: [https://www.armsom.org/product-page/forge1](https://www.armsom.org/product-page/forge1)
 

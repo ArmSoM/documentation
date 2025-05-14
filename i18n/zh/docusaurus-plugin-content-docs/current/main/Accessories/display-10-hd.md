@@ -14,7 +14,7 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 ### 兼容性
 - Sige 3/5/7
 - CM5
-- AIM7
+- LM7 & W3
 
 ## 参数 
 

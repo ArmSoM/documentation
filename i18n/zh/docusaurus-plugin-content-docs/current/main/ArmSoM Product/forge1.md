@@ -438,6 +438,22 @@ ArmSoM-Forge1 将至少生产到 2035 年 5 月。
 
 ## 配件
 
+我们为 ArmSoM-Sige 设计的官方配件旨在帮助您从计算机获得最佳性能。
+
+<div class="cards">
+<a href="./armsom-display-7-hd" class="card-link">
+<div class="card">
+    <div class="card-image">
+        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+    </div>
+    <div class="card-content">
+        <h2>Display-7-hd</h2>
+        <p>7 英寸触摸屏显示器，可用于娱乐系统和信息仪表板等交互式项目。</p>
+    </div>
+</div>
+</a>
+</div>
+
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/forge1](https://www.armsom.org/product-page/forge1)
  
