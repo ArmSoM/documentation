@@ -137,6 +137,18 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 
 </div>
 
+#### 14-PIN Header
+
+|Pin        | Assignment  | Description||Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: |  :--------: | :---------: | :--------: | 
+|1          | RS485_A         |      RS485 |2          | RS485_B         | RS485      |
+|3          | CAN_L         | CAN_L          |4          | CAN_H         | CAN_H          |
+|5          | GND         | GND          |6          | GND         | GND          |
+|7          | MICIN_P         | MCI          |8          | MICIN_N         | MCI          |
+|9          | MICIN_P         | MCI          |10         | MICIN_N         | MCI          |
+|11         | GND         | GND          |12         | VBAT_RTC         | RTC 电池          |
+|13         | SPK_P         | SPK          |14         | SPK_N         | SPK          |
+
 
 ## 开发资料
 

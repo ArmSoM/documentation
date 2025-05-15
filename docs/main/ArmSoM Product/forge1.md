@@ -138,6 +138,19 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
 
 </div>  
 
+#### 14-PIN Header
+
+|Pin        | Assignment  | Description||Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: |  :--------: | :---------: | :--------: | 
+|1          | RS485_A         |      RS485 |2          | RS485_B         | RS485      |
+|3          | CAN_L         | CAN_L          |4          | CAN_H         | CAN_H          |
+|5          | GND         | 地          |6          | GND         | 地          |
+|7          | MICIN_P         | MCI          |8          | MICIN_N         | MCI          |
+|9          | MICIN_P         | MCI          |10         | MICIN_N         | MCI          |
+|11         | GND         | 地          |12         | VBAT_RTC         | RTC Bat          |
+|13         | SPK_P         | SPK          |14         | SPK_N         | SPK          |
+
+
 ## Development Resources  
 
 ### SDK Source Code  
