@@ -50,7 +50,7 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 ### 环境与物理特性
 - **工作温度 (Operation Temperature):** -10°C ~ 50°C  
 - **存储温度 (Storage Temperature):** -20°C ~ 60°C  
-- **重量 (Weight):** 待定 (TBD, To Be Determined) / g 
+- **重量 (Weight):** 141.5 / g 
 
 
 ## Resources

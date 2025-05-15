@@ -48,7 +48,7 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
 ### Environmental & Physical Properties
 - **Operation Temperature:** -10°C ~ 50°C  
 - **Storage Temperature:** -20°C ~ 60°C  
-- **Weight:** TBD (To Be Determined) / g  
+- **Weight:** 141.5 / g  
 
 ## Resources
 <div class="cards">
