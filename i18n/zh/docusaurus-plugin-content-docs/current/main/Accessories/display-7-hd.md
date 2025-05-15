@@ -55,7 +55,7 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 
 ## Resources
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1gwBWVhTw9nfQnBvsymUV1g?pwd=arms" class="card-link">
+    <a href=" https://pan.baidu.com/s/1qtsYXoZeXkcMNA83zKzHXA?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📚</i>
@@ -65,7 +65,7 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
             </div>
         </div>
     </a>
-      <a href="https://pan.baidu.com/s/1FwKmGfFqMuH5QpmNfw4vZQ?pwd=kxtv" class="card-link">
+      <a href="https://pan.baidu.com/s/1yIHHH6nEeAW1OAVsSdj_Rw?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📜</i>

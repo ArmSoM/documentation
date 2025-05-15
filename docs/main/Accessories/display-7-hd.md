@@ -52,7 +52,7 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
 
 ## Resources
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1gwBWVhTw9nfQnBvsymUV1g?pwd=arms" class="card-link">
+    <a href="https://drive.google.com/file/d/1UsFckLnyqX01MbFFhEDX51pvf0e5WaRK/view?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📚</i>
@@ -62,7 +62,7 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
             </div>
         </div>
     </a>
-    <a href="https://pan.baidu.com/s/1FwKmGfFqMuH5QpmNfw4vZQ?pwd=kxtv" class="card-link">
+    <a href="https://drive.google.com/file/d/1R0A9_qFnCIJDwUflEU_QoTjdOpLiYpuZ/view?usp=drive_link" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📜</i>
