@@ -139,15 +139,15 @@ RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音�
 
 #### 14-PIN Header
 
-|Pin        | Assignment  | Description||Pin        | Assignment  | Description|
- :--------: | :---------: | :--------: |  :--------: | :---------: | :--------: | 
-|1          | RS485_A         |      RS485 |2          | RS485_B         | RS485      |
-|3          | CAN_L         | CAN_L          |4          | CAN_H         | CAN_H          |
-|5          | GND         | GND          |6          | GND         | GND          |
-|7          | MICIN_P         | MCI          |8          | MICIN_N         | MCI          |
-|9          | MICIN_P         | MCI          |10         | MICIN_N         | MCI          |
-|11         | GND         | GND          |12         | VBAT_RTC         | RTC 电池          |
-|13         | SPK_P         | SPK          |14         | SPK_N         | SPK          |
+| Pin  | Assignment   | Description                  | Pin  | Assignment   | Description                  |
+|------|--------------|------------------------------|------|--------------|------------------------------|
+| 1    | RS485_A      | RS485 差分信号正极           | 2    | RS485_B      | RS485 差分信号负极           |
+| 3    | CAN_L        | CAN 总线差分信号低电平        | 4    | CAN_H        | CAN 总线差分信号高电平        |
+| 5    | GND          | 系统接地                     | 6    | GND          | 系统接地（冗余设计）         |
+| 7    | MICIN_P      | 麦克风输入正极（差分信号）    | 8    | MICIN_N      | 麦克风输入负极（差分信号）    |
+| 9    | MICIN_P      | 麦克风输入正极（备用通道）    | 10   | MICIN_N      | 麦克风输入负极（备用通道）    |
+| 11   | GND          | 音频信号接地                 | 12   | VBAT_RTC     | RTC 实时时钟电池供电输入     |
+| 13   | SPK_P        | 扬声器输出正极（差分驱动）    | 14   | SPK_N        | 扬声器输出负极（差分驱动）    |
 
 
 ## 开发资料
@@ -254,14 +254,14 @@ Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的�
     </a>
 </div>
 
-### 接口使用
+## 接口使用
 
 如果您是首次使用 ArmSoM-Forge1 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
 
 | 硬件接口  | [Forge1](./armsom-forge1#硬件接口) |
 | --------------- | ----- | 
 
-#### 调试串口
+### 调试串口
 
 如下所示连接 USB 转 TTL 串口线：
 
@@ -274,7 +274,7 @@ Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的�
 | **RX** (pin 10) | ---> | TX |
 
 
-#### 以太网口
+### 以太网口
 
 1. 首先将网线的一端插入 ArmSoM-Forge1 的以太网接口，网线的另一端接入路由器，并确保
 网络是畅通的
@@ -315,7 +315,7 @@ PING www.baidu.com (183.2.172.17): 56 data bytes
 round-trip min/avg/max = 10.320/14.538/24.736 ms
 ```
 
-#### USB
+### USB
 
 |  型号  | Forge1 |
 | ----- |  ----- |
@@ -342,7 +342,7 @@ root@armsom:/test# df -h | grep "sd"
 /dev/sda        4.7G  4.7G     0  100% /test
 ```
 
-#### 音频
+### 音频
 
 查看系统中的声卡。
 
@@ -365,7 +365,7 @@ arecord -D hw:0,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
 aplay t.wav
 ```
 
-#### RTC
+### RTC
 
 - Forge1配备了一颗RTC IC **LK8563S**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
@@ -399,11 +399,11 @@ root@armsom:/# date
 2023年 11月 03日 星期五 10:36:01 UTC
 ```
 
-#### MIPI DSI
+### MIPI DSI
 
 ArmSoM-Forge1最大输出分辨率为1280x1280@60fps
 
-#### CAN FD
+### CAN FD
 查询当前⽹络设备:
 ```bash
 root@armsom:/# ifconfig -a

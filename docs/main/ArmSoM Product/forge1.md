@@ -140,16 +140,15 @@ The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Aud
 
 #### 14-PIN Header
 
-|Pin        | Assignment  | Description||Pin        | Assignment  | Description|
- :--------: | :---------: | :--------: |  :--------: | :---------: | :--------: | 
-|1          | RS485_A         |      RS485 |2          | RS485_B         | RS485      |
-|3          | CAN_L         | CAN_L          |4          | CAN_H         | CAN_H          |
-|5          | GND         | 地          |6          | GND         | 地          |
-|7          | MICIN_P         | MCI          |8          | MICIN_N         | MCI          |
-|9          | MICIN_P         | MCI          |10         | MICIN_N         | MCI          |
-|11         | GND         | 地          |12         | VBAT_RTC         | RTC Bat          |
-|13         | SPK_P         | SPK          |14         | SPK_N         | SPK          |
-
+| Pin  | Assignment   | Description                          | Pin  | Assignment   | Description                          |
+|------|--------------|--------------------------------------|------|--------------|--------------------------------------|
+| 1    | RS485_A      | RS485 Differential Signal (Positive) | 2    | RS485_B      | RS485 Differential Signal (Negative) |
+| 3    | CAN_L        | CAN Bus Differential Low             | 4    | CAN_H        | CAN Bus Differential High            |
+| 5    | GND          | System Ground                        | 6    | GND          | System Ground (Redundant Design)     |
+| 7    | MICIN_P      | Microphone Input Positive (Differential) | 8    | MICIN_N      | Microphone Input Negative (Differential) |
+| 9    | MICIN_P      | Microphone Input Positive (Alternate Channel) | 10   | MICIN_N      | Microphone Input Negative (Alternate Channel) |
+| 11   | GND          | Audio Signal Ground                  | 12   | VBAT_RTC     | RTC Battery Power Input              |
+| 13   | SPK_P        | Speaker Output Positive (Differential Drive) | 14   | SPK_N        | Speaker Output Negative (Differential Drive) |
 
 ## Development Resources  
 
@@ -249,14 +248,14 @@ Network disk address:
     </a>
 </div>
 
-### Interface Usage  
+## Interface Usage  
 
 If this is your first time using the ArmSoM-Forge1 product, please familiarize yourself with its hardware interfaces to better understand subsequent content.  
 
 | Hardware Interface | [Forge1](./armsom-forge1#hardware-interfaces) |  
 |--------------------|-----------------------------------------------|  
 
-#### Debug Serial Port  
+### Debug Serial   
 Connect the USB-to-TTL serial cable as shown below:  
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)  
@@ -267,7 +266,7 @@ Connect the USB-to-TTL serial cable as shown below:
 | **TX** (Pin 8)   | →          | RX            |  
 | **RX** (Pin 10)  | →          | TX            |  
 
-#### Ethernet Port  
+### Ethernet  
 1. Connect one end of an Ethernet cable to the Forge1's Ethernet port and the other end to a router. Ensure the network is available.  
 2. The system will automatically assign an IP address to the Ethernet interface via DHCP on startup.  
 3. To view the IP address in Forge1’s Linux system:  
@@ -298,7 +297,7 @@ PING www.baidu.com (183.2.172.17): 56 data bytes
 6 packets transmitted, 6 received, 0% packet loss  
 ```  
 
-#### USB Interface  
+### USB Interface  
 | Model   | Forge1 |  
 |---------|--------|  
 | **USB** | 1× Type-C (PD & Programming), 1× USB 2.0 HOST |  
@@ -321,9 +320,7 @@ root@armsom:/test# df -h | grep "sd"
 /dev/sda        4.7G  4.7G     0  100% /test  
 ```  
 
----
-
-#### Audio  
+### Audio  
 **List Audio Devices**  
 ```bash  
 root@armsom:/# aplay -l  
@@ -341,9 +338,7 @@ arecord -D hw:0,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
 aplay t.wav  
 ```  
 
----
-
-#### RTC  
+### RTC  
 • Forge1 includes an **LK8563S RTC IC**.  
 • Insert a 2-pin RTC battery to power the RTC.  
 
@@ -369,14 +364,10 @@ root@armsom:/# date
 Fri Nov 3 10:36:01 UTC 2023  
 ```  
 
----
-
-#### MIPI DSI  
+### MIPI DSI  
 • **Maximum Resolution**: 1280x1280@60fps.  
 
----
-
-#### CAN FD  
+### CAN FD  
 **List Network Interfaces**  
 ```bash  
 root@armsom:/# ifconfig -a  
