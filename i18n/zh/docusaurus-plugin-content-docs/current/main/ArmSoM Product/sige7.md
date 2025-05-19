@@ -250,35 +250,34 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     <summary>
       MIPI CSI0
     </summary>
-0.5mm FPC 连接器
+0.5mm FPC 连接器（J12）
 
-|Pin |   MIPI-CSI |   描述   |
- :--------: | :---------------------: | :--------: | 
-|1,4,7,10,13,16,24,25,26,27,32,33        |  GND       |   Power Ground &  Signal Ground |
-|2     | MIPI_CSI0_RX_D3N   |     MIPI RX Lane3 iuput N |
-|3     | MIPI_CSI0_RX_D3P                  |   MIPI RX Lane3 iuput P |
-|5          | MIPI_CSI0_RX_D2N |   MIPI RX Lane2 iuput N |
-|6          | MIPI_CSI0_RX_D2P|   MIPI RX Lane2 iuput P |
-|8          | MIPI_CSI0_RX_CLK1N|   MIPI RX Clock iuput N |
-|9         | MIPI_CSI0_RX_CLK1P |   MIPI RX Clock iuput P |
-|11         |  MIPI_CSI0_RX_D1N |   MIPI RX Lane1 iuput N |
-|12         | MIPI_CSI0_RX_D1P |   MIPI RX Lane1 iuput P |
-|14         | MIPI_CSI0_RX_D0N|    MIPI RX Lane0 iuput N |
-|15         | MIPI_CSI0_RX_D0P |    MIPI RX Lane0 iuput P |
-|17         | MIPI_CSI0_RX_CLK0N|   MIPI RX Clock iuput N |
-|18         | MIPI_CSI0_RX_CLK0P|  MIPI RX Clock iuput P |
-|19         | MIPI_VSYNC        |    |
-|20         | MIPI_CAM3_CLKOUT |    1.8V, CLock ouput for Sensor |
-|21         | MIPI_HSYNC        |    |
-|22         | MIPI_CAM1_CLKOUT |   1.8V, CLock ouput for Sensor |
-|23         | MIPI_CSI0_PDN0_H(GPIO1_B0) |    1.8V, GPIO |
-|24         | I2C3_SCL_M0_MIPI |   1.8V, I2C Clock, pulled up to 1.8V with 2.2K on Sige7 |
-|25         | I2C3_SDA_M0_MIPI |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on Sige7 |
-|26         | MIPI_CSI0_PDN1_H(GPIO1_A7)|  1.8V, GPIO |
-|27         | CM_RST_L(GPIO4_A0)|   3.3V, GPIO |
-|28,29      | VCC_RX|   3.3V Power ouput |
-|30,31      | VCC_5V0|   5V Power ouput |
-
+| 引脚       | 信号名称                   | 描述说明                                      |
+|-----------|---------------------------|---------------------------------------------|
+| 1,4,7,10,13,16 | PGND/SGND          | **接地层**<br/> - PGND：电源地（大电流路径）<br/> - SGND：信号地（低噪声参考） |
+| 2         | MIPI_CSI0_RX_D3N           | **MIPI CSI-2 接收通道3**<br/> - 差分负输入（100Ω ±10% 终端匹配） |
+| 3         | MIPI_CSI0_RX_D3P           | **MIPI CSI-2 接收通道3**<br/> - 差分正输入               |
+| 5         | MIPI_CSI0_RX_D2N           | **MIPI CSI-2 接收通道2**<br/> - 差分负输入               |
+| 6         | MIPI_CSI0_RX_D2P           | **MIPI CSI-2 接收通道2**<br/> - 差分正输入               |
+| 8         | MIPI_CSI0_RX_CLK1N         | **次级时钟通道**<br/> - 差分负（最高1.5GHz）             |
+| 9         | MIPI_CSI0_RX_CLK1P         | **次级时钟通道**<br/> - 差分正                        |
+| 11        | MIPI_CSI0_RX_D1N           | **MIPI CSI-2 接收通道1**<br/> - 差分负输入               |
+| 12        | MIPI_CSI0_RX_D1P           | **MIPI CSI-2 接收通道1**<br/> - 差分正输入               |
+| 14        | MIPI_CSI0_RX_D0N           | **MIPI CSI-2 接收通道0**<br/> - 差分负输入               |
+| 15        | MIPI_CSI0_RX_D0P           | **MIPI CSI-2 接收通道0**<br/> - 差分正输入               |
+| 17        | MIPI_CSI0_RX_CLK0N         | **主时钟通道**<br/> - 差分负                        |
+| 18        | MIPI_CSI0_RX_CLK0P         | **主时钟通道**<br/> - 差分正                        |
+| 19        | MIPI_VSYNC                 | **场同步信号**<br/> - 1.8V LVCMOS电平        |
+| 20        | MIPI_CAM3_CLKOUT           | **传感器时钟输入**<br/> - 1.8V ±5%<br/> |
+| 21        | MIPI_HSYNC                 | **行同步信号**<br/> - 1.8V LVCMOS电平        |
+| 22        | MIPI_CAM1_CLKOUT           | **传感器时钟输入**<br/> - 1.8V ±5%<br/> |
+| 23        | MIPI_CSI0_PDN0_H(GPIO1_B0) | **电源关闭控制**<br/> - 1.8V GPIO，高电平有效<br/>|
+| 24        | I2C3_SCL_M0_MIPI           | **I²C时钟线**<br/> - 1.8V开漏输出<br/>|
+| 25        | I2C3_SDA_M0_MIPI           | **I²C数据线**<br/> - 1.8V开漏输出<br/> |
+| 26        | MIPI_CSI0_PDN1_H(GPIO1_A7) | **次级电源关闭控制**<br/> - 1.8V GPIO，高电平有效         |
+| 27        | CM_RST_L(GPIO4_A0)         | **摄像头模组复位**<br/> - 3.3V LVCMOS电平<br/> - 低电平有效 |
+| 28,29     | VCC_RX                     | **3.3V电源轨**<br/> - 输出，容差±5%<br/>  |
+| 30,31     | VCC_5V0                    | **5.0V电源轨**<br/> - 输出，容差±5%<br/> |
 </details>
 
 <details>
