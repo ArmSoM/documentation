@@ -182,7 +182,7 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|buildroot | buildroot for Forge1 :  <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。|[百度网盘](https://pan.baidu.com/s/1ETLbE47Q-j3qFPmIR_Wz0w?pwd=arms)  |
+|buildroot | buildroot for Forge1 :  <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。|[百度网盘](https://pan.baidu.com/s/1YRHG5Ki8d6ECrQiyWbzIvw?pwd=arms)  |
 
 ### 硬件资料
 
