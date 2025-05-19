@@ -365,7 +365,9 @@ Fri Nov 3 10:36:01 UTC 2023
 ```  
 
 ### MIPI DSI  
-• **Maximum Resolution**: 1280x1280@60fps.  
+**Maximum Resolution**: 1280x1280@60fps.  
+
+![armsom-forge1-display](/img/forge/armsom-forge1-display.jpg)
 
 ### CAN FD  
 **List Network Interfaces**  

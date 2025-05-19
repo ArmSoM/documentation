@@ -403,6 +403,8 @@ root@armsom:/# date
 
 ArmSoM-Forge1最大输出分辨率为1280x1280@60fps
 
+![armsom-forge1-display](/img/forge/armsom-forge1-display.jpg)
+
 ### CAN FD
 查询当前⽹络设备:
 ```bash
