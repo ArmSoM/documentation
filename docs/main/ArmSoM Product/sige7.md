@@ -262,30 +262,30 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 
 | Pin       | Signal Name                | Description                                                                 |
 |-----------|---------------------------|-----------------------------------------------------------------------------|
-| 1,4,7,10,13,16 | PGND/SGND          | **Ground Planes**<br>- PGND: Power Ground (high-current return path)<br>- SGND: Signal Ground (low-noise reference) |
-| 2         | MIPI_CSI0_RX_D3N           | **MIPI CSI-2 Receive Channel 3**<br>- Differential negative input (100Ω ±10% termination) |
-| 3         | MIPI_CSI0_RX_D3P           | **MIPI CSI-2 Receive Channel 3**<br>- Differential positive input          |
-| 5         | MIPI_CSI0_RX_D2N           | **MIPI CSI-2 Receive Channel 2**<br>- Differential negative input          |
-| 6         | MIPI_CSI0_RX_D2P           | **MIPI CSI-2 Receive Channel 2**<br>- Differential positive input          |
-| 8         | MIPI_CSI0_RX_CLK1N         | **Secondary Clock Channel**<br>- Differential negative (up to 1.5GHz)      |
-| 9         | MIPI_CSI0_RX_CLK1P         | **Secondary Clock Channel**<br>- Differential positive                     |
-| 11        | MIPI_CSI0_RX_D1N           | **MIPI CSI-2 Receive Channel 1**<br>- Differential negative input          |
-| 12        | MIPI_CSI0_RX_D1P           | **MIPI CSI-2 Receive Channel 1**<br>- Differential positive input         |
-| 14        | MIPI_CSI0_RX_D0N           | **MIPI CSI-2 Receive Channel 0**<br>- Differential negative input          |
-| 15        | MIPI_CSI0_RX_D0P           | **MIPI CSI-2 Receive Channel 0**<br>- Differential positive input          |
-| 17        | MIPI_CSI0_RX_CLK0N         | **Primary Clock Channel**<br>- Differential negative                       |
-| 18        | MIPI_CSI0_RX_CLK0P         | **Primary Clock Channel**<br>- Differential positive                       |
-| 19        | MIPI_VSYNC                 | **Vertical Sync Signal**<br>- 1.8V LVCMOS level                            |
-| 20        | MIPI_CAM3_CLKOUT           | **Sensor Clock Input**<br>- 1.8V ±5%                                      |
-| 21        | MIPI_HSYNC                 | **Horizontal Sync Signal**<br>- 1.8V LVCMOS level                          |
-| 22        | MIPI_CAM1_CLKOUT           | **Sensor Clock Input**<br>- 1.8V ±5%                                      |
-| 23        | MIPI_CSI0_PDN0_H(GPIO1_B0) | **Power-Down Control**<br>- 1.8V GPIO, active high                          |
-| 24        | I2C3_SCL_M0_MIPI           | **I²C Clock Line**<br>- 1.8V open-drain output                             |
-| 25        | I2C3_SDA_M0_MIPI           | **I²C Data Line**<br>- 1.8V open-drain output                              |
-| 26        | MIPI_CSI0_PDN1_H(GPIO1_A7) | **Secondary Power-Down Control**<br>- 1.8V GPIO, active high               |
-| 27        | CM_RST_L(GPIO4_A0)         | **Camera Module Reset**<br>- 3.3V LVCMOS level<br>- Active low            |
-| 28,29     | VCC_RX                     | **3.3V Power Rail**<br>- Output, ±5% tolerance                            |
-| 30,31     | VCC_5V0                    | **5.0V Power Rail**<br>- Output, ±5% tolerance      
+| 1,4,7,10,13,16 | PGND/SGND          | **Ground Planes**<br/>- PGND: Power Ground (high-current return path)<br/>- SGND: Signal Ground (low-noise reference) |
+| 2         | MIPI_CSI0_RX_D3N           | **MIPI CSI-2 Receive Channel 3**<br/>- Differential negative input (100Ω ±10% termination) |
+| 3         | MIPI_CSI0_RX_D3P           | **MIPI CSI-2 Receive Channel 3**<br/>- Differential positive input          |
+| 5         | MIPI_CSI0_RX_D2N           | **MIPI CSI-2 Receive Channel 2**<br/>- Differential negative input          |
+| 6         | MIPI_CSI0_RX_D2P           | **MIPI CSI-2 Receive Channel 2**<br/>- Differential positive input          |
+| 8         | MIPI_CSI0_RX_CLK1N         | **Secondary Clock Channel**<br/>- Differential negative (up to 1.5GHz)      |
+| 9         | MIPI_CSI0_RX_CLK1P         | **Secondary Clock Channel**<br/>- Differential positive                     |
+| 11        | MIPI_CSI0_RX_D1N           | **MIPI CSI-2 Receive Channel 1**<br/>- Differential negative input          |
+| 12        | MIPI_CSI0_RX_D1P           | **MIPI CSI-2 Receive Channel 1**<br/>- Differential positive input         |
+| 14        | MIPI_CSI0_RX_D0N           | **MIPI CSI-2 Receive Channel 0**<br/>- Differential negative input          |
+| 15        | MIPI_CSI0_RX_D0P           | **MIPI CSI-2 Receive Channel 0**<br/>- Differential positive input          |
+| 17        | MIPI_CSI0_RX_CLK0N         | **Primary Clock Channel**<br/>- Differential negative                       |
+| 18        | MIPI_CSI0_RX_CLK0P         | **Primary Clock Channel**<br/>- Differential positive                       |
+| 19        | MIPI_VSYNC                 | **Vertical Sync Signal**<br/>- 1.8V LVCMOS level                            |
+| 20        | MIPI_CAM3_CLKOUT           | **Sensor Clock Input**<br/>- 1.8V ±5%                                      |
+| 21        | MIPI_HSYNC                 | **Horizontal Sync Signal**<br/>- 1.8V LVCMOS level                          |
+| 22        | MIPI_CAM1_CLKOUT           | **Sensor Clock Input**<br/>- 1.8V ±5%                                      |
+| 23        | MIPI_CSI0_PDN0_H(GPIO1_B0) | **Power-Down Control**<br/>- 1.8V GPIO, active high                          |
+| 24        | I2C3_SCL_M0_MIPI           | **I²C Clock Line**<br/>- 1.8V open-drain output                             |
+| 25        | I2C3_SDA_M0_MIPI           | **I²C Data Line**<br/>- 1.8V open-drain output                              |
+| 26        | MIPI_CSI0_PDN1_H(GPIO1_A7) | **Secondary Power-Down Control**<br/>- 1.8V GPIO, active high               |
+| 27        | CM_RST_L(GPIO4_A0)         | **Camera Module Reset**<br/>- 3.3V LVCMOS level<br/>- Active low            |
+| 28,29     | VCC_RX                     | **3.3V Power Rail**<br/>- Output, ±5% tolerance                            |
+| 30,31     | VCC_5V0                    | **5.0V Power Rail**<br/>- Output, ±5% tolerance      
 </details>
 
 <details>

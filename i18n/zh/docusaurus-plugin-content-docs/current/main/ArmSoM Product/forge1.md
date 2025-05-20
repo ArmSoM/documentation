@@ -11,9 +11,11 @@ slug: /armsom-forge1
 让我们在 5 分钟内了解 Forge1。
 
 ##  概述
-RK3506J是一款高性能的三核Cortex-A7应用处理器，专为智能语音交互、音频输入/输出处理、图像输出处理和其他数字多媒体应用而设计。
+Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器，工作温度可达 -40℃~85℃，专为工业网关、HMI、PLC、手持POS和家电显控应用而设计。
+
 嵌入式2D硬件引擎和显示输出引擎，用于最小化CPU开销以满足图像显示要求。
-嵌入丰富的周边接口，如SAI、PDM、SPDIF、Audio DSM、Audio ADC、USB2 OTG、RMII、CAN等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
+
+丰富的周边接口，如RS485、USB2、RMII、CAN、dsmc、Flexbus等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
 
 ![ArmSoM-Forge1](/img/forge/forge1-banner-zh.jpg)
 

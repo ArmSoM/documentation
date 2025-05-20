@@ -12,9 +12,11 @@ image: /img/forge/forge1-bananer.png
 Let’s get to know Forge1 in 5 minutes.
 
 ## Overview  
-The RK3506J is a high-performance triple-core Cortex-A7 application processor designed for intelligent voice interaction, audio input/output processing, image output processing, and other digital multimedia applications.  
-It features an embedded 2D hardware engine and display output engine to minimize CPU overhead and meet image display requirements.  
-The processor integrates rich peripheral interfaces such as SAI, PDM, SPDIF, Audio DSM, Audio ADC, USB2 OTG, RMII, CAN, etc., enabling diverse application development while reducing hardware complexity and development costs.  
+Forge1​​ is an industrial-grade product powered by the ​​RK3506J triple-core Cortex-A7 application processor​​. Operating within a temperature range of ​​-40℃ to 85℃​​, it is specifically designed for industrial gateways, HMIs (Human-Machine Interfaces), PLCs (Programmable Logic Controllers), handheld POS (Point-of-Sale) devices, and home appliance display/control applications.
+
+The embedded ​​2D hardware engine​​ and ​​display output engine​​ minimize CPU overhead to meet demanding graphics rendering requirements.
+
+With a comprehensive set of peripheral interfaces—including ​​RS485​​, ​​USB2​​, ​​RMII​​ (Reduced Media Independent Interface), ​​CAN​​ (Controller Area Network), ​​DSMC​​ (Digital Signal Microcontroller), ​​Flexbus​​, and more—it accommodates diverse application development needs while reducing hardware complexity and development costs.
 
 ![ArmSoM-Forge1](/img/forge/forge1-banner-en.jpg)
 
