@@ -15,7 +15,7 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
 
 嵌入式2D硬件引擎和显示输出引擎，用于最小化CPU开销以满足图像显示要求。
 
-丰富的周边接口，如RS485、USB2、RMII、CAN、dsmc、Flexbus等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
+丰富的周边接口，如RS485、USB2、RMII、CAN、DSMC、Flexbus等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
 
 ![ArmSoM-Forge1](/img/forge/forge1-banner-zh.jpg)
 
