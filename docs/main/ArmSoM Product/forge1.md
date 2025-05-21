@@ -432,6 +432,8 @@ For OEM & ODM, please contact: sales@armsom.org
 ## What do others say about the Sige7?
 
 - [CNX](https://www.cnx-software.com/2025/03/26/armsom-forge1-industrial-rockchip-rk3506j-sbc/): $23 ArmSoM Forge1 industrial SBC is powered by Rockchip RK3506J SoC
+- [itsfoss](https://news.itsfoss.com/armsom-forge1/): ArmSoM's Forge1 Looks Like A Versatile Solution for Embedded and Multimedia Applications
+- [electronics-lab](https://www.electronics-lab.com/armsom-forge1-sbc-features-rockchip-rk3506j-soc-with-cortex-a7-m0-cores-for-industrial-and-audio-applications/)
 
 ## Notes
 
