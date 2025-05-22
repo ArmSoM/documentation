@@ -410,7 +410,7 @@ We designed the official accessory ​​ArmSoM-Sige​​ to help you achieve o
   <a href="./armsom-display-7-hd" class="card-link">  
     <div class="card">  
       <div class="card-image">  
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>  
+        <img src="./img/accessories/armsom-display-7hd.png" alt="Card Image"/>  
       </div>  
       <div class="card-content">  
         <h2>Display-7-HD</h2>  

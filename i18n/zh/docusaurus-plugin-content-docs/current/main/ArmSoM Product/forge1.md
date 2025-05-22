@@ -460,7 +460,7 @@ ArmSoM-Forge1 将至少生产到 2035 年 5 月。
 <a href="./armsom-display-7-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+        <img src="./img/accessories/armsom-display-7hd.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Display-7-hd</h2>

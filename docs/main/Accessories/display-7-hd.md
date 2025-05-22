@@ -16,7 +16,9 @@ This TFT LCD features a **7.0-inch diagonally measured active display area** wit
 
 Ideal for interactive projects such as tablets, entertainment systems, and information dashboards.
 
-![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
+![armsom-display-10hd](/img/accessories/armsom-display-7hd.png)
+![armsom-display-10hd-back](/img/accessories/armsom-display-7hd-b.png)
+
 
 ### Compatibility
 - Forge1
