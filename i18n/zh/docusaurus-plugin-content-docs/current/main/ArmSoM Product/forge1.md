@@ -446,7 +446,7 @@ candump can0 &
 
 ## 产品证书
 
-### CE / FC / RoHS
+### CE / FCC / RoHS
 
 ## 供货声明
 

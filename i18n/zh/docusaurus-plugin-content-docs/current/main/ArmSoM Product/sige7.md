@@ -560,7 +560,7 @@ V1.1
 
 ## 产品证书
 
-### CE / FC / RoHS
+### CE / FCC / RoHS
 
 ![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
 

@@ -423,7 +423,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 ## 产品证书
 
-### CE / FC / RoHS
+### CE / FCC / RoHS
 
 ## 供货声明
 
