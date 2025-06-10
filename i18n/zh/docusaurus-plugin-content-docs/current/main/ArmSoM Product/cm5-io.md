@@ -142,6 +142,18 @@ CM5-IO Board 使用12V DC供电。
     </div>
 </a>
 
+<a href="https://pan.baidu.com/s/1dev2pixej7GH-ruV0mvHvQ?pwd=y6x3" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Android14源码</h2>
+            <p>Improved Rockchip Android</p>
+        </div>
+    </div>
+</a>
+
 <a href="https://github.com/armbian/linux-rockchip" class="card-link">
     <div class="card">
         <div class="icon">

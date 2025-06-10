@@ -140,6 +140,19 @@ The cm5-io board uses a 12V DC power supply.
         </div>
     </div>
 </a>
+
+<a href="https://github.com/ArmSoM/rk3576-andriod-sdk" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>Android14 SDK</h2>
+            <p>Improved Rockchip Android</p>
+        </div>
+    </div>
+</a>
+
 <a href="https://github.com/armbian/linux-rockchip" class="card-link">
     <div class="card">
         <div class="icon">
