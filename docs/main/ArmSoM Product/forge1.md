@@ -118,25 +118,25 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 | GPIO Number |  Function  |   Pin    |  Pin     |  Function  | GPIO Number |  
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: |   
 |             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |  
-|     130     |   I2C1_SDA_M0 / UART3_RTSN / I2S1_SDI3 / GPIO4_A2_d | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |  
-|     131     | I2C1_SCL_M0 / UART3_CTSN / I2S1_SDI2 / GPIO4_A3_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |  
-|     1     | REF_CLK_OUT_M0 / GPIO0_A1  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  <div className='orange-txt'>UART0_TX_M0</div> / JTAG_MCU_TCK_M1 / JTAG_CPU_TCK_M1 / GPIO4_D0_d |     152      |  
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  <div className='orange-txt'>UART0_RX_M0</div> / JTAG_MCU_TMS_M1 / JTAG_CPU_TMS_M1 / GPIO4_C7_u  |     151      |  
-|     0     |  GPIO0_A0  | <div className='green'>11</div>  | <div className='green'>12</div> |  I2S1_SCLK / UART1_RTSN / GPIO4_A5_d   |     133     |  
-|  | | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |  
-|  | | <div className='green'>15</div>  | <div className='green'>16</div> |   |          |  
-|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |    |         |  
-| 138 | SPI0_MOSI / PDM_SDI0 / I2S1_SDO3 / GPIO4_B2_d  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |   |  
-| 139 | SPI0_MISO / PDM_SDI2 / I2S1_SDI1 / GPIO4_B3_d  | <div className='green'>21</div>  | <div className='green'>22</div> | |   |  
-| 140 | SPI0_CLK / I2S1_SDI0 / GPIO4_B4_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CSN0 / PWR_CTRL1 / GPIO4_B6_u | 142 |  
-| |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |  PWM6_M0 / SPI0_CSN1 / PDM_SDI3 / GPIO4_C1_d |     145      |  
-|  147 | I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3_d |  <div className='green'>27</div>  | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4_d  | 148 |  
-|  |   | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |  
-| |  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO4_C0 / PWM5_M0 / FEPHY_LED_LINK_M0 / UART3_TX_M1  |    144     |  
-| 143  | GPIO4_B7 / PWM4_M0 / FEPHY_LED_SPD_M0 / UART3_RX_M1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |  
-| 134  | UART1_TX_M0 / I2S1_LRCK / GPIO4_A6_d   | <div className='green'>35</div>  | <div className='green'>36</div> |   |          |  
-| | | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO3_B2 / SPI0_CLK / I2S1_SDI0    |     106     |  
-| |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_A7_d / UART1_RX_M0 / I2S1_SDO0   |     135     |  
+|     4     |   RM_IO4/SAI0_SDI0/GPIO0_A4_d| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
+|     5     | RM_IO5/SAI0_SDI1/GPIO0_A5_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
+|59|RM_IO31/GPIO1_D3_d |  <div className='green'>7</div>  | <div className='green'>8</div>  |<div className='orange-txt'>UART0_TX</div>RM_IO22/JTAG_TCK_M1/GPIO0_C6_u   |     22      |
+||GND|  <div className='black'>9</div>  | <div className='green'>10</div> |<div className='orange-txt'>UART0_RX</div>RM_IO23/JTAG_TMS_M1/GPIO0_C7_u  |     23      |
+|58|RM_IO30/GPIO1_D2_d| <div className='green'>11</div>  |<div className='green'>12</div>|RM_IO29/GPIO1_D1_d|57|
+| 52 |DSMC_SLV_D2/FLEXBUS0_D7/DSMC_D11/VO_LCDC_D7/GPIO1_C4_d | <div className='green'>13</div>  | <div className='green'>14</div> |DSMC_SLV_D3/FLEXBUS0_D6/DSMC_D12/VO_LCDC_D6/GPIO1_C5_d|53|
+|51  |RM_IO28/GPIO1_C3_d | <div className='green'>15</div>  | <div className='green'>16</div> |RM_IO27/GPIO1_C2_d| 50 |
+|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |GPIO1_C1_d    |  49 |
+| 48 |GPIO1_C0_d| <div className='green'>19</div>  | <div className='green'>20</div> |SARADC_IN2/GPIO4_B2_z| 138  |
+| 46 |GPIO1_B6_d| <div className='green'>21</div>  | <div className='green'>22</div> |GPIO1_B7_d | 47  |
+| 44 |GPIO1_B4_d| <div className='green'>23</div>  | <div className='green'>24</div> |GPIO1_B5_d | 45 |
+| |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |RM_IO26/GPIO1_B3_d|     43      |
+|  41 |RM_IO24/GPIO1_B1_d|  <div className='green'>27</div>  | <div className='green'>28</div> |RM_IO25/GPIO1_B2_d| 42 |
+|40  |GPIO1_B0_d| <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |
+|38 |GPIO1_A6_d| <div className='green'>31</div>  | <div className='green'>32</div> |GPIO1_A7_d|    39     |
+| 37  |GPIO1_A5_d| <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |
+| 35  |GPIO1_A3_d| <div className='green'>35</div>  | <div className='green'>36</div> |GPIO1_A4_d   |    36      |
+|33 |GPIO1_A1_d | <div className='green'>37</div>  | <div className='green'>38</div> |GPIO1_A2_d|     34     |
+| |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |GPIO1_A0_d|     32     |
 
 </div>  
 
