@@ -13,7 +13,7 @@ ArmSoM is an open-source hardware brand committed to providing the open-source c
 
 ![ArmSoM Open Source](/img/banana.png)  
 
-- **[Single Board Computers](#sige-series-single-board-computers)** based on [Arm](https://www.arm.com) architecture.  
+- **[Single Board Computers](#sige-series-single-board-computers)** based on ARM architecture.  
 - **[System on Module](#system-on-module-and-carrier-boards)** and carrier boards to help customers quickly develop high-performance hardware.  
 - Dedicated to fostering an open ecosystem, supporting **open-source hardware and operating systems**.  
 
