@@ -11,7 +11,7 @@ ArmSoM is an open-source hardware brand committed to providing the open-source c
 [The RK3588AI Module7 is currently in the crowdfunding preheating stage. Stay tuned for the latest updates by subscribing to our campaign！](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
 :::
 
-![ArmSoM Open Source](/img/banana.png)  
+<!-- ![ArmSoM Open Source](/img/banana.png)   -->
 
 - **[Single Board Computers](#sige-series-single-board-computers)** based on ARM architecture.  
 - **[System on Module](#system-on-module-and-carrier-boards)** and carrier boards to help customers quickly develop high-performance hardware.  
