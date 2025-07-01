@@ -190,6 +190,11 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
 
 获取 Forge1 原理图、DXF等硬件资料
 
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+  <span>百度网盘链接</span>
+</a>
+<br/>
+
 <div class="cards">
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
         <div class="card">

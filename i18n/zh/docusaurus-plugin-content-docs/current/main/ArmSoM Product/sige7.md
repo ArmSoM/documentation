@@ -482,6 +482,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 |Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux 是一个独立开发的通用 GNU/Linux 发行版，致力于通过滚动发布模式提供大多数软件的最新稳定版本。默认安装是一个最小的基础系统，由用户配置为仅添加所需的内容。| 只需刷新图像并按照安装程序提示的说明进行操作即可。<br/>注意：此安装程序需要互联网连接。（以太网驱动程序可能需要一些时间来加载，安装程序将重试多次，这是正常的。）  [download](https://github.com/kwankiu/archlinux-installer/releases) |
 | ![openSUSE](https://static.opensuse.org/favicon.svg) | 桌面用户、开发者以及系统管理员的匠之所选。| [download](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
 | [lede](https://github.com/coolsnowwolf/lede) | lede for Sige7 :    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://github.com/coolsnowwolf/lede)  |
+| [LibreELEC](https://github.com/coolsnowwolf/lede) | LibreELEC.tv for Sige7 :    <br/>LibreELEC 是一个极简主义的“刚好够用的操作系统”Linux 发行版，用于运行Kodi。| [LibreELEC.tv](https://github.com/ShigeakiAsai/LibreELEC.tv/releases)  |
 
 ### 硬件资料
 

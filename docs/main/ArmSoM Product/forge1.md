@@ -188,6 +188,11 @@ Network disk address:
 
 ### Hardware Resources 
 
+<a href="/getting-start/cloud-disk" class="btn">
+  <span>Google Drive link</span>
+</a>
+<br/>
+
 <div class="cards">
     <a href="https://drive.google.com/drive/folders/1yWlzbQbuLUKCyIFuj4LIlvwslRpoZFig" class="card-link">
         <div class="card">

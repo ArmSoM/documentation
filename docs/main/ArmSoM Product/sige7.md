@@ -491,6 +491,7 @@ Network disk address:
 |Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux is an independently developed with the general-purpose of GNU/Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required. |Simply flash the image and follow the instructions prompted by the installer.<br/>NOTE: This installer requires an internet connection. (The Ethernet drivers may take some time to load and the installer will retry several times, this is normal.) [download](https://github.com/kwankiu/archlinux-installer/releases) | 
 | ![openSUSE](https://static.opensuse.org/favicon.svg) | 桌面用户、开发者以及系统管理员的匠之所选。| [download](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
 |[lede](https://github.com/coolsnowwolf/lede) | lede for Sige7 :    <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/18QOdyAiE4nyGD_CU57gSvQolHOXH2x5A)  |
+| [LibreELEC](https://github.com/coolsnowwolf/lede) | LibreELEC.tv for Sige7 :    <br/>LibreELEC is a minimalist 'Just enough OS' Linux distribution for running Kodi.| [LibreELEC.tv](https://github.com/ShigeakiAsai/LibreELEC.tv/releases)  |
 
 ### Hardware Resources 
 
