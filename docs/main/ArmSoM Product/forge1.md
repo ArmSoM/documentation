@@ -149,9 +149,9 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
     <summary>
     14-PIN Header
     </summary>
-       
+
 | Pin  | Assignment   | Description                          | Pin  | Assignment   | Description                          |
-|------|--------------|--------------------------------------|------|--------------|--------------------------------------|
+    :--------: | :---------: | :--------: |  :--------: |  :--------: |  :--------: | 
 | 1    | RS485_A      | RS485 Differential Signal (Positive) | 2    | RS485_B      | RS485 Differential Signal (Negative) |
 | 3    | CAN_L        | CAN Bus Differential Low             | 4    | CAN_H        | CAN Bus Differential High            |
 | 5    | GND          | System Ground                        | 6    | GND          | System Ground (Redundant Design)     |
@@ -159,6 +159,7 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 | 9    | MICIN_P      | Microphone Input Positive (Alternate Channel) | 10   | MICIN_N      | Microphone Input Negative (Alternate Channel) |
 | 11   | GND          | Audio Signal Ground                  | 12   | VBAT_RTC     | RTC Battery Power Input              |
 | 13   | SPK_P        | Speaker Output Positive (Differential Drive) | 14   | SPK_N        | Speaker Output Negative (Differential Drive) |
+
 </details>
 
 ## Development Resources  
