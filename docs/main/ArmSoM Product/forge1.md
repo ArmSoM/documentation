@@ -120,23 +120,23 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 |             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |  
 |     4     |   RM_IO4/SAI0_SDI0/GPIO0_A4_d| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
 |     5     | RM_IO5/SAI0_SDI1/GPIO0_A5_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|59|RM_IO31/GPIO1_D3_d |  <div className='green'>7</div>  | <div className='green'>8</div>  |<div className='orange-txt'>UART0_TX</div>RM_IO22/JTAG_TCK_M1/GPIO0_C6_u   |     22      |
+|59|<div>DSMC_SLV_RDYN/RM_IO31/UART5_RX_M1/FLEXBUS0_D0</div>/DSMC_CSN3/VO_LCDC_D0/GPIO1_D3_d |  <div className='green'>7</div>  | <div className='green'>8</div>  |<div className='orange-txt'>UART0_TX</div>RM_IO22/JTAG_TCK_M1/GPIO0_C6_u   |     22      |
 ||GND|  <div className='black'>9</div>  | <div className='green'>10</div> |<div className='orange-txt'>UART0_RX</div>RM_IO23/JTAG_TMS_M1/GPIO0_C7_u  |     23      |
-|58|RM_IO30/GPIO1_D2_d| <div className='green'>11</div>  |<div className='green'>12</div>|RM_IO29/GPIO1_D1_d|57|
-| 52 |DSMC_SLV_D2/FLEXBUS0_D7/DSMC_D11/VO_LCDC_D7/GPIO1_C4_d | <div className='green'>13</div>  | <div className='green'>14</div> |DSMC_SLV_D3/FLEXBUS0_D6/DSMC_D12/VO_LCDC_D6/GPIO1_C5_d|53|
-|51  |RM_IO28/GPIO1_C3_d | <div className='green'>15</div>  | <div className='green'>16</div> |RM_IO27/GPIO1_C2_d| 50 |
-|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |GPIO1_C1_d    |  49 |
-| 48 |GPIO1_C0_d| <div className='green'>19</div>  | <div className='green'>20</div> |SARADC_IN2/GPIO4_B2_z| 138  |
-| 46 |GPIO1_B6_d| <div className='green'>21</div>  | <div className='green'>22</div> |GPIO1_B7_d | 47  |
-| 44 |GPIO1_B4_d| <div className='green'>23</div>  | <div className='green'>24</div> |GPIO1_B5_d | 45 |
-| |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |RM_IO26/GPIO1_B3_d|     43      |
-|  41 |RM_IO24/GPIO1_B1_d|  <div className='green'>27</div>  | <div className='green'>28</div> |RM_IO25/GPIO1_B2_d| 42 |
-|40  |GPIO1_B0_d| <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |
-|38 |GPIO1_A6_d| <div className='green'>31</div>  | <div className='green'>32</div> |GPIO1_A7_d|    39     |
-| 37  |GPIO1_A5_d| <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |
-| 35  |GPIO1_A3_d| <div className='green'>35</div>  | <div className='green'>36</div> |GPIO1_A4_d   |    36      |
-|33 |GPIO1_A1_d | <div className='green'>37</div>  | <div className='green'>38</div> |GPIO1_A2_d|     34     |
-| |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |GPIO1_A0_d|     32     |
+|58|<div>DSMC_SLV_CSN0/RM_IO30/UART5_TX_M1/FLEXBUS0_D1</div>/DSMC_CSN2/VO_LCDC_D1/GPIO1_D2_d| <div className='green'>11</div>  |<div className='green'>12</div>|<div>GPIO1_D1_d/DSMC_SLV_D7/RM_IO29/UART5_RTSN_M1/DSM_AUD_LP_M0/</div>FLEXBUS0_D2/DSMC_DQS1/VO_LCDC_D2|57|
+| 52 |<div>DSMC_SLV_D2/FLEXBUS0_D7</div>/DSMC_D11/VO_LCDC_D7/GPIO1_C4_d | <div className='green'>13</div>  | <div className='green'>14</div> |<div>GPIO1_C5_d/DSMC_SLV_D3/FLEXBUS0_D6</div>/DSMC_D12/VO_LCDC_D6/|53|
+|51  |<div>DSMC_SLV_D1/RM_IO28/SAI2_SDO_M1/FLEXBUS1_CSN_M5/FLEXBUS0_D8</div>/DSMC_D10/VO_LCDC_D8/GPIO1_C3_d | <div className='green'>15</div>  | <div className='green'>16</div> |<div>GPIO1_C2_d/DSMC_SLV_D0/RM_IO27/SAI2_SDI_M1/FLEXBUS0_CSN_M5</div>/DSM_AUD_RP_M0/FLEXBUS0_D9/DSMC_D9/VO_LCDC_D9| 50 |
+|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |<div>GPIO1_C1_d/DSMC_SLV_DQS0/SAI2_MCLK_M1/FLEXBUS1_CSN_M4</div>/DSM_AUD_RN_M0/FLEXBUS0_CLK/DSMC_D8/VO_LCDC_D10    |  49 |
+| 48 |<div>DSMC_SLV_CLK/FLEXBUS0_CSN_M4/DSMC_INT1</div>/FLEXBUS1_CLK/DSMC_RESETN/VO_LCDC_D11/GPIO1_C0_d| <div className='green'>19</div>  | <div className='green'>20</div> |SARADC_IN2/GPIO4_B2_z| 138  |
+| 46 |<div>FLEXBUS0_CSN_M3/FLEXBUS0_D11/FLEXBUS1_D14</div>/DSMC_CSN0/VO_LCDC_D13/GPIO1_B6_d| <div className='green'>21</div>  | <div className='green'>22</div> |<div>GPIO1_B7_d/FLEXBUS1_CSN_M3/FLEXBUS0_D10/FLEXBUS1_D15</div>/DSMC_RDYN/VO_LCDC_D1 | 47  |
+| 44 |<div>FLEXBUS0_CSN_M2/FLEXBUS0_D13/FLEXBUS1_D12</div>/DSMC_D6/VO_LCDC_D15/GPIO1_B4_d| <div className='green'>23</div>  | <div className='green'>24</div> |<div>GPIO1_B5_d/FLEXBUS1_CSN_M2/FLEXBUS0_D12/FLEXBUS1_D13</div>/DSMC_D7/VO_LCDC_D14 | 45 |
+| |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |<div>GPIO1_B3_d/RM_IO26/SAI2_LRCK_M1/FLEXBUS1_CSN_M1/FLEXBUS0_D14</div>/FLEXBUS1_D11/DSMC_INT3/VO_LCDC_D16|     43      |
+|  41 |<div>RM_IO24/UART5_CTSN_M1/FLEXBUS1_CSN_M0/FLEXBUS1_D9</div>/DSMC_CSN1/VO_LCDC_D184/GPIO1_B1_d|  <div className='green'>27</div>  | <div className='green'>28</div> |<div>GPIO1_B2_d/RM_IO25/SAI2_SCLK_M1/FLEXBUS0_CSN_M1/FLEXBUS0_D15</div>/FLEXBUS1_D10/DSMC_INT2/VO_LCDC_D17| 42 |
+|40  |<div>FLEXBUS0_CSN_M0/FLEXBUS1_D8/DSMC_D5</div>/VO_LCDC_D19/GPIO1_B0_d| <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |
+|38 |FLEXBUS1_D6/DSMC_D3/VO_LCDC_D21/GPIO1_A6_d| <div className='green'>31</div>  | <div className='green'>32</div> |GPIO1_A7_d/FLEXBUS1_D7/DSMC_D4/VO_LCDC_D20|    39     |
+| 37  |FLEXBUS1_D5/DSMC_D2/VO_LCDC_D22/GPIO1_A5_d| <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |
+| 35  |FLEXBUS1_D3/DSMC_D0/VO_LCDC_CLK/GPIO1_A3_d| <div className='green'>35</div>  | <div className='green'>36</div> |GPIO1_A4_dFLEXBUS1_D4/DSMC_D1/VO_LCDC_D23   |    36      |
+|33 |<div>DSMC_SLV_INT/DSMC_INT0/FLEXBUS1_D1/DSMC_CLKN</div>/VO_LCDC_VSYNC/GPIO1_A1_d | <div className='green'>37</div>  | <div className='green'>38</div> |GPIO1_A2_d/FLEXBUS1_D2/DSMC_DQS0/VO_LCDC_HSYNC|     34     |
+| |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |GPIO1_A0_d/FLEXBUS1_D0/DSMC_CLKP/VO_LCDC_DEN|     32     |
 
 </div>  
 
