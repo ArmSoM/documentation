@@ -444,7 +444,7 @@ ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=895906881225]
 
 For OEM & ODM, please contact: sales@armsom.org
 
-## What do others say about the Sige7?
+## What do others say about the Sige1?
 
 - [CNX](https://www.cnx-software.com/2025/03/26/armsom-forge1-industrial-rockchip-rk3506j-sbc/): $23 ArmSoM Forge1 industrial SBC is powered by Rockchip RK3506J SoC
 - [itsfoss](https://news.itsfoss.com/armsom-forge1/): ArmSoM's Forge1 Looks Like A Versatile Solution for Embedded and Multimedia Applications
