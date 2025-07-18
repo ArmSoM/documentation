@@ -69,7 +69,7 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
         </tr>  
         <tr>  
             <th>USB Interfaces</th>  
-            <th><li>1 × Type C (PD & Programming only)</li>  
+            <th><li>1 × Type C (power & Programming only)</li>  
             <li>1 × USB2.0 HOST</li></th>  
         </tr>  
         <tr>  

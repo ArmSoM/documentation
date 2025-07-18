@@ -17,7 +17,7 @@ The CM5-IO is the IO board for the ArmSoM CM5, with dimensions of 100x80x29 mm. 
 
 The CM5-IO board is an expansion board specifically designed for the CM5 computing module, aimed at assisting in system and embedded board development.
 
-- 1x HDMI output, 1x DP output
+- 1x HDMI output, 1x Typec(DP) output
 - 4x USB 3.0 Type-A
 - Gigabit Ethernet RJ45 with PoE support
 - Firmware flashing and device mode via USB Type-C

@@ -44,7 +44,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
     - CM5: 55 x 40 x 4.9 毫米
     - CM5-IO: 100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
 
-## Getting started
+## 使用手册
 
 <a href="./armsom-cm5-io#使用手册" class="card-link">
     <div class="card">

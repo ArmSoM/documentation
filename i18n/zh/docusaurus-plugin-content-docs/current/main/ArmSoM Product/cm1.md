@@ -1,45 +1,60 @@
 ---
 description: ArmSoM-forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器，工作温度可达 -40℃~85℃，专为工业网关、HMI、PLC、手持POS和家电显控应用而设计。
-keywords: [armsom, armsom-forge1, maker kit, rockchip, rk3506产品介绍]
-sidebar_label: "Forge1"
-sidebar_position: 10
-slug: /armsom-forge1
+keywords: [armsom, armsom-CM1, RK3506J  Development Boards, RK3506J Core borad, rockchip]
+sidebar_label: "CM1"
+sidebar_position: 5
+slug: /armsom-cm1
 ---
 
-# Forge1 产品简介
+#  ArmSoM-CM1 产品规格书
 
-让我们在 5 分钟内了解 Forge1。
+## 1.1 产品简介
 
-##  概述
-Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器，工作温度可达 -40℃~85℃，专为工业网关、HMI、PLC、手持POS和家电显控应用而设计。
+ArmSoM-CM1 是一款计算机模块，采用RK3506J 三核Cortex-A7 + 1核Cortex-M0。拥有丰富的外围接口，如 SAI、USB2 OTG、RMII、CAN等，该模组满足最小系统要求，板载typec供电&sh烧录口，MIPI DSI屏幕接口，SD扩展卡槽。
 
-嵌入式2D硬件引擎和显示输出引擎，用于最小化CPU开销以满足图像显示要求。
+ArmSoM-CM1 Kit 是由CM1 和 CM1-IO 组成，外设资源更加丰富，2路百兆以太网，2路usb2.0 Host、板载wifi、MIPI DSI 屏幕接口、耳机、麦克风，核心板上引出72路GPIO。
 
-丰富的周边接口，如RS485、USB2、RMII、CAN、DSMC、Flexbus等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
+ArmSoM-CM1 Kit 开发套件提供​**​全栈式Linux系统开发文档**​​与​​**开源软件资源**​​，企业客户可直接采购核心板进行终端产品研发。ArmSoM开源硬件交付​​完整版系统源码​​（含内核定制化补丁、外设驱动及工具链），显著加速客户产品开发进程。
 
-![ArmSoM-Forge1](/img/forge/forge1-banner-zh.jpg)
+为最大化企业开发效率并缩短研发周期，我们为核心板用户系统化整合以下​​**全生命周期开发资源**​​：
 
-## Forge1 使用手册
+​1. **​硬件设计资产​​**
+- 核心板/底板参考原理图（含高速信号完整性设计指南）
+- 机械结构3D模型（STEP格式）
+- 关键元器件封装库
+- 工业级连接器规格书与接口定义手册
 
-<a href="./armsom-forge1#使用手册" class="card-link">
+​2. **​软件交付套件​​**
+- 预验证出厂系统镜像（Buildroot构建）
+- 交叉编译工具链
+- 板级支持包（BSP）与设备树配置模板
+- 外设驱动模块化开发框架
+
+## 1.2 应用领域
+
+RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、显示 HMI（人机交互）、工业信息与数据处理等多个方面。
+
+## CM1 使用手册
+
+<a href="./armsom-cm1#使用手册" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📝</i>
         </div>
         <div class="content">
-            <h2>Forge1使用手册</h2>
-            <p>如何开始使用你的Forge1</p>
+            <h2>CM1使用手册</h2>
+            <p>如何开始使用你的CM1</p>
         </div>
     </div>
 </a>
 
-
 ## 硬件信息
 
-### 硬件接口
-![armsom-forge1-front-back](/img/forge/armsom-forge1-layout.jpg)
+### CM1 硬件接口
 
-### 硬件规格
+![ArmSoM-CM1-front & back](/img/cm/armsom-cm1-front&back1.jpg)
+
+### CM1硬件规格
 
 <table>
     <thead>
@@ -61,42 +76,78 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
             <th>GPU</th>
             <th><li>2D Graphic Engine</li><li>内嵌高性能2D 加速硬件</li></th>
             <th>内存</th>
-            <th><li>512MB DDR3L</li></th>
+            <th><li>256/512MB DDR3L</li></th>
         </tr>
         <tr >
             <th>存储</th>
-            <th><li>512MB NAND</li><li>支持MicroSD卡扩展</li></th>
-            <th>网络</th>
-            <th><li>2 × 百兆以太网</li></th>
-        </tr>
-        <tr>
+            <th><li>256/512MB NAND</li><li>支持MicroSD卡扩展</li></th>
             <th>视频输出</th>
             <th><li>1 x MIPI DSI (2Lane 1.5Gbps)</li></th>
-            <th>音频</th>
-            <th><li>1 × Audio Jack</li><li> 1 × MIC </li></th>
         </tr>
         <tr>
-            <th>USB接口</th>
-            <th><li>1 × Type C（only power & Programming）</li>
-            <li>1 × USB2.0 HOST</li></th>
+            <th>40-PIN & 44-PIN</th>
+            <th><li>引出RK3506J芯片全部剩余功能</li></th>
             <th>按键</th>
             <th><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
         </tr>
         <tr>
-            <th>40-PIN</th>
-            <th><li>和树莓派40pin兼容部分引脚功能，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>
-            <th>14-PIN</th>
-            <th><li>支持 RS485/CAN/MICIN/SPK</li></th>
-        </tr>
-        <tr>
             <th>电源</th>
-            <th><li>DC IN 12V/2A</li><li>Typec 5V/2A</li></th>
+            <th><li>Typec 5V</li></th>
             <th>系统</th>
             <th><li>Rockchip官方支持：buildroot</li></th>
         </tr>
         <tr>
             <th>尺寸</th>
-            <th><li>92 mm x 62mm</li></th>
+            <th><li>70 mm x 42mm</li></th>
+            <th>工作温度</th>
+            <th><li>-40℃ ~ 85℃</li></th>
+        </tr>
+    </tbody>
+</table>
+
+### CM1-IO 硬件接口
+![ArmSoM-CM1-io](/img/cm/armsom-cm1-io.jpg)
+
+### CM1-IO 硬件规格
+
+<table>
+    <thead>
+        <tr>
+            <th>类别</th>
+            <th>功能参数</th>
+            <th>类别</th>
+            <th>功能参数</th>
+        </tr>
+    </thead>
+    <tbody align="left">
+        <tr>
+            <th>40-PIN & 44-PIN Female Header</th>
+            <th><li>扩展核心板剩余功能</li></th>
+            <th>40-PIN</th>
+            <th><li>和树莓派40pin兼容部分引脚功能，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>
+        </tr>
+        <tr>
+            <th>USB接口</th>
+            <th><li>1 × Type C（only power & Programming）</li>
+            <li>2 × USB2.0 HOST</li></th>
+            <th>网络</th>
+            <th><li>2 × 百兆以太网</li><li>1 × WiFi5/BT4.2</li></th>
+        </tr>
+        <tr>
+            <th>音频</th>
+            <th><li>1 × Audio Jack</li></th>
+            <th>14-PIN</th>
+            <th><li>支持 RS485/CAN/MICIN/SPK</li></th>
+        </tr>
+        <tr>
+            <th>电源</th>
+            <th><li>Typec 5V</li><li>DC 12V</li></th>
+            <th>系统</th>
+            <th><li>Rockchip官方支持：buildroot</li></th>
+        </tr>
+        <tr>
+            <th>尺寸</th>
+            <th><li>100 mm x 70mm</li></th>
             <th>工作温度</th>
             <th><li>-40℃ ~ 85℃</li></th>
         </tr>
@@ -151,18 +202,17 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
 
 <details>
     <summary>
-    14-PIN Header
+    12-PIN Header
     </summary>
 
 | Pin  | Assignment   | Description                  | Pin  | Assignment   | Description                  |
     :--------: | :---------: | :--------: |  :--------: |  :--------: |  :--------: | 
 | 1    | RS485_A      | RS485 差分信号正极           | 2    | RS485_B      | RS485 差分信号负极           |
 | 3    | CAN_L        | CAN 总线差分信号低电平        | 4    | CAN_H        | CAN 总线差分信号高电平        |
-| 5    | GND          | 系统接地                     | 6    | GND          | 系统接地（冗余设计）         |
+| 5    | GND          | 系统接地                     | 6    | VBAT_RTC    | RTC 实时时钟电池供电输入   |
 | 7    | MICIN_P      | 麦克风输入正极（差分信号）    | 8    | MICIN_N      | 麦克风输入负极（差分信号）    |
 | 9    | MICIN_P      | 麦克风输入正极（备用通道）    | 10   | MICIN_N      | 麦克风输入负极（备用通道）    |
-| 11   | GND          | 音频信号接地                 | 12   | VBAT_RTC     | RTC 实时时钟电池供电输入     |
-| 13   | SPK_P        | 扬声器输出正极（差分驱动）    | 14   | SPK_N        | 扬声器输出负极（差分驱动）    |
+| 11   | SPK_P        | 扬声器输出正极（差分驱动）    | 12  | SPK_N        | 扬声器输出负极（差分驱动）    |
 </details>
 
 ## 开发资料
@@ -199,11 +249,12 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
 |:--------: | :---------: | :--------:  | 
 |buildroot | buildroot for Forge1 :  <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。|[百度网盘](https://pan.baidu.com/s/1YRHG5Ki8d6ECrQiyWbzIvw?pwd=arms)  |
 
+
 ### 硬件资料
 
-获取 Forge1 原理图、DXF等硬件资料
+获取 CM1 原理图、DXF等硬件资料
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
@@ -215,7 +266,7 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
                 <i>📄</i>
             </div>
             <div class="content">
-                <h2>Forge1 SCH</h2>
+                <h2>CM1 SCH</h2>
             </div>
         </div>
 </a>
@@ -225,7 +276,7 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>Forge1 2D</h2>
+            <h2>CM1 2D</h2>
         </div>
     </div>
 </a>
@@ -235,232 +286,11 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
             <i>📜</i>
         </div>
         <div class="content">
-            <h2>Forge1 位号图</h2>
+            <h2>CM1 位号图</h2>
         </div>
     </div>
 </a>
 </div>
-
-
-## 使用手册
-
-Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的准备工作，开始使用你的Forge1🚀
-
-### 工具准备
-* 电源（二选一）
-  * DC IN 12V/1A
-  * Typec 5V/2A
-* 系统安装（二选一）
-  * 板载eMMC启动
-    * USB Type-C数据线，从 typec 端口在Forge系列上写入镜像，您需要Type-C数据线连接 Forge系列和 PC。
-  * MicroSD卡/TF卡启动
-    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
-
-**可选选项**
-* 调试串口
-* Ethernet 线（网线）
-
-### 烧录方式选择
-<div class="cards">
-    <a href="./getting-start/flash-img" class="card-link">
-        <div class="card">
-            <div class="icon">
-                <i>🎇</i>
-            </div>
-            <div class="content">
-                <h2>系统镜像烧录</h2>
-            </div>
-        </div>
-    </a>
-</div>
-
-## 接口使用
-
-如果您是首次使用 ArmSoM-Forge1 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
-
-| 硬件接口  | [Forge1](./armsom-forge1#硬件接口) |
-| --------------- | ----- | 
-
-### 调试串口
-
-如下所示连接 USB 转 TTL 串口线：
-
-![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
-
-| Forge1       | 连接  | 串口模块 |
-| --------------- | ----- | ------ |
-| **GND** (pin 6) | ---> | GND |
-| **TX** (pin 8)  | ---> | RX |
-| **RX** (pin 10) | ---> | TX |
-
-
-### 以太网口
-
-1. 首先将网线的一端插入 ArmSoM-Forge1 的以太网接口，网线的另一端接入路由器，并确保
-网络是畅通的
-2. 系统启动后会通过 DHCP 自动给以太网卡分配 IP 地址，不需要其他任何配置
-3. 在ArmSoM-Forge1 的 Linux 系统中查看 IP 地址的命令如下所示
-
-```bash
-root@armsom:/# ip a
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-2: can0: <NOARP,ECHO> mtu 16 qdisc noop state DOWN group default qlen 10
-    link/can
-3: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-    link/ether 9e:06:ad:d5:e3:91 brd ff:ff:ff:ff:ff:ff
-4: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-    link/ether 7e:09:de:1d:0c:46 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.150/24 brd 192.168.1.255 scope global dynamic noprefixroute eth1
-       valid_lft 43173sec preferred_lft 37773sec
-
-```
-4. 使用工具 ping 判断是否连通网络。
-
-测试网络连通性的命令如下，ping 命令可以通过 Ctrl+C 快捷键来中断运行
-```bash
-root@armsom:/# ping www.baidu.com
-PING www.baidu.com (183.2.172.17): 56 data bytes
-64 bytes from 183.2.172.17: seq=0 ttl=52 time=10.838 ms
-64 bytes from 183.2.172.17: seq=1 ttl=52 time=10.320 ms
-64 bytes from 183.2.172.17: seq=2 ttl=52 time=11.193 ms
-64 bytes from 183.2.172.17: seq=3 ttl=52 time=10.555 ms
-64 bytes from 183.2.172.17: seq=4 ttl=52 time=19.587 ms
-64 bytes from 183.2.172.17: seq=5 ttl=52 time=24.736 ms
-^C
---- www.baidu.com ping statistics ---
-6 packets transmitted, 6 packets received, 0% packet loss
-round-trip min/avg/max = 10.320/14.538/24.736 ms
-```
-
-### USB
-
-|  型号  | Forge1 |
-| ----- |  ----- |
-| USB   | 1* Type-C (PD & Programming), 1* USB 2.0 |
-
-**连接 USB 存储设备测试**
-1. 首先将 U 盘或者 USB 移动硬盘插入 Forge1 产品的 USB 接口中
-2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
-```
-root@armsom:/# cat /proc/partitions | grep "sd*"
-major minor  #blocks  name
-   8        0  122880000 sda
-```
-3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
-
-```
-root@armsom:/# sudo mount /dev/sda1 /test/
-```
-
-4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
-
-```
-root@armsom:/test# df -h | grep "sd"
-/dev/sda        4.7G  4.7G     0  100% /test
-```
-
-### 音频
-
-查看系统中的声卡。
-
-```bash
-root@armsom:/# aplay -l
-**** List of PLAYBACK Hardware Devices ****
-card 0: rockchiprk730 [rockchip-rk730], device 0: dailink-multicodecs HiFi-0 [dailink-multicodecs HiFi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-```
-
-录音
-```bash
-arecord -D hw:0,0 -f S16_LE -t wav -c2 -r 16000 -d 3 t.wav
-```
-
-播放音乐
-
-```bash
-aplay t.wav
-```
-
-### RTC
-
-- Forge1配备了一颗RTC IC **LK8563S**。
-- 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
-- 请注意，我们应该将 RTC 电池保留在 RTC 连接器中，并确认 rtc LK8563S 设备已创建
-
-```bash
-root@armsom:/#  dmesg | grep rtc
-[    6.407133] rtc-hym8563 6-0051: rtc information is valid
-[    6.412731] rtc-hym8563 6-0051: registered as rtc0
-[    6.413779] rtc-hym8563 6-0051: setting system clock to 2022-06-22T01:22:26 UTC (1655860946)
-```
-
-- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
-
-```bash
-root@armsom:/# hwclock -r
-2023-11-03 10:32:40.461910+00:00
-root@armsom:/# date
-2023年 11月 03日 星期五 10:33:12 UTC
-root@armsom:/# hwclock -w
-root@armsom:/# hwclock -r
-root@armsom:/# poweroff
-```
-
-- 关闭RTC电池，10分钟或更长时间后，插入RTC电池并启动Forge1，检查RTC是否与系统时钟同步
-
-```bash
-root@armsom:/# hwclock -r
-2023-11-03 10:35:40.461910+00:00
-root@armsom:/# date
-2023年 11月 03日 星期五 10:36:01 UTC
-```
-
-### MIPI DSI
-
-ArmSoM-Forge1最大输出分辨率为1280x1280@60fps
-
-![armsom-forge1-display](/img/forge/armsom-forge1-display.jpg)
-
-### CAN FD
-查询当前⽹络设备:
-```bash
-root@armsom:/# ifconfig -a
-can0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
-          NOARP  MTU:16  Metric:1
-          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:10
-          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
-          Interrupt:45
-```
-CAN启动：
-
-```bash
-关闭CAN:
-ip link set can0 down
-设置仲裁段1M波特率，数据段3M波特率:
-ip link set can0 type can bitrate 1000000 dbitrate 3000000 fd on
-打印can0信息:
-ip -details link show can0
-启动CAN:
-ip link set can0 up
-```
-CAN FD发送:
-```bash
-发送（标准帧,数据帧,ID:123,date:DEADBEEF）:
-cansend can0 123##1DEADBEEF
-发送（扩展帧,数据帧,ID:00000123,date:DEADBEEF）:
-cansend can0 00000123##1DEADBEEF
-```
-CAN FD接收:
-```bash
-开启打印，等待接收:
-candump can0 &
-```
 
 ## 产品证书
 
@@ -468,11 +298,11 @@ candump can0 &
 
 ## 供货声明
 
-ArmSoM-Forge1 将至少生产到 2035 年 5 月。
+ArmSoM-CM1 将至少生产到 2035 年 7 月。
 
 ## 配件
 
-我们为 ArmSoM-Sige 设计的官方配件旨在帮助您从计算机获得最佳性能。
+我们为 ArmSoM-CM1 Kit 设计的官方配件旨在帮助您从计算机获得最佳性能。
 
 <div class="cards">
 <a href="./armsom-display-7-hd" class="card-link">
@@ -489,19 +319,17 @@ ArmSoM-Forge1 将至少生产到 2035 年 5 月。
 </div>
 
 ## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/forge1](https://www.armsom.org/product-page/forge1)
- 
-ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807356692995.html](https://aliexpress.com/item/3256807356692995.html) 
 
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=895906881225](https://item.taobao.com/item.htm?id=895906881225)
+ArmSoM 独立站: 
+
+ArmSoM 速卖通官方店: 
+
+ArmSoM 淘宝官方店: 
 
 OEM&ODM,  请联系: sales@armsom.org
 
 ## 专家视角
 
-- [CNX](https://www.cnx-software.com/2025/03/26/armsom-forge1-industrial-rockchip-rk3506j-sbc/): $23 ArmSoM Forge1 industrial SBC is powered by Rockchip RK3506J SoC
-- [itsfoss](https://news.itsfoss.com/armsom-forge1/): ArmSoM's Forge1 Looks Like A Versatile Solution for Embedded and Multimedia Applications
-- [electronics-lab](https://www.electronics-lab.com/armsom-forge1-sbc-features-rockchip-rk3506j-soc-with-cortex-a7-m0-cores-for-industrial-and-audio-applications/)
 
 ## 注意事项
 
@@ -513,4 +341,10 @@ OEM&ODM,  请联系: sales@armsom.org
 5. 握持设备时，尽量避免直接接触主板上的芯片，以免静电损坏芯片。
 6. 使用设备时，请勿在运行过程中插拔电线或其他设备，以避免电流冲击导致的损害。
 7. 在插拔扩展GPIO/MIPI接口时，请先关闭电源并断开电源线，以避免电流对设备造成损害。
+:::
+
+:::danger [注意散热]
+
+在未采取有效散热措施的情况下，主芯片的表面温度可能超过 60 度。在处理设备时，请避免直接接触 SoC 及其周围的电源电感，以免造成烫伤。使用设备时，请确保环境通风良好，以防止局部热量聚集导致过热。同时，请勿将单板机放置在阳光直射的区域。建议根据具体使用情况，选择官方 [散热器风扇](./sige-active-cooling-kit)或[散热外壳](./sige-diy-case1)，或者第三方散热套件，以确保设备的良好散热性能。
+
 :::
