@@ -34,7 +34,7 @@ To maximize enterprise development efficiency and shorten R&D cycles, we systema
 
 The RK3506J finds wide application across various fields, including industrial control, smart appliance display control, HMI (Human-Machine Interface), and industrial information & data processing.
 
-## CM1 User Manual
+## CM1 Getting started
 
 <a href="./armsom-cm1#user-manual" class="card-link">
     <div class="card">
@@ -253,7 +253,7 @@ Cloud Drive Address:
 Get CM1 Schematics, DXF files, and other hardware resources.
 
 <a href="https://drive.google.com/drive/folders/1DQ3_8hukDf-x2BGWeO49bJmyDZq1hT25" class="btn">
-  <span>Baidu Netdisk Link</span>
+  <span>Google Drive link</span>
 </a>
 <br/>
 
@@ -289,6 +289,8 @@ Get CM1 Schematics, DXF files, and other hardware resources.
     </div>
 </a>
 </div>
+
+## User Manual
 
 ## Product Certifications
 
