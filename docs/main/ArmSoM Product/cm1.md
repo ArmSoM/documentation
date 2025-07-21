@@ -36,14 +36,14 @@ The RK3506J finds wide application across various fields, including industrial c
 
 ## CM1 User Manual
 
-<a href="./armsom-cm1#user-manual" class="card-link">
+<a href="./armsom-cm1-io#getting-started" class="card-link">
     <div class="card">
         <div class="icon">
-            <i>📝</i>
+            <i>✈️</i>
         </div>
         <div class="content">
-            <h2>CM1 User Manual</h2>
-            <p>Getting Started with your CM1</p>
+            <h2>CM5 User Manual</h2>
+            <p>How to start using your CM5 Module</p>
         </div>
     </div>
 </a>
