@@ -161,7 +161,7 @@ network={
 
 **连接网络**
 ```bash
-wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_suppli
+wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_suppli.conf
 Successfully initialized wpa_supplicant
 ```
 
