@@ -450,6 +450,7 @@ For OEM & ODM, please contact: sales@armsom.org
 - [itsfoss](https://news.itsfoss.com/armsom-forge1/): ArmSoM's Forge1 Looks Like A Versatile Solution for Embedded and Multimedia Applications
 - [electronics-lab](https://www.electronics-lab.com/armsom-forge1-sbc-features-rockchip-rk3506j-soc-with-cortex-a7-m0-cores-for-industrial-and-audio-applications/)
 - [notebookcheck](https://www.notebookcheck.com/Forge1-Neue-IoT-Alternative-zum-Raspberry-Pi-startet-guenstig.986743.0.html)
+- [taoofmac](https://taoofmac.com/space/reviews/2025/07/26/2145)
 
 ## Notes
 
