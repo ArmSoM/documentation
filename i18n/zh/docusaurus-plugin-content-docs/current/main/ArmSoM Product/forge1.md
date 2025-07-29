@@ -501,9 +501,9 @@ OEM&ODM,  请联系: sales@armsom.org
 
 - [CNX](https://www.cnx-software.com/2025/03/26/armsom-forge1-industrial-rockchip-rk3506j-sbc/): $23 ArmSoM Forge1 industrial SBC is powered by Rockchip RK3506J SoC
 - [itsfoss](https://news.itsfoss.com/armsom-forge1/): ArmSoM's Forge1 Looks Like A Versatile Solution for Embedded and Multimedia Applications
-- [electronics-lab](https://www.electronics-lab.com/armsom-forge1-sbc-features-rockchip-rk3506j-soc-with-cortex-a7-m0-cores-for-industrial-and-audio-applications/)
-- [notebookcheck](https://www.notebookcheck.com/Forge1-Neue-IoT-Alternative-zum-Raspberry-Pi-startet-guenstig.986743.0.html)
-- [taoofmac](https://taoofmac.com/space/reviews/2025/07/26/2145)
+- [electronics-lab](https://www.electronics-lab.com/armsom-forge1-sbc-features-rockchip-rk3506j-soc-with-cortex-a7-m0-cores-for-industrial-and-audio-applications/)：ArmSoM Forge1 SBC Features Rockchip RK3506J SoC with Cortex-A7/M0 Cores for Industrial and Audio Applications
+- [notebookcheck](https://www.notebookcheck.com/Forge1-Neue-IoT-Alternative-zum-Raspberry-Pi-startet-guenstig.986743.0.html)：Forge1: Neue IoT-Alternative zum Raspberry Pi startet günstig
+- [taoofmac](https://taoofmac.com/space/reviews/2025/07/26/2145)：The ArmSom Forge1
 
 
 ## 注意事项
