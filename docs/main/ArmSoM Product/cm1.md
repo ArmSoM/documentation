@@ -324,7 +324,7 @@ ArmSoM Independent Site:
 
 ArmSoM AliExpress Official Store:
 
-ArmSoM Taobao Official Store:
+ArmSoM Taobao Official Store: [https://item.taobao.com/item.htm?ft=t&id=965592864051](https://item.taobao.com/item.htm?ft=t&id=965592864051)
 
 For OEM&ODM, please contact: sales@armsom.org
 

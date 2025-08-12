@@ -327,7 +327,7 @@ ArmSoM 独立站:
 
 ArmSoM 速卖通官方店: 
 
-ArmSoM 淘宝官方店: 
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?ft=t&id=965592864051](https://item.taobao.com/item.htm?ft=t&id=965592864051)
 
 OEM&ODM,  请联系: sales@armsom.org
 

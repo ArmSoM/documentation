@@ -83,6 +83,11 @@ ArmSoM 提供模块化核心板与灵活的载板设计，旨在帮助客户快�
 | --------- | ----- | --- |
 |![armsom-cm5-io](/img/cm/armsom-cm5-io.png)|![armsom-aim-io](/img/aim/armsom-aim-io.png)|![arsmom-w3](/img/lm/armsom-w3.png)|
 
+#### 工业级模块化核心板和载板
+| [ArmSoM-CM1](./armsom-cm1)| 
+|---------|
+|![armsom-cm1](/img/cm/armsom-cm1-io.png)|
+
 通过这种模块化设计，客户可以:
 - **加速开发**：专注于应用开发而无需从零设计硬件，缩短研发周期。  
 - **降低成本**：模块化架构便于核心板与载板复用，有效减少开发和生产成本。  
