@@ -38,7 +38,7 @@ Sige7 - 连接创新，无限可能
 - RAM：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
 - Flash：64GB/128GB eMMC，默认eMMC 64GB
 - 工作电压：具有宽范围的输入电压，从5V到20V（电压误差±5%）
-- 工作温度：0℃ ~ 70℃
+- 工作温度：0℃ ~ 80℃
 - 操作系统：
   - Rockchip官方支持：Android 12.0，Debian11，Buildroot
   - 第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS

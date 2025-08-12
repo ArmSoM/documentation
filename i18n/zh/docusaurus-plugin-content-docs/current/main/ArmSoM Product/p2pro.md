@@ -23,7 +23,7 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - **Flash**：8GB eMMC，选配
 - **WiFi&蓝牙**：802.11 a/b/g/n/ac & BT5.0 (AP6256)
 - **工作电压**：具有宽范围的输入电压，5V（电压误差±5%）
-- **工作温度**：0℃ ~ 70℃
+- **工作温度**：0℃ ~ 80℃
 - **操作系统**：
   - **Rockchip官方支持**：Debian11，Buildroot
   - **第三方支持**：istoreos(openwrt)
@@ -75,7 +75,7 @@ P2pro的POE模块和eMMC模块为选配，默认没有
 |操作系统 |Debian11, Buildroot，istoreos|
 |大小 |65mm x 52.5mm|
 |重量 |30g|
-|工作温度	| 0℃ ~ 70℃|
+|工作温度	| 0℃ ~ 80℃|
 
 </details>
 

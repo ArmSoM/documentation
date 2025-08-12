@@ -36,7 +36,7 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - **RAM**：4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
 - **Flash**：16GB/32GB/64GB/128GB eMMC，默认eMMC 32GB
 - **工作电压**：电压 4V（电压误差±5%）
-- **工作温度**：0℃ ~ 70℃
+- **工作温度**：0℃ ~ 80℃
 - **接口类型**：LGA封装（栅格阵列封装），总引脚数 506Pin
 - **操作系统**：
   - **Rockchip官方支持**：Android 12.0，Debian11，Buildroot

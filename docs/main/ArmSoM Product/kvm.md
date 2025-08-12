@@ -66,7 +66,7 @@ Video support HDMI,VGA,DP and DVI,support 4 expansion boards
 |Operating system |Debian10|
 |Size |16.00 x 12.50 x 3.15 cm|
 |Weight |600g|
-|Operating temperature	| 0℃ ~ 70℃|
+|Operating temperature	| 0℃ ~ 80℃|
 
 ### Interface topology
 ![armsom-kvm_5](/img/link/armsom-kvm_5.png)

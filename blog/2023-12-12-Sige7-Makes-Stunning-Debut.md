@@ -37,7 +37,7 @@ Super powerful computing performance, multi-core computing power surpasses Core 
 - RAM: 8GB/16GB/32GB (up to 32GB available) 64bit LPDDR4/LPDDR4x, default LPDDR4x 8GB
 - Flash: 64GB/128GB eMMC, default eMMC 64GB
 - Operating voltage: With wide range of input voltage, from 5V to 20V (voltage error ±5%)
-- Working temperature: 0℃ ~ 70℃
+- Working temperature: 0℃ ~ 80℃
 - operating system:
    - Rockchip official support: Android 12.0, Debian11, Buildroot
    - Third-party support: Armbian, Ubuntu 20.04, Ubuntu22.04, Kylin OS
