@@ -19,16 +19,16 @@ The ArmSoM-CM1 Kit development suite provides **full-stack Linux system developm
 To maximize enterprise development efficiency and shorten R&D cycles, we systematically integrate the following **full lifecycle development resources** for core module users:
 
 ​1. **Hardware Design Assets**
-    - Core Module / Carrier Board Reference Schematics (including high-speed signal integrity design guidelines)
-    - Mechanical Structure 3D Models (STEP format)
-    - Key Component Footprint Libraries
-    - Industrial Connector Specifications and Interface Definition Manuals
+- Core Module / Carrier Board Reference Schematics (including high-speed signal integrity design guidelines)
+- Mechanical Structure 3D Models (STEP format)
+- Key Component Footprint Libraries
+- Industrial Connector Specifications and Interface Definition Manuals
 
 ​2. **Software Delivery Suite**
-    - Pre-validated Factory System Images (Built with Buildroot)
-    - Cross-compilation Toolchain
-    - Board Support Package (BSP) & Device Tree Configuration Templates
-    - Modular Peripheral Driver Development Framework
+- Pre-validated Factory System Images (Built with Buildroot)
+- Cross-compilation Toolchain
+- Board Support Package (BSP) & Device Tree Configuration Templates
+- Modular Peripheral Driver Development Framework
 
 ## 1.2 Application Areas
 
@@ -42,8 +42,8 @@ The RK3506J finds wide application across various fields, including industrial c
             <i>✈️</i>
         </div>
         <div class="content">
-            <h2>CM5 User Manual</h2>
-            <p>How to start using your CM5 Module</p>
+            <h2>CM1 User Manual</h2>
+            <p>How to start using your CM1 Module</p>
         </div>
     </div>
 </a>
