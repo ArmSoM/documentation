@@ -70,7 +70,7 @@ The RK3506J finds wide application across various fields, including industrial c
             <th>SOC</th>
             <th><li>RockChip RK3506j</li></th>
             <th>CPU</th>
-            <th><li>RK3506 Tri-core Cortex-A7 Processor</li></th>
+            <th><li>RK3506 Tri-core Cortex-A7 Processor & single-core Cortex-M0</li></th>
         </tr>
         <tr>
             <th>GPU</th>

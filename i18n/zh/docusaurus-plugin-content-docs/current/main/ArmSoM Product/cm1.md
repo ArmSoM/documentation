@@ -70,7 +70,7 @@ RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、
             <th>SOC</th>
             <th><li>RockChip RK3506j</li></th>
             <th>CPU</th>
-            <th><li>RK3506 三核Cortex-A7 处理器</li></th>
+            <th><li>RK3506 三核Cortex-A7 处理器 + 1核Cortex-M0</li></th>
         </tr>
         <tr>
             <th>GPU</th>
