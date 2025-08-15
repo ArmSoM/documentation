@@ -23,6 +23,7 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
 ### Compatibility
 - Forge1
 - AIM7
+- CM1
 
 ## Display Panel Specifications
 

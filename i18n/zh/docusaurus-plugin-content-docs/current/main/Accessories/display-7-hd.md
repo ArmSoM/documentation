@@ -24,6 +24,7 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 ### 兼容性
 - Forge1
 - AIM7
+- CM1
 
 ## 显示面板规格参数
 
