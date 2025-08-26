@@ -136,7 +136,7 @@ RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、
         <tr>
             <th>音频</th>
             <th><li>1 × Audio Jack</li></th>
-            <th>14-PIN</th>
+            <th>12-PIN</th>
             <th><li>支持 RS485/CAN/MICIN/SPK</li></th>
         </tr>
         <tr>

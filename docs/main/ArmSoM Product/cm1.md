@@ -136,7 +136,7 @@ The RK3506J finds wide application across various fields, including industrial c
         <tr>
             <th>Audio</th>
             <th><li>1 × Audio Jack (Headphone/Mic)</li></th>
-            <th>14-PIN Header</th>
+            <th>12-PIN Header</th>
             <th><li>Supports RS485/CAN/MICIN/SPK</li></th>
         </tr>
         <tr>
