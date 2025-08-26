@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-forge1 is an industrial-grade product featuring the RK3506J tri-core Cortex-A7 application processor. It operates within a temperature range of -40°C to 85°C and is specifically designed for industrial gateways, HMIs, PLCs, handheld POS systems, and home appliance display control applications.
+description: ArmSoM-CM1 is an industrial-grade product featuring the RK3506J tri-core Cortex-A7 application processor. It operates within a temperature range of -40°C to 85°C and is specifically designed for industrial gateways, HMIs, PLCs, handheld POS systems, and home appliance display control applications.
 keywords: [armsom, armsom-CM1, RK3506J Development Boards, RK3506J Core board, rockchip]
 sidebar_label: "CM1"
 sidebar_position: 5
@@ -234,7 +234,7 @@ The RK3506J finds wide application across various fields, including industrial c
 
 ### Official Images
 
-The ArmSoM team uses Buildroot as the foundation for the official Forge1 operating system. [How to flash the system image?](https://docs.armsom.org/en/getting-start/flash-img)📤
+The ArmSoM team uses Buildroot as the foundation for the official CM1 operating system. [How to flash the system image?](https://docs.armsom.org/en/getting-start/flash-img)📤
 
 The following systems have been tested and validated by ArmSoM:
 
@@ -246,7 +246,7 @@ Cloud Drive Address:
 
 | logo | Description | Download|
 |:--------: | :---------: | :--------: |
-|buildroot | buildroot for Forge1: <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive link](https://drive.google.com/drive/folders/1UJJPNZB4ghGXN7CzI96kZUMQpf6MEM7Y) |
+|buildroot | buildroot for CM!: <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive link](https://drive.google.com/drive/folders/1UJJPNZB4ghGXN7CzI96kZUMQpf6MEM7Y) |
 
 ### Hardware Resources
 
