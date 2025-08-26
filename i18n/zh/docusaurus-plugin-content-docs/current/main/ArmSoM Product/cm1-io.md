@@ -146,7 +146,7 @@ root@armsom:/# find / -name "wpa_supplicant.conf"
 
 **修改账号密码**
 ```bash
-cat /userdata/cfg/wpa_supplicant.conf
+root@armsom:/# vi /userdata/cfg/wpa_supplicant.conf
 ctrl_interface=/var/run/wpa_supplicant
 ap_scan=1
 update_config=1
@@ -161,7 +161,7 @@ network={
 
 **连接网络**
 ```bash
-wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_suppli.conf
+root@armsom:/# wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_supplicant.conf
 Successfully initialized wpa_supplicant
 ```
 
@@ -215,14 +215,14 @@ major minor  #blocks  name
 3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
 
 ```
-root@armsom:/# sudo mount /dev/sda1 /test/
+root@armsom:/# sudo mount /dev/sda1 /mnt
 ```
 
 4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
 
 ```
-root@armsom:/test# df -h | grep "sd"
-/dev/sda        4.7G  4.7G     0  100% /test
+root@armsom:/mnt# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /mnt
 ```
 
 ### 音频

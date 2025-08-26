@@ -320,7 +320,7 @@ Our official accessories designed for the ArmSoM-CM1 Kit aim to help you achieve
 
 ## Purchase Samples
 
-ArmSoM Independent Site:
+ArmSoM Independent Site: [https://item.taobao.com/item.htm?ft=t&id=965592864051](https://item.taobao.com/item.htm?ft=t&id=965592864051)
 
 ArmSoM AliExpress Official Store:
 

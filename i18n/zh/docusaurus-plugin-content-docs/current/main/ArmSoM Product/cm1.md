@@ -323,7 +323,7 @@ ArmSoM-CM1 将至少生产到 2035 年 7 月。
 
 ## 样品购买
 
-ArmSoM 独立站: 
+ArmSoM 独立站: [https://www.armsom.org/product-page/cm1](https://www.armsom.org/product-page/cm1)
 
 ArmSoM 速卖通官方店: 
 

@@ -118,7 +118,7 @@ root@armsom:/# find / -name "wpa_supplicant.conf"
 
 **Change account password**
 ```bash
-cat /userdata/cfg/wpa_supplicant.conf
+root@armsom:/# vi /userdata/cfg/wpa_supplicant.conf
 ctrl_interface=/var/run/wpa_supplicant
 ap_scan=1
 update_config=1
@@ -133,7 +133,7 @@ network={
 
 **Connect to the network**
 ```bash
-wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_suppli.conf
+root@armsom:/# wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_supplicant.conf
 Successfully initialized wpa_supplicant
 ```
 
@@ -187,14 +187,14 @@ major minor  #blocks  name
 3. The mount command can be used to mount a USB drive to/mnt, and then the files on the USB drive can be viewed
 
 ```
-root@armsom:/# sudo mount /dev/sda1 /test/
+root@armsom:/# sudo mount /dev/sda1 /mnt
 ```
 
 4. After mounting, you can use the `df - h` command to view the capacity usage and mounting points of the USB flash drive
 
 ```
-root@armsom:/test# df -h | grep "sd"
-/dev/sda        4.7G  4.7G     0  100% /test
+root@armsom:/mnt# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /mnt
 ```
 
 ### audio
