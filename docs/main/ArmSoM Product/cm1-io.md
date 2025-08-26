@@ -105,38 +105,106 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ```
 
 ### WIFI
-Under the buildroot system, connect to WiFi using the wpa_cli command-line tool
 
-**Find configuration file**
+#### WIFI Station
+
+Wi-Fi Station mode is an operating mode that enables a Wi-Fi device to connect to a Wi-Fi network and communicate with other devices.
+
 ```bash
-root@armsom:/# find / -name "wpa_supplicant.conf"
-/etc/dbus-1/system.d/wpa_supplicant.conf
-/etc/wpa_supplicant.conf
-/run/wpa_supplicant/wpa_supplicant.conf
-/userdata/cfg/wpa_supplicant.conf
-```
+root@armsom:/# ifconfig wlan0 up #Open wlan0
+root@armsom:/# ifconfig -a
+root@rk3506-buildroot:/# ifconfig -a
+can0 Link encap:UNSPEC HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00 
+NOARP MTU:16 Metric:1 
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+collisions:0 txqueuelen:10 
+RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) 
+Interrupt:45
 
-**Change account password**
+eth0 Link encap:Ethernet HWaddr 9E:3C:0C:CC:4D:1D 
+UP BROADCAST MULTICAST MTU:1500 Metric:1 
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+collisions:0 txqueuelen:1000 
+RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) 
+Interrupt:54 Base address:0x2000
+
+eth1 Link encap:Ethernet HWaddr A2:3C:0C:CC:4D:1D 
+UP BROADCAST MULTICAST MTU:1500 Metric:1 
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+collisions:0 txqueuelen:1000 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) 
+Interrupt:56 Base address:0x2000
+
+lo Link encap:Local Loopback 
+inet addr:127.0.0.1 Mask:255.0.0.0 
+UP LOOPBACK RUNNING MTU:65536 Metric:1 
+RX packets:578 errors:0 dropped:0 overruns:0 frame:0 
+TX packets:578 errors:0 dropped:0 overruns:0 carrier:0 
+collisions:0 txqueuelen:1000 
+RX bytes:28940 (28.2 KiB) TX bytes:28940 (28.2 KiB)
+
+wlan0 Link encap:Ethernet HWaddr CC:64:1A:61:E8:19 
+BROADCAST MULTICAST MTU:1500 Metric: 1
+RX packets: 0 errors: 0 dropped: 0 overruns: 0 frame: 0
+TX packets: 0 errors: 0 dropped: 0 overruns: 0 carrier: 0
+collisions: 0 txqueuelen: 1000
+RX bytes: 0 (0.0 B) TX bytes: 0 (0.0 B)
+root@armsom:/# connmanctl #Enter the Wi-Fi console
+connmanctl> enable wifi #Enable Wi-Fi, enabled by default
+connmanctl> agent on #Turn on the agent
+connmanctl> scan wifi #Turn on Wi-Fi scanning, supports multiple scans
+connmanctl> services #List scanned Wi-Fi networks
+connmanctl> services
+ TP-Link_210A         wifi_cc641a61e819_54502d4c696e6b5f32313041_managed_psk
+    lulu                 wifi_cc641a61e819_6c756c75_managed_psk
+    Triductor_5GAp       wifi_cc641a61e819_547269647563746f725f35474170_managed_none
+    OrayBox-2.4G-FD5C    wifi_cc641a61e819_4f726179426f782d322e34472d46443543_managed_none
+    R4R-2G               wifi_cc641a61e819_5234522d3247_managed_psk
+                         wifi_cc641a61e819_hidden_managed_psk
+    R3mini_Router2G      wifi_cc641a61e819_52336d696e695f526f757465723247_managed_psk
+    R4R-5G               wifi_cc641a61e819_5234522d3547_managed_psk
+    lulu_5G              wifi_cc641a61e819_6c756c755f3547_managed_psk
+    OrayBox-5G-FD5C      wifi_cc641a61e819_4f726179426f782d35472d46443543_managed_none
+    ydtx                 wifi_cc641a61e819_79647478_managed_psk
+    Tri_Mesh_FH_         wifi_cc641a61e819_5472695f4d6573685f46485f_managed_psk
+    Triductor_2GAp       wifi_cc641a61e819_547269647563746f725f32474170_managed_none
+    R3mini_Router5G      wifi_cc641a61e819_52336d696e695f526f757465723547_managed_psk
+    DIRECT-a4-HP M227f LaserJet wifi_cc641a61e819_4449524543542d61342d4850204d32323766204c617365724a6574_managed_psk
+    CFG_2G               wifi_cc641a61e819_4346475f3247_managed_psk
+                         wifi_cc641a61e819_hidden_managed_none
+    Kingstar-Lo          wifi_cc641a61e819_4b696e67737461722d4c6f_managed_psk
+    jachunfree_5         wifi_cc641a61e819_6a616368756e667265655f35_managed_psk
+    ChinaNet-mbCu-5G     wifi_cc641a61e819_4368696e614e65742d6d6243752d3547_managed_psk
+    HH-V-1               wifi_cc641a61e819_48482d562d31_managed_psk
+    ChinaNet-2MNZ        wifi_cc641a61e819_4368696e614e65742d324d4e5a_managed_psk
+    ChinaNet-AtTi        wifi_cc641a61e819_4368696e614e65742d41745469_managed_psk
+    ChinaNet-mbCu        wifi_cc641a61e819_4368696e614e65742d6d624375_managed_psk
+    recynova             wifi_cc641a61e819_726563796e6f7661_managed_psk
+    DIRECT-sk-HUAWEI PixLab X1 wifi_cc641a61e819_4449524543542d736b2d485541574549205069784c6162205831_managed_psk
+    ChinaNet-AtTi-5G     wifi_cc641a61e819_4368696e614e65742d417454692d3547_managed_psk
+    recynova-5G          wifi_cc641a61e819_726563796e6f76612d3547_managed_psk
+    Eureka-office        wifi_cc641a61e819_457572656b612d6f6666696365_managed_psk
+    BTWIFI6-042426       wifi_cc641a61e819_425457494649362d303432343236_managed_psk
+    Eureka-guest         wifi_cc641a61e819_457572656b612d6775657374_managed_psk
+    ACCO-TEST            wifi_cc641a61e819_4143434f2d54455354_managed_psk
+    Kingstar-Lo-5G       wifi_cc641a61e819_4b696e67737461722d4c6f2d3547_managed_psk
+    jachun_link5g        wifi_cc641a61e819_6a616368756e5f6c696e6b3567_managed_psk
+    ChinaNet-Ns24        wifi_cc641a61e819_4368696e614e65742d4e733234_managed_psk
+    CMCC-YM6M            wifi_cc641a61e819_434d43432d594d364d_managed_none
+```
+From the scanned Wi-Fi list, use connect XXXX to connect.
+
 ```bash
-root@armsom:/# vi /userdata/cfg/wpa_supplicant.conf
-ctrl_interface=/var/run/wpa_supplicant
-ap_scan=1
-update_config=1
-
-
-network={
-        ssid="SSID"
-        psk="PASSWORD"
-        key_mgmt=WPA-PSK
-}
+connmanctl> connect wifi_cc641a61e819_79647478_managed_psk
+connmanctl> exit #Exit the terminal.
 ```
+After successfully connecting, use the ifconfig command to view the IP address obtained by wlan0.
 
-**Connect to the network**
 ```bash
-root@armsom:/# wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_supplicant.conf
-Successfully initialized wpa_supplicant
+root@armsom:/# ping www.baidu.com
 ```
-
 
 ### BT
 

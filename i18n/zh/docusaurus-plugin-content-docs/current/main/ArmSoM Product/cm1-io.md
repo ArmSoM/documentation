@@ -133,36 +133,106 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ```
 
 ### WIFI
-buildroot系统下面通过wpa_cli命令行工具连接WiFi
 
-**找到配置文件**
+#### WIFI Station
+
+WiFi 的 Station 模式是一种工作模式，它使 WiFi 设备能够连接到一个 WiFi 网络并与其他设备进行通信。
+
 ```bash
-root@armsom:/# find / -name "wpa_supplicant.conf"
-/etc/dbus-1/system.d/wpa_supplicant.conf
-/etc/wpa_supplicant.conf
-/run/wpa_supplicant/wpa_supplicant.conf
-/userdata/cfg/wpa_supplicant.conf
+root@armsom:/# ifconfig wlan0 up #打开 wlan0
+root@armsom:/# ifconfig -a 
+root@rk3506-buildroot:/# ifconfig -a
+can0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
+          NOARP  MTU:16  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:10
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:45
+
+eth0      Link encap:Ethernet  HWaddr 9E:3C:0C:CC:4D:1D
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:54 Base address:0x2000
+
+eth1      Link encap:Ethernet  HWaddr A2:3C:0C:CC:4D:1D
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:56 Base address:0x2000
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:578 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:578 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:28940 (28.2 KiB)  TX bytes:28940 (28.2 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr CC:64:1A:61:E8:19
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+root@armsom:/# connmanctl #进入 WIFI 操作终端
+connmanctl> enable wifi #使能 WIFI，默认已经使能
+connmanctl> agent on #开启代理
+connmanctl> scan wifi #开启 WIFI 扫描，可以多次扫描
+connmanctl> services #列出扫描到的 WIFI 列表
+connmanctl> services
+    TP-Link_210A         wifi_cc641a61e819_54502d4c696e6b5f32313041_managed_psk
+    lulu                 wifi_cc641a61e819_6c756c75_managed_psk
+    Triductor_5GAp       wifi_cc641a61e819_547269647563746f725f35474170_managed_none
+    OrayBox-2.4G-FD5C    wifi_cc641a61e819_4f726179426f782d322e34472d46443543_managed_none
+    R4R-2G               wifi_cc641a61e819_5234522d3247_managed_psk
+                         wifi_cc641a61e819_hidden_managed_psk
+    R3mini_Router2G      wifi_cc641a61e819_52336d696e695f526f757465723247_managed_psk
+    R4R-5G               wifi_cc641a61e819_5234522d3547_managed_psk
+    lulu_5G              wifi_cc641a61e819_6c756c755f3547_managed_psk
+    OrayBox-5G-FD5C      wifi_cc641a61e819_4f726179426f782d35472d46443543_managed_none
+    ydtx                 wifi_cc641a61e819_79647478_managed_psk
+    Tri_Mesh_FH_         wifi_cc641a61e819_5472695f4d6573685f46485f_managed_psk
+    Triductor_2GAp       wifi_cc641a61e819_547269647563746f725f32474170_managed_none
+    R3mini_Router5G      wifi_cc641a61e819_52336d696e695f526f757465723547_managed_psk
+    DIRECT-a4-HP M227f LaserJet wifi_cc641a61e819_4449524543542d61342d4850204d32323766204c617365724a6574_managed_psk
+    CFG_2G               wifi_cc641a61e819_4346475f3247_managed_psk
+                         wifi_cc641a61e819_hidden_managed_none
+    Kingstar-Lo          wifi_cc641a61e819_4b696e67737461722d4c6f_managed_psk
+    jachunfree_5         wifi_cc641a61e819_6a616368756e667265655f35_managed_psk
+    ChinaNet-mbCu-5G     wifi_cc641a61e819_4368696e614e65742d6d6243752d3547_managed_psk
+    HH-V-1               wifi_cc641a61e819_48482d562d31_managed_psk
+    ChinaNet-2MNZ        wifi_cc641a61e819_4368696e614e65742d324d4e5a_managed_psk
+    ChinaNet-AtTi        wifi_cc641a61e819_4368696e614e65742d41745469_managed_psk
+    ChinaNet-mbCu        wifi_cc641a61e819_4368696e614e65742d6d624375_managed_psk
+    recynova             wifi_cc641a61e819_726563796e6f7661_managed_psk
+    DIRECT-sk-HUAWEI PixLab X1 wifi_cc641a61e819_4449524543542d736b2d485541574549205069784c6162205831_managed_psk
+    ChinaNet-AtTi-5G     wifi_cc641a61e819_4368696e614e65742d417454692d3547_managed_psk
+    recynova-5G          wifi_cc641a61e819_726563796e6f76612d3547_managed_psk
+    Eureka-office        wifi_cc641a61e819_457572656b612d6f6666696365_managed_psk
+    BTWIFI6-042426       wifi_cc641a61e819_425457494649362d303432343236_managed_psk
+    Eureka-guest         wifi_cc641a61e819_457572656b612d6775657374_managed_psk
+    ACCO-TEST            wifi_cc641a61e819_4143434f2d54455354_managed_psk
+    Kingstar-Lo-5G       wifi_cc641a61e819_4b696e67737461722d4c6f2d3547_managed_psk
+    jachun_link5g        wifi_cc641a61e819_6a616368756e5f6c696e6b3567_managed_psk
+    ChinaNet-Ns24        wifi_cc641a61e819_4368696e614e65742d4e733234_managed_psk
+    CMCC-YM6M            wifi_cc641a61e819_434d43432d594d364d_managed_none
 ```
+从扫描到 WIFI 列表中，使用 connect XXXX 进行连接
 
-**修改账号密码**
 ```bash
-root@armsom:/# vi /userdata/cfg/wpa_supplicant.conf
-ctrl_interface=/var/run/wpa_supplicant
-ap_scan=1
-update_config=1
-
-
-network={
-        ssid="SSID"
-        psk="PASSWORD"
-        key_mgmt=WPA-PSK
-}
+connmanctl> connect wifi_cc641a61e819_79647478_managed_psk
+connmanctl> exit #退出终端
 ```
+连接成功后，可以使用 ifconfig 指令来查看 wlan0 所获取的 IP 地址。
 
-**连接网络**
 ```bash
-root@armsom:/# wpa_supplicant -B -i wlan0 -c /userdata/cfg/wpa_supplicant.conf
-Successfully initialized wpa_supplicant
+root@armsom:/# ping www.baidu.com
 ```
 
 
