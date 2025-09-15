@@ -14,6 +14,8 @@ ArmSoM-CM1 is a computer-on-module (COM) based on the Rockchip RK3506J (tri-core
 
 The ArmSoM-CM1 Kit consists of the CM1 module paired with the CM1-IO carrier board, offering even richer peripheral resources: dual 10/100 Ethernet ports, dual USB2.0 Host ports, onboard WiFi, MIPI DSI display interface, headphone jack, microphone input, and 72 GPIOs routed from the core module.
 
+![ArmSoM-CM1](/img/cm/armsom-cm1.jpg)
+
 The ArmSoM-CM1 Kit development suite provides **full-stack Linux system development documentation** and **open-source software resources**. Enterprise customers can directly purchase the core module for end-product development. ArmSoM delivers **complete system source code** (including kernel customization patches, peripheral drivers, and toolchains) as open-source hardware, significantly accelerating customer product development cycles.
 
 To maximize enterprise development efficiency and shorten R&D cycles, we systematically integrate the following **full lifecycle development resources** for core module users:
