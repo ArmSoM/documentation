@@ -248,7 +248,7 @@ Cloud Drive Address:
 
 | logo | Description | Download|
 |:--------: | :---------: | :--------: |
-|buildroot | buildroot for CM!: <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive link](https://drive.google.com/drive/folders/1UJJPNZB4ghGXN7CzI96kZUMQpf6MEM7Y) |
+|buildroot | buildroot for CM1: <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive link](https://drive.google.com/drive/folders/1UJJPNZB4ghGXN7CzI96kZUMQpf6MEM7Y) |
 
 ### Hardware Resources
 
