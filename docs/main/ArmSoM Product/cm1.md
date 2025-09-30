@@ -236,7 +236,7 @@ The RK3506J finds wide application across various fields, including industrial c
 
 ### Official Images
 
-The ArmSoM team uses Buildroot as the foundation for the official CM1 operating system. [How to flash the system image?](https://docs.armsom.org/en/getting-start/flash-img)📤
+The ArmSoM team uses Buildroot as the foundation for the official CM1 operating system. [How to flash the system image?](https://docs.armsom.org/getting-start/flash-img)📤
 
 The following systems have been tested and validated by ArmSoM:
 
