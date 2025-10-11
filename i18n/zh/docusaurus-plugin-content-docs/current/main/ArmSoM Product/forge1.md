@@ -504,6 +504,7 @@ OEM&ODM,  请联系: sales@armsom.org
 - [electronics-lab](https://www.electronics-lab.com/armsom-forge1-sbc-features-rockchip-rk3506j-soc-with-cortex-a7-m0-cores-for-industrial-and-audio-applications/)：ArmSoM Forge1 SBC Features Rockchip RK3506J SoC with Cortex-A7/M0 Cores for Industrial and Audio Applications
 - [notebookcheck](https://www.notebookcheck.com/Forge1-Neue-IoT-Alternative-zum-Raspberry-Pi-startet-guenstig.986743.0.html)：Forge1: Neue IoT-Alternative zum Raspberry Pi startet günstig
 - [taoofmac](https://taoofmac.com/space/reviews/2025/07/26/2145)：The ArmSom Forge1
+- [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
 
 
 ## 注意事项

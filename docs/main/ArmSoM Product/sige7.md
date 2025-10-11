@@ -648,6 +648,7 @@ OEM&ODM, please contact: sales@armsom.org
 - [sk](https://www.sk.rs/arhiva/clanak/33374/armsom-sige7-lici-na-bananu-ali-nije): Armsom Sige7 
 - [Technically Unsure](https://www.youtube.com/watch?v=Cw91DFgMFQQ): ArmSoM Sige7 vs Raspberry Pi 5: The Ultimate Single-Board Battle – Who Reigns Supreme?
 - [habr](https://habr.com/ru/companies/selectel/articles/774782/): A single board that supports 32 GB of RAM. What kind of device is this?
+- [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
 
 ## Notes
 

@@ -641,6 +641,7 @@ OEM&ODM,  请联系: sales@armsom.org
 - [sk](https://www.sk.rs/arhiva/clanak/33374/armsom-sige7-lici-na-bananu-ali-nije)：ArmSoM Sige7 评测。
 - [Technically Unsure](https://www.youtube.com/watch?v=Cw91DFgMFQQ)：ArmSoM Sige7 与树莓派 5：终极单板之战——谁是王者？
 - [habr](https://habr.com/ru/companies/selectel/articles/774782/)：一款支持 32GB 内存的单板计算机, 是一款什么样的设备？
+- [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
 
 ## 注意事项
 
