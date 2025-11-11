@@ -22,6 +22,10 @@ The ArmSoM-CM5 is a compute module powered by the Rockchip RK3576 second-generat
 Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM helps users easily transition from concept to prototype to mass production, making it an ideal creative platform for makers, dreamers, and hobbyists.
 :::
 
+:::tip
+Pin 21 of armsom-cm5v1.1 is not working and will be fixed in the next v1.2 version.
+:::
+
 ### Key Specifications
 
 - **SOC:** Rockchip RK3576
