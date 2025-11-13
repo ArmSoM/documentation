@@ -27,7 +27,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
   - 硬编码：支持H.264和H.265，JPEG最高4K@60fps。
 - RAM：8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
 - Flash：32/64/128GB eMMC，默认eMMC 64GB。
-- 工作电压：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）
+- 工作电压：具有宽范围的输入电压，从 5V到23V（电压误差±5%）
 - 工作温度：0℃ ~ 80℃
 - 操作系统：
   - Rockchip官方支持：Android 14，Debian12，Buildroot

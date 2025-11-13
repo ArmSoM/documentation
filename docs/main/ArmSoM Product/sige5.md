@@ -36,7 +36,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 - **RAM**: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.
 - **Flash**: 32/64/128GB eMMC, default is 64GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
-- **Operating Voltage**: Wide input voltage range, from 4.5V to 23V (voltage error ±5%).
+- **Operating Voltage**: Wide input voltage range, from 5V to 23V (voltage error ±5%).
 - **Operating Temperature**: 0°C to 80°C
 - **Operating Systems**:
   - **Official Rockchip Support**: Android 14, Debian 12, Buildroot
@@ -165,7 +165,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Power Input</th>
-            <th><li>USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A</li></th>
+            <th><li>Wide input voltage range 5V-23V: Supports USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A</li></th>
         </tr>
         <tr>
             <th>Buttons</th>

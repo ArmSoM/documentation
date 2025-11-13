@@ -41,7 +41,7 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 - **RAM**: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
 - **Storage**: 64GB/128GB eMMC, default 64GB eMMC
 - **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
-- **Operating Voltage**: Wide input voltage, 5V to 20V (±5% tolerance)
+- **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
 - **OS**: 
   - **Official**: Android 12.0, Debian 11, Buildroot
@@ -155,7 +155,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>Power Input</th>
-            <th><li>USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A</li></th>
+            <th><li>Wide input voltage range 5V-23V: Supports USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A</li></th>
         </tr>
         <tr>
             <th>Buttons</th>

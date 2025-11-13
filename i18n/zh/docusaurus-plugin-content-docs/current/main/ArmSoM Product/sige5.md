@@ -36,7 +36,7 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 - **RAM**：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB。
 - **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
-- **工作电压**：具有宽范围的输入电压，从4.5V到23V（电压误差±5%）。
+- **工作电压**：具有宽范围的输入电压，从 5V到23V（电压误差±5%）。
 - **工作温度**：0℃ ~ 80℃
 - **操作系统**：
   - **Rockchip官方支持**：Android 14，Debian12，Buildroot
@@ -153,7 +153,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr>
             <th>电源</th>
-            <th><li>支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A</li></th>
+            <th><li>宽范围的输入电压 5V-23V : 支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A</li></th>
         </tr>
         <tr>
             <th>按键</th>

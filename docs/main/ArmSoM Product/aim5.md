@@ -26,7 +26,7 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
   - Hard coded: Supports H.264 and H.265, with JPEG being the highest 4K@60fps .
 - RAM: 8/16GB 32-bit LPDDR5, default 8GB, RK3576 supports up to 16GB.
 - Flash: 32/64/128GB eMMC, default eMMC 64GB.
-- Working voltage: With a wide range of input voltages, from 4.5V to 23V (voltage error ± 5%)
+- Working voltage: With a wide range of input voltages, from 5V to 23V (voltage error ± 5%)
 - Working temperature：0℃ ~ 80℃
 - Operating System
   - Rockchip official support：Android 14，Debian12，Buildroot
