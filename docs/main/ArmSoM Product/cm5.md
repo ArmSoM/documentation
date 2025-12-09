@@ -364,6 +364,7 @@ For OEM & ODM, please contact: sales@armsom.org
 
 - [itsfoss ArmSoM-CM5](https://itsfoss.com/armsom-cm5)：ArmSoM CM5 Powerful Replacement for Raspberry Pi CM4
 - [Technically Unsure](https://www.youtube.com/watch?v=pfsBDO3XehA&list=PLtGrcSFVfrfRbFqx8nbtYvVVwbHp_Nza4): ArmSoM CM5 | Can it Beat the Raspberry Pi CM5?
+- [Platima Tinkers](https://www.youtube.com/watch?v=p55ehXBBLPE): ArmSoM CM5 Review: RK3576 Compute Module with REAL CM4 Compatibility
 
 ## Notes
 
