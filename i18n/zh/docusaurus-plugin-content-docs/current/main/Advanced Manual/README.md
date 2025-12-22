@@ -17,3 +17,5 @@ sidebar_position: 1
 ## [6. RKLLM 简介](./advanced-manual/rknn-llm)
 
 ## [7. Rockchip启动介绍](./advanced-manual/rockchip-boot)
+
+## [8. armsom-sdk Introduction](./advanced-manual/armsom-sdk)
