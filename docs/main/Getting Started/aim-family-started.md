@@ -63,7 +63,7 @@ A system image includes the Linux kernel, basic programs, etc., which are essent
 Visit the Baidu Cloud resource page to obtain the system image: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 
 :::tip
-1. The default account/password for the official image is armsom/armsom, linaro/linaro, root/1234.
+1. The default account/password for the official image is armsom/armsom, root/root.
 2. The Debian system is adapted and compiled using the SDK provided by RK, making it more suitable for users with ISP, GPU, codec, and NPU needs. It can be burned to eMMC using RKDevTool or to an SD card using SDDiskTool.
 3. Ubuntu, Armbian, and OpenWrt are additional options provided by ArmSoM for open-source enthusiasts.
 :::

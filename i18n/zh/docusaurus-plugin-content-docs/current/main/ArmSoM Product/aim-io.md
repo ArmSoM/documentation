@@ -125,11 +125,11 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 访问百度网盘资源介绍页面获取系统镜像: [百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 
 :::tip
-1. 官方镜像的默认账号/密码为armsom/armsom，linaro/linaro。
-2. Ubuntu，Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
+1. 官方镜像的默认账号/密码为armsom/armsom，root/root。
+2. Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
 :::
 
-### 烧录Ubuntu，Armbian，Openwrt系统
+### 烧录Armbian，Openwrt系统
 
 #### 读卡器烧录到microSD
 

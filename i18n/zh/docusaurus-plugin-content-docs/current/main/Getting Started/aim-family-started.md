@@ -60,12 +60,12 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 访问百度网盘资源介绍页面获取系统镜像: [百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 
 :::tip
-1. 官方镜像的默认账号/密码为armsom/armsom，linaro/linaro，root/1234。
+1. 官方镜像的默认账号/密码为armsom/armsom，root/root。
 2. Debian系统是使用RK官方提供SDK适配编译的系统，对于有 ISP、GPU、编解码、NPU需求的用户更加合适。使用RKDevTool烧录到eMMC，或者使用SDDiskTool烧录到SD卡。
-3. Ubuntu，Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
+3. Armbian，Openwrt是ArmSoM为开源爱好者提供的更多选择。
 :::
 
-### 2. 烧录Ubuntu，Armbian，Openwrt系统
+### 2. 烧录Armbian，Openwrt系统
 
 #### 2.1. 读卡器烧录到microSD
 

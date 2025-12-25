@@ -125,7 +125,7 @@ The system image includes the Linux kernel, basic programs, etc., which are esse
 Visit the Baidu Cloud resource introduction page to obtain the system image: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 
 :::tip
-1. The default username/password for the official images is armsom/armsom or linaro/linaro.
+1. The default username/password for the official images is armsom/armsom or root/root.
 2. Ubuntu, Armbian, and OpenWrt offer more choices for open-source enthusiasts provided by ArmSoM.
 :::
 
