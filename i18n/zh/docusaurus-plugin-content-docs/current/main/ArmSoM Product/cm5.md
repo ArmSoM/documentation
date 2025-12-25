@@ -25,7 +25,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 :::
 
 :::tip
-armsom-cm5v1.1 第21pin 不工作，将在下个v1.2 版本修复
+armsom-cm5v1.2 第21pin 不工作，将在下个v1.3 版本修复
 :::
 
 ### 关键参数

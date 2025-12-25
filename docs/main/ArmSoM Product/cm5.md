@@ -23,7 +23,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 :::
 
 :::tip
-Pin 21 of armsom-cm5v1.1 is not working and will be fixed in the next v1.2 version.
+Pin 21 of armsom-cm5v1.2 is not working and will be fixed in the next v1.3 version.
 :::
 
 ### Key Specifications
