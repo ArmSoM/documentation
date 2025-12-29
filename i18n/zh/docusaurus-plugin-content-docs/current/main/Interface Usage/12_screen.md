@@ -22,40 +22,36 @@ MIPI-DSI 接口不支持热插拔操作，请勿在系统通电状态下连接�
 
 MIPI-CSI 接口在默认情况是关闭状态的，需要使能才能使用
 
-在 Armbian 操作系统中，/boot/armbianEnv.txt 文件用于配置系统启动时的参数和设备树插件。
+在 ubuntu/debain 操作系统中，/boot/uEnv/uEnv.txt 文件用于配置系统启动时的参数和设备树插件。
 
 如果你希望检查或启用 MIPI-DSI 相关设备树插件，可以按照以下步骤操作：
 
 - **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/armbianEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，例如：
 
 ```bash
-root@armsom-sige5:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
-这里以激活 armsom-sige5-display-10hd 为例，将 armsom-sige5-display-10hd 打开如下:
+这里以激活 armsom-sige7-display-10hd 为例，将 armsom-sige7-display-10hd 打开如下:
 
 ```bash
-// 根据您手上的产品选择
-overlays=armsom-sige7-display-10hd // Sige7
-overlays=armsom-sige5-display-10hd // Sige5
-overlays=armsom-sige3-display-10hd // Sige3
+# Display
+dtoverlay=/dtb/overlay/rk3588-armsom-sige7-display-1200x1900-10.1hd-overlay.dtbo
 ```
 
-其中 overlays 行指定了设备树覆盖（Device Tree Overlay），如果没有这些内容，你可以手动添加。
-
-编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
+将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
 
 ```
 // 先执行sync
-root@armsom-sige5:/home/armsom# sync
-root@armsom-sige5:/home/armsom# sudo reboot
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 - **验证 ArmSoM  Display 10 HD 是否启用**
 
-使能 armsom-sige5-display-10hd 设备树插件之后重新启动板卡,即可看到mipi dsi屏幕显示系统画面/显示终端日志
+使能 armsom-sige7-display-10hd 设备树插件之后重新启动板卡,即可看到mipi dsi屏幕显示系统画面/显示终端日志
 
 :::tip
 - Q1: 如果直接拔掉电源进行重启，是否可能导致文件未修改或 overlay 系统启动失败？

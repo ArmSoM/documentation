@@ -22,40 +22,36 @@ The MIPI-DSI interface does not support hot swapping operations. Do not connect 
 
 The MIPI-CSI interface is turned off by default and needs to be enabled to be used
 
-In the Armbian operating system/ The boot/armbianEnv. txt file is used to configure system startup parameters and device tree plugins.
+In the Ubuntu/debian operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins.
 
 If you wish to check or enable MIPI-DSI related device tree plugins, you can follow these steps:
 
 -* * View device tree plugin configuration**
 
-Open the file: Open the/boot/armbianEnv. txt file through a terminal and use a text editor such as Nano or Vim, for example:
+Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
 
 ```bash
-root@armsom-sige5 :/ home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
 Taking the activation of armsom sige5-display-10hd as an example, open armsom sige5-display-10hd as follows:
 
 ```bash
-//Choose based on the product you have on hand
-overlays=armsom-sige7-display-10hd // Sige7
-overlays=armsom-sige5-display-10hd // Sige5
-overlays=armsom-sige3-display-10hd // Sige3
+# Display
+dtoverlay=/dtb/overlay/rk3588-armsom-sige7-display-1200x1900-10.1hd-overlay.dtbo
 ```
 
-The 'overlays' line specifies the Device Tree Overlay. If these contents are not available, you can manually add them.
+Remove the `#` before dtoverlay, after editing, save the file and exit the editor to restart the system for the configuration to take effect:
 
-After editing, save the file and exit the editor to restart the system for the configuration to take effect:
-
-```
-//Execute sync first
-root@armsom-sige5 :/ home/armsom# sync
-root@armsom-sige5 :/ home/armsom# sudo reboot
+```bash
+// Run sync first
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 -Verify if ArmSoM Display 10 HD is enabled**
 
-After enabling the armsom-sige5-display-10hd device tree plugin, restart the board to view the mipi DSI screen displaying the system screen/terminal logs
+After enabling the armsom-sige7-display-10hd device tree plugin, restart the board to view the mipi DSI screen displaying the system screen/terminal logs
 
 :::tip
 -Q1: If the power is directly unplugged and restarted, may it result in unmodified files or overlay system startup failure?
