@@ -37,30 +37,33 @@ By default, UART interfaces are disabled and need to be enabled for use.
 The debug serial port is enabled by default, available on pins 8/10 of the 40-pin header.
 :::
 
-In the Armbian operating system, the `/boot/armbianEnv.txt` file is used to configure parameters and device tree overlays at boot time. You can edit this file to enable or disable UART device tree overlays to ensure that the UART bus is properly loaded at startup.
+In the Ubuntu/debit operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can edit this file to enable or disable UART device tree overlays to ensure that the UART bus is properly loaded at startup.
 
 To check or enable UART device tree overlays, follow these steps:
 
 - **View Device Tree Overlay Configuration**
 
-Open the file: Use a text editor like nano or vim to open `/boot/armbianEnv.txt` via terminal, for example:
+Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
 
 ```bash
-root@armsom-sige7:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
 For example, to enable `uart3-m1`, add `rk3588-uart3-m1` to the overlays section like this:
 
 ```
-overlays=rk3588-uart3-m1
+#dtoverlay=/dtb/overlay/rk3588-armsom-uart2-m2.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-uart3-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-uart4-m2.dtbo
+
 ```
 
-After editing, save the file and exit the editor, then reboot the system for the configuration to take effect:
+Remove the `#` before dtoverlay, after editing, save the file and exit the editor to restart the system for the configuration to take effect:
 
 ```bash
-// First, sync
-root@armsom-sige7:/home/armsom# sync
-root@armsom-sige7:/home/armsom# sudo reboot
+// Run sync first
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 :::tip
@@ -73,7 +76,7 @@ root@armsom-sige7:/home/armsom# sudo reboot
 After reboot, you can check whether the UART is working correctly by running the following command:
 
 ```bash
-root@armsom-sige7:/home/armsom# ls /dev/tty*  # List terminal devices
+root@armsom:/home/armsom# ls /dev/tty*  # List terminal devices
 // After configuring the serial port, the corresponding software nodes will be:
 UART3:   /dev/ttyS3
 UART4:   /dev/ttyS4

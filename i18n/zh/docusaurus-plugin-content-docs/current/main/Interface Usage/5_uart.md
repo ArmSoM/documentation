@@ -37,30 +37,33 @@ UART 接口在默认情况是关闭状态的，需要使能才能使用
 调试串口默认已打开，默认在40pin 的 8/10
 :::
 
-在 Armbian 操作系统中，/boot/armbianEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 UART 设备树插件，确保 UART 总线可以在启动时正确加载。
+在 ubuntu/debain 操作系统中，/boot/uEnv/uEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 UART 设备树插件，确保 UART 总线可以在启动时正确加载。
 
 如果你希望检查或启用 UART 相关设备树插件，可以按照以下步骤操作：
 
 - **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/armbianEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，例如：
 
 ```bash
-root@armsom-sige7:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
 这里以激活 uart3-m1 为例，将rk3588-uart3-m1 打开如下:
 
 ```
-overlays=rk3588-uart3-m1
+#dtoverlay=/dtb/overlay/rk3588-armsom-uart2-m2.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-uart3-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-uart4-m2.dtbo
+
 ```
 
-编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
+将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
 
 ```
 // 先执行sync
-root@armsom-sige7:/home/armsom# sync
-root@armsom-sige7:/home/armsom# sudo reboot
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 :::tip
@@ -73,7 +76,7 @@ root@armsom-sige7:/home/armsom# sudo reboot
 重启后，你可以通过以下命令检查 UART 是否正常工作：
 
 ```
-root@armsom-sige7:/home/armsom# ls /dev/tty*  # 执行命令查看终端设备
+root@armsom:/home/armsom# ls /dev/tty*  # 执行命令查看终端设备
 // 配置好串口后，硬件接口对应软件上的节点分别为：
 UART3:   /dev/ttyS3
 UART4:   /dev/ttyS4
