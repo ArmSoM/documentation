@@ -29,45 +29,46 @@ SPI 协议使用主从架构（Master-Slave），由一个主设备控制一个�
 
 ### 7.2.1 spi引脚
 
-ArmSoM系列板子40pin上都有SPI外设，以下以 Sige5 为例子，[Sige5 40PIN定义](/interface-usage/40pin#16-armsom-sige5)
+ArmSoM系列板子40pin上都有SPI外设，以下以 Sige7 为例子，[Sige7 40PIN定义](https://docs.armsom.org/zh/armsom-sige7#%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89)
 
 | SPI    | 引脚       | 功能 | 
 | -------- | ----------- | ----------- |
-| SPI4_MOSI_M0 | 19            | 用于主设备（Master）向从设备（Slave）发送数据。|
-| SPI4_MISO_M0 | 21            | 用于从设备向主设备发送数据|
-| SPI4_CLK_M0  | 23            | 由主设备生成的时钟信号，用于同步数据传输|
-| SPI4_CSN0_M0 | 24            | 用于选择特定的从设备进行通信|
+| SPI0_MOSI_M2 | 19            | 用于主设备（Master）向从设备（Slave）发送数据。|
+| SPI0_MISO_M2 | 21            | 用于从设备向主设备发送数据|
+| SPI0_CLK_M2  | 23            | 由主设备生成的时钟信号，用于同步数据传输|
+| SPI0_CS0_M2 | 24            | 用于选择特定的从设备进行通信|
+| SPI0_CS1_M2 | 26            | 用于选择特定的从设备进行通信|
 
 ### 7.2.2 使能SPI通信接口
 
 SPI接口在默认情况是关闭状态的，需要使能才能使用
 
-在 Armbian 操作系统中，/boot/armbianEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 SPI 设备树插件，确保 SPI 总线可以在启动时正确加载。
+在 ubuntu/debain 操作系统中，/boot/uEnv/uEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 SPI 设备树插件，确保 SPI 总线可以在启动时正确加载。
 
 如果你希望检查或启用 SPI 相关设备树插件，可以按照以下步骤操作：
 
 - **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/armbianEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，例如：
 
 ```bash
-root@armsom-sige5:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
-这里以激活 spi4-m0 为例，将 rk3576-spi4-m0-cs1-spidev 打开如下:
+这里以激活 spi0，spi1 为例，将 rk3588-armsom-spi1-m1-cs0-spidev 打开如下:
 
 ```
-overlays=rk3576-spi4-m0-cs1-spidev
+dtoverlay=/dtb/overlay/rk3588-armsom-spi0-m2-cs0-cs1-spidev.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-spi1-m1-cs0-spidev.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-uart2-m0.dtbo
 ```
 
-其中 overlays 行指定了设备树覆盖（Device Tree Overlay），如果没有这些内容，你可以手动添加。
-
-编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
+将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
 
 ```
 // 先执行sync
-root@armsom-sige5:/home/armsom# sync
-root@armsom-sige5:/home/armsom# sudo reboot
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 :::tip
@@ -77,20 +78,19 @@ root@armsom-sige5:/home/armsom# sudo reboot
 
 - **验证 SPI 是否启用**
 
-使能spi设备树插件之后重新启动板卡，通过SPI设备文件来判断spi驱动是否加载成功。 SPI_3对应的设备文件是spidev3.0,如果使用了rk3576-spi3-m0.dtbo就会出现 spidev3.0
+使能spi设备树插件之后重新启动板卡，通过SPI设备文件来判断spi驱动是否加载成功。
 
 ```
-armsom@armsom-sige5:~$ ls /dev/spi*
-/dev/spidev4.1
+armsom@armsom:~$ ls /dev/spi*
+/dev/spidev0.0  /dev/spidev0.1  /dev/spidev1.0
 ```
+SPI_0对应的设备文件是spidev0.0和spidev0.1，spidev0.0和spidev0.1的区别在于片选信号的不同，spidev0.0使用CS0 , spidev0.1使用CS1，spi1的节点是/dev/spidev1.0。
 
 ## 7.3 回环测试
 
-根据 ioctl 相关参数，可以编写 SPI 测试程序。为了简单起见，本示例仅进行 SPI 回环测试。在进行测试时，只需将 ArmSoM-Sige5 板卡上的 SPI4 的 MISO 和 MOSI 引脚（板卡上的 19 号和 21 号引脚）通过跳线帽进行短接即可实现回环测试。
+根据 ioctl 相关参数，可以编写 SPI 测试程序。为了简单起见，本示例仅进行 SPI 回环测试。在进行测试时，只需将板卡上SPI的 MISO 和 MOSI 引脚（板卡上的 `19` 号和 `21` 号引脚）通过跳线帽进行短接即可实现回环测试。
 
 通过这种方式，发送的数据可以直接回传，方便验证 SPI 功能是否正常。
-
-![spi-sige5](/img/general-tutorial/interface-usage/spi-sige5.png)
 
 测试代码：
 
@@ -106,7 +106,7 @@ armsom@armsom-sige5:~$ ls /dev/spi*
 #include <string.h>
 #include <linux/spi/spidev.h>
 
-#define SPI_DEV_PATH "/dev/spidev4.1"
+#define SPI_DEV_PATH "/dev/spidev0.0"
 
 /* SPI 接收、发送缓冲区 */
 unsigned char tx_buffer[100] = "hello the world ! ArmSoM is awesome!";
@@ -203,15 +203,15 @@ int main(int argc, char *argv[])
 
 ```
 #编译
-armsom@armsom-sige5:~$ gcc spi_selftest.c -o spi_selftest
+armsom@armsom:~$ gcc spi_selftest.c -o spi_selftest
 #运行
-armsom@armsom-sige5:~$ sudo ./spi_selftest /dev/spidev4.1 // 短接
+armsom@armsom:~$ sudo ./spi_selftest /dev/spidev0.0 // 短接
 SPI Mode: 0x2
 Bits per word: 8
 Max speed: 10000000 Hz (10000 KHz)
 TX Buffer: hello the world !  ArmSoM is awesome!
 RX Buffer: hello the world !  ArmSoM is awesome!
-armsom@armsom-sige5:~$ sudo ./spi_selftest /dev/spidev4.1 //未短接
+armsom@armsom:~$ sudo ./spi_selftest /dev/spidev0.0 //未短接
 SPI Mode: 0x2
 Bits per word: 8
 Max speed: 10000000 Hz (10000 KHz)
