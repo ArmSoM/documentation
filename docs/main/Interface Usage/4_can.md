@@ -94,29 +94,30 @@ make savedefconfig
 
 By default, the CAN interface is disabled, and it needs to be enabled for use.
 
-In Armbian OS, the `/boot/armbianEnv.txt` file is used to configure system startup parameters and device tree overlays. You can enable or disable the CAN device tree overlay by editing this file to ensure that the CAN bus is correctly loaded at boot time.
+In the Ubuntu/debit operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can enable or disable the CAN device tree overlay by editing this file to ensure that the CAN bus is correctly loaded at boot time.
 
 **To check or enable the CAN-related device tree overlays**, follow these steps:
 
 **View Device Tree Overlay Configuration**:
-Open the file `/boot/armbianEnv.txt` using a text editor like nano or vim:
+Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
 
 ```bash
-root@armsom-sige7:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/boot# vi /uEnv/uEnv.txt
 ```
 
-To enable the `rk3588-can1-m0`, add the following line (as an example):
+To enable the `rk3588-can1-m1`, add the following line (as an example):
 
 ```
-overlays=rk3588-can1-m0
+dtoverlay=/dtb/overlay/rk3588-armsom-can1-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c0-m1.dtbo
 ```
 
-Save the file and exit the editor. Afterward, reboot the system to apply the configuration:
+Remove the `#` before dtoverlay, after editing, save the file and exit the editor to restart the system for the configuration to take effect:
 
 ```bash
-// Run sync to ensure data is written
-root@armsom-sige7:/home/armsom# sync
-root@armsom-sige7:/home/armsom# sudo reboot
+// Run sync first
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 :::tip

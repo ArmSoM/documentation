@@ -103,30 +103,31 @@ make savedefconfig
 
 CAN接口在默认情况是关闭状态的，需要使能才能使用
 
-在 Armbian 操作系统中，/boot/armbianEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 CAN 设备树插件，确保 CAN 总线可以在启动时正确加载。
+在 ubuntu/debain 操作系统中，/boot/uEnv/uEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 CAN 设备树插件，确保 CAN 总线可以在启动时正确加载。
 
 如果你希望检查或启用 CAN 相关设备树插件，可以按照以下步骤操作：
 
  **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/armbianEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
 
 ```bash
-root@armsom-sige7:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/boot# vi /uEnv/uEnv.txt
 ```
 
-这里以激活 can-m0 为例，将 rk3588-can1-m0 打开如下:
+这里以激活 can-m1 为例，将 rk3588-can1-m1 打开如下:
 
 ```
-overlays=rk3588-can1-m0
+dtoverlay=/dtb/overlay/rk3588-armsom-can1-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c0-m1.dtbo
 ```
 
-编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
+将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
 
 ```
 // 先执行sync
-root@armsom-sige7:/home/armsom# sync
-root@armsom-sige7:/home/armsom# sudo reboot
+root@armsom:/home/armsom# sync
+root@armsom:/home/armsom# sudo reboot
 ```
 
 :::tip
