@@ -37,7 +37,7 @@ By default, UART interfaces are disabled and need to be enabled for use.
 The debug serial port is enabled by default, available on pins 8/10 of the 40-pin header.
 :::
 
-In the Ubuntu/debit operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can edit this file to enable or disable UART device tree overlays to ensure that the UART bus is properly loaded at startup.
+In the Ubuntu/debian operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can edit this file to enable or disable UART device tree overlays to ensure that the UART bus is properly loaded at startup.
 
 To check or enable UART device tree overlays, follow these steps:
 

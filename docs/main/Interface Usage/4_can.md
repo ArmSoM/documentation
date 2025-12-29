@@ -94,7 +94,7 @@ make savedefconfig
 
 By default, the CAN interface is disabled, and it needs to be enabled for use.
 
-In the Ubuntu/debit operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can enable or disable the CAN device tree overlay by editing this file to ensure that the CAN bus is correctly loaded at boot time.
+In the Ubuntu/debian operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can enable or disable the CAN device tree overlay by editing this file to ensure that the CAN bus is correctly loaded at boot time.
 
 **To check or enable the CAN-related device tree overlays**, follow these steps:
 

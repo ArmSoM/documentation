@@ -45,7 +45,7 @@ The ArmSoM series boards have SPI peripherals on the 40-pin header. The followin
 
 SPI interfaces are disabled by default and need to be enabled for use.
 
-In the Ubuntu/debit operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can enable or disable the SPI device tree plugin by editing this file to ensure that the SPI bus can be loaded correctly at startup.
+In the Ubuntu/debian operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can enable or disable the SPI device tree plugin by editing this file to ensure that the SPI bus can be loaded correctly at startup.
 
 To check or enable the SPI device tree overlays, follow these steps:
 

@@ -28,34 +28,32 @@ In ArmSoM products, the MIPI-CSI pin 1 connects to pin 1 of the camera module.
 
 ### 11.1.2 Enabling Camera Communication Interface
 
-The MIPI-CSI interface is disabled by default and needs to be enabled for use.
-
-In the Armbian operating system, the `/boot/armbianEnv.txt` file is used to configure system boot parameters and device tree overlays. You can edit this file to enable or disable MIPI-CSI device tree overlays.
+In the Ubuntu/debian operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can edit this file to enable or disable MIPI-CSI device tree overlays.
 
 To check or enable MIPI-CSI related device tree overlays, follow these steps:
 
 - **View Device Tree Overlay Configuration**
 
-Open the file: Open `/boot/armbianEnv.txt` via the terminal using a text editor like nano or vim, for example:
+Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
 
 ```bash
-root@armsom-sige5:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
-To enable `armsom-sige5-camera-ov13850-cs0`, add the following line:
+To enable `armsom-sige7-camera-ov13850-cs0`, add the following line:
 
 ```
-overlays=armsom-sige5-camera-ov13850-cs0
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm15-m2.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-spi0-m2-cs0-cs1-spidev.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-spi1-m1-cs0-spidev.dtbo
 ```
 
-The `overlays` line specifies the device tree overlay. If it's not present, you can add it manually.
-
-After editing, save the file and exit the editor, then reboot the system for the changes to take effect:
+Remove the `#` before dtoverlay, after editing, save the file and exit the editor to restart the system for the configuration to take effect:
 
 ```bash
 // Run sync first
-root@armsom-sige5:/home/armsom# sync
-root@armsom-sige5:/home/armsom# sudo reboot
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 :::tip
@@ -68,7 +66,7 @@ root@armsom-sige5:/home/armsom# sudo reboot
 After enabling the `armsom-camera-module1` device tree overlay and rebooting the board, once the camera module is connected and powered on, you can check the boot log.
 
 ```
-armsom@armsom-sige5:~$ dmesg | grep ov13850
+armsom@armsom:~$ dmesg | grep ov13850
 [    3.481341] platform csi2-dphy3: Fixed dependency cycle(s) with /i2c@2ac70000/ov13850_1@10
 [    3.482159] platform csi2-dphy0: Fixed dependency cycle(s) with /i2c@2ac80000/ov13850@10
 [    3.574146] ov13850 5-0010: driver version: 00.01.05
@@ -149,7 +147,7 @@ root@armsom:/# i2cdetect -y 5
 ### 11.5.2 Check Topology
 
 ```bash
-root@armsom-sige5:/home/armsom# media-ctl -d /dev/media0 -p
+root@armsom:/home/armsom# media-ctl -d /dev/media0 -p
 ```
 
 ### 11.5.3 Check Files in Sys Filesystem
@@ -157,14 +155,14 @@ root@armsom-sige5:/home/armsom# media-ctl -d /dev/media0 -p
 The kernel assigns device information description files for the camera in the `/sys/class/video4linux` directory.
 
 ```bash
-armsom@armsom-sige5:~$ grep ov13850 /sys/class/video4linux/v*/name
+armsom@armsom:~$ grep ov13850 /sys/class/video4linux/v*/name
 /sys/class/video4linux/v4l-subdev2/name:m00_b_ov13850 5-0010
 ```
 
 Find the Camera's corresponding video node:
 
 ```bash
-armsom@armsom-sige5:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
+armsom@armsom:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
 /sys/class/video4linux/video22/name:rkisp_mainpath
 /sys/class/video4linux/video31/name:rkisp_mainpath
 ```
@@ -345,7 +343,21 @@ This way, you can use ISP to process the yuv file with good results
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
-## 11.6 Camera Application Development
+## 11.6 Preview camera
+The following command formats, resolutions, and frame rates can be modified according to actual needs:
+```bash
+gst-launch-1.0 v4l2src device=/dev/video22 ! \
+    video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+    videoconvert ! \
+    autovideosink
+
+gst-launch-1.0 v4l2src device=/dev/video31 ! \
+    video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+    videoconvert ! \
+    autovideosink
+```
+
+## 11.7 Camera Application Development
 
 Customers can develop camera-related applications according to their needs. Below is an example of a dual-camera application developed using QT:
 

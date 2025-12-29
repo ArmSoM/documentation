@@ -30,32 +30,32 @@ ArmSoM 产品的mipi csi接口的1脚对摄像头模组的1脚
 
 MIPI-CSI 接口在默认情况是关闭状态的，需要使能才能使用
 
-在 Armbian 操作系统中，/boot/armbianEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 MIPI-CSI 设备树插件。
+在 ubuntu/debain 操作系统中，/boot/uEnv/uEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 MIPI-CSI 设备树插件。
 
 如果你希望检查或启用 MIPI-CSI 相关设备树插件，可以按照以下步骤操作：
 
 - **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/armbianEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，例如：
 
 ```bash
-root@armsom-sige5:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
-这里以激活 armsom-sige5-camera-ov13850-cs0 为例，将 armsom-sige5-camera-ov13850-cs0 打开如下:
+这里以激活 armsom-sige7-camera-ov13850-cs0 为例，将 armsom-sige5-camera-ov13850-cs0 打开如下:
 
 ```
-overlays=armsom-sige5-camera-ov13850-cs0
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm15-m2.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-spi0-m2-cs0-cs1-spidev.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-spi1-m1-cs0-spidev.dtbo
 ```
 
-其中 overlays 行指定了设备树覆盖（Device Tree Overlay），如果没有这些内容，你可以手动添加。
-
-编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
+将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
 
 ```
 // 先执行sync
-root@armsom-sige5:/home/armsom# sync
-root@armsom-sige5:/home/armsom# sudo reboot
+armsom@armsom:/boot# sync
+armsom@armsom:/boot# sudo reboot
 ```
 
 :::tip
@@ -68,7 +68,7 @@ root@armsom-sige5:/home/armsom# sudo reboot
 使能 armsom-camera-module1 设备树插件之后重新启动板卡，摄像头采用[camera-module1](./armsom-camera-module1)模组，摄像头模组连接并上电后可以查看启动日志。s
 
 ```
-armsom@armsom-sige5:~$ dmesg | grep ov13850
+armsom@armsom:~$ dmesg | grep ov13850
 [    3.481341] platform csi2-dphy3: Fixed dependency cycle(s) with /i2c@2ac70000/ov13850_1@10
 [    3.482159] platform csi2-dphy0: Fixed dependency cycle(s) with /i2c@2ac80000/ov13850@10
 [    3.574146] ov13850 5-0010: driver version: 00.01.05
@@ -144,20 +144,20 @@ root@armsom:/# i2cdetect -y 5
 ### 11.5.2 查看拓扑结构
 
 ```bash
-root@armsom-sige5:/home/armsom# media-ctl -d /dev/media0 -p
+root@armsom:/home/armsom# media-ctl -d /dev/media0 -p
 ```
 
 ### 11.5.3 查看sys文件系统中文件信息
 内核会为摄像头在目录/sys/class/video4linux下分配设备信息描述文件
 
 ```bash
-armsom@armsom-sige5:~$ grep ov13850 /sys/class/video4linux/v*/name
+armsom@armsom:~$ grep ov13850 /sys/class/video4linux/v*/name
 /sys/class/video4linux/v4l-subdev2/name:m00_b_ov13850 5-0010
 ```
 
 查找Camera对应的vedio节点：
 ```bash
-armsom@armsom-sige5:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
+armsom@armsom:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
 /sys/class/video4linux/video22/name:rkisp_mainpath
 /sys/class/video4linux/video31/name:rkisp_mainpath
 ```
@@ -331,11 +331,21 @@ v4l2-ctl -d /dev/video22 --set-fmt-video=width=2112,height=1568,pixelformat=NV12
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
-## 11.6 Camera应用程序开发
+## 11.6 预览摄像头
+以下命令格式、分辨率和帧率可根据实际进行修改：
+```bash
+gst-launch-1.0 v4l2src device=/dev/video22 ! \
+    video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+    videoconvert ! \
+    autovideosink
+
+gst-launch-1.0 v4l2src device=/dev/video31 ! \
+    video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+    videoconvert ! \
+    autovideosink
+```
+
+## 11.7 Camera应用程序开发
 客户可以根据自己的需求进行Camera相关的应用程序开发，如下是使用QT开发的双摄同显应用程序：
 
 ![rockchip-camera-two](/img/general-tutorial/interface-usage/camera-two.png)
-
-:::tip
-目前armbian系统还不支持 3A服务，无法启动isp校正摄像头画面。如有摄像头功能要求的客户可使用debian系统，由rockchip官方支持，如debian未支持的摄像头可联系armsom官方。
-:::
