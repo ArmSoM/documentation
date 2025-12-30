@@ -403,6 +403,17 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
 ## Resourcess
 
 <div class="cards">
+<a href="https://github.com/ArmSoM/manifests" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>ArmSom-bsp </h2>
+            <p>Building a Linux System</p>
+        </div>
+    </div>
+</a>
     <a href="https://github.com/armbian/build" class="card-link">
         <div class="card">
             <div class="icon">

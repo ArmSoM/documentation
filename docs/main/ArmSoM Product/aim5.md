@@ -316,6 +316,17 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 ### Source Code
 
 <div class="cards">
+<a href="https://github.com/ArmSoM/manifests" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>ArmSom-bsp </h2>
+            <p>Building a Linux System</p>
+        </div>
+    </div>
+</a>
 <a href="https://github.com/armbian/build" class="card-link">
     <div class="card">
         <div class="icon">

@@ -130,6 +130,17 @@ CM5-IO Board 使用12V DC供电。
 ### SDK源码
 
 <div class="cards">
+<a href="https://github.com/ArmSoM/manifests" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>ArmSom-bsp </h2>
+            <p>Building a Linux System</p>
+        </div>
+    </div>
+</a>
 <a href="https://github.com/armbian/build" class="card-link">
     <div class="card">
         <div class="icon">

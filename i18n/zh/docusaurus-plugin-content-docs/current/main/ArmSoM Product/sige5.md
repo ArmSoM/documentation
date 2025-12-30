@@ -389,7 +389,20 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 
 ## 开发资料
 
+### SDK源码
+
 <div class="cards">
+<a href="https://github.com/ArmSoM/manifests" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>ArmSom-bsp </h2>
+            <p>Building a Linux System</p>
+        </div>
+    </div>
+</a>
     <a href="https://github.com/armbian/build" class="card-link">
         <div class="card">
             <div class="icon">

@@ -261,6 +261,17 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 ### Source Code
 <div class="cards">
+<a href="https://github.com/ArmSoM/manifests" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📚</i>
+        </div>
+        <div class="content">
+            <h2>ArmSom-bsp </h2>
+            <p>Building a Linux System</p>
+        </div>
+    </div>
+</a>
 <a href="https://github.com/armbian/build" class="card-link">
     <div class="card">
         <div class="icon">
