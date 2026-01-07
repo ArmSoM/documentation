@@ -1,7 +1,7 @@
 ---
-sidebar_label: "1. 系统备份"
+sidebar_label: "系统备份"
 sidebar_position: 2
-slug: /advanced-manual/backup
+slug: /build-system-image/backup
 ---
 
 # 1. 系统备份

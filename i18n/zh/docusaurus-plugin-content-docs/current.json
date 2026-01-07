@@ -4,6 +4,9 @@
     },
     "sidebar.main.category.Getting Started": {
         "message": "通用教程"
+    }, 
+    "sidebar.main.category.Advanced Manual": {
+        "message": "进阶手册"
     },
     "sidebar.main.category.Interface Usage": {
         "message": "外设与接口"
