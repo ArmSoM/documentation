@@ -2,7 +2,7 @@
     "sidebar.main.category.Accessories": {
         "message": "配件"
     },
-    "sidebar.main.category.General Tutorial": {
+    "sidebar.main.category.Getting Started": {
         "message": "通用教程"
     },
     "sidebar.main.category.Interface Usage": {
@@ -11,7 +11,7 @@
     "sidebar.main.category.ArmSoM Product": {
         "message": "ArmSoM产品列表"
     },
-    "sidebar.main.category.build_and_deploy": {
+    "sidebar.main.category.Build & Deploy": {
         "message": "系统构建与部署"
     },
     "sidebar.general-tutorial.category.Start the system": {
