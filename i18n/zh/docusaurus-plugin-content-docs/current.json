@@ -11,6 +11,9 @@
     "sidebar.main.category.ArmSoM Product": {
         "message": "ArmSoM产品列表"
     },
+    "sidebar.main.category.build_and_deploy": {
+        "message": "系统构建与部署"
+    },
     "sidebar.general-tutorial.category.Start the system": {
         "message": "访问系统"
     },
