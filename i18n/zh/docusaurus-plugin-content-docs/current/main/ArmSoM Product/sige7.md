@@ -481,8 +481,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1ybboIDeGolq71ZCLWr7E9A?pwd=arms)   |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1sUHv1pAhkLts3c7fziU4lw?pwd=arms)   |
 |![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1btSeFT_-qs-0bz1wUcLZ6A?pwd=arms)  |
+|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige7 :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| [百度网盘](https://pan.baidu.com/s/1muULzMrL8cmEMszuv1cIhw?pwd=arms)  |
 
 ### 第三方镜像
 
