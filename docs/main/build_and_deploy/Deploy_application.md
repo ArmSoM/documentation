@@ -1,11 +1,11 @@
 ---
-sidebar_label: "Deploy_application"
-slug: /build-system-image/Deploy_application
+sidebar_label: "Deploy application"
+slug: /build-system-image/Deploy application
 sidebar_position: 1
 ---
 
-# 1. Deploy_application
-We often have the need to create an application and make it start automatically upon boot. This can be achieved by setting up a Systemd service. Below, I'll use the creation of a simple hello.service as an example to guide you through setting up your own Systemd service on an ARM SOM board.
+# 1. Deploy application
+We often have the need to create an application and make it start automatically upon boot. This can be achieved by setting up a Systemd service. Below, I'll use the creation of a simple hello.service as an example to guide you through setting up your own Systemd service on an ArmSoM board.
 
 ## 1.1 write scripts
 Write a hello.sh script in the /opt directory:
@@ -18,7 +18,7 @@ do
     sleep 1
 done
 ```
-The function implemented by this script is to print the "hello, armsom!" string three times every second to the/tmp/wello.log file.
+The function implemented by this script is to print the "Hello, ArmSoM!" string three times every second to the/tmp/wello.log file.
 
 Add execution permissions to the script:
 ```

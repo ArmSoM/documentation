@@ -1,12 +1,12 @@
 ---
 sidebar_label: "部署应用"
-slug: /build-system-image/Deploy_application
+slug: /build-system-image/Deploy application
 sidebar_position: 1
 ---
 
 # 1. Systemd服务
 我们经常有这样的需求，自己写好一个应用，想要它实现开机自启动的功能， 那么我们可以通过创建一个Systemd服务来实现,下面我以创建一个简单的hello.service服务为例子，
-教大家在armsom板卡创建自己的Systemd服务。
+教大家在ArmSoM板卡创建自己的Systemd服务。
 
 ## 1.1 编写脚本
 在/opt目录下编写一个hello.sh脚本：
@@ -19,7 +19,7 @@ do
     sleep 1
 done
 ```
-该脚本实现的功能是每隔1秒就打印“hello,armsom!”字符串打印三次到/tmp/hello.log文件中。
+该脚本实现的功能是每隔1秒就打印“Hello,ArmSoM!”字符串打印三次到/tmp/hello.log文件中。
 
 给脚本添加执行权限：
 ```
