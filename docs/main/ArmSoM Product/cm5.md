@@ -271,8 +271,9 @@ Network disk address:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for CM5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. |  **CM5-IO**:[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)    <br/>  **CM5-RPI-CM4-IO**:[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)   |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for CM5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. |  **CM5-IO**:[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)    <br/>  **CM5-RPI-CM4-IO**:[Google Drive link](https://drive.google.com/drive/folders/1EgWlFtfoiMdN7ndXjLFcF_iAxtAQ7CWt?usp=drive_link)   |
 |![Android](/img/sige/android.png) | Android14 for CM5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.|[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
+|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige5 :    <br/>Ubuntu 22.04, codenamed "Jammy Jellyfish," was officially released by Canonical on April 21, 2022| [Google Drive link](https://drive.google.com/drive/folders/198NQrcnjAGLf_-Sh8Ata8W7ruofg0ITK?usp=drive_link)  |
 
 ### Third Party System  
 
