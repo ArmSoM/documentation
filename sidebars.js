@@ -46,7 +46,7 @@ const sidebars = {
     },{
       type: 'link',
       label: 'Twitter', // The link label
-      href: 'https://twitter.com/Armsom_official', // The external URL
+      href: 'https://twitter.com/ArmSoM_Global', // The external URL
     },{
       type: 'link',
       label: 'Mastodon', // The link label

@@ -150,7 +150,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                to: 'https://twitter.com/armsom',
+                to: 'https://twitter.com/ArmSoM_Global',
                 target: "_blank",
               },
               {
