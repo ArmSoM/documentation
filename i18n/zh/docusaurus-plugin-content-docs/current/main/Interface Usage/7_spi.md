@@ -52,7 +52,7 @@ SPI接口在默认情况是关闭状态的，需要使能才能使用
 打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，例如：
 
 ```bash
-root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
+root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnvarmsom-sige7.txt
 ```
 
 这里以激活 spi0，spi1 为例，将 rk3588-armsom-spi1-m1-cs0-spidev 打开如下:

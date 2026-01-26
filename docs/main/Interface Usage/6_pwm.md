@@ -35,35 +35,33 @@ For example:
 
 ### 6.2.1 PWM Pins
 
-The ArmSoM series boards have PWM pins on their 40-pin connectors. Here is an example for the Sige5 model: [Sige5 40PIN Pinout](/interface-usage/40pin#16-armsom-sige5)
-
-| PWM Pin        | Pin Number | PWM Pin        | Pin Number |
-|-----------------|------------|-----------------|------------|
-| PWM1_CH0_M3     | 7          | PWM2_CH5_M1     | 19         |
-| PWM2_CH2_M1     | 21         | PWM2_CH3_M1     | 23         |
-| PWM2_CH6_M1     | 24         | PWM0_CH0_M3     | 27         |
-| PWM2_CH7_M2     | 33         | PWM0_CH0_M0     | 35         |
+The ArmSoM series board has PWM pins on all 40 pins, taking Sige7 as an example: [Sige7 40PIN Definition](https://docs.armsom.org/armsom-sige7#hardware-pin-definitions)
 
 ### 6.2.2 Enabling PWM Communication Interfaces
 
 PWM interfaces are disabled by default and need to be enabled for use.
 
-In the Armbian operating system, the file `/boot/armbianEnv.txt` is used to configure system startup parameters and device tree overlays. You can edit this file to enable or disable PWM device tree overlays.
+In the Ubuntu/debit operating system, the/boot/uEnv/uEnv. txt file is used to configure system startup parameters and device tree plugins. You can enable or disable the PWM device tree plugin by editing this file
 
 To check or enable PWM-related overlays, follow these steps:
 
 - **View Device Tree Overlay Configuration**
 
-Open the file using a text editor like nano or vim:
+Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
 
 ```bash
-root@armsom-sige5:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo /boot/uEnv/uEnvarmsom-sige7.txt
 ```
 
-For example, to activate `pwm1_m3`, you would enable the `rk3576-pwm1-ch0-m3` overlay like this:
-
+Taking the activation of pwm2-m1 and pwm5-m2 as an example, modify as follows:
 ```
-overlays=rk3576-pwm1-ch0-m3
+root@armsom:~# vi /boot/uEnv/uEnvarmsom-sige7.txt
+...
+dtoverlay=/dtb/overlay/rk3588-armsom-pwm2-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm3-m1.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-pwm5-m2.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm6-m2.dtbo
+.....
 ```
 
 After editing, save the file and exit the editor. Reboot the system for the changes to take effect:
@@ -89,54 +87,48 @@ For kernel and user-space usage of PWM, refer to the `Documentation/pwm.txt` fil
 - `period`: Represents the period of the PWM wave (in nanoseconds).
 - `oneshot_count`: Represents the number of PWM waveforms in one-shot mode. The value cannot exceed 255.
 
-### 6.3.1 Continuous Mode
+### 6.3.1 Check PWM equipment
 
-Below is an example for `pwmchip1` to set `pwm1` output frequency to 100KHz, with a duty cycle of 50% and normal polarity in Continuous mode:
-
-```
-root@armsom-sige5:/home/armsom# cd /sys/class/pwm/pwmchip1/
-root@armsom-sige5:/home/armsom# echo 0 > export
-root@armsom-sige5:/home/armsom# cd pwm1
-root@armsom-sige5:/home/armsom# echo 10000 > period
-root@armsom-sige5:/home/armsom# echo 5000 > duty_cycle
-root@armsom-sige5:/home/armsom# echo normal > polarity
-root@armsom-sige5:/home/armsom# echo 1 > enable
-```
-
-### 6.3.2 One-shot Mode
-
-Below is an example for `pwmchip1` to set `pwm1` output frequency to 100KHz, with a duty cycle of 50%, normal polarity, in One-shot mode:
+After enabling the PWM communication interface, you can use the following command to check if PWM is turned on
 
 ```
-root@armsom-sige5:/home/armsom# cd /sys/class/pwm/pwmchip1/
-root@armsom-sige5:/home/armsom# echo 0 > export
-root@armsom-sige5:/home/armsom# cd pwm0
-root@armsom-sige5:/home/armsom# echo 10000 > period
-root@armsom-sige5:/home/armsom# echo 5000 > duty_cycle
-root@armsom-sige5:/home/armsom# echo normal > polarity
-root@armsom-sige5:/home/armsom# echo 100 > oneshot_count
-root@armsom-sige5:/home/armsom# echo 1 > enable
+root@armsom:~# ls /sys/class/pwm/
+pwmchip0  pwmchip1  pwmchip2
+root@armsom:~# cat /sys/kernel/debug/pwm
+platform/febd0010.pwm, 1 PWM device
+ pwm-0   ((null)              ): period: 0 ns duty: 0 ns polarity: normal
+
+platform/fd8b0020.pwm, 1 PWM device
+ pwm-0   ((null)              ): period: 0 ns duty: 0 ns polarity: normal
+
+platform/fd8b0010.pwm, 1 PWM device
+ pwm-0   (pwm-fan             ): requested period: 50000 ns duty: 0 ns polarity: normal
+```
+The system defaults to enabling fan PWM. When multiple PWM device tree plugins are enabled, the smaller the PWM controller value, the smaller the allocated PWM chip by the system. For example, in the above example
+Pwmchip1 corresponds to pwm2-m1, pwmchip2 corresponds to pwm5-m2, and the node corresponding to pwm-fan is pwm1 corresponding to pwmchip0.
+
+### 6.3.2 PWM control mode
+
+Below is an example for `pwmchip1` to set `pwm2` output frequency to 100KHz, with a duty cycle of 50%, normal polarity, in One-shot mode:
+
 ```
 
-In one-shot mode, after the output finishes, an interrupt is generated, and the driver will set the PWM state to disabled. If multiple one-shot outputs are required, users need to implement this logic in the `rockchip_pwm_oneshot_callback` function in the `pwm-rockchip.h` file.
+echo 0 > /sys/class/pwm/pwmchip1/export
 
-```
-static void rockchip_pwm_oneshot_callback(struct pwm_device *pwm, struct
-pwm_state *state)
-{
-/*
-* If you want to enable oneshot mode again, config and call
-* pwm_apply_state().
-*
-* struct pwm_state new_state;
-*
-* pwm_get_state(pwm, &new_state);
-* new_state.enabled = true;
-* ...... 
-* pwm_apply_state(pwm, &new_state);
-*
-*/
-}
+
+echo 1000000 > /sys/class/pwm/pwmchip1/pwm0/period
+
+
+echo 500000 > /sys/class/pwm/pwmchip1/pwm0/duty_cycle
+
+
+echo "normal" > /sys/class/pwm/pwmchip1/pwm0/polarity
+
+
+echo 1 > /sys/class/pwm/pwmchip1/pwm0/enable
+
+
+echo 0 > /sys/class/pwm/pwmchip1/unexport
 ```
 
 ## 6.4 PWM Backlight

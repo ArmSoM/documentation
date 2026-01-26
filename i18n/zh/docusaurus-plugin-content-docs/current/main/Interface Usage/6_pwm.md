@@ -35,36 +35,35 @@ PWM信号是一个方波信号，其中信号高电平（ON）维持的时间叫
 
 ### 6.2.1 PWM引脚
 
-ArmSoM系列板子40pin上都有PWM引脚，以下以 Sige5 为例子，[Sige5 40PIN定义](/interface-usage/40pin#16-armsom-sige5)
-
-| PWM引脚        | 引脚名称 | PWM引脚        | 引脚名称 |
-|---------------|----------|----------------|---------|
-| PWM1_CH0_M3     | 7        | PWM2_CH5_M1     | 19       |
-| PWM2_CH2_M1     | 21       | PWM2_CH3_M1     | 23       |
-| PWM2_CH6_M1     | 24       | PWM0_CH0_M3     | 27       |
-| PWM2_CH7_M2     | 33       | PWM0_CH0_M0     | 35       |
+ArmSoM系列板子40pin上都有PWM引脚，以下以 Sige7 为例子，[Sige7 40PIN定义](https://docs.armsom.org/armsom-sige7#hardware-pin-definitions)
 
 
 ### 6.2.2 使能 PWM 通信接口
 
 PWM接口在默认情况是关闭状态的，需要使能才能使用
 
-在 Armbian 操作系统中，/boot/armbianEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 PWM 设备树插件
+在 ubuntu/debain 操作系统中，/boot/uEnv/uEnv.txt 文件用于配置系统启动时的参数和设备树插件。你可以通过编辑该文件来启用或禁用 PWM 设备树插件
 
 如果你希望检查或启用 PWM 相关设备树插件，可以按照以下步骤操作：
 
 - **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/armbianEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，例如：
 
 ```bash
-root@armsom-sige5:/home/armsom# sudo nano /boot/armbianEnv.txt
+root@armsom:/home/armsom# sudo /boot/uEnv/uEnvarmsom-sige7.txt
 ```
 
-这里以激活 pwm1_m3 为例，将rk3576-pwm1-ch0-m3 打开如下:
+这里以激活pwm2-m1、pwm5-m2 为例，修改如下:
 
 ```
-overlays=rk3576-pwm1-ch0-m3
+root@armsom:~# vi /boot/uEnv/uEnvarmsom-sige7.txt
+...
+dtoverlay=/dtb/overlay/rk3588-armsom-pwm2-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm3-m1.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-pwm5-m2.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm6-m2.dtbo
+.....
 ```
 
 编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
@@ -90,54 +89,49 @@ root@armsom-sige5:/home/armsom# sudo reboot
 - period：表⽰ pwm 波的周期(单位：纳秒)；
 - oneshot_count：表⽰ one-shot 模式的 pwm 波形个数，数值不能超过255；
 
-### 6.3.1 Continuous mode
+### 6.3.1 检查PWM设备
 
-以下是 pwmchip1 的例⼦，设置 pwm1 输出频率 100K，占空⽐ 50%，极性为正极性，Continuous 模式输出：
-
-```
-root@armsom-sige5:/home/armsom# cd /sys/class/pwm/pwmchip1/
-root@armsom-sige5:/home/armsom# echo 0 > export
-root@armsom-sige5:/home/armsom# cd pwm1
-root@armsom-sige5:/home/armsom# echo 10000 > period
-root@armsom-sige5:/home/armsom# echo 5000 > duty_cycle
-root@armsom-sige5:/home/armsom# echo normal > polarity
-root@armsom-sige5:/home/armsom# echo 1 > enable
-```
-
-### 6.3.2 One-shot mode
-
-以下是 pwmchip1 的例⼦，设置 pwm1 输出频率 100K，占空⽐ 50%，极性为正极性，One-shot 模式输出：
+使能pwm通信接口后，可以用以下命令查看pwm是否开启
 
 ```
-root@armsom-sige5:/home/armsom# cd /sys/class/pwm/pwmchip1/
-root@armsom-sige5:/home/armsom# echo 0 > export
-root@armsom-sige5:/home/armsom# cd pwm0
-root@armsom-sige5:/home/armsom# echo 10000 > period
-root@armsom-sige5:/home/armsom# echo 5000 > duty_cycle
-root@armsom-sige5:/home/armsom# echo normal > polarity
-root@armsom-sige5:/home/armsom# echo 100 > oneshot_count
-root@armsom-sige5:/home/armsom# echo 1 > enable
-```
+root@armsom:~# ls /sys/class/pwm/
+pwmchip0  pwmchip1  pwmchip2
+root@armsom:~# cat /sys/kernel/debug/pwm
+platform/febd0010.pwm, 1 PWM device
+ pwm-0   ((null)              ): period: 0 ns duty: 0 ns polarity: normal
 
-one-shot 模式输出结束后会产⽣⼀个中断，驱动⾥会在这个中断将 pwm 状态设置为 disabled ，如果有重复多次 one-shot 输出的应⽤需求，需要⽤⼾⾃⼰在⽂件 pwm-rockchip.h 的rockchip_pwm_oneshot_callback 函数中实现这部分逻辑。
+platform/fd8b0020.pwm, 1 PWM device
+ pwm-0   ((null)              ): period: 0 ns duty: 0 ns polarity: normal
+
+platform/fd8b0010.pwm, 1 PWM device
+ pwm-0   (pwm-fan             ): requested period: 50000 ns duty: 0 ns polarity: normal
+```
+系统默认开启风扇pwm，当开启多个pwm设备树插件时，pwm控制器值越小，系统分配的pwmchip越小,比如上述例子里面
+pwmchip1对应pwm2-m1,pwmchip2对应pwm5-m2，而pwm-fan对应的节点是pwm1对应pwmchip0。
+
+
+### 6.3.2 pwm控制方式
+
+以下是 pwmchip1 的例⼦，设置 pwm2 输出频率 100K，占空⽐ 50%，极性为正极性，One-shot 模式输出：
 
 ```
-static void rockchip_pwm_oneshot_callback(struct pwm_device *pwm, struct
-pwm_state *state)
-{
-/*
-* If you want to enable oneshot mode again, config and call
-* pwm_apply_state().
-*
-* struct pwm_state new_state;
-*
-* pwm_get_state(pwm, &new_state);
-* new_state.enabled = true;
-* ......
-* pwm_apply_state(pwm, &new_state);
-*
-*/
-}
+#将pwm2导出到用户空间
+echo 0 > /sys/class/pwm/pwmchip1/export
+
+#设置pwm周期 单位为ns
+echo 1000000 > /sys/class/pwm/pwmchip1/pwm0/period
+
+#设置占空比
+echo 500000 > /sys/class/pwm/pwmchip1/pwm0/duty_cycle
+
+#设置pwm极性
+echo "normal" > /sys/class/pwm/pwmchip1/pwm0/polarity
+
+#使能pwm
+echo 1 > /sys/class/pwm/pwmchip1/pwm0/enable
+
+#取消将pwm2导出到用户空间
+echo 0 > /sys/class/pwm/pwmchip1/unexport
 ```
 
 ## 6.4 PWM Backlight
