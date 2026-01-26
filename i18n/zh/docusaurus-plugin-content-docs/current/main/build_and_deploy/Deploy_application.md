@@ -1,7 +1,7 @@
 ---
 sidebar_label: "部署应用"
 slug: /build-system-image/Deploy application
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # 1. Systemd服务

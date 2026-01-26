@@ -1,5 +1,5 @@
 ---
-sidebar_label: "armsom-sdk"
+sidebar_label: "armsom-sdk使用"
 slug: /build-system-image/armsom-sdk
 sidebar_position: 1
 ---
