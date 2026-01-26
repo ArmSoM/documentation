@@ -109,12 +109,7 @@ CAN接口在默认情况是关闭状态的，需要使能才能使用
 
  **查看设备树插件配置**
 
-打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，使用文本编辑器如 nano 或 vim，例如：
-
-```bash
-root@armsom:/boot# vi /uEnv/uEnv.txt
-```
-
+打开文件： 通过终端打开 /boot/uEnv/uEnv.txt 文件，使用文本编辑器如 nano 或 vim。
 这里以激活 can-m1 为例，将 rk3588-can1-m1 打开如下:
 
 ```
@@ -125,9 +120,36 @@ dtoverlay=/dtb/overlay/rk3588-armsom-can1-m1.dtbo
 将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：
 
 ```
-// 先执行sync
-root@armsom:/home/armsom# sync
-root@armsom:/home/armsom# sudo reboot
+armsom@armsom:/boot$ sudo vi /boot/uEnv/uEnvarmsom-sige7.txt
+cmdline="earlyprintk console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=7 roott
+wait rw rootfstype=ext4"
+
+enable_uboot_overlays=1
+#overlay_start
+
+#40pin
+#dtoverlay=/dtb/overlay/rk3588-armsom-can1-m0.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-can1-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c0-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c1-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c3-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c7-m3.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c8-m4.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm2-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm3-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm5-m2.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm6-m2.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm7-m3.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm8-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm12-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm13-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm13-m2.dtbo
+```
+
+执行完上面修改后重启系统
+```
+armsom@armsom:/boot$ sync
+armsom@armsom:/boot$ sudo reboot
 ```
 
 :::tip

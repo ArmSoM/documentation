@@ -99,11 +99,7 @@ In the Ubuntu/debian operating system, the/boot/uEnv/uEnv. txt file is used to c
 **To check or enable the CAN-related device tree overlays**, follow these steps:
 
 **View Device Tree Overlay Configuration**:
-Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
-
-```bash
-root@armsom:/boot# vi /uEnv/uEnv.txt
-```
+Open file: Open the/boot/uEnv/uEnv. txt file through the terminal.
 
 To enable the `rk3588-can1-m1`, add the following line (as an example):
 
@@ -115,9 +111,36 @@ dtoverlay=/dtb/overlay/rk3588-armsom-can1-m1.dtbo
 Remove the `#` before dtoverlay, after editing, save the file and exit the editor to restart the system for the configuration to take effect:
 
 ```bash
-// Run sync first
-armsom@armsom:/boot# sync
-armsom@armsom:/boot# sudo reboot
+armsom@armsom:/boot$ sudo vi /boot/uEnv/uEnvarmsom-sige7.txt
+cmdline="earlyprintk console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=7 roott
+wait rw rootfstype=ext4"
+
+enable_uboot_overlays=1
+#overlay_start
+
+#40pin
+#dtoverlay=/dtb/overlay/rk3588-armsom-can1-m0.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-can1-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c0-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c1-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c3-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c7-m3.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-i2c8-m4.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm2-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm3-m1.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm5-m2.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm6-m2.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm7-m3.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm8-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm12-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm13-m0.dtbo
+#dtoverlay=/dtb/overlay/rk3588-armsom-pwm13-m2.dtbo
+```
+
+After executing the above modifications, restart the system
+```
+armsom@armsom:/boot$ sync
+armsom@armsom:/boot$ sudo reboot
 ```
 
 :::tip
