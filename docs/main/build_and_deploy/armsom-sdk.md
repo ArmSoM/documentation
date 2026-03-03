@@ -106,12 +106,18 @@ git pull
 
 # 5. Automatic Firmware Build
 In the SDK top-level folder, execute the following commands to select the target board's main chip model and SDK configuration file.
+
 Execute the following command to select configuration chip and configuration file:
+
 `./build.sh chip`
+
 After selecting the configuration file, pink prompt text will indicate the kernel version used by the current configuration file.
 ![build](/img/advanced_manual/armsom-build/build.png)
+
 One-click compilation of U-Boot, kernel, Rootfs and packaging into update.img image:
+
 `./build.sh`
+
 The built images are saved in the `rockdev/` directory.
 
 # 6. Step-by-Step Firmware Build
