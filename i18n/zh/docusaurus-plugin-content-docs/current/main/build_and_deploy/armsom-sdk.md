@@ -107,13 +107,19 @@ git pull
 ```
 
 # 5. 自动构建固件
-在SDK顶层文件夹下，执行以下命令，以选择要构建的板卡主芯片型号和SDK的配置文件。
-执行下面命令选择配置芯片以及配置文件
-`./build.sh chip`
+在SDK顶层文件夹下，执行以下命令，以选择要构建的板卡主芯片型号和SDK的配置文件。 
+
+执行下面命令选择配置芯片以及配置文件:
+
+`./build.sh chip` 
+
 当选择完配置文件以后，会使用粉色提示字体提示当前配置文件所用的内核版本
-![build](/img/advanced_manual/armsom-build/build.png)
-一键编译u-Boot，kernel，Rootfs并打包为update.img镜像
-`./build.sh`
+![build](/img/advanced_manual/armsom-build/build.png) 
+
+之后一键编译u-Boot，kernel，Rootfs并打包为update.img镜像
+
+`./build.sh` 
+
 构建好的镜像保存在rockdev/目录下。
 
 # 6. 分步构建固件
