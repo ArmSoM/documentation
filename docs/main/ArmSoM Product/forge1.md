@@ -113,7 +113,7 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 ### Pin Definitions  
 <details>
     <summary>
-     40-PIN header
+     40-PIN header（2.54mm）
     </summary>
        
 <div className='gpio_style'>  
@@ -147,7 +147,7 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 
 <details>
     <summary>
-    14-PIN Header
+    14-PIN Header（2.54mm）
     </summary>
 
 | Pin  | Assignment   | Description                          | Pin  | Assignment   | Description                          |
