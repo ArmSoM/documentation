@@ -468,6 +468,10 @@ ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714003739668](https://i
 
 OEM&ODM, please contact: sales@armsom.org
 
+## What do others say about the W3 ?
+
+- [sbc compare](https://sbc.compare/69-armsom-w3-8gb): W3  Benchmark Comparison on sbc.compare
+
 ## Notes
 
 :::caution [Electrostatic Protection]

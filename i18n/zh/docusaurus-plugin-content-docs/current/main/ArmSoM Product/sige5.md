@@ -604,6 +604,8 @@ OEM&ODM,  请联系: sales@armsom.org
 ## 专家视角
 
 - [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8)：它看起来像 Raspberry Pi，但配备了用于 AI 的 NPU。
+- [sbc compare](https://sbc.compare/4-armsom-sige5-8gb): Sige5 Benchmark Comparison on sbc.compare
+
 
 
 ## 注意事项

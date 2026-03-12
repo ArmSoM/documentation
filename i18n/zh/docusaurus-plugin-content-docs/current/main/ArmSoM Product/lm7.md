@@ -410,6 +410,10 @@ ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=714003739668](https
 
 OEM&ODM,  请联系: sales@armsom.org
 
+## 专家视角
+
+- [sbc compare](https://sbc.compare/69-armsom-w3-8gb): W3  Benchmark Comparison on sbc.compare
+
 ## 注意事项
 
 :::caution [静电保护]

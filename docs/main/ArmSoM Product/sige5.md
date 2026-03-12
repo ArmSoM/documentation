@@ -610,6 +610,7 @@ For OEM & ODM, please contact: sales@armsom.org
 ## What do others say about the Sige5 ?
 
 - [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8): It looks like a Raspberry Pi, but with an NPU for AI.
+- [sbc compare](https://sbc.compare/4-armsom-sige5-8gb): Sige5 Benchmark Comparison on sbc.compare
 
 ## Notes
 
