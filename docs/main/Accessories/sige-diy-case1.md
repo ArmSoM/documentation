@@ -22,7 +22,7 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 - Surface Treatment: Sandblasted Anodizing
 - Shell Color: Purple / Black
 - Weight: 112.5g
-- Shell Dimensions: 101.5*66*23mm
+- Shell Dimensions: 101.5mm * 66mm * 23mm
 
 ## Compatibility
 
