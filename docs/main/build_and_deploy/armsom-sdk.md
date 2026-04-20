@@ -68,6 +68,10 @@ repo init -u https://github.com/ArmSoM/manifests.git -b linux -m armsom_linux_ge
 ```
 ![python](/img/advanced_manual/armsom-build/python.png)
 
+:::tip
+The ubuntu24.04 repository has enabled git-lfs for managing large files. You can only pull the complete code by executing `git lfs pull`
+:::
+
 # 4. SDK Updates
 We continuously update ArmSom-SDK and synchronize modified content to GitHub in real-time. We welcome all development enthusiasts to jointly manage and maintain the open-source code. If you need to synchronize updated content locally, you can use repo or git to achieve this.
 

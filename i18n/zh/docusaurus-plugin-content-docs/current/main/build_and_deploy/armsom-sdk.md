@@ -70,6 +70,10 @@ repo init -u https://github.com/ArmSoM/manifests.git -b linux -m armsom_linux_ge
 .repo/repo/repo sync -c -j4
 ```
 
+:::tip
+ubuntu24.04仓库开启了git-lfs 管理大文件，执行`git lfs pull`才能拉取完整代码
+:::
+
 # 4. SDK更新
 我们会对armsom-sdk不断更新，将修改的内容实时同步到Github，欢迎广大开发爱好者共同来管理维护开源代码， 需要在本地同步更新内容，则可以借助repo或git来实现
 
