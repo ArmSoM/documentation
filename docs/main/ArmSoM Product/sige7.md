@@ -555,7 +555,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://www.printables.com/model/1234582-armsom-sige7-case" class="card-link">
+<a href="https://drive.google.com/drive/folders/1jMrzK29BGL-MvSF8JiTV1ekhT6T5UK_O" class="card-link">
     <div class="card">
         <div class="icon">
             <i>💡</i>
