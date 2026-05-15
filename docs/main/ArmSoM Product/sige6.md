@@ -43,7 +43,7 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
 
 ## Getting started
 
-<a href="./sige-family-started" class="card-link">
+<!-- <a href="./" class="card-link">
     <div class="card">
         <div class="icon">
             <i>✈️</i>
@@ -53,7 +53,7 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
             <p>How to start using your Sige</p>
         </div>
     </div>
-</a>
+</a> -->
 
 
 ## Hardware

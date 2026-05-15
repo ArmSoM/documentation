@@ -40,7 +40,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 
 ## sige6 使用手册
 
-<a href="./armsom-forge6#使用手册" class="card-link">
+<!-- <a href="./" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📝</i>
@@ -50,7 +50,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
             <p>如何开始使用你的Sige6</p>
         </div>
     </div>
-</a>
+</a> -->
 
 ## 硬件信息
 
