@@ -116,7 +116,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li></th>
+            <th><li>32GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>

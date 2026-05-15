@@ -143,7 +143,7 @@ armsom-cm5v1.2 第21pin 不工作，将在下个v1.3 版本修复
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li></th>
+            <th><li>32/64/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>显示</th>

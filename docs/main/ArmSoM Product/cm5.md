@@ -142,7 +142,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC, default eMMC 64GB</li><li>Supports MicroSD card expansion</li></th>
+            <th><li>32/64/128GB eMMC, default eMMC 64GB</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>Display</th>

@@ -114,7 +114,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li></th>
+            <th><li>32GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
