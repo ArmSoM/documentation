@@ -60,8 +60,8 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
 
 ### Hardware Interface
 
-![ArmSoM-Sige6 front & back](/img/sige/armsom-sige7-layout.jpg)
- 
+![ArmSoM-Sige6 front & back](/img/sige/armsom-sige6-layout.jpg)
+
 ### Hardware Spec
 <details>
 <summary>

@@ -56,7 +56,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 
 ### 硬件接口
 
-![ArmSoM-Sige6 front & back](/img/sige/armsom-sige7-layout.jpg)
+![ArmSoM-Sige6 front & back](/img/sige/armsom-sige6-layout.jpg)
 
 ### 硬件规格
 <details>
