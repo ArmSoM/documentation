@@ -15,7 +15,7 @@ image: /img/sige/sige7-bananer.png
 
 ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，双核 Arm Cortex-A76 + 六核 Arm Cortex-A55 大小核架构，12nm 制程，最高主频 2.0GHz；并集成 3 TOPS NPU 及 Imagination BXM-4-64 MC1 GPU，可提供强大的 AI 和多媒体处理能力。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
-![ArmSoM-sige6](/img/sige/sige7-bananer.png)
+![ArmSoM-sige6](/img/sige/sige6-bananer.jpg)
 
 ### 关键参数
 

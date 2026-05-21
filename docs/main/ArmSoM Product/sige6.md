@@ -18,7 +18,7 @@ The **ArmSoM-Sige6** is powered by the **Allwinner A733** octa-core processor, f
 
 It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence, cloud computing, VR/AR, blockchain, and intelligent NVR applications.
 
-![ArmSoM-sige6](/img/sige/sige7-bananer.png)
+![ArmSoM-sige6](/img/sige/sige6-bananer.jpg)
 
 ### Key Specifications
 
