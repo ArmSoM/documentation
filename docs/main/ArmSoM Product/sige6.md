@@ -4,7 +4,7 @@ keywords: [armsom, armsom-sige6, maker kit, allwinner, A733 Product Introduction
 sidebar_label: "Sige6"
 sidebar_position: 2
 slug: /armsom-sige6
-image: /img/sige/sige7-bananer.png
+image: /img/sige/sige6-bananer.png
 ---
 
 
@@ -186,10 +186,10 @@ Sige6 Hardware Specifications
 | **OS Support** | Debian, Android 13 | Ubuntu, Debian, Android 13 | Debian, Android 13 |
 </details>
 
-### Allwinner a733 框图
+### Allwinner a733 Diagram
 <details>
     <summary>
-      Allwinner a733 框图
+      Allwinner a733 Diagram
     </summary>
         <img
   src="./img/sige/a733-block-diagram.png"

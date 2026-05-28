@@ -4,7 +4,7 @@ keywords: [armsom, armsom-sige6, maker kit, allwinner, A733产品介绍]
 sidebar_label: "Sige6"
 sidebar_position: 2
 slug: /armsom-sige6
-image: /img/sige/sige7-bananer.png
+image: /img/sige/sige6-bananer.png
 ---
 
 # Sige6 产品简介
