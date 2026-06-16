@@ -234,14 +234,14 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ### SDK源码
 <div class="cards">
-<a href="https://github.com/ArmSoM/armsom-w3-bsp" class="card-link">
+<a href="https://github.com/ArmSoM/manifests" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📚</i>
         </div>
         <div class="content">
-            <h2>Source Code</h2>
-            <p>ArmSoM bsp</p>
+            <h2>ArmSom-bsp </h2>
+            <p>Building a Linux System</p>
         </div>
     </div>
 </a>
