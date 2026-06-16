@@ -191,8 +191,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 
 ### Hardware Pin Definitions
 
-![ArmSoM-cm5-pinlist-1](/img/cm/cm5-pinlist-1.png)
-![ArmSoM-cm5-pinlist-2](/img/cm/cm5-pinlist-2.png)
+![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
 
 ## Resources
 

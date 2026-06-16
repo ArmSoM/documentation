@@ -3,7 +3,7 @@ description: The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,oc
 keywords: [armsom, armsom-sige7, SBC, maker kit, Rockchip]
 sidebar_label: "Sige7s"
 sidebar_position: 2
-slug: /armsom-sige7
+slug: /armsom-sige7s
 image: /img/sige/sige7-bananer.png
 ---
 
