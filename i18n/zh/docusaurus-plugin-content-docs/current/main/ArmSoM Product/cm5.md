@@ -192,8 +192,7 @@ armsom-cm5v1.2 第21pin 不工作，将在下个v1.3 版本修复
 
 ### 引脚定义
 
-![ArmSoM-cm5-pinlist-1](/img/cm/cm5-pinlist-1.png)
-![ArmSoM-cm5-pinlist-2](/img/cm/cm5-pinlist-2.png)
+![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
 
 <a href="https://pan.baidu.com/s/1Cl3m1eBwcBnNsEkdmXg7GA?pwd=hv4b" class="btn">
   <span>ArmSoM-CM5&raspberrypi-CM4&BPI-CM4 Pinlist对比表</span>
