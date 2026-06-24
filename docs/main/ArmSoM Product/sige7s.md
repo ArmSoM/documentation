@@ -66,132 +66,98 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 ### Hardware Spec
 <details>
     <summary>
-        Sige7s 硬件规格
+        Sige7s Hardware Specifications
     </summary>
 <table>
     <thead>
         <tr>
-            <th>类别</th>
-            <th>功能参数</th>
+            <th>Category</th>
+            <th>Functional Parameters</th>
         </tr>
     </thead>
     <tbody align="left">
         <tr>
             <th>SOC</th>
-            <th><li>RockChip RK3588</li></th>
+            <th><li>Rockchip RK3588s</li></th>
         </tr>
         <tr>
             <th>CPU</th>
-            <th><li>RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程</li></th>
+            <th><li>RK3588s Quad-core Cortex-A76 @ 2.4GHz + Quad-core Cortex-A55 @ 1.8GHz, 8nm process</li></th>
         </tr>
         <tr>
             <th>GPU</th>
-            <th><li>GPU Mali-G610 MP4 (4x256KB L2 Cache)</li><li>支持 OpenGL ES3.2/OpenCL2.2/Vulkan1.1</li></th>
+            <th><li>Mali-G610 MP4 GPU (4x256KB L2 Cache)</li><li>Supports OpenGL ES3.2 / OpenCL2.2 / Vulkan1.1</li></th>
         </tr>
         <tr>
             <th>NPU</th>
-            <th><li>6 TOPS@INT8(3 NPU core)</li><li>支持 INT4/INT8/INT16 混合运算</li><li>支持深度学习框架：TensorFlow/MXNet/PyTorch/Caffe/Tflite/Onnx NN/Android NN 等</li></th>
+            <th><li>6 TOPS @ INT8 (3 NPU cores)</li><li>Supports INT4 / INT8 / INT16 mixed operations</li><li>Supports deep learning frameworks: TensorFlow, MXNet, PyTorch, Caffe, Tflite, Onnx NN, Android NN, etc.</li></th>
         </tr>
          <tr>
-            <th>VPU/编解码</th>
-            <th><li>硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>硬编码：8K@30fps H.265 / H.264</li></th>
+            <th>VPU / Codec</th>
+            <th><li>Hardware Decoding: 8K @ 60fps H.265 / VP9 / AVS2, 8K @ 30fps H.264 AVC/MVC, 4K @ 60fps AV1, 1080P @ 60fps MPEG-2/-1 / VC-1 / VP8</li><li>Hardware Encoding: 8K @ 30fps H.265 / H.264</li></th>
         </tr>
          <tr>
             <th>ISP</th>
-            <th><li>集成48MP ISP with HDR&3DNR</li></th>
+            <th><li>Integrated 48MP ISP with HDR & 3DNR</li></th>
         </tr>
-        <tr >
+        <tr>
             <th>RAM</th>
-            <th><li>8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
+            <th><li>8GB / 16GB / 32GB (Maximum configuration up to 32GB) 64-bit LPDDR4 / LPDDR4x</li></th>
         </tr>
-        <tr >
+        <tr>
             <th>Flash</th>
-            <th><li>16GB/32GB/64GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
+            <th><li>16GB / 32GB / 64GB / 128GB eMMC</li><li>Supports MicroSD card expansion</li></th>
         </tr>
         <tr>
-            <th>PCIe</th>
-            <th><li>1x M.2 Key M 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
+            <th>Networking</th>
+            <th><li>Wi-Fi 6 + BT5.0 (AIC8800)</li><li>Gigabit Ethernet port with PoE function (requires an additional PoE module)</li></th>
         </tr>
         <tr>
-            <th>网络</th>
-            <th><li>2x 2.5G网口</li><li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (AP6275P)</li></th>
+            <th>Video Output</th>
+            <th><li>1x DP1.4 (2-Lane), supports up to 4K @ 60fps</li><li>1x HDMI 2.1, supports up to 8K @ 60fps</li><li>1x DSI (2-Lane), supports max 1280×800 display resolution</li></th>
         </tr>
         <tr>
-            <th>视频输出</th>
-            <th><li>1x HDMI OUT2.1，支持 8K@60fps</li><li>1x MIPI DSI 分辨率最高可达 4K@60fps</li><li>1x DP1.4 分辨率最高可达 8K@30fps</li></th>
+            <th>Video Input</th>
+            <th><li>1x CSI (2-Lane), supports up to 5MP camera input resolution</li></th>
         </tr>
         <tr>
-            <th>视频输入</th>
-            <th><li>2x 4Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
+            <th>Audio</th>
+            <th><li>1x HDMI audio output</li><li>1x HP-OUT (Headphone) audio output</li><li>1x USB Type-C 3.0 (DP1.4) audio output</li></th>
         </tr>
         <tr>
-            <th>音频</th>
-            <th><li>1x HDMI音频输出</li><li>1x HP-OUT 音频输出</li><li>1x USB Type-C 3.0 (DP1.4)音频输出</li></th>
-        </tr>
-        <tr>
-            <th>USB接口</th>
-            <th><li>1x USB3.0（支持USB3.1 Gen1），高达5Gbps数据速率</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li><li>1x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
+            <th>USB Interfaces</th>
+            <th><li>2x USB 3.0 (supports USB 3.1 Gen1) with data rates up to 5Gbps</li><li>2x USB 2.0, supporting High-Speed (480Mbps), Full-Speed (12Mbps), and Low-Speed (1.5Mbps) modes</li></th>
         </tr>
         <tr>
             <th>40-PIN</th>
-            <th><li>和树莓派40pin可完全兼容，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
+            <th><li>Fully compatible with the Raspberry Pi 40-pin header, allowing connection to a wide range of accessories and peripherals</li><li>Supports UART / SPI / I2C / I2S / PWM / ADC / 5V Power / 3.3V Power</li></th>
         </tr>
         <tr>
-            <th>其他</th>
-            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片 LK8563S 的供电</li><li>1x LED灯，系统正常时红色灯亮</li></th>
+            <th>Others</th>
+            <th><li>1x Battery input connector for powering the low-power RTC chip (LK8563S)</li><li>2x Status LEDs (Green LED lights up during normal system operation)</li></th>
         </tr>
         <tr>
-            <th>电源</th>
-            <th><li>宽范围的输入电压 5V-23V : 支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A</li></th>
+            <th>Power Supply</th>
+            <th><li>Wide range input voltage: 5V – 23V</li></th>
         </tr>
         <tr>
-            <th>按键</th>
-            <th><li>1x PWRON键，支持休眠唤醒</li><li>1x Reset键，支持重启</li><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
+            <th>Buttons</th>
+            <th><li>1x PWRON button (supports sleep/wake functionality)</li><li>1x Maskrom button (supports entering Maskrom flashing mode)</li></th>
         </tr>
         <tr>
-            <th>系统</th>
-            <th><li>Rockchip官方支持：Android 12.0，Debian12，ubuntu22.04</li><li>第三方支持：Armbian</li></th>
+            <th>OS Support</th>
+            <th><li>Official Support: Debian 12, Ubuntu 22.04, Ubuntu 24.04</li><li>Third-Party Support: Armbian</li></th>
         </tr>
         <tr>
-            <th>尺寸</th>
-            <th><li>92 mm x 62mm</li></th>
+            <th>Dimensions</th>
+            <th><li>85 mm × 56 mm × 17 mm</li></th>
         </tr>
         <tr>
-            <th>工作温度</th>
-            <th><li>0℃ ~ 80℃</li></th>
+            <th>Operating Temp</th>
+            <th><li>0°C ~ 80°C</li></th>
         </tr>
     </tbody>
 </table>
-</details>
-
-<details>
-    <summary>
-        Sige7/7s规格比较
-    </summary>
-
-|        | Sige7  | Sige7s |
-| --------- | ----- | --- |
-| SoC Process | 8nm | 8nm |
-| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3588S 4xCortex-A76 @2.4GHz + 4xCortex-A55 @1.8GHz  | 
-| GPU | ARM Mali-G610 MP4  | ARM Mali-G610 MP4 |
-| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8 |
-| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 2GB/4GB/8GB/16GB 32-bit/64-bit LPDDR4x |
-| eMMC| 64GB/128GB eMMC | 32/64GB/128GB eMMC|
-| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes|
-| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x Micro HDMI (8K@60fps) <br/> 1x MIPI DSI <br/> 1x Mini DP  |
-| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|
-| Encoder | 8K@30fps H.265 / H.264| 8K@30fps H.265 / H.264|
-| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | AIC8800 Wi-Fi, BT5 |
-| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - |
-| Ethernet | 2x 2.5G Ethernet |   千兆 Ethernet|
-| USB Host | 1x USB 3.0 & 1x USB 2.0 | 2x USB 3.0 + 2x USB 2.0|
-| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0 |
-| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x MIPI CSI <br/> 1x MIPI DSI | 
-| 40-PIN Header| yes | yes |
-| LEDs | 2x LEDs | 2x LEDs |
-|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
-
-</details>
 </details>
 
 ### RK3588 Block Diagram
