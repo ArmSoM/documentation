@@ -1,10 +1,10 @@
 ---
-description: The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
-keywords: [armsom, armsom-sige7, SBC, maker kit, Rockchip]
+description: The ArmSoM-Sige7s is powered by the Rockchip RK3588s, a new-generation flagship octa-core 64-bit processor. It features a rich array of hardware interfaces, covering communication buses commonly used in the embedded industry, such as I2C, SPI, UART, and CAN. For multimedia, the micro HDMI port supports video output up to 8K at 60fps. Its octa-core CPU, clocked at up to 2.4GHz, handles daily multitasking needs for applications such as servers and gateways. The integrated NPU delivers 6 TOPS of computing power, significantly enhancing the performance of various model algorithms.
+keywords: [armsom, armsom-sige7s, rk3588s maker kit, rockchip, rk3588s product overview]
 sidebar_label: "Sige7s"
-sidebar_position: 2
+sidebar_position: 3
 slug: /armsom-sige7s
-image: /img/sige/sige7-bananer.png
+image: /img/sige/sige7s-bananer.png
 ---
 
 
@@ -16,15 +16,7 @@ Let's get to know Sige7s in 5 minutes.
 
 The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
 
-![ArmSoM-sige7](/img/sige/sige7-bananer.png)
-
-:::tip Rockchip RK3588
-- [ArmSoM-Sige7](./armsom-sige7) AI SBC;
-- [ArmSoM-AIM7](./armsom-aim7) AIM7 core board， [ArmSoM-AIM-IO](./armsom-aimio)  AIM Companion IO Board;
-- [ArmSoM-LM7](./armsom-lm7) LGA core board, [ArmSoM-W3](./armsom-w3) LGA core board maker kit;
-
-With the powerful ecosystem and variety of extension modules, ArmSoM can help users easily go from ideas to prototype to mass production, making it an ideal creative platform for makers, dreamers and hobbyists.
-:::
+![ArmSoM-sige7s](/img/sige/sige7s-bananer.png)
 
 Sige 7 is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
  
@@ -38,14 +30,14 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 - **VPU/Codec**:
   - **Hardware Decode**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
   - **Hardware Encode**: 8K@30fps H.265 / H.264
-- **RAM**: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
-- **Storage**: 64GB/128GB eMMC, default 64GB eMMC
+- **RAM**: 2GB/4GB/8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x
+- **Storage**: 32GB/64GB/128GB eMMC Module
 - **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
 - **OS**: 
-  - **Official**: Android 12.0, Debian 11, Buildroot
-  - **3rd party**: Armbian, Ubuntu 22.04, Ubuntu 24.04, Arch Linux, openSUSE
+  - **Official**: Debian 11, Ubuntu 22.04, Ubuntu 24.04
+  - **3rd party**: Armbian, Arch Linux, openSUSE
 - **PCB**: 12-layer
 - **Weight**: 46.6g
 - **Size**: 92mm × 62mm x 14.6mm
@@ -69,23 +61,18 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ### Hardware Interface
 
-![ArmSoM-Sige7 front & back](/img/sige/armsom-sige7-layout.jpg)
-![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
-
-:::tip
-There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port is for power input.
-:::
+![ArmSoM-Sige7s front & back](/img/sige/armsom-sige7s-layout.jpg)
  
 ### Hardware Spec
 <details>
     <summary>
-        Sige7 Hardware Spec
+        Sige7s 硬件规格
     </summary>
-    <table>
+<table>
     <thead>
         <tr>
-            <th>Category</th>
-            <th>Functional Parameters</th>
+            <th>类别</th>
+            <th>功能参数</th>
         </tr>
     </thead>
     <tbody align="left">
@@ -95,82 +82,82 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr>
             <th>CPU</th>
-            <th><li>RK3588 Quad-Core Cortex-A76@ 2.4GHz+Quad-CoreCortex-A55@ 1.8GHz，8nm process</li></th>
+            <th><li>RK3588 四核Cortex-A76@ 2.4GHz+四核Cortex-A55@ 1.8GHz，8纳米制程</li></th>
         </tr>
         <tr>
             <th>GPU</th>
-            <th><li>GPU Mali-G610 MP4 (4x256KB L2 Cache)</li><li>Supports OpenGL ES3.2/OpenCL2.2/Vulkan1.1</li></th>
+            <th><li>GPU Mali-G610 MP4 (4x256KB L2 Cache)</li><li>支持 OpenGL ES3.2/OpenCL2.2/Vulkan1.1</li></th>
         </tr>
         <tr>
             <th>NPU</th>
-            <th><li>6 TOPS@INT8(3 NPU core)</li><li>Supports INT4/INT8/INT16 mixed computing</li><li>Supports frameworks like TensorFlow, MXNet, PyTorch, Caffe, Tflite, Onnx NN, Android NN, etc</li></th>
+            <th><li>6 TOPS@INT8(3 NPU core)</li><li>支持 INT4/INT8/INT16 混合运算</li><li>支持深度学习框架：TensorFlow/MXNet/PyTorch/Caffe/Tflite/Onnx NN/Android NN 等</li></th>
         </tr>
          <tr>
-            <th>VPU/Codec</th>
-            <th><li>Hardware Decode: 8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>Hardware Encode:8K@30fps H.265 / H.264</li></th>
+            <th>VPU/编解码</th>
+            <th><li>硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>硬编码：8K@30fps H.265 / H.264</li></th>
         </tr>
          <tr>
             <th>ISP</th>
-            <th><li>Integrated 48MP ISP with HDR&3DNR</li></th>
+            <th><li>集成48MP ISP with HDR&3DNR</li></th>
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB/32GB（max 32GB ）64bit LPDDR4/LPDDR4x，default 8GB LPDDR4x</li></th>
+            <th><li>8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/64GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
+            <th><li>16GB/32GB/64GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M (PCIe 3.0 4-lanes). Expandable SSD support for 2280/2260/2242/2230 M.2 SSD cards, default 2280 </li></th>
+            <th><li>1x M.2 Key M 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
         </tr>
         <tr>
-            <th>Networking</th>
-            <th><li>2x 2.5G Ethernet</li><li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 (AP6275P)</li></th>
+            <th>网络</th>
+            <th><li>2x 2.5G网口</li><li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 (AP6275P)</li></th>
         </tr>
         <tr>
-            <th>Video Out</th>
-            <th><li>1x HDMI 2.1, supports 8K@60fps</li><li>1x MIPI DSI up to 4K@60fps</li><li>1x DP 1.4 up to 8K@30fps</li></th>
+            <th>视频输出</th>
+            <th><li>1x HDMI OUT2.1，支持 8K@60fps</li><li>1x MIPI DSI 分辨率最高可达 4K@60fps</li><li>1x DP1.4 分辨率最高可达 8K@30fps</li></th>
         </tr>
         <tr>
-            <th>Video In</th>
-            <th><li>2x 4-lane MIPI CSI, up to 2.5Gbps per lane</li></th>
+            <th>视频输入</th>
+            <th><li>2x 4Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
         </tr>
         <tr>
-            <th>Audio</th>
-            <th><li>1x HDMI audio out</li><li>1x HP audio out</li><li>1x USB Type-C 3.0 (DP1.4) audio out</li></th>
+            <th>音频</th>
+            <th><li>1x HDMI音频输出</li><li>1x HP-OUT 音频输出</li><li>1x USB Type-C 3.0 (DP1.4)音频输出</li></th>
         </tr>
         <tr>
-            <th>USB</th>
-            <th><li>1x USB 3.0 (USB 3.1 Gen 1), up to 5Gbps</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li><li>1x USB 2.0 High（480Mbps）/Full（12Mbps）/Low-Speed（1.5Mbps） modes </li></th>
+            <th>USB接口</th>
+            <th><li>1x USB3.0（支持USB3.1 Gen1），高达5Gbps数据速率</li><li>1x USB Type-C 3.0（DP1.4/OTG）</li><li>1x USB2.0，支持高速（480Mbps）、全速（12Mbps）和低速（1.5Mbps）模式</li></th>
         </tr>
         <tr>
             <th>40-PIN</th>
-            <th><li>Fully compatible with Raspberry Pi 40-PIN header for connecting abundant add-on modules </li><li>Supports UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
+            <th><li>和树莓派40pin可完全兼容，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/ADC/5V Power/3.3V Power</li></th>
         </tr>
         <tr>
-            <th>Other</th>
-            <th><li>1x 5V fan interface</li><li>1x battery connector for low power RTC chip HYM8563TS </li><li>2x LEDs - green LED blinks on system start, red LED user controllable</li></th>
+            <th>其他</th>
+            <th><li>1x 5V风扇接口</li><li>1x 电池输入连接器用于低功耗RTC芯片 LK8563S 的供电</li><li>1x LED灯，系统正常时红色灯亮</li></th>
         </tr>
         <tr>
-            <th>Power Input</th>
-            <th><li>Wide input voltage range 5V-23V: Supports USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A</li></th>
+            <th>电源</th>
+            <th><li>宽范围的输入电压 5V-23V : 支持USB Type-C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A</li></th>
         </tr>
         <tr>
-            <th>Buttons</th>
-            <th><li>1x PWRON button for sleep/wake</li><li>1x Reset button for reboot</li><li>1x Maskrom button for maskrom burn-in mode</li></th>
+            <th>按键</th>
+            <th><li>1x PWRON键，支持休眠唤醒</li><li>1x Reset键，支持重启</li><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
         </tr>
         <tr>
-            <th>OS Support</th>
-            <th><li>Official: ：Android 12.0，Debian11，Buildroot</li><li>3rd Party：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS</li></th>
+            <th>系统</th>
+            <th><li>Rockchip官方支持：Android 12.0，Debian12，ubuntu22.04</li><li>第三方支持：Armbian</li></th>
         </tr>
         <tr>
-            <th>Dimensions</th>
+            <th>尺寸</th>
             <th><li>92 mm x 62mm</li></th>
         </tr>
         <tr>
-            <th>Operating temperature</th>
+            <th>工作温度</th>
             <th><li>0℃ ~ 80℃</li></th>
         </tr>
     </tbody>
@@ -179,31 +166,32 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 
 <details>
     <summary>
-       Comparison of Specifications for Sige7/5/3/1
+        Sige7/7s规格比较
     </summary>
 
-|        | Sige7  | Sige5 | Sige3 |Sige1 |
-| --------- | ----- | --- |--- | --- | 
-| SoC Process | 8nm | 8nm | 22nm | 28nm |  
-| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3568B2 <br/> Cortex-A55 x4 @2GHz | Rockchip RK3528 <br/> Cortex-A53 x4 @2GHz | 
-| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | Arm Mali‑G52‑2EE | ARM Mali-450 GPU |
-| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | 1TOP@INT8 | - |
-| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x | 2/4GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
-| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 32GB eMMC | 8 eMMC |
-| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes| Yes |   Yes|
-| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps | 1x MIPI DSI up to 2K@60fps <br/> 1x HDMI OUT2.0, supports 4K@60fps |  1x HDMI OUT2.0b, supports 4K@60fps|
-| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| 4KP60 H.265/H.264/VP9  |  H.265, H.264, AVS2 4K@60fps|
-| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| 1080P60 H.264/H.265 | H.264 and H.265 up to1080@60fps|
-| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |   SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
-| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 2.1 1-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 3.0 2-lanes <br/> M.2 Key M 2280 NVMe SSD Supported |  - |
-| Ethernet | 2x 2.5G Ethernet |   2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet| Gigabit Ethernet & 2.5G Ethernet|
-| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
-| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
-| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
-| 40-PIN Header| yes | yes | yes | yes |
-| LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
-|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
+|        | Sige7  | Sige7s |
+| --------- | ----- | --- |
+| SoC Process | 8nm | 8nm |
+| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3588S 4xCortex-A76 @2.4GHz + 4xCortex-A55 @1.8GHz  | 
+| GPU | ARM Mali-G610 MP4  | ARM Mali-G610 MP4 |
+| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8 |
+| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 2GB/4GB/8GB/16GB 32-bit/64-bit LPDDR4x |
+| eMMC| 64GB/128GB eMMC | 32/64GB/128GB eMMC|
+| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes|
+| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x Micro HDMI (8K@60fps) <br/> 1x MIPI DSI <br/> 1x Mini DP  |
+| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|
+| Encoder | 8K@30fps H.265 / H.264| 8K@30fps H.265 / H.264|
+| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | AIC8800 Wi-Fi, BT5 |
+| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | - |
+| Ethernet | 2x 2.5G Ethernet |   千兆 Ethernet|
+| USB Host | 1x USB 3.0 & 1x USB 2.0 | 2x USB 3.0 + 2x USB 2.0|
+| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0 |
+| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x MIPI CSI <br/> 1x MIPI DSI | 
+| 40-PIN Header| yes | yes |
+| LEDs | 2x LEDs | 2x LEDs |
+|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
+</details>
 </details>
 
 ### RK3588 Block Diagram
@@ -228,98 +216,55 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 <div className='gpio_style'>
 
 | GPIO number |  Function |   Pin    |  Pin     |  Function  | GPIO number |
- :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     139     | I2S1_SDO2_M0 / I2C7_SDA_M3 / UART8_CTSN_M0 / PWM15_IR_M1 / CAN1_TX_M1 / GPIO4_B3 /| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     138     | I2S1_SDO1_M0 / I2C7_SCL_M3 / UART8_RTSN_M0 /  PWM14_M1   / CAN1_RX_M1 / GPIO4_B2  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     115     | SPI1_CS1_M1 / I2C8_SDA_M4 / UART7_CTSN_M1 / PWM15_IR_M0 / GPIO3_C3  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  GPIO0_B5 / <div className='orange-txt'>UART2_TX_M0</div> / I2C1_SCL_M0 / I2S1_MCLK_M1  / JTAG_TCK_M2|     13      |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART2_RX_M0</div> / I2C1_SDA_M0 / I2S1_SCLK_M1 /  JTAG_TMS_M2  |     14      |
-|     113     |  SPI1_CLK_M1 / UART7_RX_M1 / GPIO3_C1  | <div className='green'>11</div>  | <div className='green'>12</div> |  GPIO3_B5  / CAN1_RX_M0 / PWM12_M0  /UART3_TX_M1 / I2S2_SCLK_M1 |     109     |
-|     111     |  SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1 / GPIO3_C0  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     112     |   SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7   | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1  |     100     |
-|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  GPIO4_C4 / PWM5_M2 / SPI3_MISO_M0 |    148     |
-|     42      | SPI0_MOSI_M2 / UART4_RX_M2 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
-|     41      | SPI0_MISO_M2 / GPIO1_B1  | <div className='green'>21</div>  | <div className='green'>22</div> | SARADC_IN4          |             |
-|     43      | SPI0_CLK_M2 / UART4_TX_M2 / GPIO1_B3  | <div className='green'>23</div>  | <div className='green'>24</div> |  GPIO1_B4 / UART7_RX_M2  /SPI0_CS0_M2 |     44      |
-|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     45      |
-|     150     | SPI3_CLK_M0 / I2C0_SDA_M1 / PWM7_IR_M3 / GPIO4_C6  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO4_C5 / PWM6_M2 / I2C0_SCL_M1 |     149     | 
-|     63      | UART1_CTSN_M1 / PWM15_IR_M3 / GPIO1_D7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
-|     47      | SPDIF_TX_M0 / UART1_RX_M1 / PWM13_M2 / GPIO1_B7  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_C2 / PWM14_M0 / UART7_RTSN_M1 / I2C8_SCL_M4 / SPI1_CS0_M1  |    114     |
-|     103     | PWM8_M0 / GPIO3_A7  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
-|     110     | I2S2_LRCK_M1 / UART3_RX_M1 / PWM13_M0 / CAN1_TX_M0 / GPIO3_B6  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO3_B1 / PWM2_M1 / UART2_TX_M2 |     105     |
-|      0      | REFCLK_OUT / GPIO0_A0	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO3_B2 /PWM3_IR_M1 / UART2_RX_M2 / I2S2_SDI_M1   |     106     |
-|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO3_B3 /  UART2_RTSN / I2S2_SDO_M1   |     107     |
+| :-----------: | :-------------: | :--------: | :--------: | :--------: |:--------: |
+| | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V | |
+| /dev/i2c1 sda | I2C1_SDA \ GPIO0_D5 | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V | |
+| /dev/i2c1 scl | I2C1_SCL \ GPIO0_D4 | <div className='green'>5</div> | <div className='black'>6</div> | GND | |
+| 47 | GPIO1_B7 \ PWM3_M3 | <div className='green'>7</div> | <div className='green'>8</div> | <div className='orange-txt'>UART2_TX_M0</div> | |
+| | GND | <div className='black'>9</div> | <div className='green'>10</div> | <div className='orange-txt'>UART2_RX_M0</div>  | |
+| 128 | GPIO4_A0 | <div className='green'>11</div> | <div className='green'>12</div> | GPIO1_A7 | 39 |
+| 129 | GPIO4_A1 | <div className='green'>13</div> | <div className='black'>14</div> | GND | |
+| 130 | GPIO4_A2 | <div className='green'>15</div> | <div className='green'>16</div> | UART6_TX_M1 \ GPIO1_A1 | /dev/ttyS2 uart txd |
+| | +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |UART6_RX_M1 \| GPIO1_A0 |  /dev/ttyS2 uart rxd |
+| spi mosi | SPI0_MOSI_M2 | <div className='green'>19</div> | <div className='black'>20</div> | GND | |
+| spi miso  | SPI0_MISO_M2 | <div className='green'>21</div> | <div className='green'>22</div> | GPIO1_B0|  40 |
+| spi clk| SPI0_CLK_M2 | <div className='green'>23</div> | <div className='green'>24</div> | spi cs 0 | SPI0_CS0_M2 |
+| | GND | <div className='black'>25</div> | <div className='green'>26</div> | spi cs 1 | SPI0_CS1_M2 |
+| /dev/i2c6 sda| I2C6_SDA_M3 | <div className='green'>27</div> | <div className='green'>28</div> | I2C6_SCL_M3 |  /dev/i2c6 scl |
+| 131 | GPIO4_A3 \ UART0_TXD_M2 | <div className='green'>29</div> | <div className='black'>30</div> | GND | |
+| 132 | GPIO4_A4 \ UART0_RXD_M2 | <div className='green'>31</div> | <div className='green'>32</div> | PWM2 | 105 |
+| 133 | GPIO4_A5 \ UART3_TXD_M2 | <div className='green'>33</div> | <div className='black'>34</div> | GND | |
+| 134 | GPIO4_A6 \ UART3_RXD_M2 | <div className='green'>35</div> | <div className='green'>36</div> | GPIO4_B2 \ CAN1_RXD_M1 | 138 |
+| 135 | GPIO4_A7 | <div className='green'>37</div> | <div className='green'>38</div> | GPIO4_B3 \ CAN1_TXD_M1 | 139 |
+| | GND | <div className='black'>39</div> | <div className='green'>40</div> | GPIO3_C3 | 115 |
 
 </div>
 </details>
 
 <details>
     <summary>
-        MIPI CSI0
+        MIPI CSI
     </summary>
     
-0.5mm FPC connector(J12)
+0.5mm FPC connector(J10)
 
-| Pin       | Signal Name                | Description                                                                 |
-|-----------|---------------------------|-----------------------------------------------------------------------------|
-| 1,4,7,10,13,16 | PGND/SGND          | **Ground Planes**<br/>- PGND: Power Ground (high-current return path)<br/>- SGND: Signal Ground (low-noise reference) |
-| 2         | MIPI_CSI0_RX_D3N           | **MIPI CSI-2 Receive Channel 3**<br/>- Differential negative input (100Ω ±10% termination) |
-| 3         | MIPI_CSI0_RX_D3P           | **MIPI CSI-2 Receive Channel 3**<br/>- Differential positive input          |
-| 5         | MIPI_CSI0_RX_D2N           | **MIPI CSI-2 Receive Channel 2**<br/>- Differential negative input          |
-| 6         | MIPI_CSI0_RX_D2P           | **MIPI CSI-2 Receive Channel 2**<br/>- Differential positive input          |
-| 8         | MIPI_CSI0_RX_CLK1N         | **Secondary Clock Channel**<br/>- Differential negative (up to 1.5GHz)      |
-| 9         | MIPI_CSI0_RX_CLK1P         | **Secondary Clock Channel**<br/>- Differential positive                     |
-| 11        | MIPI_CSI0_RX_D1N           | **MIPI CSI-2 Receive Channel 1**<br/>- Differential negative input          |
-| 12        | MIPI_CSI0_RX_D1P           | **MIPI CSI-2 Receive Channel 1**<br/>- Differential positive input         |
-| 14        | MIPI_CSI0_RX_D0N           | **MIPI CSI-2 Receive Channel 0**<br/>- Differential negative input          |
-| 15        | MIPI_CSI0_RX_D0P           | **MIPI CSI-2 Receive Channel 0**<br/>- Differential positive input          |
-| 17        | MIPI_CSI0_RX_CLK0N         | **Primary Clock Channel**<br/>- Differential negative                       |
-| 18        | MIPI_CSI0_RX_CLK0P         | **Primary Clock Channel**<br/>- Differential positive                       |
-| 19        | MIPI_VSYNC                 | **Vertical Sync Signal**<br/>- 1.8V LVCMOS level                            |
-| 20        | MIPI_CAM3_CLKOUT           | **Sensor Clock Input**<br/>- 1.8V ±5%                                      |
-| 21        | MIPI_HSYNC                 | **Horizontal Sync Signal**<br/>- 1.8V LVCMOS level                          |
-| 22        | MIPI_CAM1_CLKOUT           | **Sensor Clock Input**<br/>- 1.8V ±5%                                      |
-| 23        | MIPI_CSI0_PDN0_H(GPIO1_B0) | **Power-Down Control**<br/>- 1.8V GPIO, active high                          |
-| 24        | I2C3_SCL_M0_MIPI           | **I²C Clock Line**<br/>- 1.8V open-drain output                             |
-| 25        | I2C3_SDA_M0_MIPI           | **I²C Data Line**<br/>- 1.8V open-drain output                              |
-| 26        | MIPI_CSI0_PDN1_H(GPIO1_A7) | **Secondary Power-Down Control**<br/>- 1.8V GPIO, active high               |
-| 27        | CM_RST_L(GPIO4_A0)         | **Camera Module Reset**<br/>- 3.3V LVCMOS level<br/>- Active low            |
-| 28,29     | VCC_RX                     | **3.3V Power Rail**<br/>- Output, ±5% tolerance                            |
-| 30,31     | VCC_5V0                    | **5.0V Power Rail**<br/>- Output, ±5% tolerance      
-</details>
-
-<details>
-    <summary>
-        MIPI CSI1
-    </summary>
-0.5mm FPC connector(J25)
-
-|Pin |   MIPI-CSI |   Description   |
-|:--------: | :---------------------: | :--------: | 
-|1,4,7,10,13,16 |  GND  |   Power Ground &  Signal Ground |
-|2     | MIPI_CSI1_RX_D3N   |     MIPI RX Lane3 iuput N |
-|3     | MIPI_CSI1_RX_D3P   |   MIPI RX Lane3 iuput P |
-|5     | MIPI_CSI1_RX_D2N |   MIPI RX Lane2 iuput N |
-|6     | MIPI_CSI1_RX_D2P|   MIPI RX Lane2 iuput P |
-|8     | MIPI_CSI1_RX_CLK1N|   MIPI RX Clock iuput N |
-|9     | MIPI_CSI1_RX_CLK1P |   MIPI RX Clock iuput P |
-|11    | MIPI_CSI1_RX_D1N |   MIPI RX Lane1 iuput N |
-|12    | MIPI_CSI1_RX_D1P |   MIPI RX Lane1 iuput P |
-|14    | MIPI_CSI1_RX_D0N|    MIPI RX Lane0 iuput N |
-|15    | MIPI_CSI1_RX_D0P |    MIPI RX Lane0 iuput P |
-|17    | MIPI_CSI1_RX_CLK0N|   MIPI RX Clock iuput N |
-|18    | MIPI_CSI1_RX_CLK0P|  MIPI RX Clock iuput P |
-|19    | MIPI_VSYNC        |    |
-|20    | MIPI_CAM3_CLKOUT / GPIO1_B7 |    1.8V, CLock ouput for Sensor / GPIO |
-|21    | MIPI_HSYNC        |    |
-|22    | MIPI_CAM0_CLKOUT |   1.8V, CLock ouput for Sensor |
-|23    | MIPI_CSI1_PDN0_H(GPIO1_B0) |    1.8V, GPIO |
-|24    | I2C3_SCL_M0_MIPI |   1.8V, I2C Clock, pulled up to 1.8V with 2.2K on Sige7 |
-|25    | I2C3_SDA_M0_MIPI |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on Sige7 |
-|26    | MIPI_CSI0_PDN1_H(GPIO1_A7)|  1.8V, GPIO |
-|27    | CM2_RST_L(GPIO4_A0)|   3.3V, GPIO |
-|28,29 | VCC_RX|   3.3V Power ouput |
-|30,31 | VCC_5V0|   5V Power ouput |
+| PIN | Name |
+| :---: | :--- |
+| 1 | VCC_CAM(3.3v) |
+| 2 | I2C8_SDA_M2 |
+| 3 | I2C8_SCL_M2 |
+| 4 | CIF_CLKOUT |
+| 5 | PWDN_GPIO1_A6 |
+| 6 | GND |
+| 7 | MIPI_CSI_RX_CLK0P |
+| 8 | MIPI_CSI_RX_CLK0N |
+| 9 | GND |
+| 10 | MIPI_CSI_RX_D1P |
+| 11 | MIPI_CSI_RX_D1N |
+| 12 | GND |
+| 13 | MIPI_CSI_RX_D0P |
+| 14 | MIPI_CSI_RX_D0N |
+| 15 | GND |
 </details>
 
 <details>
@@ -327,58 +272,25 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         MIPI DSI
     </summary>
 
-0.5mm FPC connector (J23)
+0.5mm FPC connector (J11)
 
-|Pin |   MIPI-DSI  |   Description     |
- :--------: | :---------------------: | :--------: | 
-|1,4,7,10,13,16,27,33,34      | GND                |   Power and Signal Ground | 
-|2                            | MIPI_DPHY1_TX_D0N  |  MIPI1 TX Lane0 ouput N | 
-|3                            | MIPI_DPHY1_TX_D0P      |   MIPI1 TX Lane0 ouput P |
-|5                            | MIPI_DPHY1_TX_D1N        |    MIPI1 TX Lane1 ouput N |
-|6                            | MIPI_DPHY1_TX_D1P         |   MIPI1 TX Lane1 ouput P | 
-|8                            | MIPI_DPHY1_TX_CLKN   |   MIPI1 TX Clock ouput N | 
-|9                            | MIPI_DPHY1_TX_CLKP           |    MIPI1 TX Clock ouput P |
-|11                           | MIPI_DPHY1_TX_D2N                |   MIPI1 TX Lane2 ouput N |
-|12                           | MIPI_DPHY1_TX_D2P                |   MIPI1 TX Lane2 ouput P |
-|14                           | MIPI_DPHY1_TX_D3N |   MIPI1 TX Lane3 ouput N | 
-|15                           | MIPI_DPHY1_TX_D3P |   MIPI1 TX Lane3 ouput P | 
-|17                           | LCD_PWM (PWM2_M2/GPIO4_C2) |   1.8V, GPIO/PWM |
-|18,19                        | VCC3V3_LCD |   3.3V Power ouput | 
-|20                           | LCD_RESET (GPIO2_C1) |   1.8V, GPIO |
-|21                           | /NC |   No Connection | 
-|22                           | LCD_BL_EN (GPIO3_A1) |   3.3V, GPIO |
-|23                           | I2C6_SCL_M0 |  1.8V, I2C Clock, pulled up to 1.8V with 2.2K on Sige7 |
-|24                           | I2C6_SDA_M0 |  1.8V, I2C Data, pulled up to 1.8V with 2.2K on Sige7 |
-|25                           | TP_INT (GPIO0_D3) |    1.8V, GPIO |
-|26                           | TP_RST (GPIO0_C6)|   1.8V, GPIO |
-|28,29                        | VCC5V0_LCD |  5V Power ouput |
-|31,32                        | VCC_1V8 |  1.8V Power ouput |
-</details>
-<details>
-    <summary>
-        FAN
-    </summary>
-
-0.8mm connector(CN32)
-
-|Pin |Assignment |   Description |
- :--------: | :---------: | :--------: | 
-|1    | VCC_5V0 | 5V Power ouput |
-|2    | GND | GND |
-|3    | PWM | PWM control |
-</details>
-<details>
-    <summary>
-        HPOUT
-    </summary>
-
-0.8mm connector(CN2)
-
-|Pin        | Assignment  | Description|
- :--------: | :---------: | :--------: | 
-|1          | AOR         | right channel      |
-|2          | AOL         | left channel      |
-|3          | GND         | GND          |
+| PIN | Name |
+| :---: | :--- |
+| 1 | VCC_MIPI |
+| 2 | VCC_MIPI |
+| 3 | GND |
+| 4 | I2C4_SDA_M3 |
+| 5 | I2C4_SCL_M3 |
+| 6 | GND |
+| 7 | MIPI_DSI_TX1_D0P |
+| 8 | MIPI_DSI_TX1_D0N |
+| 9 | GND |
+| 10 | MIPI_DSI_TX1_CLKP |
+| 11 | MIPI_DSI_TX1_CLKN |
+| 12 | GND |
+| 13 | MIPI_DSI_TX1_D1P |
+| 14 | MIPI_DSI_TX1_D1N |
+| 15 | GND |
 </details>
 
 <details>
@@ -386,7 +298,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         VRTC
     </summary>
 
-0.8mm connector(J2)
+0.8mm connector(J18)
 
 |Pin        | Assignment  | Description|
  :--------: | :---------: | :--------: | 
