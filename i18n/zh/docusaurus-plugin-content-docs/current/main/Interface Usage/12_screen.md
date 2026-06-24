@@ -123,7 +123,7 @@ MIPI 屏幕调试时，一般需要特别关注屏幕的上电初始化序列（
 
 #### 12.4.1.1. 调试步骤分析
 
-mipi屏幕的点亮流程以ArmSoM-Sige5 为例，github: [armsom-sige5-display-10hd.dts](https://github.com/armbian/linux-rockchip/blob/rk-6.1-rkr4.1/arch/arm64/boot/dts/rockchip/overlay/armsom-sige5-display-10hd.dts)
+mipi屏幕的点亮流程以ArmSoM-Sige5 为例，github: [armsom-sige5-display-10hd.dts](https://github.com/ArmSoM/rockchip-kernel/blob/rk-6.1-rkr4.1/arch/arm64/boot/dts/rockchip/overlay/armsom-sige5-display-10hd.dts)
 
 1. 步骤一：先点亮屏幕背光
 

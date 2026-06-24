@@ -160,15 +160,15 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 </table>
 </details>
 
-### RK3588 Block Diagram
+### RK3588s Block Diagram
 
 <details>
     <summary>
-        RK3588 Block Diagram
+        RK3588s Block Diagram
     </summary>
     <img
-  src="/img/sige/rk3588.png"
-  alt="rk3588 block diagram"
+  src="/img/sige/rk3588s.png"
+  alt="rk3588s block diagram"
   className="session-details-live-video"/>
 </details>
 
@@ -304,37 +304,37 @@ github : [SystemReady](https://github.com/ArmSoM/SystemReady)
     </div>
 </a>
 
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://github.com/ArmSoM/rockchip-kernel" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>Sige7 kernel</h2>
+            <h2>Sige7s kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://github.com/ArmSoM/u-boot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>Sige7 uboot</h2>
-            <p>rockchip-linux/u-boot</p>
+            <h2>Sige7s uboot</h2>
+            <p>ArmSoM/u-boot</p>
         </div>
     </div>
 </a>
 
-<a href="https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7.dts" class="card-link">
+<a href="https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3588-armsom-sige7s.dts" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>Sige7 mainline linux</h2>
+            <h2>Sige7s mainline linux</h2>
             <p>torvalds linux</p>
         </div>
     </div>

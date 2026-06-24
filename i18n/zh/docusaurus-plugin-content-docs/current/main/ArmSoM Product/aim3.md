@@ -125,7 +125,7 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
     </div>
 </a>
 
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://github.com/ArmSoM/rockchip-kernel" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
@@ -137,14 +137,14 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://github.com/ArmSoM/u-boot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
         </div>
         <div class="content">
             <h2>AIM3 uboot</h2>
-            <p>rockchip-linux/u-boot</p>
+            <p>ArmSoM/u-boot</p>
         </div>
     </div>
 </a>

@@ -226,7 +226,7 @@ armsom-cm5v1.2 第21pin 不工作，将在下个v1.3 版本修复
         </div>
     </div>
 </a>
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://github.com/ArmSoM/rockchip-kernel" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
@@ -238,14 +238,14 @@ armsom-cm5v1.2 第21pin 不工作，将在下个v1.3 版本修复
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://github.com/ArmSoM/u-boot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
         </div>
         <div class="content">
             <h2>CM5 uboot</h2>
-            <p>rockchip-linux/u-boot</p>
+            <p>ArmSoM/u-boot</p>
         </div>
     </div>
 </a>

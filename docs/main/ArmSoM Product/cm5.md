@@ -218,7 +218,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </div>
     </div>
 </a>
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://github.com/ArmSoM/rockchip-kernel" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
@@ -230,14 +230,14 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://github.com/ArmSoM/u-boot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
         </div>
         <div class="content">
             <h2>CM5 uboot</h2>
-            <p>rockchip-linux/u-boot</p>
+            <p>ArmSoM/u-boot</p>
         </div>
     </div>
 </a>

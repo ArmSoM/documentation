@@ -415,7 +415,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </div>
     </a>
 
-<a href="https://github.com/armbian/linux-rockchip" class="card-link">
+<a href="https://github.com/ArmSoM/rockchip-kernel" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📗</i>
@@ -427,14 +427,14 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
     </div>
 </a>
 
-<a href="https://github.com/rockchip-linux/u-boot" class="card-link">
+<a href="https://github.com/ArmSoM/u-boot" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📘</i>
         </div>
         <div class="content">
             <h2>Armbian uboot</h2>
-            <p>rockchip-linux/u-boot</p>
+            <p>ArmSoM/u-boot</p>
         </div>
     </div>
 </a>

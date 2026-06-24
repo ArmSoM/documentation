@@ -123,7 +123,7 @@ For example, for the ArmSoM Display 10 HD screen, please refer to the relevant d
 
 #### 12.4.1.1.  Debugging step analysis
 
-The lighting process of mipi screen takes ArmSoM-Sige5 as an example, github: [armsom-sige5-display-10hd.dts]( https://github.com/armbian/linux-rockchip/blob/rk-6.1-rkr4.1/arch/arm64/boot/dts/rockchip/overlay/armsom-sige5-display-10hd.dts )
+The lighting process of mipi screen takes ArmSoM-Sige5 as an example, github: [armsom-sige5-display-10hd.dts]( https://github.com/ArmSoM/rockchip-kernel/blob/rk-6.1-rkr4.1/arch/arm64/boot/dts/rockchip/overlay/armsom-sige5-display-10hd.dts )
 
 **Step 1: First, turn on the screen backlight**
 
