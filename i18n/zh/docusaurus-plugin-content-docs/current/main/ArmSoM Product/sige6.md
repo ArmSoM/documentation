@@ -907,22 +907,29 @@ root@localhost:~# aplay -D hw:0,0 /tmp/test_mic1.wav （播放耳机录制的音
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
-目前风扇默认五个状态
+使用 echo 命令设置风扇转速：PWM 控制范围一般为 0~255（0=停转，255=全速）。
+- 由于系统设置了温控，当我们开启风扇时，若为达到特定温度时，风扇会自动停转，所以我们做下面测试时可以先把温控关闭，执行如下命令
 
-| 温度       | 状态  | PWM转速 |
-| --------------- | ----- | ------ |
-| 小于50° | 0 | 0 |
-| 50°-55°  | 1 | 50 |
-| 55°-60° | 2 | 100 |
-| 60°-65° | 3 | 150 |
-| 65°-70° | 4 | 200 |
-| 70°以上 | 5 | 250 |
+```
+root@localhost:~# cat /sys/class/thermal/thermal_zone0/mode
+enabled
+root@localhost:~# cat /sys/class/thermal/thermal_zone1/mode
+enabled
+root@localhost:~# echo disabled > /sys/class/thermal/thermal_zone0/mode
+root@localhost:~# echo disabled > /sys/class/thermal/thermal_zone1/mode
+```
 
+- 关闭后，我们可以执行如下步骤操作风扇转速
 ```
 // 查看当前转速 
 root@localhost:~# cat /sys/class/hwmon/hwmon0/pwm1
-//设置pwm转速
-root@localhost:~# echo 254 > /sys/class/hwmon/hwmon0/pwm1
+
+//设置风扇全速
+root@localhost:~# echo 255 > /sys/class/hwmon/hwmon0/pwm1
+
+//关闭风扇
+root@localhost:~# echo 0 > /sys/class/hwmon/hwmon0/pwm1
+
 ```
 
 ### 3.10 40 PIN
