@@ -98,10 +98,10 @@ cd ~/armsom-sdk
 
 ## 4.2 使用Git更新单独的源码仓库
 有时只想更新某个仓库，而不是去更新整个SDK。 或者已经对SDK的某些仓库做出了修改，使用repo同步的话就会失败。 此时就需要对单个仓库进行更新了
-这里以debain12仓库为例：
+这里以debian12仓库为例：
 ```
-# 进入debain12目录下
-cd debain12
+# 进入debian12目录下
+cd debian12
 
 # 检出到对应仓库的默认分支
 git checkout lbc-develop-5.10
