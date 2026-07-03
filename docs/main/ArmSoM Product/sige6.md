@@ -330,23 +330,22 @@ jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh debian_rootfs
 ```bash
 jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh buildroot_rootfs
 ```
+### Cloud drive link
 
-### Official mirror
-
-ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
-
-#### Download
-
-The following systems have been tested and verified by ArmSoM official:
-
-Network disk address: 
-<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
+`Google Drive links in general`, including software materials and hardware materials
+<a href="https://drive.google.com/drive/folders/1RsNyyJ4tG2UGGsl9nb6cRM5VntZ8DJwF" class="btn">
   <span>Google Drive link</span>
 </a>
 
-| logo  | Description  | Download|
+### Official mirror
+
+ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](./armsom-sige6#2-programming-method-selection)📤
+
+The following systems have been tested and verified by ArmSoM official:
+
+| logo  | Description  | Cloud drive path |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige6 :  <br/>   Debian 11 (Bullseye) is a stable, free, open-source Linux distro, with a long-term support kernel and over 59,000 software packages.| [Google Drive link](https://drive.google.com/drive/folders/1joIeY5SXHmF7oe7rLaxHKUUXqvtZ2fGz?usp=drive_link) |
+|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige6 :  <br/>   Debian 11 (Bullseye) is a stable, free, open-source Linux distro, with a long-term support kernel and over 59,000 software packages.| `software → Debianfirmware` |
 
 ### Third Party System  
 
@@ -355,11 +354,12 @@ Network disk address:
 
 
 ### Hardware Resources 
+Get the Sige6 schematics, DXF, and other hardware files. `Cloud drive path: ArmSoM-Sige6 → hardware Files`
 
-<a href="/getting-start/cloud-disk" class="btn">
-  <span>Google Drive link</span>
-</a>
-<br/>
+### Development tools
+Get tools for ADB debugging, flashing, serial ports, and SD card creation. `Cloud drive path: ArmSoM-Sige6 → software → Development tools`
+
+![armsom-sige6-Developtools](/img/general-tutorial/armsom-sige6-Devtools.png)
 
 ## User Manual
 
@@ -405,18 +405,38 @@ The table below shows the power specifications required to power the ArmSoM-Sige
 Plug the power into the port labeled "PWR IN", and make sure to use the correct port!
 
 ### 2. Programming method selection
-<div class="cards">
-    <a href="./getting-start/flash-img" class="card-link">
-        <div class="card">
-            <div class="icon">
-                <i>🎇</i>
-            </div>
-            <div class="content">
-                <h2>系统镜像烧录</h2>
-            </div>
-        </div>
-    </a>
-</div>
+#### 2.1 Flashing tools
+| tools | Operating system  | Description
+| :----: | :---: | --- |
+| PhoenixSuit | windows |  Partition upgrade and full firmware upgrade tool |
+| PhoenixCard | windows |  SD Card Firmware Tool |
+| PhoenixUSBpro | windows |  Mass production upgrade tool, supports USB one-to-eight programming |
+
+#### 2.2 Burning method
+There are two ways to flash: using a USB cable to flash to eMMC or using a card reader to flash to MicroSD. You can choose either one.
+#### 2.2.1 Burning to eMMC via USB cable
+Flashing an image to the eMMC requires using the PhoenixSuit flashing tool and the USB driver (InstallUSBDrv.bat)
+1. First, install the USB driver by double-clicking and running InstallUSBDrv.bat.
+![armsom-sige6-USBDRV](/img/general-tutorial/armsom-sige6-USBDRV.png)
+
+2. After installing the USB driver, you can open Device Manager in Windows and see the USB Device (VID_1f3a_PID_efe8) listed.
+![armsom-sige6-DevManager](/img/general-tutorial/armsom-sige6-DevManager.png)
+
+3. Next, open the flashing tool (run PhoenixSuit.exe)
+![armsom-sige6-Flashingtool](/img/general-tutorial/armsom-sige6-Flashingtool.png)
+
+4. Click 'One-Click Flash', then click 'Browse' and choose the firmware path you want to flash
+![armsom-sige6-ChooseImage](/img/general-tutorial/armsom-sige6-ChooseImage.png)
+
+5. Hold down the Recovery button on the development board, then power on the board until PhoenixSuit pops up with 'This will erase all data on the flash. Do you want to start a full erase and upgrade?' Then just click Yes and wait for the firmware to finish burning.
+![armsom-sige6-Flashing](/img/general-tutorial/armsom-sige6-Flashing.png)
+
+#### 2.2.2 Program the card reader to MiroSD
+1. Open the bootable SD card creation tool and double-click PhoenixCard.exe to run it.
+![armsom-sige6-SDFlashing](/img/general-tutorial/armsom-sige6-SDFlashing.png)
+2. Click on the firmware, choose the firmware path you want to flash; check 'Mass Production Card', and then just click 'Burn Card'.
+![armsom-sige6-FlashSD](/img/general-tutorial/armsom-sige6-FlashSD.png)
+3. Insert the prepared SD card into the development board's TF card slot, and power on the board to boot from the SD card.
 
 ### 3. Interface usage
 
@@ -758,9 +778,29 @@ ArmSoM-Sige6 provides an M.2 Key M connector:
 - The back of the product features an M.2 Key M connector. The board has a standard M.2 2280 mounting hole, allowing deployment of M.2 2280 NVMe SSDs.  
   **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
 
+You can use lsblk to check our hard drive devices. In the information listed below, nvme0n1 is our NVMe disk.
+```
+root@localhost:~# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+mtdblock0    31:0    0   16M  0 disk
+mmcblk1     179:0    0 29.1G  0 disk
+├─mmcblk1p1 179:1    0   32M  0 part
+├─mmcblk1p2 179:2    0   16M  0 part
+├─mmcblk1p3 179:3    0   96M  0 part
+├─mmcblk1p4 179:4    0  7.3G  0 part /
+├─mmcblk1p5 179:5    0   16M  0 part
+└─mmcblk1p6 179:6    0 21.7G  0 part
+nvme0n1     259:0    0 13.4G  0 disk
+```
+We can try to mount the NVMe disk to some empty directory.
 ```
 root@localhost:~# mkdir temp
 root@localhost:~# mount /dev/nvme0n1 temp
+```
+If the mount doesn't work, it might be because your NVMe drive is completely blank (no partition table) and doesn't have any file system. You can run the following command to format the drive to an ext4 file system and then try mounting it again.
+
+```
+root@localhost:~# mkfs.ext4 /dev/nvme0n1
 ```
 
 ### 3.8 Audio
@@ -989,9 +1029,10 @@ The MIPI-CSI interface supports 0v13850 [camera-module1](./armsom-camera-module1
 
 #### 3.13.1 Using the ArmSoM camera-module1
 
-You can download test files csi_test_mplane and push them to the development board for execution.
+You can download test files csi_test_mplane `Cloud drive path:ArmSoM-Sige6 → software → Camera testing program` and push it to the development board for execution.
 
 ```bash
+root@localhost:/# chmod +x csi_test_mplane
 root@localhost:/# ./csi_test_mplane 8 0 2112 1568 ./ 5 5
 open /dev/video8 fd = 3
 resolution got from sensor = 2112*1568 num_planes = 1
