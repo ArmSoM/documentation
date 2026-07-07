@@ -404,6 +404,11 @@ The table below shows the power specifications required to power the ArmSoM-Sige
 
 Plug the power into the port labeled "PWR IN", and make sure to use the correct port!
 
+#### Account needed to log in
+| Username | Password
+| :----: | :----: |
+| root | root | 
+
 ### 2. Programming method selection
 #### 2.1 Flashing tools
 | tools | Operating system  | Description
@@ -537,7 +542,7 @@ All ArmSoM-Sige series products are onboard WIFI modules, do not require externa
 
 2. Use the nmcli dev wifi command to scan nearby WIFI hotspots
 
-```
+```bash
 # 1. Open the WIFI
 root@localhost: nmcli r wifi on
 # 2. Scan WIFI
@@ -553,14 +558,14 @@ root@localhost: nmcli dev wifi connect "wifi_name" password "wifi_password"
 - wifi_name Change the name of the WiFi hotspot you want to connect to
 - wifi_passwd Change the password to the WiFi hotspot you want to connect to
 
-```
+```bash
 root@localhost:~$ nmcli dev wifi connect "wifi_name" password "wifi_passwd"
 Device 'wlan0' successfully activated with '6f6c5ce0-7fd3-4ff7-a72f-94a2424600f3'.
 ```
 
 4. You can view the WiFi IP address using the ip addr show wlan0 command
 
-```
+```bash
 root@localhost:~# ip addr show wlan0
 4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether f0:bf:bc:f6:3a:8e brd ff:ff:ff:ff:ff:ff
@@ -573,7 +578,7 @@ root@localhost:~# ip addr show wlan0
 ```
 
 5. The ping command can test the connectivity of the WiFi network, and you can interrupt the ping command by pressing the Ctrl+C shortcut
-```
+```bash
 root@localhost:~# ping -I wlan0 www.baidu.com
 PING www.wshifen.com (103.235.46.102) from 192.168.1.239 wlan0: 56(84) bytes of data.
 64 bytes from 103.235.46.102 (103.235.46.102): icmp_seq=3 ttl=47 time=167 ms
@@ -587,7 +592,7 @@ rtt min/avg/max/mdev = 166.592/175.017/189.455/9.216 ms
 ```
 
 6.After using WiFi, if you want to disconnect, you can run the following command, where wifi_name is the name of the WiFi you connected to
-```
+```bash
 root@localhost:~# nmcli con down "wifi_name"
 Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/1)
 ```
@@ -604,7 +609,7 @@ Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedes
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
-```
+```bash
 root@localhost:~# nmtui
 ```
 
@@ -618,7 +623,7 @@ root@localhost:~# nmtui
 
 5. You can view the WiFi IP address using the ip addr show wlan0 command
 
-```
+```bash
 root@localhost:~# ip addr show wlan0
 4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether f0:bf:bc:f6:3a:8e brd ff:ff:ff:ff:ff:ff
@@ -689,19 +694,104 @@ rtt min/avg/max/mdev = 164.471/182.364/194.691/12.950 ms
 
 
 ### 3.4 BT
-**<font color='red'>Note: The Bluetooth function is currently unavailable, please understand.</font>**
+1. Before using the Bluetooth feature, let's first check if the Bluetooth device node exists to 
+make sure Bluetooth initializes properly.
+```bash
+root@localhost:/# hciconfig -a
+hci0:   Type: Primary  Bus: UART
+        BD Address: 67:B8:13:D7:E7:A4  ACL MTU: 1021:9  SCO MTU: 255:4
+        UP RUNNING
+        RX bytes:895 acl:0 sco:0 events:68 errors:0
+        TX bytes:4499 acl:0 sco:0 commands:68 errors:0
+        Features: 0xbf 0x2e 0x4d 0xfe 0xd8 0x3f 0x7b 0x87
+        Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV3
+        Link policy: RSWITCH SNIFF
+        Link mode: SLAVE ACCEPT
+        Name: 'localhost'
+        Class: 0x3c0000
+        Service Classes: Rendering, Capturing, Object Transfer, Audio
+        Device Class: Miscellaneous,
+        HCI Version:  (0xd)  Revision: 0xb
+        LMP Version:  (0xd)  Subversion: 0xb
+        Manufacturer: not assigned (2875)
 ```
-# 1. Turn on Bluetooth
-armsom@armsom-sige:/# service bluetooth start
-# 2. Enter bluetoothctl
-armsom@armsom-sige:/# bluetoothctl
-# 3. Just enter the following command to connect
-armsom@armsom-sige:/# power on
-armsom@armsom-sige:/# agent on
-armsom@armsom-sige:/# default-agent
-armsom@armsom-sige:/# scan on
-armsom@armsom-sige:/# pair yourDeviceMAC
+
+2. Next, you can use bluetoothctl to connect Bluetooth.
+```bash
+root@localhost:/# bluetoothctl
+Agent registered
+1. Enable Bluetooth controller
+[bluetooth]# power on    
+Changing power on succeeded
+2. Set the controller to be discoverable
+[bluetooth]# discoverable on
+Changing discoverable on succeeded
+[CHG] Controller 67:B8:13:D7:E7:A4 Discoverable: yes
+3. Set the controller to pairable
+[bluetooth]# pairable on
+Changing pairable on succeeded
+4. Turn on Bluetooth device scanning
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 67:B8:13:D7:E7:A4 Discovering: yes
+[NEW] Device 46:A8:19:66:89:E0 xxxx
+[NEW] Device 7D:E3:17:23:A6:6E xxxx
+[NEW] Device 24:2A:EA:61:0F:28 Donleon  #Jot down the MAC address of the device you want to connect
+5. Turn off scanning
+[bluetooth]# scan off
+Discovery stopped
+[CHG] Device 24:2A:EA:61:0F:28 RSSI is nil
+[CHG] Controller 67:B8:13:D7:E7:A4 Discovering: no
+6. Set this device as a trusted device
+[bluetooth]# trust 24:2A:EA:61:0F:28
+[CHG] Device 24:2A:EA:61:0F:28 Trusted: yes  
+Changing 24:2A:EA:61:0F:28 trust succeeded
+7. Pair with the device via MAC address
+[bluetooth]# pair 24:2A:EA:61:0F:28
+Attempting to pair with 24:2A:EA:61:0F:28
+[CHG] Device 24:2A:EA:61:0F:28 Connected: yes
+Request confirmation
+[agent] Confirm passkey 227858 (yes/no): yes     #Enter 'yes' here, and you also need to confirm the pairing on your phone
+[CHG] Device 24:2A:EA:61:0F:28 ServicesResolved: yes
+[CHG] Device 24:2A:EA:61:0F:28 Paired: yes
+Pairing successful    #When it shows that the pairing is successful here, we can exit (might need to wait a bit)
+8. Exit
+[Donleon]# exit
 ```
+![sige-bt-pair](/img/general-tutorial/sige-bt-pairen.png)
+
+3. If the Bluetooth device we need to connect is a phone, you'll need to download and enable the audio service. (If the Bluetooth device you want to connect is a headset/Bluetooth speaker, you don’t need to do the following steps.)
+```bash
+root@localhost:/# apt update
+root@localhost:/# apt -y install pulseaudio-module-bluetooth
+root@localhost:/# pulseaudio --start --system=false --realtime=false --log-target=journal
+```
+
+4. Next, we can start the Bluetooth connection.
+```bash
+root@localhost:~# bluetoothctl #Re-enter bluetoothctl
+Agent registered
+1. View connected devices
+[bluetooth]# paired-devices
+Device 24:2A:EA:61:0F:28 Donleon
+2. Connect Bluetooth device
+[bluetooth]# connect 24:2A:EA:61:0F:28
+Attempting to connect to 24:2A:EA:61:0F:28
+[CHG] Device 24:2A:EA:61:0F:28 Connected: yes
+Connection successful
+[CHG] Device 24:2A:EA:61:0F:28 ServicesResolved: yes  #Just show that the connection is successful here
+3. Remove Bluetooth device
+[bluetooth]# remove 24:2A:EA:61:0F:28
+[DEL] Device 24:2A:EA:61:0F:28 Donleon
+Device has been removed
+
+```
+If you encounter the following error when connecting, try actively connecting to a device named 'localhost' on your phone:
+
+![sige-bt-error](/img/general-tutorial/sige-bt-error.png)
+
+After a successful connection, it shows connected on the phone:          
+![sige-bt-connect](/img/general-tutorial/sige-bt-connecten.png)
 
 ### 3.5 HDMI
 
@@ -751,7 +841,7 @@ Note: When connecting a mouse or keyboard, only USB 2.0 ports are allowed; USB 3
 #### Testing by connecting USB storage devices
 1. First, insert a USB drive or USB external hard drive into the USB port of the ArmSoM-Sige product
 2. If you see the output of sdX by executing the following command, it means the USB drive has been successfully recognized
-```
+```bash
 root@localhost:~# cat /proc/partitions | grep "sd*"
 major minor  #blocks  name
    8        0   30720000 sda
@@ -759,14 +849,14 @@ major minor  #blocks  name
 ```
 3. You can use the mount command to mount the USB drive into /mnt, and then you can view the files on the USB drive
 
-```
+```bash
 root@localhost:~# mount /dev/sda1 /test/
 mount: /test: /dev/sda1 already mounted on /test.
 ```
 
 4. After mounting, you can use the df -h command to check the USB drive's capacity usage and mounting points
 
-```
+```bash
 root@localhost:/test# df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /mnt
 ```
@@ -779,7 +869,7 @@ ArmSoM-Sige6 provides an M.2 Key M connector:
   **<font color='red'>Note: This M.2 interface does not support M.2 SATA SSDs.</font>**
 
 You can use lsblk to check our hard drive devices. In the information listed below, nvme0n1 is our NVMe disk.
-```
+```bash
 root@localhost:~# lsblk
 NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 mtdblock0    31:0    0   16M  0 disk
@@ -793,13 +883,13 @@ mmcblk1     179:0    0 29.1G  0 disk
 nvme0n1     259:0    0 13.4G  0 disk
 ```
 We can try to mount the NVMe disk to some empty directory.
-```
+```bash
 root@localhost:~# mkdir temp
 root@localhost:~# mount /dev/nvme0n1 temp
 ```
 If the mount doesn't work, it might be because your NVMe drive is completely blank (no partition table) and doesn't have any file system. You can run the following command to format the drive to an ext4 file system and then try mounting it again.
 
-```
+```bash
 root@localhost:~# mkfs.ext4 /dev/nvme0n1
 ```
 
@@ -849,7 +939,7 @@ Sige products are equipped with a 5V fan and use a 0.8mm connector
 Use the echo command to set the fan speed: PWM control range is generally 0~255 (0 = stop, 255 = full speed).
 - Since the system has temperature control, when we turn on the fan, if it reaches a certain temperature, it will automatically stop running. Therefore, during the following test, we can turn off the temperature control first and execute the following command
 
-```
+```bash
 root@localhost:~# cat /sys/class/thermal/thermal_zone0/mode
 enabled
 root@localhost:~# cat /sys/class/thermal/thermal_zone1/mode
@@ -859,7 +949,7 @@ root@localhost:~# echo disabled > /sys/class/thermal/thermal_zone1/mode
 ```
 
 - After turning it off, you can follow these steps to adjust the fan speed
-```
+```bash
 // Check current speed 
 root@localhost:~# cat /sys/class/hwmon/hwmon0/pwm1
 
@@ -880,14 +970,14 @@ Sige6 offers a 40-pin GPIO socket compatible with most sensor applications on th
 Download the wiringOP code to the development board [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
 - After downloading the wiringOP code, first compile and install it, then execute the following command:
-```
+```bash
 root@localhost:/# cd wiring-armbian/
 root@localhost:/wiring-armbian# ./build clean
 root@localhost:/wiring-armbian# ./build 
 ```
 
 - After compilation, the output of the test gpio readall command is as follows
-```
+```bash
  root@localhost:/wiring-armbian# gpio readall
  +------+-----+--------+--------+---+   ARMSOM-SIGE6   +---+--------+--------+-----+------+
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
@@ -919,23 +1009,23 @@ root@localhost:/wiring-armbian# ./build
 
 - Set the GPIO port as output mode, where the third parameter requires the WPI index corresponding to the pin input
 
-```
+```bash
 root@localhost:/wiring-armbian# gpio mode 1 out
 ```
 
 - Set the GPIO port output to a high level. After setting, you can use a multimeter to measure the voltage at the pins. If it is 3.3V, it means the high level setting was successful
 
-```
+```bash
 root@localhost:/wiring-armbian# gpio write 1 1
 ```
 
 - Set the GPIO port output to low. After setting, you can use a multimeter to measure the voltage on the pins. If it is 0V, it means the low level was set successfully
-```
+```bash
 root@localhost:/wiring-armbian# gpio write 1 0
 ```
 
 - You can also read the current level status of the corresponding pin
-```
+```bash
 root@localhost:/wiring-armbian# gpio read 1
 0
 ```
@@ -954,7 +1044,7 @@ The Sige6 features a user light (red light) and a power indicator (green light).
 
 Users can control it via command
 
-```
+```bash
 root@localhost:~# echo 0 > /sys/class/leds/armsom:red:user/brightness (Close)
 root@localhost:~# echo 1 > /sys/class/leds/armsom:red:user/brightness (Light up)
 root@localhost:~# echo heartbeat > /sys/class/leds/armsom:red:user/trigger (heartbeat light)
@@ -1109,7 +1199,7 @@ Below are the methods for setting CPU, GPU, NPU, DDR, frequency fixing, and perf
 ##### Change CPU frequency
 The ArmSoM-Sige6 CPUs consist of 6 A55 + 2 A76 CPUs, divided into 3 groups managed separately. The nodes are:
 
-```
+```bash
 root@localhost:~# ls /sys/devices/system/cpu/cpufreq/policy0:(Corresponding to 6 A55: CPU0-5)
 affected_cpus                  scaling_cur_freq
 cpuinfo_cur_freq               scaling_driver
@@ -1140,7 +1230,7 @@ conservative ondemand userspace powersave performance schedutil
 The default is automatic frequency mode: schedutil (if you want to restore it, just set it to this mode)
 
 ###### Set manual frequency
-```
+```bash
 # cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq
 416000   //Check current frequency
 # echo userspace > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor  //Manual fixed-frequency mode: userspace
@@ -1153,7 +1243,7 @@ The other two sets of CPUs are set up in a similar way, just operate the corresp
 
 ##### Change GPU frequency
 ###### GPU node path
-```
+```bash
 root@localhost:~# ls /sys/class/devfreq/1800000.gpu
 available_frequencies  max_freq               subsystem
 available_governors    min_freq               target_freq
@@ -1168,7 +1258,7 @@ sunxi_actmon userspace performance simple_ondemand
 The default is the automatic frequency conversion mode: simple_ondemand (to restore it, just set it to this mode).
 
 ###### Set manual frequency
-```
+```bash
 root@localhost:~# cat /sys/class/devfreq/1800000.gpu/cur_freq //Check current frequency
 400000000
 root@localhost:~# echo userspace > /sys/class/devfreq/1800000.gpu/governor // Manual fixed-frequency mode: userspace
@@ -1180,7 +1270,7 @@ root@localhost:~# cat /sys/class/devfreq/1800000.gpu/cur_freq  // Check if it's 
 
 ##### Change DDR frequency
 ###### DDR node path
-```
+```bash
 root@localhost:~# ls /sys/class/devfreq/a020000.dmcfreq/  
 available_frequencies  max_freq               target_freq
 available_governors    min_freq               trans_stat
@@ -1195,7 +1285,7 @@ sunxi_actmon userspace performance simple_ondemand
 The default is the automatic frequency mode: performance (if you want to restore it, just set it to this mode)
 
 ###### Set manual frequency 
-```
+```bash
 root@localhost:~# cat /sys/class/devfreq/a020000.dmcfreq/cur_freq // Check current frequency
 2400000000
 root@localhost:~# echo userspace > /sys/class/devfreq/a020000.dmcfreq/governor // Manual fixed-frequency mode: userspace
@@ -1206,7 +1296,7 @@ root@localhost:~# cat /sys/class/devfreq/a020000.dmcfreq/cur_freq   // Check if 
 
 ##### Change NPU frequency
 ###### NPU's node path
-```
+```bash
 root@localhost:~# ls /sys/class/devfreq/3600000.npu/
 available_frequencies  max_freq               target_freq
 available_governors    min_freq               trans_stat
@@ -1221,7 +1311,7 @@ sunxi_actmon userspace performance simple_ondemand
 The default is the automatic frequency mode: performance (if you want to restore it, just set it to this mode).
 
 ###### Set manual frequency 
-```
+```bash
 root@localhost:~# cat /sys/class/devfreq/3600000.npu/cur_freq //Check current NPU frequency
 1008000000
 root@localhost:~# echo userspace > /sys/class/devfreq/3600000.npu/governor // Manual fixed-frequency mode: userspace
@@ -1235,7 +1325,7 @@ NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 
 #### Performance Mode
 
-```
+```bash
 root@localhost:~# echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 root@localhost:~# echo performance > /sys/class/devfreq/1800000.gpu/governor
 root@localhost:~# echo performance > /sys/class/devfreq/a020000.dmcfreq/governor
