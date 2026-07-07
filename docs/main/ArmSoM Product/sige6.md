@@ -1116,6 +1116,13 @@ root@localhost:~# hwclock -r -f /dev/rtc0  //Read the RTC clock
 
 ### 3.13 MIPI-CSI
 The MIPI-CSI interface supports 0v13850 [camera-module1](./armsom-camera-module1) and imx219 cameras
+- Connect the camera-module1 to the MIPI-CSI1 interface on the back of the development board, as shown in the picture:
+
+![armsom-sige6-mipi1](/img/lm/armsom-sige6-mipi1.jpg)
+
+- Connect the IMX219 camera to the MIPI-CSI0 interface on the front of the development board, as shown in the picture:
+
+![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
 
 #### 3.13.1 Using the ArmSoM camera-module1
 
@@ -1139,7 +1146,7 @@ VIDIOC_STREAMOFF ok
 mode 5 test done at the 0 time!!
 time cost 0.339447(s)
 ```
-After executing the above command, you will see that some fb8y5_2112_1568*.bin files have been generated in the current directory. We can use 7yuv software to view the raw RAW images, as shown below:
+After executing the above command, you can see that some fb8_y5_2112_1568_*.bin files have been generated in the current directory. We can use the 7yuv software to view the RAW images and select the corresponding parameters as shown in the figure below:
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-sige6-ov13850-camera.png)
 

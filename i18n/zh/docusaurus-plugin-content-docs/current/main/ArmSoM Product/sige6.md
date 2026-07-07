@@ -1277,6 +1277,13 @@ root@localhost:~# hwclock -r -f /dev/rtc0  //读取rtc时钟
 
 ### 3.13 MIPI-CSI
 MIPI-CSI接口分别支持0v13850摄像头[camera-module1](./armsom-camera-module1)和imx219摄像头
+- camera-module1摄像头接开发板背面的MIPI-CSI1接口，如图所示：
+
+![armsom-sige6-mipi1](/img/lm/armsom-sige6-mipi1.jpg)
+
+- imx219摄像头接开发板正面的MIPI-CSI0接口，如图所示：
+
+![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
 
 #### 3.13.1 使用 ArmSoM camera-module1
 
@@ -1300,7 +1307,7 @@ VIDIOC_STREAMOFF ok
 mode 5 test done at the 0 time!!
 time cost 0.339447(s)
 ```
-执行完上述命令后，可以看到当前目录下生成了一些fb8_y5_2112_1568_*.bin文件，我们可以使用7yuv软件查看RAW原始图，如下：
+执行完上述命令后，可以看到当前目录下生成了一些fb8_y5_2112_1568_*.bin文件，我们可以使用7yuv软件查看RAW原始图，按下图所示选择相应参数：
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-sige6-ov13850-camera.png)
 
