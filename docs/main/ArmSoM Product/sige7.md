@@ -664,6 +664,11 @@ OEM&ODM, please contact: sales@armsom.org
 - [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
 - [sbc compare](https://sbc.compare/18-armsom-sige7-8gb): Sige7 Benchmark Comparison on sbc.compare
 
+## Use case
+
+- [Optimising the Rockchip RK3588 SBC for Frigate NVR: CPU, GPU, NPU and VPU offloading.](https://medium.com/@beegeenz/optimising-the-rockchip-rk3588-sbc-for-frigate-nvr-cpu-gpu-npu-and-vpu-offloading-ee226ee85cf1): Optimising the Rockchip RK3588 SBC for Frigate NVR: CPU, GPU, NPU and VPU offloading.
+
+
 ## Notes
 
 :::caution [Electrostatic Protection]

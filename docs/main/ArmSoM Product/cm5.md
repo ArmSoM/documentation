@@ -378,6 +378,10 @@ For OEM & ODM, please contact: sales@armsom.org
 - [Platima Tinkers](https://www.youtube.com/watch?v=p55ehXBBLPE): ArmSoM CM5 Review: RK3576 Compute Module with REAL CM4 Compatibility
 - [sbc compare](https://sbc.compare/83-armsom-cm5-8gb): CM5  Benchmark Comparison on sbc.compare
 
+## Use case
+
+- [edge machine learning](https://www.armsom.org/post/accelerating-conservation-science-with-armsom-cm5-som): edge machine learning
+
 ## Notes
 
 :::caution [Electrostatic Protection]

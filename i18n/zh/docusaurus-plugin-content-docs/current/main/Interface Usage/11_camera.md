@@ -42,12 +42,13 @@ MIPI-CSI 接口在默认情况是关闭状态的，需要使能才能使用
 root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
-这里以激活 armsom-sige7-camera-ov13850-cs0 为例，将 armsom-sige5-camera-ov13850-cs0 打开如下:
+这里以激活 armsom-sige5-camera-ov13850-cs0 为例，将 armsom-sige5-camera-ov13850-cs0 打开如下:
 
 ```
-#dtoverlay=/dtb/overlay/rk3588-armsom-pwm15-m2.dtbo
-dtoverlay=/dtb/overlay/rk3588-armsom-spi0-m2-cs0-cs1-spidev.dtbo
-dtoverlay=/dtb/overlay/rk3588-armsom-spi1-m1-cs0-spidev.dtbo
+# CAM0
+dtoverlay=/dtb/overlay/rk3576-armsom-sige5-camera-ov13850-cs0-overlay.dtbo
+# CAM1
+dtoverlay=/dtb/overlay/rk3576-armsom-sige5-camera-ov13850-cs1-overlay.dtbo
 ```
 
 将dtoverlay前的`#`去掉，编辑完成后，保存文件并退出编辑器 重启系统使配置生效：

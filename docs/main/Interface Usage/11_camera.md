@@ -40,12 +40,13 @@ Open file: Open the/boot/uEnv/uEnv. txt file through the terminal, for example:
 root@armsom:/home/armsom# sudo vi /boot/uEnv/uEnv.txt
 ```
 
-To enable `armsom-sige7-camera-ov13850-cs0`, add the following line:
+Here's an example of activating armsom-sige5-camera-ov13850-cs0. To open armsom-sige5-camera-ov13850-cs0, use the following:
 
 ```
-#dtoverlay=/dtb/overlay/rk3588-armsom-pwm15-m2.dtbo
-dtoverlay=/dtb/overlay/rk3588-armsom-spi0-m2-cs0-cs1-spidev.dtbo
-dtoverlay=/dtb/overlay/rk3588-armsom-spi1-m1-cs0-spidev.dtbo
+# CAM0
+dtoverlay=/dtb/overlay/rk3576-armsom-sige5-camera-ov13850-cs0-overlay.dtbo
+# CAM1
+dtoverlay=/dtb/overlay/rk3576-armsom-sige5-camera-ov13850-cs1-overlay.dtbo
 ```
 
 Remove the `#` before dtoverlay, after editing, save the file and exit the editor to restart the system for the configuration to take effect:
