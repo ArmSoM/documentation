@@ -887,9 +887,9 @@ CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www
 
 ArmSoM 独立站: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
 
-ArmSoM 速卖通官方店: 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/1005012690621621.html](https://www.aliexpress.com/item/1005012690621621.html) 
 
-ArmSoM 淘宝官方店: 
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=1066393300562](https://item.taobao.com/item.htm?id=1066393300562)
 
 OEM&ODM,  请联系: sales@armsom.org
 

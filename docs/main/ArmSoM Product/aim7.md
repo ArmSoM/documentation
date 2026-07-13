@@ -927,9 +927,9 @@ CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www
 
 ArmSoM online shop: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
  
-ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805434864544.html](https://www.aliexpress.com/item/3256805434864544.html) 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/1005012690621621.html](https://www.aliexpress.com/item/1005012690621621.html) 
 
-ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=714794342755](https://item.taobao.com/item.htm?id=714794342755)
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=1066393300562](https://item.taobao.com/item.htm?id=1066393300562)
 
 OEM&ODM, please contact: sales@armsom.org
 
