@@ -103,8 +103,8 @@ cd ~/armsom-sdk
 # 进入debian12目录下
 cd debian12
 
-# 检出到对应仓库的默认分支
-git checkout lbc-develop-5.10
+# 切换到对应仓库的默认分支，这里lbc-develop-5.10只是示例，可以通过git branch -av查看远程仓库默认分支
+git checkout lbc-develop-5.10  
 
 # 拉取git仓库
 git pull
@@ -297,4 +297,9 @@ linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb    linux-libc-dev_6.1.11
 升级包一共有4个，但只需安装其中2个:  
 1.linux-headers-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  
 2.linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  
+
+将这两个升级包放到开发板文件系统任意目录，然后执行如下命令安装：
+```
+armsom@armsom:/$ sudo dpkg -i linux-*.deb   #例如将上面两个安装包放到/目录，直接在/目录下执行
+```
 安装后重启即可
