@@ -355,7 +355,7 @@ github : [SystemReady](https://github.com/ArmSoM/SystemReady)
 
 ### Cloud drive link
 `Google Drive links in general`, including software materials and hardware materials
-<a href="https://pan.baidu.com/s/1ZPrdoa3bddkwRvbF-_DbvA?pwd=arms" class="btn">
+<a href="https://drive.google.com/drive/folders/1yCLLLeaw6hHxT-3IH0bNf7DhjAf0BFbI" class="btn">
   <span>Google Drive link</span>
 </a>
 
@@ -1109,15 +1109,38 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 The MIPI-CSI interface supports the imx219 camera
 - Connect the imx219 camera to the development board's MIPI-CSI interface, as shown in the picture:
 
-![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
+![armsom-sige7s-mipi-csi](/img/lm/armsom-sige7s-mipi-csi.png)
 
 1. The system has the camera function turned off by default. If you want to turn it on, you need to follow the steps below to enable the MIPI-CSI camera overlay.
 ```bash
-armsom@armsom:~$ sudo vi /boot/uEnv/uEnvarmsom-sige7s.txt
-# Find this part, and just uncomment the line below to enable the overlay:
+root@armsom:~# vi /boot/uEnv/uEnvarmsom-sige7s.txt
+Find this part, and just uncomment the line below to enable the overlay:
 #dtoverlay=/dtb/overlay/rk3588-armsom-sige7s-camera-imx219-overlay.dtbo
-armsom@armsom:~$ sudo reboot  # Save and restart after exiting
+root@armsom:~#  # Save and restart after exiting
 ```
+2. After opening the camera settings, let's first check if the driver is loading properly.
+```bash
+root@armsom:~# dmesg | grep imx219        
+[    2.045457] platform csi2-dphy0: Fixed dependency cycle(s) with /i2c@feca0000/imx219@10
+[    2.333293] imx219 8-0010: module_facing == front
+[    2.333306] imx219 8-0010: module_name == GEIR180089
+[    2.333316] imx219 8-0010: len_name == LG500627G
+[    2.333334] imx219 8-0010: Looking up VANA-supply from device tree
+[    2.336240] imx219 8-0010: Looking up VDIG-supply from device tree
+[    2.336324] imx219 8-0010: Looking up VDDL-supply from device tree
+[    2.345369] imx219 8-0010: imx219_init_controls666
+[    2.345391] imx219 8-0010: Consider updating driver imx219 to match on endpoints
+[    2.345406] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m01_f_imx219 8-0010:bus type 5
+```
+3. After confirming the driver is loaded, run the following command to take a screenshot
+```bash
+root@armsom:~# v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat='BG10' --stream-mmap=3 --stream-skip=4 --stream-to=output.raw --stream-count=1 --stream-poll
+```
+
+Use the `Bayer Raw Image Viewer` software to view the captured image `output.raw`, and set the parameters as shown in the right-side panel in the picture:           
+
+![armsom-sige7s-raw](/img/lm/armsom-sige7s-raw.png)
+
 
 ### 3.14 MIPI DSI
 

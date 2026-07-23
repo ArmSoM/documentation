@@ -1093,15 +1093,38 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 MIPI-CSI接口支持imx219摄像头
 - imx219摄像头接开发板的MIPI-CSI接口，如图所示：
 
-![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
+![armsom-sige7s-mipi-csi](/img/lm/armsom-sige7s-mipi-csi.png)
 
-1、系统默认关闭摄像头功能，若要打开，需要按如下操作打开MIPI-CSI摄像头overlay
+1. 系统默认关闭摄像头功能，若要打开，需要按如下操作打开MIPI-CSI摄像头overlay
 ```bash
-armsom@armsom:~$ sudo vi /boot/uEnv/uEnvarmsom-sige7s.txt
-#找到这部分，将下面这行解除注释即可启用overlay:
+root@armsom:~# vi /boot/uEnv/uEnvarmsom-sige7s.txt
+找到这部分，将下面这行解除注释即可启用overlay:
 #dtoverlay=/dtb/overlay/rk3588-armsom-sige7s-camera-imx219-overlay.dtbo
-armsom@armsom:~$ sudo reboot  #保存退出后重启
+root@armsom:~# reboot    #保存退出后重启
 ```
+
+2. 打开摄像头配置后，我们先查看驱动是否正常加载
+```bash
+root@armsom:~# dmesg | grep imx219        
+[    2.045457] platform csi2-dphy0: Fixed dependency cycle(s) with /i2c@feca0000/imx219@10
+[    2.333293] imx219 8-0010: module_facing == front
+[    2.333306] imx219 8-0010: module_name == GEIR180089
+[    2.333316] imx219 8-0010: len_name == LG500627G
+[    2.333334] imx219 8-0010: Looking up VANA-supply from device tree
+[    2.336240] imx219 8-0010: Looking up VDIG-supply from device tree
+[    2.336324] imx219 8-0010: Looking up VDDL-supply from device tree
+[    2.345369] imx219 8-0010: imx219_init_controls666
+[    2.345391] imx219 8-0010: Consider updating driver imx219 to match on endpoints
+[    2.345406] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m01_f_imx219 8-0010:bus type 5
+```
+3. 确认驱动加载以后，执行下面命令抓图
+```bash
+root@armsom:~# v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat='BG10' --stream-mmap=3 --stream-skip=4 --stream-to=output.raw --stream-count=1 --stream-poll
+```
+
+将抓取的图片 `output.raw` 使用 `Bayer Raw Image Viewer` 软件查看,设置参数按如图右侧栏填写即可：           
+
+![armsom-sige7s-raw](/img/lm/armsom-sige7s-raw.png)
 
 ### 3.14 MIPI DSI
 
