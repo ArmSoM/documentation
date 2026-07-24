@@ -538,6 +538,10 @@ Network disk address:
 
 ## Product Certificates
 
+### CE / FCC / RoHS
+
+![sige5-ce-fc-rohs](/img/sige/sige5-ce-fc-rohs.webp)
+
 ## Supply Statement
 
 The ArmSoM-Sige5 will be produced at least until July 2034.

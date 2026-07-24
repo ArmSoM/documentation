@@ -109,6 +109,12 @@ After continuous operation at a specified constant temperature, the average life
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
 
+## Product Certificates
+
+### CE / FCC / RoHS
+
+![sige-cooling-ce-fc-rohs](/img/accessories/sige-cooling-ce-fc-rohs.webp)
+
 ## Purchase Samples 
 
 ArmSoM online shop: [https://www.armsom.org/product-page/sige-active-cooling-kit](https://www.armsom.org/product-page/sige-active-cooling-kit)
