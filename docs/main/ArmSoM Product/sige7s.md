@@ -2,7 +2,7 @@
 description: The ArmSoM-Sige7s is powered by the Rockchip RK3588s, a new-generation flagship octa-core 64-bit processor. It features a rich array of hardware interfaces, covering communication buses commonly used in the embedded industry, such as I2C, SPI, UART, and CAN. For multimedia, the micro HDMI port supports video output up to 8K at 60fps. Its octa-core CPU, clocked at up to 2.4GHz, handles daily multitasking needs for applications such as servers and gateways. The integrated NPU delivers 6 TOPS of computing power, significantly enhancing the performance of various model algorithms.
 keywords: [armsom, armsom-sige7s, rk3588s maker kit, rockchip, rk3588s product overview]
 sidebar_label: "Sige7s"
-sidebar_position: 3
+sidebar_position: 2
 slug: /armsom-sige7s
 image: /img/sige/sige7s-bananer.png
 ---

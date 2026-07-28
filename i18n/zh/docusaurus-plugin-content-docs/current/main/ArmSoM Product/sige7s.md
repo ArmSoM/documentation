@@ -2,7 +2,7 @@
 description: ArmSoM-Sige7s采用Rockchip RK3588s新一代旗舰级八核64位处理器具有丰富的硬件接口，涵盖嵌入式行业常用通信总线，如I2C、SPI、UART、CAN等。在多媒体音视频方面，micro HDMI最高支持8K60帧视频输出。8核芯CPU最高2.4Ghz能够满足日常多任务需求，如服务器、网关等应用场景。内置NPU具有6T算力，极大增强各类模型算法实现。
 keywords: [armsom, armsom-sige7s, rk3588s maker kit, rockchip, rk3588s产品介绍]
 sidebar_label: "Sige7s"
-sidebar_position: 3
+sidebar_position: 2
 slug: /armsom-sige7s
 image: /img/sige/sige7s-bananer.png
 ---
