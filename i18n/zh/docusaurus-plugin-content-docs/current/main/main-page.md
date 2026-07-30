@@ -46,32 +46,36 @@ ArmSoM 提供了丰富而完善的开源资源，包括产品手册、系统源�
 | --------- | ----- | --- |--- |
 |![armsom-sige1](/img/sige/armsom-sige1.png)|![arsmom-sige3](/img/sige/armsom-sige3.png)|![arsmom-sige5](/img/sige/armsom-sige5.png)|![arsmom-sige7](/img/sige/armsom-sige7.png)|
 
+| [ArmSoM-Sige6](./armsom-sige6)  <br/>[Allwinner A733] |[ArmSoM-Sige7s](./armsom-sige7s)  <br/>[Rockchip RK3588s] |
+| --------- | ----- | 
+|![armsom-sige6](/img/sige/armsom-sige6.png)|![arsmom-sige7s](/img/sige/armsom-sige7s.png)|
+
 <details>
     <summary>
-        Sige7/5/3/1规格比较
+        Sige7s/7/6/5/3/1规格比较
     </summary>
 
-|        | Sige7  | Sige5 | Sige3 |Sige1 |
-| --------- | ----- | --- |--- | --- | 
-| SoC Process | 8nm | 8nm | 22nm | 28nm |  
-| CPU | Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3568B2 <br/> Cortex-A55 x4 up to 2.0GHz | Rockchip RK3528 <br/> Cortex-A53 x4 up to 2.0GHz | 
-| GPU | ARM Mali-G610 MP4  | ARM Mali G52 MC3 GPU | Arm Mali‑G52‑2EE | ARM Mali-450 GPU |
-| NPU | 6TOPS@INT8(3 NPU core)  | 6TOPS@INT8(2 NPU core) | 1TOP@INT8 | - |
-| RAM | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4/8/16GB 32-bit LPDDR4x | 2/4GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
-| eMMC| 64GB/128GB eMMC | 32/128GB eMMC| 32GB eMMC | 8 eMMC |
-| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC)| Yes| Yes |   Yes|
-| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps | 1x MIPI DSI up to 2K@60fps <br/> 1x HDMI OUT2.0, supports 4K@60fps |  1x HDMI OUT2.0b, supports 4K@60fps|
-| Decoder |  8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| 4KP60 H.265/H.264/VP9  |  H.265, H.264, AVS2 4K@60fps|
-| Encoder | 8K@30fps H.265 / H.264| H.264 and H.265 up to 4K@60fps| 1080P60 H.264/H.265 | H.264 and H.265 up to1080@60fps|
-| Wi-Fi | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |   SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
-| PCIE | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 2.1 1-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 3.0 2-lanes <br/> M.2 Key M 2280 NVMe SSD Supported |  - |
-| Ethernet | 2x 2.5G Ethernet |   2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet| Gigabit Ethernet & 2.5G Ethernet|
-| USB Host | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
-| USB-C | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
-| MIPI CSI/DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
-| 40-PIN Header| yes | yes | yes | yes |
-| LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
-|Board Dimensions| 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
+|        | Sige7s |Sige7  | Sige6 |  Sige5 | Sige3 |Sige1 |
+| --------- | --- | --- |--- | --- |  --- | --- |
+| SoC Process | 8nm | 8nm | 12nm | 8nm | 22nm | 28nm |  
+| CPU | Rockchip RK3588s <br/> Cortex-A76 x4 @ 2.4GHz and Cortex-A55 x4 @ 1.8GHz |  Rockchip RK3588 <br/> Cortex-A76 x4 @2.4GHz and Cortex-A55 x4 @1.8GHz | Allwinner A733 <br/> Cortex-A76 x2 @ 2.0GHz and Cortex-A55 x6 @ 1.8GHz |  Rockchip RK3576 <br/> Cortex-A72 x4 @2.2GHz and Cortex-A53 x4 @1.8GHz  | Rockchip RK3568B2 <br/> Cortex-A55 x4 up to 2.0GHz | Rockchip RK3528 <br/> Cortex-A53 x4 up to 2.0GHz | 
+| GPU | ARM Mali-G610 MP4 |  ARM Mali-G610 MP4  | Imagination BXM-4-64 MC1 |ARM Mali G52 MC3 GPU | Arm Mali‑G52‑2EE | ARM Mali-450 GPU |
+| NPU | 6 TOPS@INT8(3 NPU core) | 6TOPS@INT8(3 NPU core)  | 3 TOPS |6TOPS@INT8(2 NPU core) | 1TOP@INT8 | - |
+| RAM |  2GB/4GB/8GB/16GB/32GB 64-bit LPDDR4x | 4GB/8GB/16GB/32GB 64-bit LPDDR4x | 2GB/4GB/6GB/8GB/12GB/16GB LPDDR5 | 4/8/16GB 32-bit LPDDR4x | 2/4GB 32-bit LPDDR4x |  2/4GB 32-bit LPDDR4x|
+| eMMC| 32GB/64GB/128GB eMMC | 64GB/128GB eMMC | 32GB/64GB/128GB eMMC | 32/128GB eMMC| 32GB eMMC | 8 eMMC |
+| TF Card | Molex Slot, Spec Version 2.x/3.x/4.x(SDSC/SDHC/SDXC) |  yes| yes| Yes| Yes |   Yes|
+| Output | 1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 1280×800 <br/> 1x DP 1.4 up to 4K@60fps |  1x HDMI 2.1, supports 8K@60fps <br/> 1x MIPI DSI up to 4K@60fps <br/> 1x DP 1.4 up to 8K@30fps | 1x HDMI 2.0，supports 4K@60fps <br/> 1x MIPI DSI, up to 4K@60fps <br/> | 1x HDMI 2.1, supports 4K@120fps <br/> 1x MIPI DSI, up to 2K@60fps <br/>  1x DP1.4, up to 4K@120fps | 1x MIPI DSI up to 2K@60fps <br/> 1x HDMI OUT2.0, supports 4K@60fps |  1x HDMI OUT2.0b, supports 4K@60fps|
+| Decoder | 8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8|   8K@60fps H.265/VP9/AVS2 <br/> 8K@30fps H.264 AVC/MVC <br/> 4K@60fps AV1 <br/> 1080P@60fps MPEG-2/-1/VC-1/VP8|  H265/VP9/AVS2 4K@60fps <br/> H264 4K@30fps | H.264, H.265, VP9, AV1 and AVS2 etc. up to 8K@30fps or4K@120fps| 4KP60 H.265/H.264/VP9  |  H.265, H.264, AVS2 4K@60fps|
+| Encoder | 8K@30fps H.265 / H.264 |  8K@30fps H.265 / H.264| 4K@30fps H264/H265  |H.264 and H.265 up to 4K@60fps| 1080P60 H.264/H.265 | H.264 and H.265 up to1080@60fps|
+| Wi-Fi | AIC8800 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax | AP6275P Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |  AIC8800 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax |SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDB |   SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs | SYN43752 Wi-Fi 6 Module <br/> 802.11a/b/g/n/ac/ax, 2T2R MIMO with RSDBs|
+| PCIE | --- | PCIe 3.0 4-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 3.0 2-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 2.1 1-lanes <br/> M.2 Key M 2280 NVMe SSD Supported | PCIe 3.0 2-lanes <br/> M.2 Key M 2280 NVMe SSD Supported |  --- |
+| Ethernet |  1x Gigabit Ethernet | 2x 2.5G Ethernet |  1x Gigabit Ethernet |  2x Gigabit Ethernet| Gigabit Ethernet & 2.5G Ethernet| Gigabit Ethernet & 2.5G Ethernet|
+| USB Host |  2x USB 3.0 & 2x USB 2.0 | 1x USB 3.0 & 1x USB 2.0 | 1x USB 3.0 & 3x USB 2.0 | 1x USB 3.0 & 1x USB 2.0| 1x USB 3.0 & 1x USB 2.0  | 2x USB 2.0|
+| USB-C |  1x USB-C Power jack | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG） | 1x USB-C (Power/OTG) | 1x USB-C Power jack & 1x USB Type-C 3.0（DP1.4/OTG）| 1x USB-C Power jack & 1x USB3.0 OTG |  1x USB-C Power jack & 1x USB2.0 OTG|
+| MIPI CSI/DSI | 1x 2-lane MIPI CSI <br/> 1x 2-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane and 1x 2-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 2x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI | 1x 4-lane MIPI CSI <br/> 1x 4-lane MIPI DSI  |   -|
+| 40-PIN Header|  yes | yes |  yes |yes | yes | yes |
+| LEDs | 2x LEDs | 2x LEDs | 2x LEDs | 2x LEDs |2x LEDs |  2x LEDs|
+|Board Dimensions|  85 mm × 56 mm × 17 mm | 92mm × 62mm x 14.6mm | 89mm x 56mm x 21.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm | 92mm × 62mm x 14.6mm |
 
 </details>
 
@@ -131,7 +135,9 @@ ArmSoM 提供了丰富的硬件扩展配件，包括显示模块、摄像头模�
 |[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
 |[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
 |[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
+|[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733]|----| ---- | [Camera-Module-1](./armsom-camera-module1) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| |  [Sige Diy Case 1](./sige-diy-case1)  |
+|[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]|----| ---- | ---- |
 
 ## 文档中心
 

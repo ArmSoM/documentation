@@ -39,7 +39,7 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
   - **Third-party Support**: Armbian
 - **PCB**: 8-layer through-hole PCB design
 - **Weight**: 47.2g
-- **Dimensions**: 89mm × 56mm
+- **Dimensions**: 89mm x 56mm x 21.6mm
 
 ## Getting started
 
@@ -117,7 +117,7 @@ Sige6 Hardware Specifications
 </tr>
 <tr>
 <th>Video Input</th>
-<th><li>1x 4-lane MIPI CSI, up to 2.0Gbps per lane</li></th>
+<th><li>1x 4-lane and 1×2-lane MIPI CSI, up to 2.0Gbps per lane</li></th>
 </tr>
 <tr>
 <th>Audio</th>
@@ -145,11 +145,11 @@ Sige6 Hardware Specifications
 </tr>
 <tr>
 <th>System</th>
-<th><li>Official Rockchip Support: Android 12.0, Debian 11, Buildroot</li><li>Third-party Support: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS</li></th>
+<th><li>Official Allwinner Support: Android 12.0, Debian 11, Buildroot</li><li>Third-party Support: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS</li></th>
 </tr>
 <tr>
 <th>Dimensions</th>
-<th><li>92 mm x 62 mm</li></th>
+<th><li>89mm x 56mm x 21.6mm</li></th>
 </tr>
 <tr>
 <th>Operating Temperature</th>
@@ -206,7 +206,7 @@ Sige6 Hardware Specifications
    
 <div className='gpio_style'>
 
-| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
+| GPIO number |  function |   Pin    |  Pin     |  function  | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
 |             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
 |     313     | PJ25/PWM1-7/UART4-RX/TWI4-SDA/SPI3-MOS| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |

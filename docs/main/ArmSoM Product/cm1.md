@@ -217,6 +217,30 @@ The RK3506J finds wide application across various fields, including industrial c
 | 11   | SPK_P        | Speaker Output (+) (Differential) | 12  | SPK_N        | Speaker Output (-) (Differential) |
 </details>
 
+### FLEXBUS
+<details>
+    <summary>
+    FLEXBUS Correspondence
+    </summary>
+
+| J8002 pin | Assignment  |    GPIO number     | FlexBUS0 |
+ :--------: | :---------: | :--------: |  :--------: | 
+| 1~8  | DSMC_* / FLEXBUS1_D0~D7  | GPIO1_A0~A7 | Input only       |
+| 9    | DSMC_D5 / FLEXBUS1_D8    | GPIO1_B0    | FLEXBUS0_CSN_M0  |
+|11    | CAN1_TX / FLEXBUS1_D10   | GPIO1_B2    | FLEXBUS0_D15
+|12~16 | CAN1_RX … DSMC_RDYN      | GPIO1_B3~B7 | FLEXBUS0_D14~D10 |
+|18    | DSM_AUD_RN               | GPIO1_C1    | FLEXBUS0_CLK     |
+|19    | DSM_AUD_RP               | GPIO1_C2    | FLEXBUS0_D9      |
+|20~24 | MIPI_DSI_TE ~ RMII1_RSTn | GPIO1_C3~C7 | FLEXBUS0_D8~D4   |
+|25    | USB20_OTG1_DRV_H         | GPIO1_D0    | FLEXBUS0_D3      |
+|26    | UART4_RTSN               | GPIO1_D1    | FLEXBUS0_D2      |
+|27    | UART4_RX                 | GPIO1_D2    | FLEXBUS0_D1      |
+|28    | UART4_TX                 | GPIO1_D3    | FLEXBUS0_D0      |
+</details>
+
+We’ve always believed that the best products come from deep conversations with users. Thanks to a practitioner in our open-source community who keenly spotted areas for improvement in our ArmSoM-CM1 documentation and proactively built the 
+[ArmSoM CM1 — Claude Code plugin](https://github.com/savaughn/armsom) for us, making it easier for users to clearly understand the FLEXBUS mapping in ArmSoM-CM1.
+
 ## Development Resources
 
 ### SDK Source Code

@@ -36,7 +36,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
   - **第三方支持**：Armbian
 - **PCB**：8 层通孔 PCB 板设计
 - **重量**：47.2g
-- **大小**：89mm × 56mm 
+- **大小**：89mm x 56mm x 21.6mm
 
 ## Getting started
 
@@ -114,7 +114,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
         </tr>
         <tr>
             <th>视频输入</th>
-            <th><li>1x 4Lanes MIPI CSI，每线最高 2.0Gbps</li></th>
+            <th><li>1x 4-Lanes and 1x 2-Lanes MIPI CSI，每线最高 2.0Gbps</li></th>
         </tr>
         <tr>
             <th>音频</th>
@@ -142,11 +142,11 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
         </tr>
         <tr>
             <th>系统</th>
-            <th><li>Rockchip官方支持：Android 12.0，Debian11，Buildroot</li><li>第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS</li></th>
+            <th><li>Allwiner官方支持：Android 12.0，Debian11，Buildroot</li><li>第三方支持：Armbian，Ubuntu 20.04，Ubuntu22.04，Kylin OS</li></th>
         </tr>
         <tr>
             <th>尺寸</th>
-            <th><li>92 mm x 62mm</li></th>
+            <th><li>89mm x 56mm x 21.6mm</li></th>
         </tr>
         <tr>
             <th>工作温度</th>

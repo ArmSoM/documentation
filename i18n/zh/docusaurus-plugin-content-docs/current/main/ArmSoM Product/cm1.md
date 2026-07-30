@@ -217,6 +217,29 @@ RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、
 | 11   | SPK_P        | 扬声器输出正极（差分驱动）    | 12  | SPK_N        | 扬声器输出负极（差分驱动）    |
 </details>
 
+### FLEXBUS
+<details>
+    <summary>
+    FLEXBUS Correspondence
+    </summary>
+
+| J8002 pin | Assignment  |    GPIO number     | FlexBUS0 |
+ :--------: | :---------: | :--------: |  :--------: | 
+| 1~8  | DSMC_* / FLEXBUS1_D0~D7  | GPIO1_A0~A7 | 仅输入           |
+| 9    | DSMC_D5 / FLEXBUS1_D8    | GPIO1_B0    | FLEXBUS0_CSN_M0 |
+|11    | CAN1_TX / FLEXBUS1_D10   | GPIO1_B2    | FLEXBUS0_D15
+|12~16 | CAN1_RX … DSMC_RDYN      | GPIO1_B3~B7 | FLEXBUS0_D14~D10 |
+|18    | DSM_AUD_RN               | GPIO1_C1    | FLEXBUS0_CLK     |
+|19    | DSM_AUD_RP               | GPIO1_C2    | FLEXBUS0_D9      |
+|20~24 | MIPI_DSI_TE ~ RMII1_RSTn | GPIO1_C3~C7 | FLEXBUS0_D8~D4   |
+|25    | USB20_OTG1_DRV_H         | GPIO1_D0    | FLEXBUS0_D3      |
+|26    | UART4_RTSN               | GPIO1_D1    | FLEXBUS0_D2      |
+|27    | UART4_RX                 | GPIO1_D2    | FLEXBUS0_D1      |
+|28    | UART4_TX                 | GPIO1_D3    | FLEXBUS0_D0      |
+</details>
+
+我们始终相信，最好的产品源于与用户的深度对话。感谢我们开源社区中的一位实践者,敏锐地捕捉到了我们在 ArmSoM-CM1 文档中的提升空间，并主动为我们构建了 [ArmSoM CM1 — Claude Code plugin](https://github.com/savaughn/armsom) 扩展,方便用户更清晰地了解 ArmSoM-CM1 中FLEXBUS的映射关系。
+
 ## 开发资料
 
 ### SDK源码

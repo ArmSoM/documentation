@@ -427,7 +427,7 @@ The table below shows the power specifications required to power the ArmSoM-Sige
 
 | Model | Recommended Power Supply (Voltage/Current)  | Power supply mode
 | ---- | :---: | --- |
-| Sige6 | 5V/3A |  USB Type-C |
+| Sige7s | 5V/3A |  USB Type-C |
 
 
 Plug the power into the port labeled "PWR IN", and make sure to use the correct port!
