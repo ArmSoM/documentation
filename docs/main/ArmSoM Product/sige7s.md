@@ -14,11 +14,11 @@ Let's get to know Sige7s in 5 minutes.
 
 ## Overview
 
-The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
+The ArmSoM-Sige7s is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
 
 ![ArmSoM-sige7s](/img/sige/sige7s-bananer.png)
 
-Sige 7 is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
+Sige 7s is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
  
 
 ### Key Parameter
@@ -1304,11 +1304,11 @@ root@armsom:~$ echo performance > /sys/class/devfreq/fdab0000.npu/governor
 
 ### CE / FCC / RoHS
 
-![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
+<!-- ![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg) -->
 
 ## Supply Statement
 
-The ArmSoM-Sige7 will be produced at least until January 2034.
+The ArmSoM-Sige7s will be produced at least until January 2034.
 
 ## Accessories
 
@@ -1370,7 +1370,7 @@ ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://i
 
 OEM&ODM, please contact: sales@armsom.org
 
-## What do others say about the Sige7?
+<!-- ## What do others say about the Sige7?
 
 - [arm](https://www.arm.com/zh-TW/architecture/system-architectures/systemready-certification-program/ir): SystemReady IR is tailored to meet the needs of embedded Linux/BSD ecosystem on systems based on embedded Arm SoCs.
 - [cnx-software](https://www.cnx-software.com/2024/01/30/banana-pi-bpi-m7-thin-rockchip-rk3588-sbc-dual-2-5gbe-m-2-nvme-storage-hdmi-2-1): ArmSoM-Sige7 – A thin Rockchip RK3588 SBC with dual 2.5GbE, M.2 NVMe storage, HDMI 2.1, and more
@@ -1384,7 +1384,7 @@ OEM&ODM, please contact: sales@armsom.org
 - [habr](https://habr.com/ru/companies/selectel/articles/774782/): A single board that supports 32 GB of RAM. What kind of device is this?
 - [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
 - [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
-- [sbc compare](https://sbc.compare/18-armsom-sige7-8gb): Sige7 Benchmark Comparison on sbc.compare
+- [sbc compare](https://sbc.compare/18-armsom-sige7-8gb): Sige7 Benchmark Comparison on sbc.compare -->
 
 ## Notes
 

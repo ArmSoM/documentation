@@ -232,3 +232,166 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 * Loader：原理是在uboot启动期间检测到引脚被按下，Loader 模式下，可以进⾏固件的烧写、升级。
 可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
 :::
+
+## 接口使用
+### 1.调试串口
+
+如下所示连接 USB 转 TTL 串口线：
+
+![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
+
+| AIM-IO       | 连接  | 串口模块 |
+| --------------- | ----- | ------ |
+| **GND** (pin 11) | ---> | GND |
+| **RX** (pin 3)  | ---> | TX |
+| **TX** (pin 4) | ---> | RX |
+
+### 2.以太网口
+
+1. 首先将网线的一端插入 ArmSoM-AIM 的以太网接口，网线的另一端接入路由器，并确保
+网络是畅通的
+2. 系统启动后会通过 DHCP 自动给以太网卡分配 IP 地址，不需要其他任何配置
+3. 在ArmSoM-AIM 的 Linux 系统中查看 IP 地址的命令如下所示
+
+```bash
+root@armsom-aim7:/# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether c2:ed:bc:48:3b:7a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.106/24 brd 192.168.10.255 scope global dynamic noprefixroute eth0
+       valid_lft 86396sec preferred_lft 86396sec
+    inet6 fe80::7351:88a9:9b4c:11be/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+```
+
+ArmSoM-AIM 启动后查看 IP 地址有三种方法：
+
+- 接 HDMI 显示器，然后登录系统使用终端输入 ip a 命令查看 IP 地址
+- 接[调试串口](#调试串口)终端输入 ip a 命令来查看 IP 地址
+- 如果没有调试串口，也没有 HDMI 显示器，还可以通过路由器的管理界面来查看ArmSoM-AIM 网口的 IP 地址。不过这种方法经常有人会无法正常看到ArmSoM-AIM 的 IP 地址。如果看不到，调试方法如下所示：
+    - 首先检查 Linux 系统是否已经正常启动，如果ArmSoM-AIM的绿灯常亮，一般是正常启动了，如果只亮红灯，说明系统都没正常启动。
+    - 检查网线有没有插紧，或者换根网线试下。
+    - 换个路由器试下，路由器的问题有遇到过很多，比如路由器无法正常分配IP 地址，或者已正常分配 IP 地址但在路由器中看不到。
+    - 如果没有路由器可换就只能连接 HDMI 显示器或者使用调试串口来查看 IP地址。
+
+:::tip
+另外需要注意的是ArmSoM-AIM  DHCP 自动分配 IP 地址是不需要任何设置的。
+:::
+
+
+4. 使用工具 ping 判断是否连通网络。
+
+测试网络连通性的命令如下，ping 命令可以通过 Ctrl+C 快捷键来中断运行
+```bash
+armsom@armsom-aim7:~$ ping www.baidu.com
+PING www.a.shifen.com (183.2.172.185): 56 data bytes
+64 bytes from 183.2.172.185: icmp_seq=0 ttl=53 time=8.370 ms
+64 bytes from 183.2.172.185: icmp_seq=1 ttl=53 time=8.917 ms
+64 bytes from 183.2.172.185: icmp_seq=2 ttl=53 time=8.511 ms
+64 bytes from 183.2.172.185: icmp_seq=3 ttl=53 time=8.673 ms
+^C
+--- www.a.shifen.com ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
+```
+
+### 3.HDMI
+
+| 型号 | AIM7 | AIM5  |
+| ----- |  ----- | ------ |
+| 分辨率  | 8Kp60 | 4Kp120 |
+
+1. 使用 HDMI 线连接 ArmSoM-AIM 和 HDMI 显示器
+2. 启动 linux 系统后如果 HDMI 显示器有图像输出说明 HDMI 接口使用正常
+
+:::tip
+注意，很多笔记本电脑虽然带有 HDMI 接口，但是笔记本的 HDMI 接口一般只有输出功能，并没有 HDMI in 的功能，也就是说并不能将其他设备的 HDMI 输出显示到笔记本的屏幕上。
+当想把开发板的 HDMI 接到笔记本电脑 HDMI 接口时，请先确认清楚您的笔记本是支持 HDMI in 的功能。
+当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
+:::
+
+### 4.DP
+
+| 型号 | AIM7 | AIM5  |
+| ----- |  ----- | ------ |
+| 分辨率  | 4Kp60 | 4Kp60 |
+
+1. 使用 DP 线连接 ArmSoM-AIM 和 Dp 显示器
+2. 启动 linux 系统后如果 Dp 显示器有图像输出说明 HDMI 接口使用正常
+
+### 5.USB
+
+|  型号  | AIM7   | 
+| ----- |  ----- |
+| USB   | 1* Type-C 2.0, 4x USB3.0| 
+
+:::info
+USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
+:::
+
+#### 连接 USB 鼠标或键盘测试
+1. 将 USB 接口的键盘插入ArmSoM-AIM产品的 USB 接口中
+2. 连接ArmSoM-AIM产品到 HDMI 显示器
+3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
+
+#### 连接 USB 存储设备测试
+1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-AIM产品的 USB 接口中
+2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
+```
+armsom@armsom-aim7:/# cat /proc/partitions | grep "sd*"
+major minor  #blocks  name
+   8        0  122880000 sda
+```
+3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
+
+```
+armsom@armsom-aim7:/# sudo mount /dev/sda1 /test/
+```
+
+4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
+
+```
+armsom@armsom-aim7:/test# df -h | grep "sd"
+/dev/sda        4.7G  4.7G     0  100% /test
+```
+
+####  USB 摄像头
+
+1. 准备一个支持 UVC 协议的 USB 摄像头，然后将USB 摄像头插入到 ArmSoM-AIM产品的 USB 接口中
+
+2. 通过 v4l2-ctl 命令可以看到 USB 摄像头的设备节点信息为/dev/video0
+
+```
+armsom@armsom-aim7:/# v4l2-ctl --list-devices
+罗技高清网络摄像机 C93 (usb-xhci-hcd.5.auto-1):
+        /dev/video40
+        /dev/video41
+        /dev/media4
+```
+
+3. 在桌面系统中可以使用 Cheese/V4L2 test bench 直接打开 USB 摄像头
+
+![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
+
+
+同时，您也可以使用终端命令打开相机预览:
+```bash
+armsom@armsom-aim7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
+```
+
+命令拍照:
+```bash
+armsom@armsom-aim7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
+```
+
+命令拍摄视频:
+```bash
+gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
+```
+
+![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
