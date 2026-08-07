@@ -607,8 +607,8 @@ rtt min/avg/max/mdev = 160.909/171.260/193.269/13.133 ms
 
 6.使用完wifi，若想要断开连接，可以执行下面命令，其中wifi_name是你连接的wifi名称
 ```bash
-armsom@armsom:~$ sudo nmcli con down "ydtx"
-Connection 'ydtx' successfully deactivated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
+armsom@armsom:~$ sudo nmcli con down "wifi_name"
+Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
 ```
 
 
@@ -1046,13 +1046,7 @@ armsom@armsom:~$ echo heartbeat | sudo tee /sys/class/leds/led2-green-usr/trigge
 - Sige7s 板内集成一颗RTC时钟芯片 **LK8563**。
 
 ```bash
-armsom@armsom:~$ dmesg | grep rtc
-[    1.707045] [drm] Cluster1-win0(possible_vp_mask = 0x00000002) has no possible crtcs
-[    1.707074] [drm] Cluster1-win1(possible_vp_mask = 0x00000002) has no possible crtcs
-[    1.707093] [drm] Cluster3-win0(possible_vp_mask = 0x00000008) has no possible crtcs
-[    1.707119] [drm] Cluster3-win1(possible_vp_mask = 0x00000008) has no possible crtcs
-[    1.707132] [drm] Esmart1-win0(possible_vp_mask = 0x00000002) has no possible crtcs
-[    1.707150] [drm] Esmart3-win0(possible_vp_mask = 0x00000008) has no possible crtcs
+armsom@armsom:~$ dmesg | grep -w rtc
 [    1.774649] rtc-hym8563 6-0051: rtc information is invalid
 [    1.783043] rtc-hym8563 6-0051: registered as rtc0
 [    1.784043] rtc-hym8563 6-0051: setting system clock to 2021-01-01T12:00:00 UTC (1609502400)
@@ -1090,8 +1084,11 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 ```
 
 ### 3.13 MIPI-CSI
-MIPI-CSI接口支持imx219摄像头
-- imx219摄像头接开发板的MIPI-CSI接口，如图所示：
+#### ArmSoM-Sige7s 适配以下两款imx219摄像头: 
+- [Raspberry pi 系列摄像头](https://e.tb.cn/h.8gE3ZXsWJRLW5La?tk=PwhpgBOlZBx)
+- [Jeston 系列摄像头](https://detail.tmall.com/item.htm?id=608399452891&mi_id=0000IWXv5BQA8CjV7BPN3wY4S6TqJ9YA0VQI9c6gTQmF-Vw&spm=tbpc.boughtlist.suborder_itemtitle.1.39fc2e8dNHksy1&skuId=4513040438631)
+
+imx219摄像头接开发板的MIPI-CSI接口，如图所示：
 
 ![armsom-sige7s-mipi-csi](/img/lm/armsom-sige7s-mipi-csi.png)
 
@@ -1117,14 +1114,19 @@ root@armsom:~# dmesg | grep imx219
 [    2.345391] imx219 8-0010: Consider updating driver imx219 to match on endpoints
 [    2.345406] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m01_f_imx219 8-0010:bus type 5
 ```
-3. 确认驱动加载以后，执行下面命令抓图
+3. 确认驱动加载以后，执行下面命令拍照或拍视频                                    
+
+- 拍照
 ```bash
-root@armsom:~# v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat='BG10' --stream-mmap=3 --stream-skip=4 --stream-to=output.raw --stream-count=1 --stream-poll
-```
+root@armsom:~# gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=photo.jpg
+```         
 
-将抓取的图片 `output.raw` 使用 `Bayer Raw Image Viewer` 软件查看,设置参数按如图右侧栏填写即可：           
+- 拍摄视频
+```bash
+root@armsom:~# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
+```    
 
-![armsom-sige7s-raw](/img/lm/armsom-sige7s-raw.png)
+![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
 ### 3.14 MIPI DSI
 

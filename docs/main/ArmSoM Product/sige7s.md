@@ -23,7 +23,7 @@ Sige 7s is applied for various applications,such as, ARM PCs, edge computing, cl
 
 ### Key Parameter
 
-- **SoC**: Rockchip RK3588
+- **SoC**: Rockchip RK3588S
 - **CPU**: 4x Cortex-A76 @ 2.4GHz + 4x Cortex-A55 @ 1.8GHz, 8nm
 - **GPU**: ARM Mali-G610 MP4 
 - **NPU**: Up to 6 TOPS (INT8), supports INT4/INT8/INT16 mixed computing
@@ -32,7 +32,7 @@ Sige 7s is applied for various applications,such as, ARM PCs, edge computing, cl
   - **Hardware Encode**: 8K@30fps H.265 / H.264
 - **RAM**: 2GB/4GB/8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x
 - **Storage**: 32GB/64GB/128GB eMMC Module
-- **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
+- **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
 - **OS**: 
@@ -436,6 +436,7 @@ Plug the power into the port labeled "PWR IN", and make sure to use the correct 
 | Username | Password
 | :----: | :----: |
 | root | root | 
+| armsom | armsom | 
 
 ### 2. Choose Burning Method
 ArmSoM-sige7s supports booting from eMMC or SD card. Below, we'll introduce two ways to flash the firmware onto eMMC or SD card, and how to erase the SPI Flash.
@@ -629,8 +630,8 @@ rtt min/avg/max/mdev = 160.909/171.260/193.269/13.133 ms
 
 6.After using Wi-Fi, if you want to disconnect, you can run the following command, where wifi_name is the name of the Wi-Fi you're connected to.
 ```bash
-armsom@armsom:~$ sudo nmcli con down "ydtx"
-Connection 'ydtx' successfully deactivated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
+armsom@armsom:~$ sudo nmcli con down "wifi_name"
+Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
 ```
 
 
@@ -1062,13 +1063,7 @@ armsom@armsom:~$ echo heartbeat | sudo tee /sys/class/leds/led2-green-usr/trigge
 - The Sige7s integrates an RTC clock chip **LK8563** within the board. 
 
 ```bash
-armsom@armsom:~$ dmesg | grep rtc
-[    1.707045] [drm] Cluster1-win0(possible_vp_mask = 0x00000002) has no possible crtcs
-[    1.707074] [drm] Cluster1-win1(possible_vp_mask = 0x00000002) has no possible crtcs
-[    1.707093] [drm] Cluster3-win0(possible_vp_mask = 0x00000008) has no possible crtcs
-[    1.707119] [drm] Cluster3-win1(possible_vp_mask = 0x00000008) has no possible crtcs
-[    1.707132] [drm] Esmart1-win0(possible_vp_mask = 0x00000002) has no possible crtcs
-[    1.707150] [drm] Esmart3-win0(possible_vp_mask = 0x00000008) has no possible crtcs
+armsom@armsom:~$ dmesg | grep -w rtc
 [    1.774649] rtc-hym8563 6-0051: rtc information is invalid
 [    1.783043] rtc-hym8563 6-0051: registered as rtc0
 [    1.784043] rtc-hym8563 6-0051: setting system clock to 2021-01-01T12:00:00 UTC (1609502400)
@@ -1106,8 +1101,11 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 ```
 
 ### 3.13 MIPI-CSI
-The MIPI-CSI interface supports the imx219 camera
-- Connect the imx219 camera to the development board's MIPI-CSI interface, as shown in the picture:
+#### ArmSoM-Sige7s is compatible with the following two imx219 cameras: 
+- [Raspberry Pi series cameras](https://e.tb.cn/h.8gE3ZXsWJRLW5La?tk=PwhpgBOlZBx)
+- [Jeston series cameras](https://detail.tmall.com/item.htm?id=608399452891&mi_id=0000IWXv5BQA8CjV7BPN3wY4S6TqJ9YA0VQI9c6gTQmF-Vw&spm=tbpc.boughtlist.suborder_itemtitle.1.39fc2e8dNHksy1&skuId=4513040438631)
+
+Connect the imx219 camera to the development board's MIPI-CSI interface, as shown in the picture:
 
 ![armsom-sige7s-mipi-csi](/img/lm/armsom-sige7s-mipi-csi.png)
 
@@ -1132,14 +1130,18 @@ root@armsom:~# dmesg | grep imx219
 [    2.345391] imx219 8-0010: Consider updating driver imx219 to match on endpoints
 [    2.345406] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m01_f_imx219 8-0010:bus type 5
 ```
-3. After confirming the driver is loaded, run the following command to take a screenshot
+3. After confirming the driver is loaded, run the following command to take a photo or record a video
+- take a photo
 ```bash
-root@armsom:~# v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat='BG10' --stream-mmap=3 --stream-skip=4 --stream-to=output.raw --stream-count=1 --stream-poll
-```
+root@armsom:~# gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=photo.jpg
+```         
 
-Use the `Bayer Raw Image Viewer` software to view the captured image `output.raw`, and set the parameters as shown in the right-side panel in the picture:           
+- record a video
+```bash
+root@armsom:~# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
+```           
 
-![armsom-sige7s-raw](/img/lm/armsom-sige7s-raw.png)
+![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
 
 ### 3.14 MIPI DSI
@@ -1304,87 +1306,18 @@ root@armsom:~$ echo performance > /sys/class/devfreq/fdab0000.npu/governor
 
 ### CE / FCC / RoHS
 
-<!-- ![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg) -->
-
 ## Supply Statement
 
 The ArmSoM-Sige7s will be produced at least until January 2034.
 
-## Accessories
-
-The official accessories designed for the ArmSoM-Sige are intended to help you achieve optimal performance from your computer.
-
-<div class="cards">
-<a href="./armsom-camera-module1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Camera Module 1</h2>
-        <p>The camera module 1, compatible with the OV13850 sensor, is a low-power camera module.</p>
-    </div>
-</div>
-</a>
-<a href="./armsom-display-10-hd" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Display-10-HD</h2>
-        <p>A 10.1-inch touchscreen display, ideal for interactive projects like entertainment systems and information dashboards.</p>
-    </div>
-</div>
-</a>
-<a href="./sige-diy-case1" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-diy-case.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Sige DIY Case 1</h2>
-        <p>Combining high-quality construction with a clean, minimalist design, the metal casing adds a premium touch.</p>
-    </div>
-</div>
-</a>
-<a href="./sige-active-cooling-kit" class="card-link">
-<div class="card">
-    <div class="card-image">
-        <img src="./img/accessories/sige-active-cooling-fan-real.png" alt="Card Image"/>
-    </div>
-    <div class="card-content">
-        <h2>Active Cooling Kit</h2>
-        <p>The active cooling kit ensures Sige runs smoothly even during the most demanding tasks.</p>
-    </div>
-</div>
-</a>
-</div>
-
 ## Purchase Samples 
-ArmSoM online shop: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ArmSoM online shop: 
  
-ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806184323776.html](https://aliexpress.com/item/3256806184323776.html) 
+ArmSoM Aliexpress online shop: 
 
-ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+ArmSoM Taobao shop: 
 
 OEM&ODM, please contact: sales@armsom.org
-
-<!-- ## What do others say about the Sige7?
-
-- [arm](https://www.arm.com/zh-TW/architecture/system-architectures/systemready-certification-program/ir): SystemReady IR is tailored to meet the needs of embedded Linux/BSD ecosystem on systems based on embedded Arm SoCs.
-- [cnx-software](https://www.cnx-software.com/2024/01/30/banana-pi-bpi-m7-thin-rockchip-rk3588-sbc-dual-2-5gbe-m-2-nvme-storage-hdmi-2-1): ArmSoM-Sige7 – A thin Rockchip RK3588 SBC with dual 2.5GbE, M.2 NVMe storage, HDMI 2.1, and more
-- [notebookcheck](https://www.notebookcheck.net/Banana-Pi-BPI-M7-debuts-as-new-Pico-ITX-sized-single-board-computer-with-8K-video-outputs.768533.0.html): ArmSoM-Sige7 debuts as new Pico-ITX sized single-board computer with 8K video outputs
-- [liliputing](https://liliputing.com/banana-pi-bpi-m7-router-board-now-available-for-165-rk3588-processor-dual-2-5-gb-ethernet-wifi-6-and-bt-5-2): ArmSoM-Sige7 router board now available for $165 (RK3588 processor, dual 2.5 Gb Ethernet, WiFi 6 and BT 5.2)
-- [itsfoss](https://itsfoss.com/arosom-sige7-review/): This SBC Puts Raspberry Pi 5 to Shame
-- [electronics-lab](https://www.electronics-lab.com/armsom-sige7-review-a-rockchip-rk3588-sbc-with-dual-2-5gbe-ethernet-nvme-storage-and-triple-display-output): ArmSom Sige7 Review- A Rockchip RK3588 SBC with Dual 2.5GbE Ethernet, NVMe Storage, and Triple Display Output
-- [magazinmehatronika](https://magazinmehatronika.com/banana-pi-bpi-m7-a-k-a-armsom-sige7-recenzija): Armsom Sige7 recenzija
-- [sk](https://www.sk.rs/arhiva/clanak/33374/armsom-sige7-lici-na-bananu-ali-nije): Armsom Sige7 
-- [Technically Unsure](https://www.youtube.com/watch?v=Cw91DFgMFQQ): ArmSoM Sige7 vs Raspberry Pi 5: The Ultimate Single-Board Battle – Who Reigns Supreme?
-- [habr](https://habr.com/ru/companies/selectel/articles/774782/): A single board that supports 32 GB of RAM. What kind of device is this?
-- [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
-- [Platima Tinkers](https://www.youtube.com/watch?v=dwth8_nQvG4): ArmSoM Forge1 and Sige7 - The best ARM SBC I have ever tested!
-- [sbc compare](https://sbc.compare/18-armsom-sige7-8gb): Sige7 Benchmark Comparison on sbc.compare -->
 
 ## Notes
 
