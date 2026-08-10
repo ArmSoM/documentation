@@ -294,7 +294,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 </a>
 <br/>
 
-[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/1g6uKWPs40X1_hb0vaU0p-A?pwd=arms) - 引脚功能表格下载
+[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms) - 引脚功能表格下载
 
 <div class="cards">
     <a href="https://pan.baidu.com/s/1Ks4Fmj5Vc8iW1p88cYt0ug?pwd=7k8h" class="card-link">
