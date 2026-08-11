@@ -459,6 +459,13 @@ Here are some tips for your design reference:
 
 :::
 
+## Product Certificate
+
+### CE / FCC / RoHS
+
+![armsom-lm7-ce-fc-rohs](/img/lm/armsom-lm7-ce-fc-rohs.webp)
+
+
 ## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)
  

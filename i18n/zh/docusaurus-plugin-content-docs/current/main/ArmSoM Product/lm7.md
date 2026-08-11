@@ -401,6 +401,12 @@ HDMI输出8K对layout走线要求很高，核心板+底板的设计方式基本�
 
 :::
 
+## 产品证书
+
+### CE / FCC / RoHS
+
+![armsom-lm7-ce-fc-rohs](/img/lm/armsom-lm7-ce-fc-rohs.webp)
+
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)
  
