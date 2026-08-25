@@ -575,7 +575,7 @@ V1.1
 
 ### CE / FCC / RoHS
 
-![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
+![sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
 
 ## 供货声明
 
