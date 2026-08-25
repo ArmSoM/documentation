@@ -33,14 +33,14 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 | 参数项 | 详细规格 |
 | :--- | :--- |
 | **主控芯片** | Rockchip RK3588S (8nm LP制程) |
-| **CPU** | • 8核64位处理器<br>• 4核Cortex-A76和4核Cortex-A55的典型大小核架构，大核主频2.4GHz，小核主频1.8GHz |
-| **GPU** | • 集成ARM Mali-G610<br>• 内置 3D GPU<br>• 兼容 OpenGL ES1.1/2.0/3.2、OpenCL 2.2 和 Vulkan 1.2 |
+| **CPU** | • 8核64位处理器• 4核Cortex-A76和4核Cortex-A55的典型大小核架构，大核主频2.4GHz，小核主频1.8GHz |
+| **GPU** | • 集成ARM Mali-G610• 内置 3D GPU• 兼容 OpenGL ES1.1/2.0/3.2、OpenCL 2.2 和 Vulkan 1.2 |
 | **NPU** | 内置高达6TOPS算力的AI加速器NPU，支持INT4/INT8/INT16混合运算 |
 | **PMU** | RK806-1 |
 | **RAM** | LPDDR4/4X/5：支持2GB、4GB、8GB、16GB、32GB |
 | **EMMC** | eMMC：支持32GB、64GB、128GB、256GB |
-| **接口** | 3\*100pin (连接器型号：DF40C-100DP-0.4V(51))，包含以下接口：<br>• 1\*Type C or DP1.4<br>• 3\*USB2.0<br>• 1\*HDMI 2.1 or eDP1.3<br>• 1\*SDMMC<br>• 1\*4-lane MIPI DPHY TX<br>• 1\*2-lane MIPI DPHY TX<br>• 2\*2-lane MIPI DPHY RX<br>• 1\*4-lane MIPI CSI RX or 2\*2-lane MIPI CSI RX<br>• 1\*SATA III or PCIe2.0<br>• 1\*SATA III or PCIe2.0 or USB3.0<br>• USB3.0\*1+USB2.0\*3<br>• POWER_ON、RESET、MASKROM、RECOVERY等<br>• SDIO 3.0 or RGMII<br>• I2C、I2S、UART、SPI、CAN、PWM、SPDIF、PDM、GPIO等 |
-| **电源** | 输入：DC 5V MAX1800mA<br>输出：DC3.3V MAX600mA和DC1.8V MAX600mA |
+| **接口** | 3\*100pin (连接器型号：DF40C-100DP-0.4V(51))，包含以下接口：• 1\*Type C or DP1.4• 3\*USB2.0• 1\*HDMI 2.1 or eDP1.3• 1\*SDMMC• 1\*4-lane MIPI DPHY TX• 1\*2-lane MIPI DPHY TX• 2\*2-lane MIPI DPHY RX• 1\*4-lane MIPI CSI RX or 2\*2-lane MIPI CSI RX• 1\*SATA III or PCIe2.0• 1\*SATA III or PCIe2.0 or USB3.0• USB3.0\*1+USB2.0\*3• POWER_ON、RESET、MASKROM、RECOVERY等• SDIO 3.0 or RGMII• I2C、I2S、UART、SPI、CAN、PWM、SPDIF、PDM、GPIO等 |
+| **电源** | 输入：DC 5V MAX1800mA输出：DC3.3V MAX600mA和DC1.8V MAX600mA |
 | **PCB** | 长：55mm，宽：40mm，厚：1.6mm |
 
 ## 使用手册
