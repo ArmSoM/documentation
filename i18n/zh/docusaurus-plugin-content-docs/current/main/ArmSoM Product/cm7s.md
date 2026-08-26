@@ -67,11 +67,33 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 - 设计为板对板连接器
 :::
 
-### ArmSoM CM5 vs 树莓派 CM5
+### ArmSoM CM7s vs 树莓派 CM5
+以下是 ArmSoM CM7s 和 树莓派 CM5 的规格对比表格：
+
+| 规格                   | ArmSoM CM7s                             | 树莓派 CM5                     |
+|------------------------|-----------------------------------------|--------------------------------|
+| **处理器**             | **RK3588S SoC**                         | Broadcom BCM2712               |
+| **CPU架构**            | **四核 ARM Cortex-A76 & 四核Cortex-A55** | 四核 ARM Cortex-A76            |
+| **GPU**                | **ARM Mali-G610 MP4**                   | VideoCore VII                |
+| **NPU**                | **6TOPS 算力，支持 INT4/INT8/INT16 混合运算** | 无内置NPU                |
+| **内存**               | **最高支持 32GB LPDDR5**                 | 2GB、4GB、8GB、16GB LPDDR4       |
+| **存储**               | eMMC 存储（可选容量）                     | eMMC 存储（可选容量）        |
+| **显示输出**           | 1x HDMI 2.1, 1x DP 1.4                   | 2x HDMI 2.0                    |
+| **视频分辨率**         | **支持8K@60fps**                         | 支持4K@60fps                   |
+| **网络接口**           | 1x 千兆以太网接口                         | 1x 千兆以太网接口               |
+| **USB接口**            | **1x USB3.0，3x USB2.0**                 | 2xUSB3.0，1xUSB2.0       |
+| **GPIO**               | 40针 GPIO                                | 40针 GPIO                      |
+| **扩展性**             | **2x PCIE2.1/SATA3**                     | 1x PCIe 2.0         |
+| **相机接口**           | 1x 4通道 MIPI CSI, 2x 2通道 MIPI CSI      | 2x 4通道 MIPI CSI     |
+| **显示接口**           | 1x 4通道 MIPI DSI                        | 2x 4通道 MIPI DSI                    |
+| **电源输入**           | 5V                                       | 5V                          |
+| **尺寸**               | 55mm x 40mm                               | 55mm x 40mm                    |
+| **操作系统支持**       | Debian, Android, Ubuntu, Armbian等         | Raspberry Pi OS, Ubuntu, 其他  |
+| **主要用途**          | 高端平板、边缘计算、人工智能、云计算、AR/VR、智能安防、智能家居等  | 嵌入式系统、工业控制、AI/机器学习、数字标牌、物联网、边缘计算       |
 
 ### 产品框图
 
-![ArmSoM-CM5-product](/img/cm/cm5-product.png)
+<!-- ![ArmSoM-CM5-product](/img/cm/cm5-product.png) -->
 
 ### 硬件规格
 <table>
@@ -84,43 +106,43 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
     <tbody align="left">
     <tr>
             <th>SOC</th>
-            <th><li>RockChip RK3576</li></th>
+            <th><li>RockChip RK3588S</li></th>
         </tr>
         <tr>
             <th>CPU</th>
-            <th><li>RK3576 四核 Cortex-A72@ 2.2GHz 和四核 Cortex-A53@ 1.8GHz，8纳米制程</li></th>
+            <th><li>RK3588S 四核 Cortex-A76@ 2.4GHz 和四核 Cortex-A55@ 1.8GHz，8纳米制程</li></th>
         </tr>
         <tr>
             <th>GPU</th>
-            <th><li>ARM Mali G52 MC3 GPU</li><li>完全兼容 OpenGL ES 1.1、2.0 和 3.2、OpenCL 高达 2.0 和 Vulkan 1.1。带有 MMU 的专用 2D 硬件引擎将最大限度地提高显示性能并提供非常流畅的操作。</li></th>
+            <th><li>ARM Mali-G610 MP4 GPU</li><li>ARM Mali-G610 MP4四核GPU，支持OpenGL ES 1.1/2.0/3.2、OpenCL 2.2、Vulkan 1.1/1.2，算力450 GFLOPS</li></th>
         </tr>
         <tr>
             <th>NPU</th>
-            <th><li>6 TOPS@INT8</li><li>支持 INT4,INT8, INT16, FP16, BF16 and TF32 混合运算</li><li>支持深度学习框架：TensorFlow、Caffe、Tflite、Pytorch、Onnx NNAndroid NN等。</li></th>
+            <th><li>6 TOPS@INT8</li><li>支持 INT4，INT8，INT16，FP16 混合运算</li><li>支持深度学习框架：TensorFlow、PyTorch、Caffe等。</li></th>
         </tr>
          <tr>
             <th>VPU/编解码</th>
-            <th><li>硬解码：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps，高质量JPEG解码器最高4K@60fps。</li><li>硬编码：支持H.264和H.265，JPEG最高4K@60fps</li></th>
+            <th><li>硬解码：支持8K@60fps (H.265/VP9/AVS2)、8K@30fps (H.264)、4K@60fps (AV1)。</li><li>硬编码：8K@30fps (H.265/H.264)，支持同编同解</li></th>
         </tr>
          <tr>
             <th>ISP</th>
-            <th><li>ISP，1600万像素</li></th>
+            <th><li>集成4800万像素ISP，支持HDR和3DNR</li></th>
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB（最高可配 16GB ）32bit LPDDR5，默认LPDDR5 8GB</li></th>
+            <th><li>4GB/8GB/16GB 32GB LPDDR4/LPDDR4x/LPDDR5，默认LPDDR5 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>显示</th>
-            <th><li>1x HDMI OUT2.1，支持 4K@120fps</li><li>1x MIPI DSI 分辨率最高可达 2K@60fps</li><li>1x DP1.4 分辨率最高可达 4K@120fps</li></th>
+            <th><li>1x HDMI OUT2.1，支持 8K@60Hz或4K@120Hz</li><li>2x MIPI DSI 分辨率最高可达 4K@60Hz</li><li>1x DP1.4 分辨率最高可达 8K@30Hz</li></th>
         </tr>
         <tr>
             <th>摄像头</th>
-            <th><li>1x 4Lanes MIPI CSI，每线最高 2.5Gbps</li><li>1x 2Lanes MIPI CSI，每线最高 2.5Gbps</li></th>
+            <th><li>2x 4Lanes MIPI CSI，每线最高 2.5Gbps</li><li>支持最多三个MIPI摄像头输入</li></th>
         </tr>
         <tr>
             <th>网络</th>
@@ -135,11 +157,11 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         </tr>
          <tr>
             <th>USB</th>
-            <th><li>1x USB 3.0</li><li>1x USB 2.0</li></th>
+            <th><li>3x USB 3.0</li><li>2x USB 2.0 Host</li><li>1x USB 2.0 OTG</li><li>1× Type-C (USB 3.1)</li></th>
         </tr>
         <tr>
             <th>音频</th>
-            <th><li>SPDIF_Tx x1</li><li>AUDIO_R/L x1</li><li>i2s x1</li></th>
+            <th><li>SPDIF_Tx x2</li><li>I2S x4</li><li>PDM x2</li></th>
         </tr>
          <tr>
             <th rowspan="3">Others</th>
@@ -148,23 +170,23 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
     </tbody>
 </table>
 
-### RK3576框图
+### RK3588S框图
 <details>
     <summary>
-        RK3576 框图
+        RK3588S 框图
     </summary>
     <img
-  src="./img/sige/rk3576.png"
-  alt="rk3576 block diagram"
+  src="./img/sige/rk3588s.png"
+  alt="rk3588S block diagram"
   className="session-details-live-video"/>
 </details>
 
 ### 引脚定义
 
-![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
+<!-- ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png) -->
 
 <a href="https://pan.baidu.com/s/1Cl3m1eBwcBnNsEkdmXg7GA?pwd=hv4b" class="btn">
-  <span>ArmSoM-CM5&raspberrypi-CM4&BPI-CM4 Pinlist对比表</span>
+  <span>ArmSoM-CM7s&raspberrypi-CM5&BPI-CM5 Pinlist对比表</span>
 </a>
 <br/>
 
@@ -201,7 +223,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
             <i>📗</i>
         </div>
         <div class="content">
-            <h2>CM5 kernel</h2>
+            <h2>CM7s kernel</h2>
             <p>Improved Rockchip Linux</p>
         </div>
     </div>
@@ -213,7 +235,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
             <i>📘</i>
         </div>
         <div class="content">
-            <h2>CM5 uboot</h2>
+            <h2>CM7s uboot</h2>
             <p>ArmSoM/u-boot</p>
         </div>
     </div>
@@ -245,25 +267,25 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM5-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| **CM5-IO**:[百度网盘](https://pan.baidu.com/s/1MOrCsh5ef4wPTUN4a_WQMQ?pwd=iukg)    <br/>  **CM5-RPI-CM4-IO**:[百度网盘](https://pan.baidu.com/s/1reSm5fJcRUF2dfGDX3XQLw?pwd=arms) |
-|![Android](/img/sige/android.png) | Android14 for **CM5-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| **CM7s-IO**:[百度网盘](https://pan.baidu.com/s/1MOrCsh5ef4wPTUN4a_WQMQ?pwd=iukg)    <br/>  **CM5-RPI-CM4-IO**:[百度网盘](https://pan.baidu.com/s/1reSm5fJcRUF2dfGDX3XQLw?pwd=arms) |
+|![Android](/img/sige/android.png) | Android14 for **CM7s-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)  |
 |![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige5 :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| [百度网盘](https://pan.baidu.com/s/1H4_mkVE4jwSK6ufP5MRpbQ?pwd=arms)  |
 
 ### 第三方镜像
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for CM5:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | **CM5-IO**:[armbian image](https://github.com/armbian/community/releases)   <br/>  **CM5-RPI-CM4-IO**:[armbian image](https://github.com/armbian/community/releases) |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for CM7s:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | **CM7s-IO**:[armbian image](https://github.com/armbian/community/releases)   <br/>  **CM5-RPI-CM4-IO**:[armbian image](https://github.com/armbian/community/releases) |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 
 <a href="https://pan.baidu.com/s/17kzaNI43PizM5xRj95umLQ?pwd=a61j" class="btn">
-  <span>CM5 硬件资料</span>
+  <span>CM7s 硬件资料</span>
 </a>
 <br/>
 
-[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms) - 引脚功能表格下载
+[ArmSoM-CM7s 引脚功能表格](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms) - 引脚功能表格下载
 
 <div class="cards">
     <a href="https://pan.baidu.com/s/1Ks4Fmj5Vc8iW1p88cYt0ug?pwd=7k8h" class="card-link">
@@ -272,7 +294,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
                 <i>📦</i>
             </div>
             <div class="content">
-                <h2>CM5</h2>
+                <h2>CM7s</h2>
                 <p>SCH,2D</p>
             </div>
         </div>
@@ -283,7 +305,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
                 <i>📗</i>
             </div>
             <div class="content">
-                <h2>CM5-IO</h2>
+                <h2>CM7s-IO</h2>
                 <p>SCH,PCB,2D,SMD</p>
             </div>
         </div>
@@ -307,11 +329,11 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 ## 供货声明
 
-ArmSoM-CM5 将至少生产到 2034 年 8 月。
+ArmSoM-CM7s 将至少生产到 2034 年 8 月。
 
 ## 配件
 
-我们为 ArmSoM-CM5-IO 设计的官方配件旨在帮助您从计算机获得最佳性能。
+我们为 ArmSoM-CM7s-IO 设计的官方配件旨在帮助您从计算机获得最佳性能。
 
 <div class="cards">
 <a href="./armsom-display-10-hd" class="card-link">
@@ -351,14 +373,14 @@ OEM&ODM,  请联系: sales@armsom.org
 
 ## 专家视角
 
-- [itsfoss ArmSoM-CM5](https://itsfoss.com/armsom-cm5)：ArmSoM CM5 Powerful Replacement for Raspberry Pi CM4
+<!-- - [itsfoss ArmSoM-CM5](https://itsfoss.com/armsom-cm5)：ArmSoM CM7s Powerful Replacement for Raspberry Pi CM4
 - [Technically Unsure](https://www.youtube.com/watch?v=pfsBDO3XehA&list=PLtGrcSFVfrfRbFqx8nbtYvVVwbHp_Nza4)：ArmSoM CM5 | 能否超越树莓派 CM5？
 - [Platima Tinkers](https://www.youtube.com/watch?v=p55ehXBBLPE)：ArmSoM CM5 评测：RK3576 计算模块，真正兼容 CM4
-- [sbc compare](https://sbc.compare/83-armsom-cm5-8gb): CM5  Benchmark Comparison on sbc.compare
+- [sbc compare](https://sbc.compare/83-armsom-cm5-8gb): CM5  Benchmark Comparison on sbc.compare -->
 
 ## 用户案例
 
-- [edge machine learning](https://www.armsom.org/post/accelerating-conservation-science-with-armsom-cm5-som): edge machine learning
+<!-- - [edge machine learning](https://www.armsom.org/post/accelerating-conservation-science-with-armsom-cm5-som): edge machine learning -->
 
 
 ## 注意事项
