@@ -216,7 +216,7 @@ Please refer to the product-related instructions for operations; the methods to 
 Shorting pins 10 and 11 to enter loader mode.
 ![aimio-recovery](/img/aim/aimio-recovery.png)
 
-Shorting maskrom test points to enter maskrom mode.
+Hold down the maskrom button on the aim7 to enter maskrom mode.
 
 ![aimio-maskrom](/img/aim/aimio-maskrom.png)
 

@@ -218,7 +218,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 短接 10和11进入loader模式
 ![aimio-recovery](/img/aim/aimio-recovery.png)
 
-短接maskrom测试点进入maskrom模式
+按住aim7上maskrom按键进入maskrom模式
 
 ![aimio-maskrom](/img/aim/aimio-maskrom.png)
 
