@@ -254,16 +254,17 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 </a>
 </div>
 
+### Cloud drive link
+Google Drive links, including software information and hardware information:
+<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="btn">
+  <span>Google Drive link</span>
+</a>
+
 ### Official mirror
 
 The ArmSoM team uses Debian bullseye as the official operating system.[How do I flash a system image?](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
 
 The following systems have been officially tested and verified by ArmSoM:
-
-Cloud drive link:
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
-  <span>Google Drive links</span>
-</a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
@@ -278,50 +279,6 @@ Cloud drive link:
 |![armbian-logo](/img/armbian-logo.png) | Armbian for CM7s:    <br/>  Armbian is a computing build framework that lets users create ready-to-use images with working kernels based on various single-board computer configurations. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  |  |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started now by choosing the right Ubuntu server or desktop image and enjoy a familiar environment.|      |
 
-### Hardware info
-
-<a href="https://pan.baidu.com/s/17kzaNI43PizM5xRj95umLQ?pwd=a61j" class="btn">
-  <span>CM7s Hardware info</span>
-</a>
-<br/>
-
-[ArmSoM-CM7s Pin Function Table](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms) - Download pin function table
-
-<div class="cards">
-    <a href="https://pan.baidu.com/s/1Ks4Fmj5Vc8iW1p88cYt0ug?pwd=7k8h" class="card-link">
-        <div class="card">
-            <div class="icon">
-                <i>📦</i>
-            </div>
-            <div class="content">
-                <h2>CM7s</h2>
-                <p>SCH,2D</p>
-            </div>
-        </div>
-    </a>
-    <a href="https://pan.baidu.com/s/1GEicsdw1GANgWJBXLiyTdg?pwd=wfxn" class="card-link">
-        <div class="card">
-            <div class="icon">
-                <i>📗</i>
-            </div>
-            <div class="content">
-                <h2>CM7s-IO</h2>
-                <p>SCH,PCB,2D,SMD</p>
-            </div>
-        </div>
-</a>
-<a href="https://pan.baidu.com/s/1HJdf25HnlB-lZjcKeHs7rQ?pwd=643d" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📃</i>
-        </div>
-        <div class="content">
-            <h2>Datasheet</h2>
-            <p>ic,connector datasheet</p>
-        </div>
-    </div>
-</a>
-</div>
 
 ## Product Certificate
 
