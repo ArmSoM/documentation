@@ -256,7 +256,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 
 ### Cloud drive link
 Google Drive links, including software information and hardware information:
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="btn">
+<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="btn">
   <span>Google Drive link</span>
 </a>
 
