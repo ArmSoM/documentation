@@ -93,7 +93,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 
 ### 产品框图
 
-<!-- ![ArmSoM-CM5-product](/img/cm/cm5-product.png) -->
+![ArmSoM-CM7s-product](/img/cm/cm7s-product.png)
 
 ### 硬件规格
 <table>
@@ -183,10 +183,8 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 
 ### 引脚定义
 
-<!-- ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png) -->
-
-<a href="https://pan.baidu.com/s/1Cl3m1eBwcBnNsEkdmXg7GA?pwd=hv4b" class="btn">
-  <span>ArmSoM-CM7s&raspberrypi-CM5&BPI-CM5 Pinlist对比表</span>
+<a href="https://pan.baidu.com/s/1PowkJyvHJOHGgC-BnVT98g?pwd=arms" class="btn">
+  <span>ArmSoM-CM7s_Pinout</span>
 </a>
 <br/>
 
@@ -276,8 +274,8 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for CM7s:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | **CM7s-IO**:[armbian image](https://github.com/armbian/community/releases)   <br/>  **CM5-RPI-CM4-IO**:[armbian image](https://github.com/armbian/community/releases) |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for CM7s:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  |   |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM7s :    <br/> 该项目旨在为Rockchip RK3588s设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。|     |
 
 
 ## 产品证书
@@ -320,13 +318,13 @@ ArmSoM-CM7s 将至少生产到 2034 年 8 月。
 
 ## 样品购买
 
-ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+<!-- ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
 
 ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
 
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
 
-OEM&ODM,  请联系: sales@armsom.org
+OEM&ODM,  请联系: sales@armsom.org -->
 
 ## 专家视角
 

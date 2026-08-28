@@ -93,7 +93,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 
 ### Product block diagram
 
-<!-- ![ArmSoM-CM5-product](/img/cm/cm5-product.png) -->
+![ArmSoM-CM7s-product](/img/cm/cm7s-product.png)
 
 ### Hardware Specs
 <table>
@@ -183,10 +183,8 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 
 ### Pin Definition
 
-<!-- ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png) -->
-
-<a href="https://pan.baidu.com/s/1Cl3m1eBwcBnNsEkdmXg7GA?pwd=hv4b" class="btn">
-  <span>ArmSoM-CM7s&raspberrypi-CM5&BPI-CM5 Pinlist Comparison Table</span>
+<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="btn">
+  <span>ArmSoM-CM7s_Pinout</span>
 </a>
 <br/>
 
@@ -320,13 +318,13 @@ The official accessories we designed for the ArmSoM-CM7s-IO are meant to help yo
 
 ## Purchase Samples
 
-ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+<!-- ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
 
 ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
 
 ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
 
-For OEM & ODM, please contact: sales@armsom.org
+For OEM & ODM, please contact: sales@armsom.org -->
 
 ## Expert Perspective
 
