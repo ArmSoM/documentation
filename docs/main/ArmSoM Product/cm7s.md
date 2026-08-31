@@ -252,11 +252,71 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 </a>
 </div>
 
-### Cloud drive link
-Google Drive links, including software information and hardware information:
+
+### Hardware info
+
+Get CM7s schematics, DXF, and other hardware materials
 <a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="btn">
   <span>Google Drive link</span>
 </a>
+
+<br/>
+<div class="cards">
+    <a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>CM7s SCH</h2>
+            </div>
+        </div>
+</a>
+
+<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>CM7s 2D</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>CM7s SMD</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>💡</i>
+        </div>
+        <div class="content">
+            <h2>Case 3D</h2>
+        </div>
+    </div>
+</a>
+</div>
+<br/>
 
 ### Official mirror
 
