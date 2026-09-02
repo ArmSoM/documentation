@@ -864,22 +864,33 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
                 <i>📦</i>
             </div>
             <div class="content">
-                <h2>AIM7 Schematics</h2>
+                <h2>AIM7</h2>
+                <p>SCH,2D</p>
             </div>
         </div>
     </a>
-
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>AIM7</h2>
+                <p>SCH,PCB,2D,SMD</p>
+            </div>
+        </div>
+</a>
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>AIM7 2D</h2>
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
         </div>
     </div>
 </a>
-
 </div>
 
 ## 产品证书

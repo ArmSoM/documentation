@@ -909,21 +909,33 @@ Download link:
     <a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
         <div class="card">
             <div class="icon">
-                <i>📄</i>
+                <i>📦</i>
             </div>
             <div class="content">
-                <h2>AIM7 Pin Function Table</h2>
+                <h2>AIM7</h2>
+                <p>SCH,2D</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📗</i>
+            </div>
+            <div class="content">
+                <h2>AIM7</h2>
+                <p>SCH,PCB,2D,SMD</p>
             </div>
         </div>
 </a>
-
 <a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>AIM7 Package</h2>
+            <h2>Datasheet</h2>
+            <p>ic,connector datasheet</p>
         </div>
     </div>
 </a>
