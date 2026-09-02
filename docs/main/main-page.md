@@ -94,9 +94,9 @@ ArmSoM offers System on Module paired with flexible carrier board designs, enabl
 | -------------------- | -------------------- | -------------------- | -------------------- |  
 | ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) | ![ArmSoM-AIM7](/img/aim/armsom-aim7.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) |  
 
-| [ArmSoM-CM5-IO](./armsom-cm5-io) <br/> CM5 Maker Kit | [ArmSoM-AIM-IO](./armsom-aimio) <br/> AIM Maker Kit | [ArmSoM-W3](./armsom-w3) <br/> LM7 Maker Kit |  
-| -------------------- | -------------------- | -------------------- |  
-| ![ArmSoM-CM5-IO](/img/cm/armsom-cm5-io.png) | ![ArmSoM-AIM-IO](/img/aim/armsom-aim-io.png) | ![ArmSoM-W3](/img/lm/armsom-w3.png) |  
+|[ArmSoM-CM7s](./armsom-cm7s)<br/>[Rockchip RK3588s]|[ArmSoM-CM5-IO](./armsom-cm5-io)<br/>[CM5 Maker kit]|[ArmSoM-AIM-IO](./armsom-aimio)<br/>[AIM Maker kit]|[ArmSoM-W3](./armsom-w3)<br/>[LM7 Maker kit]||
+| --------- | --------- | ----- | --- |
+| ![armsom-cm7s](/img/cm/armsom-cm7s.png)|![armsom-cm7s](/img/cm/armsom-cm5-io.png)|![armsom-aim-io](/img/aim/armsom-aim-io.png)|![arsmom-w3](/img/lm/armsom-w3.png)|
 
 #### Key Benefits of Modular Design  
 
@@ -139,9 +139,9 @@ This professional accessory lineup, combined with GPIO interface support, makes 
 |[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
 |[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
 |[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
-|[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733] | [ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]   |         | [Camera-Module-1](./armsom-camera-module1) |
-|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|       |        |  [Sige Diy Case 1](./sige-diy-case1)  |
-|[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]|        |        |          |
+|[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| ---- | [Camera-Module-1](./armsom-camera-module1) |
+|[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-CM7s](./armsom-cm7s)  [Rockchip RK3588s]| ---- |  [Sige Diy Case 1](./sige-diy-case1)  |
+|[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]| ---- | ---- | ---- |
 ## Documentation Center  
 
 If you encounter any issues while using this documentation, please reach out to us via the [forum](http://forum.armsom.org/) or [Discord](https://discord.gg/THfTEatpfK), and we will respond promptly.  

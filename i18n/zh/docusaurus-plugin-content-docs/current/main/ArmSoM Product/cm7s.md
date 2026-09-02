@@ -183,6 +183,8 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 
 ### 引脚定义
 
+![ArmSoM-cm7s-pinlist](/img/cm/cm7s-pinlist.png)
+
 <a href="https://pan.baidu.com/s/1PowkJyvHJOHGgC-BnVT98g?pwd=arms" class="btn">
   <span>ArmSoM-CM7s_Pinout</span>
 </a>

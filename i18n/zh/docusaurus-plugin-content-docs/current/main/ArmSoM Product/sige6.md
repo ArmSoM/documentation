@@ -27,7 +27,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
   - **硬解码**：H265/VP9/AVS2 4K@60fps, H264 4K@30fps解码
   - **硬编码**：H264/H265 4K@30fps
 - **RAM**：2GB/4GB/6GB/8GB/12GB/16GB LPDDR5（最高可配 16GB ）
-- **Flash**：32GB/64GB/128GB eMMC
+- **Flash**：16GB/32GB/64GB/128GB eMMC, reserve SPI flash, not mounted by default
 - **WIFI/BT**: 板载 Wi-Fi6 + BT 5.4 
 - **工作电压**：5V（电压误差±5%）
 - **工作温度**：-25℃ ~ 115℃

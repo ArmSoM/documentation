@@ -75,6 +75,15 @@ AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 ### 产品框图
 ![aim7-product](/img/aim/aim7-product.jpg)
 
+### 引脚定义
+
+![ArmSoM-aim7-pinlist](/img/aim/aim7-pinlist.png)
+
+<a href="https://pan.baidu.com/s/1vsxkgNsUQfE0deS7EhrWIA?pwd=arms" class="btn">
+  <span>ArmSoM-AIM7 & Jetson AIM Comparison Table</span>
+</a>
+<br/>
+
 ### 硬件规格
 <details>
     <summary>
