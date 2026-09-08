@@ -23,7 +23,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 :::
 
 :::tip
-Pin 21 of armsom-cm5v1.2 is not working and will be fixed in the next v1.3 version.
+On the ArmSoM-CM5 v1.2, Pin 21 suffered from a functional issue. This problem has been resolved in the v1.3 version. All boards currently on sale—and those released subsequently—are v1.3 or later, so you can purchase and use them with confidence.
 :::
 
 ### Key Specifications
