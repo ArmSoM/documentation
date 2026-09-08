@@ -51,25 +51,25 @@ AIM-IO板是专为AIM模块开发者设计的扩展板，旨在帮助完成系�
 | GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
 |             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     189     | UART0_RX_M0 / I2C4_SDA_M2 / PWM2_M0 /  GPIO0_C4 | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     191     | UART0_TX_M0 / I2C4_SCL_M2 / PWM4_M0 /  I2S1_SDI0_M1   / GPIO0_C5  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     211     | SPI0_MISO_M1 / UART9_RTSN_M1 / I2S1_MCLK_M0 /  GPIO4_A0  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  SPDIF0_TX_M0 / I2C5_SCL_M3 / UART1_TX_M1 / GPIO1_B6 |     203     |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  PWM13_M2 / I2C5_SDA_M3 / UART1_RX_M1 / GPIO1_B7 |     205      |
-|     207     |  PWM14_M2 / I2C8_SCL_M2 / UART1_RTSN_M1 / GPIO1_D6 | <div className='green'>11</div>  | <div className='green'>12</div> | SPI0_MOSI_M1/ UART9_CTSN_M1 / I2S1_SCLK_M0 / GPIO4_A1 |     199     |
-|     106     |  SPI1_CLK_M2 / UART4_TX_M0 / PWM0_M1 / I2C1_SCL_M4 / I2S0_SDO3 / I2S0_SDI2 / GPIO1_D2  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     218     |   GPIO3_B4 / I2S2_MCLK_M1 / MIPI_CAM3_PDN  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO1_D5 / SPI1_CS1_M2 / PDM0_SDI0_M0   |     112     |
-|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  SPI1_CS0_M2 / UART4_RX_M0 /PWM1_M1 / I2C1_SDA_M4 /PDM0_SDI3_M0 / I2S0_SDI1 / GPIO1_D3 |    110     |
-|     89      | SPI0_MOSI_M2 / PCIE30X4_PERSTN_M3 / UART4_RX_M2 / PDM1_SDI3_M1 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
-|     93      | SPI0_MISO_M2 / PCIE30X4_WAKEN_M3 / PDM1_SDI2_M1 / GPIO1_B1 | <div className='green'>21</div>  | <div className='green'>22</div> | SPI1_MISO_M2 / UART6_TX_M2 / I2C7_SCL_M0 / I2S0_SDO1 |      108      |
-|     91      | SPI0_CLK_M2 / SATA0_ACT_LED_M1 / PCIE30X1_0_WAKEN_M2 / PDM1_CLK1_M1 / UART4_TX_M2  / GPIO1_B3 | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CS0_M2 / PCIE30X1_0_PERSTN_M2 / PDM1_CLK0_M1 / UART7_RX_M2  / GPIO1_B4 |     95      |
-|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     97      |
-|     187     | I2C2_SDA_M0 / CAN0_RX_M0 / SPI0_MOSI_M0 / PWM1_M0 / GPIO0_C0  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO0_B7 / CAN0_TX_M0 / SPI0_CS1_M0 / I2C2_SCL_M0 / PWM0_M0  |    185     |
-|    118      | PWM8_M0 / GPIO3_A7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
-|     218     | PWM9_M0 / GPIO3_B0  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_A0 / PWM10_M0 / SPI4_MISO_M1 / I2C6_SDA_M4 / I2S3_MCLK |    206     |
-|     228     | UART2_TX_M2 / PWM2_M1 / GPIO3_B1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
-|     197     | I2S1_LRCK_M0 / SPI0_CLK_M1 / I2S1_LRCK_M0 / GPIO4_A2  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO1_D7 / I2C8_SDA_M2 / UART1_CTSN_M1 |     209     |
-|     104      | UART6_RX_M2 / I2C7_SDA_M0 / GPIO1_D1	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO4_A5 / UART3_TX_M2 / I2C3_SDA_M2 / I2S1_SDI0_M0   |     195     |
-|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_B1 /  SPI0_CS1_M1 / UART8_RX_M0 / I2C6_SCL_M3 / I2S1_SDO0_M0   |     193     |
+|     20     | UART0_RX_M0 / I2C4_SDA_M2 / PWM2_M0 /  GPIO0_C4 | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
+|     21     | UART0_TX_M0 / I2C4_SCL_M2 / PWM4_M0 /  I2S1_SDI0_M1   / GPIO0_C5  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
+|     128     | SPI0_MISO_M1 / UART9_RTSN_M1 / I2S1_MCLK_M0 /  GPIO4_A0  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  SPDIF0_TX_M0 / I2C5_SCL_M3 / UART1_TX_M1 / GPIO1_B6 |     46     |
+|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  PWM13_M2 / I2C5_SDA_M3 / UART1_RX_M1 / GPIO1_B7 |     47      |
+|     62     |  PWM14_M2 / I2C8_SCL_M2 / UART1_RTSN_M1 / GPIO1_D6 | <div className='green'>11</div>  | <div className='green'>12</div> | SPI0_MOSI_M1/ UART9_CTSN_M1 / I2S1_SCLK_M0 / GPIO4_A1 |     129     |
+|     58     |  SPI1_CLK_M2 / UART4_TX_M0 / PWM0_M1 / I2C1_SCL_M4 / I2S0_SDO3 / I2S0_SDI2 / GPIO1_D2  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+|     108     |   GPIO3_B4 / I2S2_MCLK_M1 / MIPI_CAM3_PDN  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO1_D5 / SPI1_CS1_M2 / PDM0_SDI0_M0   |     61     |
+|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  SPI1_CS0_M2 / UART4_RX_M0 /PWM1_M1 / I2C1_SDA_M4 /PDM0_SDI3_M0 / I2S0_SDI1 / GPIO1_D3 |    59     |
+|     42      | SPI0_MOSI_M2 / PCIE30X4_PERSTN_M3 / UART4_RX_M2 / PDM1_SDI3_M1 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
+|     41      | SPI0_MISO_M2 / PCIE30X4_WAKEN_M3 / PDM1_SDI2_M1 / GPIO1_B1 | <div className='green'>21</div>  | <div className='green'>22</div> | SPI1_MISO_M2 / UART6_TX_M2 / I2C7_SCL_M0 / I2S0_SDO1 / GPIO1_D0 |      56      |
+|     43      | SPI0_CLK_M2 / SATA0_ACT_LED_M1 / PCIE30X1_0_WAKEN_M2 / PDM1_CLK1_M1 / UART4_TX_M2  / GPIO1_B3 | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CS0_M2 / PCIE30X1_0_PERSTN_M2 / PDM1_CLK0_M1 / UART7_RX_M2  / GPIO1_B4 |     44      |
+|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     45      |
+|     16     | I2C2_SDA_M0 / CAN0_RX_M0 / SPI0_MOSI_M0 / PWM1_M0 / GPIO0_C0  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO0_B7 / CAN0_TX_M0 / SPI0_CS1_M0 / I2C2_SCL_M0 / PWM0_M0  |    15     |
+|    103      | PWM8_M0 / GPIO3_A7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
+|     104     | PWM9_M0 / GPIO3_B0  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_A0 / PWM10_M0 / SPI4_MISO_M1 / I2C6_SDA_M4 / I2S3_MCLK |    96     |
+|     105     | UART2_TX_M2 / PWM2_M1 / GPIO3_B1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
+|     130     | I2S1_LRCK_M0 / SPI0_CLK_M1 / I2S1_LRCK_M0 / GPIO4_A2  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO1_D7 / I2C8_SDA_M2 / UART1_CTSN_M1 |     63     |
+|     57      | UART6_RX_M2 / I2C7_SDA_M0 / GPIO1_D1	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO4_A5 / UART3_TX_M2 / I2C3_SDA_M2 / I2S1_SDI0_M0   |     133     |
+|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_B1 /  SPI0_CS1_M1 / UART8_RX_M0 / I2C6_SCL_M3 / I2S1_SDO0_M0   |     137     |
 
 </div>
 </details>
