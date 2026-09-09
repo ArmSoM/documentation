@@ -962,6 +962,14 @@ Download link:
 </div>
 <br/>
 
+## Product Certificate
+
+### CE / FCC / RoHS
+
+## Supply Statement
+
+The ArmSoM-AIM7 will be produced at least until August 2034.
+
 ## Purchase Samples 
 
 CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
