@@ -9,9 +9,9 @@ image: /img/cm/armsom-cm7s.jpg
 
 # ArmSoM-CM7s 产品简介
 
-让我们在 5 分钟内了解 ArmSoM-CM7s
+让我们在 5 分钟内了解 ArmSoM-CM7s 和 ArmSoM-CM7s-IO
 
-## 简介
+## CM7s 简介
 
 **ArmSoM-CM7s 核心板：尺寸小巧，性能强悍，专为深度嵌入式场景打造。**
 板载瑞芯微 RK3588S 8核 64位旗舰处理器（4×Cortex-A76 @ 2.4GHz + 4×Cortex-A55 @ 1.8GHz），采用 8nm 先进工艺，兼具出色算力与优秀功耗比。集成 ARM Mali-G610 高性能 GPU，全面兼容 OpenGL ES 3.2、OpenCL 2.2 及 Vulkan 1.2 图形 API；内置 6 TOPS 强劲 NPU，支持 INT4/INT8/INT16 混合精度运算，轻松胜任端侧 AI 推理。
@@ -42,22 +42,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 * **输入**：DC 5V MAX 2500mA
 * **输出**：DC 3.3V MAX 600mA 和 DC 1.8V MAX 600mA
 * **PCB尺寸**：55 x 40 x 1.6 毫米（长 x 宽 x 厚）
-
-## 使用手册
-
-<a href="./armsom-cm7s#使用手册" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📝</i>
-        </div>
-        <div class="content">
-            <h2>CM7s使用手册</h2>
-            <p>如何开始使用你的CM7s</p>
-        </div>
-    </div>
-</a>
-
-## 硬件信息
+## CM7s 硬件信息
 
 ### 硬件接口
 
@@ -189,6 +174,123 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
   <span>ArmSoM-CM7s_Pinout</span>
 </a>
 <br/>
+
+## CM7s-IO 简介
+CM7s-IO是 ArmSoM CM7s的 IO 板，尺寸为 100x79x41 毫米，适用于需要快速进行 ArmSoM CM7s 平台功能评估、外设驱动调试和系统原型的开发阶段，也可作为工业网关、边缘 AI 推理终端、多媒体交互设备等产品的硬件底板参考设计，帮助用户从原型验证平滑过渡到批量部署。
+
+## CM7s-IO 硬件信息
+
+### 硬件规格
+
+CM7s-IO板是专为CM7s计算模块设计的扩展板，旨在帮助完成系统和嵌入式板开发。
+
+- 1x HDMI输出, 1x Typec(DP)输出
+- 4x USB 3.0 Type-A
+- 支持千兆以太网 RJ45
+- 通过USB Type-C进行固件闪存和设备模式
+- GPIO：40针扩展头
+- 电源连接器：DC Barrel插孔，用于12V电源输入
+- 扩展：M.2（M键，支持PCIe）、microSD
+- MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
+- MIPI CSI0：1x 4通道MIPI CSI，每条通道最高2.5Gbps
+- MIPI CSI1：1x 2通道MIPI CSI，每条通道最高2.5Gbps
+- 其他：HPOUT,FAN,VRTC
+- 尺寸：100 x 79 x 41 毫米 (3.94 x 3.11 x 1.6 英寸)
+- 重量:  65.2g
+
+### 硬件接口
+
+<!-- ![ArmSoM-CM7s-IO](/img/cm/cm5-io-layout.png) -->
+
+:::tip
+CM7s-IO Board 使用12V DC供电。
+:::
+### 引脚定义
+
+<details>
+    <summary>
+       40-PIN 座子
+    </summary>
+<div className='gpio_style'>
+
+| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
+ :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
+| |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |      |  
+|63| GPIO1_D7 / PWM15_IR_M3 / UART1_CTSN_M1 / I2C8_SDA_M2   | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |      |
+|62| GPIO1_D6 / PWM14_M2 / UART1_RTSN_M1 / I2C8_SCL_M2   |  <div className='green'>5</div>  | <div className='black'>6</div>  |GND | -           |
+|39| GPIO1_A7 / PWM3_IR_M3 / SPI2_CS0_M0 / PDM1_SDI0_M1 |  <div className='green'>7</div>  | <div className='green'>8</div>  |  <div className='orange-txt'> UART2_TX_M0</div> / GPIO0_B5 / I2S1_MCLK_M1 / I2C1_SCL_M0  |13|
+|  - |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  <div className='orange-txt'>UART2_RX_M0</div> / GPIO0_B6 / I2S1_SCLK_M1 / I2C1_SDA_M0  |     14      |
+| 130 |  GPIO4_A2 / I2S1_LRCK_M0  / SPI0_CLK_M1   | <div className='green'>11</div>  | <div className='green'>12</div> | GPIO3_B2 / UART2_RX_M2 / I2S2_SDI_M1 / PWM3_IR_M1   |     106    |
+| 13 | GPIO4_A3 / UART0_TX_M2 | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+| 18 | GPIO0_C2 | <div className='green'>15</div>  | <div className='green'>16</div> | GPIO1_A0 / UART6_RX_M1 / SPI4_MISO_M2 / I2C2_SDA_M4 | 32 |
+|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |   GPIO1_A1 / UART6_TX_M1 / SPI4_MOSI_M2 / I2C2_SCL_M4  | 33 |
+| 42 |  GPIO1_B2 / UART4_RX_M2 / SPI0_MOSI_M2 / PDM1_SDI3_M1 | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |  - |
+| 41 |  GPIO1_B1 / SPI0_MISO_M2 / PDM1_SDI2_M1  | <div className='green'>21</div>  | <div className='green'>22</div> | GPIO1_B0 / SPI2_CS1_M0 / PDM1_SDI1_M1 |  40 |
+| 43 |  GPIO1_B3 / UART4_TX_M2 / SPI0_CLK_M2 / PDM1_CLK1_M1  | <div className='green'>23</div>  | <div className='green'>24</div> | GPIO1_B4 / UART7_RX_M2 / SPI0_CS0_M2 / PDM1_CLK0_M1 | 44 |
+|- |  GND | <div className='black'>25</div>  | <div className='green'>26</div> | GPIO1_B5 / UART7_TX_M2 / SPI0_CS1_M2 | 45 |
+|  57 |  GPIO1_D1 / SPI1_MOSI_M2 / UART6_RX_M2 / I2C7_SDA_M0 / PDM0_SDI1_M0 / I2S0_SDO2 / I2S0_SDI3 |  <div className='green'>27</div>  | <div className='green'>28</div> | GPIO1_D0 / SPI1_MISO_M2 / UART6_TX_M2 / I2C7_SCL_M0 / I2S0_SDO1 | 56 |
+| 58 | GPIO1_D2 / SPI1_CLK_M2 / UART4_TX_M0 / PWM0_M1 / I2C1_SCL_M4 / PDM0_SDI2_M0 / I2S0_SDO3 / I2S0_SDI2  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |      -     |
+| 59 |   GPIO1_D3 / SPI1_CS0_M2 / UART4_RX_M0 / PWM1_M1 / I2C1_SDA_M4 / PDM0_SDI3_M0 / I2S0_SDI1 | <div className='green'>31</div>  | <div className='green'>32</div> | GPIO4_B2 / CAN1_RX_M1 / PWM14_M1 / I2S1_SDO1_M0 / UART8_RTSN_M0 / SPI0_CS0_M1 / I2C7_SCL_M3 | 138  |
+| 139  | GPIO4_B3 / CAN1_TX_M1 / PWM15_IR_M1 / I2S1_SDO2_M0 / UART8_CTSN_M0 / I2C7_SDA_M3 | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |  -    |
+| 52  | GPIO1_C4 / SPI4_CS1_M0 / PWM11_IR_M2 / I2C2_SDA_M3 / PDM0_CLK1_M0 | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO1_D5 / SPI1_CS1_M2 / PDM0_SDI0_M0 |  61 |
+| 54 | GPIO1_C6 / PWM15_IR_M2 / I2C4_SDA_M4 / PDM0_CLK0_M0 | <div className='green'>37</div> | <div className='green'>38</div> | GPIO0_C4 / I2C4_SDA_M2 / PDM0_CLK1_M1 / UART0_RX_M0 / PWM2_M0  |  20  |
+| -|  GND | <div className='black'>39</div>  | <div className='green'>40</div> | GPIO0_C5 / I2S1_SDI0_M1 / I2C4_SCL_M2 / PWM4_M0 / UART0_TX_M0  |  21 |
+
+</div>
+</details>
+
+<details>
+    <summary>
+        FAN
+    </summary>
+0.8mm 连接器(CN4)
+
+|Pin |Assignment |   Description |
+ :--------: | :---------: | :--------: | 
+|1    | VCC_5V0 | 5V Power ouput |
+|2    | GND | 地 | 
+|3    | PWM | PWM控制 |
+</details>
+
+<details>
+    <summary>
+        HPOUT
+    </summary>
+0.8mm 连接器(CN3)
+
+|Pin        | Assignment  | Description|
+|:--------: | :---------: | :--------:  | 
+|1          | AOR         | 右声道      |
+|2          | AOL         | 左声道      |
+|3          | GND         | 地          |
+</details>
+
+<details>
+    <summary>
+        VRTC
+    </summary>
+
+0.8mm 连接器(J27)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | 正极  |
+|2          | -         | 负极  |
+</details>
+
+## 使用手册
+
+<a href="./armsom-cm7s#使用手册" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>CM7s使用手册</h2>
+            <p>如何开始使用你的CM7s</p>
+        </div>
+    </div>
+</a>
 
 ## 开发资料
 
@@ -385,13 +487,13 @@ ArmSoM-CM7s 将至少生产到 2034 年 8 月。
 
 ## 样品购买
 
-<!-- ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+ArmSoM 独立站: [https://www.armsom.org/product-page/cm7s](https://www.armsom.org/product-page/cm7s)
 
 ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
 
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=1074292029401](https://item.taobao.com/item.htm?id=1074292029401)
 
-OEM&ODM,  请联系: sales@armsom.org -->
+OEM&ODM,  请联系: sales@armsom.org
 
 ## 专家视角
 

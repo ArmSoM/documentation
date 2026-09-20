@@ -9,9 +9,9 @@ image: /img/cm/armsom-cm7s.jpg
 
 # ArmSoM-CM7s Product Introduction
 
-Let's get to know the ArmSoM-CM7s in 5 minutes
+Let's get to know the ArmSoM-CM7s and ArmSoM-CM7s-IO in 5 minutes
 
-## Introduction
+## CM7s Introduction
 
 **ArmSoM-CM7s Core Board: compact in size, powerful in performance, built specifically for deep embedded scenarios.**
 The board comes with the Rockchip RK3588S 8-core 64-bit flagship processor (4×Cortex-A76 @ 2.4GHz + 4×Cortex-A55 @ 1.8GHz), built on an advanced 8nm process, offering great computing power and excellent energy efficiency. It features an ARM Mali-G610 high-performance GPU, fully compatible with OpenGL ES 3.2, OpenCL 2.2, and Vulkan 1.2 graphics APIs. It also has a powerful 6 TOPS NPU, supporting INT4/INT8/INT16 mixed-precision computing, easily handling edge AI inference.
@@ -43,21 +43,7 @@ armsom-cm7s v1.1 CN2 pins 2 and 4 aren't working, will be fixed in the next v1.2
 * **Output**：DC 3.3V MAX 600mA 和 DC 1.8V MAX 600mA
 * **PCB size**：55 x 40 x 1.6 mm (L x W x H)
 
-## Getting started
-
-<a href="./armsom-cm7s#user-manual" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📝</i>
-        </div>
-        <div class="content">
-            <h2>CM7s User Manual</h2>
-            <p>How to start using your CM7s</p>
-        </div>
-    </div>
-</a>
-
-## Hardware Info
+## CM7s Hardware Info
 
 ### Hardware interface
 
@@ -187,6 +173,123 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
   <span>ArmSoM-CM7s_Pinout</span>
 </a>
 <br/>
+
+## CM7s-IO Introduction
+The CM7s-IO is the IO board for the ArmSoM CM7s, measuring 100x79x41 mm. It's great for quickly evaluating the features of the ArmSoM CM7s platform, debugging peripheral drivers, and developing system prototypes. It can also serve as a reference hardware design for products like industrial gateways, edge AI inference terminals, and multimedia interactive devices, helping users smoothly transition from prototyping to mass deployment.
+
+## CM7s-IO Hardware Info
+
+### Hardware Specs
+
+The CM7s-IO board is an expansion board designed specifically for the CM7s computing module, aimed at helping with system and embedded board development.
+
+- 1x HDMI output, 1x Type-C (DP) output
+- 4x USB 3.0 Type-A
+- Supports Gigabit Ethernet RJ45
+- Firmware flashing and device mode via USB Type-C
+- GPIO: 40-pin header
+- Power connector: DC barrel jack for 12V power input
+- Expansion: M.2 (M key, supports PCIe), microSD
+- MIPI DSI: 1x 4-lane MIPI DSI, supports up to 4K@60fps (x4)
+- MIPI CSI0: 1x 4-lane MIPI CSI, up to 2.5Gbps per lane
+- MIPI CSI1: 1x 2-lane MIPI CSI, up to 2.5Gbps per lane
+- Others: HPOUT, FAN, VRTC
+- Dimensions: 100 x 79 x 41 mm (3.94 x 3.11 x 1.6 inches)
+- Weight: 65.2g
+
+### Hardware interface
+
+<!-- ![ArmSoM-CM7s-IO](/img/cm/cm5-io-layout.png) -->
+
+:::tip
+The CM7s-IO Board uses 12V DC power.
+:::
+### Pin Definition
+
+<details>
+    <summary>
+       40-PIN Socket
+    </summary>
+<div className='gpio_style'>
+
+| GPIO number |  Function |   Pin    |  Pin     |  Function  | GPIO number |
+ :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
+| |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |      |  
+|63| GPIO1_D7 / PWM15_IR_M3 / UART1_CTSN_M1 / I2C8_SDA_M2   | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |      |
+|62| GPIO1_D6 / PWM14_M2 / UART1_RTSN_M1 / I2C8_SCL_M2   |  <div className='green'>5</div>  | <div className='black'>6</div>  |GND | -           |
+|39| GPIO1_A7 / PWM3_IR_M3 / SPI2_CS0_M0 / PDM1_SDI0_M1 |  <div className='green'>7</div>  | <div className='green'>8</div>  |  <div className='orange-txt'> UART2_TX_M0</div> / GPIO0_B5 / I2S1_MCLK_M1 / I2C1_SCL_M0  |13|
+|  - |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  <div className='orange-txt'>UART2_RX_M0</div> / GPIO0_B6 / I2S1_SCLK_M1 / I2C1_SDA_M0  |     14      |
+| 130 |  GPIO4_A2 / I2S1_LRCK_M0  / SPI0_CLK_M1   | <div className='green'>11</div>  | <div className='green'>12</div> | GPIO3_B2 / UART2_RX_M2 / I2S2_SDI_M1 / PWM3_IR_M1   |     106    |
+| 13 | GPIO4_A3 / UART0_TX_M2 | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+| 18 | GPIO0_C2 | <div className='green'>15</div>  | <div className='green'>16</div> | GPIO1_A0 / UART6_RX_M1 / SPI4_MISO_M2 / I2C2_SDA_M4 | 32 |
+|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |   GPIO1_A1 / UART6_TX_M1 / SPI4_MOSI_M2 / I2C2_SCL_M4  | 33 |
+| 42 |  GPIO1_B2 / UART4_RX_M2 / SPI0_MOSI_M2 / PDM1_SDI3_M1 | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |  - |
+| 41 |  GPIO1_B1 / SPI0_MISO_M2 / PDM1_SDI2_M1  | <div className='green'>21</div>  | <div className='green'>22</div> | GPIO1_B0 / SPI2_CS1_M0 / PDM1_SDI1_M1 |  40 |
+| 43 |  GPIO1_B3 / UART4_TX_M2 / SPI0_CLK_M2 / PDM1_CLK1_M1  | <div className='green'>23</div>  | <div className='green'>24</div> | GPIO1_B4 / UART7_RX_M2 / SPI0_CS0_M2 / PDM1_CLK0_M1 | 44 |
+|- |  GND | <div className='black'>25</div>  | <div className='green'>26</div> | GPIO1_B5 / UART7_TX_M2 / SPI0_CS1_M2 | 45 |
+|  57 |  GPIO1_D1 / SPI1_MOSI_M2 / UART6_RX_M2 / I2C7_SDA_M0 / PDM0_SDI1_M0 / I2S0_SDO2 / I2S0_SDI3 |  <div className='green'>27</div>  | <div className='green'>28</div> | GPIO1_D0 / SPI1_MISO_M2 / UART6_TX_M2 / I2C7_SCL_M0 / I2S0_SDO1 | 56 |
+| 58 | GPIO1_D2 / SPI1_CLK_M2 / UART4_TX_M0 / PWM0_M1 / I2C1_SCL_M4 / PDM0_SDI2_M0 / I2S0_SDO3 / I2S0_SDI2  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |      -     |
+| 59 |   GPIO1_D3 / SPI1_CS0_M2 / UART4_RX_M0 / PWM1_M1 / I2C1_SDA_M4 / PDM0_SDI3_M0 / I2S0_SDI1 | <div className='green'>31</div>  | <div className='green'>32</div> | GPIO4_B2 / CAN1_RX_M1 / PWM14_M1 / I2S1_SDO1_M0 / UART8_RTSN_M0 / SPI0_CS0_M1 / I2C7_SCL_M3 | 138  |
+| 139  | GPIO4_B3 / CAN1_TX_M1 / PWM15_IR_M1 / I2S1_SDO2_M0 / UART8_CTSN_M0 / I2C7_SDA_M3 | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |  -    |
+| 52  | GPIO1_C4 / SPI4_CS1_M0 / PWM11_IR_M2 / I2C2_SDA_M3 / PDM0_CLK1_M0 | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO1_D5 / SPI1_CS1_M2 / PDM0_SDI0_M0 |  61 |
+| 54 | GPIO1_C6 / PWM15_IR_M2 / I2C4_SDA_M4 / PDM0_CLK0_M0 | <div className='green'>37</div> | <div className='green'>38</div> | GPIO0_C4 / I2C4_SDA_M2 / PDM0_CLK1_M1 / UART0_RX_M0 / PWM2_M0  |  20  |
+| -|  GND | <div className='black'>39</div>  | <div className='green'>40</div> | GPIO0_C5 / I2S1_SDI0_M1 / I2C4_SCL_M2 / PWM4_M0 / UART0_TX_M0  |  21 |
+
+</div>
+</details>
+
+<details>
+    <summary>
+        FAN
+    </summary>
+0.8mm connector (CN4)
+
+|Pin |Assignment |   Description |
+ :--------: | :---------: | :--------: | 
+|1    | VCC_5V0 | 5V Power ouput |
+|2    | GND | GND | 
+|3    | PWM | PWM Control |
+</details>
+
+<details>
+    <summary>
+        HPOUT
+    </summary>
+0.8mm connector (CN3)
+
+|Pin        | Assignment  | Description|
+|:--------: | :---------: | :--------:  | 
+|1          | AOR         | Right channel      |
+|2          | AOL         | Left channel      |
+|3          | GND         | GND      |
+</details>
+
+<details>
+    <summary>
+        VRTC
+    </summary>
+
+0.8mm connector(J27)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: | 
+|1          | +         | Positive electrode  |
+|2          | -         | negative electrode  |
+</details>
+
+## Getting started
+
+<a href="./armsom-cm7s#user-manual" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>CM7s User Manual</h2>
+            <p>How to start using your CM7s</p>
+        </div>
+    </div>
+</a>
 
 ## Development Materials
 
@@ -378,13 +481,13 @@ The official accessories we designed for the ArmSoM-CM7s-IO are meant to help yo
 
 ## Purchase Samples
 
-<!-- ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
+ArmSoM Official Website: [https://www.armsom.org/product-page/cm7s](https://www.armsom.org/product-page/cm7s)
 
 ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
 
-ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
+ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=1074292029401](https://item.taobao.com/item.htm?id=1074292029401)
 
-For OEM & ODM, please contact: sales@armsom.org -->
+For OEM & ODM, please contact: sales@armsom.org
 
 ## Expert Perspective
 
