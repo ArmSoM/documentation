@@ -30,7 +30,7 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
   - **Hardware Decoding**: H.265/VP9/AVS2 up to 4K@60fps, H.264 up to 4K@30fps
   - **Hardware Encoding**: H.264/H.265 up to 4K@30fps
 - **RAM**: 2GB/4GB/6GB/8GB/12GB/16GB LPDDR5 (supports up to 16GB)
-- **Flash**: 32GB/64GB/128GB eMMC
+- **Flash**: 32GB/64GB/128GB eMMC, reserve SPI flash, not mounted by default
 - **WIFI/BT**: Onboard Wi-Fi 6 + BT 5.4
 - **Operating Voltage**: 5V (±5% voltage tolerance)
 - **Operating Temperature**: -25℃ ~ 115℃

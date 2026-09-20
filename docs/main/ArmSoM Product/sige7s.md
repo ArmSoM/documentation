@@ -274,10 +274,6 @@ Sige 7s is applied for various applications,such as, ARM PCs, edge computing, cl
 
 ## Resources
 
-### arm-systemready
-
-github : [SystemReady](https://github.com/ArmSoM/SystemReady) 
-
 ### Source Code
 
 <div class="cards">
