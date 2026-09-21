@@ -678,10 +678,16 @@ card 2: rockchiphdmi [rockchip-hdmi], device 0: rockchip-hdmi i2s-hifi-0 [rockch
   Subdevice #0: subdevice #0
 ```
 
+播放音频前，需要先将相关音频控件开关打开
+```bash
+root@armsom-cm5:/# amixer -c 0 cset numid=72 on
+root@armsom-cm5:/# amixer -c 0 cset numid=73 on
+```
+
 播放音乐
 
 ```bash
-root@armsom-cm5:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.wav
+root@armsom-cm5:/# aplay -D hw:0,0 /usr/share/sounds/alsa/Front_Right.wav
 ```
 
 ### FAN

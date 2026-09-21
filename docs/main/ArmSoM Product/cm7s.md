@@ -483,7 +483,7 @@ The official accessories we designed for the ArmSoM-CM7s-IO are meant to help yo
 
 ArmSoM Official Website: [https://www.armsom.org/product-page/cm7s](https://www.armsom.org/product-page/cm7s)
 
-ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256807679122184.html](https://aliexpress.com/item/3256807679122184.html) 
+ArmSoM Official AliExpress Store: [https://aliexpress.ru/item/1005013244630755.html?gatewayAdapt=glo2rus&sku_id=12000060657514869](https://aliexpress.ru/item/1005013244630755.html?gatewayAdapt=glo2rus&sku_id=12000060657514869) 
 
 ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=1074292029401](https://item.taobao.com/item.htm?id=1074292029401)
 

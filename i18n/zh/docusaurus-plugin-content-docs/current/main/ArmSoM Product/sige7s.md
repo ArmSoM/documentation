@@ -19,7 +19,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 
 ### 关键参数
 
-- **SOC**：瑞芯微 RK3588S
+- **SOC**：瑞芯微 RK3588s
 - **CPU**：RK3588S 四核 Cortex-A76 @ 2.4GHz + 四核 Cortex-A55 @ 1.8GHz，8nm 制程
 - **GPU**：ARM Mali-G610 MP4
 - **NPU**：算力高达6TOPs（INT8），支持INT4/INT8/INT16混合运算

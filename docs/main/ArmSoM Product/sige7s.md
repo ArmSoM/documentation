@@ -14,16 +14,16 @@ Let's get to know Sige7s in 5 minutes.
 
 ## Overview
 
-The ArmSoM-Sige7s is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
+The ArmSoM-Sige7s is powered by Rockchip's latest flagship RK3588s,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
 
 ![ArmSoM-sige7s](/img/sige/sige7s-bananer.png)
 
-Sige 7s is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
+Sige7s is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
  
 
 ### Key Parameter
 
-- **SoC**: Rockchip RK3588S
+- **SoC**: Rockchip RK3588s
 - **CPU**: 4x Cortex-A76 @ 2.4GHz + 4x Cortex-A55 @ 1.8GHz, 8nm
 - **GPU**: ARM Mali-G610 MP4 
 - **NPU**: Up to 6 TOPS (INT8), supports INT4/INT8/INT16 mixed computing
