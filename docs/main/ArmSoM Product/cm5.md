@@ -23,7 +23,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 :::
 
 :::tip
-On the ArmSoM-CM5 v1.2, Pin 21 suffered from a functional issue. This problem has been resolved in the v1.3 version. All boards currently on sale—and those released subsequently—are v1.3 or later, so you can purchase and use them with confidence.
+There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but it has been fixed in v1.3. The boards currently on sale and those to be released are all v1.3 or higher, so you can buy and use them with confidence. We will also launch the CM5 v2.0 (LPDDR4 version) later to accommodate different memory price points.
 :::
 
 ### Key Specifications
@@ -35,7 +35,7 @@ On the ArmSoM-CM5 v1.2, Pin 21 suffered from a functional issue. This problem ha
 - **VPU/Video Codec:**
   - **Decoding:** Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
   - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
-- **RAM:** 8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
+- **RAM:** 2/4/8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage:** Wide input voltage range from 4.5V to 5.5V (voltage tolerance ±5%).
@@ -138,7 +138,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB (up to 16GB) 32-bit LPDDR5, default LPDDR5 8GB</li></th>
+            <th><li>2GB/4GB/8GB/16GB (up to 16GB) 32-bit LPDDR5, default LPDDR5 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>

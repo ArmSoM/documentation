@@ -64,6 +64,7 @@ armsom-sdk的代码被划分为了若干git仓库分别进行版本管理， 可
 
 运行以下命令，将在当前用户的家目录下创建一个名为armsom-sdk的目录，用来放入SDK源码。
 ```
+export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo' 
 mkdir ~/armsom-sdk
 cd armsom-sdk
 repo init -u https://github.com/ArmSoM/manifests.git -b linux -m armsom_linux_generic.xml
@@ -92,8 +93,11 @@ git pull
 #进入SDK顶层文件夹
 cd ~/armsom-sdk
 
+#下载git-lfs
+sudo apt install git-lfs
+
 # 同步远端仓库
-.repo/repo/repo sync -c
+.repo/repo/repo sync -c  -j1 --fail-fast
 ```
 
 ## 4.2 使用Git更新单独的源码仓库

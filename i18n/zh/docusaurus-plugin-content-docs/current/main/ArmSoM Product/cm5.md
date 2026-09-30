@@ -25,7 +25,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 :::
 
 :::tip
-在 ArmSoM-CM5 v1.2 版本中，第 21 引脚（Pin 21）存在无法正常工作的问题。该问题已在 v1.3 版本中完成修复。目前在售及后续发售的板卡均为 v1.3 或更高版本，请放心购买与使用。
+ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中修复。目前在售及后续发售的板卡均为 v1.3 或更高版本，请放心购买使用。后续我们将推出 CM5 v2.0（LPDDR4 版本），以适配不同的存储价格情况。
 :::
 
 ### 关键参数
@@ -37,7 +37,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 - **VPU/编解码**：
   - **硬解码**：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
   - **硬编码**：支持H.264和H.265，JPEG最高4K@60fps。
-- **RAM**：8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
+- **RAM**：2/4/8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
 - **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **工作电压**：具有宽范围的输入电压，从 5V到23V（电压误差±5%）
@@ -139,7 +139,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB（最高可配 16GB ）32bit LPDDR5，默认LPDDR5 8GB</li></th>
+            <th><li>2GB/4GB/8GB/16GB（最高可配 16GB ）32bit LPDDR5，默认LPDDR5 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
