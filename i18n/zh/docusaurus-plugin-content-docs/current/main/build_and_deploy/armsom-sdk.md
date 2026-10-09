@@ -302,8 +302,8 @@ linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb    linux-libc-dev_6.1.11
 1.linux-headers-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  
 2.linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  
 
-将这两个升级包放到开发板文件系统任意目录，然后执行如下命令安装：
+将这两个升级包通过ADB或SSH方式传送到开发板文件系统任意目录，然后执行如下命令安装：
 ```
-armsom@armsom:/$ sudo dpkg -i linux-*.deb   #例如将上面两个安装包放到/目录，直接在/目录下执行
+armsom@armsom:/$ sudo dpkg -i linux-*.deb   
 ```
 安装后重启即可

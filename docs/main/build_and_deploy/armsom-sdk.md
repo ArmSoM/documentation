@@ -283,16 +283,21 @@ lhd@armsom:~/customized_project/armsom-sdk$ ls *.deb
 linux-headers-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  linux-image-6.1.118-rk3588-dbg_6.1.118-rk3588-203_arm64.deb
 linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb    linux-libc-dev_6.1.118-rk3588-203_arm64.deb
 ```
-- linux-headers-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb
+- linux-headers-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb                         
 This package contains the kernel source code. After installation, the kernel source code will be copied to /usr/src/linux-headers-6.1.118-rk3588.
-- linux-image-6.1.118-rk3588-dbg_6.1.118-rk3588-203_arm64.deb
+- linux-image-6.1.118-rk3588-dbg_6.1.118-rk3588-203_arm64.deb                               
 This package contains the kernel and drivers needed for debugging, mainly used for debugging when the system encounters errors or crashes (optional installation).
-- linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb
+- linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb                                   
 This package includes the kernel, drivers, device tree-related files, and update scripts.
-- linux-libc-dev_6.1.118-rk3588-203_arm64.deb
+- linux-libc-dev_6.1.118-rk3588-203_arm64.deb                                       
 This package contains some header files for libc (optional installation).
 
-There are four packages in total for the upgrade, but only two need to be installed:
+There are four packages in total for the upgrade, but only two need to be installed:                
 1.linux-headers-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  
 2.linux-image-6.1.118-rk3588_6.1.118-rk3588-203_arm64.deb  
+
+Transfer these two upgrade packages to any directory in the development board's file system via ADB or SSH, and then run the following command to install them:
+```
+armsom@armsom:/$ sudo dpkg -i linux-*.deb   
+```
 After installation, reboot.
