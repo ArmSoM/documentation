@@ -40,7 +40,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 - **RAM**：2/4/8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
 - **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
-- **工作电压**：具有宽范围的输入电压，从 5V到23V（电压误差±5%）
+- **工作电压**：4.5V–5.5V
 - **工作温度**：0℃ ~ 80℃
 - **重量**：12g
 - **pcb**: 10层2阶

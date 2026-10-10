@@ -62,7 +62,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 | **CPU Architecture**         | **Quad-core ARM Cortex-A76 & Quad-coreCortex-A55** | Quad-core ARM Cortex-A76   |
 | **GPU**                      | **ARM Mali-G610 MP4**                   | VideoCore VII                  |
 | **NPU**                      | **6 TOPS computing power**              | No built-in NPU                |
-| **Memory**                   | **Supports up to 32GB LPDDR5**          | 2GB、4GB、8GB、16GB LPDDR4      |
+| **Memory**                   | **Supports up to 32GB LPDDR4X**          | 2GB、4GB、8GB、16GB LPDDR4      |
 | **Storage**                  | eMMC storage (optional capacity)        | eMMC storage (optional capacity) |
 | **Display Output**           | 1x HDMI 2.1, 1x DP 1.4                  | 2x HDMI 2.0                    |
 | **Video Resolution**         | **Supports 8K@60fps**                   | Supports 4K@60fps              |

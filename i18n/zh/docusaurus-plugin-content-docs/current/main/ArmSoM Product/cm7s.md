@@ -61,7 +61,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 | **CPU架构**            | **四核 ARM Cortex-A76 & 四核Cortex-A55** | 四核 ARM Cortex-A76            |
 | **GPU**                | **ARM Mali-G610 MP4**                   | VideoCore VII                |
 | **NPU**                | **6TOPS 算力，支持 INT4/INT8/INT16 混合运算** | 无内置NPU                |
-| **内存**               | **最高支持 32GB LPDDR5**                 | 2GB、4GB、8GB、16GB LPDDR4       |
+| **内存**               | **最高支持 32GB LPDDR4X**                 | 2GB、4GB、8GB、16GB LPDDR4       |
 | **存储**               | eMMC 存储（可选容量）                     | eMMC 存储（可选容量）        |
 | **显示输出**           | 1x HDMI 2.1, 1x DP 1.4                   | 2x HDMI 2.0                    |
 | **视频分辨率**         | **支持8K@60fps**                         | 支持4K@60fps                   |

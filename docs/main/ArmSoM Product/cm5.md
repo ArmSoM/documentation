@@ -38,7 +38,7 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
 - **RAM:** 2/4/8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
-- **Operating Voltage:** Wide input voltage range from 4.5V to 5.5V (voltage tolerance ±5%).
+- **Operating Voltage:** 4.5V–5.5V
 - **Operating Temperature:** 0℃ ~ 80℃
 - **Weight:** 12g
 - **Dimensions:**
