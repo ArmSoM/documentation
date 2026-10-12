@@ -800,14 +800,14 @@ root@armsom:/# dmesg | grep ov13850
 ```
 
 使用v4l2-ctl进行抓图
-```
+```bash
 // MIPI-CSI1
 root@armsom:/# systemctl restart rkaiq_3A.service
 root@armsom:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
 使用gst-launch-1.0可直接录像
-```
+```bash
 // MIPI-CSI1
 root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
@@ -828,12 +828,12 @@ root@armsom-cm5:/# dmesg | grep imx219
 ```
 
 使用v4l2-ctl进行抓图
-```
-root@armsom-cm5:/#v4l2-ctl -d /dev/video11 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=1920,height=1080,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+```bash
+root@armsom-cm5:/# v4l2-ctl -d /dev/video11 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=1920,height=1080,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
 使用gst-launch-1.0可直接录像
-```
+```bash
 root@armsom-cm5:/# sudo apt-get update
 root@armsom-cm5:/# sudo apt-get install gstreamer1.0*
 root@armsom-cm5:/# gst-launch-1.0 v4l2src ! 'video/x-raw, format=NV12, width=1920, height=1080' ! autovideosink

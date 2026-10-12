@@ -133,7 +133,6 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
             <th>网络</th>
             <th>
               <li>1x GMAC，提供 RGMII / RMII 接口引出</li>
-               <li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>
@@ -173,6 +172,72 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 <a href="https://pan.baidu.com/s/1PowkJyvHJOHGgC-BnVT98g?pwd=arms" class="btn">
   <span>ArmSoM-CM7s_Pinout</span>
 </a>
+<br/>
+
+### 硬件资料
+
+获取 CM7s 原理图、DXF等硬件资料
+
+<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="btn">
+  <span>百度网盘链接</span>
+</a>
+<br/>
+
+<div class="cards">
+    <a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+        <div class="card">
+            <div class="icon">
+                <i>📄</i>
+            </div>
+            <div class="content">
+                <h2>CM7s SCH</h2>
+            </div>
+        </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📃</i>
+        </div>
+        <div class="content">
+            <h2>CM7s 2D</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📜</i>
+        </div>
+        <div class="content">
+            <h2>CM7s SMD</h2>
+        </div>
+    </div>
+</a>
+
+<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📑</i>
+        </div>
+        <div class="content">
+            <h2>Datasheet</h2>
+        </div>
+    </div>
+</a>
+<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>💡</i>
+        </div>
+        <div class="content">
+            <h2>Case 3D</h2>
+        </div>
+    </div>
+</a>
+</div>
 <br/>
 
 ## CM7s-IO 简介
@@ -278,7 +343,7 @@ CM7s-IO Board 使用12V DC供电。
 |2          | -         | 负极  |
 </details>
 
-## 使用手册
+## Getting started
 
 <a href="./armsom-cm7s#使用手册" class="card-link">
     <div class="card">
@@ -286,8 +351,8 @@ CM7s-IO Board 使用12V DC供电。
             <i>📝</i>
         </div>
         <div class="content">
-            <h2>CM7s使用手册</h2>
-            <p>如何开始使用你的CM7s</p>
+            <h2>CM7s-IO 使用手册</h2>
+            <p>如何开始使用你的CM7s-IO套件</p>
         </div>
     </div>
 </a>
@@ -372,80 +437,577 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 |:--------: | :---------: | :--------:  | 
 |![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| |
 |![Android](/img/sige/android.png) | Android14 for **CM7s-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。||
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige5 :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.|   |
+|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.|   |
 
 ### 第三方镜像
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for CM7s:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  |   |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM7s :    <br/> 该项目旨在为Rockchip RK3588s设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。|     |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  |   |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for **CM7s-IO** :    <br/> 该项目旨在为Rockchip RK3588s设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。|     |
 
-### 硬件资料
+## 使用手册
+### 1. 入门准备
 
-获取 CM7s 原理图、DXF等硬件资料
+在开始使用 ArmSoM-CM7s-IO 产品之前，请准备好以下物品
 
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="btn">
-  <span>百度网盘链接</span>
-</a>
-<br/>
+#### 工具准备
+* 电源
+* 系统安装（二选一）
+  * 板载eMMC启动
+    * USB Type-c线烧录，12V 电源适配器给底板供电；从 CM7s-IO 的 Type-C 端口向 CM7s 写入镜像，您需要使用 USB Type-C 连接 CM7s-IO 和 PC，同时使用 12V 电源适配器连接 CM7s-IO 的 DC 口供电。
+  * MicroSD卡/TF卡启动
+    * MicroSD卡/TF卡，Class 10或以上至少8GB SDHC 和 读卡器
+    * 以下是经过ArmSoM团队测试验证的高速TF卡
+      * SanDisk 32GB TF（MicroSD）（开发者推荐）
+      * SanDisk 32GB TF（MicroSD） 行车记录仪&安防监控专用存储卡（长期运行推荐）
+      * 闪迪 TF 8G Class10 microSD 
+      * 闪迪 TF 128G Class10 microSD XC TF 128G 48MB/S：
 
+您可以将 CM7s 设置为带有桌面的交互式计算机，也可以将其设置为仅可通过网络访问的无头计算机。要将 CM7s 设置为Headless计算机，您在初次安装操作系统时配置主机名、用户帐户、网络连接和 SSH 。如果您想直接使用 CM7s，则需要以下附加配件：
+
+**可选配件**
+* 键盘 & 鼠标
+* HDMI显示器、 HDMI线
+* Ethernet 线（网线）
+* 摄像头模块
+  * 4lan 摄像头推荐使用 [camera-module1](./armsom-camera-module1) 模组（OV13850）。
+  * 2lan 摄像头使用树莓派 [camera-module-v2](https://www.raspberrypi.com/products/camera-module-v2/) 模组（IMX219）。
+* LCD显示屏
+  * 推荐使用 [Display 10 HD](./armsom-display-10-hd)。
+* 3.5mm带麦克风功能有线耳机。
+
+#### 电源
+
+* 支持 DC 12V适配器，2.5mm
+
+#### 登录系统所需账号
+| 用户名 | 密码
+| :----: | :----: |
+| root | root | 
+| armsom | armsom | 
+
+### 2. 烧录方式选择
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+    <a href="./getting-start/flash-img" class="card-link">
         <div class="card">
             <div class="icon">
-                <i>📄</i>
+                <i>🎇</i>
             </div>
             <div class="content">
-                <h2>CM7s SCH</h2>
+                <h2>系统镜像烧录</h2>
             </div>
         </div>
-</a>
-
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📃</i>
-        </div>
-        <div class="content">
-            <h2>CM7s 2D</h2>
-        </div>
-    </div>
-</a>
-
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📜</i>
-        </div>
-        <div class="content">
-            <h2>CM7s SMD</h2>
-        </div>
-    </div>
-</a>
-
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📑</i>
-        </div>
-        <div class="content">
-            <h2>Datasheet</h2>
-        </div>
-    </div>
-</a>
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>💡</i>
-        </div>
-        <div class="content">
-            <h2>Case 3D</h2>
-        </div>
-    </div>
-</a>
+    </a>
 </div>
-<br/>
+
+### 3. 接口使用
+
+如果您是首次使用 CM7s Kit，请先熟悉下各产品 [CM7s硬件接口](./armsom-cm7s#硬件接口) 和 [CM7s-IO硬件接口](./armsom-cm7s#硬件接口-1)，以便于您更好的理解后续的内容。
+
+### 3.1 调试串口
+
+使用USB转串口芯片（CH340）连接 TTL 串口线到 CM7s-IO 上 40pin ：
+
+| CM7s   | 连接  | 串口模块 |
+| -------- | ----- | ------ |
+| **GND(Pin6)** | ---> | GND |
+| **TX(Pin8)**  | ---> | RX |
+| **RX(Pin10)** | ---> | TX |
+
+:::tip
+串口通讯参数
+ - 波特率：1500000
+ - 数据位：8
+ - 停止位：1
+ - 校验位：无
+ - 流控：无
+:::
+
+### 3.2 以太网口
+
+1. 首先将网线的一端插入 ArmSoM-CM7s-IO 的以太网接口，网线的另一端接入路由器，并确保
+网络是畅通的
+2. 系统启动后会通过 DHCP 自动给以太网卡分配 IP 地址，不需要其他任何配置
+3. 在 ArmSoM-CM7s 的 Linux 系统中查看 IP 地址的命令如下所示，其中end1就是以太网卡设备名称
+
+```bash
+armsom@armsom:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 46:fc:71:98:e2:45 brd ff:ff:ff:ff:ff:ff
+3: end1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether d6:3c:08:0f:a4:05 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.156/24 brd 192.168.1.255 scope global dynamic noprefixroute end1
+       valid_lft 43188sec preferred_lft 43188sec
+    inet6 fd45:d3b4:e549::8a2/128 scope global dynamic noprefixroute
+       valid_lft 43186sec preferred_lft 43186sec
+    inet6 fd45:d3b4:e549:0:54c0:d3b4:6f75:62be/64 scope global dynamic noprefixroute
+       valid_lft 5386sec preferred_lft 2686sec
+    inet6 fe80::aeef:d7f3:1189:902b/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+```
+ArmSoM-CM7s 启动后查看 IP 地址有三种方法：
+
+- 接 HDMI 显示器，然后登录系统使用终端输入 ip a 命令查看 IP 地址
+- 接[调试串口](#31-调试串口)进入终端输入 ip a 命令来查看 IP 地址
+- 如果没有调试串口，也没有 HDMI 显示器，还可以通过路由器的管理界面来查看ArmSoM-CM7s 网口的 IP 地址。不过这种方法经常有人会无法正常看到 ArmSoM-CM7s 的 IP 地址。如果看不到，调试方法如下所示：
+    - 首先检查 Linux 系统是否已经正常启动，如果ArmSoM-CM7s的绿灯常亮，一般是正常启动了，如果只亮红灯，说明系统都没正常启动。
+    - 检查网线有没有插紧，或者换根网线试下。
+    - 换个路由器试下，路由器的问题有遇到过很多，比如路由器无法正常分配IP 地址，或者已正常分配 IP 地址但在路由器中看不到。
+    - 如果没有路由器可换就只能连接 HDMI 显示器或者使用调试串口来查看 IP地址。
+
+:::tip
+另外需要注意的是ArmSoM-CM7s DHCP 自动分配 IP 地址是不需要任何设置的。
+:::
+
+
+4. 使用工具 ping 判断是否连通网络。
+
+测试网络连通性的命令如下，ping 命令可以通过 Ctrl+C 快捷键来中断运行
+```bash
+armsom@armsom:~$ sudo ping -I end1 www.baidu.com
+PING www.wshifen.com (103.235.46.96) from 192.168.1.156 end1: 56(84) bytes of data.
+64 bytes from 103.235.46.96 (103.235.46.96): icmp_seq=1 ttl=44 time=311 ms
+64 bytes from 103.235.46.96 (103.235.46.96): icmp_seq=2 ttl=44 time=311 ms
+64 bytes from 103.235.46.96 (103.235.46.96): icmp_seq=3 ttl=44 time=312 ms
+64 bytes from 103.235.46.96 (103.235.46.96): icmp_seq=5 ttl=44 time=312 ms
+64 bytes from 103.235.46.96 (103.235.46.96): icmp_seq=6 ttl=44 time=311 ms
+^C
+--- www.wshifen.com ping statistics ---
+6 packets transmitted, 5 received, 16.6667% packet loss, time 5021ms
+rtt min/avg/max/mdev = 311.040/311.447/311.866/0.296 ms
+```
+:::tip
+只有普通用户需要使用sudo，root用户不需要
+:::
+
+### 3.3 HDMI
+
+CM7s-IO 最高支持hdmi 8Kp60
+
+1. 使用 HDMI 线连接 CM7s-IO 和 HDMI 显示器
+2. 启动 linux 系统后如果 HDMI 显示器有图像输出说明 HDMI 接口使用正常
+
+:::tip
+注意，很多笔记本电脑虽然带有 HDMI 接口，但是笔记本的 HDMI 接口一般只有输出功能，并没有 HDMI in 的功能，也就是说并不能将其他设备的 HDMI 输出显示到笔记本的屏幕上。
+当想把开发板的 HDMI 接到笔记本电脑 HDMI 接口时，请先确认清楚您的笔记本是支持 HDMI in 的功能。
+当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
+:::
+
+#### HDMI 转 VGA 显示测试
+1. 需要准备下面的配件
+- HDMI 转 VGA 转换器
+- 一根 VGA 线，支持 VGA 接口的显示器
+
+2. HDMI 转 VGA 显示测试如下所示
+
+![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+:::tip
+使用 HDMI 转 VGA 显示时，CM5 Kit 和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
+:::
+
+### 3.4 USB
+
+#### 连接 USB 鼠标或键盘测试
+1. 将 USB 接口的键盘插入CM7s的 USB 接口中
+2. 连接CM7s到 HDMI显示器
+3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
+
+#### 连接 USB 存储设备测试
+1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-CM7s 的 USB 接口中
+2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
+```bash
+armsom@armsom:~$ cat /proc/partitions | grep "sd*"
+major minor  #blocks  name
+   8        0   30720000 sda
+   8        1   30718976 sda1
+```
+3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
+
+```bash
+armsom@armsom:~$ mkdir -p /test
+armsom@armsom:~$ sudo mount /dev/sda1 /test/
+mount: /test: /dev/sda1 already mounted on /test.
+```
+
+4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
+
+```bash
+armsom@armsom:/$ df -h | grep "sd"
+/dev/sda1        30G   64K   30G   1% /test
+```
+
+### 3.5 M.2 Key M
+
+CM7s-IO 提供 M.2 Key M 连接器：
+
+- 产品的背面有一个带有M.2 Key M 连接器。 板上有一个标准的 M.2 2280 安装孔，可以部署 M.2 2280 NVMe SSD。  
+  **<font color='red'>注意：该 M.2 接口不支持 M.2 SATA SSD。</font>**
+
+接好 NVMe 设备后，尝试挂载到新建目录，挂载成功即可
+```
+root@armsom:/# mkdir temp
+root@armsom:/# mount /dev/nvme0n1 temp
+```
+
+### 3.6 Micro SD card slot
+
+CM7s-IO 板载标准的 microSD 卡槽,主要用作系统启动盘或扩展存储空间。
+
+1. 当我们使用SD卡用作系统启动盘时，只需在上电前将制作好的SD启动卡插入到 Micro SD card slot，然后再上电，
+CM7s 将优先从SD卡启动。
+
+2. 当我们使用SD卡用于拓展存储空间时，可以按如下方式操作，首先查看SD卡插入时日志：
+```bash
+armsom@armsom:~$ [  293.228591] mmc_host mmc1: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[  293.309039] dwmmc_rockchip fe2c0000.mmc: Successfully tuned phase to 155
+[  293.309114] mmc1: new ultra high speed SDR104 SDHC card at address 0001
+[  293.310505] mmcblk1: mmc1:0001 ASTC 7.44 GiB
+[  293.326321]  mmcblk1: p1 p2
+```
+根据输出信息可以看出，系统已经识别到插入的 SD 卡（mmcblk1，容量7.44 GiB，分区p1和p2），然后我们确认 SD 卡设备信息
+
+```bash
+armsom@armsom:~$ sudo fdisk -l /dev/mmcblk1
+Disk /dev/mmcblk1: 7.44 GiB, 7990149120 bytes, 15605760 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: BDFDC9CF-2FC3-46BB-AF10-C9DF254BB1E2
+
+Device           Start      End  Sectors  Size Type
+/dev/mmcblk1p1   32768  1081343  1048576  512M Linux extended boot
+/dev/mmcblk1p2 1081344 15605726 14524383  6.9G Linux filesystem
+```
+可以看到，文件系统分区为/dev/mmcblk1p2，接着我们按如下方式，挂载我们的 SD 卡
+
+```bash
+armsom@armsom:~$ sudo mkdir -p /mnt/sdcard
+armsom@armsom:~$ sudo mount /dev/mmcblk1p2 /mnt/sdcard
+[  491.938107] EXT4-fs (mmcblk1p2): recovery complete
+[  491.939897] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Quota mode: disabled.
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+armsom@armsom:~$ df -h /mnt/sdcard
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk1p2  6.8G  6.6G     0 100% /mnt/sdcard
+armsom@armsom:~$ cd /mnt/sdcard/
+armsom@armsom:/mnt/sdcard$ ls
+bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  etc  lib   media       opt  root  sbin  srv   sys       usr
+```
+
+### 3.7 音频
+
+#### 1. 查看系统中的声卡。
+
+```bash
+root@armsom:~# aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: rockchipdp0 [rockchip-dp0], device 0: rockchip-dp0 spdif-hifi-0 [rockchip-dp0 spdif-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: rockchiphdmi0 [rockchip-hdmi0], device 0: rockchip-hdmi0 i2s-hifi-0 [rockchip-hdmi0 i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: rockchipes8388 [rockchip,es8388], device 0: dailink-multicodecs ES8323 HiFi-0 [dailink-multicodecs ES8323 HiFi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+```
+列出的声卡信息中， `card 2: rockchipes8388` 为 CM7s-IO 板载的 es8388 音频编解码器，用于板载 MIC 麦克风（录制音频）和板载 HPOUT 3.5mm 耳机座子（耳机播放音频）。
+
+#### 2. 配置音频相关控件
+在测试录音和播放之前，我们先执行下面命令，配置音频
+- 配置板载麦克风
+```bash
+armsom@armsom:~$ amixer -c 2 cset numid=45 1    # Left PGA Mux = Line 2L    
+armsom@armsom:~$ amixer -c 2 cset numid=46 1    # Right PGA Mux = Line 2R   
+armsom@armsom:~$ amixer -c 2 cset numid=27 8    # 左通道增益 （范围 0~8，默认是0）
+armsom@armsom:~$ amixer -c 2 cset numid=28 8    # 右通道增益  （范围 0~8，默认是0）
+```
+- 配置耳机听筒
+```bash
+armsom@armsom:~$ amixer -c 2 cset numid=34 30,30    # OUT1 模拟音量（左右两个值，范围 0~33）
+armsom@armsom:~$ amixer -c 2 cset numid=55 on       # 打开 OUT1 输出通道 （默认关闭）
+```
+
+#### 3. 录制音频
+通过板载MIC麦克风录音，使用 arecord 命令录制音频。
+```bash
+armsom@armsom:~$ arecord -D hw:2,0 -f S16_LE -r 44100 -c 2 -d 5 /tmp/record.wav
+Recording WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+```
+#### 4. 播放音频
+接入3.5mm 耳机座子,连接3.5mm圆孔耳机，使用 aply 命令播放音频
+```bash
+armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
+Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+```
+
+### 3.8 40 PIN
+
+CM7s 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
+
+#### wiring-armbian 的方法
+
+下载 wiringOP 的代码到开发板 [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
+
+- 下载好 wiringOP 代码后，先编译安装，执行如下命令：
+```bash
+root@armsom:~# cd wiring-armbian/
+root@armsom:/wiring-armbian# chmod +x build
+root@armsom:/wiring-armbian# ./build 
+```
+
+- 编译完成后，更改 /etc/armbian-release 文件内容里版型名称，改为 'armsom-cm7s'后保存退出即可
+```bash
+root@armsom:~# vi /etc/armbian-release
+BOARD=armsom-cm7s
+```
+
+- 测试 gpio readall 命令的输出如下
+```bash
+ root@armsom:/wiring-armbian# gpio readall
+ +------+-----+----------+--------+---+  ArmSoM-CM7s +---+--------+----------+-----+------+
+ | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
+ +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+
+ |      |     |     3.3V |        |   |  1 || 2  |   |        | 5V       |     |      |
+ |   63 |   0 | I2C8_SDA | (null) | 0 |  3 || 4  |   |        | 5V       |     |      |
+ |   62 |   1 | I2C8_SCL | (null) | 0 |  5 || 6  |   |        | GND      |     |      |
+ |   39 |   2 | GPIO1_A7 |     IN | 1 |  7 || 8  | 1 | ALT10  | UART2_TX | 3   | 13   |
+ |      |     |      GND |        |   |  9 || 10 | 1 | ALT10  | UART2_RX | 4   | 14   |
+ |  130 |   5 | GPIO4_A2 |     IN | 0 | 11 || 12 | 1 | IN     | GPIO3_B2 | 6   | 106  |
+ |   13 |   7 | GPIO4_A3 |  ALT10 | 1 | 13 || 14 |   |        | GND      |     |      |
+ |   18 |   8 | GPIO0_C2 |     IN | 1 | 15 || 16 | 0 | IN     | UART6_RX | 9   | 32   |
+ |      |     |     3.3V |        |   | 17 || 18 | 0 | IN     | UART6_TX | 10  | 33   |
+ |   42 |  11 | SPI_MOSI |     IN | 0 | 19 || 20 |   |        | GND      |     |      |
+ |   41 |  12 | SPI_MISO |     IN | 0 | 21 || 22 | 1 | IN     | GPIO1_B0 | 13  | 40   |
+ |   43 |  14 | SPI_SCLK |     IN | 0 | 23 || 24 | 1 | IN     | SPI0_CS0 | 15  | 44   |
+ |      |     |      GND |        |   | 25 || 26 | 1 | IN     | SPI0_CS1 | 16  | 45   |
+ |   57 |  17 | I2C7_SDA | (null) | 0 | 27 || 28 | 0 | (null) | I2C7_SCL | 18  | 56   |
+ |   58 |  19 | UART4_TX | (null) | 0 | 29 || 30 |   |        | GND      |     |      |
+ |   59 |  20 | UART4_RX | (null) | 0 | 31 || 32 | 1 | IN     | PWM14_M1 | 21  | 138  |
+ |  139 |  22 |  CAN1_TX |     IN | 1 | 33 || 34 |   |        | GND      |     |      |
+ |   52 |  23 | GPIO1_C4 |  ALT11 | 1 | 35 || 36 | 0 | (null) | GPIO1_D5 | 24  | 61   |
+ |   54 |  25 | GPIO1_C6 |     IN | 1 | 37 || 38 | 1 | IN     | UART0_RX | 26  | 20   |
+ |      |     |      GND |        |   | 39 || 40 | 1 | IN     | UART0_TX | 27  | 21   |
+ +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+
+ | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
+ +------+-----+----------+--------+---+  ArmSoM-CM7s +---+--------+----------+-----+------+
+```
+
+- 设置 GPIO 口为输出模式，其中第三个参数需要输入引脚对应的 wPi 的序号
+
+```bash
+root@armsom:/wiring-armbian# gpio mode 5 out
+```
+
+- 读取对应引脚当前的电平状态
+```bash
+root@armsom:/wiring-armbian# gpio read 5
+0
+```
+
+- 设置 GPIO 口输出高电平，设置完后可以使用万用表测量引脚的电压的数值，如果为 3.3v，说明设置高电平成功
+
+```bash
+root@armsom:/wiring-armbian# gpio write 5 1
+root@armsom:/wiring-armbian# gpio read 5
+1
+```
+
+- 设置 GPIO 口输出低电平，设置完后可以使用万用表测量引脚的电压的数值，如果为 0v，说明设置低电平成功
+```bash
+root@armsom:/wiring-armbian# gpio write 5 0
+root@armsom:/wiring-armbian# gpio read 5
+0
+```
+
+- 其他引脚的设置方法类似，只需修改 wPi 的序号为引脚对应的序号即可
+
+### 3.9 RGB LED
+
+CM7s 有一个用户（绿灯）和一个电源指示灯（红灯）。
+
+- 用户灯
+  默认情况下为心跳灯，可由用户自行操控。
+
+- 电源指示灯
+  默认情况下，其常亮表示系统运行正常。
+
+用户灯可通过命令控制用户灯
+
+```bash
+armsom@armsom:~$ echo 0 > /sys/class/leds/led-green-usr/brightness （关闭）
+armsom@armsom:~$ echo 1 > /sys/class/leds/led-green-usr/brightness （常亮）
+armsom@armsom:~$ echo heartbeat > /sys/class/leds/led-green-usr/trigger （恢复为心跳灯）
+```
+
+### 3.10 RTC
+
+- CM7s 板内集成一颗RTC时钟芯片 **LK8563S**，同时 CM7s-IO 上板载了一个VRTC座子，用于接RTC电池。
+
+```bash
+root@armsom:~# dmesg | grep -w rtc
+[    2.024480] rtc-hym8563 6-0051: rtc information is invalid
+[    2.032951] rtc-hym8563 6-0051: registered as rtc0
+[    2.033959] rtc-hym8563 6-0051: setting system clock to 2021-01-01T12:00:00 UTC (1609502400)
+```
+
+- 找到rtc0，然后使用以下命令设置系统时间并同步到rtc0。
+
+```bash
+//读取RTC芯片当前时间
+root@armsom:~# hwclock -r -f /dev/rtc0
+2026-04-28 07:26:02.198445+08:00
+
+//查看系统当前时间
+root@armsom:~# date
+Tue Apr 28 07:26:38 AM CST 2026
+
+//设置系统时间
+root@armsom:~# date -s "2026-10-12 10:30:00"
+Mon Oct 12 10:30:00 AM CST 2026
+
+//将系统当前时间写入 RTC
+root@armsom:~# hwclock -w -f /dev/rtc0
+
+//然后读取 RTC 芯片当前时间
+root@armsom:~# hwclock -r -f /dev/rtc0
+2026-10-12 10:30:45.494092+08:00
+```
+
+- 如果我们接了RTC电池，那么关闭电源后，重新启动CM7s，查看rtc时间,执行下述命令可以发现RTC时间会延续上面设置的时间（相当于RTC没有掉电）。
+- 如果我们没有接RTC电池，那么执行下述命令会发现时间又重置了（RTC掉电丢失数据）。
+
+```bash
+root@armsom:~# sudo hwclock -r -f /dev/rtc0
+2026-04-28 07:26:02.198445+08:00
+```
+
+### 3.11 MIPI-CSI
+#### 开启摄像头配置
+要使用摄像头之前，需要先开启摄像头设备树overlay，分别找到如下两行：
+```bash
+root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
+#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-imx219-cs0-overlay.dtbo
+#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-ov13850-cs1-overlay.dtbo
+```
+需要使用哪个摄像头，解除注释后保存退出，然后重启即可
+
+#### 基础命令使用
+- 我们需要先确认每款摄像头在不同情况下，被注册为的节点名：                      
+1. 若同时打开两款摄像头时，一般imx219摄像头为video22，ov13850摄像头为video31。                 
+2. 若分别单独打开某款摄像头时，一般都为video11。
+
+- 查看拓扑，同时打开两个摄像头时，一般imx219摄像头为media0，ov13850摄像头为media1
+
+```bash
+root@armsom:/# media-ctl -d /dev/media1 -p
+```
+
+查看video节点支持的视频格式
+```bash
+root@armsom:~# v4l2-ctl -d /dev/video31 --get-fmt-video
+Format Video Capture Multiplanar:
+        Width/Height      : 2112/1568
+        Pixel Format      : 'NV12' (Y/UV 4:2:0)
+        Field             : None
+        Number of planes  : 1
+        Flags             :
+        Colorspace        : sRGB
+        Transfer Function : Rec. 709
+        YCbCr/HSV Encoding: Rec. 709
+        Quantization      : Full Range
+        Plane 0           :
+           Bytes per Line : 2112
+           Size Image     : 4967424
+```
+
+#### 使用 ArmSoM camera-module1
+
+摄像头采用[camera-module1](./armsom-camera-module1)模组，摄像头模组连接并上电后可以查看启动日志。
+
+```bash
+root@armsom:/# dmesg | grep ov13850
+[    2.302905] ov13850 5-0010: driver version: 00.01.05
+[    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
+[    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
+[    2.303153] ov13850 5-0010: supply dovdd not found, using dummy regulator
+[    2.303186] ov13850 5-0010: supply dvdd not found, using dummy regulator
+[    2.303213] ov13850 5-0010: could not get default pinstate
+[    2.303220] ov13850 5-0010: could not get sleep pinstate
+[    2.308532] ov13850 5-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
+[    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
+```
+下述命令的的 /dev/video31 要根据实际注册的video节点来替换
+- 使用v4l2-ctl进行抓图
+```bash
+// MIPI-CSI1
+root@armsom:/# systemctl restart rkaiq_3A.service
+root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+```
+
+- 使用gst-launch-1.0进行抓图和抓视频，如果没有gst-launch-1.0，需要先下载
+```bash
+root@armsom:/# sudo apt-get update
+root@armsom:/# sudo apt-get install gstreamer1.0*
+```
+
+- 可以接上HDMI屏幕，使用下述命令实时预览
+```bash
+// MIPI-CSI1
+root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+```
+![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
+
+
+#### 使用 Raspberry Pi Camera Module 2
+
+摄像头采用[Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/)模组，摄像头模组连接并上电后可以查看启动日志。
+
+```bash
+root@armsom:/# dmesg | grep imx219
+[    4.049680] imx219 4-0010: driver version: 00.01.02
+[    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
+[    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
+[    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
+```
+
+参考如下命令抓图,使用'Ctrl+C'中止抓图
+```bash
+root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1640,height=1232 ! jpegenc ! multifilesink location=photo.jpg
+```
+
+参考如下命令抓视频
+```bash
+root@armsom:/# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1640, height=1232, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
+```
+
+### 3.12 MIPI DSI
+
+CM7s MIPI-DSI 分辨率最高分辨率可达 2K@60Hz
+
+1. 按照下图将连接好排线
+
+![cm5-io-display-10-hd](/img/cm/cm5-io-display-10-hd.png)
+
+2. linux 镜像默认是没有打开 mipi lcd 屏幕的配置的，如果需要使用 mipi lcd 屏幕，需要手动打开
+
+```bash
+root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
+#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-display-1200x1900-10.1hd-overlay.dtbo
+```
+将此行注释解除后保存退出，随后重启，能看到lcd屏幕点亮即可
 
 ## 产品证书
 
