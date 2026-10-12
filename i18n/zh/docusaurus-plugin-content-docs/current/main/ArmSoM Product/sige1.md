@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用芯片，可应用于IPTV/OTT盒子、云终端、融合类产品，是高性能低功耗的4K播放器，解码能力最高支持到8K，同时也支持了AVS2和HDR VIVID标准。
+description: ArmSoM-Sige1 采用 Rockchip RK3528 新一代智能机顶盒和多媒体应用芯片，可应用于 IPTV/OTT 盒子、云终端、融合类产品，是高性能低功耗的 4K 播放器，解码能力最高支持到 4K@60fps，同时也支持 AVS2 和 HDR Vivid 标准。
 keywords: [armsom, armsom-sige1, maker kit, rockchip, rk3528产品介绍]
 sidebar_label: "Sige1"
 sidebar_position: 2
@@ -13,7 +13,7 @@ image: /img/sige/sige1-bananer.png
 
 ## 简介
 
-ArmSoM-Sige1 采用Rockchip RK3528 新一代的智能机顶盒和多媒体应用芯片，可应用于IPTV/OTT盒子、云终端、融合类产品，是高性能低功耗的4K播放器，解码能力最高支持到8K，同时也支持了AVS2和HDR VIVID标准。
+ArmSoM-Sige1 采用 Rockchip RK3528 新一代智能机顶盒和多媒体应用芯片，可应用于 IPTV/OTT 盒子、云终端、融合类产品，是高性能低功耗的 4K 播放器，解码能力最高支持到 4K@60fps，同时也支持 AVS2 和 HDR Vivid 标准。
 
 ![ArmSoM-sige1](/img/sige/sige1-bananer.png)
 

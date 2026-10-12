@@ -69,7 +69,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 ![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
 
 :::tip
-AIM7所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
+AIM7 采用与 NVIDIA Jetson Nano / TX2 NX 相同类型的 260-pin SO-DIMM 外形设计。具体引脚功能、供电要求和底板兼容性请以 AIM7 引脚定义及兼容性测试结果为准。
 :::
 
 ### 产品框图

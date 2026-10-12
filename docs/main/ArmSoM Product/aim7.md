@@ -73,7 +73,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 ![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
 
 :::tip
-All pins of AIM7 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
+AIM7 features a 260-pin SO-DIMM form factor designed for compatibility with selected NVIDIA Jetson carrier boards. Pin functions, power requirements, and peripheral compatibility should be verified against the AIM7 pinout and validated carrier board configurations.
 :::
 
 ### AIM7 Block Diagram
