@@ -22,12 +22,13 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 - 支持 PoE 的千兆以太网 RJ45
 - 通过USB Type-C进行固件闪存和设备模式
 - GPIO：40针扩展头
-- 电源连接器：DC Barrel插孔，用于12V电源输入
+- 电源连接器：DC Barrel插孔，用于12V电源输入，外径5.5mm,内径2.0mm,内正外负
 - 扩展：M.2（M键，支持PCIe）、microSD
 - MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
 - MIPI CSI0：1x 4通道MIPI CSI，每条通道最高2.5Gbps
 - MIPI CSI1：1x 2通道MIPI CSI，每条通道最高2.5Gbps
 - 其他：HPOUT,FAN,VRTC
+- 电压范围：5V-23V
 - 尺寸：100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
 - 重量:  65.2g
 

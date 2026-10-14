@@ -23,7 +23,7 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 :::
 
 :::tip
-There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but it has been fixed in v1.3. The boards currently on sale and those to be released are all v1.3 or higher, so you can buy and use them with confidence. We will also launch the CM5 v2.0 (LPDDR4 version) later to accommodate different memory price points.
+There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but it has been fixed in v1.3. The boards currently on sale and those to be released are all v1.3 or higher, so you can buy and use them with confidence. We will also launch the CM5 v2.0 (LPDDR4X version) later to accommodate different memory price points.
 :::
 
 ### Key Specifications
@@ -35,7 +35,7 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
 - **VPU/Video Codec:**
   - **Decoding:** Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
   - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
-- **RAM:** 2/4/8/16GB 32bit LPDDR5, default is 8GB, with RK3576 supporting up to 16GB.
+- **RAM:** 2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0), default is 8GB, with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage:** 4.5V–5.5V
@@ -83,7 +83,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 | **Processor**           | **RK3576 SoC**                    | Broadcom BCM2711               |
 | **CPU Architecture**    | **Quad-core ARM Cortex-A72 & Quad-core Cortex-A53** | Quad-core ARM Cortex-A72      |
 | **GPU**                 | **ARM Mali G52 MC3 GPU**          | VideoCore VI                   |
-| **Memory**              | **Up to 16GB LPDDR5**             | 1GB, 2GB, 4GB, 8GB LPDDR4      |
+| **Memory**              | **Up to 16GB LPDDR5 (V1.3) / LPDDR4X (V2.0)**             | 1GB, 2GB, 4GB, 8GB LPDDR4      |
 | **Storage**             | eMMC storage (optional capacities) | No built-in storage, supports microSD cards |
 | **Display Output**      | 1x HDMI 2.1, 1x DP               | 2x HDMI 2.0                    |
 | **Video Resolution**    | **Supports 4K@120fps**            | Supports 4K@30fps              |
@@ -138,7 +138,7 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>2GB/4GB/8GB/16GB (up to 16GB) 32-bit LPDDR5, default LPDDR5 8GB</li></th>
+            <th><li>2GB/4GB/8GB/16GB (up to 16GB) 32-bit LPDDR5 (V1.3) / LPDDR4X (V2.0), default LPDDR5 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>

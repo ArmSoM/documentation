@@ -22,12 +22,13 @@ The CM5-IO board is an expansion board specifically designed for the CM5 computi
 - Gigabit Ethernet RJ45 with PoE support
 - Firmware flashing and device mode via USB Type-C
 - GPIO: 40-PIN header
-- Power connector: DC Barrel jack for 12V power input
+- Power connector: DC Barrel jack for 12V power input, outer diameter 5.5mm, inner diameter 2.0mm, center positive, outer negative
 - Expansion: M.2 (M-key, supports PCIe), microSD
 - MIPI DSI: 1x 4-lane MIPI DSI, supports up to 4K@60fps (x4)
 - MIPI CSI0: 1x 4-lane MIPI CSI, each lane up to 2.5Gbps
 - MIPI CSI1: 1x 2-lane MIPI CSI, each lane up to 2.5Gbps
 - Others: HPOUT, FAN, VRTC
+- Voltage range: 5V-23V
 - Dimensions: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 inches)
 - Weight: 65.2g
 

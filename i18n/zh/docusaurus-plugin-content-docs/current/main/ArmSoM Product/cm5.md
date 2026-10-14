@@ -25,7 +25,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 :::
 
 :::tip
-ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中修复。目前在售及后续发售的板卡均为 v1.3 或更高版本，请放心购买使用。后续我们将推出 CM5 v2.0（LPDDR4 版本），以适配不同的存储价格情况。
+ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中修复。目前在售及后续发售的板卡均为 v1.3 或更高版本，请放心购买使用。后续我们将推出 CM5 v2.0（LPDDR4X 版本），以适配不同的存储价格情况。
 :::
 
 ### 关键参数
@@ -37,7 +37,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 - **VPU/编解码**：
   - **硬解码**：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
   - **硬编码**：支持H.264和H.265，JPEG最高4K@60fps。
-- **RAM**：2/4/8/16GB 32bit LPDDR5，默认8GB，RK3576 最大支持16GB。
+- **RAM**：2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)，默认8GB，RK3576 最大支持16GB。
 - **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **工作电压**：4.5V–5.5V
@@ -85,7 +85,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 | **处理器**             | **RK3576 SoC**                      | Broadcom BCM2711               |
 | **CPU架构**            | **四核 ARM Cortex-A72 & 四核Cortex-A53** | 四核 ARM Cortex-A72            |
 | **GPU**                | **ARM Mali G52 MC3 GPU**                        | VideoCore VI                   |
-| **内存**               | **最高支持 16GB LPDDR5**             | 1GB、2GB、4GB、8GB LPDDR4       |
+| **内存**               | **最高支持 16GB LPDDR5 (V1.3) / LPDDR4X (V2.0)**             | 1GB、2GB、4GB、8GB LPDDR4       |
 | **存储**               | eMMC 存储（可选容量）            | 无内置存储，支持microSD卡       |
 | **显示输出**           | 1x HDMI 2.1, 1x DP               | 2x HDMI 2.0                    |
 | **视频分辨率**         | **支持4K@120fps**                     | 支持4K@30fps                   |
@@ -139,7 +139,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>2GB/4GB/8GB/16GB（最高可配 16GB ）32bit LPDDR5，默认LPDDR5 8GB</li></th>
+            <th><li>2GB/4GB/8GB/16GB（最高可配 16GB ）32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)，默认LPDDR5 8GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
