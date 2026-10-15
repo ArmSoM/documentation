@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for CAN Usage. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "CAN Usage"]
+image: /img/armsom-social-card.png
 sidebar_label: "4. CAN Usage"
 sidebar_position: 4
 ---

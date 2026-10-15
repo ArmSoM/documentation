@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for HDMI-IN Usage. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "HDMI-IN Usage"]
+image: /img/armsom-social-card.png
 sidebar_label: "15. HDMI-IN Usage"
 slug: /interface-usage/hdmi-in
 sidebar_position: 15

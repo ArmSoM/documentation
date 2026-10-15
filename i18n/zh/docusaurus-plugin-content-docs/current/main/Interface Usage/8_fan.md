@@ -1,4 +1,7 @@
 ---
+description: "ArmSoM 官方技术文档：FAN 接口。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
+keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "FAN 接口"]
+image: /img/armsom-social-card.png
 sidebar_label: "8. FAN 接口"
 slug: /interface-usage/fan
 sidebar_position: 8

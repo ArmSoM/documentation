@@ -1,4 +1,5 @@
 ---
+image: /img/armsom-social-card.png
 description: ArmSoM-CM1 is an industrial-grade product featuring the RK3506J tri-core Cortex-A7 application processor. It operates within a temperature range of -40°C to 85°C and is specifically designed for industrial gateways, HMIs, PLCs, handheld POS systems, and home appliance display control applications.
 keywords: [armsom, armsom-CM1, RK3506J Development Boards, RK3506J Core board, rockchip]
 sidebar_label: "CM1"

@@ -1,4 +1,7 @@
 ---
+description: "ArmSoM 官方技术文档：Sige Diy Case 1。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
+keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "Sige Diy Case 1"]
+image: /img/armsom-social-card.png
 sidebar_label: "Sige 外壳"
 slug: /sige-diy-case1
 sidebar_position: 17

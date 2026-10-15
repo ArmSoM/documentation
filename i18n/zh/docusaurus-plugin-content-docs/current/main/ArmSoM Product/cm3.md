@@ -1,4 +1,5 @@
 ---
+image: /img/armsom-social-card.png
 description: "ArmSoM-CM3 是一款基于 Rockchip RK3568 的计算机模块，配备四核 Cortex-A55 CPU、Mali-G52 GPU，最高支持 8GB LPDDR4x 与 128GB eMMC，适用于嵌入式 Linux、Android 及载板开发。"
 keywords: [armsom, armsom-cm3, RK3568  Development Boards, RK3568 Core borad, rockchip]
 sidebar_label: "CM3"

@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for PCIe Usage. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "PCIe Usage"]
+image: /img/armsom-social-card.png
 sidebar_label: "16. PCIe Usage"
 slug: /interface-usage/pcie
 sidebar_position: 16

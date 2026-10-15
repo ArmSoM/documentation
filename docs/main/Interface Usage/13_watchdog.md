@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for Watchdog Introduction. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Watchdog Introduction"]
+image: /img/armsom-social-card.png
 sidebar_label: "13. Watchdog Usage"
 slug: /interface-usage/watchdog
 sidebar_position: 13

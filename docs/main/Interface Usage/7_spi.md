@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for SPI Usage. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "SPI Usage"]
+image: /img/armsom-social-card.png
 sidebar_label: "7. SPI Usage"
 slug: /interface-usage/spi
 sidebar_position: 7

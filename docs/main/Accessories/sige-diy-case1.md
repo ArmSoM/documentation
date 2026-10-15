@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for Sige Diy Case 1. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Sige Diy Case 1"]
+image: /img/armsom-social-card.png
 sidebar_label: "Sige DIY Case 1"
 slug: /sige-diy-case1
 sidebar_position: 17

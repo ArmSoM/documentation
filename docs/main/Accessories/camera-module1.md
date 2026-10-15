@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for ArmSoM  Camera Module 1. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "ArmSoM  Camera Module 1"]
+image: /img/armsom-social-card.png
 sidebar_label: "Camera module 1"
 slug: /armsom-camera-module1
 sidebar_position: 15

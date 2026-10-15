@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for Screen&Touch Usage. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Screen&Touch Usage"]
+image: /img/armsom-social-card.png
 sidebar_label: "12. Screen&Touch Usage"
 slug: /interface-usage/screen
 sidebar_position: 12

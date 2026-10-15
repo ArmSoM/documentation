@@ -1,4 +1,5 @@
 ---
+image: /img/armsom-social-card.png
 description: ArmSoM-forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器，工作温度可达 -40℃~85℃，专为工业网关、HMI、PLC、手持POS和家电显控应用而设计。
 keywords: [armsom, armsom-forge1, maker kit, rockchip, rk3506产品介绍]
 sidebar_label: "Forge1"

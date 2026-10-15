@@ -4,6 +4,8 @@ sidebar_label: "Sige Family Getting Started"
 sidebar_position: 14
 slug: /sige-family-started
 ---
+description: "Official ArmSoM technical documentation for Sige Family User Manual. Find product specifications, configuration steps, usage guidance, and embedded development references."
+image: /img/armsom-social-card.png
 # Sige Family User Manual 
 
 The Sige user manual helps users understand the basic usage of Sige products and the necessary preparations to start using your ArmSoM-Sige🚀

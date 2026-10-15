@@ -4,6 +4,8 @@ sidebar_label: "Sige系列使用手册"
 sidebar_position: 14
 slug: /sige-family-started
 ---
+description: "ArmSoM 官方技术文档：Sige 使用手册。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
+image: /img/armsom-social-card.png
 
 # Sige 使用手册
 

@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for Camera Usage. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Camera Usage"]
+image: /img/armsom-social-card.png
 sidebar_label: "11. Camera Usage"
 slug: /interface-usage/camera
 sidebar_position: 11

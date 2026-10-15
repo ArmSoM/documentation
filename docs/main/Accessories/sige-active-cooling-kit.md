@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for Sige Active Cooling Kit. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Sige Active Cooling Kit"]
+image: /img/armsom-social-card.png
 sidebar_label: "Active Cooling Kit"
 sidebar_position: 16
 slug: /sige-active-cooling-kit

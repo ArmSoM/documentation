@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for FAN Interface. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "FAN Interface"]
+image: /img/armsom-social-card.png
 sidebar_label: "8. FAN Interface"
 slug: /interface-usage/fan
 sidebar_position: 8

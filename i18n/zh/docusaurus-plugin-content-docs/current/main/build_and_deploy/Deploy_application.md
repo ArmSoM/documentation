@@ -1,4 +1,6 @@
 ---
+keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "Systemd服务"]
+image: /img/armsom-social-card.png
 sidebar_label: "部署应用"
 slug: /build-system-image/Deploy application
 sidebar_position: 3

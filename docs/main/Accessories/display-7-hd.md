@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for ArmSoM Display 7 HD. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "ArmSoM Display 7 HD"]
+image: /img/armsom-social-card.png
 sidebar_label: "Display 7 HD"
 sidebar_position: 19
 slug: /armsom-display-7-hd

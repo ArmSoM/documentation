@@ -1,4 +1,5 @@
 ---
+image: /img/armsom-social-card.png
 description: ArmSoM-AIM3
 keywords: [armsom, armsom-aim3, RK3576核心板, rockchip]
 sidebar_label: "AIM3"

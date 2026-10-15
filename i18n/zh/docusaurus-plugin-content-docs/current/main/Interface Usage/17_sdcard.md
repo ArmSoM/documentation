@@ -1,4 +1,7 @@
 ---
+description: "ArmSoM 官方技术文档：硬盘挂载。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
+keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "硬盘挂载"]
+image: /img/armsom-social-card.png
 sidebar_label: "17. 存储设备 使用"
 slug: /interface-usage/sdcard
 sidebar_position: 17

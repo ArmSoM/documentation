@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for FAQ. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "FAQ"]
+image: /img/armsom-social-card.png
 sidebar_label: "FAQs"
 slug: /armsom-faqs
 sidebar_position: 19
