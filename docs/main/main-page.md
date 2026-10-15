@@ -8,35 +8,34 @@ sidebar_position: 1
 slug: /
 ---
 
-ArmSoM is an open-source hardware brand committed to providing the open-source community with top-tier hardware, robust firmware, and comprehensive documentation. While upholding open-source values, ArmSoM also offers customizable and reliable ODM solutions to meet the demands of global businesses. 
+<section class="armsom-hero">
+  <div class="armsom-hero__copy">
+    <p class="armsom-eyebrow">OPEN HARDWARE · EMBEDDED AI · ROCKCHIP</p>
+    <h1>Build the next embedded product, faster.</h1>
+    <p class="armsom-hero__lead">Explore Rockchip single-board computers, system-on-modules, Linux images, and practical engineering documentation—from your first boot to production hardware.</p>
+    <div class="armsom-hero__actions">
+      <a class="armsom-button armsom-button--primary" href="#choose-your-platform">Choose a platform <span>→</span></a>
+      <a class="armsom-button armsom-button--secondary" href="./getting-start/cloud-disk">Start building</a>
+    </div>
+    <div class="armsom-proof"><span><strong>6 TOPS</strong> edge AI</span><span><strong>8K</strong> multimedia</span><span><strong>Open</strong> hardware resources</span></div>
+  </div>
+  <div class="armsom-hero__visual"><img src="./img/banana.jpg" alt="ArmSoM open-source hardware platforms" /></div>
+</section>
 
-:::tip
-[The RK3588AI Module7 is currently in the crowdfunding preheating stage. Stay tuned for the latest updates by subscribing to our campaign！](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
-:::
+<div class="armsom-notice">New: <a href="https://www.crowdsupply.com/armsom/rk3588-ai-module7">RK3588 AI Module7 is preparing for crowdfunding</a> — follow the campaign for launch updates.</div>
 
-![ArmSoM Open Source](/img/banana.jpg)  
+## Choose your platform
 
-- **[Single Board Computers](#sige-series-single-board-computers)** based on ARM architecture.  
-- **[System on Module](#system-on-module-and-carrier-boards)** and carrier boards to help customers quickly develop high-performance hardware.  
-- Dedicated to fostering an open ecosystem, supporting **open-source hardware and operating systems**.  
+<p class="armsom-section-lead">Start from the outcome you want. Every platform includes specifications, interface references, software resources, and setup guidance.</p>
 
-ArmSoM provides an extensive range of open-source resources, including product manuals, system source code, hardware schematics, component libraries, and high-quality Linux development tutorials. These resources are designed to benefit users of all levels:  
+<div class="armsom-choice-grid">
+  <a class="armsom-choice-card" href="./armsom-sige7"><span class="armsom-choice-card__icon">✦</span><small>HIGH PERFORMANCE</small><h3>Sige7 · RK3588</h3><p>Edge AI, 8K multimedia, NAS, and high-performance Linux.</p><strong>6 TOPS · dual 2.5GbE →</strong></a>
+  <a class="armsom-choice-card" href="./armsom-sige5"><span class="armsom-choice-card__icon">◈</span><small>BALANCED AI</small><h3>Sige5 · RK3576</h3><p>A practical platform for AI, networking, and rapid prototypes.</p><strong>6 TOPS · Wi-Fi 6 →</strong></a>
+  <a class="armsom-choice-card" href="./armsom-cm5"><span class="armsom-choice-card__icon">▣</span><small>CUSTOM HARDWARE</small><h3>CM5 · RK3576</h3><p>Compute module and carrier-board design for production products.</p><strong>SoM · carrier design →</strong></a>
+  <a class="armsom-choice-card" href="./armsom-forge1"><span class="armsom-choice-card__icon">⌁</span><small>INDUSTRIAL CONTROL</small><h3>Forge1 · RK3506J</h3><p>Industrial HMI, gateways, and long-running control systems.</p><strong>Industrial-grade →</strong></a>
+</div>
 
-- **For Beginners**: Step-by-step tutorials make it easy to learn the fundamentals of embedded development and complete projects independently.  
-- **For Experienced Developers**: Comprehensive documentation and tools enable efficient secondary development, significantly reducing time-to-market.  
-
-## Choose an ArmSoM Platform
-
-Start with the platform that matches your project. Every product page includes specifications, interface details, software resources, and setup guidance.
-
-| Your project | Recommended starting point | Why |
-| --- | --- | --- |
-| AI, edge computing, NAS, or high-performance Linux | [Sige7 / RK3588 SBC](./armsom-sige7) | 6 TOPS NPU, 8K multimedia, dual 2.5GbE, and extensive expansion options. |
-| RK3576 AI and embedded projects | [Sige5 / RK3576 SBC](./armsom-sige5) | A balanced 6 TOPS platform for edge AI, networking, and product prototyping. |
-| Custom hardware or production-ready carrier boards | [CM5 / RK3576 system-on-module](./armsom-cm5) | Separate compute module and carrier-board design for faster custom hardware development. |
-| Industrial HMI, gateway, or control applications | [Forge1 / RK3506J](./armsom-forge1) | Industrial-focused platform for embedded control and long-term deployment. |
-
-Need help selecting a board? Compare the product specifications below, then review the relevant [Getting Started](./category/getting-started) guide before choosing an image or accessory.
+<div class="armsom-paths"><a href="#product-catalog-table"><strong>Need a full comparison?</strong><span>Browse the product catalog →</span></a></div>
 
 ## ArmSoM Platform Roadmap
 

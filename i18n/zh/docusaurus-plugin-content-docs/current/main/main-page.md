@@ -8,35 +8,31 @@ sidebar_position: 1
 slug: /
 ---
 
-:::tip
-[欢迎阅读 RK3588AI Module7 文档！RK3588AI Module7 目前处于众筹预热阶段。请关注我们的众筹活动，获取最新动态！](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
-:::
+<section class="armsom-hero">
+  <div class="armsom-hero__copy">
+    <p class="armsom-eyebrow">开源硬件 · 嵌入式 AI · ROCKCHIP</p>
+    <h1>更快构建下一代嵌入式产品</h1>
+    <p class="armsom-hero__lead">探索 Rockchip 单板机、核心板、Linux 镜像与工程实践文档，从首次启动到量产硬件开发。</p>
+    <div class="armsom-hero__actions"><a class="armsom-button armsom-button--primary" href="#选择适合的-armsom-平台">选择开发平台 <span>→</span></a><a class="armsom-button armsom-button--secondary" href="./getting-start/cloud-disk">开始上手</a></div>
+    <div class="armsom-proof"><span><strong>6 TOPS</strong> 边缘 AI</span><span><strong>8K</strong> 多媒体</span><span><strong>开放</strong> 硬件资料</span></div>
+  </div>
+  <div class="armsom-hero__visual"><img src="./img/banana.jpg" alt="ArmSoM 开源硬件平台" /></div>
+</section>
 
-ArmSoM 是一个开源硬件品牌，我们承诺为开源社区提供一流的硬件、强大的固件和详尽的文档。在秉承开源价值观的同时，ArmSoM 还提供可定制且可靠的 ODM 解决方案，以满足全球业务的需求。
-
-![ArmSoM Open source ](/img/banana.jpg)
-
-- 提供基于ARM架构的 **[单板计算机](#sige系列单板计算机)**
-- 提供 **[模块化核心板](#模块化核心板和载板)** 和载板，帮助客户快速开发高性能硬件
-- 致力于开放生态，支持 **开源硬件与操作系统**
-
-ArmSoM 提供了丰富而完善的开源资源，包括产品手册、系统源代码、硬件原理图、封装库，以及多种高质量的 Linux 开发教程。无论是初学者还是资深开发者，都能从中受益：  
-
-- **初学者**：通过清晰易懂的教程，快速掌握嵌入式开发的基本知识，并独立完成项目开发。
-- **资深开发者**：借助完善的文档和工具，高效开展产品二次开发，显著缩短研发周期。
+<div class="armsom-notice">新品动态：<a href="https://www.crowdsupply.com/armsom/rk3588-ai-module7">RK3588 AI Module7 正在准备众筹</a>，欢迎关注最新进展。</div>
 
 ## 选择适合的 ArmSoM 平台
 
-可根据项目目标快速选择开发起点。每个产品页面均提供规格、接口、软件资源与入门指引。
+<p class="armsom-section-lead">从你的项目目标出发。每个产品页面均提供规格、接口资料、软件资源与上手指引。</p>
 
-| 项目需求 | 推荐起点 | 适用原因 |
-| --- | --- | --- |
-| 边缘 AI、NAS、高性能 Linux 或多媒体项目 | [Sige7 / RK3588 单板机](./armsom-sige7) | 提供 6 TOPS NPU、8K 多媒体、双 2.5GbE 与丰富扩展接口。 |
-| 基于 RK3576 的 AI 与嵌入式项目 | [Sige5 / RK3576 单板机](./armsom-sige5) | 兼顾 6 TOPS 算力、网络能力和快速原型开发。 |
-| 定制硬件、量产载板或核心板方案 | [CM5 / RK3576 核心板](./armsom-cm5) | 采用核心板与载板分离设计，加快定制硬件开发。 |
-| 工业 HMI、网关或控制类应用 | [Forge1 / RK3506J](./armsom-forge1) | 面向嵌入式控制和长期部署的工业级平台。 |
+<div class="armsom-choice-grid">
+  <a class="armsom-choice-card" href="./armsom-sige7"><span class="armsom-choice-card__icon">✦</span><small>高性能平台</small><h3>Sige7 · RK3588</h3><p>边缘 AI、8K 多媒体、NAS 与高性能 Linux。</p><strong>6 TOPS · 双 2.5GbE →</strong></a>
+  <a class="armsom-choice-card" href="./armsom-sige5"><span class="armsom-choice-card__icon">◈</span><small>均衡 AI</small><h3>Sige5 · RK3576</h3><p>适合 AI、网络与快速原型开发的实用平台。</p><strong>6 TOPS · Wi-Fi 6 →</strong></a>
+  <a class="armsom-choice-card" href="./armsom-cm5"><span class="armsom-choice-card__icon">▣</span><small>定制硬件</small><h3>CM5 · RK3576</h3><p>核心板与载板分离设计，适用于量产产品开发。</p><strong>核心板 · 载板设计 →</strong></a>
+  <a class="armsom-choice-card" href="./armsom-forge1"><span class="armsom-choice-card__icon">⌁</span><small>工业控制</small><h3>Forge1 · RK3506J</h3><p>工业 HMI、网关与长期稳定运行的控制系统。</p><strong>工业级平台 →</strong></a>
+</div>
 
-如需进一步选型，可先对比下方产品规格，再阅读对应的 [入门指南](./category/getting-started)，然后选择系统镜像与配件。
+<div class="armsom-paths"><a href="#产品目录表"><strong>需要完整对比？</strong><span>浏览产品目录 →</span></a></div>
 
 ## ArmSoM 平台路线图
 

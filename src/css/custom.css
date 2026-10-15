@@ -246,6 +246,63 @@
   margin-left: 32px;
 }
 
+/* Documentation home: a focused product-discovery experience. */
+.markdown:has(.armsom-hero) {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.markdown:has(.armsom-hero) > h1:first-child {
+  display: none;
+}
+
+.armsom-hero {
+  display: block;
+  margin: 1.25rem 0 2.2rem;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  min-height: min(34vw, 420px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  color: #f7fcff;
+  background: #08283b;
+}
+
+.armsom-hero::after { background: linear-gradient(90deg, rgba(4, 27, 42, .96) 0%, rgba(7, 46, 65, .84) 42%, rgba(7, 46, 65, .25) 78%, rgba(7, 46, 65, .16) 100%); content: ''; inset: 0; position: absolute; z-index: 1; }
+.armsom-hero__copy { max-width: 680px; position: relative; z-index: 2; }
+.armsom-hero h1 { color: inherit; font-size: clamp(2.25rem, 4.6vw, 4.4rem); letter-spacing: -.055em; line-height: 1.03; margin: .45rem 0 1.3rem; }
+.armsom-eyebrow { color: #8be9f7; font-size: .74rem; font-weight: 800; letter-spacing: .16em; margin: 0; }
+.armsom-hero__lead { color: rgba(247, 252, 255, .83); font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.7; max-width: 39rem; }
+.armsom-hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0; }
+.armsom-button { border-radius: 999px; display: inline-flex; align-items: center; gap: .7rem; font-weight: 750; padding: .8rem 1.2rem; text-decoration: none !important; transition: transform .2s ease, box-shadow .2s ease; }
+.armsom-button:hover { color: inherit; transform: translateY(-2px); }
+.armsom-button--primary { background: #6ae7f7; color: #08283b; box-shadow: 0 12px 24px rgba(0, 0, 0, .18); }
+.armsom-button--secondary { border: 1px solid rgba(255, 255, 255, .48); color: #fff; }
+.armsom-proof { display: flex; flex-wrap: wrap; gap: .7rem 1.35rem; color: rgba(255,255,255,.75); font-size: .85rem; }
+.armsom-proof strong { color: #fff; }
+.armsom-hero__visual { inset: 0; position: absolute; z-index: 0; }
+.armsom-hero__visual img { display: block; height: 100%; max-height: none; object-fit: cover; object-position: center; width: 100%; }
+.armsom-notice { background: #eefbfe; border: 1px solid #b9eaf1; border-radius: 12px; color: #275d70; margin: 0 0 4rem; padding: .85rem 1rem; }
+.armsom-notice a { font-weight: 700; }
+.armsom-section-lead { color: var(--ifm-color-emphasis-700); font-size: 1.08rem; max-width: 52rem; }
+.armsom-choice-grid { display: grid; gap: 1rem; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 1.75rem 0; }
+.armsom-choice-card { background: var(--ifm-background-surface-color); border: 1px solid var(--ifm-color-emphasis-200); border-radius: 16px; box-shadow: 0 4px 18px rgba(8, 40, 59, .05); color: inherit !important; display: flex; flex-direction: column; min-height: 260px; padding: 1.35rem; text-decoration: none !important; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.armsom-choice-card:hover { border-color: var(--ifm-color-primary); box-shadow: 0 16px 30px rgba(8, 40, 59, .13); transform: translateY(-5px); }
+.armsom-choice-card__icon { align-items: center; background: #dff8fc; border-radius: 10px; color: #058da8; display: flex; font-size: 1.25rem; height: 38px; justify-content: center; width: 38px; }
+.armsom-choice-card small { color: #168da6; font-size: .68rem; font-weight: 800; letter-spacing: .11em; margin-top: 1.2rem; }
+.armsom-choice-card h3 { font-size: 1.25rem; margin: .45rem 0; }
+.armsom-choice-card p { color: var(--ifm-color-emphasis-700); font-size: .92rem; line-height: 1.55; margin: 0; }
+.armsom-choice-card strong { color: #0d8198; font-size: .82rem; margin-top: auto; padding-top: 1rem; }
+.armsom-paths { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); margin: 1.5rem 0 4.5rem; }
+.armsom-paths a { background: linear-gradient(135deg, #f4fbfd, #e8f7fa); border-radius: 14px; color: #164a5c !important; display: flex; flex-direction: column; gap: .25rem; padding: 1rem 1.15rem; text-decoration: none !important; }
+.armsom-paths span { color: #087e97; font-size: .9rem; }
+[data-theme='dark'] .armsom-notice { background: rgba(18, 104, 125, .18); border-color: rgba(106, 231, 247, .28); color: #c8f4fa; }
+[data-theme='dark'] .armsom-choice-card { box-shadow: none; }
+[data-theme='dark'] .armsom-choice-card__icon { background: rgba(52, 197, 221, .16); color: #79eafa; }
+[data-theme='dark'] .armsom-paths a { background: linear-gradient(135deg, #123646, #0e2d3b); color: #dcf8fc !important; }
+@media screen and (max-width: 996px) { .armsom-hero { min-height: 430px; } .armsom-hero::after { background: linear-gradient(90deg, rgba(4, 27, 42, .94), rgba(7, 46, 65, .66)); } .armsom-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 560px) { .armsom-hero { border-radius: 18px; margin-top: .5rem; } .armsom-choice-grid, .armsom-paths { grid-template-columns: 1fr; } .armsom-choice-card { min-height: 0; } }
+
 .gpio-table td{
   padding: 2px;
   text-align: center;
