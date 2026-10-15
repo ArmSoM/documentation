@@ -5,8 +5,8 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ArmSoM docs',
-  tagline: 'Find the desired sbc or som',
+  title: 'ArmSoM Documentation | Rockchip SBC, SoM & Embedded Linux',
+  tagline: 'Documentation, hardware resources, and tutorials for ArmSoM Rockchip SBCs and system-on-modules.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -17,8 +17,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ArmSoM',
+  projectName: 'documentation',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -47,17 +47,11 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/ArmSoM/documentation/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/ArmSoM/documentation/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -86,7 +80,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'keywords', content: 'armsom, SBC, RK3576, Thin client, rockchip'},
+        {
+          name: 'description',
+          content:
+            'Official ArmSoM documentation for Rockchip single-board computers, system-on-modules, embedded Linux, AI and hardware development.',
+        },
+        {name: 'keywords', content: 'ArmSoM, Rockchip SBC, system on module, RK3588, RK3576, embedded Linux, RKNN'},
         {name: 'twitter:card', content: 'summary_large_image'},
       ],
       // Replace with your project's social card

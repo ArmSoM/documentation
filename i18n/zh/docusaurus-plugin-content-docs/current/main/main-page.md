@@ -1,6 +1,9 @@
 ---
 sidebar_label: "🏠 首页"
 title: "ArmSoM 开源硬件开发者中心"
+description: "ArmSoM 官方开发者文档，提供 Rockchip 单板计算机、核心板与载板的产品规格、Linux 镜像、硬件资料和嵌入式开发教程。"
+keywords: [ArmSoM, Rockchip开发板, 单板计算机, 核心板, RK3588, RK3576, 嵌入式Linux, RKNN]
+image: /img/armsom-social-card.png
 sidebar_position: 1
 slug: /
 ---

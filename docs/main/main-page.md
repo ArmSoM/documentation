@@ -1,6 +1,9 @@
 ---
 sidebar_label: "🏠 Main Page"
 title: "ArmSoM Open Source Hardware Developer Center"
+description: "Official ArmSoM developer documentation for Rockchip single-board computers and system-on-modules. Find product specifications, Linux images, hardware resources, and embedded development tutorials."
+keywords: [ArmSoM, Rockchip SBC, system on module, RK3588, RK3576, embedded Linux, RKNN]
+image: /img/armsom-social-card.png
 sidebar_position: 1
 slug: /
 ---
@@ -170,4 +173,4 @@ Initially established in Shenzhen, the company plans to relocate its headquarter
 
 - [ArmSoM Official Website](https://www.armsom.org/category/all-products)  
 - [ArmSoM AliExpress Official Store](https://www.aliexpress.com/store/1102800175)  
-- [ArmSoM Taobao Official Store](https://armsom.taobao.com/)  
+- [ArmSoM Taobao Official Store](https://armsom.taobao.com/)
