@@ -119,22 +119,22 @@ const config = {
             items: [
               {
                 label: "Home",
-                to: "http://www.armsom.org/",
+                to: "https://www.armsom.org/",
                 target: "_blank",
               },
               {
                 label: "Products",
-                to: "http://www.armsom.org/product",
+                to: "https://www.armsom.org/product",
                 target: "_blank",
               },
               {
                 label: "News",
-                to: "http://www.armsom.org/news",
+                to: "https://www.armsom.org/news",
                 target: "_blank",
               },
               {
                 label: "ODM",
-                to: "http://www.armsom.org/odm",
+                to: "https://www.armsom.org/odm",
                 target: "_blank",
               },
             ],
@@ -144,7 +144,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'http://docs.armsom.org/blog',
+                to: 'https://docs.armsom.org/blog',
                 target: "_self",
               },
               {
@@ -173,7 +173,7 @@ const config = {
             items: [
               {
                 label: 'Forum',
-                to: 'http://forum.armsom.org/',
+                to: 'https://forum.armsom.org/',
                 target: "_blank",
               },
               {

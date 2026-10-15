@@ -25,6 +25,19 @@ ArmSoM provides an extensive range of open-source resources, including product m
 - **For Beginners**: Step-by-step tutorials make it easy to learn the fundamentals of embedded development and complete projects independently.  
 - **For Experienced Developers**: Comprehensive documentation and tools enable efficient secondary development, significantly reducing time-to-market.  
 
+## Choose an ArmSoM Platform
+
+Start with the platform that matches your project. Every product page includes specifications, interface details, software resources, and setup guidance.
+
+| Your project | Recommended starting point | Why |
+| --- | --- | --- |
+| AI, edge computing, NAS, or high-performance Linux | [Sige7 / RK3588 SBC](./armsom-sige7) | 6 TOPS NPU, 8K multimedia, dual 2.5GbE, and extensive expansion options. |
+| RK3576 AI and embedded projects | [Sige5 / RK3576 SBC](./armsom-sige5) | A balanced 6 TOPS platform for edge AI, networking, and product prototyping. |
+| Custom hardware or production-ready carrier boards | [CM5 / RK3576 system-on-module](./armsom-cm5) | Separate compute module and carrier-board design for faster custom hardware development. |
+| Industrial HMI, gateway, or control applications | [Forge1 / RK3506J](./armsom-forge1) | Industrial-focused platform for embedded control and long-term deployment. |
+
+Need help selecting a board? Compare the product specifications below, then review the relevant [Getting Started](./category/getting-started) guide before choosing an image or accessory.
+
 ## ArmSoM Platform Roadmap
 
 ![ArmSoM Platform Roadmap](/img/armsom-platform-roadmap.png)  
