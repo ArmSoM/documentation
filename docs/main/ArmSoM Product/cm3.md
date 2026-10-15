@@ -1,4 +1,5 @@
 ---
+description: "ArmSoM-CM3 is a Rockchip RK3568 system-on-module with a quad-core Cortex-A55 CPU, Mali-G52 GPU, up to 8GB LPDDR4x and 128GB eMMC. It is designed for embedded Linux and Android carrier-board projects."
 keywords: [armsom, armsom-cm3, RK3568  Development Boards, RK3568 Core borad, rockchip]
 sidebar_label: "CM3"
 sidebar_position: 5
