@@ -4,6 +4,8 @@ sidebar_label: "AIM Family Getting Started"
 sidebar_position: 15
 slug: /aim-family-started
 ---
+description: "Official ArmSoM technical documentation for AIM Family User Manual. Find product specifications, configuration steps, usage guidance, and embedded development references."
+image: /img/armsom-social-card.png
 # AIM Family User Manual 
 
 Here’s the translation:
@@ -50,13 +52,116 @@ The table below shows the power specifications required to power the AIM develop
 | AIM7 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A       | DC adapter, 2.5mm |
 | AIM5 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A       | DC adapter, 2.5mm |
 
-## System Image Burning
+## Interface Usage
 
 The AIM development kit supports multiple system images, and you can choose the appropriate image to download according to your needs.
 
 :::info
 A system image includes the Linux kernel, basic programs, etc., which are essential for running the AIM development kit, so you need to install the image before running the product.
 :::
+
+### 1. Debug Serial Port
+
+Connect a USB-to-TTL serial adapter as follows:
+
+![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
+
+| AIM-IO | Connection | Serial adapter |
+| --- | --- | --- |
+| **GND** (pin 11) | ---> | GND |
+| **RX** (pin 3) | ---> | TX |
+| **TX** (pin 4) | ---> | RX |
+
+### 2. Ethernet
+
+1. Connect one end of an Ethernet cable to the ArmSoM-AIM Ethernet port and the other to a router with a working network connection.
+2. After startup, DHCP automatically assigns an IP address to the Ethernet interface; no additional configuration is required.
+3. Use the following command on the ArmSoM-AIM Linux system to view the IP address:
+
+```bash
+root@armsom-aim7:/# ip a
+```
+
+You can find the IP address by connecting an HDMI display and running `ip a`, using the [debug serial port](#1-debug-serial-port), or viewing the router's administration page. If the board does not appear in the router, verify that Linux has booted, check or replace the Ethernet cable, and try another router if possible.
+
+:::tip
+DHCP address assignment on ArmSoM-AIM requires no additional setup.
+:::
+
+Use `ping` to check network connectivity. Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop it.
+
+```bash
+armsom@armsom-aim7:~$ ping www.baidu.com
+```
+
+### 3. HDMI
+
+| Model | AIM7 | AIM5 |
+| --- | --- | --- |
+| Resolution | 8Kp60 | 4Kp120 |
+
+1. Connect ArmSoM-AIM to an HDMI display with an HDMI cable.
+2. After Linux starts, image output on the display confirms that HDMI is working.
+
+:::tip
+Most laptop HDMI ports support output only, not HDMI input. Before connecting the board's HDMI output to a laptop, confirm that the laptop supports HDMI input. If no image is displayed, make sure you are using a desktop image; server images provide terminal output only.
+:::
+
+### 4. DisplayPort
+
+| Model | AIM7 | AIM5 |
+| --- | --- | --- |
+| Resolution | 4Kp60 | 4Kp60 |
+
+1. Connect ArmSoM-AIM to a DisplayPort display with a DP cable.
+2. After Linux starts, image output on the display confirms that the DP interface is working.
+
+### 5. USB
+
+| Model | AIM7 |
+| --- | --- |
+| USB | 1 × Type-C 2.0, 4 × USB 3.0 |
+
+:::info
+You can connect a USB hub to expand the number of USB ports.
+:::
+
+#### Test a USB Mouse or Keyboard
+
+1. Connect a USB keyboard or mouse to an ArmSoM-AIM USB port.
+2. Connect ArmSoM-AIM to an HDMI display.
+3. If you can operate the system with the keyboard or mouse, the USB port is working. A mouse requires a desktop image.
+
+#### Test a USB Storage Device
+
+1. Connect a USB flash drive or external USB disk to an ArmSoM-AIM USB port.
+2. The following command should display an `sdX` device when the drive is recognized:
+
+```bash
+armsom@armsom-aim7:/# cat /proc/partitions | grep "sd*"
+```
+
+3. Mount the drive to view its files:
+
+```bash
+armsom@armsom-aim7:/# sudo mount /dev/sda1 /test/
+```
+
+4. Use `df -h` to check capacity and the mount point.
+
+#### USB Camera
+
+1. Connect a USB camera that supports UVC to an ArmSoM-AIM USB port.
+2. Use `v4l2-ctl --list-devices` to identify the camera device node, such as `/dev/video0`.
+3. On a desktop image, open the camera with Cheese or V4L2 Test Bench. You can also preview, capture an image, or record video with GStreamer:
+
+```bash
+gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink
+```
+
+![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
+
+## System Image Burning
 
 ### 1. Obtaining the System Image
 
@@ -179,7 +284,7 @@ Start burning the system:
 #### 3.1. Using a Card Reader to Burn to microSD
 ##### Installing SDDiskTool
 
-To burn the image to eMMC, you need to use the SDDiskTool_版本号.exe tool.
+To burn the image to eMMC, use the `SDDiskTool_<version>.exe` tool.
 
 Click the following link to access it: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
 

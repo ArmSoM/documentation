@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for Storage Management. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Storage Management"]
+image: /img/armsom-social-card.png
 sidebar_label: "17. storage interface Usage"
 slug: /interface-usage/sdcard
 sidebar_position: 17
@@ -19,7 +22,7 @@ These appear as different types of block devices in Linux:
 | Storage Type    | Device Node       | Interface    |
 | -------- | ----------- | ----------- |
 | eMMC | /dev/mmcblk0           | Onboard |
-| SD卡 | /dev/mmcblk1          | SD Card Slot |
+| SD Card | /dev/mmcblk1 | SD Card Slot |
 | NVMe SSD | /dev/nvme0n1         | M.2 PCIe |
 | USB Drive | /dev/sda        | USB Port |
 

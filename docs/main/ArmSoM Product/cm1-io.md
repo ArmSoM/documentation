@@ -1,5 +1,5 @@
 ---
-description: CM1-IO是 ArmSoM CM1的 IO 板，尺寸为 100x80x29 毫米
+description: CM1-IO is the I/O board for the ArmSoM CM1 and measures 100 × 80 × 29 mm.
 keywords: [armsom, armsom-CM1, RK3506  Development Boards, RK3506 Core borad, rockchip]
 sidebar_label: "CM1-IO"
 sidebar_position: 6
@@ -50,7 +50,7 @@ The following text uses CM1 Kit to represent CM1+CM1-IO
 
 ## Interface usage
 
-If you are using CM1 Kit for the first time, please familiarize yourself with each product first [hardware interface](./armsom-cm1#硬件接口)
+If you are using the CM1 Kit for the first time, please familiarize yourself with each product's [hardware interface](./armsom-cm1#hardware-interface).
 
 ### Debug port
 

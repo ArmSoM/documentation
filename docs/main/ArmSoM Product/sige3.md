@@ -201,7 +201,7 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
     </summary>
 <div className='gpio_style'>
 
-| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
+| GPIO number | Function | Pin | Pin | Function | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
 | |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
 |108|   I2C5_SDA_M0 / PDM_SDI1_M2 / GPIO3_B4_d | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |   |      |

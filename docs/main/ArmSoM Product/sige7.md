@@ -107,7 +107,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
          <tr>
             <th>VPU/Codec</th>
-            <th><li>Hardware Decode: 8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>Hardware Encode:8K@30fps H.265 / H.264</li></th>
+            <th><li>Hardware decoding: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, and 1080P@60fps MPEG-2/-1/VC-1/VP8</li><li>Hardware encoding: 8K@30fps H.265 / H.264</li></th>
         </tr>
          <tr>
             <th>ISP</th>
@@ -501,7 +501,7 @@ Network disk address:
 |![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7(bpi-m7) :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian](https://github.com/armbian/community/releases/)     |
 |![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 |Arch Linux | Arch Linux Installer By kwankiu :    <br/>Arch Linux is an independently developed with the general-purpose of GNU/Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required. |Simply flash the image and follow the instructions prompted by the installer.<br/>NOTE: This installer requires an internet connection. (The Ethernet drivers may take some time to load and the installer will retry several times, this is normal.) [download](https://github.com/kwankiu/archlinux-installer/releases) | 
-| ![openSUSE](https://static.opensuse.org/favicon.svg) | 桌面用户、开发者以及系统管理员的匠之所选。| [download](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
+| ![openSUSE](https://static.opensuse.org/favicon.svg) | A polished choice for desktop users, developers, and system administrators. | [download](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
 |[lede](https://github.com/coolsnowwolf/lede) | lede for Sige7 :    <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/18QOdyAiE4nyGD_CU57gSvQolHOXH2x5A)  |
 | [LibreELEC](https://github.com/coolsnowwolf/lede) | LibreELEC.tv for Sige7 :    <br/>LibreELEC is a minimalist 'Just enough OS' Linux distribution for running Kodi.| [LibreELEC.tv](https://github.com/ShigeakiAsai/LibreELEC.tv/releases)  |
 

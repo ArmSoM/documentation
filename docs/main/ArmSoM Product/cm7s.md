@@ -40,7 +40,7 @@ armsom-cm7s v1.1 CN2 pins 2 and 4 aren't working, will be fixed in the next v1.2
 * **Power supply**：Input DC 5V (MAX 2500mA); Output DC 3.3V/1.8V (MAX 600mA)
 * **Size**：55 x 40 x 1.6 mm
 * **Input**：DC 5V MAX 2500mA
-* **Output**：DC 3.3V MAX 600mA 和 DC 1.8V MAX 600mA
+* **Output**: DC 3.3 V max. 600 mA and DC 1.8 V max. 600 mA
 * **PCB size**：55 x 40 x 1.6 mm (L x W x H)
 
 ## CM7s Hardware Info
@@ -62,7 +62,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 | **CPU Architecture**         | **Quad-core ARM Cortex-A76 & Quad-coreCortex-A55** | Quad-core ARM Cortex-A76   |
 | **GPU**                      | **ARM Mali-G610 MP4**                   | VideoCore VII                  |
 | **NPU**                      | **6 TOPS computing power**              | No built-in NPU                |
-| **Memory**                   | **Supports up to 32GB LPDDR4X**          | 2GB、4GB、8GB、16GB LPDDR4      |
+| **Memory**                   | **Supports up to 32GB LPDDR4X**          | 2GB, 4GB, 8GB, 16GB LPDDR4      |
 | **Storage**                  | eMMC storage (optional capacity)        | eMMC storage (optional capacity) |
 | **Display Output**           | 1x HDMI 2.1, 1x DP 1.4                  | 2x HDMI 2.0                    |
 | **Video Resolution**         | **Supports 8K@60fps**                   | Supports 4K@60fps              |
@@ -104,11 +104,11 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
         </tr>
         <tr>
             <th>NPU</th>
-            <th><li>6 TOPS@INT8</li><li>Supports INT4，INT8，INT16，FP16 Mixed operations</li><li>Supports deep learning frameworks:TensorFlow、PyTorch、Caffe,etc.</li></th>
+            <th><li>6 TOPS@INT8</li><li>Supports INT4, INT8, INT16, and FP16 mixed operations</li><li>Supports deep-learning frameworks: TensorFlow, PyTorch, Caffe, and more.</li></th>
         </tr>
          <tr>
             <th>VPU/Codec</th>
-            <th><li>Hardware decoding:Supports 8K@60fps (H.265/VP9/AVS2)、8K@30fps (H.264)、4K@60fps (AV1)。</li><li>Hard coding:8K@30fps (H.265/H.264)，Supports simultaneous editing and decoding</li></th>
+            <th><li>Hardware decoding: supports 8K@60fps (H.265/VP9/AVS2), 8K@30fps (H.264), and 4K@60fps (AV1).</li><li>Hardware encoding: 8K@30fps (H.265/H.264), with simultaneous encoding and decoding.</li></th>
         </tr>
          <tr>
             <th>ISP</th>
@@ -469,10 +469,10 @@ You can set up the CM7s as an interactive computer with a desktop, or as a headl
 * HDMI monitor and HDMI cable
 * Ethernet cable
 * Camera module
-  * For the 4lan camera, it's recommended to use the [camera-module1](./armsom-camera-module1) module（OV13850）。
-  * For the 2lan camera, it's recommended to use the [camera-module-v2](https://www.raspberrypi.com/products/camera-module-v2/) module（IMX219）。
+  * For the 4-lane camera, we recommend the [camera-module1](./armsom-camera-module1) module (OV13850).
+  * For the 2-lane camera, we recommend the [camera-module-v2](https://www.raspberrypi.com/products/camera-module-v2/) module (IMX219).
 * LCD display
-  * It's recommended to use the [Display 10 HD](./armsom-display-10-hd)。
+  * We recommend [Display 10 HD](./armsom-display-10-hd).
 * 3.5mm wired headphones.
 
 #### Power supply
@@ -1056,8 +1056,8 @@ For OEM & ODM, please contact: sales@armsom.org
 ## Expert Perspective
 
 <!-- - [itsfoss ArmSoM-CM5](https://itsfoss.com/armsom-cm5)：ArmSoM CM7s Powerful Replacement for Raspberry Pi CM4
-- [Technically Unsure](https://www.youtube.com/watch?v=pfsBDO3XehA&list=PLtGrcSFVfrfRbFqx8nbtYvVVwbHp_Nza4)：ArmSoM CM5 | 能否超越树莓派 CM5？
-- [Platima Tinkers](https://www.youtube.com/watch?v=p55ehXBBLPE)：ArmSoM CM5 评测：RK3576 计算模块，真正兼容 CM4
+- [Technically Unsure](https://www.youtube.com/watch?v=pfsBDO3XehA&list=PLtGrcSFVfrfRbFqx8nbtYvVVwbHp_Nza4): ArmSoM CM5 | Can it outperform Raspberry Pi CM5?
+- [Platima Tinkers](https://www.youtube.com/watch?v=p55ehXBBLPE): ArmSoM CM5 review: an RK3576 compute module with true CM4 compatibility
 - [sbc compare](https://sbc.compare/83-armsom-cm5-8gb): CM5  Benchmark Comparison on sbc.compare -->
 
 ## User Case

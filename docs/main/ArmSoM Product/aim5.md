@@ -19,7 +19,7 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
 
 - SOC: Rockchip RK3576
 - CPU: Integrated with quad core Cortex-A72 @ 2.2GHz and quad core Cortex-A53 @ 1.8GHz, as well as a separate NEON coprocessor.
-- GPU：ARM Mali G52 MC3 GPU。
+- GPU: ARM Mali G52 MC3 GPU.
 - NPU: With a computing power of up to 6TOPs (INT8), it supports mixed operations of INT4/INT8/INT16.
 - VPU/codec:
   - Hard decoding: Supports H.264, H.265, VP9, AV1, and AVS2, among others 8K@30fps or 4K@120fps The highest quality JPEG decoder 4K@60fps
@@ -113,7 +113,7 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
         AIM5 Hardware Spec
     </summary>
 
-| 规格                                 |  ArmSoM-AIM5              | Jetson Nano (NVIDIA)                |
+| Specification                        | ArmSoM-AIM5               | Jetson Nano (NVIDIA)                |
 |--------------------------------------|-----------------------------------|--------------------------------|
 | CPU  |<div className='armsom-color'>Quad-core ARM®Cortex®-A72 + Quad-core ARM®Cortex®-A53</div> | Quad-core ARM® Cortex®-A57 MPCore processor  | 
 | GPU        |  ARM Mali G52 MC3 GPU  |128-core Maxwell GPU  |
@@ -145,7 +145,7 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
     </summary>
 <div className='gpio_style'>
 
-| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
+| GPIO number | Function | Pin | Pin | Function | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
 |             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
 |     139     | SAI0_LRCK_M1/I2C3_SDA_M1/SPI0_CLK_M0/GPIO0_C7_d| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
@@ -381,9 +381,9 @@ Based on Debian bullseye works as official operating system by the ArmSom team.
 
 The following systems have been tested and verified by ArmSoM officially: 
 
-网盘地址：
+Baidu Netdisk:
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
-  <span>百度网盘链接</span>
+  <span>Baidu Netdisk link</span>
 </a>
 
 | logo  | Description  | Download|
@@ -430,6 +430,14 @@ Obtain hardware information such as development kit schematics, PCBs, DXF, etc.,
 </a>
 
 </div>
+
+## Product Certifications
+
+### CE / FCC / RoHS
+
+## Supply Statement
+
+ArmSoM-AIM5 will remain in production through at least August 2034.
 
 
 ## Purchase Samples 

@@ -267,7 +267,7 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
     </summary>
 0.5mm FPC connector(J12)
 
-|Pin |   MIPI-CSI |   描述   |
+| Pin | MIPI-CSI | Description |
  :--------: | :---------------------: | :--------: | 
 |1,4,7,10,13,16,24,25,26,27,32,33        |  GND       |   Power Ground &  Signal Ground |
 |2     | MIPI_DPHY_CSI1_RX_D3N   |     MIPI RX Lane3 iuput N |

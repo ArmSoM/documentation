@@ -758,7 +758,7 @@ root@armsom-cm5:/# dmesg | grep rtc
 root@armsom-cm5:/# hwclock -r
 2023-11-03 10:32:40.461910+00:00
 root@armsom-cm5:/# date
-2023年 11月 03日 星期五 10:33:12 UTC
+Fri Nov 03 2023 10:33:12 UTC
 root@armsom-cm5:/# hwclock -w
 root@armsom-cm5:/# hwclock -r
 root@armsom-cm5:/# poweroff
@@ -770,7 +770,7 @@ root@armsom-cm5:/# poweroff
 root@armsom-cm5:/# hwclock -r
 2023-11-03 10:35:40.461910+00:00
 root@armsom-cm5:/# date
-2023年 11月 03日 星期五 10:36:01 UTC
+Fri Nov 03 2023 10:36:01 UTC
 ```
 
 ### MIPI-CSI

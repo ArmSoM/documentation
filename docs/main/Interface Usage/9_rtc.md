@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for 9_rtc. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "9_rtc"]
+image: /img/armsom-social-card.png
 sidebar_label: "9. RTC Interface"
 slug: /interface-usage/rtc
 sidebar_position: 9
@@ -122,7 +125,7 @@ To view the current system time, use the `date` command:
 
 ```bash
 root@armsom-sige5:/home/armsom# date
-2025年 01月 04日 星期六 15:49:21 CST
+Sat Jan 04 2025 15:49:21 CST
 ```
 
 This indicates that the system time is 2025-01-04 15:49:21, in China Standard Time (CST).
@@ -153,7 +156,7 @@ After turning off the device and waiting for 3 minutes, reboot the system and ch
 
 ```bash
 root@armsom-sige5:/home/armsom# date   # Sync RTC to system time
-2025年 01月 04日 星期六 15:52:31 CST
+Sat Jan 04 2025 15:52:31 CST
 ```
 
 This shows that the system time was successfully updated from the RTC time.

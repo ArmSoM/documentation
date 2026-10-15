@@ -1,4 +1,7 @@
 ---
+description: "Official ArmSoM technical documentation for System backup. Find product specifications, configuration steps, usage guidance, and embedded development references."
+keywords: [ArmSoM, Rockchip, embedded Linux, development board, "System backup"]
+image: /img/armsom-social-card.png
 sidebar_label: "system backup"
 sidebar_position: 2
 slug: /build-system-image/backup
@@ -110,7 +113,7 @@ sudo rsync -avx root@192.168.100.123:/ rootfs
 lhd@armsom:~/3576_rootfs_test$ dd if=/dev/zero of=rk3576_rootfs.img  bs=1M count=7168
 ```
 
-**其中：**
+**Where:**
 
 * **/dev/zero：A special device file used to generate a file of a specified size with zero content**
 * **rk3576\_rootfs.img：The image file to be created**
@@ -127,7 +130,7 @@ lhd@armsom:~/3576_rootfs_test$ dd if=/dev/zero of=rk3576_rootfs.img  bs=1M count
 sudo mkfs.ext4 -F -L linuxroot rk3576_rootfs.img
 ```
 
-**This command will create an ext4 file system on the * * ` rk3576urootfs. img ` file, which can be used to store data or as a disk image file。
+**This command creates an ext4 filesystem on the `rk3576_rootfs.img` file, which can be used to store data or as a disk image file.**
 
 ### 1.2.5 Fill in image file
 
@@ -152,11 +155,11 @@ sudo umount rk3576_mork3576_rootfs_mountunt
 
 ```
 lhd@armsom:~/3576_rootfs_test$ sudo e2fsck -p -f rk3576_rootfs.img
-linuxroot: 97295/655360 文件（0.1% 不连续），1442978/2621440 块
+linuxroot: 97295/655360 files (0.1% non-contiguous), 1442978/2621440 blocks
 lhd@armsom:~/3576_rootfs_test$ sudo resize2fs -M rk3576_rootfs.img
 resize2fs 1.46.5 (30-Dec-2021)
-将 rk3576_rootfs.img 上的文件系统调整为 1556652 个块（每块 4k）。
-rk3576_rootfs.img 上的文件系统大小已经调整为 1556652 个块（每块 4k）。
+Resizing the filesystem on rk3576_rootfs.img to 1556652 (4k) blocks.
+The filesystem on rk3576_rootfs.img is now 1556652 (4k) blocks long.
 ```
 
 **Thus, a system image containing the complete original development board has been obtained**
