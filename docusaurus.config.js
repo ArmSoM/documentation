@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ArmSoM Documentation | Rockchip SBC, SoM & Embedded Linux',
   tagline: 'Documentation, hardware resources, and tutorials for ArmSoM Rockchip SBCs and system-on-modules.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/armsom-a-logo.png',
 
   // Set the production url of your site here
   url: 'https://docs.armsom.org',
@@ -90,20 +90,48 @@ const config = {
       ],
       // Replace with your project's social card
       image: 'img/armsom-social-card.png',
+      docs: {
+        sidebar: {autoCollapseCategories: true},
+      },
       navbar: {
-        title: 'ArmSoM',
+        title: '',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.png',
+          alt: 'ArmSoM',
+          src: 'img/armsom-wordmark.png',
+          width: 150,
+          height: 50,
         },
         items: [
           {
-            type: 'docSidebar',
+            to: '/',
+            activeBaseRegex: '^/(zh/?)?$',
             position: 'left',
-            sidebarId: 'main',
-            label: 'Main page',
+            label: 'Docs',
           }, 
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            label: 'Products',
+            position: 'left',
+            items: [
+              {to: '/armsom-sige7', label: 'Sige7 · RK3588'},
+              {to: '/armsom-sige5', label: 'Sige5 · RK3576'},
+              {to: '/armsom-cm5', label: 'CM5 · RK3576'},
+              {to: '/armsom-aim7', label: 'AIM7 · RK3588'},
+              {to: '/', label: 'All Products', activeBaseRegex: '^/(zh/?)?$'},
+            ],
+          },
+          {
+            label: 'Get Started',
+            position: 'left',
+            items: [
+              {to: '/getting-start/cloud-disk', label: 'Downloads'},
+              {to: '/getting-start/flash-img', label: 'Flash an Image'},
+              {to: '/getting-start/startup', label: 'Boot & Login'},
+              {to: '/sige-family-started', label: 'Sige Quick Start'},
+              {to: '/aim-family-started', label: 'AIM Quick Start'},
+            ],
+          },
+          {to: '/getting-start/cloud-disk', label: 'Downloads', position: 'left'},
+          {href: 'https://blog.armsom.org/', label: 'Blog', position: 'left', target: '_blank', rel: 'noopener noreferrer'},
           
           {
             type: "localeDropdown",
@@ -144,8 +172,9 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'https://docs.armsom.org/blog',
-                target: "_self",
+                href: 'https://blog.armsom.org/',
+                target: '_blank',
+                rel: 'noopener noreferrer',
               },
               {
                 label: 'Twitter',

@@ -1,8 +1,15 @@
 {
-  "item.label.Main page": {
-    "description": "Navbar item with label About",
-    "message": "首页"
-  },
+  "title": {"message": ""},
+  "item.label.Docs": {"message": "文档首页"},
+  "item.label.Products": {"message": "产品文档"},
+  "item.label.All Products": {"message": "全部产品"},
+  "item.label.Get Started": {"message": "快速入门"},
+  "item.label.Downloads": {"message": "资料下载"},
+  "item.label.Flash an Image": {"message": "烧录镜像"},
+  "item.label.Boot & Login": {"message": "启动与登录"},
+  "item.label.Sige Quick Start": {"message": "Sige 系列入门"},
+  "item.label.AIM Quick Start": {"message": "AIM 系列入门"},
+  "item.label.FAQ": {"message": "常见问题"},
   "item.label.Blog": {
     "description": "Navbar item with label About",
     "message": "博客"

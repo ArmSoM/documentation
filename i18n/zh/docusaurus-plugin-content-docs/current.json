@@ -1,9 +1,15 @@
 {
+    "sidebar.main.doc.Documentation Home": {"message": "文档首页"},
+    "sidebar.main.category.Community & Support": {"message": "社区与支持"},
+    "sidebar.main.link.Official Website": {"message": "官方网站"},
+    "sidebar.main.link.Blog": {"message": "博客"},
+    "sidebar.main.link.Forum": {"message": "社区论坛"},
+    "sidebar.main.link.bilibili": {"message": "哔哩哔哩"},
     "sidebar.main.category.Accessories": {
         "message": "配件"
     },
     "sidebar.main.category.Getting Started": {
-        "message": "通用教程"
+        "message": "快速入门"
     }, 
     "sidebar.main.category.Advanced Manual": {
         "message": "进阶手册"
@@ -12,7 +18,7 @@
         "message": "外设与接口"
     },
     "sidebar.main.category.ArmSoM Product": {
-        "message": "ArmSoM产品列表"
+        "message": "产品文档"
     },
     "sidebar.main.category.Build & Deploy": {
         "message": "系统构建与部署"
