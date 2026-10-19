@@ -260,7 +260,7 @@ CM7s-IO板是专为CM7s计算模块设计的扩展板，旨在帮助完成系统
 - MIPI CSI0：1x 4通道MIPI CSI，每条通道最高2.5Gbps
 - MIPI CSI1：1x 2通道MIPI CSI，每条通道最高2.5Gbps
 - 其他：HPOUT,FAN,VRTC
-- 尺寸：100 x 79 x 41 毫米 (3.94 x 3.11 x 1.6 英寸)
+- 尺寸：100 x 79 x 1.6 毫米 (3.94 × 3.11 × 0.06 英寸)
 - 重量:  65.2g
 
 ### 硬件接口
@@ -932,6 +932,13 @@ Format Video Capture Multiplanar:
            Size Image     : 4967424
 ```
 
+#### 安装 gst-launch-1.0
+- 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
+```bash
+root@armsom:/# apt-get update
+root@armsom:/# apt-get install gstreamer1.0*
+```
+
 #### 使用 ArmSoM camera-module1
 
 摄像头采用[camera-module1](./armsom-camera-module1)模组，摄像头模组连接并上电后可以查看启动日志。
@@ -949,23 +956,17 @@ root@armsom:/# dmesg | grep ov13850
 [    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
 [    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
-下述命令的的 /dev/video31 要根据实际注册的video节点来替换
+下述命令中的 /dev/video31 要根据实际注册的video节点来替换
 - 使用v4l2-ctl进行抓图
 ```bash
-// MIPI-CSI1
+// video31 或 video11
 root@armsom:/# systemctl restart rkaiq_3A.service
 root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-- 使用gst-launch-1.0进行抓图和抓视频，如果没有gst-launch-1.0，需要先下载
+- 预览（需接显示器实时预览）
 ```bash
-root@armsom:/# sudo apt-get update
-root@armsom:/# sudo apt-get install gstreamer1.0*
-```
-
-- 可以接上HDMI屏幕，使用下述命令实时预览
-```bash
-// MIPI-CSI1
+// video31 或 video11
 root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
@@ -982,16 +983,29 @@ root@armsom:/# dmesg | grep imx219
 [    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
 [    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
 ```
+确认驱动已加载后，运行以下命令拍照或录像，并实时预览。
 
-参考如下命令抓图,使用'Ctrl+C'中止抓图
+- 拍照
 ```bash
-root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1640,height=1232 ! jpegenc ! multifilesink location=photo.jpg
-```
+// video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
+```         
 
-参考如下命令抓视频
+- 拍摄视频
 ```bash
-root@armsom:/# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1640, height=1232, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
-```
+// video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=3280, height=2464, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
+```  
+
+- 预览（需接显示器实时预览）
+```bash
+// video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
+``` 
+
+:::tip
+由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
+:::
 
 ### 3.12 MIPI DSI
 

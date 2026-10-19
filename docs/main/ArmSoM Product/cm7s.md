@@ -258,7 +258,7 @@ The CM7s-IO board is an expansion board designed specifically for the CM7s compu
 - MIPI CSI0: 1x 4-lane MIPI CSI, up to 2.5Gbps per lane
 - MIPI CSI1: 1x 2-lane MIPI CSI, up to 2.5Gbps per lane
 - Others: HPOUT, FAN, VRTC
-- Dimensions: 100 x 79 x 41 mm (3.94 x 3.11 x 1.6 inches)
+- Dimensions: 100 x 79 x 1.6 mm (3.94 × 3.11 × 0.06 inches)
 - Weight: 65.2g
 
 ### Hardware interface
@@ -928,6 +928,13 @@ Format Video Capture Multiplanar:
            Size Image     : 4967424
 ```
 
+#### 安装 gst-launch-1.0
+- 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
+```bash
+root@armsom:/# apt-get update
+root@armsom:/# apt-get install gstreamer1.0*
+```
+
 #### Using the ArmSoM camera-module1
 
 This camera uses the [camera-module1](./armsom-camera-module1) module. After connecting and powering on the camera module, check the boot log.
@@ -948,20 +955,14 @@ root@armsom:/# dmesg | grep ov13850
 Replace `/dev/video31` in the commands below with the video node actually registered on your system.
 - Capture an image using `v4l2-ctl`.
 ```bash
-// MIPI-CSI1
+// video31 or video11
 root@armsom:/# systemctl restart rkaiq_3A.service
 root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-- Capture images and video using `gst-launch-1.0`. If `gst-launch-1.0` is not installed, install it first.
+- Preview (requires a monitor for real-time preview)
 ```bash
-root@armsom:/# sudo apt-get update
-root@armsom:/# sudo apt-get install gstreamer1.0*
-```
-
-- Connect an HDMI monitor and use the following command for live preview.
-```bash
-// MIPI-CSI1
+// video31 or video11
 root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
@@ -979,15 +980,29 @@ root@armsom:/# dmesg | grep imx219
 [    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
 ```
 
-Use the following command to capture images. Press `Ctrl+C` to stop capturing.
-```bash
-root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1640,height=1232 ! jpegenc ! multifilesink location=photo.jpg
-```
+After confirming the driver is loaded, run the following command to take a photo or record a video
 
-Use the following command to record video.
+- take a photo
 ```bash
-root@armsom:/# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1640, height=1232, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
-```
+video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
+```         
+
+- record a video
+```bash
+video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
+```           
+
+- Preview (requires a monitor for real-time preview)
+```bash
+video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
+```  
+
+:::tip
+Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
+:::
 
 ### 3.12 MIPI DSI
 

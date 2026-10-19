@@ -1354,7 +1354,7 @@ The ArmSoM-Sige6 will be produced at least until January 2036.
 ArmSoM online shop: 
 ArmSoM Aliexpress online shop: 
 
-ArmSoM Taobao shop: 
+ArmSoM Taobao shop: https://item.taobao.com/item.htm?id=1091107450553
 
 OEM&ODM, please contact: sales@armsom.org
 

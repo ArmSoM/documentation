@@ -1129,13 +1129,22 @@ root@armsom:~# dmesg | grep imx219
 3. After confirming the driver is loaded, run the following command to take a photo or record a video
 - take a photo
 ```bash
-root@armsom:~# gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=photo.jpg
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
 ```         
 
 - record a video
 ```bash
-root@armsom:~# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
 ```           
+
+- Preview (requires a monitor for real-time preview)
+```bash
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
+```  
+
+:::tip
+Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
+:::
 
 ![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 

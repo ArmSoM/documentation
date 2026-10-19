@@ -1114,17 +1114,25 @@ root@armsom:~# dmesg | grep imx219
 [    2.345391] imx219 8-0010: Consider updating driver imx219 to match on endpoints
 [    2.345406] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m01_f_imx219 8-0010:bus type 5
 ```
-3. 确认驱动加载以后，执行下面命令拍照或拍视频                                    
+3. 确认驱动已加载后，运行以下命令拍照或录像，并实时预览。                                    
 
 - 拍照
 ```bash
-root@armsom:~# gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=photo.jpg
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
 ```         
 
 - 拍摄视频
 ```bash
-root@armsom:~# gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/root/video.mp4
-```    
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
+```  
+
+- 预览（需接显示器实时预览）
+```bash
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
+```  
+:::tip
+由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
+:::
 
 ![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
