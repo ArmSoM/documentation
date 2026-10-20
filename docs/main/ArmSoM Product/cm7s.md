@@ -259,7 +259,7 @@ The CM7s-IO board is an expansion board designed specifically for the CM7s compu
 - MIPI CSI1: 1x 2-lane MIPI CSI, up to 2.5Gbps per lane
 - Others: HPOUT, FAN, VRTC
 - Dimensions: 100 x 79 x 1.6 mm (3.94 × 3.11 × 0.06 inches)
-- Weight: 65.2g
+- Weight: 60g
 
 ### Hardware interface
 
@@ -928,8 +928,8 @@ Format Video Capture Multiplanar:
            Size Image     : 4967424
 ```
 
-#### 安装 gst-launch-1.0
-- 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
+#### Install gst-launch-1.0
+- Check if the system has gst-launch-1.0 installed; if not, you'll need to install it first.
 ```bash
 root@armsom:/# apt-get update
 root@armsom:/# apt-get install gstreamer1.0*

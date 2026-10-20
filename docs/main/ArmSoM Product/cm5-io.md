@@ -775,35 +775,57 @@ Fri Nov 03 2023 10:36:01 UTC
 
 ### MIPI-CSI
 
+#### Enable Camera Configuration
+Before using a camera, enable the camera device-tree overlay by locating the following two lines:
+```bash
+root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm5-io.txt
+#dtoverlay=/dtb/overlay/rk3576-armsom-cm5-io-camera-imx219-cs0-overlay.dtbo
+#dtoverlay=/dtb/overlay/rk3576-armsom-cm5-io-camera-ov13850-cs1-overlay.dtbo
+```
+Uncomment the line for the camera you want to use, save the file, exit, and reboot.
+
 #### Basic Commands
+- First, check the device node name assigned to each camera in different situations:                      
+1. When both cameras are enabled at the same time, the IMX219 camera is usually `video22` and the OV13850 camera is usually `video31`.                 
+2. When only one camera is enabled, its node is usually `video11`.
+
+- View the media topology. When both cameras are enabled, the IMX219 camera is usually `media0` and the OV13850 camera is usually `media1`.
 
 ```bash
-// Check the video formats supported by the video node
-root@armsom:/# v4l2-ctl -d /dev/video22 --get-fmt-video
+root@armsom:/# media-ctl -d /dev/media1 -p
+```
+
+View the video formats supported by the video node.
+```bash
+root@armsom:~# v4l2-ctl -d /dev/video31 --get-fmt-video
 Format Video Capture Multiplanar:
         Width/Height      : 2112/1568
         Pixel Format      : 'NV12' (Y/UV 4:2:0)
         Field             : None
         Number of planes  : 1
         Flags             :
-        Colorspace        : Default
-        Transfer Function : Default
-        YCbCr/HSV Encoding: Default
+        Colorspace        : sRGB
+        Transfer Function : Rec. 709
+        YCbCr/HSV Encoding: Rec. 709
         Quantization      : Full Range
         Plane 0           :
            Bytes per Line : 2112
            Size Image     : 4967424
-
-// Check the topology
-root@armsom-cm5:/# media-ctl -d /dev/media2 -p
 ```
 
-#### Using ArmSoM Camera Module 1
+#### Install gst-launch-1.0
+- Check if the system has gst-launch-1.0 installed; if not, you'll need to install it first.
+```bash
+root@armsom:/# apt-get update
+root@armsom:/# apt-get install gstreamer1.0*
+```
 
-The camera uses the [camera-module1](./armsom-camera-module1) module. After connecting and powering the camera module, check the startup logs.
+#### Using the ArmSoM camera-module1
+
+This camera uses the [camera-module1](./armsom-camera-module1) module. After connecting and powering on the camera module, check the boot log.
 
 ```bash
-root@armsom-cm5:/# dmesg | grep ov13850
+root@armsom:/# dmesg | grep ov13850
 [    2.302905] ov13850 5-0010: driver version: 00.01.05
 [    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
 [    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
@@ -815,51 +837,57 @@ root@armsom-cm5:/# dmesg | grep ov13850
 [    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
 [    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
-
-Capture an image using `v4l2-ctl`
-
+Replace `/dev/video31` in the commands below with the video node actually registered on your system.
+- Capture an image using `v4l2-ctl`.
 ```bash
-// MIPI-CSI1
+// video31 or video11
 root@armsom:/# systemctl restart rkaiq_3A.service
-root@armsom:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-Record video using `gst-launch-1.0`
-
+- Preview (requires a monitor for real-time preview)
 ```bash
-// MIPI-CSI1
-root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+// video31 or video11
+root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
-
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-[ArmSoM camera-module1](./armsom-camera-module1)
 
 #### Using Raspberry Pi Camera Module 2
 
-The camera uses the [Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/) module. After connecting and powering the camera module, check the startup logs.
+This camera uses the [Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/) module. After connecting and powering on the camera module, check the boot log.
 
 ```bash
-root@armsom-cm5:/# dmesg | grep imx219
+root@armsom:/# dmesg | grep imx219
 [    4.049680] imx219 4-0010: driver version: 00.01.02
 [    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
 [    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
 [    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
 ```
 
-Capture an image using `v4l2-ctl`
+After confirming the driver is loaded, run the following command to take a photo or record a video
 
+- take a photo
 ```bash
-root@armsom-cm5:/# v4l2-ctl -d /dev/video11 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=1920,height=1080,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
-```
+video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
+```         
 
-Record video using `gst-launch-1.0`
-
+- record a video
 ```bash
-root@armsom-cm5:/# sudo apt-get update
-root@armsom-cm5:/# sudo apt-get install gstreamer1.0*
-root@armsom-cm5:/# gst-launch-1.0 v4l2src ! 'video/x-raw, format=NV12, width=1920, height=1080' ! autovideosink
-```
+video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
+```           
+
+- Preview (requires a monitor for real-time preview)
+```bash
+video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
+```  
+
+:::tip
+Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
+:::
 
 ### MIPI DSI
 

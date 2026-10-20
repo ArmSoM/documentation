@@ -758,28 +758,49 @@ root@armsom-cm5:/# date
 ```
 
 ### MIPI-CSI
+#### 开启摄像头配置
+要使用摄像头之前，需要先开启摄像头设备树overlay，分别找到如下两行：
+```bash
+root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm5-io.txt
+#dtoverlay=/dtb/overlay/rk3576-armsom-cm5-io-camera-imx219-cs0-overlay.dtbo
+#dtoverlay=/dtb/overlay/rk3576-armsom-cm5-io-camera-ov13850-cs1-overlay.dtbo
+```
+需要使用哪个摄像头，解除注释后保存退出，然后重启即可
 
 #### 基础命令使用
+- 我们需要先确认每款摄像头在不同情况下，被注册为的节点名：                      
+1. 若同时打开两款摄像头时，一般imx219摄像头为video22，ov13850摄像头为video31。                 
+2. 若分别单独打开某款摄像头时，一般都为video11。
+
+- 查看拓扑，同时打开两个摄像头时，一般imx219摄像头为media0，ov13850摄像头为media1
 
 ```bash
-// 查看video节点支持的视频格式
-root@armsom:/# v4l2-ctl -d /dev/video22 --get-fmt-video
+root@armsom:/# media-ctl -d /dev/media1 -p
+```
+
+查看video节点支持的视频格式
+```bash
+root@armsom:~# v4l2-ctl -d /dev/video31 --get-fmt-video
 Format Video Capture Multiplanar:
         Width/Height      : 2112/1568
         Pixel Format      : 'NV12' (Y/UV 4:2:0)
         Field             : None
         Number of planes  : 1
         Flags             :
-        Colorspace        : Default
-        Transfer Function : Default
-        YCbCr/HSV Encoding: Default
+        Colorspace        : sRGB
+        Transfer Function : Rec. 709
+        YCbCr/HSV Encoding: Rec. 709
         Quantization      : Full Range
         Plane 0           :
            Bytes per Line : 2112
            Size Image     : 4967424
+```
 
-// 查看拓扑
-root@armsom:/# media-ctl -d /dev/media2 -p
+#### 安装 gst-launch-1.0
+- 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
+```bash
+root@armsom:/# apt-get update
+root@armsom:/# apt-get install gstreamer1.0*
 ```
 
 #### 使用 ArmSoM camera-module1
@@ -799,46 +820,56 @@ root@armsom:/# dmesg | grep ov13850
 [    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
 [    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
-
-使用v4l2-ctl进行抓图
+下述命令中的 /dev/video31 要根据实际注册的video节点来替换
+- 使用v4l2-ctl进行抓图
 ```bash
-// MIPI-CSI1
+// video31 或 video11
 root@armsom:/# systemctl restart rkaiq_3A.service
-root@armsom:/# v4l2-ctl -d /dev/video22 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
 ```
 
-使用gst-launch-1.0可直接录像
+- 预览（需接显示器实时预览）
 ```bash
-// MIPI-CSI1
-root@armsom-cm5:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+// video31 或 video11
+root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-[ArmSoM camera-module1](./armsom-camera-module1)
 
 #### 使用 Raspberry Pi Camera Module 2
 
 摄像头采用[Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/)模组，摄像头模组连接并上电后可以查看启动日志。
 
 ```bash
-root@armsom-cm5:/# dmesg | grep imx219
+root@armsom:/# dmesg | grep imx219
 [    4.049680] imx219 4-0010: driver version: 00.01.02
 [    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
 [    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
 [    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
 ```
+确认驱动已加载后，运行以下命令拍照或录像，并实时预览。
 
-使用v4l2-ctl进行抓图
+- 拍照
 ```bash
-root@armsom-cm5:/# v4l2-ctl -d /dev/video11 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=1920,height=1080,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
-```
+// video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
+```         
 
-使用gst-launch-1.0可直接录像
+- 拍摄视频
 ```bash
-root@armsom-cm5:/# sudo apt-get update
-root@armsom-cm5:/# sudo apt-get install gstreamer1.0*
-root@armsom-cm5:/# gst-launch-1.0 v4l2src ! 'video/x-raw, format=NV12, width=1920, height=1080' ! autovideosink
-```
+// video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=3280, height=2464, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
+```  
+
+- 预览（需接显示器实时预览）
+```bash
+// video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
+``` 
+
+:::tip
+由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
+:::
 
 ### MIPI DSI
 
