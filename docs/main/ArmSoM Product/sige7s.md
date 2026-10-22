@@ -31,7 +31,7 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
   - **Hardware Decode**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
   - **Hardware Encode**: 8K@30fps H.265 / H.264
 - **RAM**: 2GB/4GB/8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x
-- **Storage**: 32GB/64GB/128GB eMMC Module
+- **Storage**: 32GB/64GB/128GB eMMC module, comes with a default 16MB flash
 - **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
@@ -1316,11 +1316,11 @@ root@armsom:~$ echo performance > /sys/class/devfreq/fdab0000.npu/governor
 The ArmSoM-Sige7s will be produced at least until January 2034.
 
 ## Purchase Samples 
-ArmSoM online shop: 
+ArmSoM online shop: [https://www.armsom.org/product-page/sige7s](https://www.armsom.org/product-page/sige7s)
  
-ArmSoM Aliexpress online shop: 
+ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/1005013466912805.html?gatewayAdapt=4itemAdapt](https://www.aliexpress.com/item/1005013466912805.html?gatewayAdapt=4itemAdapt)
 
-ArmSoM Taobao shop: 
+ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=1094853240285](https://item.taobao.com/item.htm?id=1094853240285)
 
 OEM&ODM, please contact: sales@armsom.org
 

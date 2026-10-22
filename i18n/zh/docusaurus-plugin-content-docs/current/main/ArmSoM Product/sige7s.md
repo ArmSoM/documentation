@@ -27,7 +27,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
   - **硬解码**：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - **硬编码**：8K@30fps H.265 / H.264
 - **RAM**：2GB/4GB/8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x
-- **Flash**：32GB/64GB/128GB eMMC Module
+- **Flash**：32GB/64GB/128GB eMMC Module, 默认贴了 16MB 的flash
 - **WIFI/BT**: 板载IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5
 - **工作电压**：具有宽范围的输入电压，从5V到23V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
@@ -1305,11 +1305,11 @@ root@armsom:~# echo performance > /sys/class/devfreq/fdab0000.npu/governor
 ArmSoM-Sige7s 将至少生产到 2034 年 1 月。
 
 ## 样品购买
-ArmSoM 独立站: [https://www.armsom.org/product-page/sige7](https://www.armsom.org/product-page/sige7)
+ArmSoM 独立站: [https://www.armsom.org/product-page/sige7s](https://www.armsom.org/product-page/sige7s)
  
-ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256806184323776.html](https://aliexpress.com/item/3256806184323776.html) 
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/1005013466912805.html?gatewayAdapt=4itemAdapt](https://www.aliexpress.com/item/1005013466912805.html?gatewayAdapt=4itemAdapt)
 
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=757023687970](https://item.taobao.com/item.htm?id=757023687970)
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=1094853240285](https://item.taobao.com/item.htm?id=1094853240285)
 
 OEM&ODM,  请联系: sales@armsom.org
 
