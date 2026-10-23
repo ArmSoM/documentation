@@ -265,7 +265,7 @@ CM7s-IO板是专为CM7s计算模块设计的扩展板，旨在帮助完成系统
 
 ### 硬件接口
 
-<!-- ![ArmSoM-CM7s-IO](/img/cm/cm5-io-layout.png) -->
+![ArmSoM-CM7s-IO](/img/cm/cm7s-io-layout.png)
 
 :::tip
 CM7s-IO Board 使用12V DC供电。
@@ -433,18 +433,16 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 以下系统已由ArmSoM官方测试验证：
 
-| logo  | Description  | Download|
+| logo  | Description | Cloud drive path |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| |
-|![Android](/img/sige/android.png) | Android14 for **CM7s-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。||
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.|   |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| `ArmSoM->ArmSoM-CM7s->软件资料` |
+|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| `ArmSoM->ArmSoM-CM7s->软件资料`  |
 
 ### 第三方镜像
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
 |![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  |   |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for **CM7s-IO** :    <br/> 该项目旨在为Rockchip RK3588s设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。|     |
 
 ## 使用手册
 ### 1. 入门准备

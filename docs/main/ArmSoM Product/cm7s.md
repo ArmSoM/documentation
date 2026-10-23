@@ -263,7 +263,7 @@ The CM7s-IO board is an expansion board designed specifically for the CM7s compu
 
 ### Hardware interface
 
-<!-- ![ArmSoM-CM7s-IO](/img/cm/cm5-io-layout.png) -->
+![ArmSoM-CM7s-IO](/img/cm/cm7s-io-layout.png)
 
 :::tip
 The CM7s-IO Board uses 12V DC power.
@@ -431,18 +431,16 @@ The ArmSoM team uses Debian bullseye as the official operating system.[How do I 
 
 The following systems have been officially tested and verified by ArmSoM:
 
-| logo  | Description  | Download|
+| logo  | Description  | Cloud drive path |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 brings thousands of new and updated packages, supporting a variety of desktop environments and processor architectures (including 32-bit and 64-bit PCs, ARM, MIPS, and PowerPC). But one of the biggest changes is that the Linux kernel has been upgraded from version 5.10 to 6.1 LTS.|  |
-|![Android](/img/sige/android.png) | Android14 for **CM7s-IO** :    <br/>The latest operating system upgrade makes your device more personalized, secure, and accessible. Improved photo quality, new themes, and AI-generated wallpapers. Privacy updates to protect your health, safety, and data. Accessibility features have also been expanded.|  |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04, code-named 'Jammy Jellyfish', is a version officially released by Canonical on April 21, 2022.|  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 brings thousands of new and updated packages, supporting a variety of desktop environments and processor architectures (including 32-bit and 64-bit PCs, ARM, MIPS, and PowerPC). But one of the biggest changes is that the Linux kernel has been upgraded from version 5.10 to 6.1 LTS.| `ArmSoM->ArmSoM-CM7s->software` |
+|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04, code-named 'Jammy Jellyfish', is a version officially released by Canonical on April 21, 2022.| `ArmSoM->ArmSoM-CM7s->software` |
 
 ### Third-party mirror
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
 |![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian is a computing build framework that lets users create ready-to-use images with working kernels based on various single-board computer configurations. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  |  |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for **CM7s-IO** :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started now by choosing the right Ubuntu server or desktop image and enjoy a familiar environment.|      |
 
 ## User Manual
 ### 1. Preparation for getting started

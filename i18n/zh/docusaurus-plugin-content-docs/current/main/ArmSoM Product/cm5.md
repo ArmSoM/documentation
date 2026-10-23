@@ -194,8 +194,8 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 
 ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
 
-<a href="https://pan.baidu.com/s/1Cl3m1eBwcBnNsEkdmXg7GA?pwd=hv4b" class="btn">
-  <span>ArmSoM-CM5&raspberrypi-CM4&BPI-CM4 Pinlist对比表</span>
+<a href="https://pan.baidu.com/s/13ZHVfhHGArRcUMR9A69FGA?pwd=arms" class="btn">
+  <span>ArmSoM-CM5(RK3576)&Raspberry-CM4-CM5 Pinlist对比表</span>
 </a>
 <br/>
 
@@ -275,15 +275,15 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM5-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| **CM5-IO**:[百度网盘](https://pan.baidu.com/s/1MOrCsh5ef4wPTUN4a_WQMQ?pwd=iukg)    <br/>  **CM5-RPI-CM4-IO**:[百度网盘](https://pan.baidu.com/s/1reSm5fJcRUF2dfGDX3XQLw?pwd=arms) |
-|![Android](/img/sige/android.png) | Android14 for **CM5-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)  |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM5-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| [百度网盘](https://pan.baidu.com/s/1H4_mkVE4jwSK6ufP5MRpbQ?pwd=arms)  |
+|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM5-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| **CM5-IO**:[百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms)    <br/>  **CM5-RPI-CM4-IO**:[百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms) |
+|![Android](/img/sige/android.png) | Android14 for **CM5-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms)  |
+|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM5-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| [百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms)  |
 
 ### 第三方镜像
 
@@ -294,15 +294,15 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 ### 硬件资料
 
-<a href="https://pan.baidu.com/s/17kzaNI43PizM5xRj95umLQ?pwd=a61j" class="btn">
+<a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="btn">
   <span>CM5 硬件资料</span>
 </a>
 <br/>
 
-[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms) - 引脚功能表格下载
+[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms) - 引脚功能表格下载
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1Ks4Fmj5Vc8iW1p88cYt0ug?pwd=7k8h" class="card-link">
+    <a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -313,7 +313,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
             </div>
         </div>
     </a>
-    <a href="https://pan.baidu.com/s/1GEicsdw1GANgWJBXLiyTdg?pwd=wfxn" class="card-link">
+    <a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📗</i>
@@ -324,7 +324,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
             </div>
         </div>
 </a>
-<a href="https://pan.baidu.com/s/1HJdf25HnlB-lZjcKeHs7rQ?pwd=643d" class="card-link">
+<a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
