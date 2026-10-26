@@ -34,11 +34,12 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 * **CPU**：8核64位（4×Cortex-A76@2.4GHz + 4×Cortex-A55@1.8GHz）
 * **GPU**：ARM Mali-G610 3D GPU，支持 OpenGL ES3.2 / OpenCL 2.2 / Vulkan 1.2
 * **NPU**：6TOPS 算力，支持 INT4/INT8/INT16 混合运算
-* **RAM**：2/4/8/16/32GB LPDDR4/4X
+* **RAM**：支持 4GB/8GB/16GB/32GB LPDDR4/LPDDR4x
 * **eMMC**：32/64/128/256GB eMMC
 * **接口**：板载 3×100pin 连接器（DF40C-100DP-04V），支持 Type-C/DP1.4、HDMI 2.1/eDP1.3、MIPI DPHY/CSI、USB3.0/2.0、SATA III/PCIe2.0、SDIO3.0/RGMII、SDMMC 及 I2C/I2S/UART/SPI/CAN/PWM/GPIO 等复用总线与控制引脚
 * **电源**：输入 DC 5V (MAX 2500mA)；输出 DC 3.3V/1.8V (MAX 600mA)
 * **尺寸**：55 x 40 x 1.6 毫米
+* **工作温度**：0℃ ~ 80 ℃
 * **输入**：DC 5V MAX 2500mA
 * **输出**：DC 3.3V MAX 600mA 和 DC 1.8V MAX 600mA
 * **PCB尺寸**：55 x 40 x 1.6 毫米（长 x 宽 x 厚）
@@ -115,7 +116,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>4GB/8GB/16GB 32GB LPDDR4/LPDDR4x/LPDDR5，默认LPDDR5 8GB</li></th>
+            <th><li>支持 4GB/8GB/16GB/32GB LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>

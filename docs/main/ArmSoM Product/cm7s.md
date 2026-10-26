@@ -34,11 +34,12 @@ armsom-cm7s v1.1 CN2 pins 2 and 4 aren't working, will be fixed in the next v1.2
 * **CPU**：8-core 64-bit（4×Cortex-A76@2.4GHz + 4×Cortex-A55@1.8GHz）
 * **GPU**：ARM Mali-G610 3D GPU，supports OpenGL ES3.2 / OpenCL 2.2 / Vulkan 1.2
 * **NPU**：6 TOPS computing power, supports mixed INT4/INT8/INT16 operations
-* **RAM**：2/4/8/16/32GB LPDDR4/4X
+* **RAM**：Supports 4GB/8GB/16GB/32GB LPDDR4/LPDDR4x
 * **eMMC**：32/64/128/256GB eMMC
 * **interface**：On-board 3×100-pin connector (DF40C-100DP-04V), supports multiplexed buses and control pins like Type-C/DP1.4, HDMI 2.1/eDP1.3, MIPI DPHY/CSI, USB 3.0/2.0, SATA III/PCIe 2.0, SDIO 3.0/RGMII, SDMMC, and I2C/I2S/UART/SPI/CAN/PWM/GPIO.
 * **Power supply**：Input DC 5V (MAX 2500mA); Output DC 3.3V/1.8V (MAX 600mA)
 * **Size**：55 x 40 x 1.6 mm
+* **Operating temperature**：0℃ ~ 80 ℃
 * **Input**：DC 5V MAX 2500mA
 * **Output**: DC 3.3 V max. 600 mA and DC 1.8 V max. 600 mA
 * **PCB size**：55 x 40 x 1.6 mm (L x W x H)
@@ -116,7 +117,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>4GB/8GB/16GB 32GB LPDDR4/LPDDR4x/LPDDR5，default is LPDDR5 8GB</li></th>
+            <th><li>Supports 4GB/8GB/16GB/32GB LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>
