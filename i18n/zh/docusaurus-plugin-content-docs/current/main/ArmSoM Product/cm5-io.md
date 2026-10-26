@@ -5,6 +5,9 @@ sidebar_label: "CM5-IO"
 sidebar_position: 6
 slug: /armsom-cm5-io
 image: /img/cm/cm5-io-layout.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # CM5-IO 产品简介

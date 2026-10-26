@@ -5,6 +5,9 @@ keywords: [armsom, armsom-lm7, armsom-w3, maker kit, rockchip, rk3588]
 sidebar_label: "LM7"
 sidebar_position: 4
 slug: /armsom-lm7
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # LM7 产品简介

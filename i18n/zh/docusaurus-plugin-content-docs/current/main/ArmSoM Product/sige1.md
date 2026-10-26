@@ -5,6 +5,9 @@ sidebar_label: "Sige1"
 sidebar_position: 2
 slug: /armsom-sige1
 image: /img/sige/sige1-bananer.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Sige1 产品简介

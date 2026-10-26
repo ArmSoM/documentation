@@ -5,6 +5,9 @@ sidebar_label: "Sige5"
 sidebar_position: 2
 slug: /armsom-sige5
 image: /img/sige/sige5.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Sige5 产品简介

@@ -5,6 +5,9 @@ sidebar_label: "CM7s"
 sidebar_position: 5
 slug: /armsom-cm7s
 image: /img/cm/armsom-cm7s.jpg
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # ArmSoM-CM7s 产品简介
@@ -504,7 +507,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 如果您是首次使用 CM7s Kit，请先熟悉下各产品 [CM7s硬件接口](./armsom-cm7s#硬件接口) 和 [CM7s-IO硬件接口](./armsom-cm7s#硬件接口-1)，以便于您更好的理解后续的内容。
 
-### 3.1 调试串口
+#### 3.1 调试串口
 
 使用USB转串口芯片（CH340）连接 TTL 串口线到 CM7s-IO 上 40pin ：
 
@@ -523,7 +526,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
  - 流控：无
 :::
 
-### 3.2 以太网口
+#### 3.2 以太网口
 
 1. 首先将网线的一端插入 ArmSoM-CM7s-IO 的以太网接口，网线的另一端接入路由器，并确保
 网络是畅通的
@@ -586,7 +589,7 @@ rtt min/avg/max/mdev = 311.040/311.447/311.866/0.296 ms
 只有普通用户需要使用sudo，root用户不需要
 :::
 
-### 3.3 HDMI
+#### 3.3 HDMI
 
 CM7s-IO 最高支持hdmi 8Kp60
 
@@ -599,7 +602,7 @@ CM7s-IO 最高支持hdmi 8Kp60
 当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
 :::
 
-#### HDMI 转 VGA 显示测试
+##### HDMI 转 VGA 显示测试
 1. 需要准备下面的配件
 - HDMI 转 VGA 转换器
 - 一根 VGA 线，支持 VGA 接口的显示器
@@ -612,14 +615,14 @@ CM7s-IO 最高支持hdmi 8Kp60
 使用 HDMI 转 VGA 显示时，CM5 Kit 和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
 :::
 
-### 3.4 USB
+#### 3.4 USB
 
-#### 连接 USB 鼠标或键盘测试
+##### 连接 USB 鼠标或键盘测试
 1. 将 USB 接口的键盘插入CM7s的 USB 接口中
 2. 连接CM7s到 HDMI显示器
 3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
 
-#### 连接 USB 存储设备测试
+##### 连接 USB 存储设备测试
 1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-CM7s 的 USB 接口中
 2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
 ```bash
@@ -643,7 +646,7 @@ armsom@armsom:/$ df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /test
 ```
 
-### 3.5 M.2 Key M
+#### 3.5 M.2 Key M
 
 CM7s-IO 提供 M.2 Key M 连接器：
 
@@ -656,7 +659,7 @@ root@armsom:/# mkdir temp
 root@armsom:/# mount /dev/nvme0n1 temp
 ```
 
-### 3.6 Micro SD card slot
+#### 3.6 Micro SD card slot
 
 CM7s-IO 板载标准的 microSD 卡槽,主要用作系统启动盘或扩展存储空间。
 
@@ -704,9 +707,9 @@ bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
 boot  etc  lib   media       opt  root  sbin  srv   sys       usr
 ```
 
-### 3.7 音频
+#### 3.7 音频
 
-#### 1. 查看系统中的声卡。
+##### 1. 查看系统中的声卡。
 
 ```bash
 root@armsom:~# aplay -l
@@ -723,7 +726,7 @@ card 2: rockchipes8388 [rockchip,es8388], device 0: dailink-multicodecs ES8323 H
 ```
 列出的声卡信息中， `card 2: rockchipes8388` 为 CM7s-IO 板载的 es8388 音频编解码器，用于板载 MIC 麦克风（录制音频）和板载 HPOUT 3.5mm 耳机座子（耳机播放音频）。
 
-#### 2. 配置音频相关控件
+##### 2. 配置音频相关控件
 在测试录音和播放之前，我们先执行下面命令，配置音频
 - 配置板载麦克风
 ```bash
@@ -738,24 +741,24 @@ armsom@armsom:~$ amixer -c 2 cset numid=34 30,30    # OUT1 模拟音量（左右
 armsom@armsom:~$ amixer -c 2 cset numid=55 on       # 打开 OUT1 输出通道 （默认关闭）
 ```
 
-#### 3. 录制音频
+##### 3. 录制音频
 通过板载MIC麦克风录音，使用 arecord 命令录制音频。
 ```bash
 armsom@armsom:~$ arecord -D hw:2,0 -f S16_LE -r 44100 -c 2 -d 5 /tmp/record.wav
 Recording WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
-#### 4. 播放音频
+##### 4. 播放音频
 接入3.5mm 耳机座子,连接3.5mm圆孔耳机，使用 aply 命令播放音频
 ```bash
 armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
 Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-### 3.8 40 PIN
+#### 3.8 40 PIN
 
 CM7s 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
-#### wiring-armbian 的方法
+##### wiring-armbian 的方法
 
 下载 wiringOP 的代码到开发板 [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
@@ -832,7 +835,7 @@ root@armsom:/wiring-armbian# gpio read 5
 
 - 其他引脚的设置方法类似，只需修改 wPi 的序号为引脚对应的序号即可
 
-### 3.9 RGB LED
+#### 3.9 RGB LED
 
 CM7s 有一个用户（绿灯）和一个电源指示灯（红灯）。
 
@@ -850,7 +853,7 @@ armsom@armsom:~$ echo 1 > /sys/class/leds/led-green-usr/brightness （常亮）
 armsom@armsom:~$ echo heartbeat > /sys/class/leds/led-green-usr/trigger （恢复为心跳灯）
 ```
 
-### 3.10 RTC
+#### 3.10 RTC
 
 - CM7s 板内集成一颗RTC时钟芯片 **LK8563S**，同时 CM7s-IO 上板载了一个VRTC座子，用于接RTC电池。
 
@@ -892,8 +895,8 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 2026-04-28 07:26:02.198445+08:00
 ```
 
-### 3.11 MIPI-CSI
-#### 开启摄像头配置
+#### 3.11 MIPI-CSI
+##### 开启摄像头配置
 要使用摄像头之前，需要先开启摄像头设备树overlay，分别找到如下两行：
 ```bash
 root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
@@ -902,7 +905,7 @@ root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
 ```
 需要使用哪个摄像头，解除注释后保存退出，然后重启即可
 
-#### 基础命令使用
+##### 基础命令使用
 - 我们需要先确认每款摄像头在不同情况下，被注册为的节点名：                      
 1. 若同时打开两款摄像头时，一般imx219摄像头为video22，ov13850摄像头为video31。                 
 2. 若分别单独打开某款摄像头时，一般都为video11。
@@ -931,14 +934,14 @@ Format Video Capture Multiplanar:
            Size Image     : 4967424
 ```
 
-#### 安装 gst-launch-1.0
+##### 安装 gst-launch-1.0
 - 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
 ```bash
 root@armsom:/# apt-get update
 root@armsom:/# apt-get install gstreamer1.0*
 ```
 
-#### 使用 ArmSoM camera-module1
+##### 使用 ArmSoM camera-module1
 
 摄像头采用[camera-module1](./armsom-camera-module1)模组，摄像头模组连接并上电后可以查看启动日志。
 
@@ -971,7 +974,7 @@ root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=N
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
 
-#### 使用 Raspberry Pi Camera Module 2
+##### 使用 Raspberry Pi Camera Module 2
 
 摄像头采用[Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/)模组，摄像头模组连接并上电后可以查看启动日志。
 
@@ -1006,7 +1009,7 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
 :::
 
-### 3.12 MIPI DSI
+#### 3.12 MIPI DSI
 
 CM7s MIPI-DSI 分辨率最高分辨率可达 2K@60Hz
 

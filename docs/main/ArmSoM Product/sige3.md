@@ -5,6 +5,9 @@ sidebar_label: "Sige3"
 sidebar_position: 2
 slug: /armsom-sige3
 image: /img/sige/sige3-bananer.jpg
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Product Introduction: Sige3

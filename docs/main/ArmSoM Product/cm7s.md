@@ -5,6 +5,9 @@ sidebar_label: "CM7s"
 sidebar_position: 5
 slug: /armsom-cm7s
 image: /img/cm/armsom-cm7s.jpg
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # ArmSoM-CM7s Product Introduction
@@ -502,7 +505,7 @@ You can set up the CM7s as an interactive computer with a desktop, or as a headl
 
 If this is your first time using the CM7s Kit, please get familiar with the products first. [CM7s Hardware interface](./armsom-cm7s#hardware-interface) and [CM7s-IO Hardware interface](./armsom-cm7s#hardware-interface-1)，so that you can better understand the following content.
 
-### 3.1 Debugging Serial Port
+#### 3.1 Debugging Serial Port
 
 Use a USB-to-serial chip (CH340) to connect the TTL serial cable to the 40-pin on CM7s-IO:
 
@@ -521,7 +524,7 @@ Serial Communication Parameters
 - Flow control: None
 :::
 
-### 3.2 Ethernet Port
+#### 3.2 Ethernet Port
 
 1. First, plug one end of the Ethernet cable into the ArmSoM-CM7s-IO's Ethernet port, and plug the other end into the router, making sure the network is working properly.
 2. Once the system starts, it will automatically assign an IP address to the Ethernet card via DHCP, with no other configuration needed.
@@ -582,7 +585,7 @@ rtt min/avg/max/mdev = 311.040/311.447/311.866/0.296 ms
 Only regular users need to use sudo; root does not.
 :::
 
-### 3.3 HDMI
+#### 3.3 HDMI
 
 CM7s-IO supports HDMI up to 8Kp60.
 
@@ -595,7 +598,7 @@ Before connecting the development board's HDMI output to a laptop, make sure the
 If there is no HDMI display, first check whether the installed system includes a desktop environment. A server version displays only the terminal.
 :::
 
-#### HDMI-to-VGA Display Test
+##### HDMI-to-VGA Display Test
 1. Prepare the following accessories:
 - HDMI-to-VGA adapter
 - A VGA cable and a monitor with a VGA port
@@ -608,14 +611,14 @@ If there is no HDMI display, first check whether the installed system includes a
 When using HDMI-to-VGA display output, no settings are required on the CM5 Kit or in Linux; the development board's HDMI output only needs to work properly. If the test fails, check the HDMI-to-VGA adapter, VGA cable, and monitor.
 :::
 
-### 3.4 USB
+#### 3.4 USB
 
-#### Testing with a USB Mouse or Keyboard
+##### Testing with a USB Mouse or Keyboard
 1. Connect a USB keyboard to a USB port on the CM7s.
 2. Connect the CM7s to an HDMI monitor.
 3. If the mouse or keyboard can operate the system normally, the USB port is working properly (a mouse can only be used with a desktop system).
 
-#### Testing with a USB Storage Device
+##### Testing with a USB Storage Device
 1. First, connect a USB flash drive or USB external hard drive to a USB port on the ArmSoM-CM7s.
 2. Run the following command. If an `sdX` device appears in the output, the USB drive has been detected successfully.
 ```bash
@@ -639,7 +642,7 @@ armsom@armsom:/$ df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /test
 ```
 
-### 3.5 M.2 Key M
+#### 3.5 M.2 Key M
 
 The CM7s-IO provides an M.2 Key M connector:
 
@@ -652,7 +655,7 @@ root@armsom:/# mkdir temp
 root@armsom:/# mount /dev/nvme0n1 temp
 ```
 
-### 3.6 Micro SD card slot
+#### 3.6 Micro SD card slot
 
 The CM7s-IO has a standard onboard microSD card slot, primarily used as a system boot drive or for additional storage.
 
@@ -700,9 +703,9 @@ bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
 boot  etc  lib   media       opt  root  sbin  srv   sys       usr
 ```
 
-### 3.7 Audio
+#### 3.7 Audio
 
-#### 1. View the system's sound cards.
+##### 1. View the system's sound cards.
 
 ```bash
 root@armsom:~# aplay -l
@@ -719,7 +722,7 @@ card 2: rockchipes8388 [rockchip,es8388], device 0: dailink-multicodecs ES8323 H
 ```
 In the listed sound cards, `card 2: rockchipes8388` is the onboard ES8388 audio codec on the CM7s-IO. It is used with the onboard MIC microphone for recording and the onboard 3.5 mm HPOUT headphone jack for audio playback.
 
-#### 2. Configure Audio Controls
+##### 2. Configure Audio Controls
 Before testing recording and playback, run the following commands to configure the audio.
 - Configure the onboard microphone
 ```bash
@@ -734,24 +737,24 @@ armsom@armsom:~$ amixer -c 2 cset numid=34 30,30    # OUT1 analog volume (left a
 armsom@armsom:~$ amixer -c 2 cset numid=55 on       # Enable the OUT1 output channel (disabled by default)
 ```
 
-#### 3. Record Audio
+##### 3. Record Audio
 Record audio using the onboard MIC microphone and the `arecord` command.
 ```bash
 armsom@armsom:~$ arecord -D hw:2,0 -f S16_LE -r 44100 -c 2 -d 5 /tmp/record.wav
 Recording WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
-#### 4. Play Audio
+##### 4. Play Audio
 Connect headphones with a 3.5 mm plug to the 3.5 mm headphone jack, then use the `aplay` command to play audio.
 ```bash
 armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
 Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-### 3.8 40 PIN
+#### 3.8 40 PIN
 
 The CM7s provides a 40-pin GPIO header that is compatible with most commonly available sensor applications.
 
-#### Using wiring-armbian
+##### Using wiring-armbian
 
 Download the wiringOP source code to the development board: [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
@@ -828,7 +831,7 @@ root@armsom:/wiring-armbian# gpio read 5
 
 - Other pins can be configured in the same way; simply change the wPi number to the number corresponding to the desired pin.
 
-### 3.9 RGB LED
+#### 3.9 RGB LED
 
 The CM7s has a user LED (green) and a power indicator LED (red).
 
@@ -846,7 +849,7 @@ armsom@armsom:~$ echo 1 > /sys/class/leds/led-green-usr/brightness (on continuou
 armsom@armsom:~$ echo heartbeat > /sys/class/leds/led-green-usr/trigger (restore heartbeat mode)
 ```
 
-### 3.10 RTC
+#### 3.10 RTC
 
 - The CM7s integrates an **LK8563S** RTC chip. The CM7s-IO also has an onboard VRTC connector for an RTC battery.
 
@@ -888,8 +891,8 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 2026-04-28 07:26:02.198445+08:00
 ```
 
-### 3.11 MIPI-CSI
-#### Enable Camera Configuration
+#### 3.11 MIPI-CSI
+##### Enable Camera Configuration
 Before using a camera, enable the camera device-tree overlay by locating the following two lines:
 ```bash
 root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
@@ -898,7 +901,7 @@ root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
 ```
 Uncomment the line for the camera you want to use, save the file, exit, and reboot.
 
-#### Basic Commands
+##### Basic Commands
 - First, check the device node name assigned to each camera in different situations:                      
 1. When both cameras are enabled at the same time, the IMX219 camera is usually `video22` and the OV13850 camera is usually `video31`.                 
 2. When only one camera is enabled, its node is usually `video11`.
@@ -927,14 +930,14 @@ Format Video Capture Multiplanar:
            Size Image     : 4967424
 ```
 
-#### Install gst-launch-1.0
+##### Install gst-launch-1.0
 - Check if the system has gst-launch-1.0 installed; if not, you'll need to install it first.
 ```bash
 root@armsom:/# apt-get update
 root@armsom:/# apt-get install gstreamer1.0*
 ```
 
-#### Using the ArmSoM camera-module1
+##### Using the ArmSoM camera-module1
 
 This camera uses the [camera-module1](./armsom-camera-module1) module. After connecting and powering on the camera module, check the boot log.
 
@@ -967,7 +970,7 @@ root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=N
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
 
-#### Using Raspberry Pi Camera Module 2
+##### Using Raspberry Pi Camera Module 2
 
 This camera uses the [Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/) module. After connecting and powering on the camera module, check the boot log.
 
@@ -1003,7 +1006,7 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
 :::
 
-### 3.12 MIPI DSI
+#### 3.12 MIPI DSI
 
 The CM7s MIPI-DSI interface supports resolutions up to 2K@60Hz.
 

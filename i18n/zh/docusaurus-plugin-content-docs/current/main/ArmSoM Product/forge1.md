@@ -5,6 +5,9 @@ keywords: [armsom, armsom-forge1, maker kit, rockchip, rk3506产品介绍]
 sidebar_label: "Forge1"
 sidebar_position: 10
 slug: /armsom-forge1
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Forge1 产品简介

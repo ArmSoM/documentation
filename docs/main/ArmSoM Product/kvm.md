@@ -5,6 +5,9 @@ sidebar_label: "KVM"
 sidebar_position: 11
 slug: /armsom-kvm
 image: /img/link/armsom-kvm-interface.jpg
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Product Introduction

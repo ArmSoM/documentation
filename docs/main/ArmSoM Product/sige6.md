@@ -5,6 +5,9 @@ sidebar_label: "Sige6"
 sidebar_position: 2
 slug: /armsom-sige6
 image: /img/sige/sige6-bananer.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 
@@ -450,7 +453,7 @@ If this is your first time using the ArmSoM-Sige6 product, please get familiar w
 | Hardware interfaces  | [Sige6](./armsom-sige6#hardware-interface) |
 | --------------- | ----- | 
 
-### 3.1 Debugging the serial port
+#### 3.1 Debugging the serial port
 
 Connect the USB to TTL serial cable to the socket marked "Debug" on the baseboard as shown below:
 
@@ -471,7 +474,7 @@ Serial communication parameters
  - Flow control: None
 :::
 
-### 3.2 Ethernet Port
+#### 3.2 Ethernet Port
 
 1. First, plug one end of the network cable into the ArmSoM-Sige6 Ethernet port, connect the other end to the router, and make sure to do so The internet is unobstructed
 2. After system startup, it automatically assigns an IP address to the Ethernet card via DHCP, requiring no additional configuration
@@ -529,7 +532,7 @@ PING www.a.shifen.com (103.235.46.115) from 192.168.1.181 eth0: 56(84) bytes of 
 rtt min/avg/max/mdev = 153.526/160.843/170.917/6.311 ms
 ```
 
-### 3.3 WIFI
+#### 3.3 WIFI
 
 All ArmSoM-Sige series products are onboard WIFI modules, do not require external network ports, and use[standard 4th generation antennas](https://www.armsom.org/product-page/sige7-metal-shell)
 
@@ -693,7 +696,7 @@ rtt min/avg/max/mdev = 164.471/182.364/194.691/12.950 ms
 </div>
 
 
-### 3.4 BT
+#### 3.4 BT
 1. Before using the Bluetooth feature, let's first check if the Bluetooth device node exists to 
 make sure Bluetooth initializes properly.
 ```bash
@@ -793,7 +796,7 @@ If you encounter the following error when connecting, try actively connecting to
 After a successful connection, it shows connected on the phone:          
 ![sige-bt-connect](/img/general-tutorial/sige-bt-connecten.png)
 
-### 3.5 HDMI
+#### 3.5 HDMI
 
 | Model |Sige7 | Sige6 | Sige5  | Sige3 | Sige1 |
 | ----- |  ----- | ------ | ------ |----- | ----- |
@@ -806,7 +809,7 @@ After a successful connection, it shows connected on the phone:
 Note that although many laptops have HDMI ports, their HDMI ports generally only provide output functions and do not have HDMI in functionality, meaning they cannot display other devices' HDMI outputs on the laptop's screen. When you want to connect the HDMI port from the development board to the laptop's HDMI port, please first confirm that your laptop supports HDMI IN functionality. If HDMI does not display, please first check whether the system you are using is the desktop version; if it is the server version, only the terminal is visible
 :::
 
-#### HDMI to VGA display test
+##### HDMI to VGA display test
 1. You need to prepare the following accessories
 - HDMI to VGA converter
 - A VGA cable supporting a VGA interface monitor
@@ -819,7 +822,7 @@ Note that although many laptops have HDMI ports, their HDMI ports generally only
 When using HDMI to VGA display, ArmSoM-Sige products and Linux systems require no configuration; the development board's HDMI port can display normally. So if the test shows problems, check the HDMI to VGA converter, VGA cable, and monitor for any issues.
 :::
 
-### 3.6 USB
+#### 3.6 USB
 
 |  Model  |Sige6 |
 | ----- |  ----- | 
@@ -829,7 +832,7 @@ When using HDMI to VGA display, ArmSoM-Sige products and Linux systems require n
 USB ports allow you to connect a USB hub to expand the number of USB ports.
 :::
 
-#### Connect a USB mouse or keyboard for testing
+##### Connect a USB mouse or keyboard for testing
 1. Insert the keyboard with a USB interface into the USB port of the ArmSoM-Sige product
 2. Connect ArmSoM-Sige products to HDMI monitors
 3. If the mouse or keyboard works properly, the operating system means the USB port is working properly (the mouse can only be used on desktop systems).
@@ -838,7 +841,7 @@ USB ports allow you to connect a USB hub to expand the number of USB ports.
 Note: When connecting a mouse or keyboard, only USB 2.0 ports are allowed; USB 3.0 ports are not allowed
 :::
 
-#### Testing by connecting USB storage devices
+##### Testing by connecting USB storage devices
 1. First, insert a USB drive or USB external hard drive into the USB port of the ArmSoM-Sige product
 2. If you see the output of sdX by executing the following command, it means the USB drive has been successfully recognized
 ```bash
@@ -861,7 +864,7 @@ root@localhost:/test# df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /mnt
 ```
 
-### 3.7 M.2 Key M
+#### 3.7 M.2 Key M
 
 ArmSoM-Sige6 provides an M.2 Key M connector:
 
@@ -893,7 +896,7 @@ If the mount doesn't work, it might be because your NVMe drive is completely bla
 root@localhost:~# mkfs.ext4 /dev/nvme0n1
 ```
 
-### 3.8 Audio
+#### 3.8 Audio
 
 Check the sound card in the system.
 
@@ -932,7 +935,7 @@ Play audio files
 root@localhost:~# aplay -D hw:0,0 /tmp/test_mic1.wav (Playing the audio recorded with the headphones is replaced with test_mic2.wav)
 ```
 
-### 3.9 FAN
+#### 3.9 FAN
 
 Sige products are equipped with a 5V fan and use a 0.8mm connector
 
@@ -961,11 +964,11 @@ root@localhost:~# echo 0 > /sys/class/hwmon/hwmon0/pwm1
 
 ```
 
-### 3.10 40 PIN
+#### 3.10 40 PIN
 
 Sige6 offers a 40-pin GPIO socket compatible with most sensor applications on the market.
 
-#### wiring-armbian method
+##### wiring-armbian method
 
 Download the wiringOP code to the development board [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
@@ -1032,7 +1035,7 @@ root@localhost:/wiring-armbian# gpio read 1
 
 - The other pin settings are similar; just change the wPi serial number to match the pin's serial number
 
-### 3.11 RGB LED
+#### 3.11 RGB LED
 
 The Sige6 features a user light (red light) and a power indicator (green light).
 
@@ -1050,7 +1053,7 @@ root@localhost:~# echo 1 > /sys/class/leds/armsom:red:user/brightness (Light up)
 root@localhost:~# echo heartbeat > /sys/class/leds/armsom:red:user/trigger (heartbeat light)
 ```
 
-### 3.12 RTC
+#### 3.12 RTC
 
 - Sige is equipped with an RTC IC LK8563S.
 - First, use a 2-pin header to insert an RTC battery to power the RTC IC.
@@ -1114,7 +1117,7 @@ root@localhost:~# hwclock -r -f /dev/rtc0  //Read the RTC clock
 2025-06-26 00:52:45.272526+00:00
 ```
 
-### 3.13 MIPI-CSI
+#### 3.13 MIPI-CSI
 The MIPI-CSI interface supports 0v13850 [camera-module1](./armsom-camera-module1) and imx219 cameras
 - Connect the camera-module1 to the MIPI-CSI1 interface on the back of the development board, as shown in the picture:
 
@@ -1124,7 +1127,7 @@ The MIPI-CSI interface supports 0v13850 [camera-module1](./armsom-camera-module1
 
 ![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
 
-#### 3.13.1 Using the ArmSoM camera-module1
+##### 3.13.1 Using the ArmSoM camera-module1
 
 You can download test files csi_test_mplane `Cloud drive path:ArmSoM-Sige6 → software → Camera testing program` and push it to the development board for execution.
 
@@ -1150,7 +1153,7 @@ After executing the above command, you can see that some fb8_y5_2112_1568_*.bin 
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-sige6-ov13850-camera.png)
 
-#### 3.13.2  Using the IMX219 camera
+##### 3.13.2  Using the IMX219 camera
 The testing method is the same as above, using the following command
 ```bash
 root@localhost:/# ./csi_test_mplane 0 0 1920 1080 ./ 5 5
@@ -1188,7 +1191,7 @@ CSI Bandwidth: 0
 *****************************************************
 ```
 
-### 3.14 MIPI DSI
+#### 3.14 MIPI DSI
 
 ArmSoM-Sige6 offers a maximum resolution of up to 4K@60Hz
 
@@ -1198,12 +1201,12 @@ ArmSoM-Sige6 offers a maximum resolution of up to 4K@60Hz
 
 2. By default, the system turns off the MIPI-DSI screen. To turn it on, you need to go to the SDK to open the corresponding node in the device tree
 
-### 3.15 CPU/GPU/NPU/DDR
+#### 3.15 CPU/GPU/NPU/DDR
 
 Below are the methods for setting CPU, GPU, NPU, DDR, frequency fixing, and performance mode settings for the ArmSoM-Sige6
 
-#### Fixed frequency
-##### Change CPU frequency
+##### Fixed frequency
+###### Change CPU frequency
 The ArmSoM-Sige6 CPUs consist of 6 A55 + 2 A76 CPUs, divided into 3 groups managed separately. The nodes are:
 
 ```bash
@@ -1248,7 +1251,7 @@ The default is automatic frequency mode: schedutil (if you want to restore it, j
 ```
 The other two sets of CPUs are set up in a similar way, just operate the corresponding nodes.
 
-##### Change GPU frequency
+###### Change GPU frequency
 ###### GPU node path
 ```bash
 root@localhost:~# ls /sys/class/devfreq/1800000.gpu
@@ -1275,7 +1278,7 @@ root@localhost:~# cat /sys/class/devfreq/1800000.gpu/cur_freq  // Check if it's 
 ```
   **<font color='red'>Note: When setting the GPU frequency, you need to keep clicking or sliding the touchscreen (to refresh the GPU)</font>**
 
-##### Change DDR frequency
+###### Change DDR frequency
 ###### DDR node path
 ```bash
 root@localhost:~# ls /sys/class/devfreq/a020000.dmcfreq/  
@@ -1301,7 +1304,7 @@ root@localhost:~# cat /sys/class/devfreq/a020000.dmcfreq/cur_freq   // Check if 
 1200000000
 ```
 
-##### Change NPU frequency
+###### Change NPU frequency
 ###### NPU's node path
 ```bash
 root@localhost:~# ls /sys/class/devfreq/3600000.npu/
@@ -1330,7 +1333,7 @@ root@localhost:~# cat /sys/kernel/debug/rknpu/load // Check the NPU load
 NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 ```
 
-#### Performance Mode
+##### Performance Mode
 
 ```bash
 root@localhost:~# echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor

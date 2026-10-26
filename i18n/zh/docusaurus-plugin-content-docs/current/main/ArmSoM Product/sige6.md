@@ -5,6 +5,9 @@ sidebar_label: "Sige6"
 sidebar_position: 2
 slug: /armsom-sige6
 image: /img/sige/sige6-bananer.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Sige6 产品简介
@@ -604,7 +607,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 | 硬件接口  | [Sige6](./armsom-sige6#硬件接口) |
 | --------------- | ----- | 
 
-### 3.1 调试串口
+#### 3.1 调试串口
 
 如下所示连接 USB 转 TTL 串口线到底板上标有“Debug”标识的座子处：
 
@@ -625,7 +628,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
  - 流控：无
 :::
 
-### 3.2 以太网口
+#### 3.2 以太网口
 
 1. 首先将网线的一端插入 ArmSoM-Sige6 的以太网接口，网线的另一端接入路由器，并确保
 网络是畅通的
@@ -684,7 +687,7 @@ PING www.a.shifen.com (103.235.46.115) from 192.168.1.181 eth0: 56(84) bytes of 
 rtt min/avg/max/mdev = 153.526/160.843/170.917/6.311 ms
 ```
 
-### 3.3 WIFI
+#### 3.3 WIFI
 
 ArmSoM-Sige 系列产品都是onboard WIFI模块，不需要外接网口设备，使用[标准4代天线](https://www.armsom.org/product-page/sige7-metal-shell)
 
@@ -850,7 +853,7 @@ rtt min/avg/max/mdev = 164.471/182.364/194.691/12.950 ms
 </div>
 
 
-### 3.4 BT
+#### 3.4 BT
 1. 在使用蓝牙功能之前，我们先查看蓝牙的设备节点是否存在，以保证蓝牙初始化正常
 ```bash
 root@localhost:/# hciconfig -a
@@ -949,7 +952,7 @@ Device has been removed
 ![sige-bt-connect](/img/general-tutorial/sige-bt-connect.png)
 
 
-### 3.5 HDMI
+#### 3.5 HDMI
 
 | 型号 |Sige7 | Sige6 | Sige5  | Sige3 | Sige1 |
 | ----- |  ----- | ------ | ------ |----- | ----- |
@@ -964,7 +967,7 @@ Device has been removed
 当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
 :::
 
-#### HDMI 转 VGA 显示测试
+##### HDMI 转 VGA 显示测试
 1. 需要准备下面的配件
 - HDMI 转 VGA 转换器
 - 一根 VGA 线，支持 VGA 接口的显示器
@@ -977,7 +980,7 @@ Device has been removed
 使用 HDMI 转 VGA 显示时，ArmSoM-Sige产品和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
 :::
 
-### 3.6 USB
+#### 3.6 USB
 
 |  型号  |Sige6 |
 | ----- |  ----- | 
@@ -987,7 +990,7 @@ Device has been removed
 USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
 :::
 
-#### 连接 USB 鼠标或键盘测试
+##### 连接 USB 鼠标或键盘测试
 1. 将 USB 接口的键盘插入ArmSoM-Sige产品的 USB 接口中
 2. 连接ArmSoM-Sige产品到 HDMI 显示器
 3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
@@ -996,7 +999,7 @@ USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
 注意，接鼠标或键盘时，只能接USB2.0接口，不可接USB3.0接口
 :::
 
-#### 连接 USB 存储设备测试
+##### 连接 USB 存储设备测试
 1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-Sige产品的 USB 接口中
 2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
 ```bash
@@ -1019,7 +1022,7 @@ root@localhost:/test# df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /mnt
 ```
 
-### 3.7 M.2 Key M
+#### 3.7 M.2 Key M
 
 ArmSoM-Sige6 提供 M.2 Key M 连接器：
 
@@ -1052,7 +1055,7 @@ root@localhost:~# mount /dev/nvme0n1 temp
 root@localhost:~# mkfs.ext4 /dev/nvme0n1
 ```
 
-### 3.8 音频
+#### 3.8 音频
 
 查看系统中的声卡。
 
@@ -1093,7 +1096,7 @@ root@localhost:~# arecord -D hw:0,0 -f S16_LE -r 44100 -c 2 -d 10 /tmp/test_mic2
 root@localhost:~# aplay -D hw:0,0 /tmp/test_mic1.wav （播放耳机录制的音频则替换为test_mic2.wav）
 ```
 
-### 3.9 FAN
+#### 3.9 FAN
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
@@ -1122,11 +1125,11 @@ root@localhost:~# echo 0 > /sys/class/hwmon/hwmon0/pwm1
 
 ```
 
-### 3.10 40 PIN
+#### 3.10 40 PIN
 
 Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
-#### wiring-armbian 的方法
+##### wiring-armbian 的方法
 
 下载 wiringOP 的代码到开发板 [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
@@ -1193,7 +1196,7 @@ root@localhost:/wiring-armbian# gpio read 1
 
 - 其他引脚的设置方法类似，只需修改 wPi 的序号为引脚对应的序号即可
 
-### 3.11 RGB LED
+#### 3.11 RGB LED
 
 Sige6 具有一个用户灯（红灯） 和 一个电源指示灯（绿灯）。
 
@@ -1211,7 +1214,7 @@ root@localhost:~# echo 1 > /sys/class/leds/armsom:red:user/brightness （点亮�
 root@localhost:~# echo heartbeat > /sys/class/leds/armsom:red:user/trigger （心跳灯）
 ```
 
-### 3.12 RTC
+#### 3.12 RTC
 
 - Sige配备了一颗RTC IC **LK8563S**。
 - 首先，使用2pin的排针接口，插入RTC电池给RTC IC供电。
@@ -1275,7 +1278,7 @@ root@localhost:~# hwclock -r -f /dev/rtc0  //读取rtc时钟
 2025-06-26 00:52:45.272526+00:00
 ```
 
-### 3.13 MIPI-CSI
+#### 3.13 MIPI-CSI
 MIPI-CSI接口分别支持0v13850摄像头[camera-module1](./armsom-camera-module1)和imx219摄像头
 - camera-module1摄像头接开发板背面的MIPI-CSI1接口，如图所示：
 
@@ -1285,7 +1288,7 @@ MIPI-CSI接口分别支持0v13850摄像头[camera-module1](./armsom-camera-modul
 
 ![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
 
-#### 3.13.1 使用 ArmSoM camera-module1
+##### 3.13.1 使用 ArmSoM camera-module1
 
 可以下载测试文件csi_test_mplane `网盘路径：ArmSoM->ArmSoM-Sige6->软件资料->摄像头测试程序`，将其push到开发板执行。
 
@@ -1311,7 +1314,7 @@ time cost 0.339447(s)
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-sige6-ov13850-camera.png)
 
-#### 3.13.2 使用 imx219摄像头
+##### 3.13.2 使用 imx219摄像头
 测试方法同上，使用如下命令
 ```bash
 root@localhost:/# ./csi_test_mplane 0 0 1920 1080 ./ 5 5
@@ -1349,7 +1352,7 @@ CSI Bandwidth: 0
 *****************************************************
 ```
 
-### 3.14 MIPI DSI
+#### 3.14 MIPI DSI
 
 ArmSoM-Sige6 分辨率最高分辨率可达 4K@60Hz
 
@@ -1359,12 +1362,12 @@ ArmSoM-Sige6 分辨率最高分辨率可达 4K@60Hz
 
 2. 系统默认关闭MIPI-DSI屏幕,若要打开，需到SDK打开设备树相应节点
 
-### 3.15 CPU/GPU/NPU/DDR
+#### 3.15 CPU/GPU/NPU/DDR
 
 以下为ArmSoM-Sige6 的CPU GPU NPU DDR定频和性能模式设置方法
 
-#### 定频
-##### CPU 定频
+##### 定频
+###### CPU 定频
 ArmSoM-Sige6 的cpu是6个A55+2个A76，分为2组单独管理，节点分别是：
 
 ```bash
@@ -1408,7 +1411,7 @@ root@localhost:~# cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq  
 ```
 其他两组CPU也是类似的方式进行设置，操作对应的节点即可。
 
-##### GPU定频
+###### GPU定频
 ###### GPU的节点路径
 ```bash
 root@localhost:~# ls /sys/class/devfreq/1800000.gpu
@@ -1435,7 +1438,7 @@ root@localhost:~# cat /sys/class/devfreq/1800000.gpu/cur_freq  // 确认是否�
 ```
   **<font color='red'>注意：设置GPU频率时需不断点击或滑动触摸屏（刷新GPU）</font>**
 
-##### DDR定频
+###### DDR定频
 ###### DDR的节点路径
 ```bash
 root@localhost:~# ls /sys/class/devfreq/a020000.dmcfreq/  
@@ -1461,7 +1464,7 @@ root@localhost:~# cat /sys/class/devfreq/a020000.dmcfreq/cur_freq   // 确认是
 1200000000
 ```
 
-##### NPU定频
+###### NPU定频
 ###### NPU的节点路径
 ```bash
 root@localhost:~# ls /sys/class/devfreq/3600000.npu/
@@ -1490,7 +1493,7 @@ root@localhost:~# cat /sys/kernel/debug/rknpu/load // 查看NPU的负载
 NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 ```
 
-#### 性能模式
+##### 性能模式
 
 ```bash
 root@localhost:~# echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor

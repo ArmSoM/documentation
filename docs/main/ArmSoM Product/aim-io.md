@@ -5,6 +5,9 @@ sidebar_label: "AIM-IO"
 sidebar_position: 4
 slug: /armsom-aimio
 image: /img/aim/aim-io.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Product Introduction: AIM-IO

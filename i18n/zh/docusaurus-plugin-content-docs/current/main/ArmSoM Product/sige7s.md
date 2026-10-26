@@ -5,6 +5,9 @@ sidebar_label: "Sige7s"
 sidebar_position: 2
 slug: /armsom-sige7s
 image: /img/sige/sige7s-bananer.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Sige7s 产品简介
@@ -265,7 +268,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 |2          | -         | Negative pole    |
 </details>
 
-# 开发资料
+## 开发资料
 
 ### SDK源码
 
@@ -369,7 +372,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 获取 Sige7s 原理图、DXF等硬件资料 `网盘路径：ArmSoM->ArmSoM-Sige7s->硬件资料`
 
-### 使用手册
+## 使用手册
 ### 1. 入门准备
 
 在开始使用 ArmSoM-Sige 产品之前，请准备好以下物品
@@ -453,7 +456,7 @@ ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到em
 | 硬件接口  | [Sige7s](./armsom-sige7s#硬件接口) |
 | --------------- | ----- | 
 
-### 3.1 调试串口
+#### 3.1 调试串口
 
 如下所示连接 USB 转 TTL 串口线到底板上40pin座子处：
 
@@ -474,7 +477,7 @@ ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到em
  - 流控：无
 :::
 
-### 3.2 以太网口
+#### 3.2 以太网口
 
 1. 首先将网线的一端插入 ArmSoM-Sige7s 的以太网接口，网线的另一端接入路由器，并确保
 网络是畅通的
@@ -539,7 +542,7 @@ rtt min/avg/max/mdev = 155.723/156.571/157.717/0.699 ms
 只有普通用户需要使用sudo，root用户不需要
 :::
 
-### 3.3 WIFI
+#### 3.3 WIFI
 
 ArmSoM-Sige7s是onboard WIFI模块和天线，不需要外接网口设备，不需要外接天线
 
@@ -710,7 +713,7 @@ rtt min/avg/max/mdev = 160.909/171.260/193.269/13.133 ms
 </div>
 
 
-### 3.4 BT
+#### 3.4 BT
 1. 在使用蓝牙功能之前，我们先查看蓝牙的设备节点是否存在，以保证蓝牙初始化正常
 ```bash
 armsom@armsom:~$ hciconfig -a
@@ -793,28 +796,28 @@ Device 24:2A:EA:61:0F:28 Donleon
 连接成功后在手机上显示已连接：          
 ![sige7s-bt-connect](/img/general-tutorial/sige7s-bt-connect.png)
 
-### 3.5 HDMI&DP
+#### 3.5 HDMI&DP
 sige7s接 HDMI 或 DP 屏，有两种方式可选：
 
 | 板载接口 | HDMI out | DP out |
 | :-------: | :-----: | :------: |
 | 分辨率  | 8Kp60 | 4Kp60 |
 
-#### 1. 使用 Micro HDMI 线连接sige7s的 HDMI out接口 和 HDMI 显示器:
+##### 1. 使用 Micro HDMI 线连接sige7s的 HDMI out接口 和 HDMI 显示器:
 - 使用一根Micro HDMI 转 HDMI 母线（需要再接一根双HDMI线）               
 ![sige7s-MicroHDMI-a](/img/general-tutorial/sige7s-MicroHDMI-a.jpg)
 
 - 使用一根Micro HDMI 转 HDMI 公线（可直接接HDMI屏）                              
 ![sige7s-MicroHDMI-b](/img/general-tutorial/sige7s-MicroHDMI-b.jpg)
 
-#### 2. 使用 Mini DP 线连接sige7s的 DP out接口 和 HDMI 显示器或 DP 显示器 :
+##### 2. 使用 Mini DP 线连接sige7s的 DP out接口 和 HDMI 显示器或 DP 显示器 :
 - 使用一根主动式 Mini DP 转 HDMI公线（可直接接HDMI屏）                                                              
 ![sige7s-MiniDP-a](/img/general-tutorial/sige7s-MiniDP-a.jpg)
 
 - 使用一根 Mini DP 转 DP 母线（需要再接一根双DP线）                                                                            
 ![sige7s-MiniDP-b](/img/general-tutorial/sige7s-MiniDP-b.jpg)
 
-#### 3. 启动 linux 系统后如果显示器有图像输出说明 HDMI 和 DP 接口使用正常
+##### 3. 启动 linux 系统后如果显示器有图像输出说明 HDMI 和 DP 接口使用正常
 
 :::tip
 - 很多笔记本电脑虽然带有 HDMI 接口，但是笔记本的 HDMI 接口一般只有输出功能，并没有 HDMI in 的功能，也就是说并不能将其他设备的 HDMI 输出显示到笔记本的屏幕上。
@@ -822,7 +825,7 @@ sige7s接 HDMI 或 DP 屏，有两种方式可选：
 - Mini DP 转 HDMI 线必需选择主动式，无法使用被动式
 :::
 
-### 3.6 USB
+#### 3.6 USB
 
 |  型号  |Sige7s |
 | ----- |  ----- | 
@@ -832,12 +835,12 @@ sige7s接 HDMI 或 DP 屏，有两种方式可选：
 USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
 :::
 
-#### 连接 USB 鼠标或键盘测试
+##### 连接 USB 鼠标或键盘测试
 1. 将 USB 接口的键盘插入sige7s的 USB 接口中
 2. 连接sige7s到 HDMI 或 DP 显示器
 3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
 
-#### 连接 USB 存储设备测试
+##### 连接 USB 存储设备测试
 1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-Sige7s 的 USB 接口中
 2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
 ```bash
@@ -861,7 +864,7 @@ armsom@armsom:/$ df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /test
 ```
 
-### 3.7 Micro SD card slot
+#### 3.7 Micro SD card slot
 
 Sige7s 板载标准的 microSD 卡槽,主要用作系统启动盘或扩展存储空间。
 
@@ -909,9 +912,9 @@ bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
 boot  etc  lib   media       opt  root  sbin  srv   sys       usr
 ```
 
-### 3.8 音频
+#### 3.8 音频
 
-#### 1. 查看系统中的声卡。
+##### 1. 查看系统中的声卡。
 
 ```bash
 armsom@armsom:~$ aplay -l
@@ -928,29 +931,29 @@ card 2: rockchipes8316c [rockchip,es8316-codec], device 0: dailink-multicodecs E
 ```
 列出的声卡信息中， `card 2: rockchipes8316c` 为板载的 es8316 音频编解码器，用于 3.5mm 耳机接口的输入（麦克风）和输出（音频播放）。
 
-#### 2. 开启音频服务
+##### 2. 开启音频服务
 在测试录音和播放之前，我们先执行下面命令，自动化配置音频
 ```bash
 armsom@armsom:~$ sudo systemctl start es8316-audio-setup
 ```
 
-#### 3. 录制音频
+##### 3. 录制音频
 该功能需要耳机支持麦克风功能，使用 arecord 命令录制音频。
 ```bash
 armsom@armsom:~$ arecord -D hw:2,0 -f S16_LE -r 44100 -c 2 -d 5 /tmp/record.wav
 Recording WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
-#### 4. 播放音频
+##### 4. 播放音频
 ```bash
 armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
 Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-### 3.9 40 PIN
+#### 3.9 40 PIN
 
 Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
-#### wiring-armbian 的方法
+##### wiring-armbian 的方法
 
 下载 wiringOP 的代码到开发板 [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
@@ -1023,7 +1026,7 @@ armsom@armsom:/wiring-armbian$ gpio read 5
 
 - 其他引脚的设置方法类似，只需修改 wPi 的序号为引脚对应的序号即可
 
-### 3.10 RGB LED
+#### 3.10 RGB LED
 
 Sige7s 有一个用户（绿灯）和一个电源指示灯（红灯）。
 
@@ -1041,7 +1044,7 @@ armsom@armsom:~$ echo 0 | sudo tee /sys/class/leds/led2-green-usr/brightness （
 armsom@armsom:~$ echo heartbeat | sudo tee /sys/class/leds/led2-green-usr/trigger （心跳灯）
 ```
 
-### 3.12 RTC
+#### 3.12 RTC
 
 - Sige7s 板内集成一颗RTC时钟芯片 **LK8563**。
 
@@ -1083,8 +1086,8 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 2026-04-28 03:50:21.479385+08:00
 ```
 
-### 3.13 MIPI-CSI
-#### ArmSoM-Sige7s 适配以下两款imx219摄像头: 
+#### 3.13 MIPI-CSI
+##### ArmSoM-Sige7s 适配以下两款imx219摄像头:
 - [Raspberry pi 系列摄像头](https://e.tb.cn/h.8gE3ZXsWJRLW5La?tk=PwhpgBOlZBx)
 - [Jeston 系列摄像头](https://detail.tmall.com/item.htm?id=608399452891&mi_id=0000IWXv5BQA8CjV7BPN3wY4S6TqJ9YA0VQI9c6gTQmF-Vw&spm=tbpc.boughtlist.suborder_itemtitle.1.39fc2e8dNHksy1&skuId=4513040438631)
 
@@ -1136,12 +1139,12 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 
 ![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
-### 3.14 MIPI DSI
+#### 3.14 MIPI DSI
 
 ArmSoM-Sige7s MIPI DSI接口适配微雪（兼容树莓派）7寸屏，参考购买链接：           
 https://item.taobao.com/item.htm?id=646210381978
 
-#### 1. 按照下图连接好排线
+##### 1. 按照下图连接好排线
 - #### DSI连接器
   使用15路扁平柔性线缆（FFC）连接①屏幕FFC连接器和②sige7s MIPI DSI
 - #### GPIO排针
@@ -1149,7 +1152,7 @@ https://item.taobao.com/item.htm?id=646210381978
 
 ![sige7s-display-7-hd](/img/general-tutorial/display-7-hd-sige7s.jpg)
 
-#### 2. 系统默认关闭MIPI-DSI屏幕,若要打开，需要按如下操作打开LCD显示屏overlay
+##### 2. 系统默认关闭MIPI-DSI屏幕,若要打开，需要按如下操作打开LCD显示屏overlay
 ```bash
 armsom@armsom:~$ sudo vi /boot/uEnv/uEnvarmsom-sige7s.txt
 #找到这部分，将下面这行解除注释即可启用overlay:
@@ -1158,12 +1161,12 @@ armsom@armsom:~$ sudo reboot  #保存退出后重启
 ```
 overlay生效后，观察LCD屏幕是否显示并进入桌面
 
-### 3.15 CPU/GPU/NPU/DDR
+#### 3.15 CPU/GPU/NPU/DDR
 
 以下为ArmSoM-Sige7s 的CPU GPU NPU DDR定频和性能模式设置方法
 
-#### 定频
-##### CPU 定频
+##### 定频
+###### CPU 定频
 ArmSoM-Sige7s 的cpu是4个A55+4个A76，分为3组单独管理，节点分别是：
 
 ```bash
@@ -1210,7 +1213,7 @@ root@armsom:~# cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq  // 
 ```
 其他两组CPU也是类似的方式进行设置，操作对应的节点即可。
 
-##### GPU定频
+###### GPU定频
 ###### GPU的节点路径
 ```bash
 root@armsom:~# ls /sys/class/devfreq/fb000000.gpu
@@ -1235,7 +1238,7 @@ root@armsom:~# cat /sys/class/devfreq/fb000000.gpu/cur_freq  // 确认是否设�
 600000000
 ```
 
-##### NPU定频
+###### NPU定频
 ###### NPU的节点路径
 ```bash
 root@armsom:~# ls /sys/class/devfreq/fdab0000.npu/
@@ -1249,7 +1252,7 @@ rknpu_ondemand dmc_ondemand userspace powersave performance simple_ondemand
 ```
 默认是按需调频模式：rknpu_ondemand（恢复的话设置为该模式即可）
 
-###### 设置手动定频 
+###### 设置手动定频
 ```bash
 root@armsom:~# cat /sys/class/devfreq/fdab0000.npu/cur_freq //查看当前npu频率
 1000000000
@@ -1261,7 +1264,7 @@ root@armsom:~# cat /sys/kernel/debug/rknpu/load // 查看NPU的负载
 NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 ```
 
-##### DDR定频
+###### DDR定频
 ###### DDR的节点路径
 ```bash
 root@armsom:~# ls /sys/class/devfreq/dmc/
@@ -1276,7 +1279,7 @@ rknpu_ondemand dmc_ondemand userspace powersave performance simple_ondemand
 ```
 默认是按需频模式：dmc_ondemand（恢复的话设置为该模式即可）
 
-###### 设置手动定频 
+###### 设置手动定频
 ```bash
 root@armsom:~# cat /sys/class/devfreq/dmc/cur_freq // 查看当前频率
 528000000
@@ -1286,7 +1289,7 @@ root@armsom:~# cat /sys/class/devfreq/dmc/cur_freq   // 确认是否设置成功
 1560000000
 ```
 
-#### 性能模式
+##### 性能模式
 ```bash
 root@armsom:~# echo performance > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
 root@armsom:~# echo performance > /sys/class/devfreq/fb000000.gpu/governor

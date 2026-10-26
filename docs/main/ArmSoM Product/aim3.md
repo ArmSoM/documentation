@@ -5,6 +5,9 @@ keywords: [armsom, armsom-aim3, RK3568  Development Boards, RK3568 Core borad, r
 sidebar_label: "AIM3"
 sidebar_position: 3
 slug: /armsom-aim3
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # AIM3 Product Overview

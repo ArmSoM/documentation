@@ -5,6 +5,9 @@ sidebar_label: "CM5"
 sidebar_position: 5
 slug: /armsom-cm5
 image: /img/cm/cm5.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Product Introduction: ArmSoM-CM5

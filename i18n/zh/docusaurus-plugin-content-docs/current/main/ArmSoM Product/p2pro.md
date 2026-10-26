@@ -5,6 +5,9 @@ sidebar_label: "P2pro"
 sidebar_position: 12
 slug: /armsom-p2pro
 image: /img/link/p2pro.jpg
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # P2pro 产品简介

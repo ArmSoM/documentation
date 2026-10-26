@@ -5,6 +5,9 @@ sidebar_label: "Forge1"
 sidebar_position: 10
 slug: /armsom-forge1
 image: /img/forge/forge1-bananer.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Forge1 Product Introduction

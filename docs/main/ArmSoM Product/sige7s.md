@@ -5,6 +5,9 @@ sidebar_label: "Sige7s"
 sidebar_position: 2
 slug: /armsom-sige7s
 image: /img/sige/sige7s-bananer.png
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 
@@ -368,13 +371,13 @@ The following systems have been tested and verified by ArmSoM official:
 |![debian-bullseye](/img/sige/debian11-1.png) | debian12 for Sige7s :  <br/>   Debian 12 brings thousands of new and updated packages, supporting multiple desktop environments and processor architectures (including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC). But one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to version 6.1 LTS.| `ArmSoM->ArmSoM-Sige7s->software->Debianfirmware`   |
 |![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige7s :    <br/>Ubuntu 22.04, code-named 'Jammy Jellyfish', is a version officially released by Canonical on April 21, 2022.| `ArmSoM->ArmSoM-Sige7s->software->Ubuntufirmware` |
 
-### Third Party System  
+### Third Party System
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
 |![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7s:    <br/> Armbian is a computing build framework that lets users create ready-to-use images with a working kernel based on the variable user space configurations of various single-board computers. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  | [armbian firmware download](https://github.com/armbian/community/releases/)     |
 
-### Hardware Resources 
+### Hardware Resources
 
 Get the Sige7s schematics, DXF, and other hardware files. `Cloud drive path: ArmSoM-Sige7s → hardware Files`
 
@@ -387,7 +390,7 @@ V1.1
 * WIFI Module: AP6275S change to AP6275P;
 :::
 
-### User manual
+## User manual
 ### 1. Preparation for getting started
 
 Before you start using the ArmSoM-Sige7s product, please get the following items ready
@@ -474,7 +477,7 @@ If this is your first time using the ArmSoM-Sige7s product, please get familiar 
 | Hardware interfaces  | [Sige7s](./armsom-sige7s#hardware-interface) |
 | --------------- | ----- | 
 
-### 3.1 Debugging the serial port
+#### 3.1 Debugging the serial port
 
 Connect the USB-to-TTL serial cable to the 40-pin socket on the board as shown:
 
@@ -495,7 +498,7 @@ Serial communication parameters
  - Flow control: None
 :::
 
-### 3.2 Ethernet Port
+#### 3.2 Ethernet Port
 
 1. First, plug one end of the Ethernet cable into the ArmSoM-Sige7s Ethernet port, and connect the other end to the router, making sure the network is working properly.
 2. After the system starts, it will automatically assign an IP address to the Ethernet card via DHCP, no other configuration is needed.
@@ -559,7 +562,7 @@ rtt min/avg/max/mdev = 155.723/156.571/157.717/0.699 ms
 Only regular users need to use sudo; the root user doesn't.
 :::
 
-### 3.3 WIFI
+#### 3.3 WIFI
 
 ArmSoM-Sige7s is an onboard WiFi module and antenna, no need for an external network device or external antenna.
 
@@ -729,7 +732,7 @@ rtt min/avg/max/mdev = 160.909/171.260/193.269/13.133 ms
 </div>
 
 
-### 3.4 BT
+#### 3.4 BT
 1. Before using the Bluetooth feature, let's first check if the Bluetooth device node exists to make sure Bluetooth initializes properly.
 ```bash
 armsom@armsom:~$ hciconfig -a
@@ -812,28 +815,28 @@ Check that your phone is paired with the development board in the Bluetooth sett
 After a successful connection, it shows connected on the phone:         
 ![sige7s-bt-connect](/img/general-tutorial/sige7s-bt-connect_en.png)
 
-### 3.5 HDMI&DP
+#### 3.5 HDMI&DP
 There are two ways to connect the Sige7s to an HDMI or DP monitor:
 
 | Onboard interface | HDMI out | DP out |
 | :-------: | :-----: | :------: |
 | Resolution  | 8Kp60 | 4Kp60 |
 
-#### 1. Use a Micro HDMI cable to connect the HDMI out port of the Sige7s and the HDMI monitor
+##### 1. Use a Micro HDMI cable to connect the HDMI out port of the Sige7s and the HDMI monitor
 - Use one Micro HDMI to HDMI bus cable (requires an additional dual HDMI cable).               
 ![sige7s-MicroHDMI-a](/img/general-tutorial/sige7s-MicroHDMI-a.jpg)
 
 - Use a Micro HDMI to HDMI public cable (can connect directly to HDMI screens)                              
 ![sige7s-MicroHDMI-b](/img/general-tutorial/sige7s-MicroHDMI-b.jpg)
 
-#### 2. Use a Mini DP cable to connect the Sige7s's DP out port and the HDMI monitor or DP monitor:
+##### 2. Use a Mini DP cable to connect the Sige7s's DP out port and the HDMI monitor or DP monitor:
 - Using one active Mini DP to HDMI male cable (can connect directly to HDMI screen)                                                              
 ![sige7s-MiniDP-a](/img/general-tutorial/sige7s-MiniDP-a.jpg)
 
 - Use one Mini DP to DP bus (requires an additional dual DP cable)                                                                            
 ![sige7s-MiniDP-b](/img/general-tutorial/sige7s-MiniDP-b.jpg)
 
-#### 3. After starting the Linux system, if the monitor outputs images, it means HDMI and DP ports are working normally
+##### 3. After starting the Linux system, if the monitor outputs images, it means HDMI and DP ports are working normally
 
 :::tip
 - Many laptops have HDMI ports, but their HDMI ports usually only provide output functions and do not have HDMI IN functionality, meaning they cannot display other devices' HDMI outputs on the laptop's screen.
@@ -841,7 +844,7 @@ There are two ways to connect the Sige7s to an HDMI or DP monitor:
 - The Mini DP to HDMI cable must be active and cannot be passive
 :::
 
-### 3.6 USB
+#### 3.6 USB
 
 |  Model  |Sige7s |
 | ----- |  ----- | 
@@ -851,12 +854,12 @@ There are two ways to connect the Sige7s to an HDMI or DP monitor:
 USB ports allow you to connect a USB hub to expand the number of USB ports.
 :::
 
-#### Connect a USB mouse or keyboard for testing
+##### Connect a USB mouse or keyboard for testing
 1. Insert the USB keyboard into the Sige7s's USB port
 2. Connect the Sige7s to an HDMI or DP monitor
 3. If the mouse or keyboard works properly, the operating system means the USB port is working properly (the mouse can only be used on desktop systems).
 
-#### Testing by connecting USB storage devices
+##### Testing by connecting USB storage devices
 1. First, insert a USB drive or USB external hard drive into the USB port of the ArmSoM-Sige7s
 2. If you see the output of sdX by executing the following command, it means the USB drive has been successfully recognized
 ```bash
@@ -880,7 +883,7 @@ armsom@armsom:/$ df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /test
 ```
 
-### 3.7 Micro SD card slot
+#### 3.7 Micro SD card slot
 
 The Sige7s comes with a standard microSD card slot, mainly used as a system boot disk or for expanding storage space.
 
@@ -927,9 +930,9 @@ bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
 boot  etc  lib   media       opt  root  sbin  srv   sys       usr
 ```
 
-### 3.8 Audio
+#### 3.8 Audio
 
-#### 1. Check the sound card in the system.
+##### 1. Check the sound card in the system.
 
 ```bash
 armsom@armsom:~$ aplay -l
@@ -946,29 +949,29 @@ card 2: rockchipes8316c [rockchip,es8316-codec], device 0: dailink-multicodecs E
 ```
 Among the listed sound card information, `card 2: rockchipes8316c` is the onboard es8316 audio codec, used for the 3.5mm headphone jack input (microphone) and output (audio playback).
 
-#### 2. Enable audio services
+##### 2. Enable audio services
 Before testing recording and playback, we first run the following command to automate audio configuration
 ```bash
 armsom@armsom:~$ sudo systemctl start es8316-audio-setup
 ```
 
-#### 3. Record audio
+##### 3. Record audio
 This feature requires the headphones to support microphone functionality and record audio using the arecord command.
 ```bash
 armsom@armsom:~$ arecord -D hw:2,0 -f S16_LE -r 44100 -c 2 -d 5 /tmp/record.wav
 Recording WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
-#### 4. Play audio
+##### 4. Play audio
 ```bash
 armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
 Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-### 3.9 40 PIN
+#### 3.9 40 PIN
 
 Sige offers a 40-pin GPIO socket compatible with most sensor applications on the market.
 
-#### wiring-armbian method
+##### wiring-armbian method
 
 Download the wiringOP code to the  development board. [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
@@ -1038,7 +1041,7 @@ armsom@armsom:/wiring-armbian$ gpio read 5
 ```                                 
 - The other pin settings are similar; just change the wPi serial number to match the pin's serial number
 
-### 3.10 RGB LED
+#### 3.10 RGB LED
 
 The Sige7s has a user (green light) and a power indicator (red light).
 
@@ -1054,7 +1057,7 @@ armsom@armsom:~$ echo 0 | sudo tee /sys/class/leds/led2-green-usr/brightness （
 armsom@armsom:~$ echo heartbeat | sudo tee /sys/class/leds/led2-green-usr/trigger （Heartbeat light）
 ```
 
-### 3.12 RTC
+#### 3.12 RTC
 
 - The Sige7s integrates an RTC clock chip **LK8563** within the board. 
 
@@ -1096,8 +1099,8 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 2026-04-28 03:50:21.479385+08:00
 ```
 
-### 3.13 MIPI-CSI
-#### ArmSoM-Sige7s is compatible with the following two imx219 cameras: 
+#### 3.13 MIPI-CSI
+##### ArmSoM-Sige7s is compatible with the following two imx219 cameras:
 - [Raspberry Pi series cameras](https://e.tb.cn/h.8gE3ZXsWJRLW5La?tk=PwhpgBOlZBx)
 - [Jeston series cameras](https://detail.tmall.com/item.htm?id=608399452891&mi_id=0000IWXv5BQA8CjV7BPN3wY4S6TqJ9YA0VQI9c6gTQmF-Vw&spm=tbpc.boughtlist.suborder_itemtitle.1.39fc2e8dNHksy1&skuId=4513040438631)
 
@@ -1149,12 +1152,12 @@ Due to differences in mirror versions, some versions require manually installing
 ![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
 
-### 3.14 MIPI DSI
+#### 3.14 MIPI DSI
 
 ArmSoM-Sige7s MIPI DSI interface compatible with the wareshare (compatible with Raspberry Pi) 7-inch screen, purchase link:           
 https://item.taobao.com/item.htm?id=646210381978
 
-#### 1. Connect the flex cable as shown in the diagram below
+##### 1. Connect the flex cable as shown in the diagram below
 - #### DSI connector
   Use 15 channels of flat flexible cable (FFC) to connect ① the screen FFC connector and ② the SIGE7s MIPI DSI
 - #### GPIO pin headers
@@ -1162,7 +1165,7 @@ https://item.taobao.com/item.htm?id=646210381978
 
 ![sige7s-display-7-hd](/img/general-tutorial/display-7-hd-sige7s.jpg)
 
-#### 2. By default, the system turns off the MIPI-DSI screen. To turn it on, follow these steps to enable the LCD display overlay
+##### 2. By default, the system turns off the MIPI-DSI screen. To turn it on, follow these steps to enable the LCD display overlay
 ```bash
 armsom@armsom:~$ sudo vi /boot/uEnv/uEnvarmsom-sige7s.txt
 #Find this part and just uncomment the line below to enable the overlay:
@@ -1171,12 +1174,12 @@ armsom@armsom:~$ sudo reboot  #Save and restart after exiting
 ```
 After overlay is activated, observe whether the LCD screen displays and enters the desktop
 
-### 3.15 CPU/GPU/NPU/DDR
+#### 3.15 CPU/GPU/NPU/DDR
 
 Below are the methods for setting the CPU, GPU, NPU DDR, frequency fixing, and performance mode settings for the ArmSoM-Sige7s
 
-#### Fixed frequency
-##### CPU fixed frequency
+##### Fixed frequency
+###### CPU fixed frequency
 The ArmSoM-Sige7s CPUs consist of 4 A55 + 4 A76 processors, managed separately in 3 groups. The nodes are:
 
 ```bash
@@ -1223,7 +1226,7 @@ root@armsom:~$ cat /sys/devices/system/cpu/cpufreq/policy6/cpuinfo_cur_freq    #
 ```
 The other two CPU groups are configured similarly; just operate the corresponding node.
 
-##### GPU fixed frequency
+###### GPU fixed frequency
 ###### GPU node path
 ```bash
 root@armsom:~$ ls /sys/class/devfreq/fb000000.gpu
@@ -1248,7 +1251,7 @@ root@armsom:~$ cat /sys/class/devfreq/fb000000.gpu/cur_freq  # Check if it's set
 600000000
 ```
 
-##### NPU fixed frequency
+###### NPU fixed frequency
 ###### NPU node path
 ```bash
 root@armsom:~$ ls /sys/class/devfreq/fdab0000.npu/
@@ -1262,7 +1265,7 @@ rknpu_ondemand dmc_ondemand userspace powersave performance simple_ondemand
 ```
 The default is the on-demand frequency mode: rknpu_ondemand (to restore, just set it to this mode).
 
-###### Set manual frequency 
+###### Set manual frequency
 ```bash
 root@armsom:~$ cat /sys/class/devfreq/fdab0000.npu/cur_freq # Check current NPU frequency
 1000000000
@@ -1274,7 +1277,7 @@ root@armsom:~$ cat /sys/kernel/debug/rknpu/load # Check the NPU load
 NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
 ```
 
-##### DDR fixed frequency
+###### DDR fixed frequency
 ###### DDR node path
 ```bash
 root@armsom:~$ ls /sys/class/devfreq/dmc/
@@ -1289,7 +1292,7 @@ rknpu_ondemand dmc_ondemand userspace powersave performance simple_ondemand
 ```
 The default is the on-demand frequency mode: dmc_ondemand (to restore it, just set it to this mode).
 
-###### Set manual frequency 
+###### Set manual frequency
 ```bash
 root@armsom:~$ cat /sys/class/devfreq/dmc/cur_freq # Check current frequency
 528000000
@@ -1299,7 +1302,7 @@ root@armsom:~$ cat /sys/class/devfreq/dmc/cur_freq   # Check if the setup was su
 1560000000
 ```
 
-#### Performance Mode
+##### Performance Mode
 ```bash
 root@armsom:~$ echo performance > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
 root@armsom:~$ echo performance > /sys/class/devfreq/fb000000.gpu/governor
@@ -1315,7 +1318,7 @@ root@armsom:~$ echo performance > /sys/class/devfreq/fdab0000.npu/governor
 
 The ArmSoM-Sige7s will be produced at least until January 2034.
 
-## Purchase Samples 
+## Purchase Samples
 ArmSoM online shop: [https://www.armsom.org/product-page/sige7s](https://www.armsom.org/product-page/sige7s)
  
 ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/1005013466912805.html?gatewayAdapt=4itemAdapt](https://www.aliexpress.com/item/1005013466912805.html?gatewayAdapt=4itemAdapt)

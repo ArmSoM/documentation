@@ -5,6 +5,9 @@ keywords: [armsom, armsom-cm3, RK3568  Development Boards, RK3568 Core borad, ro
 sidebar_label: "CM3"
 sidebar_position: 5
 slug: /armsom-cm3
+toc_collapsible: true
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Product Introduction: ArmSoM-CM3
