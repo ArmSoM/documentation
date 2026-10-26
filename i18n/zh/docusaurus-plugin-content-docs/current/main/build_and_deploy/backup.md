@@ -2,8 +2,8 @@
 description: "ArmSoM 官方技术文档：系统备份。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
 keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "系统备份"]
 image: /img/armsom-social-card.png
-sidebar_label: "系统备份"
-sidebar_position: 2
+sidebar_label: "3. 系统备份"
+sidebar_position: 3
 slug: /build-system-image/backup
 ---
 

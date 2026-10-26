@@ -2,8 +2,8 @@
 description: "Official ArmSoM technical documentation for System backup. Find product specifications, configuration steps, usage guidance, and embedded development references."
 keywords: [ArmSoM, Rockchip, embedded Linux, development board, "System backup"]
 image: /img/armsom-social-card.png
-sidebar_label: "system backup"
-sidebar_position: 2
+sidebar_label: "3. System backup"
+sidebar_position: 3
 slug: /build-system-image/backup
 ---
 

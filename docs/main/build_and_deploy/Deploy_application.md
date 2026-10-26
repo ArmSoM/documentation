@@ -1,9 +1,9 @@
 ---
 keywords: [ArmSoM, Rockchip, embedded Linux, development board, "Deploy application"]
 image: /img/armsom-social-card.png
-sidebar_label: "Deploy application"
+sidebar_label: "4. Deploy application"
 slug: /build-system-image/Deploy application
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # 1. Deploy application

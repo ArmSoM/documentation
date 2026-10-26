@@ -2,7 +2,7 @@
 description: "ArmSoM 官方技术文档：ArmSom-SDK Release。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
 keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "ArmSom-SDK Release"]
 image: /img/armsom-social-card.png
-sidebar_label: "armsom-sdk使用"
+sidebar_label: "1. armsom-sdk使用"
 slug: /build-system-image/armsom-sdk
 sidebar_position: 1
 ---

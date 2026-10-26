@@ -2,12 +2,12 @@
 description: "Official ArmSoM technical documentation for ArmSom-SDK Release. Find product specifications, configuration steps, usage guidance, and embedded development references."
 keywords: [ArmSoM, Rockchip, embedded Linux, development board, "ArmSom-SDK Release"]
 image: /img/armsom-social-card.png
-sidebar_label: "2. sdk-build"
+sidebar_label: "2. android-sdk usage"
 slug: /advanced-manual/sdk-build
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# 2. ArmSom-SDK Release
+# 2. android-sdk usage
 All products released by ArmSom will have matching Linux and Android versions of SDK, which are stored in Baidu Cloud Disk by default. Here, we take armsom-cm5io as an example to introduce how to obtain SDK and compile firmware
 
 ## 2.1 Get SDK

@@ -2,7 +2,7 @@
 description: "Official ArmSoM technical documentation for ArmSom-SDK Release. Find product specifications, configuration steps, usage guidance, and embedded development references."
 keywords: [ArmSoM, Rockchip, embedded Linux, development board, "ArmSom-SDK Release"]
 image: /img/armsom-social-card.png
-sidebar_label: "armsom-sdk usage"
+sidebar_label: "1. armsom-sdk usage"
 slug: /build-system-image/armsom-sdk
 sidebar_position: 1
 ---

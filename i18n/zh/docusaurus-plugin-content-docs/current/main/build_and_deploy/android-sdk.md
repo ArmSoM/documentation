@@ -2,12 +2,12 @@
 description: "ArmSoM 官方技术文档：ArmSom-SDK 发布。提供产品规格、配置步骤、使用说明和嵌入式开发参考。"
 keywords: [ArmSoM, Rockchip, 嵌入式Linux, 开发板, "ArmSom-SDK 发布"]
 image: /img/armsom-social-card.png
-sidebar_label: "2. sdk-build 说明"
+sidebar_label: "2. android-sdk使用"
 slug: /advanced-manual/sdk-build
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# 2. ArmSom-SDK 发布
+# 2. android-sdk使用
 ArmSom发布的产品都会有配套的linux和Android版本的SDK，默认存放在百度网盘里面，这里以armsom-cm5io为例来介绍如何获取SDK以及编译固件
 
 ## 2.1 获取SDK
