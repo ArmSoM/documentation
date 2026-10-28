@@ -320,10 +320,10 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 ArmSoM-W3 的首次官方发布通告请在以下链接查看：[ArmSoM-W3 系统发布通知](http://forum.armsom.org/t/231115-system-release-notice-for-armsom-w3/139)
 
 ### 第三方系统
-| logo  | Description  | Download|
+| 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7(bpi-m7) :    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [armbian固件下载](https://github.com/armbian/community/releases)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)       | ubuntu-rockchip for Sige7 :    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | 适用于 Sige7(bpi-m7) 的 Armbian：    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards/armsom-w3)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)       | 适用于 Sige7 的 ubuntu-rockchip：    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 

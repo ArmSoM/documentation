@@ -375,7 +375,7 @@ The following systems have been tested and verified by ArmSoM official:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7s:    <br/> Armbian is a computing build framework that lets users create ready-to-use images with a working kernel based on the variable user space configurations of various single-board computers. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  | [armbian firmware download](https://github.com/armbian/community/releases/)     |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7s:    <br/> Armbian is a computing build framework that lets users create ready-to-use images with a working kernel based on the variable user space configurations of various single-board computers. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  | [armbian firmware download](https://armbian.com/boards?vendor=armsom)     |
 
 ### Hardware Resources
 

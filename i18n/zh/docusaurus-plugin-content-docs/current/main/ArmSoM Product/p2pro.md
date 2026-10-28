@@ -168,11 +168,11 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 |:--------: | :---------: | :--------:  | 
 |![debian-bullseye](/img/sige/debian11-1.png) | debian11 for P2pro :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)  |
 
-### Third Party System  
+### 第三方系统
 
-| logo  | Description  | Download|
+| 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-| Openwrt | Openwrt for P2pro :    <br/>Openwrt是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。|[百度网盘](https://pan.baidu.com/s/1aJgNfJLOLmYV_C1UrVy5dA?pwd=arms)  |
+| Openwrt | 适用于 P2pro 的 Openwrt：    <br/>Openwrt是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。|[百度网盘](https://pan.baidu.com/s/1aJgNfJLOLmYV_C1UrVy5dA?pwd=arms)  |
 
 ### 硬件资料
 

@@ -444,7 +444,7 @@ The following systems have been officially tested and verified by ArmSoM:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian is a computing build framework that lets users create ready-to-use images with working kernels based on various single-board computer configurations. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  |  |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian is a computing build framework that lets users create ready-to-use images with working kernels based on various single-board computer configurations. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  | [Armbian Image](https://armbian.com/boards/armsom-cm7s-io) |
 
 ## User Manual
 ### 1. Preparation for getting started

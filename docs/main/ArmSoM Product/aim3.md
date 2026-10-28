@@ -124,7 +124,7 @@ ArmSoM provides Debian bullseye as base OS:
 ### Community Images
 | OS | Description | Download |
 |:---:|:---|:---:|
-| ![armbian](/img/armbian-logo.png) | **Armbian for AIM3**Customizable Linux builds for SBCs | [GitHub Releases](https://github.com/armbian/community/releases) |
+| ![armbian](/img/armbian-logo.png) | **Armbian for AIM3**Customizable Linux builds for SBCs | [Armbian Image](https://armbian.com/boards?vendor=armsom) |
 
 ## Certifications
 - CE/FCC/RoHS compliant

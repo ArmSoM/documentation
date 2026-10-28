@@ -444,9 +444,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 ### 第三方镜像
 
-| logo  | Description  | Download|
+| 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  |   |
+|![armbian-logo](/img/armbian-logo.png) | 适用于 **CM7s-IO** 的 Armbian：    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards/armsom-cm7s-io) |
 
 ## 使用手册
 ### 1. 入门准备

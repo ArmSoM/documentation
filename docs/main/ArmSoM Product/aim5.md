@@ -397,7 +397,7 @@ Baidu Netdisk:
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM5 :    <br/>  Armbian is a computing construction framework that allows users to create ready to use images with a working kernel based on the variable user space configuration of various single board computers. It provides various pre built images for some supported single board computers, typically based on Debian or Ubuntu.  | [armbian image](https://github.com/armbian/community/releases)     |
+|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM5 :    <br/>  Armbian is a computing construction framework that allows users to create ready to use images with a working kernel based on the variable user space configuration of various single board computers. It provides various pre built images for some supported single board computers, typically based on Debian or Ubuntu.  | [armbian image](https://armbian.com/boards?vendor=armsom)     |
 
 ### Hardware Material
 

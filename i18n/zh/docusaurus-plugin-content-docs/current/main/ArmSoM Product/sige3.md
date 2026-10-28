@@ -344,11 +344,11 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 ### 第三方镜像
 
-| logo  | Description  | Download|
+| 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for Sige3 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian固件下载](https://github.com/armbian/community/releases)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige3 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
-| [lede](https://github.com/coolsnowwolf/lede) | lede for Sige3 :    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://pan.baidu.com/s/18ow9WzC6impvhAqBUJfUvg?pwd=ka8u)  |
+|![armbian-logo](/img/armbian-logo.png) | 适用于 Sige3 的 Armbian：    <br/>  Armbian 是一个面向单板计算机的 Linux 系统构建框架，可根据不同的用户空间配置生成包含可用内核的系统镜像，并为部分受支持的开发板提供基于 Debian 或 Ubuntu 的预构建镜像。 | [Armbian 固件下载](https://armbian.com/boards/armsom-sige3)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | 适用于 Sige3 的 ubuntu-rockchip：    <br/> 该项目旨在为 Rockchip RK3588 设备提供原生的 Ubuntu 使用体验。可选择 Ubuntu 服务器或桌面镜像，使用熟悉的 Ubuntu 环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+| [lede](https://github.com/coolsnowwolf/lede) | 适用于 Sige3 的 lede：    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://pan.baidu.com/s/18ow9WzC6impvhAqBUJfUvg?pwd=ka8u)  |
 
 ### 硬件资料
 
