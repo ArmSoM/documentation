@@ -380,37 +380,37 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 
 ### Official Images
 
-Based on Debian bullseye works as official operating system by the ArmSom team.
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive.
 
 The following systems have been tested and verified by ArmSoM officially: 
 
-Baidu Netdisk:
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
-  <span>Baidu Netdisk link</span>
+Google Drive:
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
+  <span>Google Drive</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for AIM5 :  <br/>   Debian 12, codenamed 'bookworm', was originally released on June 10, 2023. Debian is an operating system based on free software, known for its stability, security, and openness.| [Download link](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for AIM5:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third Party Systems
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM5 :    <br/>  Armbian is a computing construction framework that allows users to create ready to use images with a working kernel based on the variable user space configuration of various single board computers. It provides various pre built images for some supported single board computers, typically based on Debian or Ubuntu.  | [armbian image](https://armbian.com/boards?vendor=armsom)     |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for AIM5 :** <br/>  Armbian is a computing construction framework that allows users to create ready to use images with a working kernel based on the variable user space configuration of various single board computers. It provides various pre built images for some supported single board computers, typically based on Debian or Ubuntu. | [armbian image](https://armbian.com/boards?vendor=armsom)     |
 
 ### Hardware Material
 
 Obtain hardware information such as development kit schematics, PCBs, DXF, etc., and quickly invest in development
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Download link</span>
 </a>
 
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1-DEu3MmXodcU8BqK9ksW8Q?pwd=arms" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -421,7 +421,7 @@ Obtain hardware information such as development kit schematics, PCBs, DXF, etc.,
         </div>
     </a>
 
-<a href="https://pan.baidu.com/s/1p-ajkk5ebjpczLOyTWnKKA?pwd=arms" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>

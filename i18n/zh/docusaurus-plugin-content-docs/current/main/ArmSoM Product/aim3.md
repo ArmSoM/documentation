@@ -167,38 +167,38 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
+ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所需版本。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for AIM3 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
-|![Android](/img/sige/android.png) | Android12 for AIM3 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
+| ![Debian 12](/img/sige/debian12-1.png) | **适用于 AIM3 的 Debian 12：** <br/>Debian 12（Bookworm）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+|![Android](/img/sige/android.png) | **Android12 for AIM3 :** <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。 |   |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 AIM3 的 Armbian：    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards?vendor=armsom)     |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 AIM3 的 Armbian：** <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | [Armbian 固件下载](https://armbian.com/boards?vendor=armsom)     |
 
 ### 硬件资料
 
 获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1-DEu3MmXodcU8BqK9ksW8Q?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -209,7 +209,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
     </a>
 
-<a href="https://pan.baidu.com/s/1p-ajkk5ebjpczLOyTWnKKA?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>

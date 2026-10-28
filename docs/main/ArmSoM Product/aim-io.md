@@ -125,7 +125,7 @@ The system image includes the Linux kernel, basic programs, etc., which are esse
 
 ### Obtaining the System Image
 
-Visit the Baidu Cloud resource introduction page to obtain the system image: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+Visit the Google Drive resource introduction page to obtain the system image: [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)
 
 :::tip
 1. The default username/password for the official images is armsom/armsom or root/root.
@@ -179,7 +179,7 @@ This method is suitable for writing the system to an SD card and is available on
 
 Burning the image to eMMC requires the RKDevTool burning tool and the RK Driver Assistant (Driver Assistant).
 
-Click the link: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+Click the link: [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
@@ -229,7 +229,7 @@ Start burning the system.
 
 1. Select the "Download Image" option.
 2. Confirm that the board has entered Maskrom mode.
-3. Click the blank cell to select the MiniLoaderAll and Image files to use; the corresponding MiniLoaderAll and Image are stored on Baidu Cloud.
+3. Click the blank cell to select the MiniLoaderAll and Image files to use; the corresponding MiniLoaderAll and Image are stored on Google Drive.
 4. In the "Storage" option, select the target medium EMMC, and select "Force Write by Address," then click "Execute."
 5. Wait for the writing to complete, after which the device will automatically reboot, as shown in the right side of the image with "Download image OK."
 
@@ -241,7 +241,7 @@ Start burning the system.
 
 Burning the image to eMMC requires using the burning tool SDDiskTool_version.exe.
 
-Click the link: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+Click the link: [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 
@@ -259,7 +259,7 @@ Be patient while the SD card is being burned. If the image is large, the burning
 
 :::tip Reminder
 1. Clicking "Create" may occasionally result in an error stating that it cannot burn; you can close the error window and try to start creating again. If it still doesn’t work, try formatting the SD card.
-2. The firmware downloaded from Baidu Cloud needs to be extracted before loading. On Windows PCs, the tool must be run with administrator privileges to execute.
+2. The firmware downloaded from Google Drive needs to be extracted before loading. On Windows PCs, the tool must be run with administrator privileges to execute.
 :::
 
 #### Using USB Cable to Burn to eMMC

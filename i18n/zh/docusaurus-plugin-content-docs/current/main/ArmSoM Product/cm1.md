@@ -269,27 +269,27 @@ ArmSoM团队以 buildroot 为基础作为CM1官方操作系统。[如何烧录�
 
 网盘地址：
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|buildroot | buildroot for CM1 :  <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。|[百度网盘](https://pan.baidu.com/s/1YRHG5Ki8d6ECrQiyWbzIvw?pwd=arms)  |
+|buildroot | **buildroot for CM1 :** <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。 |[百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)  |
 
 
 ### 硬件资料
 
 获取 CM1 原理图、DXF等硬件资料
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
 <div class="cards">
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -299,7 +299,7 @@ ArmSoM团队以 buildroot 为基础作为CM1官方操作系统。[如何烧录�
             </div>
         </div>
 </a>
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -309,7 +309,7 @@ ArmSoM团队以 buildroot 为基础作为CM1官方操作系统。[如何烧录�
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>

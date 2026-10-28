@@ -322,27 +322,27 @@ ArmSoM team uses Debian bullseye as the official operating system.[How to Flash 
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="/getting-start/cloud-disk" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige3 :  <br/>  Debian 11 continues to uphold Debian's tradition by offering a stable and reliable operating system environment. It has undergone rigorous testing and stability assurances, making it suitable for servers, desktops, and embedded devices alike.| [Google Drive link](https://drive.google.com/drive/folders/1UsUqiYN2mzTEx_H2eBlRiNChdmZge0EO?usp=drive_link)  |
-|![Android9-box](/img/sige/Android9-box-1.png) | Android9 Box for Sige3 :    <br/>The Android 9 Box version is an Android operating system specifically designed for TV boxes. It is based on Android 9 Pie, focusing on optimizing user experience and performance for large-screen devices. | [Google Drive link](https://drive.google.com/drive/folders/1ZDfZGnfNyN2fsciE2lMQwuXcvaoRZofP?usp=drive_link)      |
+| ![Debian 11](/img/sige/debian11-1.png) | **Debian 11 for Sige3:** <br/>Debian 11 (Bullseye) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+|![Android9-box](/img/sige/Android9-box-1.png) | **Android9 Box for Sige3 :** <br/>The Android 9 Box version is an Android operating system specifically designed for TV boxes. It is based on Android 9 Pie, focusing on optimizing user experience and performance for large-screen devices. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)      |
 
 ### Third Party System  
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for Sige3 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       | [armbian image](https://armbian.com/boards/armsom-sige3)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for Sige3 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
-|[lede](https://github.com/coolsnowwolf/lede) | lede for Sige3 :    <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/1e8Qgji9e1sh9MMnIzC8v4YtvseNEf5mP)  |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for Sige3 :** <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://armbian.com/boards/armsom-sige3)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **ubuntu-rockchip for Sige3 :** <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|[lede](https://github.com/coolsnowwolf/lede) | **lede for Sige3 :** <br/>lede is a highly modular and automated embedded Linux system with powerful network components and scalability. |[Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)  |
 
 ### Hardware Resources 
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -353,7 +353,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -364,7 +364,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -374,7 +374,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/17cbR2sYVi0YsmPM2CjSWvhM4smqztXgU" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

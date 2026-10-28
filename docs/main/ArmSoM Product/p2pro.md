@@ -167,24 +167,24 @@ ArmSoM team uses Debian bullseye as the official operating system.[How to Flash 
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for P2pro :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1uKe4JgGLnHWENoazhCLPNLfYF2_ZQm_S?usp=drive_link)    |
+| ![Debian 11](/img/sige/debian11-1.png) | **Debian 11 for P2pro:** <br/>Debian 11 (Bullseye) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third Party System  
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|Openwrt | Openwrt for P2pro :    <br/>Openwrt is a highly modular and automated embedded Linux system with powerful network components and scalability.|[Google Drive link](https://drive.google.com/drive/folders/1T_mqbMyNoy6g-qCfVH99te1kco1brn6r?usp=drive_link)  |
+|Openwrt | **Openwrt for P2pro :** <br/>Openwrt is a highly modular and automated embedded Linux system with powerful network components and scalability. |[Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)  |
 
 ### Hardware Resources
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1909scIZ6N-CPXg3YwFqUfujchpkX3L1P?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -195,7 +195,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1poEmG7qoPGusLg_GnVWMICXeKwuxaa4P?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -206,7 +206,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1Ct6q76S8NnV-qSxd3fAYVfTs0NFxAXHD?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -216,7 +216,7 @@ Network disk address:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1PT0hqobvGlA_5Gm8v4IIqTvYyT7BJ6Kg?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

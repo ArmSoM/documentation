@@ -159,32 +159,32 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 网盘地址：
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for P2pro :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)  |
+| ![Debian 11](/img/sige/debian11-1.png) | **适用于 P2pro 的 Debian 11：** <br/>Debian 11（Bullseye）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 第三方系统
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-| Openwrt | 适用于 P2pro 的 Openwrt：    <br/>Openwrt是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。|[百度网盘](https://pan.baidu.com/s/1aJgNfJLOLmYV_C1UrVy5dA?pwd=arms)  |
+| Openwrt | **适用于 P2pro 的 Openwrt：** <br/>Openwrt是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。 |[百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)  |
 
 ### 硬件资料
 
 获取 P2pro 原理图、DXF等硬件资料
 
-<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -195,7 +195,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -206,7 +206,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -217,7 +217,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1mTLGhr7PGItn50keQynYRw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

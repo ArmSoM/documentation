@@ -493,7 +493,7 @@ jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh buildroot_rootfs
 
 ### 网盘链接
 `百度网盘总链接`，包括软件资料、硬件资料
-<a href="https://pan.baidu.com/s/1T5EY9FvVSY2-ZWLTzTa7wg?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
@@ -503,9 +503,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 以下系统已由ArmSoM官方测试验证：
 
-| logo  | Description  | Cloud drive path|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige6 :  <br/>   Debian 11（Bullseye）是稳定、免费的开源Linux发行版，搭载长期支持内核，拥有超5.9万个软件包。|  `ArmSoM->ArmSoM-Sige6->软件资料->debian固件`  |
+| ![Debian 11](/img/sige/debian11-1.png) | **适用于 Sige6 的 Debian 11：** <br/>Debian 11（Bullseye）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 硬件资料
 

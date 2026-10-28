@@ -173,7 +173,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 
 ![ArmSoM-cm7s-pinlist](/img/cm/cm7s-pinlist.png)
 
-<a href="https://pan.baidu.com/s/1PowkJyvHJOHGgC-BnVT98g?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>ArmSoM-CM7s_Pinout</span>
 </a>
 <br/>
@@ -182,13 +182,13 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 
 获取 CM7s 原理图、DXF等硬件资料
 
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -199,7 +199,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -210,7 +210,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -221,7 +221,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
@@ -231,7 +231,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>💡</i>
@@ -427,26 +427,26 @@ CM7s-IO Board 使用12V DC供电。
 
 ### 网盘链接
 百度网盘总链接，包括软件资料、硬件资料：
-<a href="https://pan.baidu.com/s/1oJ6ivhdbvpFiVOSb_HLBQA?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
+ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所需版本。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
 
 以下系统已由ArmSoM官方测试验证：
 
-| logo  | Description | Cloud drive path |
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| `ArmSoM->ArmSoM-CM7s->软件资料` |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| `ArmSoM->ArmSoM-CM7s->软件资料`  |
+| ![Debian 12](/img/sige/debian12-1.png) | **适用于 CM7s-IO 的 Debian 12：** <br/>Debian 12（Bookworm）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **适用于 CM7s-IO 的 Ubuntu 22.04 LTS：** <br/>Ubuntu 22.04 LTS（Jammy Jellyfish）系统镜像。请在网盘中按产品型号选择对应镜像。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 **CM7s-IO** 的 Armbian：    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards/armsom-cm7s-io) |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 CM7s-IO 的 Armbian：** <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | [Armbian 固件下载](https://armbian.com/boards/armsom-cm7s-io) |
 
 ## 使用手册
 ### 1. 入门准备

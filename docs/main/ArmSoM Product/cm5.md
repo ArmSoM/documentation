@@ -265,33 +265,33 @@ Here’s a table showing the power consumption of ArmSoM-CM5 and ArmSoM-CM5-IO i
 
 ### Official Image
 
-ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive. [How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="/getting-start/cloud-disk" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for CM5 :  <br/>  Debian 12 brings thousands of new and updated software packages, supports multiple desktop environments, and processor architectures including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC. However, one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. |  **CM5-IO**:[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0)    <br/>  **CM5-RPI-CM4-IO**:[Google Drive link](https://drive.google.com/drive/folders/1EgWlFtfoiMdN7ndXjLFcF_iAxtAQ7CWt?usp=drive_link)   |
-|![Android](/img/sige/android.png) | Android14 for CM5 :    <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features.|[Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for CM5 :    <br/>Ubuntu 22.04, codenamed "Jammy Jellyfish," was officially released by Canonical on April 21, 2022| [Google Drive link](https://drive.google.com/drive/folders/198NQrcnjAGLf_-Sh8Ata8W7ruofg0ITK?usp=drive_link)  |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for CM5:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+|![Android](/img/sige/android.png) | **Android14 for CM5 :** <br/>Make your device more personal, protected and accessible with the newest OS upgrade. Improved photo quality, new themes and AI generated wallpapers. Privacy updates for your health, safety and data. And expanded accessibility features. |[Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu 22.04 LTS for CM5:** <br/>Ubuntu 22.04 LTS (Jammy Jellyfish) system images. Select the matching image in the product folder in the shared drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third Party System  
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for CM5 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored.       |**CM5-IO**:[armbian image](https://armbian.com/boards/armsom-cm5-io)   <br/>  **CM5-RPI-CM4-IO**:[armbian image](https://armbian.com/boards/armsom-cm5-rpi-cm4-io)   |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for CM5 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment.  | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for CM5 :** <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. |**CM5-IO**:[armbian image](https://armbian.com/boards/armsom-cm5-io)   <br/>  **CM5-RPI-CM4-IO**:[armbian image](https://armbian.com/boards/armsom-cm5-rpi-cm4-io)   |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **ubuntu-rockchip for CM5 :** <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip image](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### Hardware Resources 
 
-<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>CM5 Hardware Resources</span>
 </a>
 <br/>
@@ -299,7 +299,7 @@ Network disk address:
 [ArmSoM-CM5 pin table](https://docs.google.com/spreadsheets/d/1TFBTV2u73eYIFKA2MqlkeFjA-SvN_Uhu/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true) - pin table
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1wbW_VyTEyQRrsDF8cvCp1zK1SsZ819un?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -310,7 +310,7 @@ Network disk address:
             </div>
         </div>
     </a>
-    <a href="https://drive.google.com/drive/folders/10bCEK2t1BuOJRAULnoEAem338c2W71xT?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📗</i>
@@ -321,7 +321,7 @@ Network disk address:
             </div>
         </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1FXvNMlOzZeEF601KSCylwkihR7lqFTtw?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>

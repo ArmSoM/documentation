@@ -46,7 +46,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 - 温度：工作温度：0°C 至 80°C，存储温度：-20°C 至 85°C
 - 湿度：相对湿度: 运行：10% 至 90%，存储：5% 至 95%
 - 操作系统：
-  - Rockchip官方支持：Android 12.0，Debian11，Buildroot
+  - ArmSoM 官方镜像：Debian 12、Ubuntu 22.04
   - 第三方支持：Armbian 23.07，Ubuntu 20.04，Ubuntu22.04，Kylin OS
 - PCB：12 层 PCB 板设计
 - 重量：17.3g
@@ -82,7 +82,7 @@ AIM7 采用与 NVIDIA Jetson Nano / TX2 NX 相同类型的 260-pin SO-DIMM 外�
 
 ![ArmSoM-aim7-pinlist](/img/aim/aim7-pinlist.png)
 
-<a href="https://pan.baidu.com/s/1vsxkgNsUQfE0deS7EhrWIA?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>ArmSoM-AIM7 & Jetson AIM Comparison Table</span>
 </a>
 <br/>
@@ -829,39 +829,39 @@ Table 16. i2s pin descriptions
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
+ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所需版本。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian11 for AIM7 :  <br/>   Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。| [百度网盘](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms)  |
-|![Android](/img/sige/android.png) | Android14 for AIM7 :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。|   |
+| ![Debian 12](/img/sige/debian12-1.png) | **适用于 AIM7 的 Debian 12：** <br/>Debian 12（Bookworm）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **适用于 AIM7 的 Ubuntu 22.04 LTS：** <br/>Ubuntu 22.04 LTS（Jammy Jellyfish）系统镜像。请在网盘中按产品型号选择对应镜像。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 AIM7 的 Armbian：    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards/armsom-aim7-io)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | 适用于 AIM7 的 ubuntu-rockchip：    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 AIM7 的 Armbian：** <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | [Armbian 固件下载](https://armbian.com/boards/armsom-aim7-io)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **适用于 AIM7 的 ubuntu-rockchip：** <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 
 获取开发套件原理图、PCB、DXF等硬件资料，快速投入开发
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -872,7 +872,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -883,7 +883,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -894,7 +894,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
@@ -904,7 +904,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>💡</i>

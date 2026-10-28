@@ -332,30 +332,30 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 网盘地址：
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige3 :  <br/> Debian 11（代号为"Bullseye"）是Debian项目的最新稳定版本，它于2021年8月14日发布。Debian是一个以自由软件为基础的操作系统，以稳定性、安全性和开放性著称。|[百度网盘](https://pan.baidu.com/share/init?surl=26rLsrCHPJeRtyX_Tkoe6w&pwd=arms)  |
-|![Android9-box](/img/sige/Android9-box-1.png) | Android9 Box for Sige3 :    <br/>Android 9 Box版本是专为电视盒子（TV Box）设计的Android操作系统版本。它基于Android 9 Pie版本，专注于优化在大屏幕设备上的用户体验和性能表现。| [百度网盘](https://pan.baidu.com/share/init?surl=26rLsrCHPJeRtyX_Tkoe6w&pwd=arms)     |
+| ![Debian 11](/img/sige/debian11-1.png) | **适用于 Sige3 的 Debian 11：** <br/>Debian 11（Bullseye）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+|![Android9-box](/img/sige/Android9-box-1.png) | **Android9 Box for Sige3 :** <br/>Android 9 Box版本是专为电视盒子（TV Box）设计的Android操作系统版本。它基于Android 9 Pie版本，专注于优化在大屏幕设备上的用户体验和性能表现。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)     |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 Sige3 的 Armbian：    <br/>  Armbian 是一个面向单板计算机的 Linux 系统构建框架，可根据不同的用户空间配置生成包含可用内核的系统镜像，并为部分受支持的开发板提供基于 Debian 或 Ubuntu 的预构建镜像。 | [Armbian 固件下载](https://armbian.com/boards/armsom-sige3)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | 适用于 Sige3 的 ubuntu-rockchip：    <br/> 该项目旨在为 Rockchip RK3588 设备提供原生的 Ubuntu 使用体验。可选择 Ubuntu 服务器或桌面镜像，使用熟悉的 Ubuntu 环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
-| [lede](https://github.com/coolsnowwolf/lede) | 适用于 Sige3 的 lede：    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://pan.baidu.com/s/18ow9WzC6impvhAqBUJfUvg?pwd=ka8u)  |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 Sige3 的 Armbian：** <br/>  Armbian 是一个面向单板计算机的 Linux 系统构建框架，可根据不同的用户空间配置生成包含可用内核的系统镜像，并为部分受支持的开发板提供基于 Debian 或 Ubuntu 的预构建镜像。 | [Armbian 固件下载](https://armbian.com/boards/armsom-sige3)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **适用于 Sige3 的 ubuntu-rockchip：** <br/> 该项目旨在为 Rockchip RK3588 设备提供原生的 Ubuntu 使用体验。可选择 Ubuntu 服务器或桌面镜像，使用熟悉的 Ubuntu 环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+| [lede](https://github.com/coolsnowwolf/lede) | **适用于 Sige3 的 lede：** <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)  |
 
 ### 硬件资料
 
 获取 Sige3 原理图、DXF等硬件资料
 
 <div class="cards">
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -365,7 +365,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
             </div>
         </div>
 </a>
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -375,7 +375,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -385,7 +385,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>

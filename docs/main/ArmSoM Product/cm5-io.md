@@ -207,21 +207,22 @@ The cm5-io board uses a 12V DC power supply.
 
 ### Official Images
 
-ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive. [How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
 
 #### Download
 
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="/getting-start/cloud-disk" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | Logo | Description | Download |
 |:----:|:-----------:|:--------:|
-| ![debian-bullseye](/img/sige/debian12-1.png) | **Debian 12 for CM5:** <br/> Debian 12 introduces thousands of new and updated packages, supporting various desktop environments and processor architectures (including 32-bit and 64-bit PCs, ARM, MIPS, and PowerPC). One of the biggest changes is the upgrade of the Linux kernel from version 5.10 to 6.1 LTS. | [Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
-| ![Android](/img/sige/android.png) | **Android 14 for CM5:** <br/> The latest OS upgrade makes your device more personalized, secure, and accessible. It offers improved photo quality, new themes, and AI-generated wallpapers. Privacy updates protect your health, safety, and data while expanding accessibility features. | [Google Drive link](https://drive.google.com/drive/folders/10OtqLU1c1MZ9IJR-aLSrevwY4NlzJNG0) |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for CM5-IO:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu 22.04 LTS for CM5-IO:** <br/>Ubuntu 22.04 LTS (Jammy Jellyfish) system images. Select the matching image in the product folder in the shared drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Android](/img/sige/android.png) | **Android 14 for CM5:** <br/> The latest OS upgrade makes your device more personalized, secure, and accessible. It offers improved photo quality, new themes, and AI-generated wallpapers. Privacy updates protect your health, safety, and data while expanding accessibility features. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third-Party Images
 
@@ -235,7 +236,7 @@ Network disk address:
 Get schematics, PCB, DXF, and other hardware documentation for the cm5-io development kit to quickly start your development.
 
 
-<a href="https://drive.google.com/drive/folders/1u1ayZzNv0wlE5TpJhuqHYWU6YCiGeC-G" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>CM5 Hardware Resources</span>
 </a>
 <br/>
@@ -243,7 +244,7 @@ Get schematics, PCB, DXF, and other hardware documentation for the cm5-io develo
 [ArmSoM-CM5 pin table](https://docs.google.com/spreadsheets/d/1TFBTV2u73eYIFKA2MqlkeFjA-SvN_Uhu/edit?usp=drive_link&ouid=116290908759287485424&rtpof=true&sd=true) - pin table
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1wbW_VyTEyQRrsDF8cvCp1zK1SsZ819un?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -254,7 +255,7 @@ Get schematics, PCB, DXF, and other hardware documentation for the cm5-io develo
             </div>
         </div>
     </a>
-    <a href="https://drive.google.com/drive/folders/10bCEK2t1BuOJRAULnoEAem338c2W71xT?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📗</i>
@@ -265,7 +266,7 @@ Get schematics, PCB, DXF, and other hardware documentation for the cm5-io develo
             </div>
         </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1FXvNMlOzZeEF601KSCylwkihR7lqFTtw?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>

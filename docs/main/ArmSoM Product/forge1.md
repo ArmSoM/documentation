@@ -191,23 +191,23 @@ The ArmSoM team uses buildroot as the official operating system for Forge1. [How
 The following systems have been tested and verified by ArmSoM official:
 
 Network disk address: 
-<a href="/getting-start/cloud-disk" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo | Description | Download|
 |:--------: | :---------: | :--------: |
-|buildroot | buildroot for Forge1: <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive link](https://drive.google.com/drive/folders/1ZDwKlNs1zZyEWghbcx9_7h73MmZJS8A1) |
+|buildroot | **buildroot for Forge1:** <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Hardware Resources 
 
-<a href="/getting-start/cloud-disk" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 <br/>
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1yWlzbQbuLUKCyIFuj4LIlvwslRpoZFig" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -218,7 +218,7 @@ Network disk address:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1yWlzbQbuLUKCyIFuj4LIlvwslRpoZFig" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -229,7 +229,7 @@ Network disk address:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1yWlzbQbuLUKCyIFuj4LIlvwslRpoZFig" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>

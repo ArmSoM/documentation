@@ -125,7 +125,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ### 获取系统镜像
 
-访问百度网盘资源介绍页面获取系统镜像: [百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+访问百度网盘资源介绍页面获取系统镜像: [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)
 
 :::tip
 1. 官方镜像的默认账号/密码为armsom/armsom，root/root。
@@ -181,7 +181,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 烧录镜像到eMMC需要使用到 RKDevTool 烧录工具和 RK驱动助手(DriverAssitant)
 
-点击进入链接:[百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+点击进入链接:[百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
@@ -243,7 +243,7 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 烧录镜像到eMMC需要使用到烧录工具 SDDiskTool_版本号.exe
 
-点击进入链接:[百度网盘链接](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms)
+点击进入链接:[百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 

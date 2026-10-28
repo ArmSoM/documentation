@@ -473,43 +473,43 @@ github : [SystemReady](https://github.com/ArmSoM/SystemReady)
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
+ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所需版本。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
 
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian12 for Sige7 :  <br/>   Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| [百度网盘](https://pan.baidu.com/s/1sUHv1pAhkLts3c7fziU4lw?pwd=arms)   |
-|![Android](/img/sige/android.png) | Android12 for Sige7 :    <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。| [百度网盘](https://pan.baidu.com/s/1btSeFT_-qs-0bz1wUcLZ6A?pwd=arms)  |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige7 :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| [百度网盘](https://pan.baidu.com/s/1muULzMrL8cmEMszuv1cIhw?pwd=arms)  |
+| ![Debian 12](/img/sige/debian12-1.png) | **适用于 Sige7 的 Debian 12：** <br/>Debian 12（Bookworm）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+|![Android](/img/sige/android.png) | **Android12 for Sige7 :** <br/>安卓（Android）是一个基于Linux内核的开放源代码操作系统，主要用于移动设备、平板电脑和智能手表等智能设备。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)  |
+| ![Ubuntu](/img/sige/ubuntu.png) | **适用于 Sige7 的 Ubuntu 22.04 LTS：** <br/>Ubuntu 22.04 LTS（Jammy Jellyfish）系统镜像。请在网盘中按产品型号选择对应镜像。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 Sige7(bpi-m7) 的 Armbian：    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards/armsom-sige7)     |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | 适用于 Sige7 的 ubuntu-rockchip：    <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
-|Arch Linux | kwankiu 提供的 Arch Linux 安装程序 :    <br/>Arch Linux 是一个独立开发的通用 GNU/Linux 发行版，致力于通过滚动发布模式提供大多数软件的最新稳定版本。默认安装是一个最小的基础系统，由用户配置为仅添加所需的内容。| 只需刷新图像并按照安装程序提示的说明进行操作即可。<br/>注意：此安装程序需要互联网连接。（以太网驱动程序可能需要一些时间来加载，安装程序将重试多次，这是正常的。）  [固件下载](https://github.com/kwankiu/archlinux-installer/releases) |
-| ![openSUSE](https://static.opensuse.org/favicon.svg) | 桌面用户、开发者以及系统管理员的匠之所选。| [固件下载](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
-| [lede](https://github.com/coolsnowwolf/lede) | 适用于 Sige7 的 lede：    <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。| [coolsnowwolf](https://github.com/coolsnowwolf/lede)  |
-| [LibreELEC](https://github.com/coolsnowwolf/lede) | 适用于 Sige7 的 LibreELEC.tv：    <br/>LibreELEC 是一个极简主义的“刚好够用的操作系统”Linux 发行版，用于运行Kodi。| [LibreELEC.tv](https://github.com/ShigeakiAsai/LibreELEC.tv/releases)  |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 Sige7(bpi-m7) 的 Armbian：** <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | [Armbian 固件下载](https://armbian.com/boards/armsom-sige7)     |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **适用于 Sige7 的 ubuntu-rockchip：** <br/>  该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|Arch Linux | **kwankiu 提供的 Arch Linux 安装程序 :** <br/>Arch Linux 是一个独立开发的通用 GNU/Linux 发行版，致力于通过滚动发布模式提供大多数软件的最新稳定版本。默认安装是一个最小的基础系统，由用户配置为仅添加所需的内容。 | 只需刷新图像并按照安装程序提示的说明进行操作即可。<br/>注意：此安装程序需要互联网连接。（以太网驱动程序可能需要一些时间来加载，安装程序将重试多次，这是正常的。）  [固件下载](https://github.com/kwankiu/archlinux-installer/releases) |
+| ![openSUSE](https://static.opensuse.org/favicon.svg) | **openSUSE:** <br/>桌面用户、开发者以及系统管理员的匠之所选。 | [固件下载](https://download.opensuse.org/ports/aarch64/tumbleweed/appliances/) |
+| [lede](https://github.com/coolsnowwolf/lede) | **适用于 Sige7 的 lede：** <br/>lede是一个高度模块化、高度自动化的嵌入式Linux系统，拥有强大的网络组件和扩展性。 | [coolsnowwolf](https://github.com/coolsnowwolf/lede)  |
+| [LibreELEC](https://github.com/coolsnowwolf/lede) | **适用于 Sige7 的 LibreELEC.tv：** <br/>LibreELEC 是一个极简主义的“刚好够用的操作系统”Linux 发行版，用于运行Kodi。 | [LibreELEC.tv](https://github.com/ShigeakiAsai/LibreELEC.tv/releases)  |
 
 ### 硬件资料
 
 获取 Sige7 原理图、DXF等硬件资料
 
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms " class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 <br/>
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/18EjA6vzhfCRcO5CQ9oYhag?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -520,7 +520,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1rqpumvtvASduXpq9Qi-B1Q?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -531,7 +531,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1isHPcVGh5fHimA-sJXJICQ?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -542,7 +542,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
     </div>
 </a>
 
-<a href="https://pan.baidu.com/s/1VgiOJkzp7ISTrkUWqlgb_A?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
@@ -552,7 +552,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
         </div>
     </div>
 </a>
-<a href="https://pan.baidu.com/s/1na-F11TOIeGO8QHrZRBHJw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>💡</i>

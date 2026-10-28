@@ -114,17 +114,17 @@ All GPIO pins maintain compatibility with NVIDIA Jetson TX2 & Nano development b
 (Same card structure with English titles)
 
 ### Official Images
-ArmSoM provides Debian bullseye as base OS:
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive.
 
 | OS | Description | Download |
 |:---:|:---|:---:|
-| ![debian](/img/sige/debian12-1.png) | **Debian 12 for AIM3**Stable release with long-term support | [Baidu Cloud](https://pan.baidu.com/s/1d91E_Xv0huhvdhWVhN0JFA?pwd=arms) |
-| ![android](/img/sige/android.png) | **Android 12 for AIM3**Enhanced privacy controls & AI-powered features | Coming Soon |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for AIM3:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![android](/img/sige/android.png) | **Android 12 for AIM3:**  Enhanced privacy controls & AI-powered features | Coming Soon |
 
 ### Community Images
 | OS | Description | Download |
 |:---:|:---|:---:|
-| ![armbian](/img/armbian-logo.png) | **Armbian for AIM3**Customizable Linux builds for SBCs | [Armbian Image](https://armbian.com/boards?vendor=armsom) |
+| ![armbian](/img/armbian-logo.png) | **Armbian for AIM3:**  Customizable Linux builds for SBCs | [Armbian Image](https://armbian.com/boards?vendor=armsom) |
 
 ## Certifications
 - CE/FCC/RoHS compliant

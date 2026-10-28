@@ -336,7 +336,7 @@ jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh buildroot_rootfs
 ### Cloud drive link
 
 `Google Drive links in general`, including software materials and hardware materials
-<a href="https://drive.google.com/drive/folders/1RsNyyJ4tG2UGGsl9nb6cRM5VntZ8DJwF" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
@@ -346,9 +346,9 @@ ArmSoM team uses Debian bullseye as the official operating system.[How to Flash 
 
 The following systems have been tested and verified by ArmSoM official:
 
-| logo  | Description  | Cloud drive path |
+| Logo | Description | Download |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for Sige6 :  <br/>   Debian 11 (Bullseye) is a stable, free, open-source Linux distro, with a long-term support kernel and over 59,000 software packages.| `software → Debianfirmware` |
+| ![Debian 11](/img/sige/debian11-1.png) | **Debian 11 for Sige6:** <br/>Debian 11 (Bullseye) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third Party System  
 

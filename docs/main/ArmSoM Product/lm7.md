@@ -49,7 +49,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - **Operating temperature**: 0°C ~ 70°C
 - **Interface type**: LGA package, 506 pins in total
 - **Operating systems**: 
-  - **Officially supported by Rockchip**: Android 12.0, Debian 11, Buildroot
+  - **ArmSoM official images**: Debian 12, Ubuntu 22.04, Android 12
   - **Supported by the Third party**: Armbian, Ubuntu 20.04, Ubuntu 22.04, Kylin OS
 - **PCB**: 12-layer PCB design
 - **Weight**: About 13.4g  
@@ -338,19 +338,20 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 ### Official Images  
 
-Based on Debian bullseye works as official operating system by the ArmSom team.
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive.
 
 The following systems have been tested and verified by ArmSoM officially:  
 
 Download link:
-<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for LM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1wz2BPS8s1iXNWlOUGyPmnBSDG32arWdT?usp=drive_link)    |
-|![Android](/img/sige/android.png) | Android12 for LM7 :    <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices.|[Google Drive link](https://drive.google.com/drive/folders/1vMC1qNUY-fHiyqqK_xYNom2goQ52gVNA?usp=drive_link)  |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for LM7 (W3):** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu 22.04 LTS for LM7 (W3):** <br/>Ubuntu 22.04 LTS (Jammy Jellyfish) system images. Select the matching image in the product folder in the shared drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+|![Android](/img/sige/android.png) | **Android12 for LM7 :** <br/>Android is an open-source operating system based on the Linux kernel, primarily used for mobile devices, tablets, and smartwatches, among other smart devices. |[Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56)  |
 
 #### Release Information
 
@@ -360,13 +361,13 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for W3 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://armbian.com/boards/armsom-w3) |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for W3 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for W3 :** <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://armbian.com/boards/armsom-w3) |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **ubuntu-rockchip for W3 :** <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
 
 
 ### LM7 Hardware Resources 
 
-<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>LM7 Hardware Resources</span>
 </a>
 
@@ -384,7 +385,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -400,7 +401,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
 #### Development Kit (W3) Resources
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -412,7 +413,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -423,7 +424,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -434,7 +435,7 @@ View the initial official release announcement for ArmSoM-W3 here:  [System Rele
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1RE9zdHrXYvkfIilVn0lBXsq9PvaCmE_I?usp=drive_link" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>

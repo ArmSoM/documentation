@@ -49,7 +49,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - Temperature: Operating temperature: 0°C to 80°C, Storage temperature: -20°C to 85°C
 - Humidity: Relative humidity: Operation: 10% to 90%, Storage: 5% to 95%
 - operating system:
-   - Rockchip official support: Android 12.0, Debian11, Buildroot
+   - ArmSoM official images: Debian 12, Ubuntu 22.04
    - Third-party support: Armbian 23.07, Ubuntu 20.04, Ubuntu22.04, Kylin OS
 - PCB: 12-layer PCB board design
 - weight: 17.3g
@@ -86,7 +86,7 @@ AIM7 features a 260-pin SO-DIMM form factor designed for compatibility with sele
 
 ![ArmSoM-aim7-pinlist](/img/aim/aim7-pinlist.png)
 
-<a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>ArmSoM-AIM7 & Jetson AIM Comparison Table</span>
 </a>
 <br/>
@@ -880,36 +880,37 @@ Table 16. i2s pin descriptions
 
 ### Official Images  
 
-Based on Debian bullseye works as official operating system by the ArmSom team.
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive.
 
 The following systems have been tested and verified by ArmSoM officially:  
 
 Download link:
-<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56?usp=drive_link" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian11 for AIM7 :  <br/>   Debian 11, codenamed "Bullseye," is the latest stable release of the Debian project, released on August 14, 2021. Debian is an operating system based on free software known for its stability, security, and openness.| [Google Drive link](https://drive.google.com/drive/folders/1Qx76r_cDufivFqfNwLmpsgJSmDdxMB9y)    |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for AIM7:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu 22.04 LTS for AIM7:** <br/>Ubuntu 22.04 LTS (Jammy Jellyfish) system images. Select the matching image in the product folder in the shared drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third Party Systems  
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for AIM7 :    <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://armbian.com/boards/armsom-aim7-io) |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | ubuntu-rockchip for AIM7 :    <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for AIM7 :** <br/>  Armbian is a computing build framework that allows users to create ready-to-use images with working kernels in variable user space configurations for various single board computers. It provides various pre-build images for some supported boards. These are usually Debian or Ubuntu flavored. | [armbian image](https://armbian.com/boards/armsom-aim7-io) |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **ubuntu-rockchip for AIM7 :** <br/> This project aims to provide a default Ubuntu experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. | [ubuntu-rockchip](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) |
 
 ### AIM7 Hardware Resources 
 
-<a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>AIM7 Hardware Resources</span>
 </a>
 
 <br/>
 
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -920,7 +921,7 @@ Download link:
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -931,7 +932,7 @@ Download link:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -942,7 +943,7 @@ Download link:
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
@@ -952,7 +953,7 @@ Download link:
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/1sxocbzbk4iAAyTsn0RjON7Sv6AFZAxLv" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>💡</i>

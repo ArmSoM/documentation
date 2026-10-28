@@ -35,7 +35,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 - **工作电压**：具有宽范围的输入电压，从5V到23V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
 - **操作系统**：
-  - **官方支持**：Debian12，Ubuntu 22.04, Ubuntu 24.04
+  - **官方支持**：Debian12，Ubuntu 22.04
   - **第三方支持**：Armbian, Arch Linux, openSUSE
 - **PCB**：12 层 PCB 板设计
 - **重量**：46.6g
@@ -144,7 +144,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
         </tr>
         <tr>
             <th>系统</th>
-            <th><li>官方支持：Debian12，ubuntu22.04，ubuntu24.04</li><li>第三方支持：Armbian</li></th>
+            <th><li>官方支持：Debian12，ubuntu22.04</li><li>第三方支持：Armbian</li></th>
         </tr>
         <tr>
             <th>尺寸</th>
@@ -347,26 +347,26 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 
 ### 网盘链接
 百度网盘总链接，包括软件资料、硬件资料：
-<a href="https://pan.baidu.com/s/1ZPrdoa3bddkwRvbF-_DbvA?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](#2-烧录方式选择)📤
+ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所需版本。[如何烧录系统镜像？](#2-烧录方式选择)📤
 
 以下系统已由ArmSoM官方测试验证：
 
-| logo  | Description  | Cloud drive path |
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian12 for Sige7s :  <br/>   Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| `ArmSoM->ArmSoM-Sige7s->软件资料->debian固件`   |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige7s :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| `ArmSoM->ArmSoM-Sige7s->软件资料->Ubuntu固件` |
+| ![Debian 12](/img/sige/debian12-1.png) | **适用于 Sige7s 的 Debian 12：** <br/>Debian 12（Bookworm）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **适用于 Sige7s 的 Ubuntu 22.04 LTS：** <br/>Ubuntu 22.04 LTS（Jammy Jellyfish）系统镜像。请在网盘中按产品型号选择对应镜像。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 Sige7s 的 Armbian：    <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | [Armbian 固件下载](https://armbian.com/boards?vendor=armsom)     |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 Sige7s 的 Armbian：** <br/> Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | [Armbian 固件下载](https://armbian.com/boards?vendor=armsom)     |
 
 ### 硬件资料
 

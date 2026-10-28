@@ -39,7 +39,7 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
 - **OS**: 
-  - **Official**: Debian 11, Ubuntu 22.04, Ubuntu 24.04
+  - **Official**: Debian 12, Ubuntu 22.04
   - **3rd party**: Armbian, Arch Linux, openSUSE
 - **PCB**: 12-layer
 - **Weight**: 46.6g
@@ -149,7 +149,7 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
         </tr>
         <tr>
             <th>OS Support</th>
-            <th><li>Official Support: Debian 12, Ubuntu 22.04, Ubuntu 24.04</li><li>Third-Party Support: Armbian</li></th>
+            <th><li>Official Support: Debian 12, Ubuntu 22.04</li><li>Third-Party Support: Armbian</li></th>
         </tr>
         <tr>
             <th>Dimensions</th>
@@ -354,28 +354,28 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
 
 ### Cloud drive link
 `Google Drive links in general`, including software materials and hardware materials
-<a href="https://drive.google.com/drive/folders/1yCLLLeaw6hHxT-3IH0bNf7DhjAf0BFbI" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 ### Official mirror
 
-ArmSoM team uses Debian bullseye as the official operating system.[How to Flash Image](#2-programming-method-selection)📤
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive. [How to Flash Image](#2-programming-method-selection)📤
 
 #### Download
 
 The following systems have been tested and verified by ArmSoM official:
 
-| logo  | Description  | Cloud drive path |
+| Logo | Description | Download |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian11-1.png) | debian12 for Sige7s :  <br/>   Debian 12 brings thousands of new and updated packages, supporting multiple desktop environments and processor architectures (including 32-bit and 64-bit PC, ARM, MIPS, and PowerPC). But one of the biggest changes is the upgrade of the Linux kernel from version 5.10 to version 6.1 LTS.| `ArmSoM->ArmSoM-Sige7s->software->Debianfirmware`   |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for Sige7s :    <br/>Ubuntu 22.04, code-named 'Jammy Jellyfish', is a version officially released by Canonical on April 21, 2022.| `ArmSoM->ArmSoM-Sige7s->software->Ubuntufirmware` |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for Sige7s:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu 22.04 LTS for Sige7s:** <br/>Ubuntu 22.04 LTS (Jammy Jellyfish) system images. Select the matching image in the product folder in the shared drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third Party System
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for Sige7s:    <br/> Armbian is a computing build framework that lets users create ready-to-use images with a working kernel based on the variable user space configurations of various single-board computers. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  | [armbian firmware download](https://armbian.com/boards?vendor=armsom)     |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for Sige7s:** <br/> Armbian is a computing build framework that lets users create ready-to-use images with a working kernel based on the variable user space configurations of various single-board computers. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu. | [armbian firmware download](https://armbian.com/boards?vendor=armsom)     |
 
 ### Hardware Resources
 

@@ -172,7 +172,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 
 ### Pin Definition
 
-<a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>ArmSoM-CM7s_Pinout</span>
 </a>
 <br/>
@@ -180,13 +180,13 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 ### hardware documentation
 
 Get CM7s schematics, DXF, and other hardware materials
-<a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 <br/>
 <div class="cards">
-    <a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="card-link">
+    <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📄</i>
@@ -197,7 +197,7 @@ Get CM7s schematics, DXF, and other hardware materials
         </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
@@ -208,7 +208,7 @@ Get CM7s schematics, DXF, and other hardware materials
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📜</i>
@@ -219,7 +219,7 @@ Get CM7s schematics, DXF, and other hardware materials
     </div>
 </a>
 
-<a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📑</i>
@@ -229,7 +229,7 @@ Get CM7s schematics, DXF, and other hardware materials
         </div>
     </div>
 </a>
-<a href="https://drive.google.com/drive/folders/163ASXT0BEUnX74A0ovflQBG_6aJ6330f" class="card-link">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="card-link">
     <div class="card">
         <div class="icon">
             <i>💡</i>
@@ -425,26 +425,26 @@ The CM7s-IO Board uses 12V DC power.
 
 ### Cloud drive link
 Google Drive links, including software information and hardware information:
-<a href="https://drive.google.com/drive/folders/1uaEyDY_oIhGFOExQVPXuocX27bSgTcPI" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
 
 ### Official mirror
 
-The ArmSoM team uses Debian bullseye as the official operating system.[How do I flash a system image?](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
+ArmSoM provides the following official system images. Select the matching product folder and image version in the shared drive. [How do I flash a system image?](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
 
 The following systems have been officially tested and verified by ArmSoM:
 
-| logo  | Description  | Cloud drive path |
+| Logo | Description | Download |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM7s-IO** :  <br/>  Debian 12 brings thousands of new and updated packages, supporting a variety of desktop environments and processor architectures (including 32-bit and 64-bit PCs, ARM, MIPS, and PowerPC). But one of the biggest changes is that the Linux kernel has been upgraded from version 5.10 to 6.1 LTS.| `ArmSoM->ArmSoM-CM7s->software` |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM7s-IO** :    <br/>Ubuntu 22.04, code-named 'Jammy Jellyfish', is a version officially released by Canonical on April 21, 2022.| `ArmSoM->ArmSoM-CM7s->software` |
+| ![Debian 12](/img/sige/debian12-1.png) | **Debian 12 for CM7s-IO:** <br/>Debian 12 (Bookworm) system images. Open the matching product folder in the shared drive; available versions and desktop variants are listed there. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu 22.04 LTS for CM7s-IO:** <br/>Ubuntu 22.04 LTS (Jammy Jellyfish) system images. Select the matching image in the product folder in the shared drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
 
 ### Third-party mirror
 
 | logo  | Description  | Download|
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | Armbian for **CM7s-IO**:    <br/>  Armbian is a computing build framework that lets users create ready-to-use images with working kernels based on various single-board computer configurations. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu.  | [Armbian Image](https://armbian.com/boards/armsom-cm7s-io) |
+|![armbian-logo](/img/armbian-logo.png) | **Armbian for CM7s-IO:** <br/>  Armbian is a computing build framework that lets users create ready-to-use images with working kernels based on various single-board computer configurations. It provides a variety of pre-built images for some supported single-board computers, usually based on Debian or Ubuntu. | [Armbian Image](https://armbian.com/boards/armsom-cm7s-io) |
 
 ## User Manual
 ### 1. Preparation for getting started

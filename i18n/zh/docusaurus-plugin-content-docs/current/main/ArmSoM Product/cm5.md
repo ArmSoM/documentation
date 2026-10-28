@@ -197,7 +197,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 
 ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
 
-<a href="https://pan.baidu.com/s/13ZHVfhHGArRcUMR9A69FGA?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>ArmSoM-CM5(RK3576)&Raspberry-CM4-CM5 Pinlist对比表</span>
 </a>
 <br/>
@@ -273,39 +273,39 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 
 ### 官方镜像
 
-ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
+ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所需版本。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤📤
 
 以下系统已由ArmSoM官方测试验证：
 
 网盘地址：
-<a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
 </a>
 
-| logo  | Description  | Download|
+| 标识 | 系统镜像 | 下载入口 |
 |:--------: | :---------: | :--------:  | 
-|![debian-bullseye](/img/sige/debian12-1.png) | debian12 for **CM5-IO** :  <br/>  Debian 12 带来了数千个新的和更新的软件包，支持多种桌面环境和处理器架构（包括 32 位和 64 位 PC、ARM、MIPS 和 PowerPC）。但是最大的变化之一是 Linux 内核从 5.10 版本升级到 6.1 LTS 版本。| **CM5-IO**:[百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms)    <br/>  **CM5-RPI-CM4-IO**:[百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms) |
-|![Android](/img/sige/android.png) | Android14 for **CM5-IO** :    <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。| [百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms)  |
-|![ubuntu](/img/sige/ubuntu.png) | ubuntu22.04 for **CM5-IO** :    <br/>Ubuntu 22.04，代号“Jammy Jellyfish”，是Canonical于2022年4月21日正式发布的版本.| [百度网盘](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms)  |
+| ![Debian 12](/img/sige/debian12-1.png) | **适用于 CM5 的 Debian 12：** <br/>Debian 12（Bookworm）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+|![Android](/img/sige/android.png) | **Android14 for CM5-IO :** <br/>最新的操作系统升级，让您的设备更加个性化、更安全、更易访问。照片质量提升、新主题和 AI 生成的壁纸。隐私更新，保护您的健康、安全和数据。并扩展了无障碍功能。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)  |
+| ![Ubuntu](/img/sige/ubuntu.png) | **适用于 CM5 的 Ubuntu 22.04 LTS：** <br/>Ubuntu 22.04 LTS（Jammy Jellyfish）系统镜像。请在网盘中按产品型号选择对应镜像。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
 ### 第三方镜像
 
 | 标识 | 介绍 | 固件下载 |
 |:--------: | :---------: | :--------:  | 
-|![armbian-logo](/img/armbian-logo.png) | 适用于 CM5 的 Armbian：    <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。  | **CM5-IO**:[Armbian 固件下载](https://armbian.com/boards/armsom-cm5-io)   <br/>  **CM5-RPI-CM4-IO**:[Armbian 固件下载](https://armbian.com/boards/armsom-cm5-rpi-cm4-io) |
-|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | 适用于 CM5 的 ubuntu-rockchip：    <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。| [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
+|![armbian-logo](/img/armbian-logo.png) | **适用于 CM5 的 Armbian：** <br/>  Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为一些支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | **CM5-IO**:[Armbian 固件下载](https://armbian.com/boards/armsom-cm5-io)   <br/>  **CM5-RPI-CM4-IO**:[Armbian 固件下载](https://armbian.com/boards/armsom-cm5-rpi-cm4-io) |
+|![Joshua Riek](https://avatars.githubusercontent.com/u/10427125?v=4)          | **适用于 CM5 的 ubuntu-rockchip：** <br/> 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu体验。立即开始，选择适合的Ubuntu服务器或桌面镜像，享受熟悉的环境。 | [Ubuntu-Rockchip 固件下载](https://github.com/Joshua-Riek/ubuntu-rockchip/releases)      |
 
 ### 硬件资料
 
-<a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>CM5 硬件资料</span>
 </a>
 <br/>
 
-[ArmSoM-CM5 引脚功能表格](https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms) - 引脚功能表格下载
+[百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) - 引脚功能表格下载
 
 <div class="cards">
-    <a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📦</i>
@@ -316,7 +316,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
             </div>
         </div>
     </a>
-    <a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="card-link">
+    <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
         <div class="card">
             <div class="icon">
                 <i>📗</i>
@@ -327,7 +327,7 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
             </div>
         </div>
 </a>
-<a href="https://pan.baidu.com/s/1dp0id7aRV5kUJZnLCgiPOw?pwd=arms" class="card-link">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📃</i>
