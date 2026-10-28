@@ -22,7 +22,6 @@ slug: /
   <div class="armsom-hero__visual"><img src="./img/banana.jpg" alt="ArmSoM open-source hardware platforms" /></div>
 </section>
 
-<div class="armsom-notice">New: <a href="https://www.crowdsupply.com/armsom/rk3588-ai-module7">RK3588 AI Module7 is preparing for crowdfunding</a> — follow the campaign for launch updates.</div>
 
 ## Choose your platform
 

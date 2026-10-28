@@ -19,7 +19,6 @@ slug: /
   <div class="armsom-hero__visual"><img src="./img/banana.jpg" alt="ArmSoM 开源硬件平台" /></div>
 </section>
 
-<div class="armsom-notice">新品动态：<a href="https://www.crowdsupply.com/armsom/rk3588-ai-module7">RK3588 AI Module7 正在准备众筹</a>，欢迎关注最新进展。</div>
 
 ## 选择适合的 ArmSoM 平台
 
