@@ -34,7 +34,94 @@ slug: /
   <a class="armsom-choice-card" href="./armsom-forge1"><span class="armsom-choice-card__icon">⌁</span><small>INDUSTRIAL CONTROL</small><h3>Forge1 · RK3506J</h3><p>Industrial HMI, gateways, and long-running control systems.</p><strong>Industrial-grade →</strong></a>
 </div>
 
-<div class="armsom-paths"><a href="#product-catalog-table"><strong>Need a full comparison?</strong><span>Browse the product catalog →</span></a></div>
+<div class="armsom-paths"><a href="#product-series"><strong>Which ArmSoM family fits your project?</strong><span>Compare series and integration options →</span></a><a href="#product-catalog-table"><strong>Need a full comparison?</strong><span>Browse the product catalog →</span></a></div>
+
+## Product series comparison {#product-series}
+
+Choose your development approach first, then compute and connectivity. Compare single-board computers, compute modules and industrial platforms below.
+
+| Family | Form factor | Main characteristics | Typical needs |
+| --- | --- | --- | --- |
+| **Sige** | Single-board computer (SBC) | Computing and common peripheral interfaces on one board | Learning, rapid prototypes, networking, multimedia and edge AI |
+| **CM** | Board-to-board compute module | Compact module with a carrier for custom interfaces and dimensions | Embedded terminals, custom hardware and production devices |
+| **AIM** | Socket-based compute module | Module socket connects to a carrier; oriented toward AI and multimedia, with capabilities varying by model | Modular systems, smart terminals and machine vision |
+| **LM** | Soldered LGA compute module | Soldered onto a carrier for a fixed hardware design | Deep integration and embedded production devices |
+| **Forge** | Industrial control development board | Focus on industrial communication, control and HMI | Industrial gateways, HMI and data acquisition |
+
+These are selection priorities, not exclusive use cases. Check the specific model and hardware revision for temperature ratings, interface counts and software support.
+
+
+<details>
+<summary>Choosing between CM, AIM and LM</summary>
+
+All three provide the main computing functions. The key differences are **how they connect to a carrier and how the finished device is manufactured and serviced**.
+
+| Consideration | CM | AIM | LM |
+| --- | --- | --- | --- |
+| Connection | Board-to-board connectors | Module socket; AIM7 uses 260-pin SO-DIMM | LGA soldering; LM7 uses 506 pins |
+| Integration priority | Compact dimensions and custom carriers | Removable module with mechanical retention | Soldered integration into a fixed design |
+| Replacement | Remove with power off; account for mounting hardware | Remove with power off; account for socket and retention | Requires solder rework |
+| Examples | [CM1](./armsom-cm1), [CM3](./armsom-cm3), [CM5](./armsom-cm5), [CM7S](./armsom-cm7s) | [AIM3](./armsom-aim3), [AIM5](./armsom-aim5), [AIM7](./armsom-aim7) | [LM7](./armsom-lm7) |
+
+:::note Verify compatibility
+A matching connector shape does not guarantee interchangeability. Check pin assignments, power requirements, dimensions, interface multiplexing and software support before replacing a module or using a third-party carrier. AI capability also depends on the model, not just the family name.
+:::
+
+</details>
+
+<details>
+<summary>Modules, carriers and development kits</summary>
+
+- **Compute module**: integrates the processor, memory and storage functions, depending on the model and configuration.
+- **Carrier board**: provides power delivery, interface breakout and peripheral connections.
+- **Development platform or kit**: combines a module and carrier for evaluation, software development and prototyping. Confirm which parts are included when ordering.
+
+| Module | Matching development platform | Purpose |
+| --- | --- | --- |
+| [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1-io) | Industrial control and interface evaluation |
+| [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5-io) | Embedded development and carrier design reference |
+| [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aimio) | AI, multimedia and peripheral evaluation |
+| [LM7](./armsom-lm7) | [W3](./armsom-w3) | Development platform based on LM7 |
+
+**W3 is an LM7-based development platform. An IO carrier is not another computing performance tier.** After evaluation, you can design a dedicated carrier for your product.
+
+</details>
+
+<details>
+<summary>Choosing within the Sige family</summary>
+
+| Model | Processor | Selection priority |
+| --- | --- | --- |
+| [Sige1](./armsom-sige1) | Rockchip RK3528 | Entry-level Linux, basic networking and lightweight applications |
+| [Sige3](./armsom-sige3) | Rockchip RK3568B2 | General embedded development, networking and peripheral expansion |
+| [Sige5](./armsom-sige5) | Rockchip RK3576 | General computing and edge AI with a 6 TOPS NPU |
+| [Sige6](./armsom-sige6) | Allwinner A733 | An Allwinner platform, selected with its software ecosystem in mind |
+| [Sige7S](./armsom-sige7s) | Rockchip RK3588S | High-performance computing and AI in a compact format |
+| [Sige7](./armsom-sige7) | Rockchip RK3588 | Performance and high-speed expansion, including dual 2.5GbE and PCIe 3.0 storage |
+
+**Model numbers are not a cross-platform performance ranking.** Sige6 uses Allwinner silicon and is not simply a performance tier between Sige5 and Sige7. Compare dimensions, networking and expansion when choosing between Sige7S and Sige7. TOPS describes theoretical compute at a specified precision; real AI performance depends on the model, supported operators, memory and deployment.
+
+</details>
+
+<details>
+<summary>Industrial and specialized applications</summary>
+
+- **[Forge1](./armsom-forge1)**: RK3506J-based platform for HMI, industrial gateways and control terminals. Includes RS485 and CAN interfaces; its documentation specifies a −40°C to 85°C operating range.
+- **[P2pro](./armsom-p2pro)**: RK3308-based platform focused on audio interfaces, voice and IoT applications.
+- **[KVM](./armsom-kvm)**: designed for network-based keyboard, mouse and video access and remote equipment management.
+
+</details>
+
+<details>
+<summary>Start with your requirements</summary>
+
+1. **Get an application running quickly**: start with Sige; consider Forge or KVM for industrial control or remote management.
+2. **Customize dimensions, interfaces and enclosure**: choose CM, AIM or LM and evaluate a matching carrier.
+3. **Define compute needs**: check CPU, memory, AI model support and video processing.
+4. **Check physical connectivity**: verify Ethernet speeds, USB counts, cameras, displays, PCIe and industrial interfaces.
+5. **Review production requirements**: confirm system images, drivers, power, cooling, temperature, mechanical design and available configurations.
+
+</details>
 
 ## ArmSoM Platform Roadmap
 
@@ -42,34 +129,23 @@ slug: /
 
 ## ArmSoM Product Overview  
 
-### Sige Series Single Board Computers  
+### Sige Series Single Board Computers
 
-The **Sige (Small, Intelligent, Greatly Efficient)** series stands out with its high performance, extensive interfaces, and open-source support, making it an ideal choice for personal, household, and enterprise development and applications.  
+**Start software development and application evaluation on one board.** Sige integrates the processor, memory and common peripheral interfaces for developers who want to boot a system, connect hardware and run applications quickly.
 
-#### Key Application Scenarios  
+- **Learning and prototyping**: Linux development, programming education, sensors and application evaluation.
+- **Networking and multimedia**: choose Ethernet, storage and display interfaces for gateways, home servers or digital signage.
+- **Edge AI**: select an NPU-equipped model for your workload, then check operator support and deployment tools.
 
-1. **Personal and Household Use**  
-   - Programming education and learning  
-   - Building educational platforms  
-2. **Server and Network Applications**  
-   - Private cloud storage, software routers, NAS file management  
-   - Lightweight web service deployment and energy-efficient local data processing  
-3. **Industrial and Commercial Projects**  
-   - Intelligent control for digital signage, vending machines, robots, and drones  
-   - Factory automation and sensor data acquisition and processing  
-4. **Development and Education**  
-   - Accelerates project prototyping and shortens development cycles  
-   - Provides a practical platform for programming students and university research projects  
-5. **Open-Source Hardware Innovation**  
-   - Enables IoT and AI-related experimental designs for hobbyists and makers  
+Sige1 and Sige3 cover entry-level and general embedded development. Sige5 combines general computing with AI, while Sige6 offers the Allwinner A733 platform. Sige7S emphasizes compact dimensions; Sige7 offers more high-speed networking and storage expansion.
 
-| [ArmSoM-Sige1](./armsom-sige1)  <br/> Rockchip RK3528 | [ArmSoM-Sige3](./armsom-sige3)  <br/> Rockchip RK3568B2 | [ArmSoM-Sige5](./armsom-sige5)  <br/> Rockchip RK3576 | [ArmSoM-Sige7](./armsom-sige7)  <br/> Rockchip RK3588 |  
-| -------------------- | -------------------- | -------------------- | -------------------- |  
-| ![ArmSoM-Sige1](/img/sige/armsom-sige1.png) | ![ArmSoM-Sige3](/img/sige/armsom-sige3.png) | ![ArmSoM-Sige5](/img/sige/armsom-sige5.png) | ![ArmSoM-Sige7](/img/sige/armsom-sige7.png) |  
+| [ArmSoM-Sige1](./armsom-sige1)<br/>Rockchip RK3528 | [ArmSoM-Sige3](./armsom-sige3)<br/>Rockchip RK3568B2 | [ArmSoM-Sige5](./armsom-sige5)<br/>Rockchip RK3576 |
+| --- | --- | --- |
+| ![ArmSoM Sige1](/img/sige/armsom-sige1.png) | ![ArmSoM Sige3](/img/sige/armsom-sige3.png) | ![ArmSoM Sige5](/img/sige/armsom-sige5.png) |
 
-| [ArmSoM-Sige6](./armsom-sige6)  <br/> Allwinner A733 |[ArmSoM-Sige7s](./armsom-sige7s)  <br/> Rockchip RK3588s |    
-| -------------------- | -------------------- |
-| ![armsom-sige6](/img/sige/armsom-sige6.png)  |![arsmom-sige7s](/img/sige/armsom-sige7s.png)|
+| [ArmSoM-Sige6](./armsom-sige6)<br/>Allwinner A733 | [ArmSoM-Sige7](./armsom-sige7)<br/>Rockchip RK3588 | [ArmSoM-Sige7S](./armsom-sige7s)<br/>Rockchip RK3588S |
+| --- | --- | --- |
+| ![ArmSoM Sige6](/img/sige/armsom-sige6.png) | ![ArmSoM Sige7](/img/sige/armsom-sige7.png) | ![ArmSoM Sige7S](/img/sige/armsom-sige7s.png) |
 
 <details>
     <summary>
@@ -100,52 +176,56 @@ The **Sige (Small, Intelligent, Greatly Efficient)** series stands out with its 
 
 </details>
 
-### System on Module and Carrier Boards  
+### System on Module and Carrier Boards
 
-ArmSoM offers System on Module paired with flexible carrier board designs, enabling customers to quickly develop high-performance hardware solutions. The core boards integrate essential components such as processors and memory, while the carrier boards provide rich interfaces and expansion capabilities, catering to various application scenarios.  
+**Build custom interfaces around an established compute module.** The module provides the main processor, memory and storage functions; the carrier provides power and peripheral connections. Evaluate applications on a matching development platform, then design a dedicated carrier for your dimensions, connectors and mounting requirements.
 
-| [ArmSoM-CM5](./armsom-cm5) <br/> Rockchip RK3576 | [ArmSoM-AIM5](./armsom-aim5) <br/> Rockchip RK3576 | [ArmSoM-AIM7](./armsom-aim7) <br/> Rockchip RK3588 | [ArmSoM-LM7](./armsom-lm7) <br/> Rockchip RK3588 |  
-| -------------------- | -------------------- | -------------------- | -------------------- |  
-| ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) | ![ArmSoM-AIM7](/img/aim/armsom-aim7.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) |  
+- **CM / Compact board-to-board connection**: for custom terminals and embedded devices, with CM1, CM3, CM5 and CM7S options for different computing needs.
+- **AIM / Socket-based modules**: for modular smart devices, AI and multimedia applications, with platforms including AIM3, AIM5 and AIM7.
+- **LM / Soldered LGA integration**: represented by LM7, for fixed-module designs with appropriate assembly, testing and rework processes.
 
-|[ArmSoM-CM7s](./armsom-cm7s)<br/>[Rockchip RK3588s]|[ArmSoM-CM5-IO](./armsom-cm5-io)<br/>[CM5 Maker kit]|[ArmSoM-AIM-IO](./armsom-aimio)<br/>[AIM Maker kit]|[ArmSoM-W3](./armsom-w3)<br/>[LM7 Maker kit]||
-| --------- | --------- | ----- | --- |
-| ![armsom-cm7s](/img/cm/armsom-cm7s.png)|![armsom-cm7s](/img/cm/armsom-cm5-io.png)|![armsom-aim-io](/img/aim/armsom-aim-io.png)|![arsmom-w3](/img/lm/armsom-w3.png)|
+CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interface evaluation platforms. Check the specific module and carrier pin assignments, power requirements and software support before pairing them.
 
-#### Key Benefits of Modular Design  
+| [ArmSoM-CM5](./armsom-cm5)<br/>Rockchip RK3576 | [ArmSoM-CM7S](./armsom-cm7s)<br/>Rockchip RK3588S | [ArmSoM-AIM5](./armsom-aim5)<br/>Rockchip RK3576 |
+| --- | --- | --- |
+| ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-CM7S](/img/cm/armsom-cm7s.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) |
 
-- **Accelerated Development**: Focus on application design without starting from scratch, reducing development time significantly.  
-- **Cost Efficiency**: Modular architecture allows core boards and carrier boards to be reused across projects, minimizing development and production costs.  
-- **Flexible Adaptation**: Carrier boards support a variety of functional expansions, making it easy to adapt to diverse project requirements and scale with upgrades.  
+| [ArmSoM-AIM7](./armsom-aim7)<br/>Rockchip RK3588 | [ArmSoM-LM7](./armsom-lm7)<br/>Rockchip RK3588 | [CM7S + CM7S-IO](./armsom-cm7s)<br/>Rockchip RK3588S |
+| --- | --- | --- |
+| ![ArmSoM-AIM7](/img/aim/armsom-aim7.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) | ![CM7S + CM7S-IO](/img/cm/cm7s-with-carrier.png) |
 
-This modular approach is especially suited for embedded development, IoT devices, and industrial control applications, empowering users to create high-performance hardware products with ease.  
+| [ArmSoM-CM5-IO](./armsom-cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aimio)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
+| --- | --- | --- |
+| ![ArmSoM-CM5-IO](/img/cm/armsom-cm5-io.png) | ![ArmSoM-AIM-IO](/img/aim/armsom-aim-io.png) | ![ArmSoM-W3](/img/lm/armsom-w3.png) |
 
+#### Industrial Control Modules
 
-### Forge Series Industrial Development Boards  
+[CM1](./armsom-cm1) uses RK3506J for HMI, equipment control and industrial communication. Use [CM1-IO](./armsom-cm1-io) for interface evaluation, then develop a dedicated carrier when integrating the module into your own equipment.
 
-**The term "Forge" originates from "forging"**, symbolizing creation and transformation—crafting robust, durable artifacts through the accumulation of time and force. The birth of the Forge Series embodies this philosophy, aiming to **forge more resilient and sustainable hardware solutions under industrial-grade standards**.  
+| [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J compute module | [ArmSoM-CM1-IO](./armsom-cm1-io)<br/>Carrier shown with CM1 |
+| --- | --- |
+| ![ArmSoM CM1 front and back](/img/cm/armsom-cm1-front&back1.jpg) | ![ArmSoM CM1-IO with CM1](/img/cm/armsom-cm1-io.png) |
 
-> ✅ Through long-term collaboration with industrial clients, we have deeply understood their stringent demands—particularly the need for unwavering stability in harsh environments, prolonged operation, and extreme conditions. Thus, the **ArmSoM-Forge Series** integrates ArmSoM's innovative technologies into higher-standard industrial designs, ensuring exceptional performance in the most challenging application scenarios.  
+### Forge Series Industrial Development Boards
+
+**Develop around equipment connectivity, control and HMI.** Forge targets industrial gateways, operator interfaces and data acquisition. Choose based on communication interfaces, operating temperature and software support for your target system.
+
+[Forge1](./armsom-forge1) uses RK3506J and provides industrial communication interfaces including RS485 and CAN. Its documentation specifies a −40°C to 85°C operating range. Use it to evaluate device protocols, display interaction and control applications; consider the CM1 module on the same processor platform when a custom hardware format is needed.
 
 | [ArmSoM-Forge1](./armsom-forge1)|  
 |---------|  
 |![armsom-forge1](/img/forge/armsom-forge1.png)|  
 
 
-### Accessories  
+### Accessories
 
-ArmSoM offers a wide range of hardware expansion accessories, including display modules, camera modules, custom enclosures, and active cooling solutions. Additionally, it supports compatibility with some Raspberry Pi 40-pin GPIO peripheral resources, providing strong support for developers to build diverse application scenarios. 
+**Complete your platform with displays, cameras, cooling and enclosures.** Select screens and cameras for the application, then choose cooling and mechanical accessories for the board and workload to build a practical prototype.
+
+Check supported boards, pin assignments, cables, power and drivers before connecting accessories. A matching 40-pin header does not guarantee compatibility with every peripheral.
 
 | [ArmSoM Display 10 HD](./armsom-display-10-hd) |[ArmSoM Display 7 HD](./armsom-display-7-hd) | [ArmSoM Camera Module 1](./armsom-camera-module1) | [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) |  
 | --------- | --------- | --------- | --------- |  --------- | 
 | ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Display 10 HD](/img/accessories/armsom-display-7hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) | ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) |  
-
-#### Benefits of Accessories  
-
-- **Rapid Prototyping**: Plug-and-play accessories simplify system integration and enhance development efficiency.  
-- **Ecosystem Compatibility**: Partial compatibility with Raspberry Pi 40-pin GPIO peripherals enables developers to leverage the mature peripheral ecosystem, reducing design and development costs.  
-
-This professional accessory lineup, combined with GPIO interface support, makes ArmSoM products a highly versatile solution for diverse applications.  
 
 ### Product Catalog Table  
 | **Sige Series Single-Board Computers** | **System on Module and Carrier Boards** | **IoT/Industrial Control** | **Accessories** |  
