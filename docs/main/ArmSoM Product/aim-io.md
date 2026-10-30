@@ -292,19 +292,40 @@ Sure! Here’s the translation:
 
 ## Interface Usage
 
-### Debug Serial Port
+**AIM5 (RK3576) and AIM7 (RK3588) share the AIM-IO carrier board; use this page for interface connections and basic operation on either module.** Output examples use AIM7 with official Debian 12 / Linux 6.1. Confirm device names, GPIO numbers, and overlays for your module and image.
 
-Connect the USB to TTL serial cable as shown below:
+### 1. Debug Serial Port
+
+Connect a USB-to-TTL serial adapter to the carrier board's debug header as shown below. Cross RX/TX and connect GND.
 
 ![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
 
-| AIM-IO       | Connection  | Serial Module |
-| ------------- | ----------- | -------------- |
-| **GND** (pin 11) | ---> | GND |
-| **RX** (pin 3)  | ---> | TX |
-| **TX** (pin 4) | ---> | RX |
+| AIM-IO debug header | Serial adapter |
+| --- | --- |
+| GND (pin 11) | GND |
+| RX (pin 3) | TX |
+| TX (pin 4) | RX |
 
-### Ethernet Port
+These numbers refer to the debug header in the image, not the 40-pin header.
+
+:::tip Serial Port Settings
+
+- Baud rate: **1500000**
+- Data bits: 8
+- Stop bits: 1
+- Parity: None
+- Flow control: None
+
+:::
+
+Configure the serial terminal, then power on the board to view boot logs and log in.
+
+| Username | Default password |
+| --- | --- |
+| `root` | `root` |
+| `armsom` | `armsom` |
+
+### 2. Ethernet Port
 
 1. First, plug one end of the Ethernet cable into the ArmSoM-AIM’s Ethernet port and connect the other end to a router, ensuring the network is functional.
 2. After booting, the system will automatically assign an IP address to the Ethernet card via DHCP without any additional configuration.
@@ -356,7 +377,102 @@ PING www.a.shifen.com (183.2.172.185): 56 data bytes
 round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ```
 
-### HDMI
+### 3. M.2 Key E (Wi-Fi / Bluetooth)
+
+AIM-IO provides an M.2 Key E slot. The following example uses the tested **Intel AX200**: Wi-Fi uses PCIe, while Bluetooth uses USB. Install the card and connect its antennas before powering on the board.
+
+#### Identify the AX200
+
+```bash
+armsom@armsom:~$ lspci -nnk -s 01:00.0
+```
+
+Output collected from the board:
+
+```text
+01:00.0 Network controller [0280]: Intel Corporation Wi-Fi 6 AX200 [8086:2723] (rev 1a)
+        Subsystem: Intel Corporation Wi-Fi 6 AX200NGW [8086:0084]
+        Kernel driver in use: iwlwifi
+        Kernel modules: iwlwifi
+```
+
+Use `lspci -nn` to find the actual PCIe address first. `Kernel driver in use: iwlwifi` confirms that the driver is bound. If the log reports `no suitable firmware found`, check that the image contains `/lib/firmware/iwlwifi-cc-a0-72.ucode`.
+
+#### Use Wi-Fi
+
+1. Start NetworkManager, enable Wi-Fi, and check the wireless interface name (`wlp1s0` in this example):
+
+```bash
+armsom@armsom:~$ sudo systemctl start NetworkManager
+armsom@armsom:~$ sudo nmcli radio wifi on
+armsom@armsom:~$ nmcli device status
+```
+
+2. Scan and list nearby Wi-Fi networks:
+
+```bash
+armsom@armsom:~$ sudo nmcli device wifi list ifname wlp1s0 --rescan yes
+```
+
+3. Connect to a network and enter the password when prompted:
+
+```bash
+armsom@armsom:~$ sudo nmcli --ask device wifi connect 'YourWiFiName' ifname wlp1s0
+```
+
+NetworkManager saves a successful connection and reconnects on subsequent boots. Check the connection status:
+
+```bash
+armsom@armsom:~$ nmcli -f DEVICE,TYPE,STATE device
+```
+
+Excerpt from the board:
+
+```text
+DEVICE          TYPE      STATE
+wlp1s0          wifi      connected
+```
+
+4. Disconnect the current Wi-Fi connection:
+
+```bash
+armsom@armsom:~$ sudo nmcli device disconnect wlp1s0
+```
+
+#### Use Bluetooth
+
+```bash
+armsom@armsom:~$ lsusb -d 8087:0029
+armsom@armsom:~$ bluetoothctl show
+```
+
+Excerpt from the board:
+
+```text
+Bus 004 Device 002: ID 8087:0029 Intel Corp. AX200 Bluetooth
+Controller 38:7A:0E:75:1A:15 (public)
+        Name: armsom
+        Alias: armsom
+        Class: 0x007c0000
+        Powered: yes
+```
+
+Put the target device into discovery/pairing mode, then use `bluetoothctl`. Replace the example address with the address found during scanning:
+
+```text
+armsom@armsom:~$ bluetoothctl
+[bluetooth]# power on
+[bluetooth]# agent on
+[bluetooth]# default-agent
+[bluetooth]# scan on
+[bluetooth]# pair AA:BB:CC:DD:EE:FF
+[bluetooth]# trust AA:BB:CC:DD:EE:FF
+[bluetooth]# connect AA:BB:CC:DD:EE:FF
+[bluetooth]# scan off
+[bluetooth]# quit
+```
+
+### 4. HDMI
 
 | Model | AIM7 | AIM5  |
 | ----- | ----- | ------ |
@@ -369,7 +485,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 Note that many laptops have HDMI ports that only support output functionality. This means they cannot display HDMI output from other devices on their screens. When attempting to connect the development board's HDMI to a laptop HDMI port, please confirm whether your laptop supports HDMI input functionality. If no display is shown, first check whether the system version includes a desktop environment, as server versions only show the terminal.
 :::
 
-### DP (DisplayPort)
+### 5. DP (DisplayPort)
 
 | Model | AIM7 | AIM5  |
 | ----- | ----- | ------ |
@@ -378,74 +494,350 @@ Note that many laptops have HDMI ports that only support output functionality. T
 1. Use a DP cable to connect the ArmSoM-AIM to a DP display.
 2. If the DP display outputs an image after the Linux system boots, the DP interface is functioning properly.
 
-### USB
+### 6. USB
 
-| Model | AIM7   |
-| ----- | ------ |
-| USB   | 1* Type-C 2.0, 4x USB3.0 |
+AIM-IO provides four USB 3.0 Type-A ports for keyboards, mice, USB drives, and UVC cameras.
 
-:::info
-The USB interface can be connected to a USB hub to expand the number of USB ports.
-:::
+#### Keyboard, Mouse, and USB Speed
 
-#### Connecting USB Mouse or Keyboard Test
-1. Plug a USB keyboard into the ArmSoM-AIM's USB port.
-2. Connect the ArmSoM-AIM to an HDMI display.
-3. If the mouse or keyboard operates normally within the system, the USB interface is functioning properly (note: the mouse works only in desktop versions).
+Connect a keyboard or mouse to use it in the desktop. Inspect the USB topology with:
 
-#### Connecting USB Storage Device Test
-1. First, insert a USB flash drive or external USB hard drive into the ArmSoM-AIM's USB port.
-2. Execute the following command; if you see output for `sdX`, it indicates the USB drive is recognized:
-```
-armsom@armsom-aim7:/# cat /proc/partitions | grep "sd*"
-major minor  #blocks  name
-   8        0  122880000 sda
-```
-3. Use the `mount` command to mount the USB drive to `/mnt`, allowing you to view files on the drive:
-
-```
-armsom@armsom-aim7:/# sudo mount /dev/sda1 /test/
+```bash
+armsom@armsom:~$ lsusb -t
 ```
 
-4. After mounting, you can check the USB drive’s capacity usage and mount point with the `df -h` command:
+Excerpt from the board:
 
+```text
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 5000M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 4: Dev 3, If 0, Class=Mass Storage, Driver=usb-storage, 5000M
 ```
-armsom@armsom-aim7:/test# df -h | grep "sd"
-/dev/sda        4.7G  4.7G     0  100% /test
+
+Check the speed on the actual device line: `5000M` indicates USB 3.0 for this drive; `480M` indicates USB 2.0. Lower speeds are normal for keyboards and mice. The root hub's speed alone does not establish the peripheral's speed.
+
+#### USB Storage
+
+```bash
+armsom@armsom:~$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS /dev/sda
+```
+
+Output collected from the board:
+
+```text
+NAME    SIZE TYPE FSTYPE MOUNTPOINTS
+sda    29.3G disk
+└─sda1 29.3G part vfat
+```
+
+Confirm the actual device and partition before mounting. This example uses `/dev/sda1`:
+
+```bash
+armsom@armsom:~$ sudo mkdir -p /mnt/usb
+armsom@armsom:~$ sudo mount /dev/sda1 /mnt/usb
+armsom@armsom:~$ ls /mnt/usb
+# Unmount before unplugging the drive.
+armsom@armsom:~$ sudo umount /mnt/usb
 ```
 
 #### USB Camera
 
-1. Prepare a USB camera that supports UVC protocol and plug it into the ArmSoM-AIM's USB port.
+Connect a UVC-compatible USB camera and locate its node and supported formats. Do not use a MIPI camera node for this test.
 
-2. Use the `v4l2-ctl` command to find the device node information for the USB camera, which will be `/dev/video0`:
-
-```
-armsom@armsom-aim7:/# v4l2-ctl --list-devices
-Logitech HD Webcam C930e (usb-xhci-hcd.5.auto-1):
-        /dev/video40
-        /dev/video41
-        /dev/media4
-```
-
-3. On the desktop system, you can directly open the USB camera using Cheese/V4L2 test bench:
-
-![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
-
-You can also open the camera preview via terminal command:
 ```bash
-armsom@armsom-aim7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
+armsom@armsom:~$ v4l2-ctl --list-devices
+armsom@armsom:~$ v4l2-ctl -d /dev/videoX --list-formats-ext
 ```
 
-To take a photo, use the following command:
+Replace `/dev/videoX` with the actual UVC node. Desktop images can preview the camera in Cheese, or run the following command in a local graphical session:
+
 ```bash
-armsom@armsom-aim7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
+armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/videoX ! videoconvert ! autovideosink
 ```
 
-To record a video, use this command:
+#### USB Type-C Flashing
+
+The carrier board's Type-C port connects to a computer for flashing in Loader/Maskrom mode. See [Image Burning Options](#image-burning-options) on this page. Power the board through the 12V DC input described above.
+
+### 7. TF Card
+
+Boot from eMMC, insert a TF/microSD card, and inspect its device and partitions. On the tested board, `/dev/mmcblk1` is the TF card and `/dev/mmcblk0` is eMMC; do not confuse them.
+
 ```bash
-gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
+armsom@armsom:~$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS /dev/mmcblk1
+armsom@armsom:~$ cat /sys/class/block/mmcblk1/device/type
 ```
 
-![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+Output collected from the board:
 
+```text
+NAME         SIZE TYPE FSTYPE MOUNTPOINTS
+mmcblk1     29.1G disk
+├─mmcblk1p1    8M part
+├─mmcblk1p2  128M part ext2
+└─mmcblk1p3   29G part ext4
+SD
+```
+
+This example card contains a system image; a data card may have different partitions. Select a partition with a filesystem from `lsblk`. The following example mounts the third partition read-only:
+
+```bash
+armsom@armsom:~$ sudo mkdir -p /mnt/tfcard
+armsom@armsom:~$ sudo mount -o ro /dev/mmcblk1p3 /mnt/tfcard
+armsom@armsom:~$ ls /mnt/tfcard
+armsom@armsom:~$ sudo umount /mnt/tfcard
+```
+
+:::tip
+To keep booting from eMMC, remove a bootable TF card before rebooting; otherwise the board may boot from the card. Unmount any partitions in use before removing it.
+:::
+
+### 8. RTC
+
+The tested AIM7 uses an HYM8563-compatible RTC on `i2c4`. Connect the RTC backup battery and confirm device registration:
+
+```bash
+armsom@armsom:~$ cat /sys/class/rtc/rtc0/name
+armsom@armsom:~$ dmesg | grep rtc-hym8563
+```
+
+Excerpt from the board:
+
+```text
+rtc-hym8563 4-0051
+[    2.149494] rtc-hym8563 4-0051: rtc information is valid
+[    2.156470] rtc-hym8563 4-0051: registered as rtc0
+```
+
+Verify that the system time is correct before writing it to the RTC:
+
+```bash
+armsom@armsom:~$ date
+armsom@armsom:~$ sudo hwclock -w -f /dev/rtc0
+armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
+armsom@armsom:~$ sudo poweroff
+```
+
+Leave the RTC battery connected and disconnect only the main power. Power on again after a few minutes and use `hwclock -r -f /dev/rtc0` to check that time has advanced. Disconnecting the backup battery does not test battery-backed timekeeping.
+
+### 9. MIPI-CSI
+
+#### Camera Ports and Overlays
+
+AIM5 and AIM7 use the same physical ports and camera modules. The I2C addresses and full filenames below are AIM7 examples; AIM5 uses its own prefix and boot configuration:
+
+| Module | Boot configuration | Camera overlay prefix |
+| --- | --- | --- |
+| AIM5 | `/boot/uEnv/uEnvarmsom-aim5-io.txt` | `rk3576-armsom-aim5-camera-` |
+| AIM7 | `/boot/uEnv/uEnvarmsom-aim7-io.txt` | `rk3588-armsom-aim7-camera-` |
+
+Power off before connecting ribbon cables and check their orientation.
+
+| Port | Carrier reference | Camera | I2C address | Overlay filename |
+| --- | --- | --- | --- | --- |
+| CAM0 | J13 | IMX219 | `2-0010` | `rk3588-armsom-aim7-camera-imx219-cs0-overlay.dtbo` |
+| CAM1 | J49 | IMX219 | `4-0010` | `rk3588-armsom-aim7-camera-imx219-cs1-overlay.dtbo` |
+| CAM2 | J12 | OV13850 | `3-0010` | `rk3588-armsom-aim7-camera-ov13850-cs2-overlay.dtbo` |
+| CAM3 | J24 | OV13850 | `6-0010` | `rk3588-armsom-aim7-camera-ov13850-cs3-overlay.dtbo` |
+
+Edit the boot configuration for your module; this example uses AIM7:
+
+```bash
+armsom@armsom:~$ sudo nano /boot/uEnv/uEnvarmsom-aim7-io.txt
+```
+
+Enable only the lines for connected cameras. The following configuration enables all four:
+
+```ini
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-imx219-cs0-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-imx219-cs1-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs2-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs3-overlay.dtbo
+```
+
+For AIM5, replace `rk3588-armsom-aim7-camera-` in the filenames above with `rk3576-armsom-aim5-camera-` and edit its AIM5 uEnv file. Remove the leading `#` to enable a line. For initial wiring checks, enable one camera at a time before combining ports as needed. If an older image lacks these files, update the kernel package for your module.
+
+Save and reboot. Remove any bootable TF card first if you want to continue booting from eMMC.
+
+```bash
+armsom@armsom:~$ sync
+armsom@armsom:~$ sudo reboot
+```
+
+#### Check Sensor IDs
+
+```bash
+armsom@armsom:~$ dmesg | grep imx219
+armsom@armsom:~$ dmesg | grep ov13850
+```
+
+Excerpt from an earlier log saved on this board with all four cameras enabled:
+
+```text
+[    3.019918] ov13850 3-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    3.025395] ov13850 6-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    3.086742] imx219 2-0010: Detected IMX000219 sensor
+[    3.119883] imx219 4-0010: Detected IMX000219 sensor
+```
+
+Each `Detected` line confirms that the driver read the corresponding sensor ID.
+
+#### Basic Commands and Tools
+
+AIM5 and AIM7 use the same ArmSoM SDK, so the capture methods below apply to both. Find the target camera's **ISP output node** and replace `/dev/videoX` accordingly; do not copy the CM5-IO video node numbers.
+
+```bash
+armsom@armsom:~$ v4l2-ctl --list-devices
+armsom@armsom:~$ media-ctl -d /dev/mediaX -p
+armsom@armsom:~$ v4l2-ctl -d /dev/videoX --list-formats-ext
+```
+
+Some image versions require GStreamer to be installed manually. If `gst-launch-1.0 --version` reports that the command is missing, run:
+
+```bash
+armsom@armsom:~$ sudo apt-get update
+armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x
+```
+
+Recording uses the SDK's Rockchip hardware encoder. Check it with `gst-inspect-1.0 mpph264enc`; if missing, use a matching SDK image or install its corresponding plugin.
+
+Restart the image's 3A service before capture:
+
+```bash
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+```
+
+Run one capture command at a time. Preview requires a local desktop session with a display; press `Ctrl+C` to stop. Recording commands include `-e` so the MP4 file can be finalized when stopping.
+
+#### OV13850 Camera
+
+These examples use `2112×1568 @ 30fps`. Select a resolution and frame rate supported by your actual node.
+
+**Capture a frame (raw NV12, not JPEG):**
+
+```bash
+armsom@armsom:~$ v4l2-ctl -d /dev/videoX --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+```
+
+**Record video:**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/videoX num-buffers=300 ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! mpph264enc ! h264parse ! mp4mux ! filesink location=ov13850.mp4
+```
+
+**Preview:**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! videoconvert ! autovideosink
+```
+
+#### IMX219 Camera
+
+Capture, recording, and preview use `3280×2464`. The full-resolution mode supports 15 FPS.
+
+**Capture a photo (JPEG):**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/videoX num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+```
+
+**Record video:**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -e v4l2src device=/dev/videoX num-buffers=300 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! mpph264enc ! h264parse ! mp4mux ! filesink location=imx219.mp4
+```
+
+**Preview:**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! videoconvert ! autovideosink
+```
+
+`GST_V4L2SRC_MAX_RESOLUTION` selects camera modes on some SDK images. If your image does not support this extension, omit the prefix and use its supported resolution and frame rate.
+
+#### Preview Four Cameras Simultaneously
+
+AIM7 has been tested with two IMX219 and two OV13850 cameras running together. Enable all four camera overlays above in `/boot/uEnv/uEnvarmsom-aim7-io.txt` and reboot first. Ensure that the IMX219 module name matches `imx219_rpi-camera-v2_default.json` and that the 3A service is running.
+
+Download the [four-window preview script](/files/aim7-four-camera-preview.py) to the board. In a local desktop terminal, enter its directory and run:
+
+```bash
+armsom@armsom:~$ sudo apt-get install -y python3-gi gir1.2-gtk-3.0 gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+armsom@armsom:~$ python3 aim7-four-camera-preview.py
+```
+
+The script arranges four equal windows on a 1920×1080 screen, with IMX219 cameras on top and OV13850 cameras below, preserving aspect ratios. ISP output is scaled to 640×480. Measured rates were approximately 15 FPS for IMX219 and 25 FPS for OV13850. Press `Ctrl+C` to exit.
+
+The script uses `/dev/video53`, `/dev/video62`, `/dev/video44`, and `/dev/video71` from this AIM7 four-camera configuration. On other images, identify the corresponding ISP output nodes using `v4l2-ctl --list-devices` and `media-ctl -p`, then update the camera list near the beginning of the script. This example has not been verified on AIM5.
+
+Screenshot from the test (each camera image rotated 180° to correct its orientation, with titles unchanged; 1920×1080, losslessly compressed):
+
+![AIM7 simultaneous four-camera preview](/img/aim/aim7-four-camera-preview.webp)
+
+### 10. MIPI DSI
+
+Both modules connect displays through the carrier board MIPI DSI port, using their own panel overlays. AIM5 uses `rk3576-armsom-aim5-display-800x1280-8hd-overlay.dtbo`, enabled in `/boot/uEnv/uEnvarmsom-aim5-io.txt`. The example below uses AIM7 and `rk3588-armsom-aim7-display-800x1280-8hd-overlay.dtbo`; it must match the actual panel.
+
+```bash
+armsom@armsom:~$ ls /boot/dtb/overlay/rk3588-armsom-aim7-display-*.dtbo
+armsom@armsom:~$ sudo nano /boot/uEnv/uEnvarmsom-aim7-io.txt
+```
+
+Enable the corresponding line:
+
+```ini
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-display-800x1280-8hd-overlay.dtbo
+```
+
+Save and reboot, then inspect the display connection and touch input devices:
+
+```bash
+armsom@armsom:~$ ls /sys/class/drm/
+armsom@armsom:~$ cat /sys/class/drm/card*-DSI-*/status
+armsom@armsom:~$ cat /proc/bus/input/devices
+```
+
+Touch input requires a matching panel, controller, and overlay.
+
+### 11. FAN
+
+Connect a fan to the carrier board's fan connector. The official device tree's `pwm-fan` driver adjusts it according to temperature. hwmon numbering can change, so locate `pwmfan` first:
+
+```bash
+armsom@armsom:~$ grep -H '^pwmfan$' /sys/class/hwmon/hwmon*/name
+```
+
+The tested board uses `hwmon7`:
+
+```bash
+armsom@armsom:~$ cat /sys/class/hwmon/hwmon7/name
+armsom@armsom:~$ cat /sys/class/hwmon/hwmon7/pwm1
+```
+
+```text
+pwmfan
+0
+```
+
+`pwm1` is a PWM control value from 0 to 255, not an RPM reading. A value of 0 at low temperature is normal.
+
+### 12. 40 PIN
+
+The AIM-IO 40-pin header exposes multiplexed GPIO, I2C, SPI, UART, and PWM signals. **The [pin table](#pin-definition) and conflicts below are AIM7 examples**; use the AIM5 module documentation to confirm its GPIO mapping. Available functions depend on the device tree and other connected peripherals.
+
+| Enabled function | Physical header pins to avoid |
+| --- | --- |
+| I2C4 (RTC, CAM1, and some display touch controllers) | 3, 5 |
+| CAM0 I2C2 | 27, 28 |
+| OV13850 reset, PWDN, and clocks | 11, 15, 31, 33, 36 |
+| The MIPI DSI display configuration above | 7, 32 |
+
+Do not change pins used by a camera or RTC to GPIO outputs. Check current ownership before use:
+
+```bash
+armsom@armsom:~$ sudo cat /sys/kernel/debug/gpio
+armsom@armsom:~$ sudo cat /sys/kernel/debug/pinctrl/pinctrl-rockchip-pinctrl/pinmux-pins
+```
+
+See [GPIO Usage](<../Interface Usage/2_gpio.md>), [UART Usage](<../Interface Usage/5_uart.md>), [SPI Usage](<../Interface Usage/7_spi.md>), and [PWM Usage](<../Interface Usage/6_pwm.md>), selecting signals from your module's pin definition. Power off before connecting peripherals and confirm signal voltage against the carrier pin definition and schematic.

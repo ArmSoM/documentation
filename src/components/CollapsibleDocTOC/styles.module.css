@@ -2,32 +2,39 @@
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 1rem);
   max-height: calc(100vh - var(--ifm-navbar-height) - 2rem);
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border-left: 1px solid var(--ifm-toc-border-color);
   padding: 0 0.5rem 0 0.8rem;
   font-size: 0.82rem;
 }
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  padding: 0.3rem 0 0.7rem;
-  background: var(--ifm-background-color);
+  flex: 0 0 auto;
+  padding: 0.6rem 0.25rem 0.75rem;
+  background: var(--ifm-background-surface-color, #fff);
   border-bottom: 1px solid var(--ifm-toc-border-color);
   margin-bottom: 0.5rem;
 }
 .header strong { font-size: 0.9rem; }
-.actions { display: flex; gap: 0.8rem; margin-top: 0.4rem; flex-wrap: wrap; }
+.actions { display: flex; gap: 0.4rem; margin-top: 0.55rem; flex-wrap: wrap; }
 .actions button {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--ifm-color-primary);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 5px;
+  background: var(--ifm-background-surface-color, #fff);
+  color: var(--ifm-color-emphasis-700);
   font: inherit;
   font-size: 0.74rem;
   cursor: pointer;
 }
+.actions button:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
 .tree, .branch { list-style: none; padding: 0; margin: 0; }
+.tree { min-height: 0; overflow-y: auto; padding-right: 0.25rem; }
 .branch { margin-left: 0.65rem; padding-left: 0.35rem; border-left: 1px solid var(--ifm-toc-border-color); }
 .branch[hidden] { display: none; }
 .row { display: flex; align-items: flex-start; margin: 0.12rem 0; border-radius: 4px; }

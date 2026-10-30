@@ -71,7 +71,7 @@ export default function CollapsibleDocTOC({toc, minHeadingLevel, maxHeadingLevel
     return (
       <ul
         id={parentId ? `doc-toc-${parentId}` : undefined}
-        className={nested ? styles.branch : styles.tree}
+        className={nested ? styles.branch : `${styles.tree} thin-scrollbar`}
         hidden={nested && !expanded.has(parentId)}>
         {nodes.map(node => (
           <li key={node.id}>

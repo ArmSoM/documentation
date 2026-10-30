@@ -298,19 +298,40 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ## 接口使用
 
-### 调试串口
+**AIM5（RK3576）和 AIM7（RK3588）共用 AIM-IO 底板，接口连接和基本使用均可参考本篇。** 下方日志以 AIM7 官方 Debian 12 / Linux 6.1 镜像为例；设备名称、GPIO 编号及 overlay 按所用核心板和镜像确认。
 
-如下所示连接 USB 转 TTL 串口线：
+### 1. 调试串口
+
+使用 USB 转 TTL 串口模块连接底板的调试接口，按下图交叉连接 RX/TX，并连接 GND。
 
 ![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
 
-| AIM-IO       | 连接  | 串口模块 |
-| --------------- | ----- | ------ |
-| **GND** (pin 11) | ---> | GND |
-| **RX** (pin 3)  | ---> | TX |
-| **TX** (pin 4) | ---> | RX |
+| AIM-IO 调试接口 | 串口模块 |
+| --- | --- |
+| GND（pin 11） | GND |
+| RX（pin 3） | TX |
+| TX（pin 4） | RX |
 
-### 以太网口
+以上编号为图中调试接口的引脚编号，不是 40PIN 排针编号。
+
+:::tip 串口通信参数
+
+- 波特率：**1500000**
+- 数据位：8
+- 停止位：1
+- 校验位：无
+- 流控：无
+
+:::
+
+配置串口终端后给开发板上电，即可查看启动日志并登录系统。
+
+| 用户名 | 默认密码 |
+| --- | --- |
+| `root` | `root` |
+| `armsom` | `armsom` |
+
+### 2. 以太网口
 
 1. 首先将网线的一端插入 ArmSoM-AIM 的以太网接口，网线的另一端接入路由器，并确保
 网络是畅通的
@@ -336,7 +357,7 @@ root@armsom-aim7:/# ip a
 ArmSoM-AIM 启动后查看 IP 地址有三种方法：
 
 - 接 HDMI 显示器，然后登录系统使用终端输入 ip a 命令查看 IP 地址
-- 接[调试串口](#调试串口)终端输入 ip a 命令来查看 IP 地址
+- 接[调试串口](#1-调试串口)终端输入 ip a 命令来查看 IP 地址
 - 如果没有调试串口，也没有 HDMI 显示器，还可以通过路由器的管理界面来查看ArmSoM-AIM 网口的 IP 地址。不过这种方法经常有人会无法正常看到ArmSoM-AIM 的 IP 地址。如果看不到，调试方法如下所示：
     - 首先检查 Linux 系统是否已经正常启动，如果ArmSoM-AIM的绿灯常亮，一般是正常启动了，如果只亮红灯，说明系统都没正常启动。
     - 检查网线有没有插紧，或者换根网线试下。
@@ -364,7 +385,102 @@ PING www.a.shifen.com (183.2.172.185): 56 data bytes
 round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 ```
 
-### HDMI
+### 3. M.2 Key E（Wi-Fi / 蓝牙）
+
+AIM-IO 提供 M.2 Key E 接口，以下以已实测的 **Intel AX200** 为例：Wi-Fi 通过 PCIe 连接，蓝牙通过 USB 连接。安装网卡、连接天线后上电。
+
+#### 识别 AX200
+
+```bash
+armsom@armsom:~$ lspci -nnk -s 01:00.0
+```
+
+实测输出：
+
+```text
+01:00.0 Network controller [0280]: Intel Corporation Wi-Fi 6 AX200 [8086:2723] (rev 1a)
+        Subsystem: Intel Corporation Wi-Fi 6 AX200NGW [8086:0084]
+        Kernel driver in use: iwlwifi
+        Kernel modules: iwlwifi
+```
+
+PCIe 地址可先用 `lspci -nn` 查询。出现 `Kernel driver in use: iwlwifi` 表示驱动已绑定；如日志提示 `no suitable firmware found`，检查镜像是否包含 `/lib/firmware/iwlwifi-cc-a0-72.ucode`。
+
+#### 使用 Wi-Fi
+
+1. 启用 NetworkManager 和 Wi-Fi，并确认无线接口名称（以下以 `wlp1s0` 为例）：
+
+```bash
+armsom@armsom:~$ sudo systemctl start NetworkManager
+armsom@armsom:~$ sudo nmcli radio wifi on
+armsom@armsom:~$ nmcli device status
+```
+
+2. 扫描并列出附近的 Wi-Fi：
+
+```bash
+armsom@armsom:~$ sudo nmcli device wifi list ifname wlp1s0 --rescan yes
+```
+
+3. 连接指定 Wi-Fi，按提示输入密码：
+
+```bash
+armsom@armsom:~$ sudo nmcli --ask device wifi connect '你的WiFi名称' ifname wlp1s0
+```
+
+连接成功后，NetworkManager 会保存连接，后续开机自动连接。查看连接状态：
+
+```bash
+armsom@armsom:~$ nmcli -f DEVICE,TYPE,STATE device
+```
+
+实测输出节选：
+
+```text
+DEVICE          TYPE      STATE
+wlp1s0          wifi      connected
+```
+
+4. 断开当前 Wi-Fi：
+
+```bash
+armsom@armsom:~$ sudo nmcli device disconnect wlp1s0
+```
+
+#### 使用蓝牙
+
+```bash
+armsom@armsom:~$ lsusb -d 8087:0029
+armsom@armsom:~$ bluetoothctl show
+```
+
+实测输出节选：
+
+```text
+Bus 004 Device 002: ID 8087:0029 Intel Corp. AX200 Bluetooth
+Controller 38:7A:0E:75:1A:15 (public)
+        Name: armsom
+        Alias: armsom
+        Class: 0x007c0000
+        Powered: yes
+```
+
+将目标设备设为可发现/配对模式，然后在 `bluetoothctl` 中操作；将示例地址替换为扫描到的设备地址：
+
+```text
+armsom@armsom:~$ bluetoothctl
+[bluetooth]# power on
+[bluetooth]# agent on
+[bluetooth]# default-agent
+[bluetooth]# scan on
+[bluetooth]# pair AA:BB:CC:DD:EE:FF
+[bluetooth]# trust AA:BB:CC:DD:EE:FF
+[bluetooth]# connect AA:BB:CC:DD:EE:FF
+[bluetooth]# scan off
+[bluetooth]# quit
+```
+
+### 4. HDMI
 
 | 型号 | AIM7 | AIM5  |
 | ----- |  ----- | ------ |
@@ -379,7 +495,7 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 当 HDMI 没有显示的时候，请先检查使用的系统是否是带桌面的版本，如果是服务器版本只能看到终端
 :::
 
-### DP
+### 5. DP
 
 | 型号 | AIM7 | AIM5  |
 | ----- |  ----- | ------ |
@@ -388,74 +504,350 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 1. 使用 DP 线连接 ArmSoM-AIM 和 Dp 显示器
 2. 启动 linux 系统后如果 Dp 显示器有图像输出说明 HDMI 接口使用正常
 
-### USB
+### 6. USB
 
-|  型号  | AIM7   | 
-| ----- |  ----- |
-| USB   | 1* Type-C 2.0, 4x USB3.0| 
+AIM-IO 提供 4 个 USB 3.0 Type-A 接口，可连接键鼠、U 盘及 UVC 摄像头。
 
-:::info
-USB 接口是可以接 USB hub 来扩展 USB 接口的数量的。
+#### 键鼠和 USB 速率
+
+连接键鼠后可直接在桌面中操作，也可查看 USB 拓扑：
+
+```bash
+armsom@armsom:~$ lsusb -t
+```
+
+实测输出节选：
+
+```text
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 5000M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 4: Dev 3, If 0, Class=Mass Storage, Driver=usb-storage, 5000M
+```
+
+应查看具体设备行的速率：上例 U 盘的 `5000M` 表示协商到 USB 3.0；`480M` 为 USB 2.0。键鼠使用较低速率是正常现象，不能仅根据 root hub 的速率判断外设速率。
+
+#### USB 存储设备
+
+```bash
+armsom@armsom:~$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS /dev/sda
+```
+
+实测输出：
+
+```text
+NAME    SIZE TYPE FSTYPE MOUNTPOINTS
+sda    29.3G disk
+└─sda1 29.3G part vfat
+```
+
+确认实际设备及分区后挂载；以下以 `/dev/sda1` 为例：
+
+```bash
+armsom@armsom:~$ sudo mkdir -p /mnt/usb
+armsom@armsom:~$ sudo mount /dev/sda1 /mnt/usb
+armsom@armsom:~$ ls /mnt/usb
+# 使用完成后再拔出
+armsom@armsom:~$ sudo umount /mnt/usb
+```
+
+#### USB 摄像头
+
+连接支持 UVC 协议的 USB 摄像头，通过下列命令查找对应节点和支持的格式。不要直接使用 MIPI 摄像头的节点。
+
+```bash
+armsom@armsom:~$ v4l2-ctl --list-devices
+armsom@armsom:~$ v4l2-ctl -d /dev/videoX --list-formats-ext
+```
+
+将 `/dev/videoX` 替换为实际的 UVC 节点。桌面镜像可使用 Cheese 预览，或在本机图形会话中运行：
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/videoX ! videoconvert ! autovideosink
+```
+
+#### USB Type-C 烧录
+
+底板 Type-C 接口可在 Loader/Maskrom 模式下连接电脑烧录系统，操作见本页[烧录方式选择](#烧录方式选择)。板卡仍按前文使用 12V DC 供电。
+
+### 7. TF 卡
+
+从 eMMC 启动系统后插入 TF 卡，查看设备和分区。实测 TF 卡为 `/dev/mmcblk1`，eMMC 为 `/dev/mmcblk0`，请勿混淆。
+
+```bash
+armsom@armsom:~$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS /dev/mmcblk1
+armsom@armsom:~$ cat /sys/class/block/mmcblk1/device/type
+```
+
+实测输出：
+
+```text
+NAME         SIZE TYPE FSTYPE MOUNTPOINTS
+mmcblk1     29.1G disk
+├─mmcblk1p1    8M part
+├─mmcblk1p2  128M part ext2
+└─mmcblk1p3   29G part ext4
+SD
+```
+
+上例使用的是含系统镜像的 TF 卡；普通数据卡的分区可能不同。根据 `lsblk` 结果选择有文件系统的分区挂载，下面只读挂载示例中的第三分区：
+
+```bash
+armsom@armsom:~$ sudo mkdir -p /mnt/tfcard
+armsom@armsom:~$ sudo mount -o ro /dev/mmcblk1p3 /mnt/tfcard
+armsom@armsom:~$ ls /mnt/tfcard
+armsom@armsom:~$ sudo umount /mnt/tfcard
+```
+
+:::tip
+如需从 eMMC 启动，重启前拔掉含可启动系统的 TF 卡，以免板卡从 TF 卡启动。正在使用的分区应先卸载再拔卡。
 :::
 
-#### 连接 USB 鼠标或键盘测试
-1. 将 USB 接口的键盘插入ArmSoM-AIM产品的 USB 接口中
-2. 连接ArmSoM-AIM产品到 HDMI 显示器
-3. 如果鼠标或键盘能正常操作系统说明 USB 接口使用正常（鼠标只有在桌面版的系统中才能使用）
+### 8. RTC
 
-#### 连接 USB 存储设备测试
-1. 首先将 U 盘或者 USB 移动硬盘插入 ArmSoM-AIM产品的 USB 接口中
-2. 执行下面的命令如果能看到 sdX 的输出说明 U 盘识别成功
-```
-armsom@armsom-aim7:/# cat /proc/partitions | grep "sd*"
-major minor  #blocks  name
-   8        0  122880000 sda
-```
-3. 使用 mount 命令可以将 U 盘挂载到/mnt 中，然后就能查看 U 盘中的文件了
+AIM7 实测使用 `i2c4` 上的 HYM8563 兼容 RTC。连接 RTC 备用电池后，确认设备注册：
 
-```
-armsom@armsom-aim7:/# sudo mount /dev/sda1 /test/
-```
-
-4. 挂载完后通过 df -h 命令就能查看 U 盘的容量使用情况和挂载点
-
-```
-armsom@armsom-aim7:/test# df -h | grep "sd"
-/dev/sda        4.7G  4.7G     0  100% /test
-```
-
-####  USB 摄像头
-
-1. 准备一个支持 UVC 协议的 USB 摄像头，然后将USB 摄像头插入到 ArmSoM-AIM产品的 USB 接口中
-
-2. 通过 v4l2-ctl 命令可以看到 USB 摄像头的设备节点信息为/dev/video0
-
-```
-armsom@armsom-aim7:/# v4l2-ctl --list-devices
-罗技高清网络摄像机 C93 (usb-xhci-hcd.5.auto-1):
-        /dev/video40
-        /dev/video41
-        /dev/media4
-```
-
-3. 在桌面系统中可以使用 Cheese/V4L2 test bench 直接打开 USB 摄像头
-
-![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
-
-
-同时，您也可以使用终端命令打开相机预览:
 ```bash
-armsom@armsom-aim7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
+armsom@armsom:~$ cat /sys/class/rtc/rtc0/name
+armsom@armsom:~$ dmesg | grep rtc-hym8563
 ```
 
-命令拍照:
+实测输出节选：
+
+```text
+rtc-hym8563 4-0051
+[    2.149494] rtc-hym8563 4-0051: rtc information is valid
+[    2.156470] rtc-hym8563 4-0051: registered as rtc0
+```
+
+先确认系统时间正确，再将其写入 RTC：
+
 ```bash
-armsom@armsom-aim7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! jpegenc ! multifilesink location=/home/armsom/test.jpg;
+armsom@armsom:~$ date
+armsom@armsom:~$ sudo hwclock -w -f /dev/rtc0
+armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
+armsom@armsom:~$ sudo poweroff
 ```
 
-命令拍摄视频:
+保持 RTC 电池连接，只断开主电源。等待几分钟后重新上电，用 `hwclock -r -f /dev/rtc0` 检查时间是否继续前进；不要断开 RTC 电池后再验证断电保持功能。
+
+### 9. MIPI-CSI
+
+#### 摄像头接口与 overlay
+
+AIM5、AIM7 的接口位置和摄像头模组相同。下面的 I2C 地址和完整文件名以 AIM7 为例；AIM5 使用对应前缀和启动配置：
+
+| 核心板 | 启动配置文件 | 摄像头 overlay 前缀 |
+| --- | --- | --- |
+| AIM5 | `/boot/uEnv/uEnvarmsom-aim5-io.txt` | `rk3576-armsom-aim5-camera-` |
+| AIM7 | `/boot/uEnv/uEnvarmsom-aim7-io.txt` | `rk3588-armsom-aim7-camera-` |
+
+连接排线前先断电，并确认方向。
+
+| 接口 | 底板位号 | 摄像头 | I2C 地址 | overlay 文件名 |
+| --- | --- | --- | --- | --- |
+| CAM0 | J13 | IMX219 | `2-0010` | `rk3588-armsom-aim7-camera-imx219-cs0-overlay.dtbo` |
+| CAM1 | J49 | IMX219 | `4-0010` | `rk3588-armsom-aim7-camera-imx219-cs1-overlay.dtbo` |
+| CAM2 | J12 | OV13850 | `3-0010` | `rk3588-armsom-aim7-camera-ov13850-cs2-overlay.dtbo` |
+| CAM3 | J24 | OV13850 | `6-0010` | `rk3588-armsom-aim7-camera-ov13850-cs3-overlay.dtbo` |
+
+编辑对应核心板的启动配置，以下以 AIM7 为例：
+
 ```bash
-gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/home/armsom/test.mp4
+armsom@armsom:~$ sudo nano /boot/uEnv/uEnvarmsom-aim7-io.txt
 ```
 
-![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+按实际连接的摄像头启用对应行，以下为四路全部启用时的配置：
+
+```ini
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-imx219-cs0-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-imx219-cs1-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs2-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs3-overlay.dtbo
+```
+
+AIM5 将上述文件名的 `rk3588-armsom-aim7-camera-` 替换为 `rk3576-armsom-aim5-camera-`，并编辑 AIM5 对应的 uEnv 文件。取消行首 `#` 即为启用。建议首次接线时每次只启用一路，确认后再按需组合；旧镜像若缺少上述文件，应先更新对应核心板的内核包。
+
+保存后重启；若要继续从 eMMC 启动，先拔出可启动的 TF 卡。
+
+```bash
+armsom@armsom:~$ sync
+armsom@armsom:~$ sudo reboot
+```
+
+#### 确认 sensor ID
+
+```bash
+armsom@armsom:~$ dmesg | grep imx219
+armsom@armsom:~$ dmesg | grep ov13850
+```
+
+此前在本板四路同时启用时保存的实测日志节选：
+
+```text
+[    3.019918] ov13850 3-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    3.025395] ov13850 6-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    3.086742] imx219 2-0010: Detected IMX000219 sensor
+[    3.119883] imx219 4-0010: Detected IMX000219 sensor
+```
+
+上述 `Detected` 行表示驱动读到了对应传感器 ID。
+
+#### 基础命令与工具
+
+AIM5、AIM7 使用同一套 ArmSoM SDK，以下采集方法通用。先查找目标摄像头对应的 **ISP 输出节点**，将命令中的 `/dev/videoX` 替换为实际节点；不要直接照搬 CM5-IO 的 video 编号。
+
+```bash
+armsom@armsom:~$ v4l2-ctl --list-devices
+armsom@armsom:~$ media-ctl -d /dev/mediaX -p
+armsom@armsom:~$ v4l2-ctl -d /dev/videoX --list-formats-ext
+```
+
+部分版本镜像需要手动安装 GStreamer。若 `gst-launch-1.0 --version` 提示命令不存在，执行：
+
+```bash
+armsom@armsom:~$ sudo apt-get update
+armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x
+```
+
+录像使用 SDK 自带的 Rockchip 硬件编码插件，可用 `gst-inspect-1.0 mpph264enc` 检查；若缺少该插件，需要使用匹配的 SDK 镜像或补装对应插件。
+
+采集前重启镜像自带的 3A 服务：
+
+```bash
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+```
+
+以下命令每次只运行一条。预览需在连接显示器的桌面会话运行，按 `Ctrl+C` 退出；录像带 `-e`，便于结束时写完整 MP4 文件。
+
+#### OV13850 摄像头
+
+以下以 `2112×1568 @ 30fps` 为例，分辨率和帧率以实际节点支持的模式为准。
+
+**抓图（NV12 原始帧，不是 JPEG）：**
+
+```bash
+armsom@armsom:~$ v4l2-ctl -d /dev/videoX --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+```
+
+**录像：**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/videoX num-buffers=300 ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! mpph264enc ! h264parse ! mp4mux ! filesink location=ov13850.mp4
+```
+
+**预览：**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! videoconvert ! autovideosink
+```
+
+#### IMX219 摄像头
+
+抓图、录像和预览统一使用 `3280×2464`，全分辨率模式支持 15 FPS。
+
+**抓图（JPEG）：**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/videoX num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+```
+
+**录像：**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -e v4l2src device=/dev/videoX num-buffers=300 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! mpph264enc ! h264parse ! mp4mux ! filesink location=imx219.mp4
+```
+
+**预览：**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! videoconvert ! autovideosink
+```
+
+`GST_V4L2SRC_MAX_RESOLUTION` 用于部分 SDK 镜像的模式选择；若镜像不支持该扩展，可去掉此前缀，按实际支持的分辨率和帧率运行。
+
+#### 四路摄像头同时预览
+
+AIM7 已实测两路 IMX219 和两路 OV13850 同时预览。先在 `/boot/uEnv/uEnvarmsom-aim7-io.txt` 中启用上述四个摄像头 overlay 并重启；确认 IMX219 模组名称匹配 `imx219_rpi-camera-v2_default.json`，且 3A 服务正常运行。
+
+下载 [四窗口预览脚本](/files/aim7-four-camera-preview.py) 到开发板，在板端桌面终端进入脚本所在目录执行：
+
+```bash
+armsom@armsom:~$ sudo apt-get install -y python3-gi gir1.2-gtk-3.0 gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+armsom@armsom:~$ python3 aim7-four-camera-preview.py
+```
+
+脚本按 1920×1080 屏幕排列四个等大窗口，上排为 IMX219，下排为 OV13850，保持画面比例。ISP 输出缩放至 640×480，实测 IMX219 约 15 FPS、OV13850 约 25 FPS。按 `Ctrl+C` 退出。
+
+脚本中的 `/dev/video53`、`/dev/video62`、`/dev/video44`、`/dev/video71` 是本次 AIM7 四路启用后的节点；其它镜像请先用 `v4l2-ctl --list-devices` 和 `media-ctl -p` 确认对应 ISP 输出节点，再修改脚本开头的摄像头列表。此示例尚未在 AIM5 上验证。
+
+实测截图如下（仅将每路画面旋转 180° 调正，标题保持原方向；1920×1080，无损压缩）：
+
+![AIM7 四路摄像头同时预览](/img/aim/aim7-four-camera-preview.webp)
+
+### 10. MIPI DSI
+
+AIM5、AIM7 均通过底板 MIPI DSI 接口连接屏幕，使用各自的面板 overlay。AIM5 对应文件为 `rk3576-armsom-aim5-display-800x1280-8hd-overlay.dtbo`，在 `/boot/uEnv/uEnvarmsom-aim5-io.txt` 中启用。下方为 AIM7 的 `rk3588-armsom-aim7-display-800x1280-8hd-overlay.dtbo` 配置，需与实际面板匹配。
+
+```bash
+armsom@armsom:~$ ls /boot/dtb/overlay/rk3588-armsom-aim7-display-*.dtbo
+armsom@armsom:~$ sudo nano /boot/uEnv/uEnvarmsom-aim7-io.txt
+```
+
+启用对应行：
+
+```ini
+dtoverlay=/dtb/overlay/rk3588-armsom-aim7-display-800x1280-8hd-overlay.dtbo
+```
+
+保存并重启后检查显示连接状态及触摸输入设备：
+
+```bash
+armsom@armsom:~$ ls /sys/class/drm/
+armsom@armsom:~$ cat /sys/class/drm/card*-DSI-*/status
+armsom@armsom:~$ cat /proc/bus/input/devices
+```
+
+触摸功能需要匹配的面板、触摸控制器和 overlay。
+
+### 11. FAN
+
+连接底板风扇接口后，官方设备树中的 `pwm-fan` 驱动可按温度调节风扇。hwmon 编号可能变化，可先查找 `pwmfan`：
+
+```bash
+armsom@armsom:~$ grep -H '^pwmfan$' /sys/class/hwmon/hwmon*/name
+```
+
+实测节点为 `hwmon7`：
+
+```bash
+armsom@armsom:~$ cat /sys/class/hwmon/hwmon7/name
+armsom@armsom:~$ cat /sys/class/hwmon/hwmon7/pwm1
+```
+
+```text
+pwmfan
+0
+```
+
+`pwm1` 为 PWM 控制值，范围为 0～255，不是风扇的 RPM；低温时为 0 属于正常调速状态。
+
+### 12. 40 PIN
+
+AIM-IO 的 40PIN 提供 GPIO、I2C、SPI、UART、PWM 等复用信号。**本页[引脚表](#引脚定义)及下表占用关系以 AIM7 为例**；AIM5 应按其核心板资料确认 GPIO 映射。实际可用功能取决于设备树及其它外设的占用情况。
+
+| 已启用功能 | 需要避开的 40PIN 物理引脚 |
+| --- | --- |
+| I2C4（RTC、CAM1、部分屏幕触摸） | 3、5 |
+| CAM0 的 I2C2 | 27、28 |
+| OV13850 复位、PWDN 和时钟 | 11、15、31、33、36 |
+| 上述 MIPI DSI 屏幕配置 | 7、32 |
+
+不要将摄像头或 RTC 正在使用的引脚切换为 GPIO 输出。使用前可检查当前占用：
+
+```bash
+armsom@armsom:~$ sudo cat /sys/kernel/debug/gpio
+armsom@armsom:~$ sudo cat /sys/kernel/debug/pinctrl/pinctrl-rockchip-pinctrl/pinmux-pins
+```
+
+GPIO、UART、SPI 等操作方法可参考[GPIO 使用](<../Interface Usage/2_gpio.md>)、[UART 使用](<../Interface Usage/5_uart.md>)、[SPI 使用](<../Interface Usage/7_spi.md>)和[PWM 使用](<../Interface Usage/6_pwm.md>)，按所用核心板的引脚定义选择对应信号。连接外设前先断电，信号电压按底板引脚定义和原理图确认。
