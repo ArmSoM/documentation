@@ -598,10 +598,6 @@ armsom@armsom:~$ ls /mnt/tfcard
 armsom@armsom:~$ sudo umount /mnt/tfcard
 ```
 
-:::tip
-如需从 eMMC 启动，重启前拔掉含可启动系统的 TF 卡，以免板卡从 TF 卡启动。正在使用的分区应先卸载再拔卡。
-:::
-
 ### 8. RTC
 
 AIM7 实测使用 `i2c4` 上的 HYM8563 兼容 RTC。连接 RTC 备用电池后，确认设备注册：
@@ -665,12 +661,13 @@ dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs2-overlay.dtbo
 dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs3-overlay.dtbo
 ```
 
+:::tip
 AIM5 将上述文件名的 `rk3588-armsom-aim7-camera-` 替换为 `rk3576-armsom-aim5-camera-`，并编辑 AIM5 对应的 uEnv 文件。取消行首 `#` 即为启用。建议首次接线时每次只启用一路，确认后再按需组合；旧镜像若缺少上述文件，应先更新对应核心板的内核包。
+:::
 
-保存后重启；若要继续从 eMMC 启动，先拔出可启动的 TF 卡。
+保存后重启；
 
 ```bash
-armsom@armsom:~$ sync
 armsom@armsom:~$ sudo reboot
 ```
 
@@ -694,7 +691,7 @@ armsom@armsom:~$ dmesg | grep ov13850
 
 #### 基础命令与工具
 
-AIM5、AIM7 使用同一套 ArmSoM SDK，以下采集方法通用。先查找目标摄像头对应的 **ISP 输出节点**，将命令中的 `/dev/videoX` 替换为实际节点；不要直接照搬 CM5-IO 的 video 编号。
+AIM5、AIM7 使用同一套 ArmSoM SDK，以下采集方法通用。先查找目标摄像头对应的 **ISP 输出节点**，将命令中的 `/dev/videoX` 替换为实际节点。
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --list-devices
@@ -717,7 +714,7 @@ armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins
 armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
 ```
 
-以下命令每次只运行一条。预览需在连接显示器的桌面会话运行，按 `Ctrl+C` 退出；录像带 `-e`，便于结束时写完整 MP4 文件。
+以下命令每次只运行一条。预览需在连接显示器，按 `Ctrl+C` 退出；录像带 `-e`，便于结束时写完整 MP4 文件。
 
 #### OV13850 摄像头
 

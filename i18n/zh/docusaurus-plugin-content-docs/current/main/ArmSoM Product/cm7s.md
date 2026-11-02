@@ -615,7 +615,13 @@ CM7s-IO 最高支持hdmi 8Kp60
 使用 HDMI 转 VGA 显示时，CM5 Kit 和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
 :::
 
-#### 3.4 USB
+#### 3.4 DP 显示（Type-C）
+
+CM7s-IO 的 Type-C 接口支持 DisplayPort（DP）视频输出。连接支持 Type-C 视频输入的显示器时，请使用支持 **DP Alt Mode 视频传输的全功能 USB-C 转 USB-C 线**，普通仅充电的 Type-C 线无法传输视频。
+
+如果显示器使用标准 DP 接口，请使用 **USB-C 转 DisplayPort 视频线**，并确认支持从 Type-C（DP Alt Mode）端向 DP 显示器输出视频。
+
+#### 3.5 USB
 
 ##### 连接 USB 鼠标或键盘测试
 1. 将 USB 接口的键盘插入CM7s的 USB 接口中
@@ -646,7 +652,7 @@ armsom@armsom:/$ df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /test
 ```
 
-#### 3.5 M.2 Key M
+#### 3.6 M.2 Key M
 
 CM7s-IO 提供 M.2 Key M 连接器：
 
@@ -659,7 +665,7 @@ root@armsom:/# mkdir temp
 root@armsom:/# mount /dev/nvme0n1 temp
 ```
 
-#### 3.6 Micro SD card slot
+#### 3.7 Micro SD card slot
 
 CM7s-IO 板载标准的 microSD 卡槽,主要用作系统启动盘或扩展存储空间。
 
@@ -707,7 +713,7 @@ bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
 boot  etc  lib   media       opt  root  sbin  srv   sys       usr
 ```
 
-#### 3.7 音频
+#### 3.8 音频
 
 ##### 1. 查看系统中的声卡。
 
@@ -754,7 +760,7 @@ armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
 Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-#### 3.8 40 PIN
+#### 3.9 40 PIN
 
 CM7s 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感器的应用。
 
@@ -835,7 +841,7 @@ root@armsom:/wiring-armbian# gpio read 5
 
 - 其他引脚的设置方法类似，只需修改 wPi 的序号为引脚对应的序号即可
 
-#### 3.9 RGB LED
+#### 3.10 RGB LED
 
 CM7s 有一个用户（绿灯）和一个电源指示灯（红灯）。
 
@@ -853,7 +859,7 @@ armsom@armsom:~$ echo 1 > /sys/class/leds/led-green-usr/brightness （常亮）
 armsom@armsom:~$ echo heartbeat > /sys/class/leds/led-green-usr/trigger （恢复为心跳灯）
 ```
 
-#### 3.10 RTC
+#### 3.11 RTC
 
 - CM7s 板内集成一颗RTC时钟芯片 **LK8563S**，同时 CM7s-IO 上板载了一个VRTC座子，用于接RTC电池。
 
@@ -895,7 +901,7 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 2026-04-28 07:26:02.198445+08:00
 ```
 
-#### 3.11 MIPI-CSI
+#### 3.12 MIPI-CSI
 ##### 开启摄像头配置
 要使用摄像头之前，需要先开启摄像头设备树overlay，分别找到如下两行：
 ```bash
@@ -1009,7 +1015,7 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
 :::
 
-#### 3.12 MIPI DSI
+#### 3.13 MIPI DSI
 
 CM7s MIPI-DSI 分辨率最高分辨率可达 2K@60Hz
 

@@ -611,7 +611,13 @@ If there is no HDMI display, first check whether the installed system includes a
 When using HDMI-to-VGA display output, no settings are required on the CM5 Kit or in Linux; the development board's HDMI output only needs to work properly. If the test fails, check the HDMI-to-VGA adapter, VGA cable, and monitor.
 :::
 
-#### 3.4 USB
+#### 3.4 DP Display (Type-C)
+
+The Type-C port on CM7s-IO supports DisplayPort (DP) video output. To connect a monitor with a Type-C video input, use a full-featured USB-C to USB-C cable that supports DP Alt Mode video transmission. A charging-only USB-C cable cannot carry video.
+
+For a monitor with a standard DisplayPort input, use a USB-C to DisplayPort video cable that supports output from a USB-C DP Alt Mode source to a DP monitor.
+
+#### 3.5 USB
 
 ##### Testing with a USB Mouse or Keyboard
 1. Connect a USB keyboard to a USB port on the CM7s.
@@ -642,7 +648,7 @@ armsom@armsom:/$ df -h | grep "sd"
 /dev/sda1        30G   64K   30G   1% /test
 ```
 
-#### 3.5 M.2 Key M
+#### 3.6 M.2 Key M
 
 The CM7s-IO provides an M.2 Key M connector:
 
@@ -655,7 +661,7 @@ root@armsom:/# mkdir temp
 root@armsom:/# mount /dev/nvme0n1 temp
 ```
 
-#### 3.6 Micro SD card slot
+#### 3.7 Micro SD card slot
 
 The CM7s-IO has a standard onboard microSD card slot, primarily used as a system boot drive or for additional storage.
 
@@ -703,7 +709,7 @@ bin   dev  home  lost+found  mnt  proc  run   snap  swapfile  tmp  var
 boot  etc  lib   media       opt  root  sbin  srv   sys       usr
 ```
 
-#### 3.7 Audio
+#### 3.8 Audio
 
 ##### 1. View the system's sound cards.
 
@@ -750,7 +756,7 @@ armsom@armsom:~$ aplay -D hw:2,0 /tmp/record.wav
 Playing WAVE '/tmp/record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-#### 3.8 40 PIN
+#### 3.9 40 PIN
 
 The CM7s provides a 40-pin GPIO header that is compatible with most commonly available sensor applications.
 
@@ -831,7 +837,7 @@ root@armsom:/wiring-armbian# gpio read 5
 
 - Other pins can be configured in the same way; simply change the wPi number to the number corresponding to the desired pin.
 
-#### 3.9 RGB LED
+#### 3.10 RGB LED
 
 The CM7s has a user LED (green) and a power indicator LED (red).
 
@@ -849,7 +855,7 @@ armsom@armsom:~$ echo 1 > /sys/class/leds/led-green-usr/brightness (on continuou
 armsom@armsom:~$ echo heartbeat > /sys/class/leds/led-green-usr/trigger (restore heartbeat mode)
 ```
 
-#### 3.10 RTC
+#### 3.11 RTC
 
 - The CM7s integrates an **LK8563S** RTC chip. The CM7s-IO also has an onboard VRTC connector for an RTC battery.
 
@@ -891,7 +897,7 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 2026-04-28 07:26:02.198445+08:00
 ```
 
-#### 3.11 MIPI-CSI
+#### 3.12 MIPI-CSI
 ##### Enable Camera Configuration
 Before using a camera, enable the camera device-tree overlay by locating the following two lines:
 ```bash
@@ -1006,7 +1012,7 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
 :::
 
-#### 3.12 MIPI DSI
+#### 3.13 MIPI DSI
 
 The CM7s MIPI-DSI interface supports resolutions up to 2K@60Hz.
 

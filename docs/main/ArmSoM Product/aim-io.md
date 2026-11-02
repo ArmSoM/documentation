@@ -588,10 +588,6 @@ armsom@armsom:~$ ls /mnt/tfcard
 armsom@armsom:~$ sudo umount /mnt/tfcard
 ```
 
-:::tip
-To keep booting from eMMC, remove a bootable TF card before rebooting; otherwise the board may boot from the card. Unmount any partitions in use before removing it.
-:::
-
 ### 8. RTC
 
 The tested AIM7 uses an HYM8563-compatible RTC on `i2c4`. Connect the RTC backup battery and confirm device registration:
@@ -655,12 +651,13 @@ dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs2-overlay.dtbo
 dtoverlay=/dtb/overlay/rk3588-armsom-aim7-camera-ov13850-cs3-overlay.dtbo
 ```
 
+:::tip
 For AIM5, replace `rk3588-armsom-aim7-camera-` in the filenames above with `rk3576-armsom-aim5-camera-` and edit its AIM5 uEnv file. Remove the leading `#` to enable a line. For initial wiring checks, enable one camera at a time before combining ports as needed. If an older image lacks these files, update the kernel package for your module.
+:::
 
-Save and reboot. Remove any bootable TF card first if you want to continue booting from eMMC.
+Save and reboot:
 
 ```bash
-armsom@armsom:~$ sync
 armsom@armsom:~$ sudo reboot
 ```
 
@@ -684,7 +681,7 @@ Each `Detected` line confirms that the driver read the corresponding sensor ID.
 
 #### Basic Commands and Tools
 
-AIM5 and AIM7 use the same ArmSoM SDK, so the capture methods below apply to both. Find the target camera's **ISP output node** and replace `/dev/videoX` accordingly; do not copy the CM5-IO video node numbers.
+AIM5 and AIM7 use the same ArmSoM SDK, so the capture methods below apply to both. Find the target camera's **ISP output node** and replace `/dev/videoX` accordingly.
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --list-devices
@@ -707,7 +704,7 @@ Restart the image's 3A service before capture:
 armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
 ```
 
-Run one capture command at a time. Preview requires a local desktop session with a display; press `Ctrl+C` to stop. Recording commands include `-e` so the MP4 file can be finalized when stopping.
+Run one capture command at a time. Connect a display for preview and press `Ctrl+C` to stop. Recording commands include `-e` so the MP4 file can be finalized when stopping.
 
 #### OV13850 Camera
 
