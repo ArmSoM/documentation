@@ -7,7 +7,7 @@ slug: /armsom-cm7s
 image: /img/cm/armsom-cm7s.jpg
 toc_collapsible: true
 toc_min_heading_level: 2
-toc_max_heading_level: 4
+toc_max_heading_level: 5
 ---
 
 # ArmSoM-CM7s Product Introduction
@@ -927,122 +927,140 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 ```
 
 #### 3.12 MIPI-CSI
+
+CM7s-IO supports a two-lane IMX219 (Raspberry Pi Camera Module 2) on CAM0 and a four-lane OV13850 ([ArmSoM camera-module1](./armsom-camera-module1)) on CAM1. Power off before connecting ribbon cables and check their orientation.
+
 ##### Enable Camera Configuration
-Before using a camera, enable the camera device-tree overlay by locating the following two lines:
-```bash
-root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
-#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-imx219-cs0-overlay.dtbo
-#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-ov13850-cs1-overlay.dtbo
-```
-Uncomment the line for the camera you want to use, save the file, exit, and reboot.
 
-##### Basic Commands
-- First, check the device node name assigned to each camera in different situations:                      
-1. When both cameras are enabled at the same time, the IMX219 camera is usually `video22` and the OV13850 camera is usually `video31`.                 
-2. When only one camera is enabled, its node is usually `video11`.
-
-- View the media topology. When both cameras are enabled, the IMX219 camera is usually `media0` and the OV13850 camera is usually `media1`.
+Edit the CM7s boot configuration:
 
 ```bash
-root@armsom:/# media-ctl -d /dev/media1 -p
+armsom@armsom:~$ sudo nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
 ```
 
-View the video formats supported by the video node.
-```bash
-root@armsom:~# v4l2-ctl -d /dev/video31 --get-fmt-video
-Format Video Capture Multiplanar:
-        Width/Height      : 2112/1568
-        Pixel Format      : 'NV12' (Y/UV 4:2:0)
-        Field             : None
-        Number of planes  : 1
-        Flags             :
-        Colorspace        : sRGB
-        Transfer Function : Rec. 709
-        YCbCr/HSV Encoding: Rec. 709
-        Quantization      : Full Range
-        Plane 0           :
-           Bytes per Line : 2112
-           Size Image     : 4967424
+Remove the leading `#` from the required lines. The following configuration enables both cameras:
+
+```ini
+dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-imx219-cs0-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-ov13850-cs1-overlay.dtbo
 ```
 
-##### Install gst-launch-1.0
-- Check if the system has gst-launch-1.0 installed; if not, you'll need to install it first.
+Save and reboot:
+
 ```bash
-root@armsom:/# apt-get update
-root@armsom:/# apt-get install gstreamer1.0*
+armsom@armsom:~$ sudo reboot
 ```
 
-##### Using the ArmSoM camera-module1
+##### Check Cameras and Device Nodes
 
-This camera uses the [camera-module1](./armsom-camera-module1) module. After connecting and powering on the camera module, check the boot log.
+The following logs and nodes were collected on CM7s with Debian 12 / Linux 6.1 and both cameras enabled:
 
 ```bash
-root@armsom:/# dmesg | grep ov13850
-[    2.302905] ov13850 5-0010: driver version: 00.01.05
-[    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
-[    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
-[    2.303153] ov13850 5-0010: supply dovdd not found, using dummy regulator
-[    2.303186] ov13850 5-0010: supply dvdd not found, using dummy regulator
-[    2.303213] ov13850 5-0010: could not get default pinstate
-[    2.303220] ov13850 5-0010: could not get sleep pinstate
-[    2.308532] ov13850 5-0010: Detected OV00d850 sensor, REVISION 0xb2
-[    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
-[    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
-```
-Replace `/dev/video31` in the commands below with the video node actually registered on your system.
-- Capture an image using `v4l2-ctl`.
-```bash
-// video31 or video11
-root@armsom:/# systemctl restart rkaiq_3A.service
-root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+armsom@armsom:~$ dmesg | grep -E "imx219|ov13850"
 ```
 
-- Preview (requires a monitor for real-time preview)
-```bash
-// video31 or video11
-root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
-```
-![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
-
-<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
-
-
-
-##### Using Raspberry Pi Camera Module 2
-
-This camera uses the [Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/) module. After connecting and powering on the camera module, check the boot log.
-
-```bash
-root@armsom:/# dmesg | grep imx219
-[    4.049680] imx219 4-0010: driver version: 00.01.02
-[    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
-[    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
-[    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
+```text
+[    2.805909] ov13850 1-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    2.892223] imx219 4-0010: Detected IMX000219 sensor
 ```
 
-After confirming the driver is loaded, run the following command to take a photo or record a video
+| Port | Camera | I2C address | CIF topology | ISP topology | ISP main output |
+| --- | --- | --- | --- | --- | --- |
+| CAM0 (2 lanes) | IMX219 | `4-0010` | `/dev/media0` | `/dev/media2` | `/dev/video22` |
+| CAM1 (4 lanes) | OV13850 | `1-0010` | `/dev/media1` | `/dev/media3` | `/dev/video31` |
 
-- take a photo
+Node numbers may vary with the image and enabled devices. A single enabled camera may use `/dev/video11`. Identify the correct **ISP output node** before replacing the nodes below; do not use CIF RAW nodes for preview:
+
 ```bash
-video22 or video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
-```         
+armsom@armsom:~$ v4l2-ctl --list-devices
+armsom@armsom:~$ media-ctl -d /dev/media0 -p
+armsom@armsom:~$ media-ctl -d /dev/media2 -p
+armsom@armsom:~$ v4l2-ctl -d /dev/video22 --get-fmt-video
+armsom@armsom:~$ v4l2-ctl -d /dev/video31 --get-fmt-video
+```
 
-- record a video
+##### Tools and the 3A Service
+
+Some images require GStreamer to be installed manually. If `gst-launch-1.0` is missing, run:
+
 ```bash
-video22 or video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
-```           
+armsom@armsom:~$ sudo apt-get update
+armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x
+```
 
-- Preview (requires a monitor for real-time preview)
+Start or restart the 3A service before capture for automatic exposure and white balance:
+
 ```bash
-video22 or video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
-```  
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+```
 
-:::tip
-Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
-:::
+Run only one set of capture commands at a time. Preview requires a local desktop terminal. Press `Ctrl+C` to exit; recording uses `-e`, so wait for file finalization. If no image appears after switching capture methods, stop capture and restart the 3A service.
+
+##### OV13850 Camera
+
+These examples use `2112×1568` with a configured rate of 30 FPS. Actual frame rate depends on exposure and other factors.
+
+**Capture a frame (raw NV12, not JPEG):**
+
+```bash
+armsom@armsom:~$ v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+```
+
+**Record video (H.264 / MP4):**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/video31 num-buffers=300 ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! mpph264enc ! h264parse ! mp4mux ! filesink location=ov13850.mp4
+```
+
+The image must include the matching Rockchip encoder plugin. Check with `gst-inspect-1.0 mpph264enc`.
+
+**Preview:**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! videoconvert ! ximagesink sync=false handle-events=false
+```
+
+##### IMX219 Camera
+
+Capture and preview use `3280×2464 @ 15 FPS`. Do not configure this full-resolution mode for 30 FPS.
+
+**Capture a photo (JPEG):**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+```
+
+**Record video (MJPEG / AVI):**
+
+The following software-encoding example scales ISP output to `1920×1080 @ 15 FPS` and produces large files. Full-resolution IMX219 H.264 hardware recording timed out on the tested image, so the old 8MP / 30 FPS command is not retained. This MJPEG example has not yet been verified on hardware.
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/video22 num-buffers=150 ! video/x-raw,format=NV12,width=1920,height=1080,framerate=15/1 ! videoconvert ! jpegenc ! avimux ! filesink location=imx219.avi
+```
+
+**Preview:**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! videoconvert ! ximagesink sync=false handle-events=false
+```
+
+`GST_V4L2SRC_MAX_RESOLUTION` is a mode-selection extension in some SDK images. If unsupported, omit it and use a mode supported by the actual node.
+
+##### Preview Both Cameras Simultaneously
+
+Download the [CM7s dual-window preview script](/files/cm7s-dual-camera-preview.py) to the board. In a local desktop terminal, enter its directory and run:
+
+```bash
+armsom@armsom:~$ sudo apt-get install -y python3-gi gir1.2-gtk-3.0 gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+armsom@armsom:~$ python3 cm7s-dual-camera-preview.py
+```
+
+The script targets a 1920×1080 screen, with IMX219 on the left and OV13850 on the right. Each ISP output is 640×480, scaled proportionally to 960×720 without cropping. Measured rates were approximately 15 FPS and 25 FPS; both cameras' colors and smoothness were confirmed. Update the camera list if node numbers differ. Press `Ctrl+C` to exit.
+
+Test image below: titles and upper/lower black borders were cropped out. Only the left IMX219 image was rotated 180° to correct its orientation; the right image is unchanged.
+
+![CM7s IMX219 and OV13850 simultaneous preview](/img/cm/cm7s-dual-camera-preview.webp)
 
 #### 3.13 MIPI DSI
 

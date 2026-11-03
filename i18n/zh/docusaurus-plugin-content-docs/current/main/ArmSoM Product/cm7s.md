@@ -7,7 +7,7 @@ slug: /armsom-cm7s
 image: /img/cm/armsom-cm7s.jpg
 toc_collapsible: true
 toc_min_heading_level: 2
-toc_max_heading_level: 4
+toc_max_heading_level: 5
 ---
 
 # ArmSoM-CM7s 产品简介
@@ -934,121 +934,140 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 ```
 
 #### 3.12 MIPI-CSI
+
+CM7s-IO 支持 CAM0 的两通道 IMX219（Raspberry Pi Camera Module 2）和 CAM1 的四通道 OV13850（[ArmSoM camera-module1](./armsom-camera-module1)）。连接排线前先断电，并确认排线方向。
+
 ##### 开启摄像头配置
-要使用摄像头之前，需要先开启摄像头设备树overlay，分别找到如下两行：
-```bash
-root@armsom:~# nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
-#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-imx219-cs0-overlay.dtbo
-#dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-ov13850-cs1-overlay.dtbo
-```
-需要使用哪个摄像头，解除注释后保存退出，然后重启即可
 
-##### 基础命令使用
-- 我们需要先确认每款摄像头在不同情况下，被注册为的节点名：                      
-1. 若同时打开两款摄像头时，一般imx219摄像头为video22，ov13850摄像头为video31。                 
-2. 若分别单独打开某款摄像头时，一般都为video11。
-
-- 查看拓扑，同时打开两个摄像头时，一般imx219摄像头为media0，ov13850摄像头为media1
+编辑 CM7s 的启动配置：
 
 ```bash
-root@armsom:/# media-ctl -d /dev/media1 -p
+armsom@armsom:~$ sudo nano /boot/uEnv/uEnvarmsom-cm7s-io.txt
 ```
 
-查看video节点支持的视频格式
-```bash
-root@armsom:~# v4l2-ctl -d /dev/video31 --get-fmt-video
-Format Video Capture Multiplanar:
-        Width/Height      : 2112/1568
-        Pixel Format      : 'NV12' (Y/UV 4:2:0)
-        Field             : None
-        Number of planes  : 1
-        Flags             :
-        Colorspace        : sRGB
-        Transfer Function : Rec. 709
-        YCbCr/HSV Encoding: Rec. 709
-        Quantization      : Full Range
-        Plane 0           :
-           Bytes per Line : 2112
-           Size Image     : 4967424
+取消对应行前的 `#` 即为启用，以下配置同时开启两路：
+
+```ini
+dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-imx219-cs0-overlay.dtbo
+dtoverlay=/dtb/overlay/rk3588s-armsom-cm7s-io-camera-ov13850-cs1-overlay.dtbo
 ```
 
-##### 安装 gst-launch-1.0
-- 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
+保存后重启：
+
 ```bash
-root@armsom:/# apt-get update
-root@armsom:/# apt-get install gstreamer1.0*
+armsom@armsom:~$ sudo reboot
 ```
 
-##### 使用 ArmSoM camera-module1
+##### 确认摄像头与节点
 
-摄像头采用[camera-module1](./armsom-camera-module1)模组，摄像头模组连接并上电后可以查看启动日志。
+以下日志和节点以 CM7s / Debian 12 / Linux 6.1、两路同时启用时的实测结果为例：
 
 ```bash
-root@armsom:/# dmesg | grep ov13850
-[    2.302905] ov13850 5-0010: driver version: 00.01.05
-[    2.302944] ov13850 5-0010: Failed to get power-gpios, maybe no use
-[    2.303067] ov13850 5-0010: supply avdd not found, using dummy regulator
-[    2.303153] ov13850 5-0010: supply dovdd not found, using dummy regulator
-[    2.303186] ov13850 5-0010: supply dvdd not found, using dummy regulator
-[    2.303213] ov13850 5-0010: could not get default pinstate
-[    2.303220] ov13850 5-0010: could not get sleep pinstate
-[    2.308532] ov13850 5-0010: Detected OV00d850 sensor, REVISION 0xb2
-[    2.332058] ov13850 5-0010: Consider updating driver ov13850 to match on endpoints
-[    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
-```
-下述命令中的 /dev/video31 要根据实际注册的video节点来替换
-- 使用v4l2-ctl进行抓图
-```bash
-// video31 或 video11
-root@armsom:/# systemctl restart rkaiq_3A.service
-root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+armsom@armsom:~$ dmesg | grep -E "imx219|ov13850"
 ```
 
-- 预览（需接显示器实时预览）
-```bash
-// video31 或 video11
-root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
+```text
+[    2.805909] ov13850 1-0010: Detected OV00d850 sensor, REVISION 0xb2
+[    2.892223] imx219 4-0010: Detected IMX000219 sensor
 ```
-![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
-<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+| 接口 | 摄像头 | I2C 地址 | CIF 拓扑 | ISP 拓扑 | ISP 主输出节点 |
+| --- | --- | --- | --- | --- | --- |
+| CAM0（2 lanes） | IMX219 | `4-0010` | `/dev/media0` | `/dev/media2` | `/dev/video22` |
+| CAM1（4 lanes） | OV13850 | `1-0010` | `/dev/media1` | `/dev/media3` | `/dev/video31` |
 
-
-
-##### 使用 Raspberry Pi Camera Module 2
-
-摄像头采用[Raspberry Pi Camera Module 2](https://www.raspberrypi.com/products/camera-module-v2/)模组，摄像头模组连接并上电后可以查看启动日志。
+节点编号可能随镜像和启用顺序变化；只开启一路时也可能为 `/dev/video11`。请先确认对应的 **ISP 输出节点**，再替换下方命令中的节点，不要使用 CIF RAW 节点预览：
 
 ```bash
-root@armsom:/# dmesg | grep imx219
-[    4.049680] imx219 4-0010: driver version: 00.01.02
-[    4.074430] imx219 4-0010: Model ID 0x0219, Lot ID 0x258b89, Chip ID 0x056c
-[    4.074460] imx219 4-0010: Consider updating driver imx219 to match on endpoints
-[    4.074477] rockchip-csi2-dphy csi2-dphy4: dphy4 matches m01_b_imx219 4-0010:bus type 5
+armsom@armsom:~$ v4l2-ctl --list-devices
+armsom@armsom:~$ media-ctl -d /dev/media0 -p
+armsom@armsom:~$ media-ctl -d /dev/media2 -p
+armsom@armsom:~$ v4l2-ctl -d /dev/video22 --get-fmt-video
+armsom@armsom:~$ v4l2-ctl -d /dev/video31 --get-fmt-video
 ```
-确认驱动已加载后，运行以下命令拍照或录像，并实时预览。
 
-- 拍照
+##### 基础工具与 3A 服务
+
+部分镜像需手动安装 GStreamer，若缺少 `gst-launch-1.0`，执行：
+
 ```bash
-// video22 或 video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
-```         
+armsom@armsom:~$ sudo apt-get update
+armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x
+```
 
-- 拍摄视频
+采集前启动或重启 3A 服务，确保自动曝光、白平衡正常：
+
 ```bash
-// video22 或 video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=3280, height=2464, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
-```  
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+```
 
-- 预览（需接显示器实时预览）
+每次只运行一组采集命令，预览需在板端桌面终端中运行。按 `Ctrl+C` 退出；录像带 `-e`，结束时等待文件封装完成。切换采集方式后若没有画面，可先停止采集并重启 3A 服务。
+
+##### OV13850 摄像头
+
+以下使用 `2112×1568` 模式，配置帧率为 30 FPS，实际帧率受曝光等因素影响。
+
+**抓图（NV12 原始帧，不是 JPEG）：**
+
 ```bash
-// video22 或 video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
-``` 
+armsom@armsom:~$ v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+```
 
-:::tip
-由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
-:::
+**录像（H.264 / MP4）：**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/video31 num-buffers=300 ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! mpph264enc ! h264parse ! mp4mux ! filesink location=ov13850.mp4
+```
+
+需有 SDK 对应的 Rockchip 编码插件，可用 `gst-inspect-1.0 mpph264enc` 检查。
+
+**预览：**
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! videoconvert ! ximagesink sync=false handle-events=false
+```
+
+##### IMX219 摄像头
+
+抓图和预览使用 `3280×2464 @ 15 FPS`，不要将此全分辨率模式设置为 30 FPS。
+
+**抓图（JPEG）：**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+```
+
+**录像（MJPEG / AVI）：**
+
+以下为软件编码示例，ISP 输出缩放到 `1920×1080 @ 15 FPS`，文件较大。当前镜像的 IMX219 全分辨率 H.264 硬件录像测试出现超时，因此不沿用旧版 8MP / 30 FPS 录像命令；本 MJPEG 示例尚未实机验证。
+
+```bash
+armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/video22 num-buffers=150 ! video/x-raw,format=NV12,width=1920,height=1080,framerate=15/1 ! videoconvert ! jpegenc ! avimux ! filesink location=imx219.avi
+```
+
+**预览：**
+
+```bash
+armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! videoconvert ! ximagesink sync=false handle-events=false
+```
+
+`GST_V4L2SRC_MAX_RESOLUTION` 是部分 SDK 镜像提供的模式选择扩展，若不支持可去掉此前缀，按实际节点支持的模式运行。
+
+##### 两路摄像头同时预览
+
+下载 [CM7s 双窗口预览脚本](/files/cm7s-dual-camera-preview.py) 到板端，在桌面终端进入脚本所在目录执行：
+
+```bash
+armsom@armsom:~$ sudo apt-get install -y python3-gi gir1.2-gtk-3.0 gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0
+armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
+armsom@armsom:~$ python3 cm7s-dual-camera-preview.py
+```
+
+脚本针对 1920×1080 屏幕，左侧为 IMX219，右侧为 OV13850。每路 ISP 输出为 640×480，等比例放大至 960×720，保留完整画面。实测约为 15 FPS 和 25 FPS，两路色彩、流畅度均已确认正常。节点不同时修改脚本中的摄像头列表，按 `Ctrl+C` 退出。
+
+以下为实测素材：已裁去标题和上下黑边，仅将左侧 IMX219 画面旋转 180° 调正；右侧保持原样。
+
+![CM7s IMX219 与 OV13850 双路预览](/img/cm/cm7s-dual-camera-preview.webp)
 
 #### 3.13 MIPI DSI
 
