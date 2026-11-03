@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 AIM-IO是 ArmSoM AIM 系列的一款 IO 板，尺寸为 100x80x29 毫米，同时兼容当前的 Jetson Nano 核心模块。它是一款专为创客、学习者和开发者设计的微型 AI 计算机，能够快速将 AI 技术应用于各种智能设备。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">硬件信息</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">入门准备</a><a href="#doc-section-4">烧录方式选择</a><a href="#doc-section-5">接口使用</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![AIM-IO](/img/aim/aim-io.png)
+
+<div className="armsom-image-caption">AIM-IO</div>
+
 
 :::tip
 AIM-IO Board 使用12V DC供电。
@@ -77,9 +84,13 @@ AIM-IO板是专为AIM模块开发者设计的扩展板，旨在帮助完成系�
 </div>
 </details>
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 使用手册
 
 AIM-IO使用手册，帮助用户了解 AIM 产品的基本使用和需要的准备工作，开始使用你的ArmSoM-AIM🚀
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 入门准备
 
@@ -114,6 +125,8 @@ AIM-IO使用手册，帮助用户了解 AIM 产品的基本使用和需要的准
 ArmSoM-AIM 系列型号供电所需的电源规格为12V/2-3A。您可以使用任何提供正确电源模式的高质量电源。
 
 将电源插入DC Barrel插孔, 请确保使用正确端口！
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 烧录方式选择
 
@@ -157,11 +170,17 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-from-file.png)
 
+<div className="armsom-image-caption">balenaEtcher-flash-from-file</div>
+
+
 4. 然后点击 Select target，选择自己要烧录的 MicroSD卡。
 5. 点击 Flash, 烧录等待成功，这里需要一段时间。
 6. 烧录成功，会显示如图所示
 
 ![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-success.png)
+
+<div className="armsom-image-caption">balenaEtcher-flash-from-file</div>
+
 
 :::tip 烧录失败
     1. windows烧录镜像需要"以管理员身份运行"，linux某些用户可能需要通过chmod命令修改成_可执行_运行。
@@ -185,6 +204,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
+<div className="armsom-image-caption">baidu-flash-tool</div>
+
+
 ###### 安装DriverAssitant
 
 解压DriverAssitant软件压缩包，双击 DriverInstall.exe 进入驱动安装界面。
@@ -192,6 +214,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 点击 **驱动安装** 即可开始安装驱动。如果不确定以前是否安装过旧版驱动，先点击驱动卸载移除旧版本驱动程序，再点击驱动安装。
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
+
+<div className="armsom-image-caption">install-driver-assitant</div>
+
 
 ###### 安装RKDevTool
 
@@ -221,14 +246,23 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 短接 10和11进入loader模式
 ![aimio-recovery](/img/aim/aimio-recovery.png)
 
+<div className="armsom-image-caption">aimio-recovery</div>
+
+
 按住aim7上maskrom按键进入maskrom模式
 
 ![aimio-maskrom](/img/aim/aimio-maskrom.png)
+
+<div className="armsom-image-caption">aimio-maskrom</div>
+
 
 
 开始烧录系统
 
 ![rkdevtool-install-emmc](/img/general-tutorial/rkdevtool-install-emmc.png)
+
+<div className="armsom-image-caption">rkdevtool-install-emmc</div>
+
 
 1. 选择Download Image项
 2. 确认板子已经进入Maskrom模式
@@ -247,6 +281,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 
+<div className="armsom-image-caption">baidu-SDDiskTool</div>
+
+
 解压压缩包后无需安装即可使用，双击 SD_Firmware_Tool.exe 进入软件界面。
 
 
@@ -257,6 +294,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 首先选择正确的要烧录的SD卡，然后将功能模式选择位 SD Boot ， 再选择要烧录的镜像，最后点击开始创建烧录镜像到SD卡。
 
 ![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
+
+<div className="armsom-image-caption">SDDiskTool</div>
+
 
 耐心等待SD卡烧录完整，当镜像较大时，烧录的时间会相应变长。
 
@@ -280,10 +320,19 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
 
+<div className="armsom-image-caption">recovery-flash-tool</div>
+
+
 ![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
+
+<div className="armsom-image-caption">maskroom-flash-tool</div>
+
 
 刷写进度显示在右边，完成后它会提示你：
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
+
+<div className="armsom-image-caption">rkdevtool-success</div>
+
 
 :::tip 烧写失败分析
 如果烧写过程中出现Download Boot Fail, 或者烧写过程中出错，如下图所示，通常是由于使用的USB线连接不良、劣质线材，或者电脑USB口驱动能力不足导致的，请更换USB线或者电脑USB端口排查。
@@ -296,6 +345,8 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
 :::
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 接口使用
 
 **AIM5（RK3576）和 AIM7（RK3588）共用 AIM-IO 底板，接口连接和基本使用均可参考本篇。** 下方日志以 AIM7 官方 Debian 12 / Linux 6.1 镜像为例；设备名称、GPIO 编号及 overlay 按所用核心板和镜像确认。
@@ -305,6 +356,9 @@ ArmSoM 系列产品的系统镜像包含了多种根文件系统，我们可以�
 使用 USB 转 TTL 串口模块连接底板的调试接口，按下图交叉连接 RX/TX，并连接 GND。
 
 ![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
+
+<div className="armsom-image-caption">armsom-aimio-debug</div>
+
 
 | AIM-IO 调试接口 | 串口模块 |
 | --- | --- |
@@ -781,6 +835,9 @@ armsom@armsom:~$ python3 aim7-four-camera-preview.py
 实测截图如下（仅将每路画面旋转 180° 调正，标题保持原方向；1920×1080，无损压缩）：
 
 ![AIM7 四路摄像头同时预览](/img/aim/aim7-four-camera-preview.webp)
+
+<div className="armsom-image-caption">AIM7 四路摄像头同时预览</div>
+
 
 ### 10. MIPI DSI
 

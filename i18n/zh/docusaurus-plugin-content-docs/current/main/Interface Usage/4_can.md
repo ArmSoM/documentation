@@ -7,6 +7,10 @@ sidebar_position: 4
 ---
 
 # 4. CAN 使用
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">4.1 CAN 简介</a><a href="#doc-section-2">4.2 CAN 使用实例</a><a href="#doc-section-3">4.3 CAN 通信测试</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 4.1 CAN 简介
 
 CAN 协议是在 1980 年代由 Bosch 公司开发的，旨在满足汽车工业的需求，但随着时间的推移，它逐渐应用于其他领域。CAN 是一种基于消息的通信协议，允许多台设备通过总线进行通信。每个设备（节点）可以向总线上发送消息，所有设备都可以接收这些消息。
@@ -16,6 +20,8 @@ CAN 协议是在 1980 年代由 Bosch 公司开发的，旨在满足汽车工业
 - 实时性：CAN协议具有实时性，适合于时效性要求高的应用。
 - 容错性：CAN协议具有强大的错误检测与容错能力，可以在恶劣的环境下可靠工作。
 - 优先级：消息优先级由消息ID确定，ID越小，优先级越高。
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 4.2 CAN 使用实例
 
@@ -36,6 +42,9 @@ CAN 协议是在 1980 年代由 Bosch 公司开发的，旨在满足汽车工业
 CAN模块之间接线：CAN_TX接CAN_TX，CAN_RX接CAN_RX。
 
 ![can-real](/img/general-tutorial/interface-usage/can-real.png)
+
+<div className="armsom-image-caption">can-real</div>
+
 
 ### 4.2.3 内核配置
 - rockchip_linux_defconfig配置：
@@ -60,6 +69,9 @@ make savedefconfig
 - 选择：Networking support ---> CAN bus subsystem support (*)--->CAN Device Drivers(*) ---> Platform CAN drivers with Netlink support(*)
 
 ![can-config](/img/general-tutorial/interface-usage/can-config.png)
+
+<div className="armsom-image-caption">can-config</div>
+
 
 ### 4.2.4 DTS 节点配置
 
@@ -159,6 +171,8 @@ armsom@armsom:/boot$ sudo reboot
 - Q: 如果直接拔掉电源进行重启，是否可能导致文件未修改或 overlay 系统启动失败？
 - A: 当直接拔掉电源或强制关机时，可能会出现文件未能及时从内存（RAM）同步到存储设备（如硬盘、SSD）的情况。这是因为操作系统通常会将数据暂存于内存中，并定期将这些数据写入磁盘。为避免此问题，建议在关机前执行 “sync” 命令，确保所有数据已写入磁盘，再拔掉电源或关机。
 :::
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 4.3 CAN 通信测试
 

@@ -9,6 +9,10 @@ slug: /build-system-image/backup
 
 # 1. System backup
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">1.1 Debian system backup</a><a href="#doc-section-2">1.2 Operation on Ubuntu host</a><a href="#doc-section-3">1.3 Deploy firmware</a><a href="#doc-section-4">2. Armbian system backup</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 1.1 Debian system backup
 
 ### 1.1.1 Installing SSH rsync
@@ -70,6 +74,8 @@ sudo rm -rf /var/cache/
 ```
 
 **If there is no requirement for firmware size in this step, it can also be ignored**
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 1.2 Operation on Ubuntu host
 
@@ -164,10 +170,15 @@ The filesystem on rk3576_rootfs.img is now 1556652 (4k) blocks long.
 
 **Thus, a system image containing the complete original development board has been obtained**
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 1.3 Deploy firmware
 
 **After obtaining the firmware, it is necessary to test it and deploy the firmware to re burn the root file system image to the development board for testing** 
 ![rkdevtool](/img/rkdevtool.png)
+
+<div className="armsom-image-caption">rkdevtool</div>
+
 
 **1.Burn firmware for development boards without deployed applications**
 
@@ -175,11 +186,16 @@ The filesystem on rk3576_rootfs.img is now 1556652 (4k) blocks long.
 
 **3.Enter the system to confirm if the previously deployed files exist**
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 2. Armbian system backup
 
 It is recommended to use the `armbian-config` tool to back up to an SD card. [Armbian-config Backup](/getting-start/armbian-config#103-example-usage)
 
 Follow the script below to generate a backup image：
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```
 #!/bin/bash
@@ -235,6 +251,9 @@ losetup -D
 
 # The generated sdcard.img is the same as a normal Armbian image, and can be written to both EMMC and SD cards. After entering the system, you need to run the command sudo systemctl start Armbian-resite-filesystem.service to expand the partition to its normal size
 ```
+
+</details>
+
 
 Burn to SD card partition:
 

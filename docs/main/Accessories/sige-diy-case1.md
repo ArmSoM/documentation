@@ -15,9 +15,16 @@ It not only protects your Sige product but also provides some heat dissipation. 
 
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
+<div className="armsom-image-caption">ArmSoM-sige7-Metal-shell</div>
+
+
 :::tip
 Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be used together.
 :::
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Technical Specifications</a><a href="#doc-section-2">Compatibility</a><a href="#doc-section-3">Assembly Instructions</a><a href="#doc-section-4">Purchase Samples</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
 
 ## Technical Specifications
 
@@ -27,6 +34,8 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 - Weight: 112.5g
 - Shell Dimensions: 101.5mm * 66mm * 23mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Compatibility
 
 - Sige1 3mm Thermal Pad
@@ -34,9 +43,13 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 - Sige5 3mm Thermal Pad
 - Sige7 2mm Thermal Pad
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Assembly Instructions
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=_eyMxCYa3jU)
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## Purchase Samples 
 ArmSoM online shop: [Sige Diy Case 1](https://www.armsom.org/product-page/sige7-metal-shell)

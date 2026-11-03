@@ -7,6 +7,10 @@ slug: /interface-usage/uart
 sidebar_position: 5
 ---
 # 5. UART Usage
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">5.1 Introduction to UART</a><a href="#doc-section-2">5.2 UART Usage Example</a><a href="#doc-section-3">5.3 Console Serial Port</a><a href="#doc-section-4">5.4 Baud Rate Configuration</a><a href="#doc-section-5">5.5 Using DMA</a><a href="#doc-section-6">5.6 Using Hardware Flow Control</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 5.1 Introduction to UART
 
 Rockchip UART (Universal Asynchronous Receiver/Transmitter) is based on the 16550A serial port standard and supports the following features:
@@ -17,6 +21,8 @@ Rockchip UART (Universal Asynchronous Receiver/Transmitter) is based on the 1655
 - Supports a maximum baud rate of 4M, but the actual baud rate depends on the chip clock division strategy.
 - Supports interrupt-driven transmission mode and DMA transmission mode.
 - Supports hardware flow control with RTS+CTS.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 5.2 UART Usage Example
 ### 5.2.1 UART Pins
@@ -93,6 +99,8 @@ The serial port wake-up feature keeps the serial port open during system standby
     wakeup-source;
 };
 ```
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 5.3 Console Serial Port
 - In ArmSoM-Sige7, UART2 is used as the console serial port for users to view boot-up information and for daily debugging.
@@ -202,6 +210,8 @@ If the test fails, it may indicate an issue with the serial port or another prog
 lsof | grep ttyS3
 ```
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 5.4 Baud Rate Configuration
 
 The UART baud rate is calculated as follows: 
@@ -213,6 +223,8 @@ UART Baud Rate = Clock Source / Internal Divider / 16
 When the clock source is directly provided by a 24M crystal, the UART will use the internal divider to achieve the desired baud rate. When the clock source comes from the CRU module with PLL division, the UART baud rate is generally 1/16 of the working clock source. The actual baud rate supported and the data transmission stability are primarily determined by the UART clock division strategy.
 
 Rockchip UART ensures stable support for common baud rates such as 115200, 460800, 921600, 1500000, 3000000, and 4000000. For special baud rates, adjustments to the working clock division strategy may be needed.
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 5.5 Using DMA
 
@@ -229,6 +241,8 @@ If DMA channels are limited, you may see the following log:
 ```bash
 got rx dma channels only
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 5.6 Using Hardware Flow Control
 

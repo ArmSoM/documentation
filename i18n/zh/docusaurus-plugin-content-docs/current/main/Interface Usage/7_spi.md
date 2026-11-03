@@ -11,6 +11,10 @@ sidebar_position: 7
 
 SPI（Serial Peripheral Interface） 是一种常见的同步串行通信协议，用于微控制器（MCU）与外部设备之间的数据交换。它由 Motorola 在 1980 年代初期提出，并广泛应用于各种嵌入式系统中，如传感器、显示器、存储设备等。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">7.1 SPI 通讯的工作原理</a><a href="#doc-section-2">7.2 SPI 使用实例</a><a href="#doc-section-3">7.3 回环测试</a><a href="#doc-section-4">7.4 常见问题</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 7.1 SPI 通讯的工作原理
 
 SPI 协议使用主从架构（Master-Slave），由一个主设备控制一个或多个从设备进行数据交换。它的工作原理主要包括四个信号线和时序控制：
@@ -27,6 +31,8 @@ SPI 协议使用主从架构（Master-Slave），由一个主设备控制一个�
 - 时钟极性（CPOL）：时钟线的电平状态（高或低）决定了数据传输的时机。
 - 时钟相位（CPHA）：数据的采样时机，通常是时钟脉冲的上升沿或下降沿。
 - SPI 协议支持四种不同的时钟配置（CPOL 和 CPHA 的组合），这使得它能与不同的外设兼容。
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 7.2 SPI 使用实例
 
@@ -89,6 +95,8 @@ armsom@armsom:~$ ls /dev/spi*
 ```
 SPI_0对应的设备文件是spidev0.0和spidev0.1，spidev0.0和spidev0.1的区别在于片选信号的不同，spidev0.0使用CS0 , spidev0.1使用CS1，spi1的节点是/dev/spidev1.0。
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 7.3 回环测试
 
 根据 ioctl 相关参数，可以编写 SPI 测试程序。为了简单起见，本示例仅进行 SPI 回环测试。在进行测试时，只需将板卡上SPI的 MISO 和 MOSI 引脚（板卡上的 `19` 号和 `21` 号引脚）通过跳线帽进行短接即可实现回环测试。
@@ -96,6 +104,9 @@ SPI_0对应的设备文件是spidev0.0和spidev0.1，spidev0.0和spidev0.1的区
 通过这种方式，发送的数据可以直接回传，方便验证 SPI 功能是否正常。
 
 测试代码：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```
 #include <sys/ioctl.h>
@@ -202,6 +213,9 @@ int main(int argc, char *argv[])
 }
 ```
 
+</details>
+
+
 ### 7.3.1  编译运行
 
 ```
@@ -221,6 +235,8 @@ Max speed: 10000000 Hz (10000 KHz)
 TX Buffer: hello the world !  ArmSoM is awesome!
 RX Buffer: ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 7.4 常见问题
 ### 7.4.1 SPI ⽆信号

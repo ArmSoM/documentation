@@ -21,6 +21,9 @@ OV13850 模块具有以下特点：
 
 ![armsom-camera-module1](/img/accessories/armsom-camera-module1.png)
 
+<div className="armsom-image-caption">armsom-camera-module1</div>
+
+
 ### 兼容性
 - Sige 3/5/7
 - LM7 & W3

@@ -384,3 +384,92 @@
   .armsom-product-gallery td img { height: 120px; }
   .armsom-product-gallery--5 table { min-width: 600px; }
 }
+
+/* Shared documentation reading and resource styles. */
+[data-theme='light'] { --ifm-link-color: #08778c; }
+.markdown { line-height: 1.8; }
+.markdown h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+.markdown h3 { margin-top: 1.8rem; }
+.markdown table { max-width: 100%; }
+.gpio_style { max-width: 100%; overflow-x: auto; }
+.gpio_style > table td { font-size: 13px; line-height: 1.6; }
+.markdown .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+.markdown .cards .card-link { min-width: 0; }
+.markdown .card { width: 100%; max-width: 100%; margin: 0; min-height: 160px; height: 100%; padding: 1.25rem; border: 1px solid var(--ifm-color-emphasis-200); background: var(--ifm-background-surface-color); box-shadow: none; }
+.markdown > .card-link { display: block; max-width: 360px; margin-bottom: 1rem; }
+.markdown .card h2 { font-size: 1.15rem; color: var(--ifm-heading-color); margin: 0 0 .6rem; }
+.markdown .card p { color: var(--ifm-color-emphasis-700); }
+.markdown .card .icon { width: 36px; height: 36px; margin-bottom: .8rem; }
+.markdown .card .icon i { font-size: 30px; }
+.markdown .card-image img { max-height: 150px; object-fit: contain; }
+.armsom-doc-shortcuts { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.2rem 0 2rem; }
+.armsom-doc-shortcuts a { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 8px; padding: .5rem 1rem; font-weight: 600; background: var(--ifm-background-surface-color); }
+.armsom-doc-shortcuts a:hover { border-color: var(--ifm-color-primary); text-decoration: none; }
+.armsom-spec-table { width: 100%; font-size: .95rem; }
+.armsom-spec-table th, .armsom-spec-table td { padding: .85rem 1rem; vertical-align: top; text-align: left; }
+.armsom-spec-table thead { background: var(--ifm-color-emphasis-100); }
+.armsom-spec-table td { font-weight: 400; }
+.armsom-spec-table li { margin: 0 0 .3rem; list-style-position: inside; }
+.armsom-terminal-details { border: 1px solid var(--ifm-color-emphasis-200); border-radius: 8px; padding: .8rem 1rem; margin: 1rem 0; }
+.armsom-terminal-details summary { cursor: pointer; font-weight: 600; }
+.armsom-terminal-details[open] summary { margin-bottom: 1rem; }
+@media (max-width: 600px) {
+ .armsom-spec-table { display: block; overflow-x: auto; }
+ .armsom-spec-table th, .armsom-spec-table td { min-width: 100px; padding: .65rem; }
+ .armsom-doc-shortcuts a { flex: 1 0 40%; text-align: center; }
+}
+
+.armsom-doc-figure { margin: 1.5rem auto; text-align: center; }
+.armsom-doc-figure img { max-width: 100%; max-height: 420px; width: auto; object-fit: contain; border-radius: 8px; }
+.armsom-doc-figure figcaption { margin-top: .6rem; font-size: .85rem; color: var(--ifm-color-emphasis-700); }
+
+/* Site-wide presentation only: preserve document text, links and images. */
+.markdown > p, .markdown > ul, .markdown > ol { margin-bottom: 1.1rem; }
+.markdown li > p { margin-bottom: .5rem; }
+.markdown li + li { margin-top: .25rem; }
+.markdown h2, .markdown h3, .markdown h4 { scroll-margin-top: calc(var(--ifm-navbar-height) + 1.25rem); }
+.markdown h4 { margin-top: 1.4rem; margin-bottom: .7rem; }
+.markdown > table { display: block; width: max-content; max-width: 100%; overflow-x: auto; margin: 1.25rem 0 1.75rem; border-radius: 8px; }
+.markdown > table th, .markdown > table td { padding: .75rem .9rem; line-height: 1.65; vertical-align: top; }
+.markdown > table thead th { background: var(--ifm-color-emphasis-100); }
+/* Legacy specification tables use th for values; preserve their markup. */
+.markdown > table:has(tbody[align]) tbody th { font-weight: 400; }
+.markdown > table:has(tbody[align]) tbody th:nth-child(odd) { font-weight: 600; }
+.markdown > table:has(tbody[align]) li { margin: .2rem 0; list-style-position: inside; }
+.markdown > p > img:only-child { display: block; margin: 1.25rem auto; max-width: 100%; height: auto; border-radius: 6px; }
+.markdown details { margin: 1rem 0; padding: .85rem 1rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 8px; background: var(--ifm-background-surface-color); }
+.markdown details > summary { cursor: pointer; font-weight: 600; line-height: 1.6; }
+.markdown details[open] > summary { margin-bottom: 1rem; }
+.markdown details table { max-width: 100%; overflow-x: auto; }
+.markdown pre { line-height: 1.65; border: 1px solid var(--ifm-color-emphasis-200); }
+.markdown blockquote { padding: .8rem 1rem; border-radius: 0 8px 8px 0; background: var(--ifm-color-emphasis-100); }
+.markdown .alert { border-radius: 8px; line-height: 1.75; }
+.markdown .btn { max-width: 100%; font-size: 1rem; padding: .65rem 1rem; border-radius: 7px; white-space: normal; overflow-wrap: anywhere; }
+.markdown .btn span { display: inline-block; margin-left: 1.8rem; }
+.markdown a:focus-visible, .markdown summary:focus-visible { outline: 2px solid var(--ifm-link-color); outline-offset: 3px; }
+@media (max-width: 600px) {
+ .markdown > table th, .markdown > table td { padding: .6rem .7rem; font-size: .9rem; }
+ .markdown > table:has(tbody[align]) th { min-width: 100px; }
+ .markdown details { padding: .7rem; }
+ .markdown .cards { grid-template-columns: minmax(0, 1fr); }
+ .markdown .card { min-height: 130px; }
+ .markdown h1 { overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .markdown .card { transition: none; }
+ .markdown .card:hover { transform: none; }
+}
+
+/* Cross-document navigation and non-destructive content presentation. */
+.armsom-section-anchor { display: block; scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem); }
+.armsom-image-caption { text-align: center; color: var(--ifm-color-emphasis-700); font-size: .85rem; margin: -.5rem auto 1.5rem; overflow-wrap: anywhere; }
+.armsom-long-code summary { color: var(--ifm-link-color); }
+.markdown .armsom-doc-shortcuts { gap: .5rem; }
+.markdown .armsom-doc-shortcuts a { font-size: .9rem; }
+[data-theme='dark'] .markdown .armsom-product-gallery td { background: #fff; }
+@media(max-width:600px) { .markdown .armsom-doc-shortcuts a { overflow-wrap:anywhere; } }
+[data-theme='dark'] { --ifm-link-color: #69d9e9; --ifm-navbar-link-color: #e4e7ec; --ifm-toc-link-color: #c5cbd3; }
+[data-theme='dark'] .navbar__link { color: #e4e7ec; }
+[data-theme='dark'] .table-of-contents__link { color: #c5cbd3; }
+[data-theme='dark'] .table-of-contents__link--active { color: #69d9e9; }
+[data-theme='dark'] .menu__link--active { background: #16373e; color: #8ce6f1; }

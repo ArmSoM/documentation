@@ -9,6 +9,10 @@ sidebar_position: 12
 
 # 12. 屏幕&触摸 使用
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">12.1 mipi 屏幕</a><a href="#doc-section-2">12.2 HDMI</a><a href="#doc-section-3">12.3 typec(DP显示)</a><a href="#doc-section-4">12.4 屏幕调试方法</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 12.1 mipi 屏幕
 
 ArmSoM 产品带MIPI-DSI的都支持适配了 [ArmSoM  Display 10 HD](/armsom-display-10-hd)模组
@@ -16,6 +20,9 @@ ArmSoM 产品带MIPI-DSI的都支持适配了 [ArmSoM  Display 10 HD](/armsom-di
 按照下图将连接好排线
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.png)
+
+<div className="armsom-image-caption">sige7-display-10-hd</div>
+
 
 :::caution
 MIPI-DSI 接口不支持热插拔操作，请勿在系统通电状态下连接或断开显示屏。通电时进行连接或断开可能会导致电路短路，轻则触发板卡的保护机制自动关机，重则可能损坏芯片接口或烧毁芯片。
@@ -61,6 +68,8 @@ armsom@armsom:/boot# sudo reboot
 - A1: 当直接拔掉电源或强制关机时，可能会出现文件未能及时从内存（RAM）同步到存储设备（如硬盘、SSD）的情况。这是因为操作系统通常会将数据暂存于内存中，并定期将这些数据写入磁盘。为避免此问题，建议在关机前执行 “sync” 命令，确保所有数据已写入磁盘，再拔掉电源或关机。
 :::
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 12.2 HDMI
 
 HDMI在默认情况下是打开的
@@ -87,9 +96,14 @@ HDMI在默认情况下是打开的
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
+
 :::tip
 使用 HDMI 转 VGA 显示时，ArmSoM-Sige产品和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
 :::
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 12.3 typec(DP显示)
 
@@ -106,6 +120,8 @@ DP在默认情况下是打开的
 注意，ArmSoM产品typec对外输出功能为 5V/2A, 超过此范围的typec显示器建议使用外供电。如果显示设备的 DP 接口需要外供电源，你需要找到合适的电源适配器。
 通常，显示设备的说明书会指定所需电源的规格，如电压、电流等参数。确保使用符合要求的电源适配器，以免损坏设备。
 :::
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 12.4 屏幕调试方法
 
@@ -124,6 +140,9 @@ MIPI 屏幕调试时，一般需要特别关注屏幕的上电初始化序列（
 
 ![mipi-dsi](/img/general-tutorial/interface-usage/mipi-dsi.png)
 
+<div className="armsom-image-caption">mipi-dsi</div>
+
+
 #### 12.4.1.1. 调试步骤分析
 
 mipi屏幕的点亮流程以ArmSoM-Sige5 为例，github: [armsom-sige5-display-10hd.dts](https://github.com/ArmSoM/rockchip-kernel/blob/rk-6.1-rkr4.1/arch/arm64/boot/dts/rockchip/overlay/armsom-sige5-display-10hd.dts)
@@ -135,6 +154,9 @@ mipi屏幕的点亮流程以ArmSoM-Sige5 为例，github: [armsom-sige5-display-
 **背光配置节点**
 
 根据 MIPI 屏幕的接口电路图，得知屏幕背光是由 PWM1 控制的。我们根据 RK 屏幕的背光配置方法，可以得到以下 `backlight` 配置节点：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```dts
 backlight: backlight {
@@ -179,6 +201,9 @@ backlight: backlight {
 };
 ```
 
+</details>
+
+
 配置解析
 ```
 - `compatible = "pwm-backlight"`：指定该背光控制为 PWM 背光。
@@ -211,6 +236,9 @@ Generic_Short_Write_1P(0xB0,0x01);
 通过这种方式，用户可以将厂家提供的初始化代码逐条转化为设备树中的 DCS 配置，确保屏幕正常启动。
 
 将初始化序列代码整理一下就可以得到RK 屏幕的DCS序列，如下
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```
 panel-init-sequence = [
@@ -312,8 +340,14 @@ panel-init-sequence = [
 	];
 ```
 
+</details>
+
+
 再结合屏幕规格书中的屏幕参数，得到如下配置。
 ![screen-datasheet](/img/general-tutorial/interface-usage/screen-datasheet.png)
+
+<div className="armsom-image-caption">screen-datasheet</div>
+
 
 ```
 disp_timings0: display-timings {
@@ -369,6 +403,9 @@ disp_timings0: display-timings {
 MIPI-DSI 预览
 ![display-armsom-10-hd](/img/general-tutorial/interface-usage/display-armsom-10-hd.jpeg)
 
+<div className="armsom-image-caption">display-armsom-10-hd</div>
+
+
 #### 12.4.1.2 调试
 
 通过如下指令即可查询 VOP 的状态：
@@ -378,6 +415,9 @@ cat /sys/kernel/debug/dri/0/summary
 ```
 获取的 VOP 状态如下图：
 ![display-vop](/img/general-tutorial/interface-usage/display-vop.png)
+
+<div className="armsom-image-caption">display-vop</div>
+
 - Video Portx: 表⽰当前的 Video Port 的状态
 - Connector: Video Port 当前连接的输出接口
 - Display mode: Video Port 当前输出时序
@@ -428,6 +468,9 @@ PHY 配置如下:
 
 Type-C 接口需要通过 Type-C 的 CC 检测和 PD 协商来配置 lane 和 HPD 的状态， 所以还需要配置 PD 芯
 ⽚(当前⽀持的 PD 芯⽚有 fusb302, husb311)：
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 &i2c4 {
 	status = "okay";
@@ -506,6 +549,9 @@ Type-C 接口需要通过 Type-C 的 CC 检测和 PD 协商来配置 lane 和 HP
 };
 ```
 
+</details>
+
+
 **配置DP开机 logo**
 
 ```bash
@@ -574,6 +620,9 @@ rk3588_s:/ # echo detect > /sys/class/drm/card0-DP-1/status
 
 - kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-w3.dts
 
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 //打开 HDMI0 功能
 &hdmi0 {
@@ -625,3 +674,6 @@ rk3588_s:/ # echo detect > /sys/class/drm/card0-DP-1/status
 		status = "okay";
 };
 ```
+
+</details>
+

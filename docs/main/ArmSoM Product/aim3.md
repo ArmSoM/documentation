@@ -12,6 +12,10 @@ toc_max_heading_level: 4
 
 # AIM3 Product Overview
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting Started</a><a href="#doc-section-3">Hardware Specifications</a><a href="#doc-section-4">Development Resources</a><a href="#doc-section-5">Certifications</a><a href="#doc-section-6">Availability</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 ArmSoM-AIM3 is a mid-to-high-end general-purpose System-on-Chip (SoC) featuring high performance and low power consumption. Built on 22nm process technology, it integrates:
 - Quad-core ARM Cortex-A55 CPU @ 2GHz
@@ -32,6 +36,8 @@ ArmSoM-AIM3 is a mid-to-high-end general-purpose System-on-Chip (SoC) featuring 
   - Official: Android 12, Debian 11, Buildroot
   - Community: Armbian
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting Started
 <a href="./armsom-aimio#user-manual" class="card-link">
     <div class="card">
@@ -45,11 +51,19 @@ ArmSoM-AIM3 is a mid-to-high-end general-purpose System-on-Chip (SoC) featuring 
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware Specifications
 
 ### Interface Layout
 ![ArmSoM-AIM3-a](/img/aim/aim3-a.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM3-a</div>
+
 ![ArmSoM-AIM3-b](/img/aim/aim3-b.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM3-b</div>
+
 
 :::tip
 All GPIO pins maintain compatibility with NVIDIA Jetson TX2 & Nano development boards, with identical form factor.
@@ -108,6 +122,8 @@ All GPIO pins maintain compatibility with NVIDIA Jetson TX2 & Nano development b
 </table>
 </details>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Development Resources
 
 ### SDK Sources
@@ -126,8 +142,12 @@ ArmSoM provides the following official system images. Select the matching produc
 |:---:|:---|:---:|
 | ![armbian](/img/armbian-logo.png) | **Armbian for AIM3:**  Customizable Linux builds for SBCs | [Armbian Image](https://armbian.com/boards?vendor=armsom) |
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Certifications
 - CE/FCC/RoHS compliant
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Availability
 ArmSoM-AIM3 will remain in production until at least August 2034.

@@ -11,6 +11,10 @@ sidebar_position: 2
 
 ArmSoM为其所有产品提供Linux和Android的SDK。这些SDK通常托管在github上。本指南以ArmSoM-CM5-IO为例，演示如何获取和编译SDK固件，参考 [SDK 仓库 README](https://github.com/ArmSoM/rk3576-andriod-sdk/blob/main/README.md) 。SDK 通过 GitHub Releases 以分卷压缩包形式发布，以下命令均在 Linux 开发主机上执行。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">2.1 获取 SDK</a><a href="#doc-section-2">2.2 解压 SDK</a><a href="#doc-section-3">2.3 配置目标开发板</a><a href="#doc-section-4">2.4 编译 SDK</a><a href="#doc-section-5">2.5 常见问题</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 2.1 获取 SDK
 
 打开 [rk3576_Android14RKR6 发布页面](https://github.com/ArmSoM/rk3576-andriod-sdk/releases/tag/rk3576_Android14RKR6)，展开 **Assets**，将全部 56 个 SDK 分卷下载到同一个目录。分卷从 `rk3576_Android14RKR6.tar.bz2.aa` 到 `rk3576_Android14RKR6.tar.bz2.cd`，请保留原始文件名。
@@ -20,6 +24,8 @@ ArmSoM为其所有产品提供Linux和Android的SDK。这些SDK通常托管在gi
 请下载 SDK 分卷附件。GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 源码归档不能代替 SDK。
 
 :::
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 2.2 解压 SDK
 
@@ -37,6 +43,8 @@ cat rk3576_Android14RKR6.tar.bz2.* | tar xj
 cd rk3576_android14
 ```
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 2.3 配置目标开发板
 
 该 SDK 包含 RK3576 通用代码，编译配置时需要选择对应的目标开发板。
@@ -48,6 +56,8 @@ git am /path/to/your/patches/*.patch
 ```
 
 请将 `/path/to/your/patches/` 替换为实际补丁目录。上述 Release 当前仅包含 SDK 分卷文件，没有单独的补丁附件。如需这些补丁，请通过 [SDK 论坛](https://forum.armsom.org/tag/sdk) 联系 ArmSoM 获取。
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 2.4 编译 SDK
 
@@ -63,6 +73,8 @@ lunch
 ```bash
 ./build.sh -AUKup
 ```
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 2.5 常见问题
 

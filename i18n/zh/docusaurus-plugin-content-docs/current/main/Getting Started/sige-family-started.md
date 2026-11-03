@@ -40,6 +40,10 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 </details>
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">入门准备</a><a href="#doc-section-2">烧录方式选择</a><a href="#doc-section-3">接口使用</a><a href="#doc-section-4">CPU/GPU/NPU/DDR</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 入门准备
 
 在开始使用 ArmSoM-Sige 产品之前，请准备好以下物品
@@ -84,6 +88,8 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 
 将电源插入标有“DCIN”的端口, 请确保使用正确端口！
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 烧录方式选择
 <div class="cards">
     <a href="./getting-start/flash-img" class="card-link">
@@ -98,6 +104,8 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
     </a>
 </div>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 接口使用
 
 如果您是首次使用 ArmSoM-Sige 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
@@ -110,6 +118,9 @@ Sige使用手册，帮助用户了解Sige产品的基本使用和需要的准备
 如下所示连接 USB 转 TTL 串口线：
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
+
+<div className="armsom-image-caption">armsom-sige7-debug</div>
+
 
 | Sige7/5/3/1       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
@@ -200,6 +211,9 @@ armsom@armsom-sige:/# nmcli dev wifi connect "wifi_name" password "wifi_password
 
 ![wifi-nmcli-scan](/img/general-tutorial/wifi-nmcli-scan.png)
 
+<div className="armsom-image-caption">wifi-nmcli-scan</div>
+
+
 3. 使用 nmcli 命令连接扫描到的 WIFI
 
  - wifi_name 换成需要连接的 WIFI 热点的名字
@@ -248,6 +262,9 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
+<div className="armsom-image-caption">wifi-nmcli</div>
+
+
 ```
 armsom@armsom-sige7:~$ nmtui
 ```
@@ -256,9 +273,15 @@ armsom@armsom-sige7:~$ nmtui
 
 ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
 
+<div className="armsom-image-caption">wifi-nmcli-connect</div>
+
+
 4. 选择想要连接的 WIFI 热点，输入密码。WIFI 连接成功后会在已连接的 WIFI 名称前显示一个“*”
 
 ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+<div className="armsom-image-caption">wifi-nmcli-success</div>
+
 
 5. 通过 ip addr show wlan0 命令可以查看 wifi 的 IP 地址
 
@@ -293,6 +316,9 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 2. 连接好 WIFI 后，可以打开浏览器查看是否能上网
 
 ![wifi-desktop-set](/img/general-tutorial/wifi-desktop-set.png)
+
+<div className="armsom-image-caption">wifi-desktop-set</div>
+
 
 **网络设置**
 <div class="cards">
@@ -369,6 +395,9 @@ armsom@armsom-sige:/# pair yourDeviceMAC
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
+
 :::tip
 使用 HDMI 转 VGA 显示时，ArmSoM-Sige产品和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
 :::
@@ -427,6 +456,9 @@ armsom@armsom-sige7:/# v4l2-ctl --list-devices
 
 ![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
 
+<div className="armsom-image-caption">sige-usb-cam</div>
+
+
 
 同时，您也可以使用终端命令打开相机预览:
 ```bash
@@ -444,6 +476,9 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 ```
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+
+<div className="armsom-image-caption">armsom-sige7-gst</div>
+
 
 ### M.2 Key M
 
@@ -648,6 +683,9 @@ root@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,fo
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 [ArmSoM camera-module1](./armsom-camera-module1)
 
 ### MIPI DSI
@@ -657,6 +695,9 @@ ArmSoM-Sige7/5/3 分辨率最高分辨率可达 4K@60Hz
 1. 按照下图将连接好排线
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.png)
+
+<div className="armsom-image-caption">sige7-display-10-hd</div>
+
 
 2. 打开 10.1 寸 MIPI LCD 屏幕配置的方法
 
@@ -680,6 +721,8 @@ overlays=armsom-sige3-display-10hd // Sige3
 快捷键：Ctrl + S保存    Ctrl + X退出
 
 编辑好之后重启设备来更改Overlays设置以支持Display 10 HD。
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## CPU/GPU/NPU/DDR
 

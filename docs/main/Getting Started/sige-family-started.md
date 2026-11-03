@@ -62,6 +62,10 @@ The Sige user manual helps users understand the basic usage of Sige products and
 | LEDs | 2x LEDs | 2x LEDs | - | 2x LEDs|
 |Board Dimensions| 92mm × 62mm | 92mm × 62mm | 85.0 x 56.0 mm |  -->
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Getting Started</a><a href="#doc-section-2">Image Flashing</a><a href="#doc-section-3">Interface Usage</a><a href="#doc-section-4">CPU/GPU/NPU/DDR</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Getting Started
 
 Before starting to use the ArmSoM-Sige product, please prepare the following items:
@@ -106,6 +110,8 @@ The table below shows the power specifications required for powering the ArmSoM-
 
 Insert the power supply into the port labeled "DCIN". Please make sure to use the correct port!
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Image Flashing
 
 <div class="cards">
@@ -121,6 +127,8 @@ Insert the power supply into the port labeled "DCIN". Please make sure to use th
     </a>
 </div>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Interface Usage
 
 If you are using ArmSoM-Sige products for the first time, please familiarize yourself with the hardware interfaces of each product to better understand the following content.
@@ -133,6 +141,9 @@ If you are using ArmSoM-Sige products for the first time, please familiarize you
 Connect the USB to TTL serial cable as follows:
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
+
+<div className="armsom-image-caption">armsom-sige7-debug</div>
+
 
 | Sige7/5/3/1       | Connection | Serial Module |
 | ----------------- | ---------- | ------------- |
@@ -386,6 +397,9 @@ Note that many laptops, while having HDMI ports, typically have HDMI output only
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
+
 :::tip
 When using HDMI to VGA conversion, no additional configuration is needed for the ArmSoM-Sige products or the Linux system. If you encounter issues, check the HDMI to VGA converter, VGA cable, and display for problems.
 :::
@@ -439,6 +453,9 @@ Logitech HD Webcam C93 (usb-xhci-hcd.5.auto-1):
 
 ![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
 
+<div className="armsom-image-caption">sige-usb-cam</div>
+
+
 You can also use terminal commands to preview the camera:
 ```bash
 armsom@armsom-sige7:/# gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=1920,height=1080 ! xvimagesink;
@@ -455,6 +472,9 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 ```
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+
+<div className="armsom-image-caption">armsom-sige7-gst</div>
+
 
 ### M.2 Key M
 
@@ -657,6 +677,9 @@ root@armsom-sige3:/# gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,for
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 [ArmSoM Camera-Module1](./armsom-camera-module1)
  
 ### MIPI DSI
@@ -666,6 +689,9 @@ The ArmSoM-Sige7/5/3 supports a maximum resolution of up to 4K@60Hz.
 1. Connect the cables as shown in the image below.
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.png)
+
+<div className="armsom-image-caption">sige7-display-10-hd</div>
+
 
 2. Configuring the 10.1-inch MIPI LCD screen
 
@@ -689,6 +715,8 @@ overlays=armsom-sige3-display-10hd // Sige3
 Shortcut keys: Ctrl + S to save    Ctrl + X to exit
 
 After editing, restart the device to apply the Overlays settings and support Display 10 HD.
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## CPU/GPU/NPU/DDR
 

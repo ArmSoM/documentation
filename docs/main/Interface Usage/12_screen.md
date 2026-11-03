@@ -9,6 +9,10 @@ sidebar_position: 12
 
 # 12.  Screen&Touch Usage
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">12.1 Mipi Screen</a><a href="#doc-section-2">12.2 HDMI</a><a href="#doc-section-3">12.3 typec (DP display)</a><a href="#doc-section-4">12.4 Screen Debugging Methods</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 12.1 Mipi Screen
 
 ArmSoM products with MIPI-DSI support adaptation to the [ArmSoM Display 10 HD] module
@@ -16,6 +20,9 @@ ArmSoM products with MIPI-DSI support adaptation to the [ArmSoM Display 10 HD] m
 Connect the wiring according to the following diagram
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd.png)
+
+<div className="armsom-image-caption">sige7-display-10-hd</div>
+
 
 :::caution
 The MIPI-DSI interface does not support hot swapping operations. Do not connect or disconnect the display screen while the system is powered on. Connecting or disconnecting during power on may cause a short circuit in the circuit, which can trigger the protection mechanism of the board to automatically shut down. In severe cases, it may damage the chip interface or burn out the chip.
@@ -61,6 +68,8 @@ After enabling the armsom-sige7-display-10hd device tree plugin, restart the boa
 -A1: When directly unplugging or forcibly shutting down, there may be a situation where files are not synchronized from memory (RAM) to storage devices (such as hard drives, SSDs) in a timely manner. This is because operating systems typically temporarily store data in memory and periodically write this data to disk. To avoid this issue, it is recommended to execute the 'sync' command before shutting down to ensure that all data has been written to the disk, and then unplug or shut down.
 :::
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 12.2 HDMI
 
 HDMI is turned on by default
@@ -87,9 +96,14 @@ When HDMI is not displaying, please first check if the system you are using has 
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
+
 :::tip
 When using HDMI to VGA display, ArmSoM Sige products and Linux systems do not require any settings, as long as the HDMI interface of the development board can display normally. So if there are any issues during testing, please check if there are any problems with the HDMI to VGA converter, VGA cable, and monitor.
 :::
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 12.3 typec (DP display)
 
@@ -106,6 +120,8 @@ DP is open by default
 Note that the ArmSoM product's TypeC output function is 5V/2A. TypeC displays beyond this range are recommended to use external power supply. If the DP interface of the display device requires an external power supply, you need to find a suitable power adapter.
 Usually, the instruction manual of a display device specifies the specifications of the required power supply, such as voltage, current, and other parameters. Ensure to use a power adapter that meets the requirements to avoid damaging the device.
 :::
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 12.4 Screen Debugging Methods
 
@@ -124,6 +140,9 @@ For example, for the ArmSoM Display 10 HD screen, please refer to the relevant d
 
 ![mipi-dsi](/img/general-tutorial/interface-usage/mipi-dsi.png)
 
+<div className="armsom-image-caption">mipi-dsi</div>
+
+
 #### 12.4.1.1.  Debugging step analysis
 
 The lighting process of mipi screen takes ArmSoM-Sige5 as an example, github: [armsom-sige5-display-10hd.dts]( https://github.com/ArmSoM/rockchip-kernel/blob/rk-6.1-rkr4.1/arch/arm64/boot/dts/rockchip/overlay/armsom-sige5-display-10hd.dts )
@@ -135,6 +154,9 @@ In the device tree configuration of ArmSoM, it is necessary to add a configurati
 **Backlight configuration node**
 
 According to the interface circuit diagram of MIPI screen, it is known that the screen backlight is controlled by PWM1. According to the backlight configuration method of RK screen, we can obtain the following 'backlight' configuration nodes:
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```dts
 backlight: backlight {
@@ -179,6 +201,9 @@ backlight: backlight {
 };
 ```
 
+</details>
+
+
 Configuration analysis
 ```
 -Compatible="PWM backlight": Specify that the backlight control is PWM backlight.
@@ -212,6 +237,9 @@ Through this method, users can convert the initialization codes provided by the 
 
 Organize the initialization sequence code to obtain the DCS sequence of the RK screen, as follows
 
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```
 panel-init-sequence = [
@@ -313,9 +341,15 @@ panel-init-sequence = [
 	];
 ```
 
+</details>
+
+
 
 Combined with the screen parameters in the screen specification book, the following configuration is obtained.
 ![screen-datasheet](/img/general-tutorial/interface-usage/screen-datasheet.png)
+
+<div className="armsom-image-caption">screen-datasheet</div>
+
 
 ```
 disp_timings0: display-timings {
@@ -370,6 +404,9 @@ disp_timings0: display-timings {
 MIPI-DSI Preview
 ![display-armsom-10-hd](/img/general-tutorial/interface-usage/display-armsom-10-hd.jpeg)
 
+<div className="armsom-image-caption">display-armsom-10-hd</div>
+
+
 #### 12.4.1.2 Debugging
 
 You can query the status of VOP by using the following command:
@@ -379,6 +416,9 @@ cat /sys/kernel/debug/dri/0/summary
 ```
 The obtained VOP status is shown in the following figure:
 ![display-vop](/img/general-tutorial/interface-usage/display-vop.png)
+
+<div className="armsom-image-caption">display-vop</div>
+
 -Video Portx: Table showing the current status of the Video Port
 - Connector:  The output interface currently connected to the Video Port
 - Display mode:  Current output timing of Video Port
@@ -430,6 +470,9 @@ The PHY configuration is as follows:
 
 The Type-C interface needs to configure the status of lane and HPD through CC detection and PD negotiation of Type-C, so it is also necessary to configure the PD chip
 (Currently holding PD chips such as fusb302 and husb311):
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 &i2c4 {
 	status = "okay";
@@ -508,6 +551,9 @@ The Type-C interface needs to configure the status of lane and HPD through CC de
 };
 ```
 
+</details>
+
+
 **Configure DP startup logo**
 
 ```bash
@@ -576,6 +622,9 @@ rk3588_s:/ # echo detect > /sys/class/drm/card0-DP-1/status
 
 - kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-w3.dts
 
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 //Enable HDMI0 function
 &hdmi0 {
@@ -627,3 +676,6 @@ rk3588_s:/ # echo detect > /sys/class/drm/card0-DP-1/status
     status = "okay";
 };
 ```
+
+</details>
+

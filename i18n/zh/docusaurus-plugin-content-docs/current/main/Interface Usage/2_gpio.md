@@ -8,8 +8,14 @@ sidebar_position: 2
 ---
 
 # 2. GPIO 使用
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">2.1 GPIO简介</a><a href="#doc-section-2">2.2 GPIO引脚编号计算方法</a><a href="#doc-section-3">2.3 复用</a><a href="#doc-section-4">2.4 GPIO调试方法</a><a href="#doc-section-5">2.5 GPIO控制</a><a href="#doc-section-6">2.6 wiring-armbian 的方法</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 2.1 GPIO简介
 GPIO，全称 General-Purpose Input/Output（通用输入输出），是一种在计算机和嵌入式系统中常见的数字输入输出接口。它允许软件控制硬件的数字输入和输出，例如开关、传感器、LED灯等。GPIO通常由一个芯片或处理器上的引脚提供支持，通过编程可以配置这些引脚为输入或输出，并且可以通过相应的软件命令来读取输入状态或控制输出状态。
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 2.2 GPIO引脚编号计算方法
 RK3588/RK3576/RK3568/RK3528/RK3506 共 有 5 组 GPIO bank：GPIO0~GPIO4，每组又以 A0~A7, B0~B7, C0~C7, D0~D7 作为编号区分，常用以下公式计算引脚：
@@ -25,10 +31,15 @@ RK3588/RK3576/RK3568/RK3528/RK3506 共 有 5 组 GPIO bank：GPIO0~GPIO4，每�
 :::tip
 ::: 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 2.3 复用
 GPIO口除了通用输入输出功能外，还可能有其它复用功能
 
 ![rockchip-gpio](/img/general-tutorial/interface-usage/gpio.png)
+
+<div className="armsom-image-caption">rockchip-gpio</div>
+
 
 从原理图中看出：以GPIO1_C0为例，就有如下几个功能：
 
@@ -68,9 +79,14 @@ GPIO口除了通用输入输出功能外，还可能有其它复用功能
 这样，我们就将GPIO1_C0复用为了UART3_RX_M0功能
 
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 2.4 GPIO调试方法
 ### 2.4.1 读取GPIO状态信息
 Debugfs 文件系统目的是为开发人员提供更多内核数据，方便调试。 这里 GPIO 的调试也可以用 Debugfs 文件系统，获得更多的内核信息。GPIO 在 Debugfs 文件系统中的接口为 /sys/kernel/debug/gpio，可以这样读取该接口的信息：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 armsom@armsom:~$ sudo cat /sys/kernel/debug/gpio
@@ -105,6 +121,9 @@ gpiochip4: GPIOs 128-159, parent: platform/fec50000.gpio, gpio4:
 
 gpiochip5: GPIOs 509-511, parent: platform/rk806-pinctrl.9.auto, rk806-gpio, can sleep:
 ```
+
+</details>
+
 从读取到的信息中可以知道，内核把 GPIO 当前的状态都列出来了，以 GPIO0组为例，gpio-15(GPIO0_B7) 对应的dts节点是led_rgb_b，输出低电平 (out lo)。
 ### 2.4.2 查看 pinmux-pins
 
@@ -139,6 +158,8 @@ pin 21 (gpio0-21): (MUX UNCLAIMED) gpio0:21
 我们以pin 13 (gpio0-13): fiq-debugger (GPIO UNCLAIMED) function uart2 group uart2m0-xfer作为解析：
 
 gpio0-13对应的节点名是 fiq-debugger，此节点使用pinctrl配置复用为debug串口功能，pinctrl的值是uart2m0-xfer。
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 2.5 GPIO控制
 
@@ -184,6 +205,8 @@ gpiomon 3 19#监控第一组中3号控制器的引脚状态
 ```
 
 `Rockchip Pin的ID按照 控制器(bank)+端口(port)+索引序号(pin) 组成,其中端口号和索引号会合并成一个数值传入到gpiod里去,并不是所有的引脚都能够使用libgpiod控制，例如led之类的一些已经被使用的引脚。`
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 2.6 wiring-armbian 的方法
 

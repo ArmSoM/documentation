@@ -13,6 +13,10 @@ toc_max_heading_level: 4
 # Product Introduction
 Let's get to know the ArmSoM-KVM in 5 minutes.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Key Parameters</a><a href="#doc-section-3">Product Image</a><a href="#doc-section-4">Cooperation</a><a href="#doc-section-5">System Image</a><a href="#doc-section-6">Purchase Samples</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 ArmSoM-KVM KVM over IP Industrial control gateway design with Rockchip RK3568. ArmSoM-KVM is an IP KVM device designed for remote monitoring and control of industrial devices. It can connect the video, mouse, and keyboard of the industrial control computer of the production line machine to the remote console over a network to realize remote management of the machine. The device also provides a port for connecting to the local console. Supports local management of machines.
 
@@ -28,6 +32,8 @@ The ArmSoM-KVM provides two RS-232 and two RS-485 serial communication interface
 :::
 
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Key Parameters
 
 - Compact and lightweight design to save space;
@@ -41,12 +47,20 @@ The ArmSoM-KVM provides two RS-232 and two RS-485 serial communication interface
 - two built-in 10/100/1000 Mbps network adapters provide LAN redundancy or dual IP operation
 - supports multiple platform server environments: Windows, Mac, Sun, Linux, and VT100 serial devices
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Product Image
 ![armsom-kvm-interface](/img/link/armsom-kvm-interface.jpg)
+
+<div className="armsom-image-caption">armsom-kvm-interface</div>
+
 
 :::tip
 Video support HDMI,VGA,DP and DVI,support 4 expansion boards
 ![armsom-kvm-video-interface](/img/link/armsom-kvm-video-interface.png)
+
+<div className="armsom-image-caption">armsom-kvm-video-interface</div>
+
 :::
 
 ### Hardware Spec
@@ -74,21 +88,34 @@ Video support HDMI,VGA,DP and DVI,support 4 expansion boards
 ### Interface topology
 ![armsom-kvm_5](/img/link/armsom-kvm_5.png)
 
+<div className="armsom-image-caption">armsom-kvm_5</div>
+
+
 ### ArmSoM-KVM Product
 
 ArmSoM work closely with ikasinfo to provide total solutions to customers. IKASinfo is a Chongqing-based national high-tech enterprise committed to driving the manufacturing industry towards Industry 4.0. With branches in major cities in China and abroad, IKAS has developed cutting-edge technologies, including intelligent decision-making algorithms based on "ROPN + AI" technology, which have been empowering the semiconductor industry and gradually adopted in other sectors.
 
 ![armsom-kvm_1](/img/link/armsom-kvm_1.jpg)
 
+<div className="armsom-image-caption">armsom-kvm_1</div>
+
+
 ### ArmSoM-KVM total solutions
 
 ![armsom-kvm_5](/img/link/armsom-kvm_2.png)
+
+<div className="armsom-image-caption">armsom-kvm_5</div>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## Cooperation
 
 1. We work closely with IKASinfo to provide total solutions to our customers
 2. If you want to do OEM&ODM ,please contact : sales@armsom.org
 
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## System Image
 
@@ -106,6 +133,8 @@ Network disk address: [Google Drive root folder](https://drive.google.com/drive/
 
 Firmware location: 3. Linux image/debian/ArmSoM-P2pro  
 
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Purchase Samples 
 

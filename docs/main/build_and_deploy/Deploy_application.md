@@ -9,6 +9,10 @@ sidebar_position: 4
 # 1. Deploy application
 We often have the need to create an application and make it start automatically upon boot. This can be achieved by setting up a Systemd service. Below, I'll use the creation of a simple hello.service as an example to guide you through setting up your own Systemd service on an ArmSoM board.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">1.1 write scripts</a><a href="#doc-section-2">1.2 create profile</a><a href="#doc-section-3">1.3 enable hello-armsom.service</a><a href="#doc-section-4">2.1 The composition structure of the deb package</a><a href="#doc-section-5">2.2 Build deb package</a><a href="#doc-section-6">2.3 Modify deb package</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 1.1 write scripts
 Write a hello.sh script in the /opt directory:
 ```
@@ -26,6 +30,8 @@ Add execution permissions to the script:
 ```
 chmod +x hello.sh
 ```
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 1.2 create profile
 Create a hello armsom. service configuration file in the/etc/systemd/system/directory:
@@ -45,6 +51,8 @@ StandardOutput=journal
 WantedBy=multi-user.target
 ```
 The ExecutStart field defines the self starting script for the hello armsom. service service as/opt/hello.sh. When we enable the hello. service startup function,/opt/hello.sh will be executed after startup
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 1.3 enable hello-armsom.service
 Enter the command 'sudo systemctl list unit files - type=service | grep hello' to check if hello.service has been added to the service list
@@ -92,6 +100,8 @@ hello,armsom!
 Deb package is an installation package in Linux system. Sometimes, Linux software installation packages downloaded online also appear in the form of deb package. As it is based on tar package, it also records the file's permission information (read, write, executable), owner, user group, etc.
 Use the command: ` dpkg - l ` to view the system and which deb packages are installed.
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 2.1 The composition structure of the deb package
 Deb packages are generally divided into two parts:
 
@@ -103,6 +113,8 @@ Deb packages are generally divided into two parts:
 - Post script: The script that the software needs to execute after copying normal directory files to the system.
 - Postrm file: Script that needs to be executed after software uninstallation.
 - Among them, control, poster, and poster are necessary files.
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 2.2 Build deb package
 Installation tools and dependencies:
@@ -169,6 +181,8 @@ Package the above directory into a deb file and install it on the board using th
 dpkg-deb --build -Zgzip armsom-service armsom-service.deb
 sudo dpkg -i armsom-service.deb
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 2.3 Modify deb package
 Here is a general method:

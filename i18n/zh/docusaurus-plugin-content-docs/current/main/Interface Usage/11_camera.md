@@ -19,6 +19,10 @@ MIPI-CSI 接口主要由以下组件组成：
 - MIPI-CSI 发送器（CSI-Transmitter）：发送器位于摄像头上，向处理器发送图像数据。
 - MIPI-CSI 标准支持不同的数据速率，具体取决于具体实现（如 MIPI-CSI2 或 MIPI-CSI3）。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">11.1 Camera 使用实例</a><a href="#doc-section-2">11.2 RK3588硬件通路框图</a><a href="#doc-section-3">11.3 RK3588 的camera通路:</a><a href="#doc-section-4">11.4  链路解析</a><a href="#doc-section-5">11.5 查看摄像头信息</a><a href="#doc-section-6">11.6 预览摄像头</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 11.1 Camera 使用实例
 
 ### 11.1.1 Camera 引脚
@@ -28,6 +32,9 @@ ArmSoM 产品带MIPI-CSI的都支持适配了 [ArmSoM camera-module1](./armsom-c
 ArmSoM 产品的mipi csi接口的1脚对摄像头模组的1脚
 
 ![cm5-camera](/img/general-tutorial/interface-usage/cm5-camera.png)
+
+<div className="armsom-image-caption">cm5-camera</div>
+
 
 ### 11.1.2 使能 Camera 通信接口
 
@@ -93,13 +100,20 @@ armsom@armsom:~$ dmesg | grep ov13850
 [    3.619848] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 11.2 RK3588硬件通路框图
 ![rockchip-camera-hardware-phy](/img/general-tutorial/interface-usage/camera-hardware-phy.png)
+
+<div className="armsom-image-caption">rockchip-camera-hardware-phy</div>
+
 
 
 - rk3588支持2个isp硬件，每个isp设备可虚拟出多个虚拟节点，软件上通过回读的方式，依次从ddr读取每一路的图像数据进isp处理。对于多摄方案，建议将数据流平均分配到两个isp上。
 
 - 回读：指数据经过vicap采集到ddr，应用获取到数据后，将buffer地址推送给isp，isp再从ddr获取图像数据。
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 11.3 RK3588 的camera通路:
 
 **多sensor支持：**
@@ -112,8 +126,16 @@ armsom@armsom:~$ dmesg | grep ov13850
 **下图是RK3588 camera连接链路示意图，可以支持7路camera。**
 ![rockchip-camera-entity](/img/general-tutorial/interface-usage/camera-entity.png)
 
+<div className="armsom-image-caption">rockchip-camera-entity</div>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ##  11.4  链路解析
 ![rockchip-camera-entity-single](/img/general-tutorial/interface-usage/camera-entity-single.png)
+
+<div className="armsom-image-caption">rockchip-camera-entity-single</div>
+
 
 - 图中：mipi camera2---> <font color="red" size="3">csi2_dphy1</font> ---> mipi2_csi2 ---> rkcif_mipi_lvds2--->rkcif_mipi_lvds2_sditf --->rkisp0_vir2
 	
@@ -128,6 +150,8 @@ armsom@armsom:~$ dmesg | grep ov13850
 :::tip
 每个vicap节点与isp的链接关系，通过对应虚拟出的XXX_sditf来指明链接关系。
 :::
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 11.5 查看摄像头信息
 
@@ -168,6 +192,9 @@ armsom@armsom:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
 可以看到，在ArmSoM-Sige5中，双Camera的节点对应的是：video22和video31
 
 ### 11.5.4 查找所有摄像头设备
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --list-devices
@@ -227,6 +254,9 @@ rkisp_mainpath (platform:rkisp1-vir1):
         /dev/video37
         /dev/media3
 ```
+
+</details>
+
 其中/dev/video22和/dev/video31都是摄像头的设备。
 
 ### 11.5.5 查看设备的预览支持格式
@@ -253,6 +283,9 @@ ioctl: VIDIOC_ENUM_FMT
                 Size: Stepwise 32x32 - 2112x1568 with step 8/8
 ```
 ### 11.5.6 查看设备的所有信息
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 root@armsom:/# v4l2-ctl --all --device /dev/video22
@@ -311,6 +344,9 @@ Image Processing Controls
                      pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=120000000 flags=read-only, volatile
 ```
 
+</details>
+
+
 ### 11.5.7 切换其他分辨率
 ov13850支持多个分辨率的输出，默认为2112/1568。现将输出分辨率改为4224x3136。
 ```
@@ -335,6 +371,11 @@ v4l2-ctl -d /dev/video22 --set-fmt-video=width=2112,height=1568,pixelformat=NV12
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
+<div className="armsom-image-caption">rockchip-camera-gts</div>
+
+
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## 11.6 预览摄像头
 以下命令格式、分辨率和帧率可根据实际进行修改：
 ```bash
@@ -353,3 +394,6 @@ gst-launch-1.0 v4l2src device=/dev/video31 ! \
 客户可以根据自己的需求进行Camera相关的应用程序开发，如下是使用QT开发的双摄同显应用程序：
 
 ![rockchip-camera-two](/img/general-tutorial/interface-usage/camera-two.png)
+
+<div className="armsom-image-caption">rockchip-camera-two</div>
+

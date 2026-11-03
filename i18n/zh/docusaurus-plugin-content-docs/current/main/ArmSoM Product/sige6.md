@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 Sige6。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">使用手册</a><a href="#doc-section-6">产品证书</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 
 ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，双核 Arm Cortex-A76 + 六核 Arm Cortex-A55 大小核架构，12nm 制程，最高主频 2.0GHz；并集成 3 TOPS NPU 及 Imagination BXM-4-64 MC1 GPU，可提供强大的 AI 和多媒体处理能力。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
 ![ArmSoM-sige6](/img/sige/sige6-bananer.jpg)
+
+<div className="armsom-image-caption">ArmSoM-sige6</div>
+
 
 ### 关键参数
 
@@ -41,6 +48,8 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 - **重量**：47.2g
 - **大小**：89mm x 56mm x 21.6mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-sige6#使用手册" class="card-link">
@@ -56,11 +65,16 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 </a>
 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-Sige6 front & back](/img/sige/armsom-sige6-layout.jpg)
+
+<div className="armsom-image-caption">ArmSoM-Sige6 front &amp; back</div>
+
 
 ### 硬件规格
 <details>
@@ -193,7 +207,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
       全志 a733 框图
     </summary>
         <img
-  src="./img/sige/a733-block-diagram.png"
+  src="/img/sige/a733-block-diagram.png"
   alt="a733 block diagram"
   className="session-details-live-video"/>
 </details>
@@ -392,6 +406,8 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 |2          | -         | 负极  |
 </details>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 开发资料
 
 ### SDK源码
@@ -415,6 +431,9 @@ jackson@armsom:~$ git clone https://cnb.cool/armsom-2025/T527_AIOT_V1.4.8
 ```
 #### SDK构建方法：
 1.在进行模块编译之前，需要配置相关信息，如下
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh config
 ========ACTION List: mk_config ;========
@@ -464,6 +483,9 @@ All available rootfs files: //选择需要的系统版本
 Choice [linaro-bullseye-gnome-arm64.tar.gz]: 0
 Setup BSP files
 ```
+
+</details>
+
 2.配置完成相关信息后，开始编译SDK
 ```bash
 jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh
@@ -515,6 +537,11 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 获取ADB调试、烧录、串口、SD卡制作等工具 `网盘路径：ArmSoM->ArmSoM-Sige6->开发工具`
 
 ![armsom-sige6-Developtools](/img/general-tutorial/armsom-sige6-Developtools.png)
+
+<div className="armsom-image-caption">armsom-sige6-Developtools</div>
+
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 使用手册
 
@@ -580,23 +607,44 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 1. 首先安装USB驱动，双击运行InstallUSBDrv.bat即可
 ![armsom-sige6-USBDRV](/img/general-tutorial/armsom-sige6-USBDRV.png)
 
+<div className="armsom-image-caption">armsom-sige6-USBDRV</div>
+
+
 2. 安装完USB驱动后，可以在windows下打开设备管理器，可以看到USB Device(VID_1f3a_PID_efe8)标识
 ![armsom-sige6-DevManager](/img/general-tutorial/armsom-sige6-DevManager.png)
+
+<div className="armsom-image-caption">armsom-sige6-DevManager</div>
+
 
 3. 接着打开烧录工具(运行PhoenixSuit.exe)
 ![armsom-sige6-Flashingtool](/img/general-tutorial/armsom-sige6-Flashingtool.png)
 
+<div className="armsom-image-caption">armsom-sige6-Flashingtool</div>
+
+
 4. 点击一键刷机，点击浏览，选择要烧录的固件路径
 ![armsom-sige6-ChooseImage](/img/general-tutorial/armsom-sige6-ChooseImage.png)
+
+<div className="armsom-image-caption">armsom-sige6-ChooseImage</div>
+
 
 5. 按住开发板的Recovery按键，然后给开发板上电，直至PhoenixSuit弹出“将擦除整个flash的数据，是否开始全盘擦除升级？”，然后点击是即可，等待固件烧录完成。
 ![armsom-sige6-Flashing](/img/general-tutorial/armsom-sige6-Flashing.png)
 
+<div className="armsom-image-caption">armsom-sige6-Flashing</div>
+
+
 #### 2.2.2 读卡器烧录到MiroSD
 1. 打开启动SD卡制作工具，双击运行PhoenixCard.exe
 ![armsom-sige6-SDFlashing](/img/general-tutorial/armsom-sige6-SDFlashing.png)
+
+<div className="armsom-image-caption">armsom-sige6-SDFlashing</div>
+
 2. 点击固件，选择要烧录的固件路径;勾选“量产卡”，然后点击“烧卡”即可
 ![armsom-sige6-FlashSD](/img/general-tutorial/armsom-sige6-FlashSD.png)
+
+<div className="armsom-image-caption">armsom-sige6-FlashSD</div>
+
 3. 将制作好的SD卡插入开发板TF卡槽，给开发板上电即可从SD卡启动
 
 
@@ -612,6 +660,9 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 如下所示连接 USB 转 TTL 串口线到底板上标有“Debug”标识的座子处：
 
 ![armsom-sige6-debug](/img/sige/armsom-sige6-debug.png)
+
+<div className="armsom-image-caption">armsom-sige6-debug</div>
+
 
 | Sige6   | 连接  | 串口模块 |
 | -------- | ----- | ------ |
@@ -712,6 +763,9 @@ root@localhost: nmcli dev wifi connect "wifi_name" password "wifi_password"
 
 ![wifi-nmcli-scan](/img/general-tutorial/sige6-wifi.png)
 
+<div className="armsom-image-caption">wifi-nmcli-scan</div>
+
+
 3. 使用 nmcli 命令连接扫描到的 WIFI
 
  - wifi_name 换成需要连接的 WIFI 热点的名字
@@ -769,6 +823,9 @@ Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedes
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
+<div className="armsom-image-caption">wifi-nmcli</div>
+
+
 ```bash
 root@localhost:~# nmtui
 ```
@@ -777,9 +834,15 @@ root@localhost:~# nmtui
 
 ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
 
+<div className="armsom-image-caption">wifi-nmcli-connect</div>
+
+
 4. 选择想要连接的 WIFI 热点，输入密码。WIFI 连接成功后会在已连接的 WIFI 名称前显示一个“*”
 
 ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+<div className="armsom-image-caption">wifi-nmcli-success</div>
+
 
 5. 通过 ip addr show wlan0 命令可以查看 wifi 的 IP 地址
 
@@ -816,6 +879,9 @@ rtt min/avg/max/mdev = 164.471/182.364/194.691/12.950 ms
 2. 连接好 WIFI 后，可以打开浏览器查看是否能上网
 
 ![wifi-desktop-sig6](/img/general-tutorial/wifi-desktop-sig6.jpg)
+
+<div className="armsom-image-caption">wifi-desktop-sig6</div>
+
 
 **网络设置**
 <div class="cards">
@@ -876,6 +942,9 @@ hci0:   Type: Primary  Bus: UART
 ```
 
 2. 接下来可以使用bluetoothctl进行蓝牙连接
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 root@localhost:/# bluetoothctl
 Agent registered
@@ -917,7 +986,13 @@ Pairing successful    #当此处显示配对成功时，我们再退出（可能
 8. 退出
 [Donleon]# exit
 ```
+
+</details>
+
 ![sige-bt-pair](/img/general-tutorial/sige-bt-pair.png)
+
+<div className="armsom-image-caption">sige-bt-pair</div>
+
 
 3. 如果我们需要连接的蓝牙设备是手机，需要下载启用音频服务，（如果你需要连接的蓝牙设备是耳机/蓝牙音响，可以不需要执行下面的操作）
 ```bash
@@ -948,8 +1023,14 @@ Device has been removed
 若连接时出现如下报错，尝试在手机上主动连接名为“localhost”的设备：
 ![sige-bt-error](/img/general-tutorial/sige-bt-error.png)
 
+<div className="armsom-image-caption">sige-bt-error</div>
+
+
 连接成功后在手机上显示已连接：          
 ![sige-bt-connect](/img/general-tutorial/sige-bt-connect.png)
+
+<div className="armsom-image-caption">sige-bt-connect</div>
+
 
 
 #### 3.5 HDMI
@@ -975,6 +1056,9 @@ Device has been removed
 2. HDMI 转 VGA 显示测试如下所示
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
 
 :::tip
 使用 HDMI 转 VGA 显示时，ArmSoM-Sige产品和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
@@ -1284,9 +1368,15 @@ MIPI-CSI接口分别支持0v13850摄像头[camera-module1](./armsom-camera-modul
 
 ![armsom-sige6-mipi1](/img/lm/armsom-sige6-mipi1.jpg)
 
+<div className="armsom-image-caption">armsom-sige6-mipi1</div>
+
+
 - imx219摄像头接开发板正面的MIPI-CSI0接口，如图所示：
 
 ![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
+
+<div className="armsom-image-caption">armsom-sige6-mipi0</div>
+
 
 ##### 3.13.1 使用 ArmSoM camera-module1
 
@@ -1314,12 +1404,18 @@ time cost 0.339447(s)
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-sige6-ov13850-camera.png)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 ##### 3.13.2 使用 imx219摄像头
 测试方法同上，使用如下命令
 ```bash
 root@localhost:/# ./csi_test_mplane 0 0 1920 1080 ./ 5 5
 ```
 完成上述测试后，可以查看摄像头节点
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 root@localhost:/# cat /sys/kernel/debug/mpp/vi
 *****************************************************
@@ -1352,6 +1448,9 @@ CSI Bandwidth: 0
 *****************************************************
 ```
 
+</details>
+
+
 #### 3.14 MIPI DSI
 
 ArmSoM-Sige6 分辨率最高分辨率可达 4K@60Hz
@@ -1359,6 +1458,9 @@ ArmSoM-Sige6 分辨率最高分辨率可达 4K@60Hz
 1. 按照下图连接好排线
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd-sige6.png)
+
+<div className="armsom-image-caption">sige7-display-10-hd</div>
+
 
 2. 系统默认关闭MIPI-DSI屏幕,若要打开，需到SDK打开设备树相应节点
 
@@ -1501,6 +1603,8 @@ root@localhost:~# echo performance > /sys/class/devfreq/1800000.gpu/governor
 root@localhost:~# echo performance > /sys/class/devfreq/a020000.dmcfreq/governor
 root@localhost:~# echo performance > /sys/class/devfreq/3600000.npu/governor
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 产品证书
 

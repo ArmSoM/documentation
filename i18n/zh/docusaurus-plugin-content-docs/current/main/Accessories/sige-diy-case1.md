@@ -15,9 +15,16 @@ ArmSoM-Sige 外壳将高品质结构与简洁、简约的设计相结合，金�
 
 ![ArmSoM-sige7-Metal-shell](/img/sige/sige7-Metal-shell.jpeg)
 
+<div className="armsom-image-caption">ArmSoM-sige7-Metal-shell</div>
+
+
 :::tip
 请注意，Sige DIY Case 1 和 Sige Active Cooling Kit 不能一起使用。
 :::
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">技术规格</a><a href="#doc-section-2">兼容性</a><a href="#doc-section-3">安装介绍</a><a href="#doc-section-4">样品购买</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
 
 ## 技术规格
 
@@ -27,6 +34,8 @@ ArmSoM-Sige 外壳将高品质结构与简洁、简约的设计相结合，金�
 - 重量: 112.5g
 - 外壳尺寸:101.5mm * 66mm * 23mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 兼容性
 
 - Sige1 3mm散热垫
@@ -34,10 +43,14 @@ ArmSoM-Sige 外壳将高品质结构与简洁、简约的设计相结合，金�
 - Sige5 3mm散热垫
 - Sige7 2mm散热垫
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 安装介绍
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=_eyMxCYa3jU)
 
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)

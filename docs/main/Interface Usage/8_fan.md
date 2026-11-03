@@ -19,6 +19,9 @@ ArmSoM products are equipped with this fan interface by default.
 
 ![sige5-fan](/img/general-tutorial/interface-usage/fan.png)
 
+<div className="armsom-image-caption">sige5-fan</div>
+
+
 | Fan    | Pin       | Function            | 
 | -------| ----------| ------------------ |
 | 5V     | 1         | 5V Power Supply     |

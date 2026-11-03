@@ -12,13 +12,15 @@ toc_max_heading_level: 4
 
 # ArmSoM-CM1 与 CM1-IO 开发套件
 
-## 1.1 产品简介
+<nav className="armsom-doc-shortcuts" aria-label="页面快捷导航"><a href="#硬件信息">硬件规格</a><a href="#开发资料">下载资料</a><a href="#使用手册">开始使用</a><a href="#接口使用">接口说明</a></nav>
+
+## 产品简介 {#11-产品简介}
 
 ArmSoM-CM1 是一款计算机模块，采用RK3506J 三核Cortex-A7 + 1核Cortex-M0。拥有丰富的外围接口，如 SAI、USB2 OTG、RMII、CAN等，该模组满足最小系统要求，板载 Type-C 供电与烧录接口，MIPI DSI屏幕接口，SD扩展卡槽。
 
 ArmSoM-CM1 Kit 是由CM1 和 CM1-IO 组成，外设资源更加丰富，2路百兆以太网，2路usb2.0 Host、板载wifi、MIPI DSI 屏幕接口、耳机、麦克风，核心板上引出72路GPIO。
 
-![ArmSoM-CM1](/img/cm/armsom-cm1.jpg)
+<figure className="armsom-doc-figure"><a href="/img/cm/armsom-cm1.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/cm/armsom-cm1.jpg" alt="CM1 核心板与开发套件" loading="lazy" /></a><figcaption>CM1 核心板与开发套件 · 点击查看图片</figcaption></figure>
 
 ArmSoM-CM1 Kit 开发套件提供​**​全栈式Linux系统开发文档**​​与​​**开源软件资源**​​，企业客户可直接采购核心板进行终端产品研发。ArmSoM开源硬件交付​​完整版系统源码​​（含内核定制化补丁、外设驱动及工具链），显著加速客户产品开发进程。
 
@@ -36,33 +38,19 @@ ArmSoM-CM1 Kit 开发套件提供​**​全栈式Linux系统开发文档**​�
 - 板级支持包（BSP）与设备树配置模板
 - 外设驱动模块化开发框架
 
-## 1.2 应用领域
+## 应用领域 {#12-应用领域}
 
 RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、显示 HMI（人机交互）、工业信息与数据处理等多个方面。
-
-## CM1 使用手册
-
-<a href="./armsom-cm1#使用手册" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📝</i>
-        </div>
-        <div class="content">
-            <h2>CM1使用手册</h2>
-            <p>如何开始使用你的CM1</p>
-        </div>
-    </div>
-</a>
 
 ## 硬件信息
 
 ### CM1 硬件接口
 
-![ArmSoM-CM1-front & back](/img/cm/armsom-cm1-front&back1.jpg)
+<figure className="armsom-doc-figure"><a href="/img/cm/armsom-cm1-front&back1.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/cm/armsom-cm1-front&back1.jpg" alt="CM1 核心板接口分布" loading="lazy" /></a><figcaption>CM1 核心板接口分布 · 点击查看图片</figcaption></figure>
 
 ### CM1硬件规格
 
-<table>
+<table className="armsom-spec-table">
     <thead>
         <tr>
             <th>类别</th>
@@ -73,40 +61,40 @@ RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、
     </thead>
     <tbody align="left">
         <tr>
-            <th>SOC</th>
-            <th><li>RockChip RK3506j</li></th>
-            <th>CPU</th>
-            <th><li>RK3506 三核Cortex-A7 处理器 + 1核Cortex-M0</li></th>
+            <th scope="row">SOC</th>
+            <td><li>RockChip RK3506j</li></td>
+            <th scope="row">CPU</th>
+            <td><li>RK3506 三核Cortex-A7 处理器 + 1核Cortex-M0</li></td>
         </tr>
         <tr>
-            <th>GPU</th>
-            <th><li>2D Graphic Engine</li><li>内嵌高性能2D 加速硬件</li></th>
-            <th>内存</th>
-            <th><li>256/512MB DDR3L</li></th>
+            <th scope="row">GPU</th>
+            <td><li>2D Graphic Engine</li><li>内嵌高性能2D 加速硬件</li></td>
+            <th scope="row">内存</th>
+            <td><li>256/512MB DDR3L</li></td>
         </tr>
         <tr >
-            <th>存储</th>
-            <th><li>256/512MB NAND</li><li>支持MicroSD卡扩展</li></th>
-            <th>视频输出</th>
-            <th><li>1 x MIPI DSI (2Lane 1.5Gbps)</li></th>
+            <th scope="row">存储</th>
+            <td><li>256/512MB NAND</li><li>支持MicroSD卡扩展</li></td>
+            <th scope="row">视频输出</th>
+            <td><li>1 x MIPI DSI (2Lane 1.5Gbps)</li></td>
         </tr>
         <tr>
-            <th>40-PIN & 44-PIN</th>
-            <th><li>引出RK3506J芯片全部剩余功能</li></th>
-            <th>按键</th>
-            <th><li>1x Maskrom键，支持进入maskrom烧录模式</li></th>
+            <th scope="row">40-PIN & 44-PIN</th>
+            <td><li>引出RK3506J芯片全部剩余功能</li></td>
+            <th scope="row">按键</th>
+            <td><li>1x Maskrom键，支持进入maskrom烧录模式</li></td>
         </tr>
         <tr>
-            <th>电源</th>
-            <th><li>Typec 5V</li></th>
-            <th>系统</th>
-            <th><li>Rockchip官方支持：buildroot</li></th>
+            <th scope="row">电源</th>
+            <td><li>Typec 5V</li></td>
+            <th scope="row">系统</th>
+            <td><li>Rockchip官方支持：buildroot</li></td>
         </tr>
         <tr>
-            <th>尺寸</th>
-            <th><li>70 mm x 42mm</li></th>
-            <th>工作温度</th>
-            <th><li>-40℃ ~ 85℃</li></th>
+            <th scope="row">尺寸</th>
+            <td><li>70 mm x 42mm</li></td>
+            <th scope="row">工作温度</th>
+            <td><li>-40℃ ~ 85℃</li></td>
         </tr>
     </tbody>
 </table>
@@ -114,11 +102,14 @@ RK3506J 应用领域广泛，涵盖了工业控制领域、智能家电显控、
 ### CM1-IO 硬件接口
 
 CM1-IO 是 CM1 的配套载板，提供 USB、Wi-Fi、蓝牙、音频和双百兆以太网接口。CM1 与 CM1-IO 组合称为 CM1 Kit，下方使用手册以此开发套件为例。
-![ArmSoM-CM1-io](/img/cm/armsom-cm1-io.jpg)
+![ArmSoM CM1-IO](/img/cm/armsom-cm1-io.jpg)
+
+<div className="armsom-image-caption">ArmSoM CM1-IO</div>
+
 
 ### CM1-IO 硬件规格
 
-<table>
+<table className="armsom-spec-table">
     <thead>
         <tr>
             <th>类别</th>
@@ -129,35 +120,35 @@ CM1-IO 是 CM1 的配套载板，提供 USB、Wi-Fi、蓝牙、音频和双百�
     </thead>
     <tbody align="left">
         <tr>
-            <th>40-PIN & 44-PIN Female Header</th>
-            <th><li>扩展核心板剩余功能</li></th>
-            <th>40-PIN</th>
-            <th><li>和树莓派40pin兼容部分引脚功能，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>
+            <th scope="row">40-PIN & 44-PIN Female Header</th>
+            <td><li>扩展核心板剩余功能</li></td>
+            <th scope="row">40-PIN</th>
+            <td><li>和树莓派40pin兼容部分引脚功能，可接丰富的配件外设</li><li>支持 UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></td>
         </tr>
         <tr>
-            <th>USB接口</th>
-            <th><li>1 × Type C（only power & Programming）</li>
-            <li>2 × USB2.0 HOST</li></th>
-            <th>网络</th>
-            <th><li>2 × 百兆以太网</li><li>1 × WiFi5/BT4.2</li></th>
+            <th scope="row">USB接口</th>
+            <td><li>1 × Type C（only power & Programming）</li>
+            <li>2 × USB2.0 HOST</li></td>
+            <th scope="row">网络</th>
+            <td><li>2 × 百兆以太网</li><li>1 × WiFi5/BT4.2</li></td>
         </tr>
         <tr>
-            <th>音频</th>
-            <th><li>1 × Audio Jack</li></th>
-            <th>12-PIN</th>
-            <th><li>支持 RS485/CAN/MICIN/SPK</li></th>
+            <th scope="row">音频</th>
+            <td><li>1 × Audio Jack</li></td>
+            <th scope="row">12-PIN</th>
+            <td><li>支持 RS485/CAN/MICIN/SPK</li></td>
         </tr>
         <tr>
-            <th>电源</th>
-            <th><li>Typec 5V</li><li>DC 12V</li></th>
-            <th>系统</th>
-            <th><li>Rockchip官方支持：buildroot</li></th>
+            <th scope="row">电源</th>
+            <td><li>Typec 5V</li><li>DC 12V</li></td>
+            <th scope="row">系统</th>
+            <td><li>Rockchip官方支持：buildroot</li></td>
         </tr>
         <tr>
-            <th>尺寸</th>
-            <th><li>100 mm x 70mm</li></th>
-            <th>工作温度</th>
-            <th><li>-40℃ ~ 85℃</li></th>
+            <th scope="row">尺寸</th>
+            <td><li>100 mm x 70mm</li></td>
+            <th scope="row">工作温度</th>
+            <td><li>-40℃ ~ 85℃</li></td>
         </tr>
     </tbody>
 </table>
@@ -168,7 +159,7 @@ CM1-IO 是 CM1 的配套载板，提供 USB、Wi-Fi、蓝牙、音频和双百�
       RK3506j 框图
     </summary>
         <img
-  src="./img/forge/rk3506j.png"
+  src="/img/forge/rk3506j.png"
   alt="rk3506j block diagram"
   className="session-details-live-video"/>
 </details>
@@ -450,6 +441,9 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 
 WiFi 的 Station 模式是一种工作模式，它使 WiFi 设备能够连接到一个 WiFi 网络并与其他设备进行通信。
 
+<details className="armsom-terminal-details">
+<summary>查看完整命令与终端输出</summary>
+
 ```bash
 root@armsom:/# ifconfig wlan0 up #打开 wlan0
 root@armsom:/# ifconfig -a
@@ -535,6 +529,8 @@ connmanctl> services
     ChinaNet-Ns24        wifi_cc641a61e819_4368696e614e65742d4e733234_managed_psk
     CMCC-YM6M            wifi_cc641a61e819_434d43432d594d364d_managed_none
 ```
+
+</details>
 从扫描到 WIFI 列表中，使用 connect XXXX 进行连接
 
 ```bash
@@ -609,7 +605,7 @@ root@armsom:/mnt# df -h | grep "sd"
 
 ### 音频
 
-![cm1io-sound](/img/cm/armsom-cm1-sound.png)
+<figure className="armsom-doc-figure"><a href="/img/cm/armsom-cm1-sound.png" target="_blank" rel="noopener noreferrer"><img src="/img/cm/armsom-cm1-sound.png" alt="CM1-IO 音频接线示意" loading="lazy" /></a><figcaption>CM1-IO 音频接线示意 · 点击查看图片</figcaption></figure>
 查看系统中的声卡。
 
 ```bash
@@ -625,10 +621,6 @@ card 0: rockchiprk730 [rockchip-rk730], device 0: dailink-multicodecs HiFi-0 [da
 arecord -D hw:0,0 -f S16_LE -t wav -c2 -r 16000 -d 5 /userdata/t.wav
 ```
 
-## 产品证书
-
-### CE / FCC / RoHS
-
 ## 供货声明
 
 ArmSoM-CM1 将至少生产到 2035 年 7 月。
@@ -641,7 +633,7 @@ ArmSoM-CM1 将至少生产到 2035 年 7 月。
 <a href="./armsom-display-7-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-7hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-7hd.png" alt="ArmSoM Display 7 HD"/>
     </div>
     <div class="card-content">
         <h2>Display-7-hd</h2>
@@ -655,14 +647,10 @@ ArmSoM-CM1 将至少生产到 2035 年 7 月。
 
 ArmSoM 独立站: [https://www.armsom.org/product-page/cm1](https://www.armsom.org/product-page/cm1)
 
-ArmSoM 速卖通官方店:
 
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?ft=t&id=965592864051](https://item.taobao.com/item.htm?ft=t&id=965592864051)
 
 OEM&ODM,  请联系: sales@armsom.org
-
-## 专家视角
-
 
 ## 注意事项
 

@@ -15,10 +15,19 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
+<div className="armsom-image-caption">armsom-display-10hd</div>
+
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Compatibility</a><a href="#doc-section-2">General information</a><a href="#doc-section-3">Pinout</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Purchase Samples</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Compatibility
 - Sige 3/5/7
 - CM5
 - LM7 & W3
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## General information 
 - Outline Dimension:  143×228.70×2.25 (TYP.) mm 
@@ -34,6 +43,8 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 - Viewing Direction:  ALL VIEW 
 - Power Consumption:  TBD mW
 
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## Pinout
 |PIN NO| SYMBOL| Description |
@@ -68,6 +79,8 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 |31-32| LEDK |LED Cathode 
 |33-38| NC |OPEN 
 |39-40| LEDA |LED Anode
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Resources
 <div class="cards">
     <a href="https://drive.google.com/file/d/13BqkwRQGyNxGWXQ_LBf9IrNkQIbPgAB4/view?usp=drive_link" class="card-link">
@@ -92,6 +105,8 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
     </a>
 
 </div>
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## Purchase Samples 
 

@@ -14,10 +14,17 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 
 ![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
 
+<div className="armsom-image-caption">armsom-display-10hd</div>
+
+
 ### 兼容性
 - Sige 3/5/7
 - CM5
 - LM7 & W3
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">参数</a><a href="#doc-section-2">屏幕引脚</a><a href="#doc-section-3">Resources</a><a href="#doc-section-4">样品购买</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
 
 ## 参数 
 
@@ -33,6 +40,8 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 - NTSC: 72（类型） %
 - 观看方向：全部
 - 功耗：待定 mW
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 屏幕引脚
 |PIN NO| SYMBOL| Description |
@@ -67,6 +76,8 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 |31-32| LEDK |LED Cathode 
 |33-38| NC |OPEN 
 |39-40| LEDA |LED Anode
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Resources
 <div class="cards">
     <a href="https://pan.baidu.com/s/1gwBWVhTw9nfQnBvsymUV1g?pwd=arms" class="card-link">
@@ -90,6 +101,8 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
         </div>
     </a>
 </div>
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)

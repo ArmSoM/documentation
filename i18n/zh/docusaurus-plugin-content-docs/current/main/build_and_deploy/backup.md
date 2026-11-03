@@ -9,6 +9,10 @@ slug: /build-system-image/backup
 
 # 1. 系统备份
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">1.1 Debian系统备份</a><a href="#doc-section-2">1.2 Ubuntu主机上的操作</a><a href="#doc-section-3">1.3 部署固件</a><a href="#doc-section-4">2. Armbian系统备份</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 1.1 Debian系统备份
 
 ### 1.1.1 安装ssh、rsync
@@ -72,6 +76,8 @@ sudo rm -rf /var/cache/
 ```
 
 **这一步对固件大小没有要求的话也可以忽略**
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 1.2 Ubuntu主机上的操作
 
@@ -169,10 +175,15 @@ rk3576_rootfs.img 上的文件系统大小已经调整为 1556652 个块（每�
 
 **至此，得到了一个包含完整原开发板的系统镜像。**
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 1.3 部署固件
 
 **得到固件之后需要测试一下以及部署固件 重新烧录根文件系统镜像到开发板进行测试** 
 ![rkdevtool](/img/rkdevtool.png)
+
+<div className="armsom-image-caption">rkdevtool</div>
+
 
 **1.烧录没有部署应用的开发板固件**
 
@@ -180,11 +191,16 @@ rk3576_rootfs.img 上的文件系统大小已经调整为 1556652 个块（每�
 
 **3.进系统确定之前部署的文件是否存在**
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 2. Armbian系统备份
 
 建议使用armbian-config 工具备份到SD [armbian-config 备份](/getting-start/armbian-config#103-使用示例)
 
 按下面脚本操作可以生成备份的镜像：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```
 #!/bin/bash
@@ -240,6 +256,9 @@ losetup -D
 
 # 生成的 sdcard.img 和正常的armbian镜像一样，可以写到emmc和sd卡，进入系统后需要运行命令 sudo systemctl start armbian-resize-filesystem.service，将分区扩展到正常大小
 ```
+
+</details>
+
 
 烧录到sd卡分区：
 

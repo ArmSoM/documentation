@@ -12,6 +12,10 @@ toc_max_heading_level: 4
 
 # AIM3 产品简介
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">供货声明</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗四核应用处理器，采用22nm制程工艺，CPU 采用了先进的 ARM Cortex-A55 架构，集成了强大的图像处理单元（GPU），支持高清视频解码和编码，支持4K解码和1080P编码，可用于轻量级人工智能应用
 
@@ -33,6 +37,8 @@ ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗
   - 第三方支持：Armbian
 - 大小：92mm × 62mm x 14.6mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 <a href="./armsom-aimio#使用手册" class="card-link">
     <div class="card">
@@ -46,12 +52,20 @@ ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-AIM3-a](/img/aim/aim3-a.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM3-a</div>
+
 ![ArmSoM-AIM3-b](/img/aim/aim3-b.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM3-b</div>
+
 
 
 :::tip
@@ -111,6 +125,8 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 </details>
 
 ### 竞品规格参数对比
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -222,9 +238,13 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 产品证书
 
 ### CE / FCC / RoHS
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 供货声明
 

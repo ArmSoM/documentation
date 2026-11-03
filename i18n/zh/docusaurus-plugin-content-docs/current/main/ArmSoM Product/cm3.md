@@ -28,3 +28,6 @@ ArmSoM-CM3 是一款计算机模块，采用Rockchip RK3568四核ARM Cortex-A55 
 ### 硬件接口
 
 ![ArmSoM-CM3-front & back](/img/cm/armsom-cm3-front&back1.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM3-front &amp; back</div>
+

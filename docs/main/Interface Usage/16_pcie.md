@@ -9,6 +9,10 @@ sidebar_position: 16
 
 # 16. PCIe Usage
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">16.1 Introduction to PCIe</a><a href="#doc-section-2">16.2 PCIe Controllers on RK3588</a><a href="#doc-section-3">16.3 RK3588 DTS Configuration</a><a href="#doc-section-4">16.4 How to Use PCIe Devices</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 16.1 Introduction to PCIe
 
 PCIe (Peripheral Component Interconnect Express) is a high-speed serial interface standard used to connect the motherboard and external devices. It is the successor to the PCI technology, aiming to provide higher bandwidth and better performance.
@@ -19,6 +23,8 @@ PCIe (Peripheral Component Interconnect Express) is a high-speed serial interfac
 - Wide application: The PCIe interface is widely used to connect graphics cards, solid-state drives (SSDs), expansion cards, network adapters, and other high-performance devices. This allows computer users to expand and upgrade the system's performance and functionality as needed.
 
 In summary, PCIe is a high-speed, flexible, and widely-used serial interface standard that plays a critical role in modern computer systems, providing a reliable solution for connecting various external devices.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 16.2 PCIe Controllers on RK3588
 
@@ -31,6 +37,11 @@ The hardware resources of RK3588 PCIe and the corresponding relationships betwee
 
 ![pcie-node](/img/general-tutorial/interface-usage/pcie-node.png)
 
+<div className="armsom-image-caption">pcie-node</div>
+
+
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 16.3 RK3588 DTS Configuration
 
 ### 16.3.1 PCIe Interfaces on ArmSoM-W3
@@ -40,11 +51,17 @@ The hardware resources of RK3588 PCIe and the corresponding relationships betwee
 
 ![pcie-armsom-w3](/img/general-tutorial/interface-usage/pcie-armsom-w3.png)
 
+<div className="armsom-image-caption">pcie-armsom-w3</div>
+
+
 ### 16.3.2 PCIe-related DTS Configuration on the ArmSoM-W3 Development Board:
 
 Generally, according to the schematic diagram, the power supply pins, reset pins, and the correct PCIe controller node and PHY node are configured in the DTS.
 
 - In kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts, configure as follows:
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 / {
@@ -129,6 +146,9 @@ Generally, according to the schematic diagram, the power supply pins, reset pins
 };
 ```
 
+</details>
+
+
 - pcie30phy, combphy1_ps: PHY nodes
 
 - pcie3x4, pcie2x1l0, pcie2x1l2: PCIe controller nodes
@@ -136,6 +156,8 @@ Generally, according to the schematic diagram, the power supply pins, reset pins
 - reset-gpios: Reset pin attribute
 
 - vcc3v3_pcie2x1l0, vcc3v3_pcie2x1l2, vcc3v3_pcie30: Power supply pin nodes
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 16.4 How to Use PCIe Devices
 

@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 **AIM-IO** is an IO board from the ArmSoM AIM series, with dimensions of 100x80x29 mm, and is also compatible with current Jetson Nano core modules. It is a mini AI computer designed for makers, learners, and developers, capable of quickly implementing AI technology in various smart devices.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Hardware</a><a href="#doc-section-2">User Manual</a><a href="#doc-section-3">Getting Started</a><a href="#doc-section-4">Image Burning Options</a><a href="#doc-section-5">Interface Usage</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![AIM-IO](/img/aim/aim-io.png)
+
+<div className="armsom-image-caption">AIM-IO</div>
+
 
 :::tip
 The AIM-IO Board is powered by 12V DC.
@@ -77,9 +84,13 @@ The AIM-IO Board is a companion board for AIM modules designed to assist develop
 </div>
 </details>
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## User Manual
 
 The AIM-IO User Manual helps users understand the basic usage of AIM products and the preparations needed to get started with your ArmSoM-AIM 🚀.
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## Getting Started
 
@@ -114,6 +125,8 @@ You can set up the ArmSoM-AIM as an interactive computer with a desktop interfac
 The ArmSoM-AIM series requires a power supply specification of 12V/2-3A. You can use any high-quality power supply that provides the correct power mode.
 
 Plug the power supply into the DC barrel jack, ensuring you use the correct port!
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## Image Burning Options
 
@@ -155,11 +168,17 @@ This method is suitable for writing the system to an SD card and is available on
 
 ![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-from-file.png)
 
+<div className="armsom-image-caption">balenaEtcher-flash-from-file</div>
+
+
 4. Click "Select target" to choose the MicroSD card you want to burn to.
 5. Click "Flash" and wait for the process to complete; this may take some time.
 6. Upon successful burning, you will see a confirmation message.
 
 ![balenaEtcher-flash-success](/img/tools/balenaEtcher-flash-success.png)
+
+<div className="armsom-image-caption">balenaEtcher-flash-success</div>
+
 
 :::tip If Flashing Fails
 1. On Windows, the image burning process needs to be "Run as Administrator." Some Linux users may need to use the `chmod` command to make it executable.
@@ -183,6 +202,9 @@ Click the link: [Google Drive root folder](https://drive.google.com/drive/folder
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
+<div className="armsom-image-caption">baidu-flash-tool</div>
+
+
 ###### Installing Driver Assistant
 
 Unzip the Driver Assistant software package and double-click DriverInstall.exe to enter the driver installation interface.
@@ -190,6 +212,9 @@ Unzip the Driver Assistant software package and double-click DriverInstall.exe t
 Click "Driver Install" to start the installation. If you're unsure whether an old version of the driver is already installed, first click "Driver Uninstall" to remove it, then click "Driver Install."
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
+
+<div className="armsom-image-caption">install-driver-assitant</div>
+
 
 ###### Installing RKDevTool
 
@@ -219,13 +244,22 @@ Please refer to the product-related instructions for operations; the methods to 
 Shorting pins 10 and 11 to enter loader mode.
 ![aimio-recovery](/img/aim/aimio-recovery.png)
 
+<div className="armsom-image-caption">aimio-recovery</div>
+
+
 Hold down the maskrom button on the aim7 to enter maskrom mode.
 
 ![aimio-maskrom](/img/aim/aimio-maskrom.png)
 
+<div className="armsom-image-caption">aimio-maskrom</div>
+
+
 Start burning the system.
 
 ![rkdevtool-install-emmc](/img/general-tutorial/rkdevtool-install-emmc.png)
+
+<div className="armsom-image-caption">rkdevtool-install-emmc</div>
+
 
 1. Select the "Download Image" option.
 2. Confirm that the board has entered Maskrom mode.
@@ -245,6 +279,9 @@ Click the link: [Google Drive root folder](https://drive.google.com/drive/folder
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 
+<div className="armsom-image-caption">baidu-SDDiskTool</div>
+
+
 After unzipping the package, you can use it without installation; double-click SD_Firmware_Tool.exe to access the software interface.
 
 ##### Burning the Image
@@ -254,6 +291,9 @@ Open the executable file SDDiskTool (SD_Firmware_Tool.exe) and insert the SD car
 First, select the correct SD card to burn, then set the function mode to "SD Boot," select the image to burn, and finally click "Start" to create the burning image on the SD card.
 
 ![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
+
+<div className="armsom-image-caption">SDDiskTool</div>
+
 
 Be patient while the SD card is being burned. If the image is large, the burning time will increase accordingly.
 
@@ -277,10 +317,19 @@ We open the RKDevTool burning tool and set the product to enter burning mode.
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
 
+<div className="armsom-image-caption">recovery-flash-tool</div>
+
+
 ![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
+
+<div className="armsom-image-caption">maskroom-flash-tool</div>
+
 
 The flashing progress will be displayed on the right, and upon completion, it will prompt you:
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
+
+<div className="armsom-image-caption">rkdevtool-success</div>
+
 
 :::tip Analysis of Flashing Failures
 If a "Download Boot Fail" error occurs during the flashing process, or if there are errors during the process, as shown in the image, it is usually due to poor connection with the USB cable, low-quality cables, or insufficient power from the computer's USB port. Please change the USB cable or USB port on the computer to troubleshoot.
@@ -289,6 +338,8 @@ If a "Download Boot Fail" error occurs during the flashing process, or if there 
 Sure! Here’s the translation:
 
 ---
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## Interface Usage
 
@@ -299,6 +350,9 @@ Sure! Here’s the translation:
 Connect a USB-to-TTL serial adapter to the carrier board's debug header as shown below. Cross RX/TX and connect GND.
 
 ![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
+
+<div className="armsom-image-caption">armsom-aimio-debug</div>
+
 
 | AIM-IO debug header | Serial adapter |
 | --- | --- |
@@ -771,6 +825,9 @@ The script uses `/dev/video53`, `/dev/video62`, `/dev/video44`, and `/dev/video7
 Screenshot from the test (each camera image rotated 180° to correct its orientation, with titles unchanged; 1920×1080, losslessly compressed):
 
 ![AIM7 simultaneous four-camera preview](/img/aim/aim7-four-camera-preview.webp)
+
+<div className="armsom-image-caption">AIM7 simultaneous four-camera preview</div>
+
 
 ### 10. MIPI DSI
 

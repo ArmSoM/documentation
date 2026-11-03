@@ -21,6 +21,10 @@ sidebar_position: 6
 
 - 数字信号模拟模拟控制：虽然PWM信号本身是数字信号，但由于其占空比的变化，可以有效模拟连续的模拟电压，因此非常适合用来控制电机、灯光等设备。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">6.1 PWM 工作原理</a><a href="#doc-section-2">6.2 PWM 使用实例</a><a href="#doc-section-3">6.3 PWM 使⽤详解</a><a href="#doc-section-4">6.4 PWM Backlight</a><a href="#doc-section-5">6.5 常见问题</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 6.1 PWM 工作原理
 
 PWM信号是一个方波信号，其中信号高电平（ON）维持的时间叫做脉宽，低电平（OFF）维持的时间则是周期的剩余部分。信号的占空比是高电平时间与整个周期的比例。
@@ -33,6 +37,8 @@ PWM信号是一个方波信号，其中信号高电平（ON）维持的时间叫
 
 50%的占空比意味着信号在一个周期内一半时间为高电平，另一半时间为低电平。
 25%的占空比则意味着信号在周期内只有四分之一时间为高电平，剩余的三分之三时间为低电平。
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 6.2 PWM 使用实例
 
@@ -81,6 +87,8 @@ root@armsom-sige5:/home/armsom# sudo reboot
 - Q: 如果直接拔掉电源进行重启，是否可能导致文件未修改或 overlay 系统启动失败？
 - A: 当直接拔掉电源或强制关机时，可能会出现文件未能及时从内存（RAM）同步到存储设备（如硬盘、SSD）的情况。这是因为操作系统通常会将数据暂存于内存中，并定期将这些数据写入磁盘。为避免此问题，建议在关机前执行 “sync” 命令，确保所有数据已写入磁盘，再拔掉电源或关机。
 :::
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 6.3 PWM 使⽤详解
 
@@ -137,6 +145,8 @@ echo 1 > /sys/class/pwm/pwmchip1/pwm0/enable
 echo 0 > /sys/class/pwm/pwmchip1/unexport
 ```
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 6.4 PWM Backlight
 
 PWM 的连续模式使⽤最多，且背光使⽤较为频繁。
@@ -144,6 +154,9 @@ PWM 的连续模式使⽤最多，且背光使⽤较为频繁。
 ### 6.4.1 Backlight DTS
 
 以下是 DTS ⽂件中背光很常⻅的背光配置节点：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```
 backlight: backlight {
@@ -188,6 +201,9 @@ backlight: backlight {
     };
 ```
 
+</details>
+
+
 - "pwms = <&pwm0 0 25000 0>" 上⾯ PWM 节点配置小节中有描述；
 - brightness-levels 数组，我们⼀般以值 255 为⼀个 scale，所以⼀般的 brightness-levels 为 256 个元素的数组。当 PWM 设置为正极性时，从 0~255 表⽰背光为正极，占空⽐从 0%~100% 变化，255~0 位负极性，占空⽐从 100%~0% 变化；当 PWM 设置为负极性时，反之。
 - default-brightness-level 表⽰默认的背光，它存在于开机时候，如背光驱动初始化到安卓⽤⼾层设置下来新的背光这段时间，表⽰为第 200 个元素的背光亮度。
@@ -196,6 +212,8 @@ backlight: backlight {
 ### 6.4.2 PWM Backlight 调试
 
 如何确定背光灭的 brightness-level 值，通过命令⾏调试背光亮度， echo xxx > sys/class/backlight/backlight/brightness。当 PWM 设置为正极性时，可以通过 echo xxx > sys/class/backlight/backlight/brightness 到背光节点，xxx的范围为 0~255，这时观察亮度变化，如 x 为背光亮度为 0 的点，y 为客⼾接受的背光最亮的点。这时重新调整 brightness-level 表，就可以将数组第⼀个值改为 x，最⼤值改为 y，中间值需均匀变化，凑成 256 个 元素，且有⼀个元素值为 255。当 PWM 为负极性时，则反之。
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 6.5 常见问题
 

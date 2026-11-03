@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 Let's get to know LM7 in 5 minutes.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Product Certificate</a><a href="#doc-section-6">Purchase Samples</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 
 The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-bit processor with a maximum frequency of up to 2.4GHz and a 6 TOPS NPU. It supports up to 32GB of large memory.
@@ -21,6 +25,9 @@ The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-b
 Supports 8K video encoding and decoding,with LGA packaging for stronger transmission capability and stability. 
 
 ![ArmSoM-lm7](/img/lm/lm7.png)
+
+<div className="armsom-image-caption">ArmSoM-lm7</div>
+
 
 We can provide baseboard reference design materials for users to customize in-depth independently. 
 
@@ -55,6 +62,8 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - **Weight**: About 13.4g  
 - **Size**: 45mm × 50mm × 4.5mm (top: 2.2mm + PCB: 1.2mm + bottom: 1.1mm)
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-w3#user-manual" class="card-link">
@@ -69,6 +78,8 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
@@ -80,7 +91,13 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 :::
 
 ![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
+
+<div className="armsom-image-caption">ArmSoM-LM7 front &amp; back</div>
+
 ![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
+
+<div className="armsom-image-caption">ArmSoM-LM7 &amp; Credit-Card-Size.webp</div>
+
 
 ### Hardware Spec
 <details>
@@ -259,6 +276,8 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
   className="session-details-live-video"/>
 </details>
 
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## Resources
 
@@ -463,12 +482,19 @@ Here are some tips for your design reference:
 
 :::
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Product Certificate
 
 ### CE / FCC / RoHS
 
 ![armsom-lm7-ce-fc-rohs](/img/lm/armsom-lm7-ce-fc-rohs.webp)
 
+<div className="armsom-image-caption">armsom-lm7-ce-fc-rohs</div>
+
+
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)

@@ -11,6 +11,10 @@ sidebar_position: 2
 
 ArmSoM provides SDKs for Linux and Android for all its products. These SDKs are usually hosted on GitHub. This guide takes ArmSoM-CM5-IO as an example to show how to obtain and compile the SDK firmware. Refer to the [SDK repository README](https://github.com/ArmSoM/rk3576-andriod-sdk/blob/main/README.md). The SDK is released as split compressed packages via GitHub Releases, and all the following commands are executed on a Linux development host.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">2.1 Download the SDK</a><a href="#doc-section-2">2.2 Extract the SDK</a><a href="#doc-section-3">2.3 Configure the target board</a><a href="#doc-section-4">2.4 Build the SDK</a><a href="#doc-section-5">2.5 Troubleshooting</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 2.1 Download the SDK
 
 Open the [rk3576_Android14RKR6 release](https://github.com/ArmSoM/rk3576-andriod-sdk/releases/tag/rk3576_Android14RKR6) and expand **Assets**. Download all 56 SDK parts, from `rk3576_Android14RKR6.tar.bz2.aa` through `rk3576_Android14RKR6.tar.bz2.cd`, into the same directory. Keep the original filenames.
@@ -20,6 +24,8 @@ Open the [rk3576_Android14RKR6 release](https://github.com/ArmSoM/rk3576-andriod
 Download the split archive assets. The automatically generated **Source code (zip)** and **Source code (tar.gz)** archives do not replace the SDK.
 
 :::
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 2.2 Extract the SDK
 
@@ -37,6 +43,8 @@ Enter the extracted SDK root. The README uses the following directory name; repl
 cd rk3576_android14
 ```
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 2.3 Configure the target board
 
 The SDK contains common RK3576 code. Select the matching board target during build configuration.
@@ -48,6 +56,8 @@ git am /path/to/your/patches/*.patch
 ```
 
 Replace `/path/to/your/patches/` with the actual patch directory. The release linked above currently contains only SDK archive parts, with no separate patch attachments. If you need these patches, contact ArmSoM through the [SDK forum](https://forum.armsom.org/tag/sdk).
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 2.4 Build the SDK
 
@@ -63,6 +73,8 @@ For CM5IO, select its **userdebug** target. For another board, select the corres
 ```bash
 ./build.sh -AUKup
 ```
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 2.5 Troubleshooting
 

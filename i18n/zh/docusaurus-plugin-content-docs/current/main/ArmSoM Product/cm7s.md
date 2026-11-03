@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 ArmSoM-CM7s 和 ArmSoM-CM7s-IO
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">CM7s 简介</a><a href="#doc-section-2">CM7s 硬件信息</a><a href="#doc-section-3">CM7s-IO 简介</a><a href="#doc-section-4">CM7s-IO 硬件信息</a><a href="#doc-section-5">Getting started</a><a href="#doc-section-6">开发资料</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## CM7s 简介
 
 **ArmSoM-CM7s 核心板：尺寸小巧，性能强悍，专为深度嵌入式场景打造。**
@@ -22,6 +26,9 @@ toc_max_heading_level: 4
 模块提供丰富的总线与扩展接口，支持多种容量 eMMC 闪存，可广泛赋能工业物联网、边缘计算及智能终端领域。
 
 ![ArmSoM-CM7s](/img/cm/armsom-cm7s.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM7s</div>
+
 
 :::tip Rockchip RK3588s
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
@@ -46,11 +53,16 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 * **输入**：DC 5V MAX 2500mA
 * **输出**：DC 3.3V MAX 600mA 和 DC 1.8V MAX 600mA
 * **PCB尺寸**：55 x 40 x 1.6 毫米（长 x 宽 x 厚）
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## CM7s 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-CM5-front & back](/img/cm/cm7s-interface.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM5-front &amp; back</div>
+
 
 :::tip
 - 设计为板对板连接器
@@ -83,6 +95,9 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 ### 产品框图
 
 ![ArmSoM-CM7s-product](/img/cm/cm7s-product.png)
+
+<div className="armsom-image-caption">ArmSoM-CM7s-product</div>
+
 
 ### 硬件规格
 <table>
@@ -164,7 +179,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         RK3588S 框图
     </summary>
     <img
-  src="./img/sige/rk3588s.png"
+  src="/img/sige/rk3588s.png"
   alt="rk3588S block diagram"
   className="session-details-live-video"/>
 </details>
@@ -172,6 +187,9 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 ### 引脚定义
 
 ![ArmSoM-cm7s-pinlist](/img/cm/cm7s-pinlist.png)
+
+<div className="armsom-image-caption">ArmSoM-cm7s-pinlist</div>
+
 
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>ArmSoM-CM7s_Pinout</span>
@@ -244,8 +262,12 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 </div>
 <br/>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## CM7s-IO 简介
 CM7s-IO是 ArmSoM CM7s的 IO 板，尺寸为 100x79x41 毫米，适用于需要快速进行 ArmSoM CM7s 平台功能评估、外设驱动调试和系统原型的开发阶段，也可作为工业网关、边缘 AI 推理终端、多媒体交互设备等产品的硬件底板参考设计，帮助用户从原型验证平滑过渡到批量部署。
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## CM7s-IO 硬件信息
 
@@ -270,6 +292,9 @@ CM7s-IO板是专为CM7s计算模块设计的扩展板，旨在帮助完成系统
 ### 硬件接口
 
 ![ArmSoM-CM7s-IO](/img/cm/cm7s-io-layout.png)
+
+<div className="armsom-image-caption">ArmSoM-CM7s-IO</div>
+
 
 :::tip
 CM7s-IO Board 使用12V DC供电。
@@ -347,6 +372,8 @@ CM7s-IO Board 使用12V DC供电。
 |2          | -         | 负极  |
 </details>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-cm7s#使用手册" class="card-link">
@@ -360,6 +387,8 @@ CM7s-IO Board 使用12V DC供电。
         </div>
     </div>
 </a>
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -610,6 +639,9 @@ CM7s-IO 最高支持hdmi 8Kp60
 2. HDMI 转 VGA 显示测试如下所示
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
 
 :::tip
 使用 HDMI 转 VGA 显示时，CM5 Kit 和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
@@ -979,6 +1011,9 @@ root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=N
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 
 ##### 使用 Raspberry Pi Camera Module 2
 
@@ -1023,6 +1058,9 @@ CM7s MIPI-DSI 分辨率最高分辨率可达 2K@60Hz
 
 ![cm5-io-display-10-hd](/img/cm/cm5-io-display-10-hd.png)
 
+<div className="armsom-image-caption">cm5-io-display-10-hd</div>
+
+
 2. linux 镜像默认是没有打开 mipi lcd 屏幕的配置的，如果需要使用 mipi lcd 屏幕，需要手动打开
 
 ```bash
@@ -1047,7 +1085,7 @@ ArmSoM-CM7s 将至少生产到 2034 年 8 月。
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-10hd.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Display-10-hd</h2>
@@ -1059,7 +1097,7 @@ ArmSoM-CM7s 将至少生产到 2034 年 8 月。
 <a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Camera-module1</h2>

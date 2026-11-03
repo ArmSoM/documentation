@@ -12,11 +12,18 @@ toc_max_heading_level: 4
 
 # Product Introduction: AIM5
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Product Certifications</a><a href="#doc-section-6">Supply Statement</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 ArmSoM-AIM5 adopts Rockchip RK3576 second-generation 8nm high-performance AIOT platform processor, integrating 4 Cortex-A72 and 4 Cortex-A53 and independent NEON co processors; Built in multiple powerful embedded hardware engines, providing excellent performance for high-end applications and supporting 4K@120fps H.265, VP9, AVS2, and AV1 decoders, supporting 4k@60fps H.264 decoder; Also supported 4K@60fps H.264 and H.265 encoders, built-in 3D GPU, fully compatible with OpenGL ES1.1/2.0/3.2, OpenCL 2.0, and Vulkan 1.1.
 
 It is applicable to ARM PC, edge computing, personal mobile Internet devices and other multimedia products.
 ![ArmSoM-AIM5](/img/aim/aim5.jpg)
+
+<div className="armsom-image-caption">ArmSoM-AIM5</div>
+
 
 ### Key Parameters
 
@@ -36,6 +43,8 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
   - Third party support：Armbian
 - Size：69.6 mm x 45 mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./aim-family-started" class="card-link">
@@ -50,11 +59,16 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![ArmSoM-AIM5-front & back](/img/aim/armsom-aim5-front&back.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM5-front &amp; back</div>
+
 
 :::tip
 All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, with the same dimensions
@@ -314,6 +328,8 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 
 </details>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Resources
 
 ### Source Code
@@ -434,9 +450,13 @@ Obtain hardware information such as development kit schematics, PCBs, DXF, etc.,
 
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Product Certifications
 
 ### CE / FCC / RoHS
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Supply Statement
 

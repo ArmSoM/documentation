@@ -10,6 +10,10 @@ sidebar_position: 17
 
 This document provides a systematic overview of storage classification and management on the ArmSoM board from a storage architecture perspective.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">17.1 Storage System Overview</a><a href="#doc-section-2">17.2 Storage Type Details</a><a href="#doc-section-3">17.3 Identifying and Viewing Storage Devices</a><a href="#doc-section-4">17.4 Partitioning and Formatting Storage Devices</a><a href="#doc-section-5">17.5 Automatic Mounting Configuration</a><a href="#doc-section-6">17.6 Common Storage Management Commands</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 17.1 Storage System Overview
 The ArmSoM board uses a tiered storage architecture consisting of four layers:
 * Primary Storage (eMMC): System disk
@@ -26,6 +30,8 @@ These appear as different types of block devices in Linux:
 | NVMe SSD | /dev/nvme0n1         | M.2 PCIe |
 | USB Drive | /dev/sda        | USB Port |
 
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 17.2 Storage Type Details
 This section uses the ArmSoM Sige7 board as an example.
@@ -95,6 +101,8 @@ USB Drive Device Nodes:
 └─/dev/sdb1
 ```
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 17.3 Identifying and Viewing Storage Devices
 
 List all storage devices in a tree structure:
@@ -124,6 +132,8 @@ sudo fdisk -l /dev/mmcblk0
 sudo fdisk -l /dev/nvme0n1
 sudo fdisk -l /dev/sda
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 17.4 Partitioning and Formatting Storage Devices
 
@@ -168,6 +178,8 @@ Format as exFAT (cross-platform, large files):
 ```
 sudo mkfs.exfat /dev/mmcblk1p1
 ```
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 17.5 Automatic Mounting Configuration
 
@@ -240,8 +252,13 @@ sudo mount -a
 df -h
 ```
 
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## 17.6 Common Storage Management Commands
 Here is a summary of commonly used disk management commands:
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```
 # View all storage devices
 lsblk
@@ -277,4 +294,7 @@ sudo umount /mnt/sd
 # Check and repair a filesystem
 sudo fsck.ext4 -f /dev/mmcblk1p1
 ```
+
+</details>
+
 

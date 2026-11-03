@@ -8,6 +8,10 @@ sidebar_position: 4
 
 # 4. CAN Usage
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">4.1 Introduction to CAN</a><a href="#doc-section-2">4.2 Example of Using CAN</a><a href="#doc-section-3">4.3 CAN Communication Testing</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 4.1 Introduction to CAN
 
 The CAN protocol was developed by Bosch in the 1980s to meet the needs of the automotive industry. Over time, it has been widely adopted in other fields as well. CAN is a message-based communication protocol that allows multiple devices to communicate over a bus. Each device (node) can send messages to the bus, and all devices can receive these messages.
@@ -17,6 +21,8 @@ The CAN protocol was developed by Bosch in the 1980s to meet the needs of the au
 - **Real-time capability**: The CAN protocol is real-time, making it suitable for applications with high time sensitivity.
 - **Fault tolerance**: CAN has strong error detection and fault tolerance, enabling it to function reliably in harsh environments.
 - **Priority**: Message priority is determined by the message ID. The lower the ID, the higher the priority.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 4.2 Example of Using CAN
 
@@ -37,6 +43,9 @@ For the ArmSoM-Sige7 example, CAN's position in the 40-pin header is as follows:
 Connections between CAN modules: **CAN_TX** connects to **CAN_TX**, and **CAN_RX** connects to **CAN_RX**.
 
 ![can-real](/img/general-tutorial/interface-usage/can-real.png)
+
+<div className="armsom-image-caption">can-real</div>
+
 
 ### 4.2.3 Kernel Configuration
 
@@ -60,6 +69,9 @@ make savedefconfig
   - **CAN Device Drivers** (`*`) → **Platform CAN drivers with Netlink support** (`*`)
 
 ![can-config](/img/general-tutorial/interface-usage/can-config.png)
+
+<div className="armsom-image-caption">can-config</div>
+
 
 ### 4.2.4 DTS Node Configuration
 
@@ -150,6 +162,8 @@ armsom@armsom:/boot$ sudo reboot
 - Q: If the system is rebooted by directly pulling the power, is it possible that files are not updated or the overlay system fails to start?
 - A: When you abruptly disconnect the power or force a shutdown, there is a risk that files may not be properly synchronized from memory (RAM) to the storage device (e.g., hard drive or SSD). This happens because the operating system typically caches data in memory and writes it to the disk periodically. To avoid this issue, it is recommended to run the "sync" command before shutting down, ensuring that all data is written to the disk before pulling the power or shutting down.
 :::
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 4.3 CAN Communication Testing
 

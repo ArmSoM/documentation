@@ -20,11 +20,20 @@ Dual Wire Serial Bus Control (SCCB)
 
 ![armsom-camera-module1](/img/accessories/armsom-camera-module1.png)
 
+<div className="armsom-image-caption">armsom-camera-module1</div>
+
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Compatibility</a><a href="#doc-section-2">Pinout</a><a href="#doc-section-3">Purchase Samples</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Compatibility
 - Sige 3/5/7
 - LM7 & W3
 - CM5
 - AIM7
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Pinout
 |PIN NO| SYMBOL| Description |
@@ -71,6 +80,8 @@ Dual Wire Serial Bus Control (SCCB)
         </div>
     </a>
 </div>
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)

@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 Let’s get to know Forge1 in 5 minutes.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Hardware Information</a><a href="#doc-section-3">Development Resources</a><a href="#doc-section-4">User Manual</a><a href="#doc-section-5">Image Flashing</a><a href="#doc-section-6">Interface Usage</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview  
 Forge1​​ is an industrial-grade product powered by the ​​RK3506J triple-core Cortex-A7 application processor​​. Operating within a temperature range of ​​-40℃ to 85℃​​, it is specifically designed for industrial gateways, HMIs (Human-Machine Interfaces), PLCs (Programmable Logic Controllers), handheld POS (Point-of-Sale) devices, and home appliance display/control applications.
 
@@ -23,10 +27,18 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 
 ![ArmSoM-Forge1](/img/forge/forge1-banner-en.jpg)
 
+<div className="armsom-image-caption">ArmSoM-Forge1</div>
+
+
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Hardware Information  
 
 ### Hardware Interfaces  
 ![armsom-forge1-front-back](/img/forge/armsom-forge1-layout.jpg)  
+
+<div className="armsom-image-caption">armsom-forge1-front-back</div>
+
 
 ### Hardware Specifications  
 
@@ -108,7 +120,7 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
       RK3506J Block Diagram  
     </summary>  
         <img  
-  src="./img/forge/rk3506j.png"  
+  src="/img/forge/rk3506j.png"  
   alt="rk3506j block diagram"  
   className="session-details-live-video"/>  
 </details>  
@@ -164,6 +176,8 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 | 13   | SPK_P        | Speaker Output Positive (Differential Drive) | 14   | SPK_N        | Speaker Output Negative (Differential Drive) |
 
 </details>
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## Development Resources  
 
@@ -241,6 +255,8 @@ Network disk address:
 </a>
 </div>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## User Manual  
 
 ### Tools Preparation
@@ -252,6 +268,8 @@ Network disk address:
   * USB Type-C data cable (to connect the Forge series device and a PC via the Type-C port for image burning).
 * ​Boot from MicroSD/TF card:​​
   * MicroSD/TF card (Class 10 or higher, at least 8GB SDHC) and a card reader.
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## Image Flashing
 
@@ -268,6 +286,8 @@ Network disk address:
     </a>
 </div>
 
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## Interface Usage  
 
 If this is your first time using the ArmSoM-Forge1 product, please familiarize yourself with its hardware interfaces to better understand subsequent content.  
@@ -279,6 +299,9 @@ If this is your first time using the ArmSoM-Forge1 product, please familiarize y
 Connect the USB-to-TTL serial cable as shown below:  
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)  
+
+<div className="armsom-image-caption">armsom-sige7-debug</div>
+
 
 | Forge1 Pin       | Connection | Serial Module |  
 |------------------|------------|---------------|  
@@ -389,6 +412,9 @@ Fri Nov 3 10:36:01 UTC 2023
 
 ![armsom-forge1-display](/img/forge/armsom-forge1-display.jpg)
 
+<div className="armsom-image-caption">armsom-forge1-display</div>
+
+
 ### CAN FD  
 **List Network Interfaces**  
 ```bash  
@@ -428,7 +454,7 @@ We designed the official accessory ​​ArmSoM-Sige​​ to help you achieve o
   <a href="./armsom-display-7-hd" class="card-link">  
     <div class="card">  
       <div class="card-image">  
-        <img src="./img/accessories/armsom-display-7hd.png" alt="Card Image"/>  
+        <img src="/img/accessories/armsom-display-7hd.png" alt="Card Image"/>  
       </div>  
       <div class="card-content">  
         <h2>Display-7-HD</h2>  

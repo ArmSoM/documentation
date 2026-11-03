@@ -12,12 +12,19 @@ toc_max_heading_level: 4
 
 # AIM5 产品简介
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">供货声明</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成了 4 个 Cortex-A72 和 4 个 Cortex-A53 及独立
 的 NEON 协处理器；内置了多种功能强大的嵌入式硬件引擎，为高端应用提供了优异的性能，支持 4K@120fps 的H.265、VP9、AVS2 和 AV1 解码器，支持 4k@60fps 的 H.264 解码器；还支持 4K@60fps 的 H.264 和 H.265编码器，内置 3D GPU，能够完全兼容 OpenGL ES1.1/2.0/3.2、OpenCL 2.0 和 Vulkan 1.1
 
 适用于 ARM PC、边缘计算、个人移动互联网设备及其它多媒体产品。
 ![ArmSoM-AIM5](/img/aim/aim5.jpg)
+
+<div className="armsom-image-caption">ArmSoM-AIM5</div>
+
 
 ### 关键参数
 
@@ -37,6 +44,8 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
   - 第三方支持：Armbian
 - 大小：69.6 mm x 45 mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 <a href="./armsom-aimio#使用手册" class="card-link">
     <div class="card">
@@ -50,11 +59,16 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-AIM7-front & back](/img/aim/armsom-aim5-front&back.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM7-front &amp; back</div>
+
 
 :::tip
 AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相同
@@ -314,6 +328,8 @@ AIM5所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
 
 </details>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 开发资料
 
 ### SDK源码
@@ -435,9 +451,13 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 产品证书
 
 ### CE / FCC / RoHS
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 供货声明
 

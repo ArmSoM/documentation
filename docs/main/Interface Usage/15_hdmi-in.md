@@ -9,6 +9,10 @@ sidebar_position: 15
 
 # 15.HDMI-IN Usage
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">15.1 HDMI-IN Introduction</a><a href="#doc-section-2">15.2 HDMI-IN Driver Code and DTS Configuration</a><a href="#doc-section-3">15.3 DTS Configuration</a><a href="#doc-section-4">15.4 HDMI-IN Debugging</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 15.1 HDMI-IN Introduction
 
 - The HDMI IN function can be implemented through a bridge chip that converts HDMI signals to MIPI signals for reception.
@@ -20,6 +24,8 @@ sidebar_position: 15
   ![hdmi-in-function](/img/general-tutorial/interface-usage/hdmi-in-function.png)
 
   Depending on the application scenario, the HDMI RX can adapt to the TIF framework or the Camera framework. Adapting to the TIF framework has lower image transmission delay, while adapting to the Camera framework allows the use of standard Camera APIs, making it easier to develop applications such as video recording and backend algorithm integration.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 15.2 HDMI-IN Driver Code and DTS Configuration
 
@@ -34,6 +40,8 @@ kernel/drivers/media/platform/rockchip/hdmirx/*
 ```bash
 CONFIG_VIDEO_ROCKCHIP_HDMIRX=y
 ```
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 15.3 DTS Configuration
 
@@ -81,6 +89,8 @@ reserved-memory {
     }; 
 };
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 15.4 HDMI-IN Debugging
 
@@ -144,6 +154,9 @@ You can see that the input source's pixel format is 'BGR3' at this time. The res
 
 You can use the following script to capture the audio and video input from HDMI-IN:
 
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 #!/bin/bash
 
@@ -179,4 +192,10 @@ do
 done
 ```
 
+</details>
+
+
 ![hdmiin-image](/img/general-tutorial/interface-usage/hdmiin-image.png)
+
+<div className="armsom-image-caption">hdmiin-image</div>
+

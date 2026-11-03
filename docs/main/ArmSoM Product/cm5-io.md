@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 The CM5-IO is the IO board for the ArmSoM CM5, with dimensions of 100x80x29 mm. It is a miniature AI computer designed specifically for makers, learners, and developers, enabling the rapid application of AI technology to various smart devices.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Hardware Information</a><a href="#doc-section-2">Resources</a><a href="#doc-section-3">Getting Started</a><a href="#doc-section-4">Interface Usage</a><a href="#doc-section-5">Purchase Samples</a><a href="#doc-section-6">What do others say about the CM5?</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Hardware Information
 
 ### Hardware Specifications
@@ -38,6 +42,9 @@ The CM5-IO board is an expansion board specifically designed for the CM5 computi
 ### Hardware Interfaces
 
 ![ArmSoM-cm5-io](/img/cm/cm5-io-layout.png)
+
+<div className="armsom-image-caption">ArmSoM-cm5-io</div>
+
 
 :::tip
 The cm5-io board uses a 12V DC power supply.
@@ -129,6 +136,8 @@ The cm5-io board uses a 12V DC power supply.
 |  4   |    VC4     |     RX2     |
 
 </details>
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Resources
 
@@ -280,6 +289,8 @@ Get schematics, PCB, DXF, and other hardware documentation for the cm5-io develo
 </div>
 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Getting Started
 
 Preparing for CM5-IO Usage
@@ -334,6 +345,8 @@ You can set up the CM5 Kit as an interactive desktop computer or as a headless c
     </a>
 </div>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Interface Usage
 
 If you are using the CM5 Kit for the first time, please familiarize yourself with the [hardware interfaces](#hardware-interfaces) of each product, which will help you better understand the following content.
@@ -343,6 +356,9 @@ If you are using the CM5 Kit for the first time, please familiarize yourself wit
 Connect the USB to TTL serial cable as shown below:
 
 ![cm5io-debug](/img/cm/cm5io-debug.png)
+
+<div className="armsom-image-caption">cm5io-debug</div>
+
 
 | CM5-IO       | Connect  | Serial Module |
 | -------------|----------|---------------|
@@ -597,6 +613,9 @@ Note: Many laptops have an HDMI port, but it usually only supports output, not H
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
+
 :::tip
 When using HDMI to VGA display, there is no need to configure anything on the CM5 Kit or Linux system. As long as the HDMI interface on the development board displays correctly, it should work. If you encounter issues, please check the HDMI to VGA adapter, VGA cable, and monitor.
 :::
@@ -651,6 +670,9 @@ Logitech HD Webcam C93 (usb-xhci-hcd.5.auto-1):
 
 ![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
 
+<div className="armsom-image-caption">sige-usb-cam</div>
+
+
 You can also use terminal commands to open the camera preview:
 
 ```bash
@@ -670,6 +692,9 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 ```
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+
+<div className="armsom-image-caption">armsom-sige7-gst</div>
+
 
 ### M.2 Key M
 
@@ -856,6 +881,9 @@ root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=N
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 
 #### Using Raspberry Pi Camera Module 2
 
@@ -901,6 +929,9 @@ The CM5 Kit supports resolutions up to 2K@60Hz.
 
 ![cm5-io-display-10-hd](/img/cm/cm5-io-display-10-hd.png)
 
+<div className="armsom-image-caption">cm5-io-display-10-hd</div>
+
+
 2. Configuring a 10.1-inch MIPI LCD screen:
 
 - The Linux image does not enable the MIPI LCD screen configuration by default. To use the MIPI LCD screen, you need to enable it manually.
@@ -936,6 +967,8 @@ root@armsom-cm5-io:/home/armsom# insmod /usr/lib/modules/6.1.75-vendor-rk35xx/ke
 
 Reboot the device to apply the Overlays settings and enable Display 10 HD support.
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Purchase Samples
 
 ArmSoM Official Website: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
@@ -945,6 +978,8 @@ ArmSoM Official AliExpress Store: [https://aliexpress.com/item/3256807679122184.
 ArmSoM Official Taobao Store: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
 
 For OEM & ODM, please contact: sales@armsom.org
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## What do others say about the CM5?
 

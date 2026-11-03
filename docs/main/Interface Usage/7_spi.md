@@ -11,6 +11,10 @@ sidebar_position: 7
 
 SPI (Serial Peripheral Interface) is a common synchronous serial communication protocol used for data exchange between microcontrollers (MCU) and external devices. It was proposed by Motorola in the early 1980s and is widely used in various embedded systems such as sensors, displays, storage devices, and more.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">7.1 SPI Communication Working Principle</a><a href="#doc-section-2">7.2 SPI Usage Example</a><a href="#doc-section-3">7.3 Loopback Test</a><a href="#doc-section-4">7.4 Common Issues</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 7.1 SPI Communication Working Principle
 
 The SPI protocol uses a master-slave architecture, where one master device controls one or more slave devices for data exchange. Its working principle mainly includes four signal lines and timing control:
@@ -29,6 +33,8 @@ The SPI protocol uses a master-slave architecture, where one master device contr
 - **Clock Polarity (CPOL)**: The level of the clock line (high or low) determines the timing of data transmission.
 - **Clock Phase (CPHA)**: The data sampling timing, typically at the rising or falling edge of the clock pulse.
 - SPI supports four different clock configurations (combinations of CPOL and CPHA), which enables compatibility with different peripherals.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 7.2 SPI Usage Example
 
@@ -91,6 +97,8 @@ armsom@armsom-sige5:~$ ls /dev/spi*
 ```
 The device files corresponding to SPI_0 are spidev0.0 and spidev0.1. The difference between spidev0.0 and spidev0.1 lies in the chip selection signal. spidev0.0 uses CS0, spidev0.1 uses CS1, and the node of spid1 is/dev/spidev1.0.
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 7.3 Loopback Test
 
 According to the relevant parameters of ioctl, SPI testing programs can be written. For simplicity, this example only conducts SPI loopback testing. During testing, simply short-circuit the MISO and MOSI pins of SPI on the board (pins 19 and 21 on the board) through jumper caps to achieve loopback testing.
@@ -98,6 +106,9 @@ According to the relevant parameters of ioctl, SPI testing programs can be writt
 In this way, the data sent can be looped back, making it easy to verify whether the SPI functionality is working properly.
 
 Test Code:
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```c
 #include <sys/ioctl.h>
@@ -204,6 +215,9 @@ int main(int argc, char *argv[])
 }
 ```
 
+</details>
+
+
 ### 7.3.1 Compile and Run
 
 ```
@@ -226,6 +240,8 @@ TX Buffer: hello the world ! ArmSoM is awesome!
 RX Buffer: ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ```
 
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 7.4 Common Issues
 

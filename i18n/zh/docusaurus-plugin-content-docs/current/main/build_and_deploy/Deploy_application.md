@@ -10,6 +10,10 @@ sidebar_position: 4
 我们经常有这样的需求，自己写好一个应用，想要它实现开机自启动的功能， 那么我们可以通过创建一个Systemd服务来实现,下面我以创建一个简单的hello.service服务为例子，
 教大家在ArmSoM板卡创建自己的Systemd服务。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">1.1 编写脚本</a><a href="#doc-section-2">1.2 创建配置文件</a><a href="#doc-section-3">1.3 使能hello-armsom.service</a><a href="#doc-section-4">2.1 deb包的组成结构</a><a href="#doc-section-5">2.2 构建deb包</a><a href="#doc-section-6">2.3 修改deb包</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 1.1 编写脚本
 在/opt目录下编写一个hello.sh脚本：
 ```
@@ -27,6 +31,8 @@ done
 ```
 chmod +x hello.sh
 ```
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 1.2 创建配置文件
 在/etc/systemd/system/目录下创建一个hello-armsom.service配置文件：
@@ -46,6 +52,8 @@ StandardOutput=journal
 WantedBy=multi-user.target
 ```
 其中ExecStart字段定义了hello-armsom.service服务的自启动脚本为/opt/hello.sh， 当我们使能了hello.service开机自启功能，在开机后便会执行/opt/hello.sh
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 1.3 使能hello-armsom.service
 输入命令“sudo systemctl list-unit-files –type=service | grep hello” 查看hello.service是否被添加到了服务列表
@@ -93,6 +101,8 @@ hello,armsom!
 deb包是在linux系统下的一种安装包，有时我们在网上下载的Linux软件安装包也会以deb包的形式出现， 由于它是基于tar包的，所以同样会记录着文件的权限信息（读、写、可执行）、所有者、用户组等。
 使用命令：`dpkg -l` 来查看系统以及安装了哪些deb包。
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 2.1 deb包的组成结构
 deb包一般分成两部分：
 
@@ -111,6 +121,8 @@ deb包一般分成两部分：
 - postrm文件: 软件卸载后需要执行的脚本。
 
 - 其中control、postinst、postrm为必要文件。
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 2.2 构建deb包
 安装工具及依赖：
@@ -178,6 +190,8 @@ fi
 dpkg-deb --build -Zgzip armsom-service armsom-service.deb
 sudo dpkg -i armsom-service.deb
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 2.3 修改deb包
 这里介绍个通用方法：

@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 Forge1。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">概述</a><a href="#doc-section-2">Forge1 使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">使用手册</a><a href="#doc-section-6">接口使用</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ##  概述
 Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器，工作温度可达 -40℃~85℃，专为工业网关、HMI、PLC、手持POS和家电显控应用而设计。
 
@@ -22,6 +26,11 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
 丰富的周边接口，如RS485、USB2、RMII、CAN、DSMC、Flexbus等，可以满足不同的应用开发需求，减少硬件开发复杂性和开发成本。
 
 ![ArmSoM-Forge1](/img/forge/forge1-banner-zh.jpg)
+
+<div className="armsom-image-caption">ArmSoM-Forge1</div>
+
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Forge1 使用手册
 
@@ -38,10 +47,15 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
 </a>
 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 ![armsom-forge1-front-back](/img/forge/armsom-forge1-layout.jpg)
+
+<div className="armsom-image-caption">armsom-forge1-front-back</div>
+
 
 ### 硬件规格
 
@@ -113,7 +127,7 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
       RK3506j 框图
     </summary>
         <img
-  src="./img/forge/rk3506j.png"
+  src="/img/forge/rk3506j.png"
   alt="rk3506j block diagram"
   className="session-details-live-video"/>
 </details>
@@ -168,6 +182,8 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
 | 11   | GND          | 音频信号接地                 | 12   | VBAT_RTC     | RTC 实时时钟电池供电输入     |
 | 13   | SPK_P        | 扬声器输出正极（差分驱动）    | 14   | SPK_N        | 扬声器输出负极（差分驱动）    |
 </details>
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -246,6 +262,8 @@ ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧�
 </div>
 
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 使用手册
 
 Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的准备工作，开始使用你的Forge1🚀
@@ -278,6 +296,8 @@ Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的�
     </a>
 </div>
 
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## 接口使用
 
 如果您是首次使用 ArmSoM-Forge1 产品，请先熟悉下各产品硬件接口，以便于您更好的理解后续的内容。
@@ -290,6 +310,9 @@ Forge1 使用手册，帮助用户了解Forge1产品的基本使用和需要的�
 如下所示连接 USB 转 TTL 串口线：
 
 ![armsom-sige7-debug](/img/sige/armsom-sige7-debug.png)
+
+<div className="armsom-image-caption">armsom-sige7-debug</div>
+
 
 | Forge1       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
@@ -429,6 +452,9 @@ ArmSoM-Forge1最大输出分辨率为1280x1280@60fps
 
 ![armsom-forge1-display](/img/forge/armsom-forge1-display.jpg)
 
+<div className="armsom-image-caption">armsom-forge1-display</div>
+
+
 ### CAN FD
 查询当前⽹络设备:
 ```bash
@@ -482,7 +508,7 @@ ArmSoM-Forge1 将至少生产到 2035 年 5 月。
 <a href="./armsom-display-7-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-7hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-7hd.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Display-7-hd</h2>

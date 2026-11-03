@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 LM7。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">样品购买</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 
 ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，采用了LGA封装，传输能力和稳定性更强。拥有丰富的接口，支持多硬盘、千兆网、WiFi6、5G/4G扩展和多种视频输入输出。支持多种操作系统；提供底板参考设计资料，用户可自主深度化定制。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
 ![ArmSoM-lm7](/img/lm/lm7.png)
+
+<div className="armsom-image-caption">ArmSoM-lm7</div>
+
 
 :::tip Rockchip RK3588
 - [ArmSoM-Sige7](./armsom-sige7) 单板计算机;
@@ -49,6 +56,8 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - **重量**：约 13.4克
 - **大小**：45mm × 50mm × 4.5mm (top: 2.2mm+PCB: 1.2mm +bottom: 1.1mm)
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 使用手册
 
 <a href="./armsom-w3#使用手册" class="card-link">
@@ -63,6 +72,8 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
@@ -73,7 +84,13 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 :::
 ![ArmSoM-LM7 front & back](/img/lm/armsom-rk3588_lga_core_board_front_back.png)
+
+<div className="armsom-image-caption">ArmSoM-LM7 front &amp; back</div>
+
 ![ArmSoM-LM7 & Credit-Card-Size.webp](/img/lm/Credit-Card-Size.webp)
+
+<div className="armsom-image-caption">ArmSoM-LM7 &amp; Credit-Card-Size.webp</div>
+
 
 ### 硬件规格
 
@@ -233,6 +250,8 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 表中接口数量为硬件设计或CPU理论最大值，其中多数功能引脚为复用关系，为方便配置请参考LM7的**[《引脚功能表格》](#硬件资料)**表格； 
 
 :::
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -406,11 +425,18 @@ HDMI输出8K对layout走线要求很高，核心板+底板的设计方式基本�
 
 :::
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 产品证书
 
 ### CE / FCC / RoHS
 
 ![armsom-lm7-ce-fc-rohs](/img/lm/armsom-lm7-ce-fc-rohs.webp)
+
+<div className="armsom-image-caption">armsom-lm7-ce-fc-rohs</div>
+
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/lm7-development-kit](https://www.armsom.org/product-page/lm7-development-kit)

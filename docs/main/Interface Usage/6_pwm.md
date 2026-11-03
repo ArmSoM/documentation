@@ -21,6 +21,10 @@ Pulse Width Modulation (PWM) is a technique used to control the power transmissi
 
 - **Simulating Analog Control Using Digital Signals**: Although PWM signals are digital, their varying duty cycles can effectively simulate a continuous analog voltage, making them ideal for controlling devices such as motors and lights.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">6.1 PWM Working Principle</a><a href="#doc-section-2">6.2 PWM Usage Examples</a><a href="#doc-section-3">6.3 Detailed PWM Usage</a><a href="#doc-section-4">6.4 PWM Backlight</a><a href="#doc-section-5">6.5 Common Issues</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 6.1 PWM Working Principle
 
 A PWM signal is a square wave, where the high-level (ON) duration is called the pulse width, and the low-level (OFF) duration is the remaining portion of the period. The duty cycle of the signal is the ratio of high-level time to the total period.
@@ -33,6 +37,8 @@ For example:
 
 - A 50% duty cycle means the signal stays at a high level for half of the period and at a low level for the other half.
 - A 25% duty cycle means the signal stays high for one-fourth of the period and low for the remaining three-fourths.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 6.2 PWM Usage Examples
 
@@ -79,6 +85,8 @@ root@armsom-sige5:/home/armsom# sudo reboot
 - Q: If the system is rebooted by directly pulling the power, is it possible that files are not updated or the overlay system fails to start?
 - A: When you abruptly disconnect the power or force a shutdown, there is a risk that files may not be properly synchronized from memory (RAM) to the storage device (e.g., hard drive or SSD). This happens because the operating system typically caches data in memory and writes it to the disk periodically. To avoid this issue, it is recommended to run the "sync" command before shutting down, ensuring that all data is written to the disk before pulling the power or shutting down.
 :::
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 6.3 Detailed PWM Usage
 
@@ -134,6 +142,8 @@ echo 1 > /sys/class/pwm/pwmchip1/pwm0/enable
 echo 0 > /sys/class/pwm/pwmchip1/unexport
 ```
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 6.4 PWM Backlight
 
 Continuous mode is the most frequently used for PWM, especially for backlighting.
@@ -141,6 +151,9 @@ Continuous mode is the most frequently used for PWM, especially for backlighting
 ### 6.4.1 Backlight DTS
 
 Below is a typical backlight configuration node in the DTS file:
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```
 backlight: backlight {
@@ -185,6 +198,9 @@ backlight: backlight {
 };
 ```
 
+</details>
+
+
 - `pwms = <&pwm0 0 25000 0>` is described in the PWM node section above.
 - The `brightness-levels` array typically contains 256 elements, with 255 representing full brightness in PWM.
 - `default-brightness-level` specifies the default backlight level, which is set to 200 in this example.
@@ -193,6 +209,8 @@ backlight: backlight {
 ### 6.4.2 PWM Backlight Debugging
 
 To determine the backlight off value for the `brightness-level`, you can debug the backlight brightness via command line by writing values to `/sys/class/backlight/backlight/brightness`. If PWM is set to normal polarity, the values range from 0 to 255. You can adjust the `brightness-levels` array accordingly, changing the minimum and maximum values based on the observed backlight brightness.
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 6.5 Common Issues
 

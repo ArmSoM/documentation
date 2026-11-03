@@ -12,11 +12,18 @@ toc_max_heading_level: 4
 
 # Product Introduction: ArmSoM-CM5
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Supply Declaration</a><a href="#doc-section-6">Accessories</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 
 The ArmSoM-CM5 is a compute module powered by the Rockchip RK3576 second-generation 8nm high-performance AIOT platform. It integrates a quad-core Cortex-A72 @ 2.2GHz and a quad-core Cortex-A53 @ 1.8GHz, along with a dedicated NEON co-processor, a 6 TOPS NPU, and supports up to 16GB of large memory. It supports 4K video encoding and decoding, features a rich set of interfaces, and supports various operating systems.
 
 ![ArmSoM-CM5](/img/cm/cm5.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5</div>
+
 
 :::tip Rockchip RK3576
 - [ArmSoM-Sige5](./armsom-sige5) Single Board Computer;
@@ -48,6 +55,8 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
     - CM5: 55 x 40 mm x 4.9mm
     - CM5-IO: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 inches)
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-cm5-io#getting-started" class="card-link">
@@ -62,12 +71,20 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![ArmSoM-CM5-front & back](/img/cm/armsom-cm5-front&back1.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM5-front &amp; back</div>
+
 ![ArmSoM-CM5-rpi-cm4-io](/img/cm/cm5-rpi-cm4-io.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5-rpi-cm4-io</div>
+
 
 :::tip
 - Designed as a board-to-board connector.
@@ -104,6 +121,9 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 ### CM5 Block Diagram
 
 ![ArmSoM-CM5-product](/img/cm/cm5-product.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5-product</div>
+
 
 ### Hardware Spec
 
@@ -196,10 +216,18 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 
 ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
 
+<div className="armsom-image-caption">ArmSoM-cm5-pinlist</div>
+
+
 ### Electrical characteristics
 Here’s a table showing the power consumption of ArmSoM-CM5 and ArmSoM-CM5-IO in different states:
 
 ![ArmSoM-cm5-power](/img/cm/CM5-PowerEN.png)
+
+<div className="armsom-image-caption">ArmSoM-cm5-power</div>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## Resources
 
@@ -334,9 +362,13 @@ Network disk address:
 </a>
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Supply Declaration 
 
 ArmSoM-CM5 will remain in production until at least August 2034.
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Accessories
 
@@ -347,7 +379,7 @@ The official accessories designed for the ArmSoM-CM5-IO are intended to help you
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-10hd.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Display-10-HD</h2>
@@ -359,7 +391,7 @@ The official accessories designed for the ArmSoM-CM5-IO are intended to help you
 <a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Camera Module 1</h2>

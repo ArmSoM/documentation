@@ -11,6 +11,10 @@ sidebar_position: 13
 
 **Watchdog** is a hardware or software mechanism used to monitor the system's operational status. Its main function is to ensure that the system can automatically recover or restart in case of failure, ensuring the stability and reliability of the system. It is especially important in scenarios such as embedded systems, servers, and IoT devices that require continuous operation over a long period.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">13.1 Working Principle</a><a href="#doc-section-2">13.2 DTS &amp; Config Configuration</a><a href="#doc-section-3">13.3 Usage</a><a href="#doc-section-4">13.4 Advanced Settings</a><a href="#doc-section-5">13.5 External Watchdog</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 13.1 Working Principle
 
 The working principle of a Watchdog typically involves the following:
@@ -18,6 +22,8 @@ The working principle of a Watchdog typically involves the following:
 1. **Timer**: When the system starts, the Watchdog activates a timer. If the system does not send a "kick" signal to the Watchdog within the preset time (i.e., the system regularly sends signals to indicate normal operation), the Watchdog assumes the system has failed and performs the predefined recovery action, such as restarting the system.
 
 2. **Kick Operation**: Normally, the system will periodically (usually every few seconds or minutes) send a signal to the Watchdog to indicate that the system is functioning normally. If the system fails or freezes and is unable to send the signal in time, the Watchdog will trigger a reset to restore the system’s operation.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 13.2 DTS & Config Configuration
 
@@ -47,6 +53,8 @@ Ensure that the following configuration is enabled:
 ```
 CONFIG_WATCHDOG = y
 ```
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 13.3 Usage
 
@@ -96,6 +104,9 @@ done
 
 The following C program "kicks" the watchdog every 30 seconds.
 
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```
 #include <stdio.h>
 #include <unistd.h>
@@ -133,6 +144,11 @@ int main() {
 }
 ```
 
+</details>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 13.4 Advanced Settings
 
 `DW_WDT_DEFAULT_SECONDS` is used to set the default timeout value for the Watchdog. By default, if the system doesn't "kick" the watchdog within this time, the Watchdog will trigger a reset. Modifying this value changes the timeout period that triggers the Watchdog.
@@ -144,6 +160,8 @@ If you want to set the default timeout to 1 second, you can modify it as follows
 ```c
 #define DW_WDT_DEFAULT_SECONDS 1  // Set default timeout to 1 second
 ```
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 13.5 External Watchdog
 

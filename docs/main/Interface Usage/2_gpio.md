@@ -9,9 +9,15 @@ sidebar_position: 2
 
 # 2.GPIO Usage
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">2.1 Introduction to GPIO</a><a href="#doc-section-2">2.2 GPIO Pin Number Calculation Method</a><a href="#doc-section-3">2.3 Multiplexing</a><a href="#doc-section-4">2.4 GPIO Debugging Methods</a><a href="#doc-section-5">2.5 GPIO Control</a><a href="#doc-section-6">2.6 Using wiring-armbian</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 2.1 Introduction to GPIO
 
 GPIO, short for General-Purpose Input/Output, is a common digital input/output interface in computers and embedded systems. It allows software to control the digital inputs and outputs of hardware, such as switches, sensors, LEDs, etc. GPIO is typically supported by pins on a chip or processor, which can be programmed to configure these pins as inputs or outputs, and their input status can be read or output status controlled through corresponding software commands.
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 2.2 GPIO Pin Number Calculation Method
 
@@ -25,11 +31,16 @@ RK3588 has a total of 5 GPIO banks: GPIO0~GPIO4, each of which is further number
 
 For example, the calculation for GPIO3_B5: 32 * 3 + 1 * 8 + 5 = 109 ---> This means that GPIO3_B5 corresponds to the GPIO number gpio-109.
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 2.3 Multiplexing
 
 In addition to the general input/output function, GPIO pins may have other multiplexing functions.
 
 ![rockchip-gpio](/img/general-tutorial/interface-usage/gpio.png)
+
+<div className="armsom-image-caption">rockchip-gpio</div>
+
 
 From the schematic, we can see that using GPIO1_C0 as an example, it has the following functions:
 
@@ -74,11 +85,16 @@ In the system DTS configuration, GPIO1_C0 defaults to the I2C3_SDA_M0 function. 
 In this way, we have multiplexed GPIO1_C0 as the UART3_RX_M0 function.
 
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 2.4 GPIO Debugging Methods
 
 ### 2.4.1 Read GPIO Status Information
 
 The Debugfs file system is designed to provide developers with more kernel data for debugging purposes. The debugging of GPIO can also be done using the Debugfs file system to obtain more kernel information. The GPIO interface in the Debugfs file system is /sys/kernel/debug/gpio, and you can read the information from this interface as follows:
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 armsom@armsom:~$ sudo cat /sys/kernel/debug/gpio
@@ -113,6 +129,9 @@ gpiochip4: GPIOs 128-159, parent: platform/fec50000.gpio, gpio4:
 
 gpiochip5: GPIOs 509-511, parent: platform/rk806-pinctrl.9.auto, rk806-gpio, can sleep:
 ```
+
+</details>
+
 
 From the information read, we can see that the kernel lists the current status of the GPIO. For example, for the GPIO0 group, gpio-15 (GPIO0_B7) corresponds to the dts node led_rgb_b and outputs a low level (out lo).
 
@@ -150,6 +169,8 @@ pin 21 (gpio0-21): (MUX UNCLAIMED) gpio0:21
 We can take pin 13 (gpio0-13): fiq-debugger (GPIO UNCLAIMED) function uart2 group uart2m0-xfer as an example:
 
 The node name corresponding to gpio0-13 is fiq-debugger. This node is multiplexed as the debug serial function using the pinctrl configuration, and the pinctrl value is uart2m0-xfer.
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 2.5 GPIO Control
 
@@ -196,6 +217,8 @@ gpiomon 3 19      # Monitor the pin status of controller number 3 in the first g
 ```
 
 `Not all pins can be controlled using libgpiod, such as some already used pins like LED`
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 2.6 Using `wiring-armbian`
 

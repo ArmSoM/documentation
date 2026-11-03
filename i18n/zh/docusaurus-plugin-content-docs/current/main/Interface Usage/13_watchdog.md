@@ -11,11 +11,17 @@ sidebar_position: 13
 
 **Watchdog（看门狗）** 是一种用于监控系统运行状态的硬件或软件机制。它的主要功能是确保系统在异常情况下能够自动恢复或重启，以保证系统的稳定性和可靠性。尤其在嵌入式系统、服务器、物联网设备等需要长时间持续运行的场景中，watchdog 是一种重要的容错机制。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">13.1 工作原理</a><a href="#doc-section-2">13.2 DTS &amp; config 配置</a><a href="#doc-section-3">13.3. 使用</a><a href="#doc-section-4">13.4 进阶设置</a><a href="#doc-section-5">13.5 外部看门狗</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 13.1 工作原理
 Watchdog 工作原理通常如下：
 1. **定时器**：系统启动时，Watchdog 会启动一个定时器。如果在预定的时间内没有接收到系统的“喂狗”信号（即系统定期向 Watchdog 发送信号，表示系统正常运行），Watchdog 会认为系统出现故障，并执行预设的恢复动作，如重启系统。
    
 2. **喂狗操作**：正常情况下，系统会定期（通常是每几秒或几分钟）向 Watchdog 发送信号，表示系统运行正常。如果系统出现故障或者卡死，无法及时向 Watchdog 发送信号，那么 Watchdog 会启动重启程序，恢复系统运行。
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 13.2 DTS & config 配置
 
@@ -39,6 +45,8 @@ wdt: watchdog@2ace0000 {
 ```
 CONFIG_WATCHDOG = y
 ```
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 13.3. 使用
 
@@ -84,6 +92,9 @@ done
 ### 13.3.2 使用C程序喂狗
 
 以下使用C程序30s喂一次狗。
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```
 #include <stdio.h>
 #include <unistd.h>
@@ -121,6 +132,11 @@ int main() {
 }
 ```
 
+</details>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 13.4 进阶设置
 
 `DW_WDT_DEFAULT_SECONDS` 是用于设置 Watchdog 超时的默认值。默认情况下，如果系统未在这个时间内喂狗，Watchdog 会触发重启。修改这个值会改变触发 Watchdog 超时的时间。
@@ -131,6 +147,8 @@ int main() {
 ```c
 #define DW_WDT_DEFAULT_SECONDS 1  // 默认超时 1 秒
 ```
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 13.5 外部看门狗
 

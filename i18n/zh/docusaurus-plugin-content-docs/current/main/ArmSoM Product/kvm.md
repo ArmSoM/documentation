@@ -13,6 +13,10 @@ toc_max_heading_level: 4
 # 产品简介
 让我们在 5 分钟内了解 ArmSoM-KVM。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">关键参数</a><a href="#doc-section-3">实物图</a><a href="#doc-section-4">系统镜像</a><a href="#doc-section-5">样品购买</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 ArmSoM-KVM 采用 Rockchip RK3568 的 KVM over IP 工业控制网关设计，是一款专为工业设备远程监控和控制而设计的IP KVM设备。它可以将生产线机器的工控计算机的视频、鼠标、键盘通过网络连接到远程控制台，实现机器的远程管理。该设备还提供一个用于连接本地控制台的端口，支持机器本地管理。
 
@@ -27,6 +31,8 @@ ArmSoM-KVM 提供两个RS-232 和两个RS-485 串行通信接口。在接口通�
 - 智慧能源：数据资产管理（DAM）、设备健康管理（EHM）、运行安全管理
 :::
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 关键参数
 
 - 紧凑轻巧的设计，节省空间；
@@ -40,12 +46,20 @@ ArmSoM-KVM 提供两个RS-232 和两个RS-485 串行通信接口。在接口通�
 - 两个内置 10/100/1000 Mbps 网络适配器提供 LAN 冗余或双 IP 操作
 - 支持多平台服务器环境：Windows、Mac、Sun、Linux、VT100串口设备
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 实物图
 ![armsom-kvm-interface](/img/link/armsom-kvm-interface.jpg)
+
+<div className="armsom-image-caption">armsom-kvm-interface</div>
+
 
 :::tip
 视频支持HDMI、VGA、DP和DVI，支持4个扩展板
 ![armsom-kvm-video-interface](/img/link/armsom-kvm-video-interface.png)
+
+<div className="armsom-image-caption">armsom-kvm-video-interface</div>
+
 :::
 
 ### 硬件规格
@@ -73,17 +87,28 @@ ArmSoM-KVM 提供两个RS-232 和两个RS-485 串行通信接口。在接口通�
 ### 接口拓扑
 ![armsom-kvm_5](/img/link/armsom-kvm_5.png)
 
+<div className="armsom-image-caption">armsom-kvm_5</div>
+
+
 ### ArmSoM-KVM产品
 
 ArmSoM 与![ikasinfo](https://www.ikasinfo.com/)紧密合作，为客户提供整体解决方案。IKASinfo是一家总部位于重庆的国家高新技术企业，致力于推动制造业迈向工业4.0。IKAS在国内外各大城市设有分支机构，研发出的前沿技术，包括基于“ROPN+AI”技术的智能决策算法，已赋能半导体行业，并逐步应用于其他领域。
 
 ![armsom-kvm_1](/img/link/armsom-kvm_1.jpg)
 
+<div className="armsom-image-caption">armsom-kvm_1</div>
+
+
 ### ArmSoM-KVM整体解决方案
 
 ![armsom-kvm_5](/img/link/armsom-kvm_2.png)
 
+<div className="armsom-image-caption">armsom-kvm_5</div>
 
+
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 系统镜像
 
@@ -100,6 +125,8 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 
 固件位置：3. Linux镜像/debian/ArmSoM-KVM
 
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 样品购买
 

@@ -12,13 +12,15 @@ toc_max_heading_level: 4
 
 # ArmSoM-CM1 and CM1-IO Development Kit
 
-## 1.1 Product Introduction
+<nav className="armsom-doc-shortcuts" aria-label="Page shortcuts"><a href="#hardware-information">Specifications</a><a href="#development-resources">Downloads</a><a href="#user-manual">Get started</a><a href="#interface-usage">Interfaces</a></nav>
+
+## Product Introduction {#11-product-introduction}
 
 ArmSoM-CM1 is a computer-on-module (COM) based on the Rockchip RK3506J (tri-core Cortex-A7 + single-core Cortex-M0). It features a rich set of peripheral interfaces such as SAI, USB2 OTG, RMII, and CAN. This module meets minimum system requirements and includes an onboard Type-C power & programming port, MIPI DSI display interface, and an SD card expansion slot.
 
 The ArmSoM-CM1 Kit consists of the CM1 module paired with the CM1-IO carrier board, offering even richer peripheral resources: dual 10/100 Ethernet ports, dual USB2.0 Host ports, onboard WiFi, MIPI DSI display interface, headphone jack, microphone input, and 72 GPIOs routed from the core module.
 
-![ArmSoM-CM1](/img/cm/armsom-cm1.jpg)
+<figure className="armsom-doc-figure"><a href="/img/cm/armsom-cm1.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/cm/armsom-cm1.jpg" alt="CM1 module and development kit" loading="lazy" /></a><figcaption>CM1 module and development kit · Click to view image</figcaption></figure>
 
 The ArmSoM-CM1 Kit development suite provides **full-stack Linux system development documentation** and **open-source software resources**. Enterprise customers can directly purchase the core module for end-product development. ArmSoM delivers **complete system source code** (including kernel customization patches, peripheral drivers, and toolchains) as open-source hardware, significantly accelerating customer product development cycles.
 
@@ -36,33 +38,19 @@ To maximize enterprise development efficiency and shorten R&D cycles, we systema
 - Board Support Package (BSP) & Device Tree Configuration Templates
 - Modular Peripheral Driver Development Framework
 
-## 1.2 Application Areas
+## Application Areas {#12-application-areas}
 
 The RK3506J finds wide application across various fields, including industrial control, smart appliance display control, HMI (Human-Machine Interface), and industrial information & data processing.
-
-## CM1 Getting started
-
-<a href="#user-manual" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>✈️</i>
-        </div>
-        <div class="content">
-            <h2>CM1 User Manual</h2>
-            <p>How to start using your CM1 Module</p>
-        </div>
-    </div>
-</a>
 
 ## Hardware Information
 
 ### CM1 Hardware Interfaces
 
-![ArmSoM-CM1-front & back](/img/cm/armsom-cm1-front&back1.jpg)
+<figure className="armsom-doc-figure"><a href="/img/cm/armsom-cm1-front&back1.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/cm/armsom-cm1-front&back1.jpg" alt="CM1 module interfaces" loading="lazy" /></a><figcaption>CM1 module interfaces · Click to view image</figcaption></figure>
 
 ### CM1 Hardware Specifications
 
-<table>
+<table className="armsom-spec-table">
     <thead>
         <tr>
             <th>Category</th>
@@ -73,50 +61,53 @@ The RK3506J finds wide application across various fields, including industrial c
     </thead>
     <tbody align="left">
         <tr>
-            <th>SOC</th>
-            <th><li>RockChip RK3506j</li></th>
-            <th>CPU</th>
-            <th><li>RK3506 Tri-core Cortex-A7 Processor & single-core Cortex-M0</li></th>
+            <th scope="row">SOC</th>
+            <td><li>RockChip RK3506j</li></td>
+            <th scope="row">CPU</th>
+            <td><li>RK3506 Tri-core Cortex-A7 Processor & single-core Cortex-M0</li></td>
         </tr>
         <tr>
-            <th>GPU</th>
-            <th><li>2D Graphic Engine</li><li>Integrated High-Performance 2D Acceleration Hardware</li></th>
-            <th>Memory</th>
-            <th><li>256/512MB DDR3L</li></th>
+            <th scope="row">GPU</th>
+            <td><li>2D Graphic Engine</li><li>Integrated High-Performance 2D Acceleration Hardware</li></td>
+            <th scope="row">Memory</th>
+            <td><li>256/512MB DDR3L</li></td>
         </tr>
         <tr >
-            <th>Storage</th>
-            <th><li>256/512MB NAND Flash</li><li>Supports MicroSD Card Expansion</li></th>
-            <th>Video Output</th>
-            <th><li>1 x MIPI DSI (2Lane, 1.5Gbps)</li></th>
+            <th scope="row">Storage</th>
+            <td><li>256/512MB NAND Flash</li><li>Supports MicroSD Card Expansion</li></td>
+            <th scope="row">Video Output</th>
+            <td><li>1 x MIPI DSI (2Lane, 1.5Gbps)</li></td>
         </tr>
         <tr>
-            <th>40-PIN & 44-PIN</th>
-            <th><li>Exposes all remaining functions of the RK3506J chip</li></th>
-            <th>Buttons</th>
-            <th><li>1x Maskrom Key (for entering maskrom programming mode)</li></th>
+            <th scope="row">40-PIN & 44-PIN</th>
+            <td><li>Exposes all remaining functions of the RK3506J chip</li></td>
+            <th scope="row">Buttons</th>
+            <td><li>1x Maskrom Key (for entering maskrom programming mode)</li></td>
         </tr>
         <tr>
-            <th>Power Supply</th>
-            <th><li>Type-C 5V</li></th>
-            <th>OS Support</th>
-            <th><li>Officially supported by Rockchip: Buildroot</li></th>
+            <th scope="row">Power Supply</th>
+            <td><li>Type-C 5V</li></td>
+            <th scope="row">OS Support</th>
+            <td><li>Officially supported by Rockchip: Buildroot</li></td>
         </tr>
         <tr>
-            <th>Dimensions</th>
-            <th><li>70 mm x 42mm</li></th>
-            <th>Operating Temperature</th>
-            <th><li>-40°C ~ 85°C</li></th>
+            <th scope="row">Dimensions</th>
+            <td><li>70 mm x 42mm</li></td>
+            <th scope="row">Operating Temperature</th>
+            <td><li>-40°C ~ 85°C</li></td>
         </tr>
     </tbody>
 </table>
 
 ### CM1-IO Hardware Interface
-![ArmSoM-CM1-io](/img/cm/armsom-cm1-io.jpg)
+![ArmSoM CM1-IO](/img/cm/armsom-cm1-io.jpg)
+
+<div className="armsom-image-caption">ArmSoM CM1-IO</div>
+
 
 ### CM1-IO Hardware Specifications
 
-<table>
+<table className="armsom-spec-table">
     <thead>
         <tr>
             <th>Category</th>
@@ -127,35 +118,35 @@ The RK3506J finds wide application across various fields, including industrial c
     </thead>
     <tbody align="left">
         <tr>
-            <th>40-PIN & 44-PIN Female Header</th>
-            <th><li>Expands remaining core module functions</li></th>
-            <th>40-PIN Header</th>
-            <th><li>Partially pin-compatible with Raspberry Pi 40pin for connecting rich accessory peripherals</li><li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></th>
+            <th scope="row">40-PIN & 44-PIN Female Header</th>
+            <td><li>Expands remaining core module functions</li></td>
+            <th scope="row">40-PIN Header</th>
+            <td><li>Partially pin-compatible with Raspberry Pi 40pin for connecting rich accessory peripherals</li><li>Supports UART/SPI/I2C/I2S/PWM/5V Power/3.3V Power</li></td>
         </tr>
         <tr>
-            <th>USB Interfaces</th>
-            <th><li>1 × Type C (Power & Programming Only)</li>
-            <li>2 × USB2.0 HOST</li></th>
-            <th>Networking</th>
-            <th><li>2 × 10/100 Ethernet Ports</li><li>1 × WiFi5/BT4.2</li></th>
+            <th scope="row">USB Interfaces</th>
+            <td><li>1 × Type C (Power & Programming Only)</li>
+            <li>2 × USB2.0 HOST</li></td>
+            <th scope="row">Networking</th>
+            <td><li>2 × 10/100 Ethernet Ports</li><li>1 × WiFi5/BT4.2</li></td>
         </tr>
         <tr>
-            <th>Audio</th>
-            <th><li>1 × Audio Jack (Headphone/Mic)</li></th>
-            <th>12-PIN Header</th>
-            <th><li>Supports RS485/CAN/MICIN/SPK</li></th>
+            <th scope="row">Audio</th>
+            <td><li>1 × Audio Jack (Headphone/Mic)</li></td>
+            <th scope="row">12-PIN Header</th>
+            <td><li>Supports RS485/CAN/MICIN/SPK</li></td>
         </tr>
         <tr>
-            <th>Power Supply</th>
-            <th><li>Type-C 5V</li><li>DC 12V Jack</li></th>
-            <th>OS Support</th>
-            <th><li>Officially supported by Rockchip: Buildroot</li></th>
+            <th scope="row">Power Supply</th>
+            <td><li>Type-C 5V</li><li>DC 12V Jack</li></td>
+            <th scope="row">OS Support</th>
+            <td><li>Officially supported by Rockchip: Buildroot</li></td>
         </tr>
         <tr>
-            <th>Dimensions</th>
-            <th><li>100 mm x 70mm</li></th>
-            <th>Operating Temperature</th>
-            <th><li>-40°C ~ 85°C</li></th>
+            <th scope="row">Dimensions</th>
+            <td><li>100 mm x 70mm</li></td>
+            <th scope="row">Operating Temperature</th>
+            <td><li>-40°C ~ 85°C</li></td>
         </tr>
     </tbody>
 </table>
@@ -166,7 +157,7 @@ The RK3506J finds wide application across various fields, including industrial c
       RK3506j Block Diagram
     </summary>
         <img
-  src="./img/forge/rk3506j.png"
+  src="/img/forge/rk3506j.png"
   alt="rk3506j block diagram"
   className="session-details-live-video"/>
 </details>
@@ -419,6 +410,9 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 
 Wi-Fi Station mode is an operating mode that enables a Wi-Fi device to connect to a Wi-Fi network and communicate with other devices.
 
+<details className="armsom-terminal-details">
+<summary>View full commands and terminal output</summary>
+
 ```bash
 root@armsom:/# ifconfig wlan0 up #Open wlan0
 root@armsom:/# ifconfig -a
@@ -503,6 +497,8 @@ connmanctl> services
     ChinaNet-Ns24        wifi_cc641a61e819_4368696e614e65742d4e733234_managed_psk
     CMCC-YM6M            wifi_cc641a61e819_434d43432d594d364d_managed_none
 ```
+
+</details>
 From the scanned Wi-Fi list, use connect XXXX to connect.
 
 ```bash
@@ -576,7 +572,7 @@ root@armsom:/mnt# df -h | grep "sd"
 
 ### audio
 
-![cm1io-sound](/img/cm/armsom-cm1-sound.png)
+<figure className="armsom-doc-figure"><a href="/img/cm/armsom-cm1-sound.png" target="_blank" rel="noopener noreferrer"><img src="/img/cm/armsom-cm1-sound.png" alt="CM1-IO audio wiring" loading="lazy" /></a><figcaption>CM1-IO audio wiring · Click to view image</figcaption></figure>
 Check the sound card in the system.
 
 ```bash
@@ -597,10 +593,6 @@ playback
 aplay /userdata/t.wav
 ```
 
-## Product Certifications
-
-### CE / FCC / RoHS
-
 ## Product Longevity Statement
 
 ArmSoM-CM1 will be produced until at least July 2035.
@@ -613,7 +605,7 @@ Our official accessories designed for the ArmSoM-CM1 Kit aim to help you achieve
 <a href="./armsom-display-7-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-7hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-7hd.png" alt="ArmSoM Display 7 HD"/>
     </div>
     <div class="card-content">
         <h2>Display-7-hd</h2>
@@ -632,9 +624,6 @@ ArmSoM AliExpress Official Store:
 ArmSoM Taobao Official Store: [https://item.taobao.com/item.htm?ft=t&id=965592864051](https://item.taobao.com/item.htm?ft=t&id=965592864051)
 
 For OEM&ODM, please contact: sales@armsom.org
-
-## Expert Perspective
-
 
 ## Important Notes
 

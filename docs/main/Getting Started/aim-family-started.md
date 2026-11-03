@@ -14,6 +14,10 @@ Here’s the translation:
 
 **AIM User Manual:** This manual helps users understand the basic usage of the AIM development kit and the necessary preparations. Start using your AI Module 🚀
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Getting Started</a><a href="#doc-section-2">Interface Usage</a><a href="#doc-section-3">System Image Burning</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Getting Started
 
 Before you start using the AIM development kit, please prepare the following items:
@@ -52,6 +56,8 @@ The table below shows the power specifications required to power the AIM develop
 | AIM7 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A       | DC adapter, 2.5mm |
 | AIM5 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A       | DC adapter, 2.5mm |
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Interface Usage
 
 The AIM development kit supports multiple system images, and you can choose the appropriate image to download according to your needs.
@@ -65,6 +71,9 @@ A system image includes the Linux kernel, basic programs, etc., which are essent
 Connect a USB-to-TTL serial adapter as follows:
 
 ![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
+
+<div className="armsom-image-caption">armsom-aimio-debug</div>
+
 
 | AIM-IO | Connection | Serial adapter |
 | --- | --- | --- |
@@ -161,6 +170,11 @@ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! videoconvert ! video/x-raw
 
 ![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
 
+<div className="armsom-image-caption">sige-usb-cam</div>
+
+
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## System Image Burning
 
 ### 1. Obtaining the System Image
@@ -198,11 +212,17 @@ This method is suitable for burning the system to an SD card and is available on
 
 ![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-from-file.png)
 
+<div className="armsom-image-caption">balenaEtcher-flash-from-file</div>
+
+
 4. Then click "Select target" and choose the MicroSD card you want to burn.
 5. Click "Flash" and wait for the burning process to complete. This will take some time.
 6. Once the burning is successful, it will show as pictured below:
 
 ![balenaEtcher-flash-success](/img/tools/balenaEtcher-flash-success.png)
+
+<div className="armsom-image-caption">balenaEtcher-flash-success</div>
+
 
 :::tip Burning Failed
     1. On Windows, burning the image requires running "as administrator," and some Linux users may need to use the chmod command to make it executable.
@@ -226,6 +246,9 @@ Click to enter the link: [Baidu Cloud Link](https://pan.baidu.com/s/14qfAZM3QqgJ
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
+<div className="armsom-image-caption">baidu-flash-tool</div>
+
+
 ###### 2.2.2. Installing DriverAssistant
 
 Unzip the DriverAssistant software package and double-click DriverInstall.exe to enter the driver installation interface.
@@ -233,6 +256,9 @@ Unzip the DriverAssistant software package and double-click DriverInstall.exe to
 Click "Install Driver" to start installing the driver. If you are unsure whether a previous version of the driver was installed, first click "Uninstall Driver" to remove the old version, then click "Install Driver."
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
+
+<div className="armsom-image-caption">install-driver-assitant</div>
+
 
 ###### 2.2.3. Installing RKDevTool
 
@@ -270,9 +296,15 @@ Open the RKDevTool burning tool and set the product to burn mode.
 
 ![aim7-maskrom](/img/aim/aim7-maskrom.png)
 
+<div className="armsom-image-caption">aim7-maskrom</div>
+
+
 Start burning the system:
 
 ![rkdevtool-install-emmc](/img/general-tutorial/rkdevtool-install-emmc.png)
+
+<div className="armsom-image-caption">rkdevtool-install-emmc</div>
+
 
 1. Select the "Download Image" option.
 2. Confirm that the board has entered MASKROM/Loader mode.
@@ -290,6 +322,9 @@ Click the following link to access it: [Baidu Cloud Link](https://pan.baidu.com/
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 
+<div className="armsom-image-caption">baidu-SDDiskTool</div>
+
+
 After extracting the compressed file, you can use the software without installation. Simply double-click the SD_Firmware_Tool.exe file to open the tool.
 
 ##### Burning the Image
@@ -299,6 +334,9 @@ Open the SDDiskTool executable file (SD_Firmware_Tool.exe) and insert the SD car
 First, select the correct SD card you want to burn. Then, set the function mode to **SD Boot** and choose the image you want to burn. Finally, click the "Create" button to start creating the bootable SD card.
 
 ![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
+
+<div className="armsom-image-caption">SDDiskTool</div>
+
 
 Please be patient as the SD card is being burned. The larger the image, the longer the burning process will take.
 
@@ -322,11 +360,20 @@ We will use the RKDevTool to burn the image and put the product into burning mod
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
 
+<div className="armsom-image-caption">recovery-flash-tool</div>
+
+
 ![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
+
+<div className="armsom-image-caption">maskroom-flash-tool</div>
+
 
 The burning progress will be shown on the right. Once completed, the tool will notify you:
 
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
+
+<div className="armsom-image-caption">rkdevtool-success</div>
+
 
 :::tip Troubleshooting Burning Failures
 If you encounter a "Download Boot Fail" error or other errors during the burning process (as shown below), it is usually due to a poor USB connection, low-quality cables, or insufficient power from the computer’s USB port. Try replacing the USB cable or using a different USB port on the computer to troubleshoot.

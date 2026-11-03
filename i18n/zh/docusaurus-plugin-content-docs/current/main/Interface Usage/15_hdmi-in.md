@@ -8,6 +8,10 @@ sidebar_position: 15
 ---
 
 # 15. HDMI-IN 使用
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">15.1 HDMI-IN简介</a><a href="#doc-section-2">15.2 HDMI-IN驱动代码和dts配置</a><a href="#doc-section-3">15.3 DTS配置</a><a href="#doc-section-4">15.4 HDMI-IN调试</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 15.1 HDMI-IN简介
 - HDMI IN功能可以通过桥接芯⽚的⽅式实现，将HDMI信号转换成MIPI信号接收
 - RK3588芯⽚平台⾃带HDMI RX模块，可以直接接收HDMI信号，无需通过桥接芯⽚实现。
@@ -17,6 +21,8 @@ sidebar_position: 15
 
 	根据应⽤场景需要，HDMI RX可适配TIF框架或是Camera框架，适配TIF框架图像传输延时更低，适配
 	Camera框架可以使⽤标准Camera API，更⽅便录像、对接后端算法等应⽤功能开发。
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 15.2 HDMI-IN驱动代码和dts配置
 ### 15.2.1 驱动
 
@@ -29,6 +35,8 @@ kernel/drivers/media/platform/rockchip/hdmirx/*
 ```bash
 CONFIG_VIDEO_ROCKCHIP_HDMIRX=y
 ```
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 15.3 DTS配置
 
@@ -75,6 +83,8 @@ reserved-memory {
 	}; 
 };
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 15.4 HDMI-IN调试
 HDMI-IN 设备在内核中会被注册为 video 设备，生成的节点如：/dev/video20，可以通过 v4l2-ctl 命令来获取设备信息和抓帧。
@@ -137,6 +147,9 @@ Format Video Capture Multiplanar:
 
 可以使用如下脚本捕获HDMI-IN输入的音频和视频
 
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 #!/bin/bash
 
@@ -171,4 +184,10 @@ do
 	sleep 10
 done
 ```
+
+</details>
+
 ![hdmiin-image](/img/general-tutorial/interface-usage/hdmiin-image.png)
+
+<div className="armsom-image-caption">hdmiin-image</div>
+

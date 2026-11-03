@@ -11,6 +11,10 @@ image: /img/armsom-social-card.png
 
 AIM 使用手册，帮助用户了解AIM开发套件的基本使用和需要的准备工作，开始使用你的AI Module🚀
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">入门准备</a><a href="#doc-section-2">系统镜像烧录</a><a href="#doc-section-3">接口使用</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 入门准备
 
 在开始使用AIM开发套件之前，请准备好以下物品
@@ -48,6 +52,8 @@ AIM 使用手册，帮助用户了解AIM开发套件的基本使用和需要的�
 | --------- | ----- | --- |
 | AIM7 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A |  DC适配器，2.5mm|
 | AIM5 + AIM-IO | 5V/3A, 9V/2A, 12V/2A, 15V/2A |  DC适配器，2.5mm|
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 系统镜像烧录
 
@@ -92,11 +98,17 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 ![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-from-file.png)
 
+<div className="armsom-image-caption">balenaEtcher-flash-from-file</div>
+
+
 4. 然后点击 Select target，选择自己要烧录的 MicroSD卡。
 5. 点击 Flash, 烧录等待成功，这里需要一段时间。
 6. 烧录成功，会显示如图所示
 
 ![balenaEtcher-flash-from-file](/img/tools/balenaEtcher-flash-success.png)
+
+<div className="armsom-image-caption">balenaEtcher-flash-from-file</div>
+
 
 :::tip 烧录失败
     1. windows烧录镜像需要"以管理员身份运行"，linux某些用户可能需要通过chmod命令修改成_可执行_运行。
@@ -120,6 +132,9 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 ![baidu-flash-tool](/img/general-tutorial/baidu-flash-tool.jpeg)
 
+<div className="armsom-image-caption">baidu-flash-tool</div>
+
+
 ###### 2.2.2. 安装DriverAssitant
 
 解压DriverAssitant软件压缩包，双击 DriverInstall.exe 进入驱动安装界面。
@@ -127,6 +142,9 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 点击 **驱动安装** 即可开始安装驱动。如果不确定以前是否安装过旧版驱动，先点击驱动卸载移除旧版本驱动程序，再点击驱动安装。
 
 ![install-driver-assitant](/img/general-tutorial/install-driver-assitant.png)
+
+<div className="armsom-image-caption">install-driver-assitant</div>
+
 
 ###### 2.2.3. 安装RKDevTool
 
@@ -164,9 +182,15 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 ![aim7-maskrom](/img/aim/aim7-maskrom.png)
 
+<div className="armsom-image-caption">aim7-maskrom</div>
+
+
 开始烧录系统
 
 ![rkdevtool-install-emmc](/img/general-tutorial/rkdevtool-install-emmc.png)
+
+<div className="armsom-image-caption">rkdevtool-install-emmc</div>
+
 
 1. 选择Download Image项
 2. 确认板子已经进入Maskrom/Loader模式
@@ -185,6 +209,9 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 ![baidu-SDDiskTool](/img/general-tutorial/baidu-sd-disk-tool.png)
 
+<div className="armsom-image-caption">baidu-SDDiskTool</div>
+
+
 解压压缩包后无需安装即可使用，双击 SD_Firmware_Tool.exe 进入软件界面。
 
 
@@ -195,6 +222,9 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 首先选择正确的要烧录的SD卡，然后将功能模式选择位 SD Boot ， 再选择要烧录的镜像，最后点击开始创建烧录镜像到SD卡。
 
 ![SDDiskTool](/img/general-tutorial/sd-disk-tool.png)
+
+<div className="armsom-image-caption">SDDiskTool</div>
+
 
 耐心等待SD卡烧录完整，当镜像较大时，烧录的时间会相应变长。
 
@@ -219,10 +249,19 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 
 ![recovery-flash-tool](/img/general-tutorial/recovery-flash-update.png)
 
+<div className="armsom-image-caption">recovery-flash-tool</div>
+
+
 ![maskroom-flash-tool](/img/general-tutorial/maskroot-flash-update.jpg)
+
+<div className="armsom-image-caption">maskroom-flash-tool</div>
+
 
 刷写进度显示在右边，完成后它会提示你：
 ![rkdevtool-success](/img/tools/rkdevtool-success.png)
+
+<div className="armsom-image-caption">rkdevtool-success</div>
+
 
 :::tip 烧写失败分析
 如果烧写过程中出现Download Boot Fail, 或者烧写过程中出错，如下图所示，通常是由于使用的USB线连接不良、劣质线材，或者电脑USB口驱动能力不足导致的，请更换USB线或者电脑USB端口排查。
@@ -235,12 +274,17 @@ AIM开发套件支持多种系统镜像，我们可以根据自己需求选择�
 可以通过⼯具单独烧写某⼀个分区镜像⽂件，⽅便调试。
 :::
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 接口使用
 ### 1.调试串口
 
 如下所示连接 USB 转 TTL 串口线：
 
 ![armsom-aimio-debug](/img/aim/armsom-aimio-debug.png)
+
+<div className="armsom-image-caption">armsom-aimio-debug</div>
+
 
 | AIM-IO       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
@@ -380,6 +424,9 @@ armsom@armsom-aim7:/# v4l2-ctl --list-devices
 
 ![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
 
+<div className="armsom-image-caption">sige-usb-cam</div>
+
+
 
 同时，您也可以使用终端命令打开相机预览:
 ```bash
@@ -397,3 +444,6 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 ```
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+
+<div className="armsom-image-caption">armsom-sige7-gst</div>
+

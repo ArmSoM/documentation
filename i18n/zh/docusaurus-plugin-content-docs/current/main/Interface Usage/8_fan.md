@@ -19,6 +19,9 @@ ArmSoM 产品都标配该风扇接口
 
 ![sige5-fan](/img/general-tutorial/interface-usage/fan.png)
 
+<div className="armsom-image-caption">sige5-fan</div>
+
+
 | 风扇    | 引脚       | 功能            | 
 | -------| ----------| ----------------|
 | 5v     | 1          | 5V电源          |

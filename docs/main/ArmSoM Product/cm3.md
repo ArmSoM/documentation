@@ -26,3 +26,6 @@ The ArmSoM-CM3 is a computer module. It is equipped with the Rockchip RK3568 qua
 ### Hardware Interfaces
 
 ![ArmSoM-CM3-front & back](/img/cm/armsom-cm3-front&back1.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM3-front &amp; back</div>
+

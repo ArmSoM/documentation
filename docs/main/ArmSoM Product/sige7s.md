@@ -15,11 +15,18 @@ toc_max_heading_level: 4
 
 Let's get to know Sige7s in 5 minutes.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">User manual</a><a href="#doc-section-6">Product Certificate</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 
 The ArmSoM-Sige7s is powered by Rockchip's latest flagship RK3588s,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
 
 ![ArmSoM-sige7s](/img/sige/sige7s-bananer.png)
+
+<div className="armsom-image-caption">ArmSoM-sige7s</div>
+
 
 Sige7s is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
  
@@ -45,6 +52,8 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
 - **Weight**: 46.6g
 - **Size**: 92mm × 62mm x 14.6mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-sige7s#user-manual" class="card-link">
@@ -60,11 +69,16 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
 </a>
 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![ArmSoM-Sige7s front & back](/img/sige/armsom-sige7s-layout.jpg)
+
+<div className="armsom-image-caption">ArmSoM-Sige7s front &amp; back</div>
+
  
 ### Hardware Spec
 <details>
@@ -275,6 +289,8 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
 |2          | -         | Negative pole    |
 </details>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Resources
 
 ### Source Code
@@ -390,6 +406,8 @@ V1.1
 * WIFI Module: AP6275S change to AP6275P;
 :::
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## User manual
 ### 1. Preparation for getting started
 
@@ -444,19 +462,34 @@ ArmSoM-sige7s supports booting from eMMC or SD card. Below, we'll introduce two 
 - To put the ArmSoM-sige7s into flashing mode, you need to short the pins as shown in the picture below. To enter Maskrom mode, short the Maskrom pin to the GND pin, and to enter Loader mode, short the Recovery pin to the GND pin.                                      
 - The ArmSoM-sige7s is programmed using a USB dual male cable, with one end connected to the onboard USB 3.0 port and the other end to the computer, while also using a USB Type-C cable to power the development board.                
 ![armsom-sige7s-burn_image](/img/sige/armsom-sige7s-burn-image.png)                                         
+
+<div className="armsom-image-caption">armsom-sige7s-burn_image</div>
+
                                                                                         
 1. After connecting everything as described above, let's first install the USB driver. Open RK Driver Assistant and follow steps ①②③:           
 ![armsom-sige7s-usb-driver](/img/general-tutorial/armsom-sige7s-usb-driver_en.png)                                            
 
+<div className="armsom-image-caption">armsom-sige7s-usb-driver</div>
+
+
 2. After installing the driver, open the flashing tool RKDevTool and check what mode is recognized at ④. If it shows Maskrom mode or Loader mode, you can click ① to select the firmware, then click ② to upgrade, and keep going until the info bar on the right shows that the firmware upgrade is complete.                                  
 ![armsom-sige7s-rkdevtool](/img/general-tutorial/armsom-sige7s-rkdevtool_en.png)                                        
+
+<div className="armsom-image-caption">armsom-sige7s-rkdevtool</div>
+
 
 3. If the spot marked ④ above shows 'ADB device found' and you want to switch to flashing mode, click the switch at ③ in the picture until it shows 'Switch to Rockusb successful'. Wait for a moment, and you'll see ④ display as Maskrom mode or Loader mode. At this point, you can go back to step two to upgrade the firmware.             
 ![armsom-sige7s-returnmode](/img/general-tutorial/armsom-sige7s-returnmode_en.png)                          
 
+<div className="armsom-image-caption">armsom-sige7s-returnmode</div>
+
+
 #### 2.2 Flash the firmware to the SD card
 - Insert the SD card into the SD card reader, connect it to the computer, then double-click to run SD_Firmware_Tool.exe and follow steps ①②③:                                             
 ![armsom-sige7s-sdflash](/img/general-tutorial/armsom-sige7s-sdflash_en.png)
+
+<div className="armsom-image-caption">armsom-sige7s-sdflash</div>
+
 
 #### 2.3 Erase SPI Flash
 - Sometimes you might encounter firmware upgrade failures or anomalies, or leftover boot data in the eMMC or SPI Nor Flash interfering with the startup of the new system. In such cases, we can try erasing the Flash data first to force the device into Maskrom mode, and then reload the firmware. You can do it as follows:                                         
@@ -465,9 +498,15 @@ ArmSoM-sige7s supports booting from eMMC or SD card. Below, we'll introduce two 
 
 ![armsom-sige7s-loadbin](/img/general-tutorial/armsom-sige7s-loadbin_en.png)                   
 
+<div className="armsom-image-caption">armsom-sige7s-loadbin</div>
+
+
 2. ⑤ Select the storage device as SPINOR, ⑥ click switch storage, ⑦ click erase all, and wait until the erasure is complete         
 
 ![armsom-sige7s-eraseflash](/img/general-tutorial/armsom-sige7s-eraseflash_en.png) 
+
+<div className="armsom-image-caption">armsom-sige7s-eraseflash</div>
+
 
 
 ### 3. Interface usage
@@ -482,6 +521,9 @@ If this is your first time using the ArmSoM-Sige7s product, please get familiar 
 Connect the USB-to-TTL serial cable to the 40-pin socket on the board as shown:
 
 ![armsom-sige7s-debug](/img/sige/armsom-sige7s-debug.jpg)
+
+<div className="armsom-image-caption">armsom-sige7s-debug</div>
+
 
 | Sige7s   | Connection | Serial port module |
 | -------- | ----- | ------ |
@@ -586,6 +628,9 @@ armsom@armsom:~$ sudo nmcli dev wifi connect "wifi_name" password "wifi_password
 
 ![wifi-nmcli-scan](/img/general-tutorial/sige6-wifi.png)
 
+<div className="armsom-image-caption">wifi-nmcli-scan</div>
+
+
 3. Use the nmcli command to connect to a scanned Wi-Fi
 
  - Change wifi_name to the name of the Wi-Fi hotspot you want to connect to
@@ -645,6 +690,9 @@ Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedes
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
+<div className="armsom-image-caption">wifi-nmcli</div>
+
+
 ```bash
 armsom@armsom:~$ sudo nmtui
 ```
@@ -653,9 +701,15 @@ armsom@armsom:~$ sudo nmtui
 
 ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
 
+<div className="armsom-image-caption">wifi-nmcli-connect</div>
+
+
 4. Choose the Wi-Fi hotspot you want to connect to and enter the password. Once connected, a '*' will appear in front of the Wi-Fi name.
 
 ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+<div className="armsom-image-caption">wifi-nmcli-success</div>
+
 
 5. You can check the Wi-Fi IP address using the 'ip addr show wlan0' command
 
@@ -695,6 +749,9 @@ rtt min/avg/max/mdev = 160.909/171.260/193.269/13.133 ms
 2. After connecting to Wi-Fi, you can open the browser to check if you can access the internet.
 
 ![wifi-desktop-sig7s](/img/general-tutorial/wifi-desktop-sig7s.jpg)
+
+<div className="armsom-image-caption">wifi-desktop-sig7s</div>
+
 
 **Network Settings**
 <div class="cards">
@@ -755,6 +812,9 @@ hci0:   Type: Primary  Bus: UART
 ```
 
 2. Next, you can use bluetoothctl to connect Bluetooth.
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 root@localhost:/# bluetoothctl
 Agent registered
@@ -809,11 +869,20 @@ Device 24:2A:EA:61:0F:28 Donleon
 12. Exit
 [Donleon]# exit
 ```
+
+</details>
+
 Check that your phone is paired with the development board in the Bluetooth settings:            
 ![sige7s-bt-pair](/img/general-tutorial/sige7s-bt-pair_en.png)
 
+<div className="armsom-image-caption">sige7s-bt-pair</div>
+
+
 After a successful connection, it shows connected on the phone:         
 ![sige7s-bt-connect](/img/general-tutorial/sige7s-bt-connect_en.png)
+
+<div className="armsom-image-caption">sige7s-bt-connect</div>
+
 
 #### 3.5 HDMI&DP
 There are two ways to connect the Sige7s to an HDMI or DP monitor:
@@ -826,15 +895,27 @@ There are two ways to connect the Sige7s to an HDMI or DP monitor:
 - Use one Micro HDMI to HDMI bus cable (requires an additional dual HDMI cable).               
 ![sige7s-MicroHDMI-a](/img/general-tutorial/sige7s-MicroHDMI-a.jpg)
 
+<div className="armsom-image-caption">sige7s-MicroHDMI-a</div>
+
+
 - Use a Micro HDMI to HDMI public cable (can connect directly to HDMI screens)                              
 ![sige7s-MicroHDMI-b](/img/general-tutorial/sige7s-MicroHDMI-b.jpg)
+
+<div className="armsom-image-caption">sige7s-MicroHDMI-b</div>
+
 
 ##### 2. Use a Mini DP cable to connect the Sige7s's DP out port and the HDMI monitor or DP monitor:
 - Using one active Mini DP to HDMI male cable (can connect directly to HDMI screen)                                                              
 ![sige7s-MiniDP-a](/img/general-tutorial/sige7s-MiniDP-a.jpg)
 
+<div className="armsom-image-caption">sige7s-MiniDP-a</div>
+
+
 - Use one Mini DP to DP bus (requires an additional dual DP cable)                                                                            
 ![sige7s-MiniDP-b](/img/general-tutorial/sige7s-MiniDP-b.jpg)
+
+<div className="armsom-image-caption">sige7s-MiniDP-b</div>
+
 
 ##### 3. After starting the Linux system, if the monitor outputs images, it means HDMI and DP ports are working normally
 
@@ -1108,6 +1189,9 @@ Connect the imx219 camera to the development board's MIPI-CSI interface, as show
 
 ![armsom-sige7s-mipi-csi](/img/lm/armsom-sige7s-mipi-csi.png)
 
+<div className="armsom-image-caption">armsom-sige7s-mipi-csi</div>
+
+
 1. The system has the camera function turned off by default. If you want to turn it on, you need to follow the steps below to enable the MIPI-CSI camera overlay.
 ```bash
 root@armsom:~# vi /boot/uEnv/uEnvarmsom-sige7s.txt
@@ -1151,6 +1235,9 @@ Due to differences in mirror versions, some versions require manually installing
 
 ![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
+<div className="armsom-image-caption">armsom-sige7s-raw</div>
+
+
 
 #### 3.14 MIPI DSI
 
@@ -1164,6 +1251,9 @@ https://item.taobao.com/item.htm?id=646210381978
   Use a GPIO power cable to connect the screen ③ at the 5V & GND interface and ④ the 5V & GND pins in the 40pin Sige7s, such as pin 4 and pin 6 (if pin 6 is used here, the serial port GND pin needs to be connected to other GND pins).
 
 ![sige7s-display-7-hd](/img/general-tutorial/display-7-hd-sige7s.jpg)
+
+<div className="armsom-image-caption">sige7s-display-7-hd</div>
+
 
 ##### 2. By default, the system turns off the MIPI-DSI screen. To turn it on, follow these steps to enable the LCD display overlay
 ```bash
@@ -1181,6 +1271,9 @@ Below are the methods for setting the CPU, GPU, NPU DDR, frequency fixing, and p
 ##### Fixed frequency
 ###### CPU fixed frequency
 The ArmSoM-Sige7s CPUs consist of 4 A55 + 4 A76 processors, managed separately in 3 groups. The nodes are:
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 armsom@armsom:~$ ls /sys/devices/system/cpu/cpufreq/policy0  （Corresponding to 4 A55：CPU0-3）
@@ -1213,6 +1306,9 @@ armsom@armsom:~$ cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_g
 interactive conservative ondemand userspace powersave performance schedutil 
 # The default is the on-demand frequency scaling mode: ondemand (if you want to restore it, just set it to this mode)
 ```
+
+</details>
+
 **<font color='red'>Note: The following operations should be performed as the root user</font>**
 
 ###### Set manual frequency
@@ -1309,6 +1405,8 @@ root@armsom:~$ echo performance > /sys/class/devfreq/fb000000.gpu/governor
 root@armsom:~$ echo performance > /sys/class/devfreq/dmc/governor
 root@armsom:~$ echo performance > /sys/class/devfreq/fdab0000.npu/governor
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Product Certificate
 

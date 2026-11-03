@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 ArmSoM-CM5
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">供货声明</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 
 ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能AIOT平台，集成了四核Cortex-A72@ 2.2GHz和四核Cortex-A53@ 1.8GHz以及单独的NEON协处理器，6 TOPS算力NPU，最大可配16GB大内存。支持4K视频编解码，拥有丰富的接口，支持多种操作系统。
 
 ![ArmSoM-CM5](/img/cm/cm5.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5</div>
+
 
 :::tip Rockchip RK3576
 - [ArmSoM-Sige5](./armsom-sige5) 单板计算机;
@@ -51,6 +58,8 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
     - CM5: 55 x 40 x 4.9 毫米
     - CM5-IO: 100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 使用手册
 
 <a href="./armsom-cm5-io#使用手册" class="card-link">
@@ -65,12 +74,20 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-CM5-front & back](/img/cm/armsom-cm5-front&back1.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM5-front &amp; back</div>
+
 ![ArmSoM-CM5-rpi-cm4-io](/img/cm/cm5-rpi-cm4-io.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5-rpi-cm4-io</div>
+
 
 :::tip
 - 设计为板对板连接器
@@ -106,6 +123,9 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 ### 产品框图
 
 ![ArmSoM-CM5-product](/img/cm/cm5-product.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5-product</div>
+
 
 ### 硬件规格
 <table>
@@ -188,7 +208,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
         RK3576 框图
     </summary>
     <img
-  src="./img/sige/rk3576.png"
+  src="/img/sige/rk3576.png"
   alt="rk3576 block diagram"
   className="session-details-live-video"/>
 </details>
@@ -196,6 +216,9 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 ### 引脚定义
 
 ![ArmSoM-cm5-pinlist](/img/cm/cm5-pinlist.png)
+
+<div className="armsom-image-caption">ArmSoM-cm5-pinlist</div>
+
 
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>ArmSoM-CM5(RK3576)&Raspberry-CM4-CM5 Pinlist对比表</span>
@@ -206,6 +229,11 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 以下是 ArmSoM-CM5 和 ArmSoM-CM5-IO 在不同状态下的功耗记录表：
 
 ![ArmSoM-cm5-power](/img/cm/CM5-Power.png)
+
+<div className="armsom-image-caption">ArmSoM-cm5-power</div>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -340,9 +368,13 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 </a>
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 产品证书
 
 ### CE / FCC / RoHS
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 供货声明
 
@@ -356,7 +388,7 @@ ArmSoM-CM5 将至少生产到 2034 年 8 月。
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-10hd.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Display-10-hd</h2>
@@ -368,7 +400,7 @@ ArmSoM-CM5 将至少生产到 2034 年 8 月。
 <a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Camera-module1</h2>

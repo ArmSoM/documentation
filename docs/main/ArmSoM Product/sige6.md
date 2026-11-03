@@ -15,6 +15,10 @@ toc_max_heading_level: 4
 
 Let's get to know Sige6 in 5 minutes.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Introduction</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">User Manual</a><a href="#doc-section-6">Product Certificate</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Introduction
 
 The **ArmSoM-Sige6** is powered by the **Allwinner A733** octa-core processor, featuring a high-performance architecture with a **dual-core Arm Cortex-A76** and a **hexa-core Arm Cortex-A55** (big.LITTLE configuration). Built on a **12nm process** with a peak frequency of **2.0GHz**, it integrates a **3 TOPS NPU** and an **Imagination BXM-4-64 MC1 GPU** to deliver robust AI and multimedia processing capabilities. 
@@ -22,6 +26,9 @@ The **ArmSoM-Sige6** is powered by the **Allwinner A733** octa-core processor, f
 It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence, cloud computing, VR/AR, blockchain, and intelligent NVR applications.
 
 ![ArmSoM-sige6](/img/sige/sige6-bananer.jpg)
+
+<div className="armsom-image-caption">ArmSoM-sige6</div>
+
 
 ### Key Specifications
 
@@ -44,6 +51,8 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
 - **Weight**: 47.2g
 - **Dimensions**: 89mm x 56mm x 21.6mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-sige6#user-manual" class="card-link">
@@ -59,11 +68,16 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
 </a>
 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![ArmSoM-Sige6 front & back](/img/sige/armsom-sige6-layout.jpg)
+
+<div className="armsom-image-caption">ArmSoM-Sige6 front &amp; back</div>
+
 
 ### Hardware Spec
 <details>
@@ -195,7 +209,7 @@ Sige6 Hardware Specifications
       Allwinner a733 Diagram
     </summary>
         <img
-  src="./img/sige/a733-block-diagram.png"
+  src="/img/sige/a733-block-diagram.png"
   alt="a733 block diagram"
   className="session-details-live-video"/>
 </details>
@@ -235,6 +249,8 @@ Sige6 Hardware Specifications
 </div>
 </details>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Resources
 
 ### Source Code
@@ -258,6 +274,9 @@ jackson@armsom:~$ git clone https://cnb.cool/armsom-2025/T527_AIOT_V1.4.8
 ```
 #### SDK construction method:
 1. Before compiling SDK, you need to configure the relevant information as follows
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh config
 ========ACTION List: mk_config ;========
@@ -307,6 +326,9 @@ All available rootfs files: //Choose the system version you need
 Choice [linaro-bullseye-gnome-arm64.tar.gz]: 0
 Setup BSP files
 ```
+
+</details>
+
 2. After configuring the relevant information, start compiling the SDK
 ```bash
 jackson@armsom:~/T527_AIOT_V1.4.8$ ./build.sh
@@ -363,6 +385,11 @@ Get the Sige6 schematics, DXF, and other hardware files. `Cloud drive path: ArmS
 Get tools for ADB debugging, flashing, serial ports, and SD card creation. `Cloud drive path: ArmSoM-Sige6 → software → Development tools`
 
 ![armsom-sige6-Developtools](/img/general-tutorial/armsom-sige6-Devtools.png)
+
+<div className="armsom-image-caption">armsom-sige6-Developtools</div>
+
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## User Manual
 
@@ -427,23 +454,44 @@ Flashing an image to the eMMC requires using the PhoenixSuit flashing tool and t
 1. First, install the USB driver by double-clicking and running InstallUSBDrv.bat.
 ![armsom-sige6-USBDRV](/img/general-tutorial/armsom-sige6-USBDRV.png)
 
+<div className="armsom-image-caption">armsom-sige6-USBDRV</div>
+
+
 2. After installing the USB driver, you can open Device Manager in Windows and see the USB Device (VID_1f3a_PID_efe8) listed.
 ![armsom-sige6-DevManager](/img/general-tutorial/armsom-sige6-DevManager.png)
+
+<div className="armsom-image-caption">armsom-sige6-DevManager</div>
+
 
 3. Next, open the flashing tool (run PhoenixSuit.exe)
 ![armsom-sige6-Flashingtool](/img/general-tutorial/armsom-sige6-Flashingtool.png)
 
+<div className="armsom-image-caption">armsom-sige6-Flashingtool</div>
+
+
 4. Click 'One-Click Flash', then click 'Browse' and choose the firmware path you want to flash
 ![armsom-sige6-ChooseImage](/img/general-tutorial/armsom-sige6-ChooseImage.png)
+
+<div className="armsom-image-caption">armsom-sige6-ChooseImage</div>
+
 
 5. Hold down the Recovery button on the development board, then power on the board until PhoenixSuit pops up with 'This will erase all data on the flash. Do you want to start a full erase and upgrade?' Then just click Yes and wait for the firmware to finish burning.
 ![armsom-sige6-Flashing](/img/general-tutorial/armsom-sige6-Flashing.png)
 
+<div className="armsom-image-caption">armsom-sige6-Flashing</div>
+
+
 #### 2.2.2 Program the card reader to MiroSD
 1. Open the bootable SD card creation tool and double-click PhoenixCard.exe to run it.
 ![armsom-sige6-SDFlashing](/img/general-tutorial/armsom-sige6-SDFlashing.png)
+
+<div className="armsom-image-caption">armsom-sige6-SDFlashing</div>
+
 2. Click on the firmware, choose the firmware path you want to flash; check 'Mass Production Card', and then just click 'Burn Card'.
 ![armsom-sige6-FlashSD](/img/general-tutorial/armsom-sige6-FlashSD.png)
+
+<div className="armsom-image-caption">armsom-sige6-FlashSD</div>
+
 3. Insert the prepared SD card into the development board's TF card slot, and power on the board to boot from the SD card.
 
 ### 3. Interface usage
@@ -458,6 +506,9 @@ If this is your first time using the ArmSoM-Sige6 product, please get familiar w
 Connect the USB to TTL serial cable to the socket marked "Debug" on the baseboard as shown below:
 
 ![armsom-sige6-debug](/img/sige/armsom-sige6-debug.png)
+
+<div className="armsom-image-caption">armsom-sige6-debug</div>
+
 
 | Sige6   | Connection | Serial port module |
 | -------- | ----- | ------ |
@@ -556,6 +607,9 @@ root@localhost: nmcli dev wifi connect "wifi_name" password "wifi_password"
 
 ![wifi-nmcli-scan](/img/general-tutorial/sige6-wifi.png)
 
+<div className="armsom-image-caption">wifi-nmcli-scan</div>
+
+
 3. Use the nmcli command to connect to the scanned WIFI
 
 - wifi_name Change the name of the WiFi hotspot you want to connect to
@@ -612,6 +666,9 @@ Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedes
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
+<div className="armsom-image-caption">wifi-nmcli</div>
+
+
 ```bash
 root@localhost:~# nmtui
 ```
@@ -620,9 +677,15 @@ root@localhost:~# nmtui
 
 ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
 
+<div className="armsom-image-caption">wifi-nmcli-connect</div>
+
+
 4. Select the WiFi hotspot you want to connect to and enter the password. After a successful WIFI connection, a "*" will appear before the name of the connected WIFI.
 
 ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+<div className="armsom-image-caption">wifi-nmcli-success</div>
+
 
 5. You can view the WiFi IP address using the ip addr show wlan0 command
 
@@ -659,6 +722,9 @@ rtt min/avg/max/mdev = 164.471/182.364/194.691/12.950 ms
 2. After connecting to WiFi, you can open a browser to check if you can access the internet
 
 ![wifi-desktop-sig6](/img/general-tutorial/wifi-desktop-sig6.jpg)
+
+<div className="armsom-image-caption">wifi-desktop-sig6</div>
+
 
 **Network settings**
 <div class="cards">
@@ -720,6 +786,9 @@ hci0:   Type: Primary  Bus: UART
 ```
 
 2. Next, you can use bluetoothctl to connect Bluetooth.
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 root@localhost:/# bluetoothctl
 Agent registered
@@ -761,7 +830,13 @@ Pairing successful    #When it shows that the pairing is successful here, we can
 8. Exit
 [Donleon]# exit
 ```
+
+</details>
+
 ![sige-bt-pair](/img/general-tutorial/sige-bt-pairen.png)
+
+<div className="armsom-image-caption">sige-bt-pair</div>
+
 
 3. If the Bluetooth device we need to connect is a phone, you'll need to download and enable the audio service. (If the Bluetooth device you want to connect is a headset/Bluetooth speaker, you don’t need to do the following steps.)
 ```bash
@@ -793,8 +868,14 @@ If you encounter the following error when connecting, try actively connecting to
 
 ![sige-bt-error](/img/general-tutorial/sige-bt-error.png)
 
+<div className="armsom-image-caption">sige-bt-error</div>
+
+
 After a successful connection, it shows connected on the phone:          
 ![sige-bt-connect](/img/general-tutorial/sige-bt-connecten.png)
+
+<div className="armsom-image-caption">sige-bt-connect</div>
+
 
 #### 3.5 HDMI
 
@@ -817,6 +898,9 @@ Note that although many laptops have HDMI ports, their HDMI ports generally only
 2. The HDMI to VGA display test is as follows
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
 
 :::tip
 When using HDMI to VGA display, ArmSoM-Sige products and Linux systems require no configuration; the development board's HDMI port can display normally. So if the test shows problems, check the HDMI to VGA converter, VGA cable, and monitor for any issues.
@@ -1123,9 +1207,15 @@ The MIPI-CSI interface supports 0v13850 [camera-module1](./armsom-camera-module1
 
 ![armsom-sige6-mipi1](/img/lm/armsom-sige6-mipi1.jpg)
 
+<div className="armsom-image-caption">armsom-sige6-mipi1</div>
+
+
 - Connect the IMX219 camera to the MIPI-CSI0 interface on the front of the development board, as shown in the picture:
 
 ![armsom-sige6-mipi0](/img/lm/armsom-sige6-mipi0.jpg)
+
+<div className="armsom-image-caption">armsom-sige6-mipi0</div>
+
 
 ##### 3.13.1 Using the ArmSoM camera-module1
 
@@ -1153,12 +1243,18 @@ After executing the above command, you can see that some fb8_y5_2112_1568_*.bin 
 
 ![armsom-w3-imx415-camera](/img/lm/armsom-sige6-ov13850-camera.png)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 ##### 3.13.2  Using the IMX219 camera
 The testing method is the same as above, using the following command
 ```bash
 root@localhost:/# ./csi_test_mplane 0 0 1920 1080 ./ 5 5
 ```
 After completing the above tests, you can check the camera nodes
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
+
 ```bash
 root@localhost:/# cat /sys/kernel/debug/mpp/vi
 *****************************************************
@@ -1191,6 +1287,9 @@ CSI Bandwidth: 0
 *****************************************************
 ```
 
+</details>
+
+
 #### 3.14 MIPI DSI
 
 ArmSoM-Sige6 offers a maximum resolution of up to 4K@60Hz
@@ -1198,6 +1297,9 @@ ArmSoM-Sige6 offers a maximum resolution of up to 4K@60Hz
 1. Connect the ribbon cable as shown in the picture below
 
 ![sige7-display-10-hd](/img/general-tutorial/display-10-hd-sige6.png)
+
+<div className="armsom-image-caption">sige7-display-10-hd</div>
+
 
 2. By default, the system turns off the MIPI-DSI screen. To turn it on, you need to go to the SDK to open the corresponding node in the device tree
 
@@ -1341,6 +1443,8 @@ root@localhost:~# echo performance > /sys/class/devfreq/1800000.gpu/governor
 root@localhost:~# echo performance > /sys/class/devfreq/a020000.dmcfreq/governor
 root@localhost:~# echo performance > /sys/class/devfreq/3600000.npu/governor
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Product Certificate
 

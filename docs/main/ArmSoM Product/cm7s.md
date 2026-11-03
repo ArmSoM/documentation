@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 Let's get to know the ArmSoM-CM7s and ArmSoM-CM7s-IO in 5 minutes
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">CM7s Introduction</a><a href="#doc-section-2">CM7s Hardware Info</a><a href="#doc-section-3">CM7s-IO Introduction</a><a href="#doc-section-4">CM7s-IO Hardware Info</a><a href="#doc-section-5">Getting started</a><a href="#doc-section-6">Development Materials</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## CM7s Introduction
 
 **ArmSoM-CM7s Core Board: compact in size, powerful in performance, built specifically for deep embedded scenarios.**
@@ -22,6 +26,9 @@ The board comes with the Rockchip RK3588S 8-core 64-bit flagship processor (4×C
 The module offers a variety of bus and expansion interfaces, supports eMMC flash memory of different capacities, and can be widely used in industrial IoT, edge computing, and smart devices.
 
 ![ArmSoM-CM7s](/img/cm/armsom-cm7s.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM7s</div>
+
 
 :::tip Rockchip RK3588s
 Relying on a strong ecosystem and a variety of expansion accessories, ArmSoM can help users easily go from ideas to prototypes to mass production, making it an ideal creative platform for makers, dreamers, and hobbyists.
@@ -47,11 +54,16 @@ armsom-cm7s v1.1 CN2 pins 2 and 4 aren't working, will be fixed in the next v1.2
 * **Output**: DC 3.3 V max. 600 mA and DC 1.8 V max. 600 mA
 * **PCB size**：55 x 40 x 1.6 mm (L x W x H)
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## CM7s Hardware Info
 
 ### Hardware interface
 
 ![ArmSoM-CM5-front & back](/img/cm/cm7s-interface.jpg)
+
+<div className="armsom-image-caption">ArmSoM-CM5-front &amp; back</div>
+
 
 :::tip
 - Designed as a board-to-board connector
@@ -84,6 +96,9 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 ### Product block diagram
 
 ![ArmSoM-CM7s-product](/img/cm/cm7s-product.png)
+
+<div className="armsom-image-caption">ArmSoM-CM7s-product</div>
+
 
 ### Hardware Specs
 <table>
@@ -165,7 +180,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
         RK3588S Block Diagram
     </summary>
     <img
-  src="./img/sige/rk3588s.png"
+  src="/img/sige/rk3588s.png"
   alt="rk3588S block diagram"
   className="session-details-live-video"/>
 </details>
@@ -242,8 +257,12 @@ Get CM7s schematics, DXF, and other hardware materials
 </div>
 <br/>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## CM7s-IO Introduction
 The CM7s-IO is the IO board for the ArmSoM CM7s, measuring 100x79x41 mm. It's great for quickly evaluating the features of the ArmSoM CM7s platform, debugging peripheral drivers, and developing system prototypes. It can also serve as a reference hardware design for products like industrial gateways, edge AI inference terminals, and multimedia interactive devices, helping users smoothly transition from prototyping to mass deployment.
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## CM7s-IO Hardware Info
 
@@ -268,6 +287,9 @@ The CM7s-IO board is an expansion board designed specifically for the CM7s compu
 ### Hardware interface
 
 ![ArmSoM-CM7s-IO](/img/cm/cm7s-io-layout.png)
+
+<div className="armsom-image-caption">ArmSoM-CM7s-IO</div>
+
 
 :::tip
 The CM7s-IO Board uses 12V DC power.
@@ -345,6 +367,8 @@ The CM7s-IO Board uses 12V DC power.
 |2          | -         | negative electrode  |
 </details>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-cm7s#user-manual" class="card-link">
@@ -358,6 +382,8 @@ The CM7s-IO Board uses 12V DC power.
         </div>
     </div>
 </a>
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Development Materials
 
@@ -606,6 +632,9 @@ If there is no HDMI display, first check whether the installed system includes a
 2. The HDMI-to-VGA display test is shown below.
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
+
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
 
 :::tip
 When using HDMI-to-VGA display output, no settings are required on the CM5 Kit or in Linux; the development board's HDMI output only needs to work properly. If the test fails, check the HDMI-to-VGA adapter, VGA cable, and monitor.
@@ -975,6 +1004,9 @@ root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=N
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 
 ##### Using Raspberry Pi Camera Module 2
 
@@ -1020,6 +1052,9 @@ The CM7s MIPI-DSI interface supports resolutions up to 2K@60Hz.
 
 ![cm5-io-display-10-hd](/img/cm/cm5-io-display-10-hd.png)
 
+<div className="armsom-image-caption">cm5-io-display-10-hd</div>
+
+
 2. The Linux image does not enable the MIPI LCD configuration by default. To use a MIPI LCD, enable it manually.
 
 ```bash
@@ -1044,7 +1079,7 @@ The official accessories we designed for the ArmSoM-CM7s-IO are meant to help yo
 <a href="./armsom-display-10-hd" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-display-10hd.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-display-10hd.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Display-10-hd</h2>
@@ -1056,7 +1091,7 @@ The official accessories we designed for the ArmSoM-CM7s-IO are meant to help yo
 <a href="./armsom-camera-module1" class="card-link">
 <div class="card">
     <div class="card-image">
-        <img src="./img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
+        <img src="/img/accessories/armsom-camera-module1-real.png" alt="Card Image"/>
     </div>
     <div class="card-content">
         <h2>Camera-module1</h2>

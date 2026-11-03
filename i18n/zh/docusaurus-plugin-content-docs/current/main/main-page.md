@@ -16,7 +16,7 @@ slug: /
     <div class="armsom-hero__actions"><a class="armsom-button armsom-button--primary" href="#选择适合的-armsom-平台">选择开发平台 <span>→</span></a><a class="armsom-button armsom-button--secondary" href="./getting-start/cloud-disk">开始上手</a></div>
     <div class="armsom-proof"><span><strong>6 TOPS</strong> 边缘 AI</span><span><strong>8K</strong> 多媒体</span><span><strong>开放</strong> 硬件资料</span></div>
   </div>
-  <div class="armsom-hero__visual"><img src="./img/banana.jpg" alt="ArmSoM 开源硬件平台" /></div>
+  <div class="armsom-hero__visual"><img src="/img/banana.jpg" alt="ArmSoM 开源硬件平台" /></div>
 </section>
 
 

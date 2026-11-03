@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 Let's get to know the P2pro in 5 minutes.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Hardware</a><a href="#doc-section-3">Resources</a><a href="#doc-section-4">User Manual</a><a href="#doc-section-5">Purchase Samples</a><a href="#doc-section-6">What do others say about the P2 pro?</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 
 The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit quad-core ARM Cortex-A35 processor, USB, Ethernet, Bluetooth, wireless connectivity and a voice detection engine.With rich audio interfaces (such as MIC/PDM/SPDIF/I2S),RK3308 is ideal product for IoT and voice applications. The ArmSoM-p2pro uses 512MB DDR3 RAM and uses eMMC (optional) or SD card as the storage of operating system.
 
 ![ArmSoM-P2pro](/img/link/p2pro.jpg)
+
+<div className="armsom-image-caption">ArmSoM-P2pro</div>
+
 
 ### Key Parameters
 
@@ -35,11 +42,16 @@ The ArmSoM-P2pro is powered by the Rockchip RK3308B-S, which comes with a 64-bit
 - **Weight**: 42g
 - **Size**: 52.5mm × 65mm 
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![armsom-p2pro-layout](/img/link/armsom-p2pro-layout.png)  
+
+<div className="armsom-image-caption">armsom-p2pro-layout</div>
+
 
 :::tip
 The PoE module and eMMC module of P2pro are not equipped by default. They are optional choices.
@@ -140,6 +152,8 @@ The PoE module and eMMC module of P2pro are not equipped by default. They are op
   
 </details>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Resources
 
 ### Source Code
@@ -232,6 +246,8 @@ Network disk address:
 :::tip Version Change History
 v1.0 is an internal version (fail to disclose now)  
 :::
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## User Manual
 
@@ -329,6 +345,9 @@ The debug serial port location is pin 9 and 11 of the 12-pin header
 
 ![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)  
 
+<div className="armsom-image-caption">armsom-p2pro-debug</div>
+
+
 #### WIFI
 ```
 # 1. Open the WIFI
@@ -406,6 +425,9 @@ ArmSoM-P2pro provides a USB 2.0 port.
 
 ![armsom-p2pro-8mic](/img/link/armsom-p2pro-8mic.jpg)
 
+<div className="armsom-image-caption">armsom-p2pro-8mic</div>
+
+
 **View All Built-in Codec Gains**
 
 ```
@@ -470,6 +492,8 @@ arecord -D hw:0,0 -c 8 -r 44100 -f S16_LE --period-size=1024 --buffer-size=4096 
 
 ```
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Purchase Samples 
 ArmSoM online shop: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
  
@@ -478,6 +502,8 @@ ArmSoM Aliexpress online shop: [https://www.aliexpress.com/item/3256805779421715
 ArmSoM Taobao shop: [https://item.taobao.com/item.htm?id=735000017740](https://item.taobao.com/item.htm?id=735000017740)
 
 OEM&ODM, please contact: sales@armsom.org
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## What do others say about the P2 pro?
 

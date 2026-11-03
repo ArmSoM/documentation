@@ -9,10 +9,16 @@ sidebar_position: 14
 
 # 14. Ethernet 使用
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">14.1 Ethernet 简介</a><a href="#doc-section-2">14.2 RTL8211F－CG芯片</a><a href="#doc-section-3">14.3 RTL8125B芯片</a><a href="#doc-section-4">14.4 Ethernet测试</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 14.1 Ethernet 简介
 ArmSoM系列产品主要使用到了两款以太网芯片
 - RTL8211F－CG
 - RTL8125B
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 14.2 RTL8211F－CG芯片
 在ArmSoM系列产品中，ArmSoM-Aim7使用的是RTL8211F－CG千兆以太网芯片
@@ -24,6 +30,9 @@ drivers/net/ethernet/stmicro/stmmac/*
 ### 14.2.2 DTS 节点配置
 
 芯片级公共配置  kernel/arch/arm64/boot/dts/rockchip/rk3588.dtsi
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 gmac0: ethernet@fe1b0000 {
@@ -76,7 +85,13 @@ gmac0: ethernet@fe1b0000 {
 };
 ```
 
+</details>
+
+
 kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-aim7.dts
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 &gmac0 {
@@ -110,6 +125,11 @@ kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-aim7.dts
 	};
 };
 ```
+
+</details>
+
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 14.3 RTL8125B芯片
 - 在ArmSoM系列产品中，ArmSoM-Sige7和ArmSoM-W3使用的是RTL8125B网卡控制器芯片
 - RTL8125B是一款PCIE转RJ45的网卡控制器芯片，在底层调试时只需配置PCIE即可
@@ -132,6 +152,8 @@ kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-aim7.dts
 	
 };
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 14.4 Ethernet测试
 ### 14.4.1 查看IP地址

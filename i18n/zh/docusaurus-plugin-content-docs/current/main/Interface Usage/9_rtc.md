@@ -8,6 +8,10 @@ sidebar_position: 9
 ---
 
 # 9. RTC 接口
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">9.1 RTC 简介</a><a href="#doc-section-2">9.2 RTC 使用实例</a><a href="#doc-section-3">9.3  RTC测试</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 9.1 RTC 简介
 RTC：(Real_Time Clock)：实时时钟
 
@@ -22,9 +26,14 @@ HYM8563是一种低功耗实时时钟（RTC）芯片，用于提供精确的时�
  - 温度补偿：该芯片具有温度补偿功能，可以根据环境温度对时钟频率进行自动修正，以保持时间的准确性。
  - 通信接口：HYM8563通过I2C（Inter-Integrated Circuit）接口与主控芯片或微处理器通信。这种接口简单易用，并且在许多嵌入式系统中得到广泛应用。
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 9.2 RTC 使用实例
 ### 9.2.1 原理图
 ![rtc-sch](/img/general-tutorial/interface-usage/rtc-sch.jpg)
+
+<div className="armsom-image-caption">rtc-sch</div>
+
 
 :::tip
 - ArmSoM产品上已经有时钟芯片，接上rtc电源即可
@@ -92,6 +101,8 @@ root@armsom-sige5:/home/armsom# sudo i2cdetect -y 2
 ```
 
 可以看到I2C总线/dev/i2c-6上挂载了一个有效的I2C设备:RTC,其地址为0x51。
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 9.3  RTC测试
 Linux系统下包含两个时间：系统时间和RTC时间。

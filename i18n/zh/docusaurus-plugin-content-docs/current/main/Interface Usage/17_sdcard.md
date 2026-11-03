@@ -11,6 +11,10 @@ sidebar_position: 17
 
 本文将从存储系统架构角度，对armsom板卡的硬盘分类及管理进行系统性梳理
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">17.1 存储系统概述</a><a href="#doc-section-2">17.2 存储类型详解</a><a href="#doc-section-3">17.3 存储设备识别与查看</a><a href="#doc-section-4">17.4 存储设备分区与格式化</a><a href="#doc-section-5">17.5 存储设备自动挂载配置</a><a href="#doc-section-6">17.6 常用存储管理命令</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 17.1 存储系统概述
 ArmSoM 板卡采用分级存储架构，包含四个层次：
 * 主存储(eMMC) 系统盘
@@ -27,6 +31,8 @@ ArmSoM 板卡采用分级存储架构，包含四个层次：
 | NVMe SSD | /dev/nvme0n1         | M.2 PCIe |
 | U盘 | /dev/sda        | USB接口 |
 
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 17.2 存储类型详解
 这里以ArmSoM Sige7 板卡为例讲解。
@@ -93,6 +99,8 @@ U盘设备节点：
 └─/dev/sdb1
 ```
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 17.3 存储设备识别与查看
 
 查看所有存储设备:
@@ -123,6 +131,8 @@ sudo fdisk -l /dev/mmcblk0
 sudo fdisk -l /dev/nvme0n1
 sudo fdisk -l /dev/sda
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 17.4 存储设备分区与格式化
 
@@ -164,6 +174,8 @@ sudo mkfs.ntfs -f /dev/mmcblk1p1
 ```
 sudo mkfs.exfat /dev/mmcblk1p1
 ```
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 17.5 存储设备自动挂载配置
 
@@ -236,8 +248,13 @@ sudo mount -a
 df -h
 ```
 
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## 17.6 常用存储管理命令
 下面总结了一些常用的磁盘管理命令参考：
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```
 # 查看所有存储设备
 lsblk
@@ -273,3 +290,6 @@ sudo umount /mnt/sd
 # 检查并修复文件系统
 sudo fsck.ext4 -f /dev/mmcblk1p1
 ```
+
+</details>
+

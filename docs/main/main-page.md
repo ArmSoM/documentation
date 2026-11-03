@@ -19,7 +19,7 @@ slug: /
     </div>
     <div class="armsom-proof"><span><strong>6 TOPS</strong> edge AI</span><span><strong>8K</strong> multimedia</span><span><strong>Open</strong> hardware resources</span></div>
   </div>
-  <div class="armsom-hero__visual"><img src="./img/banana.jpg" alt="ArmSoM open-source hardware platforms" /></div>
+  <div class="armsom-hero__visual"><img src="/img/banana.jpg" alt="ArmSoM open-source hardware platforms" /></div>
 </section>
 
 

@@ -16,6 +16,10 @@ armsom-sdk是基于Ubuntu系统开发测试的，在开发过程中，主要是�
 PC系统默认使用Win11，在使用RockChip的烧录工具时需要使用到Windows系统。
 硬件配置推荐：64位系统，硬盘空间⼤于80G。如果您进⾏多个构建，将需要更⼤的硬盘空间。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">2.1 安装SDK依赖的软件包</a><a href="#doc-section-2">2.2 安装repo</a><a href="#doc-section-3">2.3 Git配置</a><a href="#doc-section-4">2.4 切换Python 3</a><a href="#doc-section-5">4.1 使用repo更新整个SDK</a><a href="#doc-section-6">4.2 使用Git更新单独的源码仓库</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 2.1 安装SDK依赖的软件包
 安装SDK构建所需要的软件包，整体复制下面内容到终端中安装：
 ```
@@ -28,6 +32,8 @@ libmpc-dev bc python-is-python3 python3-pip python2 u-boot-tools curl \
 python3-pyelftools dpkg-dev
 ```
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 2.2 安装repo
 armsom-sdk是⽤repo来下载、管理项⽬的软件仓库
 ```
@@ -39,12 +45,16 @@ source ~/.bashrc
 ```
 执行完上面的命令后来验证`repo -v`是否安装成功能正常运行
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 2.3 Git配置
 设置自己的git信息，以确保后续拉取代码时正常进行，如果不需要提交代码的话可以随意设置用户名和邮箱地址
 ```
 git config --global user.name "your name"
 git config --global user.email "your mail"
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 2.4 切换Python 3
 `#查看当前Python版本
@@ -61,6 +71,9 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 python -V
 ```
 ![python](/img/advanced_manual/armsom-build/python.png)
+
+<div className="armsom-image-caption">python</div>
+
 
 # 3. SDK源码获取
 armsom-sdk的代码被划分为了若干git仓库分别进行版本管理， 可以使用repo工具对这些git仓库进行统一的下载，提交，切换分支等操作。
@@ -80,6 +93,8 @@ ubuntu24.04仓库开启了git-lfs 管理大文件，执行`git lfs pull`才能�
 
 # 4. SDK更新
 我们会对armsom-sdk不断更新，将修改的内容实时同步到Github，欢迎广大开发爱好者共同来管理维护开源代码， 需要在本地同步更新内容，则可以借助repo或git来实现
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 4.1 使用repo更新整个SDK
 首先要更新.repo/manifests，里面保存了repo的配置文件，记录了仓库的版本信息。
@@ -102,6 +117,8 @@ sudo apt install git-lfs
 # 同步远端仓库
 .repo/repo/repo sync -c  -j1 --fail-fast
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 4.2 使用Git更新单独的源码仓库
 有时只想更新某个仓库，而不是去更新整个SDK。 或者已经对SDK的某些仓库做出了修改，使用repo同步的话就会失败。 此时就需要对单个仓库进行更新了
@@ -126,6 +143,9 @@ git pull
 
 当选择完配置文件以后，会使用粉色提示字体提示当前配置文件所用的内核版本
 ![build](/img/advanced_manual/armsom-build/build.png) 
+
+<div className="armsom-image-caption">build</div>
+
 
 之后一键编译u-Boot，kernel，Rootfs并打包为update.img镜像
 
@@ -185,12 +205,21 @@ Linux内核的配置系统由三个部分组成，分别是：
 make menuconfig KCONFIG_CONFIG=arch/arm64/configs/armsom_linux_rk3588_defconfig ARCH=arm64
 ```
 ![11](/img/advanced_manual/armsom-build/11.png)
+
+<div className="armsom-image-caption">11</div>
+
 我们选择配置板卡的hym8563驱动，在英文输入法状态下按下”/”则可以进行搜索，输入”8563”找到改配置选项的位置：
 ![12](/img/advanced_manual/armsom-build/12.png)
+
+<div className="armsom-image-caption">12</div>
+
 按下 "1" 直接可以定位到对应的选项， 然后按空格选中内容即可。
 
 修改完成后，选择右下角Save进行保存， 注意不要保存到原路径，而是保存到.config ，然后使用以下命令来保存defconfig文件并覆盖原来的配置文件
 ![13](/img/advanced_manual/armsom-build/13.png)
+
+<div className="armsom-image-caption">13</div>
+
 ```
 #保存defconfig文件
 make savedefconfig ARCH=arm64

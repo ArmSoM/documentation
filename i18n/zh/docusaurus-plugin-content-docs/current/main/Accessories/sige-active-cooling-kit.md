@@ -15,15 +15,27 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 请注意，Sige DIY Case 1 和 Sige Active Cooling Kit 不能一起使用。
 :::
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">散热器</a><a href="#doc-section-2">兼容性</a><a href="#doc-section-3">3505S冷却风扇</a><a href="#doc-section-4">文件</a><a href="#doc-section-5">安装介绍</a><a href="#doc-section-6">产品证书</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 散热器
 
 ![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
 
+<div className="armsom-image-caption">sige-active-cooling-fan-real</div>
+
+
 ![sige-heatsink](/img/accessories/sige-heatsink.png)
+
+<div className="armsom-image-caption">sige-heatsink</div>
+
 
 - 材质：AL6063-T5
 - 工艺：喷砂 + 氧化亮黑
 - 重量：30g
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 兼容性
 
@@ -32,9 +44,14 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 - Sige5 2mm散热垫
 - Sige7 1mm散热垫
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 3505S冷却风扇
 
 ![sige-active-cooling-fan](/img/accessories/sige-active-cooling-fan.png)
+
+<div className="armsom-image-caption">sige-active-cooling-fan</div>
+
 
 
 ### 详细规格
@@ -84,6 +101,9 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 ![cooling-kit-air-flow](/img/accessories/cooling-kit-air-flow.png)
 
+<div className="armsom-image-caption">cooling-kit-air-flow</div>
+
+
 ### 其他参数
 
 - 运行温度：-10℃ ~50℃为正常温
@@ -93,6 +113,8 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
     - PIN 1: 蓝色导线(BLUE WIRED)---(PWM) 
     - PIN 2: 黑色导线(BLACK WIRED)---(-) 
     - PIN 3: 红色导线(RED WIRED)---(+)  
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 文件
 <div class="cards">
@@ -108,15 +130,22 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
     </a>
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 安装介绍
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 产品证书
 
 ### CE / FCC / RoHS
 
 ![sige-cooling-ce-fc-rohs](/img/accessories/sige-cooling-ce-fc-rohs.webp)
+
+<div className="armsom-image-caption">sige-cooling-ce-fc-rohs</div>
+
 
 ## 样品购买
 

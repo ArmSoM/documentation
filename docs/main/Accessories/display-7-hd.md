@@ -20,13 +20,23 @@ This TFT LCD features a **7.0-inch diagonally measured active display area** wit
 Ideal for interactive projects such as tablets, entertainment systems, and information dashboards.
 
 ![armsom-display-10hd](/img/accessories/armsom-display-7hd.png)
+
+<div className="armsom-image-caption">armsom-display-10hd</div>
+
 ![armsom-display-10hd-back](/img/accessories/armsom-display-7hd-b.png)
+
+<div className="armsom-image-caption">armsom-display-10hd-back</div>
+
 
 
 ### Compatibility
 - Forge1
 - AIM7
 - CM1
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Display Panel Specifications</a><a href="#doc-section-2">Resources</a><a href="#doc-section-3">Purchase Samples</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
 
 ## Display Panel Specifications
 
@@ -56,6 +66,8 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
 - **Storage Temperature:** -20°C ~ 60°C  
 - **Weight:** 141.5 / g  
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Resources
 <div class="cards">
     <a href="https://drive.google.com/file/d/1UsFckLnyqX01MbFFhEDX51pvf0e5WaRK/view?usp=drive_link" class="card-link">
@@ -79,6 +91,8 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
         </div>
     </a>
 </div>
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## Purchase Samples
 ArmSoM Official Site: [https://www.armsom.org/product-page/armsom-display-7-hd](https://www.armsom.org/product-page/armsom-display-7-hd)

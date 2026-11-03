@@ -12,6 +12,10 @@ toc_max_heading_level: 4
 
 # Product Introduction: AIM7
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Product Certificate</a><a href="#doc-section-6">Supply Statement</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Overview
 
 ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit processor with a main frequency of up to 2.4GHz, 6 TOPS computing power NPU, and can be equipped with up to 32GB of large memory. While the interface is fully compatible with Jetson Nano, the PCIe interface has been upgraded to PCIe3.0 4-lane and PCIe2.1 1-lan.
@@ -21,6 +25,9 @@ ArmSoM-AIM7 uses Rockchip RK3588, a new generation flagship eight-core 64-bit pr
 :::
 
 ![ArmSoM-AIM7](/img/aim/aim7.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM7</div>
+
 
 AIM7 can be applied to ARM PC, edge computing, cloud server, artificial intelligence, cloud computing, virtual/augmented reality, blockchain, smart NVR and other fields.
 
@@ -55,6 +62,8 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - weight: 17.3g
 - Size: 69.6 mm x 45 mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./aim-family-started" class="card-link">
@@ -69,11 +78,16 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## Hardware
 
 ### Hardware Interface
 
 ![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM7-front &amp; back</div>
+
 
 :::tip
 AIM7 features a 260-pin SO-DIMM form factor designed for compatibility with selected NVIDIA Jetson carrier boards. Pin functions, power requirements, and peripheral compatibility should be verified against the AIM7 pinout and validated carrier board configurations.
@@ -82,9 +96,15 @@ AIM7 features a 260-pin SO-DIMM form factor designed for compatibility with sele
 ### AIM7 Block Diagram
 ![aim7-product](/img/aim/aim7-product.jpg)
 
+<div className="armsom-image-caption">aim7-product</div>
+
+
 ### Pin Definition
 
 ![ArmSoM-aim7-pinlist](/img/aim/aim7-pinlist.png)
+
+<div className="armsom-image-caption">ArmSoM-aim7-pinlist</div>
+
 
 <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>ArmSoM-AIM7 & Jetson AIM Comparison Table</span>
@@ -814,6 +834,8 @@ Table 16. i2s pin descriptions
 </details>
 
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## Resources
 
 ### Source Code
@@ -966,9 +988,13 @@ Download link:
 </div>
 <br/>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Product Certificate
 
 ### CE / FCC / RoHS
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Supply Statement
 

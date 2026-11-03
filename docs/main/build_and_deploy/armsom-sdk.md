@@ -16,6 +16,10 @@ ArmSom-SDK is developed and tested based on the Ubuntu system. During the develo
 The PC system defaults to Windows 11, and when using RockChip's flashing tools, the Windows system is required.
 Recommended hardware configuration: 64-bit system, hard disk space larger than 80GB. If you perform multiple builds, larger hard disk space will be required.
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">2.1 Install SDK Dependent Software Packages</a><a href="#doc-section-2">2.2 Install repo</a><a href="#doc-section-3">2.3 Git Configuration</a><a href="#doc-section-4">2.4 Switch to Python 3</a><a href="#doc-section-5">4.1 Update Entire SDK Using repo</a><a href="#doc-section-6">4.2 Update Individual Source Code Repositories Using Git</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 2.1 Install SDK Dependent Software Packages
 Install the software packages required for SDK build. Copy the following content entirely into the terminal for installation:
 ```
@@ -28,6 +32,8 @@ libmpc-dev bc python-is-python3 python3-pip python2 u-boot-tools curl \
 python3-pyelftools dpkg-dev
 ```
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 2.2 Install repo
 ArmSom-SDK uses repo to download and manage project software repositories.
 ```
@@ -39,12 +45,16 @@ source ~/.bashrc
 ```
 After executing the above commands, verify that `repo -v` is installed successfully and runs normally.
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 2.3 Git Configuration
 Set your own git information to ensure normal code pulling in subsequent steps. If you don't need to submit code, you can set any username and email address.
 ```
 git config --global user.name "your name"
 git config --global user.email "your mail"
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 2.4 Switch to Python 3
 If the returned version number is Python3, no further Python version switching is needed. If it is Python2 version or no python is found, you can switch using the following method:
@@ -71,12 +81,17 @@ repo init -u https://github.com/ArmSoM/manifests.git -b linux -m armsom_linux_ge
 ```
 ![python](/img/advanced_manual/armsom-build/python.png)
 
+<div className="armsom-image-caption">python</div>
+
+
 :::tip
 The ubuntu24.04 repository has enabled git-lfs for managing large files. You can only pull the complete code by executing `git lfs pull`
 :::
 
 # 4. SDK Updates
 We continuously update ArmSom-SDK and synchronize modified content to GitHub in real-time. We welcome all development enthusiasts to jointly manage and maintain the open-source code. If you need to synchronize updated content locally, you can use repo or git to achieve this.
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 4.1 Update Entire SDK Using repo
 First, update .repo/manifests, which contains repo configuration files and records repository version information.
@@ -96,6 +111,8 @@ cd ~/armsom-sdk
 # Synchronize remote repositories
 .repo/repo/repo sync -c
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 4.2 Update Individual Source Code Repositories Using Git
 Sometimes you only want to update a specific repository rather than the entire SDK. Or if you have already modified some SDK repositories, using repo synchronization will fail. In such cases, you need to update individual repositories.
@@ -120,6 +137,9 @@ Execute the following command to select configuration chip and configuration fil
 
 After selecting the configuration file, pink prompt text will indicate the kernel version used by the current configuration file.
 ![build](/img/advanced_manual/armsom-build/build.png)
+
+<div className="armsom-image-caption">build</div>
+
 
 One-click compilation of U-Boot, kernel, Rootfs and packaging into update.img image:
 
@@ -179,12 +199,21 @@ To customize the configuration file, you can modify the definition of RK_KERNEL_
 make menuconfig KCONFIG_CONFIG=arch/arm64/configs/armsom_linux_rk3588_defconfig ARCH=arm64
 ```
 ![11](/img/advanced_manual/armsom-build/11.png)
+
+<div className="armsom-image-caption">11</div>
+
 We choose to configure the hym8563 driver for the board. Pressing "/" while in English input mode allows for searching. Enter "8563" to locate the configuration option:
 ![12](/img/advanced_manual/armsom-build/12.png)
+
+<div className="armsom-image-caption">12</div>
+
 Press "1" to directly jump to the corresponding option, then press the spacebar to select the content.
 
 After modification, select "Save" in the bottom right corner. Note: Do not save to the original path. Instead, save to .config. Then use the following commands to save the defconfig file and overwrite the original configuration file.
 ![13](/img/advanced_manual/armsom-build/13.png)
+
+<div className="armsom-image-caption">13</div>
+
 ```
 #Save the defconfig file
 make savedefconfig ARCH=arm64

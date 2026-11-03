@@ -14,6 +14,10 @@ toc_max_heading_level: 4
 
 CM5-IO是 ArmSoM CM5的 IO 板，尺寸为 100x80x29 毫米，它是一款专为创客、学习者和开发者设计的微型 AI 计算机，能够快速将 AI 技术应用于各种智能设备。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">硬件信息</a><a href="#doc-section-2">开发资料</a><a href="#doc-section-3">使用手册</a><a href="#doc-section-4">接口使用</a><a href="#doc-section-5">样品购买</a><a href="#doc-section-6">专家视角</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件规格
@@ -38,6 +42,9 @@ CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统�
 ### 硬件接口
 
 ![ArmSoM-CM5-IO](/img/cm/cm5-io-layout.png)
+
+<div className="armsom-image-caption">ArmSoM-CM5-IO</div>
+
 
 :::tip
 CM5-IO Board 使用12V DC供电。
@@ -128,6 +135,8 @@ CM5-IO Board 使用12V DC供电。
 |  4   |    VC4     |     RX2     |
 
 </details>
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -265,6 +274,8 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 </a>
 </div>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 使用手册
 
 在开始使用 CM5-IO 之前，请准备好以下物品。
@@ -320,6 +331,8 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 </div>
 
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 接口使用
 
 如果您是首次使用 CM5 Kit，请先熟悉下各产品[硬件接口](./armsom-cm5-io#硬件接口)，以便于您更好的理解后续的内容。
@@ -329,6 +342,9 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 如下所示连接 USB 转 TTL 串口线：
 
 ![cm5io-debug](/img/cm/cm5io-debug.png)
+
+<div className="armsom-image-caption">cm5io-debug</div>
+
 
 | CM5-IO       | 连接  | 串口模块 |
 | --------------- | ----- | ------ |
@@ -418,6 +434,9 @@ root@armsom-cm5:/# nmcli dev wifi connect "wifi_name" password "wifi_password"
 
 ![wifi-nmcli-scan](/img/general-tutorial/wifi-nmcli-scan.png)
 
+<div className="armsom-image-caption">wifi-nmcli-scan</div>
+
+
 3. 使用 nmcli 命令连接扫描到的 WIFI
 
  - wifi_name 换成需要连接的 WIFI 热点的名字
@@ -466,6 +485,9 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
+<div className="armsom-image-caption">wifi-nmcli</div>
+
+
 ```
 root@armsom-cm5:~$ nmtui
 ```
@@ -474,9 +496,15 @@ root@armsom-cm5:~$ nmtui
 
 ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
 
+<div className="armsom-image-caption">wifi-nmcli-connect</div>
+
+
 4. 选择想要连接的 WIFI 热点，输入密码。WIFI 连接成功后会在已连接的 WIFI 名称前显示一个“*”
 
 ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+<div className="armsom-image-caption">wifi-nmcli-success</div>
+
 
 5. 通过 ip addr show wlan0 命令可以查看 wifi 的 IP 地址
 
@@ -511,6 +539,9 @@ round-trip min/avg/max/stddev = 8.370/8.618/8.917/0.203 ms
 2. 连接好 WIFI 后，可以打开浏览器查看是否能上网
 
 ![wifi-desktop-set](/img/general-tutorial/wifi-desktop-set.png)
+
+<div className="armsom-image-caption">wifi-desktop-set</div>
+
 
 **网络设置**
 <div class="cards">
@@ -585,6 +616,9 @@ CM5 Kit 最高支持hdmi 4Kp120
 
 ![sige-hdmi-vga](/img/general-tutorial/sige-hdmi-vga.jpg)
 
+<div className="armsom-image-caption">sige-hdmi-vga</div>
+
+
 :::tip
 使用 HDMI 转 VGA 显示时，CM5 Kit 和Linux系统是不需要做任何设置的，只需要开发板 HDMI 接口能正常显示就可以了。所以如果测试有问题，请检查 HDMI 转 VGA 转换器、VGA 线以及显示器是否有问题。
 :::
@@ -635,6 +669,9 @@ root@armsom-cm5:/# v4l2-ctl --list-devices
 
 ![sige-usb-cam](/img/general-tutorial/sige-usb-cam.jpg)
 
+<div className="armsom-image-caption">sige-usb-cam</div>
+
+
 
 同时，您也可以使用终端命令打开相机预览:
 ```bash
@@ -652,6 +689,9 @@ gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video0 io-mode=4 ! videoconve
 ```
 
 ![armsom-sige7-gst](/img/sige/armsom-sige7-gst.png)
+
+<div className="armsom-image-caption">armsom-sige7-gst</div>
+
 
 ### M.2 Key M
 
@@ -839,6 +879,9 @@ root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=N
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
 
+<div className="armsom-image-caption">armsom-w3-imx415-camera</div>
+
+
 
 #### 使用 Raspberry Pi Camera Module 2
 
@@ -883,6 +926,9 @@ CM5 Kit 分辨率最高分辨率可达 2K@60Hz
 
 ![cm5-io-display-10-hd](/img/cm/cm5-io-display-10-hd.png)
 
+<div className="armsom-image-caption">cm5-io-display-10-hd</div>
+
+
 2. 打开 10.1 寸 MIPI LCD 屏幕配置的方法
 
 - linux 镜像默认是没有打开 mipi lcd 屏幕的配置的，如果需要使用 mipi lcd 屏幕，需要手动打开才行。
@@ -919,6 +965,8 @@ root@armsom-cm5-io:/home/armsom# insmod /usr/lib/modules/6.1.75-vendor-rk35xx/ke
 
 重启设备来更改Overlays设置以支持Display 10 HD。
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 样品购买
 
 ArmSoM 独立站: [https://www.armsom.org/product-page/cm5](https://www.armsom.org/product-page/cm5)
@@ -928,6 +976,8 @@ ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256807679122184.html](h
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=842137173767](https://item.taobao.com/item.htm?id=842137173767)
 
 OEM&ODM,  请联系: sales@armsom.org
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 专家视角
 

@@ -14,11 +14,18 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 Sige7s。
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">使用手册</a><a href="#doc-section-6">产品证书</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 简介
 
 ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，主频高达2.4GHz，集成6 TOPS算力NPU，最大可配32GB大内存。支持8K视频解码与4K编码，拥有丰富接口，支持千兆以太网、WiFi6 & BT5和多种视频输出。支持多种操作系统，可适用于ARM PC、边缘计算、云服务器、人工智能、智能NVR等领域。
 
 ![ArmSoM-sige7s](/img/sige/sige7s-bananer.png)
+
+<div className="armsom-image-caption">ArmSoM-sige7s</div>
+
 
 ### 关键参数
 
@@ -41,6 +48,8 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 - **重量**：46.6g
 - **大小**：85 mm × 56 mm × 17 mm
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Getting started
 
 <a href="./armsom-sige7s#使用手册" class="card-link">
@@ -55,11 +64,16 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
     </div>
 </a>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-Sige7s front & back](/img/sige/armsom-sige7s-layout.jpg)
+
+<div className="armsom-image-caption">ArmSoM-Sige7s front &amp; back</div>
+
 
 ### 硬件规格
 <details>
@@ -164,7 +178,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
       RK3588s框图
     </summary>
         <img
-  src="./img/sige/rk3588s.png"
+  src="/img/sige/rk3588s.png"
   alt="rk3588s block diagram"
   className="session-details-live-video"/>
 </details>
@@ -267,6 +281,8 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 |1          | +         | Positive pole      |
 |2          | -         | Negative pole    |
 </details>
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 开发资料
 
@@ -372,6 +388,8 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 
 获取 Sige7s 原理图、DXF等硬件资料 `网盘路径：ArmSoM->ArmSoM-Sige7s->硬件资料`
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 使用手册
 ### 1. 入门准备
 
@@ -427,17 +445,32 @@ ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到em
 - ArmSoM-sige7s烧录使用USB双公线，一端接板载USB3.0接口，另一端接电脑端，同时接USB Type-C线给开发板供电。                            
 ![armsom-sige7s-burn_image](/img/sige/armsom-sige7s-burn-image.png)   
 
+<div className="armsom-image-caption">armsom-sige7s-burn_image</div>
+
+
 1. 按上述操作连接好以后，我们先安装USB驱动，打开RK驱动助手(DriverAssitant)，执行①②③操作：                      
 ![armsom-sige7s-usb-driver](/img/general-tutorial/armsom-sige7s-usb-driver.png)         
+
+<div className="armsom-image-caption">armsom-sige7s-usb-driver</div>
+
 2. 安装完驱动后，打开烧录工具RKDevTool，观察④处识别为哪种模式，若显示为Maskrom模式或Loader模式，则可以点击①处选择固件，然后点击②处升级，直到右边信息栏显示固件升级完成即可                                                   
 ![armsom-sige7s-rkdevtool](/img/general-tutorial/armsom-sige7s-rkdevtool.png)                            
+
+<div className="armsom-image-caption">armsom-sige7s-rkdevtool</div>
+
 3. 若上面④处显示“发现一个ADB设备”，想要切换为烧录模式，点击图中的③切换，直到显示“切换Rockusb成功”后，
 等待一会，即可看到④处显示为Maskrom模式或Loader模式，此时即可回到第二步升级固件操作                  
 ![armsom-sige7s-returnmode](/img/general-tutorial/armsom-sige7s-returnmode.png)
 
+<div className="armsom-image-caption">armsom-sige7s-returnmode</div>
+
+
 #### 2.2 将固件烧录到SD卡
 - 将SD卡插入SD读卡器，接入电脑后，双击运行SD_Firmware_Tool.exe，执行①②③操作：               
 ![armsom-sige7s-sdflash](/img/general-tutorial/armsom-sige7s-sdflash.png)
+
+<div className="armsom-image-caption">armsom-sige7s-sdflash</div>
+
 
 #### 2.3 擦除SPIFlash
 - 有时可能会遇到固件升级失败或异常、eMMC或SPI Nor Flash中残留的引导数据干扰了新系统的启动时，我们可以尝试先擦除Flash数据来强制设备进入Maskrom模式，然后重新烧录固件，可以按照如下方式操作：                                         
@@ -445,8 +478,14 @@ ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到em
 1. ①打开烧录工具RKDevTool，②选择高级功能，③选择MiniLoaderAll.bin固件，④点击下载，等待下载完成即可
 ![armsom-sige7s-loadbin](/img/general-tutorial/armsom-sige7s-loadbin.png)                   
 
+<div className="armsom-image-caption">armsom-sige7s-loadbin</div>
+
+
 2. ⑤选择存储设备为 SPINOR，⑥点击切换存储，⑦点击擦除所有，等待擦除完毕即可
 ![armsom-sige7s-eraseflash](/img/general-tutorial/armsom-sige7s-eraseflash.png) 
+
+<div className="armsom-image-caption">armsom-sige7s-eraseflash</div>
+
 
 
 ### 3. 接口使用
@@ -461,6 +500,9 @@ ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到em
 如下所示连接 USB 转 TTL 串口线到底板上40pin座子处：
 
 ![armsom-sige7s-debug](/img/sige/armsom-sige7s-debug.jpg)
+
+<div className="armsom-image-caption">armsom-sige7s-debug</div>
+
 
 | Sige7s   | 连接  | 串口模块 |
 | -------- | ----- | ------ |
@@ -567,6 +609,9 @@ armsom@armsom:~$ sudo nmcli dev wifi connect "wifi_name" password "wifi_password
 
 ![wifi-nmcli-scan](/img/general-tutorial/sige6-wifi.png)
 
+<div className="armsom-image-caption">wifi-nmcli-scan</div>
+
+
 3. 使用 nmcli 命令连接扫描到的 WIFI
 
  - wifi_name 换成需要连接的 WIFI 热点的名字
@@ -626,6 +671,9 @@ Connection 'wifi_name' successfully deactivated (D-Bus active path: /org/freedes
 
 ![wifi-nmcli](/img/general-tutorial/wifi-nmcli.png)
 
+<div className="armsom-image-caption">wifi-nmcli</div>
+
+
 ```bash
 armsom@armsom:~$ sudo nmtui
 ```
@@ -634,9 +682,15 @@ armsom@armsom:~$ sudo nmtui
 
 ![wifi-nmcli-connect](/img/general-tutorial/wifi-nmcli-connect.png)
 
+<div className="armsom-image-caption">wifi-nmcli-connect</div>
+
+
 4. 选择想要连接的 WIFI 热点，输入密码。WIFI 连接成功后会在已连接的 WIFI 名称前显示一个“*”
 
 ![wifi-nmcli-success](/img/general-tutorial/wifi-nmcli-success.png)
+
+<div className="armsom-image-caption">wifi-nmcli-success</div>
+
 
 5. 通过 ip addr show wlan0 命令可以查看 wifi 的 IP 地址
 
@@ -676,6 +730,9 @@ rtt min/avg/max/mdev = 160.909/171.260/193.269/13.133 ms
 2. 连接好 WIFI 后，可以打开浏览器查看是否能上网
 
 ![wifi-desktop-sig7s](/img/general-tutorial/wifi-desktop-sig7s.jpg)
+
+<div className="armsom-image-caption">wifi-desktop-sig7s</div>
+
 
 **网络设置**
 <div class="cards">
@@ -736,6 +793,9 @@ hci0:   Type: Primary  Bus: UART
 ```
 
 2. 接下来可以使用bluetoothctl进行蓝牙连接
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
+
 ```bash
 root@localhost:/# bluetoothctl
 Agent registered
@@ -790,11 +850,20 @@ Device 24:2A:EA:61:0F:28 Donleon
 12. 退出
 [Donleon]# exit
 ```
+
+</details>
+
 手机上在蓝牙设置里确认与开发板配对：            
 ![sige7s-bt-pair](/img/general-tutorial/sige7s-bt-pair.png)
 
+<div className="armsom-image-caption">sige7s-bt-pair</div>
+
+
 连接成功后在手机上显示已连接：          
 ![sige7s-bt-connect](/img/general-tutorial/sige7s-bt-connect.png)
+
+<div className="armsom-image-caption">sige7s-bt-connect</div>
+
 
 #### 3.5 HDMI&DP
 sige7s接 HDMI 或 DP 屏，有两种方式可选：
@@ -807,15 +876,27 @@ sige7s接 HDMI 或 DP 屏，有两种方式可选：
 - 使用一根Micro HDMI 转 HDMI 母线（需要再接一根双HDMI线）               
 ![sige7s-MicroHDMI-a](/img/general-tutorial/sige7s-MicroHDMI-a.jpg)
 
+<div className="armsom-image-caption">sige7s-MicroHDMI-a</div>
+
+
 - 使用一根Micro HDMI 转 HDMI 公线（可直接接HDMI屏）                              
 ![sige7s-MicroHDMI-b](/img/general-tutorial/sige7s-MicroHDMI-b.jpg)
+
+<div className="armsom-image-caption">sige7s-MicroHDMI-b</div>
+
 
 ##### 2. 使用 Mini DP 线连接sige7s的 DP out接口 和 HDMI 显示器或 DP 显示器 :
 - 使用一根主动式 Mini DP 转 HDMI公线（可直接接HDMI屏）                                                              
 ![sige7s-MiniDP-a](/img/general-tutorial/sige7s-MiniDP-a.jpg)
 
+<div className="armsom-image-caption">sige7s-MiniDP-a</div>
+
+
 - 使用一根 Mini DP 转 DP 母线（需要再接一根双DP线）                                                                            
 ![sige7s-MiniDP-b](/img/general-tutorial/sige7s-MiniDP-b.jpg)
+
+<div className="armsom-image-caption">sige7s-MiniDP-b</div>
+
 
 ##### 3. 启动 linux 系统后如果显示器有图像输出说明 HDMI 和 DP 接口使用正常
 
@@ -1095,6 +1176,9 @@ imx219摄像头接开发板的MIPI-CSI接口，如图所示：
 
 ![armsom-sige7s-mipi-csi](/img/lm/armsom-sige7s-mipi-csi.png)
 
+<div className="armsom-image-caption">armsom-sige7s-mipi-csi</div>
+
+
 1. 系统默认关闭摄像头功能，若要打开，需要按如下操作打开MIPI-CSI摄像头overlay
 ```bash
 root@armsom:~# vi /boot/uEnv/uEnvarmsom-sige7s.txt
@@ -1139,6 +1223,9 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 
 ![armsom-sige7s-raw](/img/lm/armsom-sige7s-isp.jpg)
 
+<div className="armsom-image-caption">armsom-sige7s-raw</div>
+
+
 #### 3.14 MIPI DSI
 
 ArmSoM-Sige7s MIPI DSI接口适配微雪（兼容树莓派）7寸屏，参考购买链接：           
@@ -1151,6 +1238,9 @@ https://item.taobao.com/item.htm?id=646210381978
   使用GPIO电源线连接屏幕③5V&GND接口处和④sige7s 40pin中5V&GND引脚，如pin4和pin6（如果这里pin6被使用，那么串口GND引脚需要接其他GND引脚）
 
 ![sige7s-display-7-hd](/img/general-tutorial/display-7-hd-sige7s.jpg)
+
+<div className="armsom-image-caption">sige7s-display-7-hd</div>
+
 
 ##### 2. 系统默认关闭MIPI-DSI屏幕,若要打开，需要按如下操作打开LCD显示屏overlay
 ```bash
@@ -1168,6 +1258,9 @@ overlay生效后，观察LCD屏幕是否显示并进入桌面
 ##### 定频
 ###### CPU 定频
 ArmSoM-Sige7s 的cpu是4个A55+4个A76，分为3组单独管理，节点分别是：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 armsom@armsom:~$ ls /sys/devices/system/cpu/cpufreq/policy0  （对应4个A55：CPU0-3）
@@ -1200,6 +1293,9 @@ armsom@armsom:~$ cat /sys/devices/system/cpu/cpufreq/policy6/scaling_available_g
 interactive conservative ondemand userspace powersave performance schedutil 
 //默认是按需调频模式：ondemand（恢复的话设置为该模式即可）
 ```
+
+</details>
+
 **<font color='red'>注意：以下操作切换为root用户执行</font>**
 
 ###### 设置手动定频
@@ -1297,11 +1393,16 @@ root@armsom:~# echo performance > /sys/class/devfreq/dmc/governor
 root@armsom:~# echo performance > /sys/class/devfreq/fdab0000.npu/governor
 ```
 
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## 产品证书
 
 ### CE / FCC / RoHS
 
 ![sige7-sige7-ce-fc-rohs](/img/sige/sige7-ce-fc-rohs.jpeg)
+
+<div className="armsom-image-caption">sige7-sige7-ce-fc-rohs</div>
+
 
 ## 供货声明
 

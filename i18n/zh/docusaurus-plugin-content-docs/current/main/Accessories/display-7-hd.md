@@ -22,12 +22,22 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 可用于平板电脑、娱乐系统和信息仪表板等交互式项目。
 
 ![armsom-display-10hd](/img/accessories/armsom-display-7hd.png)
+
+<div className="armsom-image-caption">armsom-display-10hd</div>
+
 ![armsom-display-10hd-back](/img/accessories/armsom-display-7hd-b.png)
+
+<div className="armsom-image-caption">armsom-display-10hd-back</div>
+
 
 ### 兼容性
 - Forge1
 - AIM7
 - CM1
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">显示面板规格参数</a><a href="#doc-section-2">Resources</a><a href="#doc-section-3">样品购买</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
 
 ## 显示面板规格参数
 
@@ -58,6 +68,8 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 - **重量 (Weight):** 141.5 / g 
 
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## Resources
 <div class="cards">
     <a href="https://pan.baidu.com/s/1qtsYXoZeXkcMNA83zKzHXA?pwd=arms" class="card-link">
@@ -81,6 +93,8 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
         </div>
     </a>
 </div>
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-7-hd](https://www.armsom.org/product-page/armsom-display-7-hd)

@@ -15,15 +15,27 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 :::
 
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Heatsink</a><a href="#doc-section-2">Compatibility</a><a href="#doc-section-3">3505S Cooling Fan</a><a href="#doc-section-4">Documents</a><a href="#doc-section-5">Assembly Instructions</a><a href="#doc-section-6">Product Certificates</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Heatsink
 
 ![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
 
+<div className="armsom-image-caption">sige-active-cooling-fan-real</div>
+
+
 ![sige-heatsink](/img/accessories/sige-heatsink.png)
+
+<div className="armsom-image-caption">sige-heatsink</div>
+
 
 - Material: AL6063-T5
 - Finish: Sandblasting + Oxidized Glossy Black
 - ​​Weight: 30g​
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Compatibility
 
@@ -32,9 +44,14 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 - Sige5 2mm Thermal Pad
 - Sige7 1mm Thermal Pad
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 3505S Cooling Fan
 
 ![sige-active-cooling-fan](/img/accessories/sige-active-cooling-fan.png)
+
+<div className="armsom-image-caption">sige-active-cooling-fan</div>
+
 
 ### Detailed Specifications
 
@@ -83,6 +100,9 @@ After continuous operation at a specified constant temperature, the average life
 
 ![cooling-kit-air-flow](/img/accessories/cooling-kit-air-flow.png)
 
+<div className="armsom-image-caption">cooling-kit-air-flow</div>
+
+
 ### Other Parameters
 
 - Operating Temperature: Normal operation between -10°C to 50°C
@@ -92,6 +112,8 @@ After continuous operation at a specified constant temperature, the average life
     - PIN 1: Blue Wire (BLUE WIRED) --- (PWM)
     - PIN 2: Black Wire (BLACK WIRED) --- (-)
     - PIN 3: Red Wire (RED WIRED) --- (+)
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## Documents
 
@@ -108,15 +130,22 @@ After continuous operation at a specified constant temperature, the average life
     </a>
 </div>
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## Assembly Instructions
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## Product Certificates
 
 ### CE / FCC / RoHS
 
 ![sige-cooling-ce-fc-rohs](/img/accessories/sige-cooling-ce-fc-rohs.webp)
+
+<div className="armsom-image-caption">sige-cooling-ce-fc-rohs</div>
+
 
 ## Purchase Samples 
 

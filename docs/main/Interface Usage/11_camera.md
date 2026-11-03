@@ -19,6 +19,10 @@ The MIPI-CSI interface consists of the following components:
 - MIPI-CSI Transmitter (CSI-Transmitter): Located on the camera, the transmitter sends image data to the processor.
 - MIPI-CSI standards support different data rates, depending on the specific implementation (such as MIPI-CSI2 or MIPI-CSI3).
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">11.1 Camera Usage Example</a><a href="#doc-section-2">11.2 RK3588 Hardware Path Block Diagram</a><a href="#doc-section-3">11.3 RK3588 Camera Path:</a><a href="#doc-section-4">11.4 Link Analysis:</a><a href="#doc-section-5">11.5 Check Camera Information</a><a href="#doc-section-6">11.6 Preview camera</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 11.1 Camera Usage Example
 
 ### 11.1.1 Camera Pins
@@ -28,6 +32,9 @@ ArmSoM products with MIPI-CSI support are compatible with the [ArmSoM camera-mod
 In ArmSoM products, the MIPI-CSI pin 1 connects to pin 1 of the camera module.
 
 ![cm5-camera](/img/general-tutorial/interface-usage/cm5-camera.png)
+
+<div className="armsom-image-caption">cm5-camera</div>
+
 
 ### 11.1.2 Enabling Camera Communication Interface
 
@@ -91,13 +98,20 @@ armsom@armsom:~$ dmesg | grep ov13850
 [    3.619848] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 11.2 RK3588 Hardware Path Block Diagram
 
 ![rockchip-camera-hardware-phy](/img/general-tutorial/interface-usage/camera-hardware-phy.png)
 
+<div className="armsom-image-caption">rockchip-camera-hardware-phy</div>
+
+
 - The RK3588 supports 2 ISP hardware modules, and each ISP device can virtualize multiple virtual nodes. The software reads the image data from DDR for each path in turn and processes it through the ISP. For multi-camera solutions, it is recommended to evenly distribute the data flow to the two ISPs.
 
 - Readback: refers to the data being collected into DDR after going through VICAP, and after the application obtains the data, the buffer address is pushed to the ISP, and then the ISP obtains the image data from DDR.
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 11.3 RK3588 Camera Path:
 
@@ -111,9 +125,17 @@ armsom@armsom:~$ dmesg | grep ov13850
 **The following diagram shows the RK3588 camera connection link, which can support up to 7 cameras.**
 ![rockchip-camera-entity](/img/general-tutorial/interface-usage/camera-entity.png)
 
+<div className="armsom-image-caption">rockchip-camera-entity</div>
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 11.4 Link Analysis:
 
 ![rockchip-camera-entity-single](/img/general-tutorial/interface-usage/camera-entity-single.png)
+
+<div className="armsom-image-caption">rockchip-camera-entity-single</div>
+
 
 - In the figure: mipi camera2---> <font color="red" size="3">csi2_dphy1</font> ---> mipi2_csi2 ---> rkcif_mipi_lvds2--->rkcif_mipi_lvds2_sditf --->rkisp0_vir2
 
@@ -130,6 +152,8 @@ armsom@armsom:~$ dmesg | grep ov13850
 The link relationship between each vicap node and the ISP is indicated by the XXX_sditf node that is virtually created to correspond to that relationship.
 :::
 
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 11.5 Check Camera Information
 
@@ -174,6 +198,9 @@ armsom@armsom:~$ grep "" /sys/class/video4linux/v*/name | grep mainpath
 In the ArmSoM-Sige5, the dual-camera nodes are: video22 and video31.
 
 ### 11.5.4 Find All Camera Devices
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 armsom@armsom:~$ v4l2-ctl --list-devices
@@ -236,6 +263,9 @@ rkisp_mainpath (platform:rkisp1-vir1):
         /dev/media3
 ```
 
+</details>
+
+
 Here, `/dev/video22` and `/dev/video31` are the camera devices.
 
 ### 11.5.5 Check Supported Formats for Preview
@@ -264,6 +294,9 @@ ioctl: VIDIOC_ENUM_FMT
 ```
 
 ### 11.5.6 View All Device Information
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 root@armsom:/# v4l2-ctl --all --device /dev/video22
@@ -322,6 +355,9 @@ Image Processing Controls
                      pixel_rate 0x009f0902 (int64)  : min=0 max=1000000000 step=1 default=1000000000 value=120000000 flags=read-only, volatile
 ```
 
+</details>
+
+
 ### 11.5.7 Switch to other resolutions
 
 OV13850 supports multiple resolutions of output, default is 2112/1568. Now change the output resolution to 4224x3136.
@@ -347,6 +383,11 @@ This way, you can use ISP to process the yuv file with good results
 
 ![rockchip-camera-gts](/img/general-tutorial/interface-usage/camera-gts.png)
 
+<div className="armsom-image-caption">rockchip-camera-gts</div>
+
+
+<span id="doc-section-6" className="armsom-section-anchor" />
+
 ## 11.6 Preview camera
 The following command formats, resolutions, and frame rates can be modified according to actual needs:
 ```bash
@@ -366,6 +407,9 @@ gst-launch-1.0 v4l2src device=/dev/video31 ! \
 Customers can develop camera-related applications according to their needs. Below is an example of a dual-camera application developed using QT:
 
 ![rockchip-camera-two](/img/general-tutorial/interface-usage/camera-two.png)
+
+<div className="armsom-image-caption">rockchip-camera-two</div>
+
 
 :::tip
 Currently, the Armbian system does not support 3A services, so ISP correction for camera image calibration cannot be activated. Customers who require camera functionality can use the Debian system, which is officially supported by Rockchip. If a camera is not supported by Debian, customers can contact ArmSoM official support for assistance.

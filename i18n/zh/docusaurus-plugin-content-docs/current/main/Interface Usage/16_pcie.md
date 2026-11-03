@@ -8,6 +8,10 @@ sidebar_position: 16
 ---
 
 # 16. PCIe 使用
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">16.1 PCIe 简介</a><a href="#doc-section-2">16.2 RK3588的PCIe控制器</a><a href="#doc-section-3">16.3 RK3588 DTS配置</a><a href="#doc-section-4">16.4 PCIe设备使用方法</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 16.1 PCIe 简介
 PCIe（Peripheral Component Interconnect Express）是一种用于连接主板和外部设备的高速串行接口标准。它是 PCI 技术的后继者，旨在提供更高的带宽和更好的性能。
 
@@ -19,6 +23,8 @@ PCIe（Peripheral Component Interconnect Express）是一种用于连接主板�
 
 综上所述，PCIe 是一种高速、灵活且广泛应用的串行接口标准，它在现代计算机系统中发挥着关键作用，为连接各种外部设备提供了可靠的解决方案。
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 16.2 RK3588的PCIe控制器
 - RK3588共有5个PCIe的控制器，硬件IP是⼀样的，配置不⼀样，其中⼀个4Lane DM模式可以⽀持作为EP
 使⽤，另外⼀个2Lane和3个1Lane控制器均只能作为RC使⽤。
@@ -28,9 +34,17 @@ PCIe（Peripheral Component Interconnect Express）是一种用于连接主板�
 完成，⽆需修改驱动。
 ![pcie-control](/img/general-tutorial/interface-usage/pcie-control.png)
 
+<div className="armsom-image-caption">pcie-control</div>
+
+
 RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应关系如图：
 
 ![pcie-node](/img/general-tutorial/interface-usage/pcie-node.png)
+
+<div className="armsom-image-caption">pcie-node</div>
+
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 16.3 RK3588 DTS配置
 ### 16.3.1 ArmSoM-W3上的PCIe接口
@@ -39,9 +53,15 @@ RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应
 
 ![pcie-armsom-w3](/img/general-tutorial/interface-usage/pcie-armsom-w3.png)
 
+<div className="armsom-image-caption">pcie-armsom-w3</div>
+
+
 ###  3.2 ArmSoM-W3开发板PCie相关的DTS配置：
 一般根据原理图在 DTS 中配置PCie的供电引脚、复位引脚，选择正确的 pcie 控制器节点以及 PHY 节点使能。
 - 在kernel/arch/arm64/boot/dts/rockchip/rk3588-armsom-w3.dts中配置如下：
+
+
+<details className="armsom-long-code"><summary>展开完整代码 / 命令与输出（原文保留）</summary>
 
 ```bash
 / {
@@ -126,6 +146,9 @@ RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应
 };
 ```
 
+</details>
+
+
 - pcie30phy、combphy1_ps：PHY 节点
 	
 - pcie3x4、pcie2x1l0、 pcie2x1l2 ：pcie控制器节点
@@ -134,6 +157,8 @@ RK3588 PCIe 的硬件资源及软件上 pcie 控制器节点、 PHY 节点对应
 	
 - vcc3v3_pcie2x1l0、vcc3v3_pcie2x1l2、vcc3v3_pcie30：供电引脚节点
   
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 16.4 PCIe设备使用方法
 执行`lspci`命令会列出所有PCI设备的信息，包括设备的制造商、型号、PCI地址等。输出通常以文本形式提供，并按总线地址（BDF：Bus, Device, Function）的顺序排列。
 

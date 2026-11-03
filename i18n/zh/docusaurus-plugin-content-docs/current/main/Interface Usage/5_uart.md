@@ -7,6 +7,10 @@ slug: /interface-usage/uart
 sidebar_position: 5
 ---
 # 5. UART 使用
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">5.1 UART 简介</a><a href="#doc-section-2">5.2 UART 使用实例</a><a href="#doc-section-3">5.3 控制台串口</a><a href="#doc-section-4">5.4 波特率配置</a><a href="#doc-section-5">5.5 使用DMA</a><a href="#doc-section-6">5.6 使用硬件自动流控</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 5.1 UART 简介
 
 Rockchip UART (Universal Asynchronous Receiver/Transmitter) 基于16550A串口标准，完整模块支持以下功能：
@@ -17,6 +21,8 @@ Rockchip UART (Universal Asynchronous Receiver/Transmitter) 基于16550A串口�
 - 支持最高4M波特率，实际支持波特率需要芯片时钟分频策略配合。
 - 支持中断传输模式和DMA传输模式。
 - 支持硬件自动流控，RTS+CTS。
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 5.2 UART 使用实例
 ### 5.2.1 UART 引脚
@@ -94,6 +100,8 @@ UART4:   /dev/ttyS4
 	wakeup-source;
 }；
 ```
+
+<span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 5.3 控制台串口
 - 在ArmSoM-Sige7中，UART2是作为控制台串口使用，可供用户查看开机启动的信息以及日常调试使用。
@@ -214,6 +222,8 @@ send:3441, receive:3537 total:3441 # 收发数据不一致，测试失败
 lsof | grep ttyS3
 ```
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 5.4 波特率配置
 
 UART波特率 = 工作时钟源 / 内部分频系数 / 16。当工作时钟源由24M晶振直接提供时，UART将使用内部分频系数得到需要的波特率。当工作时钟源由CRU模块通过PLL分频提供时，UART波特率一般为工作时钟源的1/16。UART实际允许配置的波特率和此波特率下数据传输的稳定性在软件上主要由UART工作时钟分频策略决定。
@@ -225,6 +235,8 @@ cat /sys/kernel/debug/clk/clk_summary | grep uart
 ```
 
 Rockchip UART对常用的波特率，如115200、460800、921600、1500000、3000000、4000000等确保稳定支持。对于一些特殊的波特率，可能需要修改工作时钟分频策略才能支持。
+
+<span id="doc-section-5" className="armsom-section-anchor" />
 
 ## 5.5 使用DMA
 
@@ -241,6 +253,8 @@ failed to request DMA, use interrupt mode
 ```bash
 got rx dma channels only
 ```
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 5.6 使用硬件自动流控
 

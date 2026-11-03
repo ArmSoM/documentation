@@ -28,6 +28,9 @@ Here are the main features and functions of the **HYM8563** chip:
 #### 9.2.1 Schematic Diagram
 ![rtc-sch](/img/general-tutorial/interface-usage/rtc-sch.jpg)
 
+<div className="armsom-image-caption">rtc-sch</div>
+
+
 :::tip
 - The ArmSoM product already includes the clock chip, just connect the RTC power supply.
 - The RTC battery uses a 0.8mm 1x2P through-hole connector; the detailed specification can be found in the network disk connector datasheet.

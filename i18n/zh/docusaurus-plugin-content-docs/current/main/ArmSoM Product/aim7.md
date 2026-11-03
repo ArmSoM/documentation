@@ -20,6 +20,9 @@ ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 
 ![ArmSoM-AIM7](/img/aim/aim7.png)
 
+<div className="armsom-image-caption">ArmSoM-AIM7</div>
+
+
 AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
 :::tip Rockchip RK3588
@@ -52,6 +55,10 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 - 重量：17.3g
 - 大小：69.6 mm x 45 mm
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">Getting started</a><a href="#doc-section-2">硬件信息</a><a href="#doc-section-3">开发资料</a><a href="#doc-section-4">产品证书</a><a href="#doc-section-5">供货声明</a><a href="#doc-section-6">样品购买</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## Getting started
 <a href="./armsom-aimio#使用手册" class="card-link">
     <div class="card">
@@ -65,11 +72,16 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
     </div>
 </a>
 
+<span id="doc-section-2" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 
 ![ArmSoM-AIM7-front & back](/img/aim/armsom-aim7-front&back.png)
+
+<div className="armsom-image-caption">ArmSoM-AIM7-front &amp; back</div>
+
 
 :::tip
 AIM7 采用与 NVIDIA Jetson Nano / TX2 NX 相同类型的 260-pin SO-DIMM 外形设计。具体引脚功能、供电要求和底板兼容性请以 AIM7 引脚定义及兼容性测试结果为准。
@@ -78,9 +90,15 @@ AIM7 采用与 NVIDIA Jetson Nano / TX2 NX 相同类型的 260-pin SO-DIMM 外�
 ### 产品框图
 ![aim7-product](/img/aim/aim7-product.jpg)
 
+<div className="armsom-image-caption">aim7-product</div>
+
+
 ### 引脚定义
 
 ![ArmSoM-aim7-pinlist](/img/aim/aim7-pinlist.png)
+
+<div className="armsom-image-caption">ArmSoM-aim7-pinlist</div>
+
 
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>ArmSoM-AIM7 & Jetson AIM Comparison Table</span>
@@ -774,6 +792,8 @@ Table 16. i2s pin descriptions
 
 </details>
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 开发资料
 
 ### SDK源码
@@ -916,13 +936,19 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 </a>
 </div>
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 产品证书
 
 ### CE / FCC / RoHS
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 供货声明
 
 ArmSoM-AIM7 将至少生产到 2034 年 8 月。
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 样品购买
 

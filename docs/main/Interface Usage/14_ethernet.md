@@ -9,12 +9,18 @@ sidebar_position: 14
 
 # 14. Ethernet Usage
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">14.1 Ethernet Introduction</a><a href="#doc-section-2">14.2 RTL8211F-CG Chip</a><a href="#doc-section-3">14.3 RTL8125B Chip</a><a href="#doc-section-4">14.4 Ethernet Test</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 14.1 Ethernet Introduction
 
 The ArmSoM series of products mainly use two Ethernet chips:
 
 - RTL8211F-CG
 - RTL8125B
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 14.2 RTL8211F-CG Chip
 
@@ -27,6 +33,9 @@ drivers/net/ethernet/stmicro/stmmac/*
 ### 14.2.2 DTS Node Configuration 
 
 Chip-level common configuration kernel/arch/arm64/boot/dts/rockchip/rk3588.dtsi
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 gmac0: ethernet@fe1b0000 {
@@ -79,7 +88,13 @@ gmac0: ethernet@fe1b0000 {
 };
 ```
 
+</details>
+
+
 kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-aim7.dts
+
+
+<details className="armsom-long-code"><summary>Expand full code / commands and output (complete original)</summary>
 
 ```bash
 &gmac0 {
@@ -114,6 +129,11 @@ kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-aim7.dts
 };
 ```
 
+</details>
+
+
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 14.3 RTL8125B Chip
 
 - In the ArmSoM series, the ArmSoM-Sige7 and ArmSoM-W3 use the RTL8125B network controller chip.
@@ -136,6 +156,8 @@ kernel\arch\arm64\boot\dts\rockchip\rk3588-armsom-aim7.dts
     status = "okay";
 };
 ```
+
+<span id="doc-section-4" className="armsom-section-anchor" />
 
 ## 14.4 Ethernet Test
 

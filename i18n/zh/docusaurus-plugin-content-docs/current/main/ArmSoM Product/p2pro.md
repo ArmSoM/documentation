@@ -18,6 +18,9 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 
 ![ArmSoM-P2pro](/img/link/p2pro.jpg)
 
+<div className="armsom-image-caption">ArmSoM-P2pro</div>
+
+
 ### 关键参数
 
 - **SOC**：瑞芯微 RK3308
@@ -33,10 +36,17 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 - **重量**：42g
 - **大小**：52.5mm × 65mm
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">硬件信息</a><a href="#doc-section-2">开发资料</a><a href="#doc-section-3">使用手册</a><a href="#doc-section-4">样品购买</a><a href="#doc-section-5">专家视角</a><a href="#doc-section-6">注意事项</a></nav>
+
+<span id="doc-section-1" className="armsom-section-anchor" />
+
 ## 硬件信息
 
 ### 硬件接口
 ![armsom-p2pro-layout](/img/link/armsom-p2pro-layout.png)
+
+<div className="armsom-image-caption">armsom-p2pro-layout</div>
+
 
 :::tip
 P2pro的POE模块和eMMC模块为选配，默认没有
@@ -49,7 +59,7 @@ P2pro的POE模块和eMMC模块为选配，默认没有
       rk3308b-s 框图
     </summary>
     <img
-  src="./img/sige/rk3308b-s.png"
+  src="/img/sige/rk3308b-s.png"
   alt="rk3308b-s block diagram"
   className="session-details-live-video"/>
 </details>
@@ -133,6 +143,8 @@ P2pro的POE模块和eMMC模块为选配，默认没有
 </div>
 </details>
 
+
+<span id="doc-section-2" className="armsom-section-anchor" />
 
 ## 开发资料
 ### SDK源码
@@ -235,6 +247,8 @@ v1.0 为内部版本暂不公布
 :::
 
 
+<span id="doc-section-3" className="armsom-section-anchor" />
+
 ## 使用手册
 
 P2pro 使用手册，帮助用户了解P2pro的基本使用和需要的准备工作。 
@@ -313,6 +327,9 @@ $ sudo dhclient eth0
 
 ![armsom-p2pro-debug](/img/link/armsom-p2pro-debug.png)
 
+<div className="armsom-image-caption">armsom-p2pro-debug</div>
+
+
 #### WIFI
 ```
 # 1. Open the WIFI
@@ -389,6 +406,9 @@ ArmSoM-P2pro 提供一个 USB 2.0 端口。
 
 ![armsom-p2pro-8mic](/img/link/armsom-p2pro-8mic.jpg)
 
+<div className="armsom-image-caption">armsom-p2pro-8mic</div>
+
+
 **查看内置Codec增益所有状态**
 
 ```
@@ -453,6 +473,8 @@ arecord -D hw:0,0 -c 8 -r 44100 -f S16_LE --period-size=1024 --buffer-size=4096 
 
 ```
 
+<span id="doc-section-4" className="armsom-section-anchor" />
+
 ## 样品购买
 ArmSoM 独立站: [https://www.armsom.org/product-page/p2pro](https://www.armsom.org/product-page/p2pro)
  
@@ -462,10 +484,14 @@ ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=735000017740](https
 
 OEM&ODM,  请联系: sales@armsom.org
 
+<span id="doc-section-5" className="armsom-section-anchor" />
+
 ## 专家视角
 
 - [morrolinux](https://www.youtube.com/watch?v=VpLqDEx-7H8)：它看起来像 Raspberry Pi，但配备了用于 AI 的 NPU。
 
+
+<span id="doc-section-6" className="armsom-section-anchor" />
 
 ## 注意事项
 
