@@ -75,7 +75,7 @@ slug: /
 
 | 核心板 | 配套开发平台 | 用途 |
 | --- | --- | --- |
-| [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1-io) | 工业控制与接口验证 |
+| [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1#cm1-io-硬件接口) | 工业控制与接口验证 |
 | [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5-io) | 嵌入式应用开发与底板设计参考 |
 | [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aimio) | AI、多媒体及外设功能验证 |
 | [LM7](./armsom-lm7) | [W3](./armsom-w3) | 基于 LM7 的开发平台 |
@@ -217,11 +217,11 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 #### 工业控制核心板
 
-[CM1](./armsom-cm1) 基于 RK3506J，面向 HMI、设备控制与工业通信。搭配 [CM1-IO](./armsom-cm1-io) 可进行接口验证；需要集成到自己的设备时，可进一步设计专用载板。
+[CM1](./armsom-cm1) 基于 RK3506J，面向 HMI、设备控制与工业通信。搭配 [CM1-IO](./armsom-cm1#cm1-io-硬件接口) 可进行接口验证；需要集成到自己的设备时，可进一步设计专用载板。
 
 <div class="armsom-product-gallery armsom-product-gallery--2">
 
-| [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J 核心板 | [ArmSoM-CM1-IO](./armsom-cm1-io)<br/>载板与 CM1 组合展示 |
+| [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J 核心板 | [ArmSoM-CM1-IO](./armsom-cm1#cm1-io-硬件接口)<br/>载板与 CM1 组合展示 |
 | --- | --- |
 | ![ArmSoM CM1 front and back](/img/cm/armsom-cm1-front&back1.jpg) | ![ArmSoM CM1-IO with CM1](/img/cm/armsom-cm1-io.png) |
 

@@ -60,7 +60,7 @@ const config = {
           // lastmod: '2024-10-29T10:22:05+00:00',
           // changefreq: 'weekly',
           // priority: 0.5,
-          ignorePatterns: ['**/tags/**'],
+          ignorePatterns: ['**/tags/**', '**/armsom-cm1-io', '**/armsom-cm1-io/'],
           filename: 'sitemap.xml',
           // createSitemapItems: async (params) => {
           //   const {defaultCreateSitemapItems, ...rest} = params;

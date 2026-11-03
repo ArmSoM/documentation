@@ -78,7 +78,7 @@ A matching connector shape does not guarantee interchangeability. Check pin assi
 
 | Module | Matching development platform | Purpose |
 | --- | --- | --- |
-| [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1-io) | Industrial control and interface evaluation |
+| [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1#cm1-io-hardware-interface) | Industrial control and interface evaluation |
 | [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5-io) | Embedded development and carrier design reference |
 | [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aimio) | AI, multimedia and peripheral evaluation |
 | [LM7](./armsom-lm7) | [W3](./armsom-w3) | Development platform based on LM7 |
@@ -220,11 +220,11 @@ CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interf
 
 #### Industrial Control Modules
 
-[CM1](./armsom-cm1) uses RK3506J for HMI, equipment control and industrial communication. Use [CM1-IO](./armsom-cm1-io) for interface evaluation, then develop a dedicated carrier when integrating the module into your own equipment.
+[CM1](./armsom-cm1) uses RK3506J for HMI, equipment control and industrial communication. Use [CM1-IO](./armsom-cm1#cm1-io-hardware-interface) for interface evaluation, then develop a dedicated carrier when integrating the module into your own equipment.
 
 <div class="armsom-product-gallery armsom-product-gallery--2">
 
-| [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J compute module | [ArmSoM-CM1-IO](./armsom-cm1-io)<br/>Carrier shown with CM1 |
+| [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J compute module | [ArmSoM-CM1-IO](./armsom-cm1#cm1-io-hardware-interface)<br/>Carrier shown with CM1 |
 | --- | --- |
 | ![ArmSoM CM1 front and back](/img/cm/armsom-cm1-front&back1.jpg) | ![ArmSoM CM1-IO with CM1](/img/cm/armsom-cm1-io.png) |
 

@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/armsom-cm1-io",
+      "destination": "/armsom-cm1",
+      "permanent": true
+    },
+    {
+      "source": "/zh/armsom-cm1-io",
+      "destination": "/zh/armsom-cm1",
+      "permanent": true
+    }
+  ]
+}
