@@ -507,7 +507,8 @@
 .navbar__link:hover { background: var(--ifm-color-emphasis-100); text-decoration: none; }
 .navbar__link--active { background: #e9f7fa; color: #08778c; }
 .navbar__items--right { gap: .45rem; }
-.navbar .dropdown__menu { margin-top: .65rem; min-width: 220px; padding: .5rem; box-shadow: 0 10px 30px rgba(15,35,50,.12); }
+/* Keep the menu touching its trigger so hover is continuous. */
+.navbar .dropdown__menu { top: 100%; margin-top: 0; min-width: 220px; padding: .5rem; box-shadow: 0 10px 30px rgba(15,35,50,.12); }
 .navbar .dropdown__link { border-radius: 6px; padding: .65rem .8rem; font-size: .9rem; }
 .navbar .DocSearch-Button { border: 1px solid var(--ifm-color-emphasis-200); border-radius: 9px; box-shadow: none; margin: 0; }
 [data-theme='dark'] .navbar__link--active { color: #8ce6f1; background: #16373e; }
