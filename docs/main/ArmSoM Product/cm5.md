@@ -12,7 +12,7 @@ toc_max_heading_level: 4
 
 # Product Introduction: ArmSoM-CM5
 
-<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">CM5 Overview</a><a href="#doc-section-3">CM5 Hardware</a><a href="#cm5-io">CM5-IO Overview</a><a href="#cm5-io-doc-section-1">CM5-IO Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-2">User Manual</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">CM5 Overview</a><a href="#doc-section-2">User Manual</a><a href="#doc-section-3">CM5 Hardware</a><a href="#cm5-io">CM5-IO Overview</a><a href="#cm5-io-doc-section-1">CM5-IO Hardware</a><a href="#doc-section-4">Resources</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -27,7 +27,7 @@ The ArmSoM-CM5 is a compute module powered by the Rockchip RK3576 second-generat
 
 :::tip Rockchip RK3576
 - [ArmSoM-Sige5](./armsom-sige5) Single Board Computer;
-- [ArmSoM-CM5](./armsom-cm5) RK3576 CM5 Compute Module, [ArmSoM-CM5-IO](./armsom-cm5#cm5-io) CM5 companion IO board;
+- [ArmSoM-CM5](./armsom-cm5) RK3576 CM5 Compute Module, [ArmSoM-CM5-IO](#cm5-io) CM5 companion IO board;
 
 Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM helps users easily transition from concept to prototype to mass production, making it an ideal creative platform for makers, dreamers, and hobbyists.
 :::
@@ -54,6 +54,22 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
 - **Dimensions:**
     - CM5: 55 x 40 mm x 4.9mm
     - CM5-IO: 100 x 80 x 29 mm (3.94 x 3.15 x 1.14 inches)
+
+<span id="doc-section-2" className="armsom-section-anchor" />
+
+## Getting started
+
+<a href="#cm5-io-getting-started" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>✈️</i>
+        </div>
+        <div class="content">
+            <h2>CM5 User Manual</h2>
+            <p>How to start using your CM5 Module</p>
+        </div>
+    </div>
+</a>
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
@@ -625,21 +641,7 @@ Get schematics, PCB, DXF, and other hardware documentation for the cm5-io develo
 </div>
 
 
-<span id="doc-section-2" className="armsom-section-anchor" />
-
-## Getting started
-
-<a href="./armsom-cm5#cm5-io-getting-started" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>✈️</i>
-        </div>
-        <div class="content">
-            <h2>CM5 User Manual</h2>
-            <p>How to start using your CM5 Module</p>
-        </div>
-    </div>
-</a>
+## CM5 User Manual {#cm5-manual}
 
 <span id="cm5-io-doc-section-3" className="armsom-section-anchor" />
 

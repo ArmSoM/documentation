@@ -12,6 +12,10 @@ toc_max_heading_level: 4
 
 # AIM7 产品简介
 
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#aim7-overview">AIM7 简介</a><a href="#doc-section-1">使用手册</a><a href="#doc-section-2">AIM7 硬件信息</a><a href="#aim-io">AIM-IO 简介</a><a href="#aim-io-doc-section-1">AIM-IO 硬件信息</a><a href="#doc-section-3">开发资料</a></nav>
+
+## AIM7 简介 {#aim7-overview}
+
 ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。接口完全兼容 Jetson Nano的同时，升级了PCIe接口为PCIe3.0 4-lane和PCIe2.1 1-lan。
 
 :::tip
@@ -27,7 +31,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 
 :::tip Rockchip RK3588
 - [ArmSoM-Sige7](./armsom-sige7) 单板计算机;
-- [ArmSoM-AIM-IO](./armsom-aim7#aim-io) AIM产品配套IO板;
+- [ArmSoM-AIM-IO](#aim-io) AIM产品配套IO板;
 - [ArmSoM-LM7](./armsom-lm7) LGA核心板, [ArmSoM-W3](./armsom-w3) LM7 核心板开发套件;
 
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
@@ -55,12 +59,12 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 - 重量：17.3g
 - 大小：69.6 mm x 45 mm
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">Getting started</a><a href="#doc-section-2">硬件信息</a><a href="#doc-section-3">开发资料</a><a href="#doc-section-4">产品证书</a><a href="#doc-section-5">供货声明</a><a href="#doc-section-6">样品购买</a><a href="#aim-io">AIM-IO</a></nav>
+
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## Getting started
-<a href="./armsom-aim7#aim-io-使用手册" class="card-link">
+## 使用手册 {#getting-started}
+<a href="#aim-io-使用手册" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📝</i>
@@ -74,7 +78,7 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## 硬件信息
+## AIM7 硬件信息 {#硬件信息}
 
 ### 硬件接口
 
@@ -792,6 +796,78 @@ Table 16. i2s pin descriptions
 
 </details>
 
+## AIM-IO 产品简介 {#aim-io}
+
+AIM-IO是 ArmSoM AIM 系列的一款 IO 板，尺寸为 100x80x29 毫米，同时兼容当前的 Jetson Nano 核心模块。它是一款专为创客、学习者和开发者设计的微型 AI 计算机，能够快速将 AI 技术应用于各种智能设备。
+
+<span id="aim-io-doc-section-1" className="armsom-section-anchor" />
+
+## AIM-IO 硬件信息 {#aim-io-硬件信息}
+
+### 硬件接口 {#aim-io-硬件接口}
+
+![AIM-IO](/img/aim/aim-io.png)
+
+<div className="armsom-image-caption">AIM-IO</div>
+
+
+:::tip
+AIM-IO Board 使用12V DC供电。
+:::
+
+### 硬件规格 {#aim-io-硬件规格}
+
+AIM-IO板是专为AIM模块开发者设计的扩展板，旨在帮助完成系统和嵌入式板开发。与Jetson Nano开发者套件（B01）相比，AIM-IO板尺寸相同，但增加了2个MIPI CSI接口、1个M.2 Key-E接口和1个MIPI DSI接口。
+
+- 1x DisplayPort
+- 1x HDMI输出
+- 4x USB 3.0 Type-A
+- 千兆以太网
+- GPIO：40针扩展头
+- POE：5V Power Over Ethernet
+- 电源连接器：DC Barrel插孔，用于12V电源输入
+- 扩展：M.2（E键，支持PCIe/USB/SDIO/UART）、microSD
+- MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
+- MIPI CSI0/1：2x 2通道MIPI CSI，每条通道最高2.5Gbps
+- MIPI CSI2/3：1x 4通道MIPI CSI，每条通道最高2.5Gbps
+- 通过USB Type-C进行固件闪存和设备模式
+- 尺寸：100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
+- 重量: 78.4g
+
+### 引脚定义 {#aim-io-引脚定义}
+
+<details>
+    <summary>
+       AIM7 40-PIN 座子
+    </summary>
+<div className='gpio_style'>
+
+| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
+ :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
+|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
+|     20     | UART0_RX_M0 / I2C4_SDA_M2 / PWM2_M0 /  GPIO0_C4 | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
+|     21     | UART0_TX_M0 / I2C4_SCL_M2 / PWM4_M0 /  I2S1_SDI0_M1   / GPIO0_C5  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
+|     128     | SPI0_MISO_M1 / UART9_RTSN_M1 / I2S1_MCLK_M0 /  GPIO4_A0  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  SPDIF0_TX_M0 / I2C5_SCL_M3 / UART1_TX_M1 / GPIO1_B6 |     46     |
+|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  PWM13_M2 / I2C5_SDA_M3 / UART1_RX_M1 / GPIO1_B7 |     47      |
+|     62     |  PWM14_M2 / I2C8_SCL_M2 / UART1_RTSN_M1 / GPIO1_D6 | <div className='green'>11</div>  | <div className='green'>12</div> | SPI0_MOSI_M1/ UART9_CTSN_M1 / I2S1_SCLK_M0 / GPIO4_A1 |     129     |
+|     58     |  SPI1_CLK_M2 / UART4_TX_M0 / PWM0_M1 / I2C1_SCL_M4 / I2S0_SDO3 / I2S0_SDI2 / GPIO1_D2  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+|     108     |   GPIO3_B4 / I2S2_MCLK_M1 / MIPI_CAM3_PDN  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO1_D5 / SPI1_CS1_M2 / PDM0_SDI0_M0   |     61     |
+|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  SPI1_CS0_M2 / UART4_RX_M0 /PWM1_M1 / I2C1_SDA_M4 /PDM0_SDI3_M0 / I2S0_SDI1 / GPIO1_D3 |    59     |
+|     42      | SPI0_MOSI_M2 / PCIE30X4_PERSTN_M3 / UART4_RX_M2 / PDM1_SDI3_M1 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
+|     41      | SPI0_MISO_M2 / PCIE30X4_WAKEN_M3 / PDM1_SDI2_M1 / GPIO1_B1 | <div className='green'>21</div>  | <div className='green'>22</div> | SPI1_MISO_M2 / UART6_TX_M2 / I2C7_SCL_M0 / I2S0_SDO1 / GPIO1_D0 |      56      |
+|     43      | SPI0_CLK_M2 / SATA0_ACT_LED_M1 / PCIE30X1_0_WAKEN_M2 / PDM1_CLK1_M1 / UART4_TX_M2  / GPIO1_B3 | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CS0_M2 / PCIE30X1_0_PERSTN_M2 / PDM1_CLK0_M1 / UART7_RX_M2  / GPIO1_B4 |     44      |
+|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     45      |
+|     16     | I2C2_SDA_M0 / CAN0_RX_M0 / SPI0_MOSI_M0 / PWM1_M0 / GPIO0_C0  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO0_B7 / CAN0_TX_M0 / SPI0_CS1_M0 / I2C2_SCL_M0 / PWM0_M0  |    15     |
+|    103      | PWM8_M0 / GPIO3_A7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
+|     104     | PWM9_M0 / GPIO3_B0  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_A0 / PWM10_M0 / SPI4_MISO_M1 / I2C6_SDA_M4 / I2S3_MCLK |    96     |
+|     105     | UART2_TX_M2 / PWM2_M1 / GPIO3_B1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
+|     130     | I2S1_LRCK_M0 / SPI0_CLK_M1 / I2S1_LRCK_M0 / GPIO4_A2  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO1_D7 / I2C8_SDA_M2 / UART1_CTSN_M1 |     63     |
+|     57      | UART6_RX_M2 / I2C7_SDA_M0 / GPIO1_D1	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO4_A5 / UART3_TX_M2 / I2C3_SDA_M2 / I2S1_SDI0_M0   |     133     |
+|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_B1 /  SPI0_CS1_M1 / UART8_RX_M0 / I2C6_SCL_M3 / I2S1_SDO0_M0   |     137     |
+
+</div>
+</details>
+
 <span id="doc-section-3" className="armsom-section-anchor" />
 
 ## 开发资料
@@ -936,134 +1012,9 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 </a>
 </div>
 
-<span id="doc-section-4" className="armsom-section-anchor" />
-
-## 产品证书
-
-### CE / FCC / RoHS
-
-<span id="doc-section-5" className="armsom-section-anchor" />
-
-## 供货声明
-
-ArmSoM-AIM7 将至少生产到 2034 年 8 月。
-
-<span id="doc-section-6" className="armsom-section-anchor" />
-
-## 样品购买
-
-CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
-
-ArmSoM 独立站: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
-
-ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/1005012690621621.html](https://www.aliexpress.com/item/1005012690621621.html) 
-
-ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=1066393300562](https://item.taobao.com/item.htm?id=1066393300562)
-
-OEM&ODM,  请联系: sales@armsom.org
-
-## 专家视角
-
-- [itsfoss](https://itsfoss.com/armsom-aim7-review/): ArmSoM AIM7: A Promising Upcoming Rockchip Device for AI Development
-- [taoofmac](https://taoofmac.com/space/blog/2025/03/12/2000): The ArmSom AI Module 7
-- [Technically Unsure](https://www.youtube.com/watch?v=J9VmcyJ_t4g&list=PLtGrcSFVfrfRr9KafWQoh2wvKzP9F2bYs): ArmSoM AIM7 & AIMIO (RK3588): Benchmarks & DeepSeek in Action
-- [sbc compare](https://sbc.compare/5-armsom-aim7-8gb): AIM7  Benchmark Comparison  on sbc.compare
-
-## 注意事项
-
-:::caution [静电保护]
-1. 在接触设备之前，请务必佩戴静电手环或采取静电释放措施，以避免静电对开发板造成损害。
-2. 进行组装时，应在静电消除环境中进行，避免在干燥和低湿度的条件下操作。
-3. 不使用时，请将设备放置在静电袋内，并存储于温度适宜、低湿度的环境中，以防止静电产生。
-4. 在处理设备时，请避免摩擦或碰撞，以防产生静电并造成损坏。
-5. 握持设备时，尽量避免直接接触主板上的芯片，以免静电损坏芯片。
-6. 使用设备时，请勿在运行过程中插拔电线或其他设备，以避免电流冲击导致的损害。
-7. 在插拔扩展GPIO/MIPI接口时，请先关闭电源并断开电源线，以避免电流对设备造成损害。
-:::
-
-:::danger [注意散热]
-
-在未采取有效散热措施的情况下，主芯片的表面温度可能超过 60 度。在处理设备时，请避免直接接触 SoC 及其周围的电源电感，以免造成烫伤。使用设备时，请确保环境通风良好，以防止局部热量聚集导致过热。同时，请勿将单板机放置在阳光直射的区域。建议根据具体使用情况，选择官方 [散热器风扇](./sige-active-cooling-kit)或[散热外壳](./sige-diy-case1)，或者第三方散热套件，以确保设备的良好散热性能。
-
-:::
-
-## AIM-IO 产品简介 {#aim-io}
-
-AIM-IO是 ArmSoM AIM 系列的一款 IO 板，尺寸为 100x80x29 毫米，同时兼容当前的 Jetson Nano 核心模块。它是一款专为创客、学习者和开发者设计的微型 AI 计算机，能够快速将 AI 技术应用于各种智能设备。
-
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#aim-io-doc-section-1">硬件信息</a><a href="#aim-io-doc-section-2">使用手册</a><a href="#aim-io-doc-section-3">入门准备</a><a href="#aim-io-doc-section-4">烧录方式选择</a><a href="#aim-io-doc-section-5">接口使用</a></nav>
-
-<span id="aim-io-doc-section-1" className="armsom-section-anchor" />
-
-### 硬件信息 {#aim-io-硬件信息}
-
-#### 硬件接口 {#aim-io-硬件接口}
-
-![AIM-IO](/img/aim/aim-io.png)
-
-<div className="armsom-image-caption">AIM-IO</div>
-
-
-:::tip
-AIM-IO Board 使用12V DC供电。
-:::
-
-#### 硬件规格 {#aim-io-硬件规格}
-
-AIM-IO板是专为AIM模块开发者设计的扩展板，旨在帮助完成系统和嵌入式板开发。与Jetson Nano开发者套件（B01）相比，AIM-IO板尺寸相同，但增加了2个MIPI CSI接口、1个M.2 Key-E接口和1个MIPI DSI接口。
-
-- 1x DisplayPort
-- 1x HDMI输出
-- 4x USB 3.0 Type-A
-- 千兆以太网
-- GPIO：40针扩展头
-- POE：5V Power Over Ethernet
-- 电源连接器：DC Barrel插孔，用于12V电源输入
-- 扩展：M.2（E键，支持PCIe/USB/SDIO/UART）、microSD
-- MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
-- MIPI CSI0/1：2x 2通道MIPI CSI，每条通道最高2.5Gbps
-- MIPI CSI2/3：1x 4通道MIPI CSI，每条通道最高2.5Gbps
-- 通过USB Type-C进行固件闪存和设备模式
-- 尺寸：100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
-- 重量: 78.4g
-
-#### 引脚定义 {#aim-io-引脚定义}
-
-<details>
-    <summary>
-       AIM7 40-PIN 座子
-    </summary>
-<div className='gpio_style'>
-
-| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
- :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     20     | UART0_RX_M0 / I2C4_SDA_M2 / PWM2_M0 /  GPIO0_C4 | <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     21     | UART0_TX_M0 / I2C4_SCL_M2 / PWM4_M0 /  I2S1_SDI0_M1   / GPIO0_C5  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     128     | SPI0_MISO_M1 / UART9_RTSN_M1 / I2S1_MCLK_M0 /  GPIO4_A0  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  SPDIF0_TX_M0 / I2C5_SCL_M3 / UART1_TX_M1 / GPIO1_B6 |     46     |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  PWM13_M2 / I2C5_SDA_M3 / UART1_RX_M1 / GPIO1_B7 |     47      |
-|     62     |  PWM14_M2 / I2C8_SCL_M2 / UART1_RTSN_M1 / GPIO1_D6 | <div className='green'>11</div>  | <div className='green'>12</div> | SPI0_MOSI_M1/ UART9_CTSN_M1 / I2S1_SCLK_M0 / GPIO4_A1 |     129     |
-|     58     |  SPI1_CLK_M2 / UART4_TX_M0 / PWM0_M1 / I2C1_SCL_M4 / I2S0_SDO3 / I2S0_SDI2 / GPIO1_D2  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     108     |   GPIO3_B4 / I2S2_MCLK_M1 / MIPI_CAM3_PDN  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO1_D5 / SPI1_CS1_M2 / PDM0_SDI0_M0   |     61     |
-|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  SPI1_CS0_M2 / UART4_RX_M0 /PWM1_M1 / I2C1_SDA_M4 /PDM0_SDI3_M0 / I2S0_SDI1 / GPIO1_D3 |    59     |
-|     42      | SPI0_MOSI_M2 / PCIE30X4_PERSTN_M3 / UART4_RX_M2 / PDM1_SDI3_M1 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
-|     41      | SPI0_MISO_M2 / PCIE30X4_WAKEN_M3 / PDM1_SDI2_M1 / GPIO1_B1 | <div className='green'>21</div>  | <div className='green'>22</div> | SPI1_MISO_M2 / UART6_TX_M2 / I2C7_SCL_M0 / I2S0_SDO1 / GPIO1_D0 |      56      |
-|     43      | SPI0_CLK_M2 / SATA0_ACT_LED_M1 / PCIE30X1_0_WAKEN_M2 / PDM1_CLK1_M1 / UART4_TX_M2  / GPIO1_B3 | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CS0_M2 / PCIE30X1_0_PERSTN_M2 / PDM1_CLK0_M1 / UART7_RX_M2  / GPIO1_B4 |     44      |
-|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  GPIO1_B5  / UART7_TX_M2 / SPI0_CS1_M2 |     45      |
-|     16     | I2C2_SDA_M0 / CAN0_RX_M0 / SPI0_MOSI_M0 / PWM1_M0 / GPIO0_C0  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO0_B7 / CAN0_TX_M0 / SPI0_CS1_M0 / I2C2_SCL_M0 / PWM0_M0  |    15     |
-|    103      | PWM8_M0 / GPIO3_A7  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
-|     104     | PWM9_M0 / GPIO3_B0  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO3_A0 / PWM10_M0 / SPI4_MISO_M1 / I2C6_SDA_M4 / I2S3_MCLK |    96     |
-|     105     | UART2_TX_M2 / PWM2_M1 / GPIO3_B1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
-|     130     | I2S1_LRCK_M0 / SPI0_CLK_M1 / I2S1_LRCK_M0 / GPIO4_A2  | <div className='green'>35</div>  | <div className='green'>36</div> |  GPIO1_D7 / I2C8_SDA_M2 / UART1_CTSN_M1 |     63     |
-|     57      | UART6_RX_M2 / I2C7_SDA_M0 / GPIO1_D1	    | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO4_A5 / UART3_TX_M2 / I2C3_SDA_M2 / I2S1_SDI0_M0   |     133     |
-|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_B1 /  SPI0_CS1_M1 / UART8_RX_M0 / I2C6_SCL_M3 / I2S1_SDO0_M0   |     137     |
-
-</div>
-</details>
-
 <span id="aim-io-doc-section-2" className="armsom-section-anchor" />
 
-### 使用手册 {#aim-io-使用手册}
+## AIM7 使用手册 {#aim-io-使用手册}
 
 AIM-IO使用手册，帮助用户了解 AIM 产品的基本使用和需要的准备工作，开始使用你的ArmSoM-AIM🚀
 
@@ -1882,3 +1833,56 @@ armsom@armsom:~$ sudo cat /sys/kernel/debug/pinctrl/pinctrl-rockchip-pinctrl/pin
 ```
 
 GPIO、UART、SPI 等操作方法可参考[GPIO 使用](<../Interface Usage/2_gpio.md>)、[UART 使用](<../Interface Usage/5_uart.md>)、[SPI 使用](<../Interface Usage/7_spi.md>)和[PWM 使用](<../Interface Usage/6_pwm.md>)，按所用核心板的引脚定义选择对应信号。连接外设前先断电，信号电压按底板引脚定义和原理图确认。
+
+
+<span id="doc-section-4" className="armsom-section-anchor" />
+
+## 产品证书
+
+### CE / FCC / RoHS
+
+<span id="doc-section-5" className="armsom-section-anchor" />
+
+## 供货声明
+
+ArmSoM-AIM7 将至少生产到 2034 年 8 月。
+
+<span id="doc-section-6" className="armsom-section-anchor" />
+
+## 样品购买
+
+CrowdSupply : [https://www.crowdsupply.com/armsom/rk3588-ai-module7](https://www.crowdsupply.com/armsom/rk3588-ai-module7)
+
+ArmSoM 独立站: [https://www.armsom.org/product-page/aim7](https://www.armsom.org/product-page/aim7)
+
+ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/1005012690621621.html](https://www.aliexpress.com/item/1005012690621621.html) 
+
+ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=1066393300562](https://item.taobao.com/item.htm?id=1066393300562)
+
+OEM&ODM,  请联系: sales@armsom.org
+
+## 专家视角
+
+- [itsfoss](https://itsfoss.com/armsom-aim7-review/): ArmSoM AIM7: A Promising Upcoming Rockchip Device for AI Development
+- [taoofmac](https://taoofmac.com/space/blog/2025/03/12/2000): The ArmSom AI Module 7
+- [Technically Unsure](https://www.youtube.com/watch?v=J9VmcyJ_t4g&list=PLtGrcSFVfrfRr9KafWQoh2wvKzP9F2bYs): ArmSoM AIM7 & AIMIO (RK3588): Benchmarks & DeepSeek in Action
+- [sbc compare](https://sbc.compare/5-armsom-aim7-8gb): AIM7  Benchmark Comparison  on sbc.compare
+
+## 注意事项
+
+:::caution [静电保护]
+1. 在接触设备之前，请务必佩戴静电手环或采取静电释放措施，以避免静电对开发板造成损害。
+2. 进行组装时，应在静电消除环境中进行，避免在干燥和低湿度的条件下操作。
+3. 不使用时，请将设备放置在静电袋内，并存储于温度适宜、低湿度的环境中，以防止静电产生。
+4. 在处理设备时，请避免摩擦或碰撞，以防产生静电并造成损坏。
+5. 握持设备时，尽量避免直接接触主板上的芯片，以免静电损坏芯片。
+6. 使用设备时，请勿在运行过程中插拔电线或其他设备，以避免电流冲击导致的损害。
+7. 在插拔扩展GPIO/MIPI接口时，请先关闭电源并断开电源线，以避免电流对设备造成损害。
+:::
+
+:::danger [注意散热]
+
+在未采取有效散热措施的情况下，主芯片的表面温度可能超过 60 度。在处理设备时，请避免直接接触 SoC 及其周围的电源电感，以免造成烫伤。使用设备时，请确保环境通风良好，以防止局部热量聚集导致过热。同时，请勿将单板机放置在阳光直射的区域。建议根据具体使用情况，选择官方 [散热器风扇](./sige-active-cooling-kit)或[散热外壳](./sige-diy-case1)，或者第三方散热套件，以确保设备的良好散热性能。
+
+:::
+

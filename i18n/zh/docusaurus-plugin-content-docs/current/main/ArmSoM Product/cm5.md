@@ -14,7 +14,7 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 ArmSoM-CM5
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">CM5 简介</a><a href="#doc-section-3">CM5 硬件信息</a><a href="#cm5-io">CM5-IO 简介</a><a href="#cm5-io-doc-section-1">CM5-IO 硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-2">使用手册</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">CM5 简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">CM5 硬件信息</a><a href="#cm5-io">CM5-IO 简介</a><a href="#cm5-io-doc-section-1">CM5-IO 硬件信息</a><a href="#doc-section-4">开发资料</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -29,7 +29,7 @@ ArmSoM-CM5 是一款计算机模块，采用Rockchip RK3576第二代8nm高性能
 
 :::tip Rockchip RK3576
 - [ArmSoM-Sige5](./armsom-sige5) 单板计算机;
-- [ArmSoM-CM5](./armsom-cm5) RK3576 CM5计算模组, [ArmSoM-CM5-IO](./armsom-cm5#cm5-io) CM5配套IO板;
+- [ArmSoM-CM5](./armsom-cm5) RK3576 CM5计算模组, [ArmSoM-CM5-IO](#cm5-io) CM5配套IO板;
 
 依托强大的生态系统以及各式各样的扩展配件，ArmSoM 可以帮助用户轻松实现从创意到原型再到批量生产的交付，是创客、梦想家、业余爱好者的理想创意平台。
 :::
@@ -57,6 +57,22 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 - **尺寸**：
     - CM5: 55 x 40 x 4.9 毫米
     - CM5-IO: 100 x 80 x 29 毫米 (3.94 x 3.15 x 1.14 英寸)
+
+<span id="doc-section-2" className="armsom-section-anchor" />
+
+## 使用手册
+
+<a href="#cm5-io-使用手册" class="card-link">
+    <div class="card">
+        <div class="icon">
+            <i>📝</i>
+        </div>
+        <div class="content">
+            <h2>CM5使用手册</h2>
+            <p>如何开始使用你的CM5</p>
+        </div>
+    </div>
+</a>
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
@@ -616,21 +632,7 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 </a>
 </div>
 
-<span id="doc-section-2" className="armsom-section-anchor" />
-
-## 使用手册
-
-<a href="./armsom-cm5#cm5-io-使用手册" class="card-link">
-    <div class="card">
-        <div class="icon">
-            <i>📝</i>
-        </div>
-        <div class="content">
-            <h2>CM5使用手册</h2>
-            <p>如何开始使用你的CM5</p>
-        </div>
-    </div>
-</a>
+## CM5 使用手册 {#cm5-manual}
 
 <span id="cm5-io-doc-section-3" className="armsom-section-anchor" />
 
@@ -693,7 +695,7 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 
 ### 接口使用 {#cm5-io-接口使用}
 
-如果您是首次使用 CM5 Kit，请先熟悉下各产品[硬件接口](./armsom-cm5#cm5-io-硬件接口)，以便于您更好的理解后续的内容。
+如果您是首次使用 CM5 Kit，请先熟悉下各产品[硬件接口](#cm5-io-硬件接口)，以便于您更好的理解后续的内容。
 
 #### 调试串口 {#cm5-io-调试串口}
 

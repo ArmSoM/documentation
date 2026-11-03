@@ -12,7 +12,7 @@ toc_max_heading_level: 4
 
 # AIM5 产品简介
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">供货声明</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">供货声明</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -46,7 +46,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## Getting started
+## 使用手册 {#getting-started}
 <a href="./armsom-aim7#aim-io-使用手册" class="card-link">
     <div class="card">
         <div class="icon">

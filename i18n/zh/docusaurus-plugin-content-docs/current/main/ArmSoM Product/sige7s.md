@@ -14,7 +14,7 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 Sige7s。
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">使用手册</a><a href="#doc-section-6">产品证书</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">使用手册</a><a href="#doc-section-6">产品证书</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -50,7 +50,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## Getting started
+## 使用手册 {#getting-started}
 
 <a href="./armsom-sige7s#使用手册" class="card-link">
     <div class="card">
