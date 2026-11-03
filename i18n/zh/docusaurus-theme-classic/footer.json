@@ -46,5 +46,20 @@
   "link.item.label.bilibili": {
     "description": "The label of footer link with label=bilibili linking to https://space.bilibili.com/101696800",
     "message": "哔哩哔哩"
+  },
+  "link.title.Documentation": {
+    "message": "文档"
+  },
+  "link.item.label.Documentation Home": {
+    "message": "文档首页"
+  },
+  "link.item.label.Downloads": {
+    "message": "资料下载"
+  },
+  "link.item.label.Flash an Image": {
+    "message": "烧录镜像"
+  },
+  "link.item.label.FAQ": {
+    "message": "常见问题"
   }
 }

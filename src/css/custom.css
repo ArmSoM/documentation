@@ -473,3 +473,59 @@
 [data-theme='dark'] .table-of-contents__link { color: #c5cbd3; }
 [data-theme='dark'] .table-of-contents__link--active { color: #69d9e9; }
 [data-theme='dark'] .menu__link--active { background: #16373e; color: #8ce6f1; }
+
+/* Branded footer, retaining all existing destination links. */
+.armsom-footer { background: #101e2b; color: #dbe6ed; border-top: 3px solid #34c5dd; }
+.armsom-footer__brand { max-width: 1240px; margin: auto; padding: 2.5rem 2rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.armsom-footer__brand img { object-fit: contain; object-position: left; }
+.armsom-footer__tagline { font-size: 1.2rem; font-weight: 600; color: #f2f7fa; margin: .75rem 0 .5rem; }
+.armsom-footer__description { color: #a9bdca; font-size: .9rem; margin: 0; }
+.armsom-footer__contact { flex-shrink: 0; padding: .9rem 1.2rem; border: 1px solid #45616f; border-radius: 10px; color: #e6f6fb; }
+.armsom-footer__contact small { display: block; margin-top: .3rem; color: #a9bdca; }
+.armsom-footer__contact:hover { color: #7be0ef; border-color: #7be0ef; text-decoration: none; }
+.armsom-footer .footer { background: transparent; padding: 0 2rem 2rem; }
+.armsom-footer .footer > .container { max-width: 1176px; padding-top: 2rem; border-top: 1px solid #2c414f; }
+.armsom-footer .footer__links { gap: 1.5rem 0; margin-bottom: 0; }
+.armsom-footer .footer__title { font-size: .95rem; color: #f2f7fa; margin-bottom: .85rem; }
+.armsom-footer .footer__link-item { display: inline-block; padding: .25rem 0; color: #adc1ce; font-size: .9rem; line-height: 1.6; }
+.armsom-footer .footer__link-item:hover { color: #7be0ef; }
+.armsom-footer a:focus-visible { outline: 2px solid #7be0ef; outline-offset: 4px; }
+@media(max-width:996px) { .armsom-footer .footer__col { flex: 0 0 50%; max-width: 50%; } }
+@media(max-width:600px) {
+ .armsom-footer__brand { padding: 2rem 1.25rem 1.5rem; align-items: flex-start; flex-direction: column; gap: 1.25rem; }
+ .armsom-footer .footer { padding: 0 1.25rem 1.5rem; }
+ .armsom-footer__tagline { font-size: 1.05rem; }
+}
+/* Compact, clearly grouped header across documentation pages. */
+:root { --ifm-navbar-height: 4.5rem; }
+.navbar { background: var(--ifm-background-surface-color); padding: .55rem 1.25rem; border-bottom: 1px solid var(--ifm-color-emphasis-200); }
+.navbar__inner { gap: .75rem; }
+.navbar__brand { margin-right: 1.15rem; }
+.navbar__logo { width: 138px; height: 44px; }
+.navbar__items { gap: .15rem; min-width: 0; }
+.navbar__link { padding: .55rem .7rem; border-radius: 8px; font-size: .9rem; line-height: 1.4; transition: background-color .15s ease; }
+.navbar__link:hover { background: var(--ifm-color-emphasis-100); text-decoration: none; }
+.navbar__link--active { background: #e9f7fa; color: #08778c; }
+.navbar__items--right { gap: .45rem; }
+.navbar .dropdown__menu { margin-top: .65rem; min-width: 220px; padding: .5rem; box-shadow: 0 10px 30px rgba(15,35,50,.12); }
+.navbar .dropdown__link { border-radius: 6px; padding: .65rem .8rem; font-size: .9rem; }
+.navbar .DocSearch-Button { border: 1px solid var(--ifm-color-emphasis-200); border-radius: 9px; box-shadow: none; margin: 0; }
+[data-theme='dark'] .navbar__link--active { color: #8ce6f1; background: #16373e; }
+.navbar-sidebar { background: var(--ifm-background-surface-color); }
+.navbar-sidebar__brand { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; }
+.navbar-sidebar__items { padding: .75rem; }
+@media (min-width:997px) and (max-width:1200px) {
+ .navbar { padding-left: .75rem; padding-right: .75rem; }
+ .navbar__brand { margin-right: .4rem; }
+ .navbar__logo { width: 116px; }
+ .navbar__link { padding: .5rem .45rem; font-size: .85rem; }
+ .navbar__items--right { gap: .15rem; }
+}
+@media(max-width:996px) {
+ :root { --ifm-navbar-height: 4rem; }
+ .navbar { padding: .5rem .85rem; }
+ .navbar__logo { width: 124px; height: 40px; }
+ .navbar__brand { margin-right: .5rem; }
+ .navbar__toggle { margin-right: .65rem; }
+}
+@media(prefers-reduced-motion:reduce) { .navbar__link { transition: none; } }

@@ -102,6 +102,7 @@ const config = {
           height: 50,
         },
         items: [
+          {href: 'https://www.armsom.org/', label: 'Website', position: 'left', target: '_blank', rel: 'noopener noreferrer'},
           {
             to: '/',
             activeBaseRegex: '^/(zh/?)?$',
@@ -142,6 +143,12 @@ const config = {
       footer: {
         style: 'dark',
         links: [
+          {title: 'Documentation', items: [
+            {label: 'Documentation Home', to: '/'},
+            {label: 'Downloads', to: '/getting-start/cloud-disk'},
+            {label: 'Flash an Image', to: '/getting-start/flash-img'},
+            {label: 'FAQ', to: '/armsom-faqs'},
+          ]},
           {
             title: 'About',
             items: [
