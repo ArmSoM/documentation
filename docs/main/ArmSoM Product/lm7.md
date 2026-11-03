@@ -35,7 +35,7 @@ It can be applied to diversified fields such as ARM PCs, edge computing, cloud s
 
 :::tip Rockchip RK3588
 - [ArmSoM-Sige7](./armsom-sige7) AI SBC;
-- [ArmSoM-AIM7](./armsom-aim7) AIM7 core board， [ArmSoM-AIM-IO](./armsom-aimio)  AIM Companion IO Board;
+- [ArmSoM-AIM7](./armsom-aim7) AIM7 core board， [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  AIM Companion IO Board;
 - [ArmSoM-LM7](./armsom-lm7) LGA core board, [ArmSoM-W3](./armsom-w3) LGA core board maker kit;
 
 With the powerful ecosystem and variety of extension modules, ArmSoM can help users easily go from ideas to prototype to mass production, making it an ideal creative platform for makers, dreamers and hobbyists.

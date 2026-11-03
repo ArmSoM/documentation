@@ -40,7 +40,7 @@ ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗
 <span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Getting started
-<a href="./armsom-aimio#使用手册" class="card-link">
+<a href="./armsom-aim7#aim-io-使用手册" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📝</i>

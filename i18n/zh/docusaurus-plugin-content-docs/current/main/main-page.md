@@ -76,8 +76,8 @@ slug: /
 | 核心板 | 配套开发平台 | 用途 |
 | --- | --- | --- |
 | [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1#cm1-io-硬件接口) | 工业控制与接口验证 |
-| [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5-io) | 嵌入式应用开发与底板设计参考 |
-| [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aimio) | AI、多媒体及外设功能验证 |
+| [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5#cm5-io) | 嵌入式应用开发与底板设计参考 |
+| [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aim7#aim-io) | AI、多媒体及外设功能验证 |
 | [LM7](./armsom-lm7) | [W3](./armsom-w3) | 基于 LM7 的开发平台 |
 
 **W3 是基于 LM7 的开发平台；IO 底板不是另一个计算性能等级。** 完成验证后，可以按产品需要设计专用底板。
@@ -209,7 +209,7 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 <div class="armsom-product-gallery armsom-product-gallery--3">
 
-| [ArmSoM-CM5-IO](./armsom-cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aimio)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
+| [ArmSoM-CM5-IO](./armsom-cm5#cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aim7#aim-io)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
 | --- | --- | --- |
 | ![ArmSoM-CM5-IO](/img/cm/armsom-cm5-io.png) | ![ArmSoM-AIM-IO](/img/aim/armsom-aim-io.png) | ![ArmSoM-W3](/img/lm/armsom-w3.png) |
 
@@ -260,9 +260,9 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 | Sige系列单板计算机 | 模块化核心板和载板 | IoT/Industrial Control | 配件 |
 |---------|--------------|--------------|---------|
-|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
-|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5#cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
 |[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| ---- | [Camera-Module-1](./armsom-camera-module1) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-CM7s](./armsom-cm7s)  [Rockchip RK3588s]| ---- |  [Sige Diy Case 1](./sige-diy-case1)  |
 |[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]| ---- | ---- | ---- |

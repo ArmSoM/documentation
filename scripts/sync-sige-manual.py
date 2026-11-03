@@ -23,6 +23,6 @@ for lang,base in [('en','docs'),('zh','i18n/zh/docusaurus-plugin-content-docs/cu
   card=re.search(r'<a href="(?:\./sige-family-started|#sige-manual)".*?</a>',s,re.S)
   if not card:raise RuntimeError(str(p))
   model_block=block.replace('## Sige 使用手册 {', f'## Sige{model} 使用手册 {{').replace('## Sige Family User Manual {', f'## Sige{model} User Manual {{')
-  s=s[:card.start()]+card[0].replace('./sige-family-started','#sige-manual')+'\n\n'+model_block+s[card.end():]
+  s=(s[:card.start()]+card[0].replace('./sige-family-started','#sige-manual')+s[card.end():]).rstrip()+'\n\n'+model_block
   s=s.replace('<h2>Sige使用手册</h2>', f'<h2>Sige{model} 使用手册</h2>').replace('<h2>Sige User Manual</h2>', f'<h2>Sige{model} User Manual</h2>')
   p.write_text(s,encoding='utf-8');print(p.name,lang)

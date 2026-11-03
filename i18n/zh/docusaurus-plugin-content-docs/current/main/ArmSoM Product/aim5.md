@@ -47,7 +47,7 @@ ArmSoM-AIM5 采用Rockchip RK3576第二代8nm高性能AIOT平台处理器,集成
 <span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Getting started
-<a href="./armsom-aimio#使用手册" class="card-link">
+<a href="./armsom-aim7#aim-io-使用手册" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📝</i>

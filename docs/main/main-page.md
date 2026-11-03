@@ -79,8 +79,8 @@ A matching connector shape does not guarantee interchangeability. Check pin assi
 | Module | Matching development platform | Purpose |
 | --- | --- | --- |
 | [CM1](./armsom-cm1) | [CM1-IO](./armsom-cm1#cm1-io-hardware-interface) | Industrial control and interface evaluation |
-| [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5-io) | Embedded development and carrier design reference |
-| [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aimio) | AI, multimedia and peripheral evaluation |
+| [CM5](./armsom-cm5) | [CM5-IO](./armsom-cm5#cm5-io) | Embedded development and carrier design reference |
+| [AIM7](./armsom-aim7) | [AIM-IO](./armsom-aim7#aim-io) | AI, multimedia and peripheral evaluation |
 | [LM7](./armsom-lm7) | [W3](./armsom-w3) | Development platform based on LM7 |
 
 **W3 is an LM7-based development platform. An IO carrier is not another computing performance tier.** After evaluation, you can design a dedicated carrier for your product.
@@ -212,7 +212,7 @@ CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interf
 
 <div class="armsom-product-gallery armsom-product-gallery--3">
 
-| [ArmSoM-CM5-IO](./armsom-cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aimio)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
+| [ArmSoM-CM5-IO](./armsom-cm5#cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aim7#aim-io)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
 | --- | --- | --- |
 | ![ArmSoM-CM5-IO](/img/cm/armsom-cm5-io.png) | ![ArmSoM-AIM-IO](/img/aim/armsom-aim-io.png) | ![ArmSoM-W3](/img/lm/armsom-w3.png) |
 
@@ -262,9 +262,9 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 ### Product Catalog Table  
 | **Sige Series Single-Board Computers** | **System on Module and Carrier Boards** | **IoT/Industrial Control** | **Accessories** |  
 |---------|--------------|--------------|---------|  
-|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
-|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aimio)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
+|[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5#cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
+|[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
 |[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| ---- | [Camera-Module-1](./armsom-camera-module1) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-CM7s](./armsom-cm7s)  [Rockchip RK3588s]| ---- |  [Sige Diy Case 1](./sige-diy-case1)  |
 |[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]| ---- | ---- | ---- |

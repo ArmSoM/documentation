@@ -39,7 +39,7 @@ ArmSoM-AIM3 is a mid-to-high-end general-purpose System-on-Chip (SoC) featuring 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
 ## Getting Started
-<a href="./armsom-aimio#user-manual" class="card-link">
+<a href="./armsom-aim7#aim-io-user-manual" class="card-link">
     <div class="card">
         <div class="icon">
             <i>📝</i>
