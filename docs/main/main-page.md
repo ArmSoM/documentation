@@ -139,13 +139,21 @@ A matching connector shape does not guarantee interchangeability. Check pin assi
 
 Sige1 and Sige3 cover entry-level and general embedded development. Sige5 combines general computing with AI, while Sige6 offers the Allwinner A733 platform. Sige7S emphasizes compact dimensions; Sige7 offers more high-speed networking and storage expansion.
 
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-Sige1](./armsom-sige1)<br/>Rockchip RK3528 | [ArmSoM-Sige3](./armsom-sige3)<br/>Rockchip RK3568B2 | [ArmSoM-Sige5](./armsom-sige5)<br/>Rockchip RK3576 |
 | --- | --- | --- |
 | ![ArmSoM Sige1](/img/sige/armsom-sige1.png) | ![ArmSoM Sige3](/img/sige/armsom-sige3.png) | ![ArmSoM Sige5](/img/sige/armsom-sige5.png) |
 
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-Sige6](./armsom-sige6)<br/>Allwinner A733 | [ArmSoM-Sige7](./armsom-sige7)<br/>Rockchip RK3588 | [ArmSoM-Sige7S](./armsom-sige7s)<br/>Rockchip RK3588S |
 | --- | --- | --- |
 | ![ArmSoM Sige6](/img/sige/armsom-sige6.png) | ![ArmSoM Sige7](/img/sige/armsom-sige7.png) | ![ArmSoM Sige7S](/img/sige/armsom-sige7s.png) |
+
+</div>
 
 <details>
     <summary>
@@ -186,25 +194,41 @@ Sige1 and Sige3 cover entry-level and general embedded development. Sige5 combin
 
 CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interface evaluation platforms. Check the specific module and carrier pin assignments, power requirements and software support before pairing them.
 
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-CM5](./armsom-cm5)<br/>Rockchip RK3576 | [ArmSoM-CM7S](./armsom-cm7s)<br/>Rockchip RK3588S | [ArmSoM-AIM5](./armsom-aim5)<br/>Rockchip RK3576 |
 | --- | --- | --- |
 | ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-CM7S](/img/cm/armsom-cm7s.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) |
+
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
 
 | [ArmSoM-AIM7](./armsom-aim7)<br/>Rockchip RK3588 | [ArmSoM-LM7](./armsom-lm7)<br/>Rockchip RK3588 | [CM7S + CM7S-IO](./armsom-cm7s)<br/>Rockchip RK3588S |
 | --- | --- | --- |
 | ![ArmSoM-AIM7](/img/aim/armsom-aim7.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) | ![CM7S + CM7S-IO](/img/cm/cm7s-with-carrier.png) |
 
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-CM5-IO](./armsom-cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aimio)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
 | --- | --- | --- |
 | ![ArmSoM-CM5-IO](/img/cm/armsom-cm5-io.png) | ![ArmSoM-AIM-IO](/img/aim/armsom-aim-io.png) | ![ArmSoM-W3](/img/lm/armsom-w3.png) |
+
+</div>
 
 #### Industrial Control Modules
 
 [CM1](./armsom-cm1) uses RK3506J for HMI, equipment control and industrial communication. Use [CM1-IO](./armsom-cm1-io) for interface evaluation, then develop a dedicated carrier when integrating the module into your own equipment.
 
+<div class="armsom-product-gallery armsom-product-gallery--2">
+
 | [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J compute module | [ArmSoM-CM1-IO](./armsom-cm1-io)<br/>Carrier shown with CM1 |
 | --- | --- |
 | ![ArmSoM CM1 front and back](/img/cm/armsom-cm1-front&back1.jpg) | ![ArmSoM CM1-IO with CM1](/img/cm/armsom-cm1-io.png) |
+
+</div>
 
 ### Forge Series Industrial Development Boards
 
@@ -212,9 +236,13 @@ CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interf
 
 [Forge1](./armsom-forge1) uses RK3506J and provides industrial communication interfaces including RS485 and CAN. Its documentation specifies a −40°C to 85°C operating range. Use it to evaluate device protocols, display interaction and control applications; consider the CM1 module on the same processor platform when a custom hardware format is needed.
 
+<div class="armsom-product-gallery armsom-product-gallery--1">
+
 | [ArmSoM-Forge1](./armsom-forge1)|  
 |---------|  
-|![armsom-forge1](/img/forge/armsom-forge1.png)|  
+|![armsom-forge1](/img/forge/armsom-forge1.png)|
+
+</div>
 
 
 ### Accessories
@@ -223,9 +251,13 @@ CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interf
 
 Check supported boards, pin assignments, cables, power and drivers before connecting accessories. A matching 40-pin header does not guarantee compatibility with every peripheral.
 
+<div class="armsom-product-gallery armsom-product-gallery--5">
+
 | [ArmSoM Display 10 HD](./armsom-display-10-hd) |[ArmSoM Display 7 HD](./armsom-display-7-hd) | [ArmSoM Camera Module 1](./armsom-camera-module1) | [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) |  
 | --------- | --------- | --------- | --------- |  --------- | 
-| ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Display 10 HD](/img/accessories/armsom-display-7hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) | ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) |  
+| ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Display 10 HD](/img/accessories/armsom-display-7hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) | ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) |
+
+</div>
 
 ### Product Catalog Table  
 | **Sige Series Single-Board Computers** | **System on Module and Carrier Boards** | **IoT/Industrial Control** | **Accessories** |  

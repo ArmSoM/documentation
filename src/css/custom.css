@@ -366,3 +366,21 @@
 .gpio-table .can-td{
   background: #D8B7DD;
 }
+
+/* Homepage product galleries: consistent frames without cropping hardware. */
+.armsom-product-gallery { margin: 1.25rem 0; }
+.armsom-product-gallery table { display: table; table-layout: fixed; width: 100%; margin: 0; }
+.armsom-product-gallery th { height: 76px; padding: 12px; text-align: center; vertical-align: middle; overflow-wrap: anywhere; }
+.armsom-product-gallery td { padding: 16px; vertical-align: middle; background: #fff; }
+.armsom-product-gallery td img { display: block; width: 100%; height: 180px; object-fit: contain; margin: 0 auto; }
+.armsom-product-gallery td p { margin: 0; }
+.armsom-product-gallery--1 { width: 33.333%; }
+.armsom-product-gallery--2 { width: 66.666%; }
+.armsom-product-gallery--5 { overflow-x: auto; }
+.armsom-product-gallery--5 table { min-width: 900px; }
+@media (max-width: 600px) {
+  .armsom-product-gallery th { height: 72px; padding: 8px 4px; font-size: .85rem; }
+  .armsom-product-gallery td { padding: 8px 4px; }
+  .armsom-product-gallery td img { height: 120px; }
+  .armsom-product-gallery--5 table { min-width: 600px; }
+}

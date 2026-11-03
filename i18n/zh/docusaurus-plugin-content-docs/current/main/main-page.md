@@ -136,13 +136,21 @@ slug: /
 
 Sige1、Sige3 面向入门与通用嵌入式开发；Sige5 兼顾通用计算与 AI；Sige6 提供全志 A733 平台选择；Sige7S 强调紧凑尺寸，Sige7 提供更多高速网络与存储扩展。
 
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-Sige1](./armsom-sige1)<br/>Rockchip RK3528 | [ArmSoM-Sige3](./armsom-sige3)<br/>Rockchip RK3568B2 | [ArmSoM-Sige5](./armsom-sige5)<br/>Rockchip RK3576 |
 | --- | --- | --- |
 | ![ArmSoM Sige1](/img/sige/armsom-sige1.png) | ![ArmSoM Sige3](/img/sige/armsom-sige3.png) | ![ArmSoM Sige5](/img/sige/armsom-sige5.png) |
 
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-Sige6](./armsom-sige6)<br/>Allwinner A733 | [ArmSoM-Sige7](./armsom-sige7)<br/>Rockchip RK3588 | [ArmSoM-Sige7S](./armsom-sige7s)<br/>Rockchip RK3588S |
 | --- | --- | --- |
 | ![ArmSoM Sige6](/img/sige/armsom-sige6.png) | ![ArmSoM Sige7](/img/sige/armsom-sige7.png) | ![ArmSoM Sige7S](/img/sige/armsom-sige7s.png) |
+
+</div>
 
 <details>
     <summary>
@@ -183,25 +191,41 @@ Sige1、Sige3 面向入门与通用嵌入式开发；Sige5 兼顾通用计算与
 
 CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台。核心板与载板搭配时，请核对具体型号的引脚、供电及软件支持。
 
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-CM5](./armsom-cm5)<br/>Rockchip RK3576 | [ArmSoM-CM7S](./armsom-cm7s)<br/>Rockchip RK3588S | [ArmSoM-AIM5](./armsom-aim5)<br/>Rockchip RK3576 |
 | --- | --- | --- |
 | ![ArmSoM-CM5](/img/cm/armsom-cm5.png) | ![ArmSoM-CM7S](/img/cm/armsom-cm7s.png) | ![ArmSoM-AIM5](/img/aim/armsom-aim5.png) |
+
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
 
 | [ArmSoM-AIM7](./armsom-aim7)<br/>Rockchip RK3588 | [ArmSoM-LM7](./armsom-lm7)<br/>Rockchip RK3588 | [CM7S + CM7S-IO](./armsom-cm7s)<br/>Rockchip RK3588S |
 | --- | --- | --- |
 | ![ArmSoM-AIM7](/img/aim/armsom-aim7.png) | ![ArmSoM-LM7](/img/lm/armsom-lm7.png) | ![CM7S + CM7S-IO](/img/cm/cm7s-with-carrier.png) |
 
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
 | [ArmSoM-CM5-IO](./armsom-cm5-io)<br/>CM5 Maker kit | [ArmSoM-AIM-IO](./armsom-aimio)<br/>AIM Maker kit | [ArmSoM-W3](./armsom-w3)<br/>LM7 Maker kit |
 | --- | --- | --- |
 | ![ArmSoM-CM5-IO](/img/cm/armsom-cm5-io.png) | ![ArmSoM-AIM-IO](/img/aim/armsom-aim-io.png) | ![ArmSoM-W3](/img/lm/armsom-w3.png) |
+
+</div>
 
 #### 工业控制核心板
 
 [CM1](./armsom-cm1) 基于 RK3506J，面向 HMI、设备控制与工业通信。搭配 [CM1-IO](./armsom-cm1-io) 可进行接口验证；需要集成到自己的设备时，可进一步设计专用载板。
 
+<div class="armsom-product-gallery armsom-product-gallery--2">
+
 | [ArmSoM-CM1](./armsom-cm1)<br/>RK3506J 核心板 | [ArmSoM-CM1-IO](./armsom-cm1-io)<br/>载板与 CM1 组合展示 |
 | --- | --- |
 | ![ArmSoM CM1 front and back](/img/cm/armsom-cm1-front&back1.jpg) | ![ArmSoM CM1-IO with CM1](/img/cm/armsom-cm1-io.png) |
+
+</div>
 
 ### Forge 系列工业开发板
 
@@ -209,9 +233,13 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 [Forge1](./armsom-forge1) 采用 RK3506J，提供 RS485、CAN 等工业通信接口，文档标注工作温度为 −40℃～85℃。适合进行设备协议对接、显示交互和控制应用验证；需要定制硬件形态时，也可以评估同平台的 CM1 核心板。
 
+<div class="armsom-product-gallery armsom-product-gallery--1">
+
 | [ArmSoM-Forge1](./armsom-forge1)| 
 |---------|
 |![armsom-forge1](/img/forge/armsom-forge1.png)|
+
+</div>
 
 ### 配件
 
@@ -219,9 +247,13 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 连接前请核对支持的板型、接口定义、排线、供电与驱动。40Pin 外形相同不代表所有外设都能直接使用。
 
+<div class="armsom-product-gallery armsom-product-gallery--5">
+
 | [ArmSoM Display 10 HD](./armsom-display-10-hd)| [ArmSoM Display 7 HD](./armsom-display-7-hd)| [ArmSoM Camera module 1](./armsom-camera-module1)| [Active Cooling Kit](./sige-active-cooling-kit) | [Sige Diy Case 1](./sige-diy-case1)  |
 |---------|---------|---------|---------|---------|
 |![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)|![ArmSoM Display 7 HD](/img/accessories/armsom-display-7hd.png)|![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png)|![armsom-display-10hd](/img/accessories/sige-active-cooling-fan-real.png)|![arsmom-w3](/img/accessories/sige-diy-case.png)|
+
+</div>
 
 
 ### 产品目录表
