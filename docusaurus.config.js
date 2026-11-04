@@ -89,7 +89,7 @@ const config = {
         {name: 'twitter:card', content: 'summary_large_image'},
       ],
       // Replace with your project's social card
-      image: 'img/armsom-social-card.png',
+      image: 'img/armsom-docs-social-v2.png',
       docs: {
         sidebar: {autoCollapseCategories: true},
       },

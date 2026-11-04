@@ -3,7 +3,7 @@ sidebar_label: "🏠 Main Page"
 title: "ArmSoM Open Source Hardware Developer Center"
 description: "Official ArmSoM developer documentation for Rockchip single-board computers and system-on-modules. Find product specifications, Linux images, hardware resources, and embedded development tutorials."
 keywords: [ArmSoM, Rockchip SBC, system on module, RK3588, RK3576, embedded Linux, RKNN]
-image: /img/armsom-social-card.png
+image: /img/armsom-docs-social-v2.png
 sidebar_position: 1
 slug: /
 ---
