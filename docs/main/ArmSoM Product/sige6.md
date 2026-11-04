@@ -1296,9 +1296,9 @@ ArmSoM-Sige6 offers a maximum resolution of up to 4K@60Hz
 
 1. Connect the ribbon cable as shown in the picture below
 
-![sige7-display-10-hd](/img/general-tutorial/display-10-hd-sige6.png)
+![Sige6 connected to a 10-inch display](/img/general-tutorial/display-10-hd-sige6.png)
 
-<div className="armsom-image-caption">sige7-display-10-hd</div>
+<div className="armsom-image-caption">Sige6 connected to a 10-inch display</div>
 
 
 2. By default, the system turns off the MIPI-DSI screen. To turn it on, you need to go to the SDK to open the corresponding node in the device tree

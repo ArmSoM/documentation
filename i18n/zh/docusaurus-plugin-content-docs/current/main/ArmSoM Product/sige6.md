@@ -1457,9 +1457,9 @@ ArmSoM-Sige6 分辨率最高分辨率可达 4K@60Hz
 
 1. 按照下图连接好排线
 
-![sige7-display-10-hd](/img/general-tutorial/display-10-hd-sige6.png)
+![Sige6 与 10 英寸屏幕连接示意图](/img/general-tutorial/display-10-hd-sige6.png)
 
-<div className="armsom-image-caption">sige7-display-10-hd</div>
+<div className="armsom-image-caption">Sige6 与 10 英寸屏幕连接示意图</div>
 
 
 2. 系统默认关闭MIPI-DSI屏幕,若要打开，需到SDK打开设备树相应节点
