@@ -247,34 +247,42 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
 
 ### Hardware Pin Definitions
 
-<details>
+<details id="board-40pin">
     <summary>
         40-PIN header
     </summary>
+
+
+![ArmSoM SIGE1 40Pin](/img/board-pinouts/sige1-40pin.svg)
+
+[Open full-size pinout](/img/board-pinouts/sige1-40pin.svg)
+
+Checked against the V1.0 schematic. Numbers in the diagram are physical pins. NC means not connected; DNP means not populated. Alternate functions require matching system configuration; legacy GPIO numbers are not Linux gpiochip line offsets. Pin 38 reaches GPIO4_B4 through R3116, which is not populated by default, and shares its net with pin 23. It is not an available GPIO by default.
+
 <div className='gpio_style'>
 
-| GPIO Number |  Function |   Pin    |  Pin     |  Function  | GPIO Number |
- :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     130     |   I2C1_SDA_M0 / UART3_RTSN / I2S1_SDI3 / GPIO4_A2_d /| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     131     | I2C1_SCL_M0 / UART3_CTSN / I2S1_SDI2 /  GPIO4_A3_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     1     | REF_CLK_OUT_M0 /GPIO0_A1  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  <div className='orange-txt'>UART0_TX_M0</div> / JTAG_MCU_TCK_M1 / JTAG_CPU_TCK_M1  / GPIO4_D0_d |     152      |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  <div className='orange-txt'>UART0_RX_M0</div> / JTAG_MCU_TMS_M1 / JTAG_CPU_TMS_M1 /   GPIO4_C7_u  |     151      |
-|     0     |  GPIO0_A0  | <div className='green'>11</div>  | <div className='green'>12</div> |  I2S1_SCLK  / UART1_RTSN / GPIO4_A5_d   |     133     |
-|  | | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|  | | <div className='green'>15</div>  | <div className='green'>16</div> |   |          |
-|  |  +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |    |         |
-| 138 | SPI0_MOSI / PDM_SDI0 / I2S1_SDO3 / GPIO4_B2_d  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |   |
-| 139 | SPI0_MISO / PDM_SDI2 /  I2S1_SDI1 / GPIO4_B3_d  | <div className='green'>21</div>  | <div className='green'>22</div> | |   |
-| 140 | SPI0_CLK / I2S1_SDI0 /  GPIO4_B4_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  SPI0_CSN0 / PWR_CTRL1  / GPIO4_B6_u  | 142 |
-| |  GND | <div className='black'>25</div>  | <div className='green'>26</div> |  PWM6_M0 / SPI0_CSN1 / PDM_SDI3 / GPIO4_C1_d |     145      |
-|  147 | I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3_d |  <div className='green'>27</div>  | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4_d  | 148 |
-|  |   | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |           |
-| |  | <div className='green'>31</div>  | <div className='green'>32</div> |  GPIO4_C0/PWM5_M0 / FEPHY_LED_LINK_M0 / UART3_TX_M1  |    144     |
-| 143  | GPIO4_B7 / PWM4_M0 /  FEPHY_LED_SPD_M0 / UART3_RX_M1  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |      |
-| 134  | UART1_TX_M0 / I2S1_LRCK / GPIO4_A6_d   | <div className='green'>35</div>  | <div className='green'>36</div> |   |          |
-| | | <div className='green'>37</div>  | <div className='green'>38</div> |  GPIO3_B2 / SPI0_CLK / I2S1_SDI0    |     106     |
-| |  GND | <div className='black'>39</div>  | <div className='green'>40</div> |  GPIO4_A7_d /  UART1_RX_M0 / I2S1_SDO0   |     135     |
+| GPIO number (legacy) | Function | Physical pin | Physical pin | Function | GPIO number (legacy) |
+| :---: | :--- | :---: | :---: | :--- | :---: |
+| — | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V | — |
+| 130 | I2C1_SDA_M0 / UART3_RTSN / I2S1_SDI3 / GPIO4_A2 | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V | — |
+| 131 | I2C1_SCL_M0 / UART3_CTSN / I2S1_SDI2 / GPIO4_A3 | <div className='green'>5</div> | <div className='black'>6</div> | GND | — |
+| 1 | REF_CLK_OUT_M0 / GPIO0_A1 | <div className='green'>7</div> | <div className='green'>8</div> | UART0_TX_M0 / JTAG_MCU_TCK_M1 / JTAG_CPU_TCK_M1 / GPIO4_D0 | 152 |
+| — | GND | <div className='black'>9</div> | <div className='green'>10</div> | UART0_RX_M0 / JTAG_MCU_TMS_M1 / JTAG_CPU_TMS_M1 / GPIO4_C7 | 151 |
+| 0 | GPIO0_A0 | <div className='green'>11</div> | <div className='green'>12</div> | I2S1_SCLK / UART1_RTSN / GPIO4_A5 | 133 |
+| — | NC | <div className='black'>13</div> | <div className='black'>14</div> | GND | — |
+| — | NC | <div className='black'>15</div> | <div className='black'>16</div> | NC | — |
+| — | +3.3V | <div className='red'>17</div> | <div className='black'>18</div> | NC | — |
+| 138 | SPI0_MOSI / PDM_SDI0 / I2S1_SDO3 / GPIO4_B2 | <div className='green'>19</div> | <div className='black'>20</div> | GND | — |
+| 139 | SPI0_MISO / PDM_SDI2 / I2S1_SDI1 / GPIO4_B3 | <div className='green'>21</div> | <div className='black'>22</div> | NC | — |
+| 140 | SPI0_CLK / I2S1_SDI0 / GPIO4_B4 | <div className='green'>23</div> | <div className='green'>24</div> | SPI0_CSN0 / PWR_CTRL1 / GPIO4_B6 | 142 |
+| — | GND | <div className='black'>25</div> | <div className='green'>26</div> | PWM6_M0 / SPI0_CSN1 / PDM_SDI3 / GPIO4_C1 | 145 |
+| 147 | I2C0_SDA_M0 / PWM0_M0 / GPU_AVS / GPIO4_C3 | <div className='green'>27</div> | <div className='green'>28</div> | ARM_AVS / PWM1_M0 / I2C0_SCL_M0 / GPIO4_C4 | 148 |
+| — | NC | <div className='black'>29</div> | <div className='black'>30</div> | GND | — |
+| — | NC | <div className='black'>31</div> | <div className='green'>32</div> | GPIO4_C0 / PWM5_M0 / FEPHY_LED_LINK_M0 / UART3_TX_M1 | 144 |
+| 143 | GPIO4_B7 / PWM4_M0 / FEPHY_LED_SPD_M0 / UART3_RX_M1 | <div className='green'>33</div> | <div className='black'>34</div> | GND | — |
+| 134 | UART1_TX_M0 / I2S1_LRCK / GPIO4_A6 | <div className='green'>35</div> | <div className='black'>36</div> | NC | — |
+| — | NC | <div className='black'>37</div> | <div className='green'>38</div> | DNP R3116 / GPIO4_B4 / SPI0_CLK / I2S1_SDI0 | 140 |
+| — | GND | <div className='black'>39</div> | <div className='green'>40</div> | GPIO4_A7 / UART1_RX_M0 / I2S1_SDO0 | 135 |
 
 </div>
 </details>
@@ -1075,6 +1083,11 @@ Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wirin
 
 - Test the output of the `gpio readall` command as shown below:
 
+<details>
+<summary>Historical output (another board; not this board pinout)</summary>
+
+Retained for historical reference. Use the 40Pin table above for wiring. Confirm wPi indices with a tool that supports this board.
+
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |  
@@ -1103,6 +1116,8 @@ Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wirin
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |  
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  
 ```
+
+</details>
 
 - Set the GPIO pin to output mode. The third parameter requires the wPi number corresponding to the pin.
 

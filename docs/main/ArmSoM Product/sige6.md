@@ -216,35 +216,43 @@ Sige6 Hardware Specifications
 
 ### Hardware Pin Definitions
 
-<details>
+<details id="board-40pin">
     <summary>
         40-PIN header
     </summary>
    
+
+
+![ArmSoM SIGE6 40Pin](/img/board-pinouts/sige6-40pin.svg)
+
+[Open full-size pinout](/img/board-pinouts/sige6-40pin.svg)
+
+Checked against the V1.0 schematic. Numbers in the diagram are physical pins. NC means not connected; DNP means not populated. Alternate functions require matching system configuration; legacy GPIO numbers are not Linux gpiochip line offsets.
+
 <div className='gpio_style'>
 
-| GPIO number |  function |   Pin    |  Pin     |  function  | GPIO number |
- :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     313     | PJ25/PWM1-7/UART4-RX/TWI4-SDA/SPI3-MOS| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     312     | PJ24/PWM1-6/UART4-TX/TWI4-SCK/SPI3-CLK  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     356     | PL4/S-TWI2-SCK/S-PWM0-2 |  <div className='green'>7</div>  | <div className='green'>8</div>  | PL2/S-UART1-TX/S-UART0-TX/S-TWI1-SDA/S-PWM0-0 |     354      |
-|             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> | PL3/S-UART1-RX/S-UART0-RX/S-TWI1-SCK/S-IR-RX/S-PWM0-1  |     355      |
-|     357     |  PL5/S-TWI2-SDA/S-SPI0-CLK/S-PWM0-3 | <div className='green'>11</div>  | <div className='green'>12</div> |  PK0//UART6-DCD/I2S4-BCLK |     320     |
-|     358     |  PL6/S-UART0-TX/S-SPI0-MOSI/S-IR-RX/S-PWM0-4 | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     359     |  PL7/S-UART0-RX/S-SPI0-MISO/S-PWM0-5  | <div className='green'>15</div>  | <div className='green'>16</div> |  PB0/UART2-TX/UART0-TX/SPI2-CS0  |     32     |
-|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  PB1/UART2-RX/UART0-RX/SPI2-CLK |    33     |
-|     108      | PD12/SPI1-MOS  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
-|     109      | PD13/SPI1-MISO  | <div className='green'>21</div>  | <div className='green'>22</div> | PK6/TWI2-SCK/UART4-TX/UART2-RTS/SPI3-MOSI        |        326     |
-|     107      | PD11/SPI1-CLK  | <div className='green'>23</div>  | <div className='green'>24</div> |  PD10/SPI1-CS0/PWM1-0|     106      |
-|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  PD15/SPI1-CS1/UART3-CTS |     111      |
-|     315     | PJ27/PWM1-9/UART4-CTS/UART2-RX/TWI5-SDA |  <div className='green'>27</div>  | <div className='green'>28</div>  | PJ26/PWM1-8/UART4-RTS/UART2-TX/TWI5-SCK/SPI3-MISO |     314     | 
-|     362      | PL10/S-UART0-TX/S-TWI2-SCK/S-UART1-TX/S-PWM0-8/  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |            |
-|     321      | PK1/UART6-DSR/I2S4-MCLK/TWI1-SCK  | <div className='green'>31</div>  | <div className='green'>32</div> |  PL9/S-TWI1-SDA/S-UART1-RX/S-TWI0-SDA/S-TWI2-SDA/S-PWM0-7 |    361     |
-|     360     | PL8/S-TWI1-SCK/S-UART1-TX/S-TWI0-SCK/S-TWI2-SCK/S-PWM0-6  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
-|     322     | PK2/UART6-DTR/I2S4-LRCK/HDMI-SDA/TWI5-SDA  | <div className='green'>35</div>  | <div className='green'>36</div> |  PD14/LCD0-D20/SPI1-HOLD/UART3-RTS|     110     |
-|      325      | PK5/PWM1-8/PWM1-9/SPI3-CLK    | <div className='green'>37</div>  | <div className='green'>38</div> | PK4/I2S4-DOUT0/I2S4-DIN1  |     324     |
-|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  PK3/UART6-RI/I2S4-DIN0/I2S4-DOUT1/TWI5-SCK   |     323     |
+| GPIO number (legacy) | Function | Physical pin | Physical pin | Function | GPIO number (legacy) |
+| :---: | :--- | :---: | :---: | :--- | :---: |
+| — | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V | — |
+| — | PJ25 / PWM1-7 / UART4-RX / TWI4-SDA / SPI3-MOSI | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V | — |
+| — | PJ24 / PWM1-6 / UART4-TX / TWI4-SCK / SPI3-CLK | <div className='green'>5</div> | <div className='black'>6</div> | GND | — |
+| — | PL4 / S-TWI2-SCK / S-PWM0-2 | <div className='green'>7</div> | <div className='green'>8</div> | PL2 / S-UART1-TX / S-UART0-TX / S-TWI1-SDA / S-PWM0-0 | — |
+| — | GND | <div className='black'>9</div> | <div className='green'>10</div> | PL3 / S-UART1-RX / S-UART0-RX / S-TWI1-SCK / S-IR-RX / S-PWM0-1 | — |
+| — | PL5 / S-TWI2-SDA / S-SPI0-CLK / S-PWM0-3 | <div className='green'>11</div> | <div className='green'>12</div> | PK0 / UART6-DCD / I2S4-BCLK | — |
+| — | PL6 / S-UART0-TX / S-SPI0-MOSI / S-IR-RX / S-PWM0-4 | <div className='green'>13</div> | <div className='black'>14</div> | GND | — |
+| — | PL7 / S-UART0-RX / S-SPI0-MISO / S-PWM0-5 | <div className='green'>15</div> | <div className='green'>16</div> | PB0 / UART2-TX / UART0-TX / SPI2-CS0 | — |
+| — | +3.3V | <div className='red'>17</div> | <div className='green'>18</div> | PB1 / UART2-RX / UART0-RX / SPI2-CLK | — |
+| — | PD12 / SPI1-MOSI | <div className='green'>19</div> | <div className='black'>20</div> | GND | — |
+| — | PD13 / SPI1-MISO | <div className='green'>21</div> | <div className='green'>22</div> | PK6 / TWI2-SCK / UART4-TX / UART2-RTS / SPI3-MOSI | — |
+| — | PD11 / SPI1-CLK | <div className='green'>23</div> | <div className='green'>24</div> | PD10 / SPI1-CS0 / PWM1-0 | — |
+| — | GND | <div className='black'>25</div> | <div className='green'>26</div> | PD15 / SPI1-CS1 / UART3-CTS | — |
+| — | PJ27 / PWM1-9 / UART4-CTS / UART2-RX / TWI5-SDA | <div className='green'>27</div> | <div className='green'>28</div> | PJ26 / PWM1-8 / UART4-RTS / UART2-TX / TWI5-SCK / SPI3-MISO | — |
+| — | PL10 / S-UART0-TX / S-TWI2-SCK / S-UART1-TX / S-PWM0-8 | <div className='green'>29</div> | <div className='black'>30</div> | GND | — |
+| — | PK1 / UART6-DSR / I2S4-MCLK / TWI1-SCK | <div className='green'>31</div> | <div className='green'>32</div> | PL9 / S-TWI1-SDA / S-UART1-RX / S-TWI0-SDA / S-TWI2-SDA / S-PWM0-7 | — |
+| — | PL8 / S-TWI1-SCK / S-UART1-TX / S-TWI0-SCK / S-TWI2-SCK / S-PWM0-6 | <div className='green'>33</div> | <div className='black'>34</div> | GND | — |
+| — | PK2 / UART6-DTR / I2S4-LRCK / HDMI-SDA / TWI5-SDA | <div className='green'>35</div> | <div className='green'>36</div> | PD14 / LCD0-D20 / SPI1-HOLD / UART3-RTS | — |
+| — | PK5 / PWM1-8 / PWM1-9 / SPI3-CLK | <div className='green'>37</div> | <div className='green'>38</div> | PK4 / I2S4-DOUT0 / I2S4-DIN1 | — |
+| — | GND | <div className='black'>39</div> | <div className='green'>40</div> | PK3 / UART6-RI / I2S4-DIN0 / I2S4-DOUT1 / TWI5-SCK | — |
 
 </div>
 </details>

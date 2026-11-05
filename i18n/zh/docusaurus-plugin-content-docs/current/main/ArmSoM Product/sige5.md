@@ -240,34 +240,42 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 </details>
 
 ### 引脚定义
-<details>
+<details id="board-40pin">
     <summary>
         40-PIN 座子
     </summary>
-    <div className='gpio_style'>
 
-| GPIO number |  功能 |   Pin    |  Pin     |  功能  | GPIO number |
- :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |    |
-|111|  I2C4_SDA_M3 /UART3_CTSN_M1/UART2_RX_M2/GPIO3_B7_d/| <div className='green'>3</div> | <div className='red'>4</div>   |  +5.0V  |   |  |
-| 112 | I2C4_SCL_M3/UART3_RTSN_M1 /UART2_TX_M2/GPIO3_C0_d |  <div className='green'>5</div>  | <div className='black'>6</div>  |  GND    |  |     |
-| 100  | PWM1_CH0_M3 / SPI2_CLK_M2 /  UART1_CTSN_M2 / GPIO3_A4_d  |  <div className='green'>7</div>  | <div className='green'>8</div>  |   GPIO0_D4_u / <div className='orange-txt'>UART0_TX_M0_PORT</div> / JTAG_TCK_M1|    28  |
-| | GND| <div className='black'>9</div> | <div className='green'>10</div> | GPIO0_D5_u/<div className='orange-txt'>UART0_RX_M0</div>/JTAG_TMS_M1  |14 |
-|  |   | <div className='green'>11</div>  | <div className='green'>12</div> |  SAI0_SCLK_M1  /  SPI0_CSN0_M0 / I2C3_SCL_M1  / GPIO0_C6_d |     22     |
-||   | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-||   | <div className='green'>15</div>  | <div className='green'>16</div> |  I2C8_SDA_M2 / UART7_RX_M0  / SAI0_LRCK_M0 /  GPIO2_B7_d |     79     |
-| |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> | I2C8_SCL_M2 / UART7_TX_M0 /  GPIO2_B6_d |    78     |
-|149| SPI4_MOSI_M0 / PWM2_CH5_M1 /UART6_RX_M3 / I2C3_SDA_M3/GPIO4_C5_d | <div className='green'>19</div>  | <div className='black'>20</div> |    GND |  |
-|150| PWM2_CH2_M1/CAN1_TX_M1 /SPI4_MISO_M0/I2C6_SCL_M3 / GPIO4_C6_d| <div className='green'>21</div>| <div className='green'>22</div> | SARADC_VIN4  |   |
-|151| PWM2_CH3_M1/CAN1_RX_M1/SPI4_CLK_M0/I2C6_SDA_M3/ GPIO4_C7_d | <div className='green'>23</div>  | <div className='green'>24</div> |  PWM2_CH6_M1 /  UART6_TX_M3  /SPI4_CSN0_M0/ GPIO4_C4_d |     148      |
-| |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |   |    |
-| 104 | PWM0_CH0_M3 / SPI2_MOSI_M2 / UART10_RX_M0 / GPIO3_B0_d  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  GPIO2_D6_D/PWM2_CH6_M2 / UART9_RTSN_M0  | 94|
-|119| GPIO3_C7_D / UART8_RTSN_M0 | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
-|128| GPIO3_D4_D/ I2C3_SCL_M2 / SPI3_CLK_M1 / UART5_RX_M0 | <div className='green'>31</div>  | <div className='green'>32</div> |  |    |
-|95| PWM2_CH7_M2/SPI3_CSN1_M0/UART9_CTSN_M0/SPDIF_TX0_M2/GPIO2_D7_d  | <div className='green'>33</div>  | <div className='black'>34</div> | GND  | |
-|20| PWM0_CH0_M0/UART10_TX_M2/PDM0_CLK0_M0/SAI0_MCLK_M1/GPIO0_C4_d| <div className='green'>35</div> | <div className='green'>36</div> |SPI0_CLK_M0/I2C3_SDA_M1/SAI0_LRCK_M1/GPIO0_C7_d|23|
-|96|I2C7_SCL_M1/SPI3_CLK_M0/ UART3_TX_M0/ GPIO3_A0_d D | <div className='green'>37</div>  | <div className='green'>38</div> | SPI0_MOSI_M0/PDM0_SDI0_M0/SAI0_SDI0_M1/GPIO0_D0_d | 24|
-| | GND | <div className='black'>39</div>  | <div className='green'>40</div> |  I3C0_SDA_PU_M0/UART10_RX_M2/ DP_HPDIN_M1/ SAI0_SDO0_M1 / GPIO0_C5_d | 21|
+
+![ArmSoM SIGE5 40Pin](/img/board-pinouts/sige5-40pin.svg)
+
+[打开高清引脚图](/img/board-pinouts/sige5-40pin.svg)
+
+依据 V1.3 原理图核查。图中数字为物理引脚号，NC 为未连接，DNP 为元件默认不装。复用功能需匹配系统配置；GPIO传统编号不是 Linux gpiochip 行号。
+
+<div className='gpio_style'>
+
+| GPIO 编号（传统） | 功能 | 物理脚 | 物理脚 | 功能 | GPIO 编号（传统） |
+| :---: | :--- | :---: | :---: | :--- | :---: |
+| — | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V | — |
+| 111 | GPIO3_B7 / I2C4_SDA_M3 / UART3_CTSN_M1 / UART2_RX_M2 / SAI1_SDI0_M1 | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V | — |
+| 112 | GPIO3_C0 / I2C4_SCL_M3 / UART3_RTSN_M1 / UART2_TX_M2 / SAI1_SDO3_M1 | <div className='green'>5</div> | <div className='black'>6</div> | GND | — |
+| 100 | GPIO3_A4 / PWM1_CH0_M3 / SPI2_CLK_M2 / UART1_CTSN_M2 / SAI4_SDI_M1 | <div className='green'>7</div> | <div className='green'>8</div> | GPIO0_D4 / JTAG_TCK_M1 / UART0_TX_M0 | 28 |
+| — | GND | <div className='black'>9</div> | <div className='green'>10</div> | GPIO0_D5 / JTAG_TMS_M1 / UART0_RX_M0 | 29 |
+| — | NC | <div className='black'>11</div> | <div className='green'>12</div> | GPIO0_C6 / SPI0_CSN0_M0 / I2C3_SCL_M1 / SAI0_SCLK_M1 | 22 |
+| — | NC | <div className='black'>13</div> | <div className='black'>14</div> | GND | — |
+| — | NC | <div className='black'>15</div> | <div className='green'>16</div> | GPIO2_B7 / I2C8_SDA_M2 / UART8_CTSN_M1 / UART7_RX_M0 / SAI0_LRCK_M0 | 79 |
+| — | +3.3V | <div className='red'>17</div> | <div className='green'>18</div> | GPIO2_B6 / I2C8_SCL_M2 / UART8_RTSN_M1 / UART7_TX_M0 / SAI0_SCLK_M0 | 78 |
+| 149 | GPIO4_C5 / PWM2_CH5_M1 / UART6_RX_M3 / SPI4_MOSI_M0 / I2C3_SDA_M3 / SAI4_SDO_M2 | <div className='green'>19</div> | <div className='black'>20</div> | GND | — |
+| 150 | GPIO4_C6 / PWM2_CH2_M1 / CAN1_TX_M1 / SPI4_MISO_M0 / I2C6_SCL_M3 / SAI4_SDI_M2 | <div className='green'>21</div> | <div className='green'>22</div> | SARADC_VIN4 | — |
+| 151 | GPIO4_C7 / PWM2_CH3_M1 / CAN1_RX_M1 / SPI4_CLK_M0 / I2C6_SDA_M3 / SAI4_SCLK_M2 | <div className='green'>23</div> | <div className='green'>24</div> | GPIO4_C4 / PWM2_CH6_M1 / UART6_TX_M3 / SPI4_CSN0_M0 / I2C3_SCL_M3 / DP_HPDIN_M0 / SAI4_LRCK_M2 | 148 |
+| — | GND | <div className='black'>25</div> | <div className='black'>26</div> | NC | — |
+| 104 | GPIO3_B0 / PWM0_CH0_M3 / SPI2_MOSI_M2 / UART10_RX_M0 / SAI4_MCLK_M1 | <div className='green'>27</div> | <div className='green'>28</div> | GPIO2_D6 / PWM2_CH6_M2 / I3C1_SDA_PU_M0 / UART9_RTSN_M0 / SPDIF_RX0_M2 / SAI3_MCLK_M2 | 94 |
+| 119 | GPIO3_C7 / SPI1_CLK_M2 / UART8_RTSN_M0 / SAI1_SCLK_M1 | <div className='green'>29</div> | <div className='black'>30</div> | GND | — |
+| 124 | GPIO3_D4 / I2C3_SCL_M2 / SPI3_CLK_M1 / UART5_RX_M0 / SAI1_SDI1_M1 | <div className='green'>31</div> | <div className='black'>32</div> | NC | — |
+| 95 | GPIO2_D7 / PWM2_CH7_M2 / SPI3_CSN1_M0 / UART9_CTSN_M0 / SPDIF_TX0_M2 / SAI0_SDO3_M0 | <div className='green'>33</div> | <div className='black'>34</div> | GND | — |
+| 20 | GPIO0_C4 / PWM0_CH0_M0 / UART10_TX_M2 / PDM0_CLK0_M0 / SAI0_MCLK_M1 | <div className='green'>35</div> | <div className='green'>36</div> | GPIO0_C7 / SPI0_CLK_M0 / I2C3_SDA_M1 / SAI0_LRCK_M1 | 23 |
+| 96 | GPIO3_A0 / I2C7_SCL_M1 / SPI3_CLK_M0 / UART3_TX_M0 / SAI3_SCLK_M2 | <div className='green'>37</div> | <div className='green'>38</div> | GPIO0_D0 / SPI0_MOSI_M0 / PDM0_SDI0_M0 / SAI0_SDI0_M1 | 24 |
+| — | GND | <div className='black'>39</div> | <div className='green'>40</div> | GPIO0_C5 / I3C0_SDA_PU_M0 / UART10_RX_M2 / DP_HPDIN_M1 / SAI0_SDO0_M1 | 21 |
 
 </div>
 </details>
@@ -1205,6 +1213,11 @@ Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感
 
 - 测试 gpio readall 命令的输出如下
 
+<details>
+<summary>历史命令输出（其他板卡示例，不适用于本板接线）</summary>
+
+此输出保留作为历史参考。接线请使用上方40Pin表；wPi编号必须以支持本板的工具实际输出为准。
+
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
@@ -1233,6 +1246,8 @@ Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+
 ```
+
+</details>
 
 - 设置 GPIO 口为输出模式，其中第三个参数需要输入引脚对应的 wPi 的序号
 

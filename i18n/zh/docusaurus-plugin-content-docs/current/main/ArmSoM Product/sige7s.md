@@ -184,37 +184,65 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
 </details>
 
 ### 引脚定义
-<details>
+<details id="board-40pin">
     <summary>
         40-PIN header
     </summary>
    
+
+
+![ArmSoM SIGE7S 40Pin](/img/board-pinouts/sige7s-40pin.svg)
+
+[打开高清引脚图](/img/board-pinouts/sige7s-40pin.svg)
+
+依据 V1.0 原理图核查。图中数字为物理引脚号，NC 为未连接，DNP 为元件默认不装。复用功能需匹配系统配置；GPIO传统编号不是 Linux gpiochip 行号。 第7脚为 GPIO1_B7；PWM3_IR_M3 位于第12脚 GPIO1_A7。
+
+原文中的设备节点示例：`/dev/i2c1`、`/dev/i2c6`、`/dev/ttyS2`。节点名称取决于系统及设备树，不能直接作为引脚定义。
+
 <div className='gpio_style'>
 
-| GPIO number |  Function |   Pin    |  Pin     |  Function  | GPIO number |
-| :-----------: | :-------------: | :--------: | :--------: | :--------: |:--------: |
-| | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V | |
-| /dev/i2c1 sda | I2C1_SDA \ GPIO0_D5 | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V | |
-| /dev/i2c1 scl | I2C1_SCL \ GPIO0_D4 | <div className='green'>5</div> | <div className='black'>6</div> | GND | |
-| 47 | GPIO1_B7 \ PWM3_M3 | <div className='green'>7</div> | <div className='green'>8</div> | <div className='orange-txt'>UART2_TX_M0</div> | |
-| | GND | <div className='black'>9</div> | <div className='green'>10</div> | <div className='orange-txt'>UART2_RX_M0</div>  | |
-| 128 | GPIO4_A0 | <div className='green'>11</div> | <div className='green'>12</div> | GPIO1_A7 | 39 |
-| 129 | GPIO4_A1 | <div className='green'>13</div> | <div className='black'>14</div> | GND | |
-| 130 | GPIO4_A2 | <div className='green'>15</div> | <div className='green'>16</div> | UART6_TX_M1 \ GPIO1_A1 | /dev/ttyS2 uart txd |
-| | +3.3V | <div className='red'>17</div> | <div className='green'>18</div> |UART6_RX_M1 \| GPIO1_A0 |  /dev/ttyS2 uart rxd |
-| spi mosi | SPI0_MOSI_M2 | <div className='green'>19</div> | <div className='black'>20</div> | GND | |
-| spi miso  | SPI0_MISO_M2 | <div className='green'>21</div> | <div className='green'>22</div> | GPIO1_B0|  40 |
-| spi clk| SPI0_CLK_M2 | <div className='green'>23</div> | <div className='green'>24</div> | spi cs 0 | SPI0_CS0_M2 |
-| | GND | <div className='black'>25</div> | <div className='green'>26</div> | spi cs 1 | SPI0_CS1_M2 |
-| /dev/i2c6 sda| I2C6_SDA_M3 | <div className='green'>27</div> | <div className='green'>28</div> | I2C6_SCL_M3 |  /dev/i2c6 scl |
-| 131 | GPIO4_A3 \ UART0_TXD_M2 | <div className='green'>29</div> | <div className='black'>30</div> | GND | |
-| 132 | GPIO4_A4 \ UART0_RXD_M2 | <div className='green'>31</div> | <div className='green'>32</div> | PWM2 | 105 |
-| 133 | GPIO4_A5 \ UART3_TXD_M2 | <div className='green'>33</div> | <div className='black'>34</div> | GND | |
-| 134 | GPIO4_A6 \ UART3_RXD_M2 | <div className='green'>35</div> | <div className='green'>36</div> | GPIO4_B2 \ CAN1_RXD_M1 | 138 |
-| 135 | GPIO4_A7 | <div className='green'>37</div> | <div className='green'>38</div> | GPIO4_B3 \ CAN1_TXD_M1 | 139 |
-| | GND | <div className='black'>39</div> | <div className='green'>40</div> | GPIO3_C3 | 115 |
+| GPIO 编号（传统） | 功能 | 物理脚 | 物理脚 | 功能 | GPIO 编号（传统） |
+| :---: | :--- | :---: | :---: | :--- | :---: |
+| — | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V | — |
+| 29 | GPIO0_D5 / I2C1_SDA_M2 / SPI3_CS1_M2 / I2S1_SDO3_M1 / CAN2_TX_M1 | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V | — |
+| 28 | GPIO0_D4 / I2C1_SCL_M2 / SPI3_CS0_M2 / I2S1_SDO2_M1 / CAN2_RX_M1 / PWM3_IR_M0 / PDM0_SDI2_M1 | <div className='green'>5</div> | <div className='black'>6</div> | GND | — |
+| 47 | GPIO1_B7 / SPDIF1_TX_M0 / PWM13_M2 / UART1_RX_M1 / I2C5_SDA_M3 | <div className='green'>7</div> | <div className='green'>8</div> | GPIO0_B5 / UART2_TX_M0 / I2S1_MCLK_M1 / I2C1_SCL_M0 / JTAG_TCK_M2 | 13 |
+| — | GND | <div className='black'>9</div> | <div className='green'>10</div> | GPIO0_B6 / UART2_RX_M0 / I2S1_SCLK_M1 / I2C1_SDA_M0 / JTAG_TMS_M2 | 14 |
+| 128 | GPIO4_A0 / I2S1_MCLK_M0 / SPI0_MISO_M1 / UART9_RTSN_M1 | <div className='green'>11</div> | <div className='green'>12</div> | GPIO1_A7 / PWM3_IR_M3 / SPI2_CS0_M0 / PDM1_SDI0_M1 | 39 |
+| 129 | GPIO4_A1 / I2S1_SCLK_M0 / SPI0_MOSI_M1 / UART9_CTSN_M1 | <div className='green'>13</div> | <div className='black'>14</div> | GND | — |
+| 130 | GPIO4_A2 / I2S1_LRCK_M0 / SPI0_CLK_M1 | <div className='green'>15</div> | <div className='green'>16</div> | UART6_TX_M1 / GPIO1_A1 / SPI4_MOSI_M2 / I2C2_SCL_M4 | 33 |
+| — | +3.3V | <div className='red'>17</div> | <div className='green'>18</div> | GPIO1_A0 / UART6_RX_M1 / SPI4_MISO_M2 / I2C2_SDA_M4 | 32 |
+| 42 | GPIO1_B2 / SPI0_MOSI_M2 / UART4_RX_M2 / PDM1_SDI3_M1 | <div className='green'>19</div> | <div className='black'>20</div> | GND | — |
+| 41 | GPIO1_B1 / SPI0_MISO_M2 / PDM1_SDI2_M1 | <div className='green'>21</div> | <div className='green'>22</div> | GPIO1_B0 / SPI2_CS1_M0 / PDM1_SDI1_M1 | 40 |
+| 43 | GPIO1_B3 / SPI0_CLK_M2 / UART4_TX_M2 / PDM1_CLK1_M1 | <div className='green'>23</div> | <div className='green'>24</div> | GPIO1_B4 / SPI0_CS0_M2 / UART7_RX_M2 / PDM1_CLK0_M1 | 44 |
+| — | GND | <div className='black'>25</div> | <div className='green'>26</div> | GPIO1_B5 / SPI0_CS1_M2 / UART7_TX_M2 | 45 |
+| 136 | GPIO4_B0 / I2C6_SDA_M3 / I2S1_SDI3_M0 / UART8_TX_M0 / SPI2_CS1_M1 | <div className='green'>27</div> | <div className='green'>28</div> | GPIO4_B1 / I2C6_SCL_M3 / I2S1_SDO0_M0 / UART8_RX_M0 / SPI0_CS1_M1 / SPDIF1_TX_M1 | 137 |
+| 131 | GPIO4_A3 / UART0_TX_M2 | <div className='green'>29</div> | <div className='black'>30</div> | GND | — |
+| 132 | GPIO4_A4 / UART0_RX_M2 / SPI2_MISO_M1 / I2C3_SCL_M2 | <div className='green'>31</div> | <div className='green'>32</div> | GPIO3_B1 / PWM2_M1 / UART2_TX_M2 | 105 |
+| 133 | GPIO4_A5 / UART3_TX_M2 / I2S1_SDI0_M0 / SPI2_MOSI_M1 / I2C3_SDA_M2 | <div className='green'>33</div> | <div className='black'>34</div> | GND | — |
+| 134 | GPIO4_A6 / UART3_RX_M2 / I2S1_SDI1_M0 / SPI2_CLK_M1 / I2C5_SCL_M2 | <div className='green'>35</div> | <div className='green'>36</div> | GPIO4_B2 / CAN1_RX_M1 / PWM14_M1 / I2S1_SDO1_M0 / UART8_RTSN_M0 / SPI0_CS0_M1 / I2C7_SCL_M3 | 138 |
+| 135 | GPIO4_A7 / I2S1_SDI2_M0 / SPI2_CS0_M1 / I2C5_SDA_M2 | <div className='green'>37</div> | <div className='green'>38</div> | GPIO4_B3 / CAN1_TX_M1 / PWM15_IR_M1 / I2S1_SDO2_M0 / UART8_CTSN_M0 / I2C7_SDA_M3 | 139 |
+| — | GND | <div className='black'>39</div> | <div className='green'>40</div> | GPIO3_C3 / PWM15_IR_M0 / UART7_CTSN_M1 / SPI1_CS1_M1 / I2C8_SDA_M4 | 115 |
 
 </div>
+
+
+#### 复用功能与使用限制
+
+以上图表补充了原理图第 2、10 页 SoC 符号列出的常用 UART、SPI、I2C、I2S、PWM、CAN、PDM、SPDIF 和 JTAG 复用功能，并按第 23 页连接器网络对应到物理脚号。**这是可配置的芯片复用能力，不表示全部已在当前系统启用或经过板级实测。** 同一引脚上的功能不能同时使用；专用显示、摄像头、PCIe、GMAC 和电源管理复用不在此常用功能图的范围内。
+
+| 信号组 | 40Pin 上引出的物理脚 | 限制 |
+| --- | --- | --- |
+| SPI4_M2 | 16：MOSI；18：MISO | CLK、CS0 未引到此排针，不能作为完整 SPI4 接口使用 |
+| SPI3_M2 | 5：CS0；3：CS1 | 仅片选信号，不是完整 SPI3 总线 |
+| SPI1_M1 | 40：CS1 | 仅一个片选信号 |
+| I2C8_M4 | 40：SDA | SCL 未引到此排针 |
+| UART9_M1 | 11：RTSN；13：CTSN | 仅流控信号，TX/RX 未引到此排针 |
+| UART7_M1 | 40：CTSN | 仅一个流控信号；与 24/26 脚 UART7_M2 区分 |
+| UART2_M2 | 32：TX | RX 未引到此排针；与 8/10 脚 UART2_M0 区分 |
+
+第 3/5 脚经 U34、第 32/40 脚经 U35、第 8/10 脚经 U36（RS0102YH8）进行 1.8V 与 3.3V 电平转换。使用这些引脚的其他复用模式前，需要确认转换器对信号方向、速率、负载及上拉的要求；其他接口还需核对设备树和板载共享功能。I2S/PDM 等音频功能也应按完整时钟和数据信号组配置。
+
 </details>
 
 <details>
@@ -1070,7 +1098,7 @@ armsom@armsom:/wiring-armbian$ ./build
  |  133 |  22 | GPIO4_A5 |     IN | 0 | 33 || 34 |   |        | GND      |     |      |
  |  134 |  23 | GPIO4_A6 |     IN | 0 | 35 || 36 | 1 | IN     | GPIO4_B2 | 24  | 138  |
  |  135 |  25 | GPIO4_A7 |     IN | 0 | 37 || 38 | 1 | IN     | GPIO4_B3 | 26  | 139  |
- |      |     |      GND |        |   | 39 || 40 | 1 | IN     | GPIO4_C3 | 27  | 115  |
+ |      |     |      GND |        |   | 39 || 40 | 1 | IN     | GPIO3_C3 | 27  | 115  |
  +------+-----+----------+--------+---+----++----+---+--------+----------+-----+------+
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |
  +------+-----+----------+--------+---+  ArmSoM-Sige7s +---+--------+----------+-----+------+
