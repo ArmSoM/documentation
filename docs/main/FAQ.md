@@ -19,7 +19,7 @@ Q2: What should I do if I find an error in the document?
 
 Q3: What if you want to provide suggestions for the document or want to add new content to the document?
 
-> A3: You can use the email address to contact jackson@armsom.org to apply to become a document contributor. Your enthusiasm will be our unremitting motivation
+> A3: You can use the email address to contact fae@armsom.org to apply to become a document contributor. Your enthusiasm will be our unremitting motivation
 
 
 ## Sige7-FAQ
