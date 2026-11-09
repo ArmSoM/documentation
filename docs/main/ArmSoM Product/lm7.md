@@ -50,8 +50,8 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - **VPU/Codec**:  
   - **Hardware decoding**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
   - **Hardware encoding**: 8K@30fps H.265 / H.264
-- **RAM**: 4GB/8GB/16GB (max 32GB) 64bit LPDDR4/LPDDR4x, default LPDDR4x 8GB
-- **Flash**: 16GB/32GB/64GB/128GB eMMC, default eMMC 32GB
+- **RAM**: 4GB/8GB/16GB (max 32GB) 64bit LPDDR4/LPDDR4x
+- **Flash**: 16GB/32GB/64GB/128GB eMMC
 - **Operating voltage**: 4V (±5% voltage variation)  
 - **Operating temperature**: 0°C ~ 70°C
 - **Interface type**: LGA package, 506 pins in total
@@ -146,7 +146,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
         <tr>
             <th>DP TX</th>
             <th>2</th>
-            <th colspan="2"><li>Support 2 lanes DP TX 1.4a interface，connecting with USB3.1 Gen1，support 1/2/4lanes</li><li>Resolution up to 8192x4320@30Hz</li><li>Support HDCP2.3, HDCP 1.3</li></th>
+            <th colspan="2"><li>Support 2 lanes DP TX 1.4a interface，connecting with USB3.1 Gen1，support 1/2/4lanes</li><li>Resolution up to 7680×4320@30Hz (RK3588 Datasheet V1.5)</li><li>Support HDCP2.3, HDCP 1.3</li></th>
         </tr>
         <tr>
             <th>MIPI DSI</th>

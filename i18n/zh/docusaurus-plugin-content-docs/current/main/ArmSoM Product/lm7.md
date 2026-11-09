@@ -44,8 +44,8 @@ ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频�
 - **VPU/编解码**：
   - **硬解码**：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - **硬编码**：8K@30fps H.265 / H.264
-- **RAM**：4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
-- **Flash**：16GB/32GB/64GB/128GB eMMC，默认eMMC 32GB
+- **RAM**：4GB/8GB/16GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x
+- **Flash**：16GB/32GB/64GB/128GB eMMC
 - **工作电压**：电压 4V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
 - **接口类型**：LGA封装（栅格阵列封装），总引脚数 506Pin
@@ -139,7 +139,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
         <tr>
             <th>DP TX</th>
             <th>2</th>
-            <th colspan="2"><li>支持 2 路 DP TX 1.4a 接口，可连接 USB3.1 Gen1，支持 1/2/4lanes</li><li>分辨率可达 8192x4320@30Hz</li><li>支持 HDCP2.3, HDCP 1.3</li></th>
+            <th colspan="2"><li>支持 2 路 DP TX 1.4a 接口，可连接 USB3.1 Gen1，支持 1/2/4lanes</li><li>分辨率可达 7680×4320@30Hz (RK3588 Datasheet V1.5)</li><li>支持 HDCP2.3, HDCP 1.3</li></th>
         </tr>
         <tr>
             <th>MIPI DSI</th>

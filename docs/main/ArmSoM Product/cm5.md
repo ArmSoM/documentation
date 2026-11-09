@@ -45,8 +45,8 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
 - **VPU/Video Codec:**
   - **Decoding:** Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
   - **Encoding:** Supports H.264 and H.265，JPEG up to 4K@60fps.
-- **RAM:** 2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0), default is 8GB, with RK3576 supporting up to 16GB.
-- **Flash:** 32/64/128GB eMMC, default is 64GB eMMC.
+- **RAM:** 2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0), with RK3576 supporting up to 16GB.
+- **Flash:** 32/64/128GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage:** 4.5V–5.5V
 - **Operating Temperature:** 0℃ ~ 80℃
@@ -161,11 +161,11 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>2GB/4GB/8GB/16GB (up to 16GB) 32-bit LPDDR5 (V1.3) / LPDDR4X (V2.0), default LPDDR5 8GB</li></th>
+            <th><li>2GB/4GB/8GB/16GB (up to 16GB) 32-bit LPDDR5 (V1.3) / LPDDR4X (V2.0)</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC, default eMMC 64GB</li><li>MicroSD expansion through a carrier-board card slot</li><li>PCIe 2.1 ×1 NVMe SSD through the M.2 M-Key socket on CM5-IO</li></th>
+            <th><li>32/64/128GB eMMC</li><li>MicroSD expansion through a carrier-board card slot</li><li>PCIe 2.1 ×1 NVMe SSD through the M.2 M-Key socket on CM5-IO</li></th>
         </tr>
         <tr>
             <th>Display</th>
@@ -241,6 +241,8 @@ Here’s a table showing the current consumption of ArmSoM-CM5 and ArmSoM-CM5-IO
 | --- | --- | --- | --- | --- | --- | --- |
 | 3 | CM5 | RK3576 | 4.0 V | 350 mA | 0.1 mA | 1040 mA |
 | 4 | CM5-IO | RK3576 | 12.0 V | 480 mA | 27 mA | 735 mA |
+
+The CM5 4.0V entry is an original test record below the specified input range. Its measurement point and conditions require verification; it is not a recommended input voltage.
 
 
 ## CM5-IO Product Introduction {#cm5-io}

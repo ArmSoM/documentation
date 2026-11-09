@@ -47,8 +47,8 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 - **VPU/编解码**：
   - **硬解码**：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
   - **硬编码**：支持H.264和H.265，JPEG最高4K@60fps。
-- **RAM**：2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)，默认8GB，RK3576 最大支持16GB。
-- **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
+- **RAM**：2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)，RK3576 最大支持16GB。
+- **Flash**：32/64/128GB eMMC。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **工作电压**：4.5V–5.5V
 - **工作温度**：0℃ ~ 80℃
@@ -162,11 +162,11 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>2GB/4GB/8GB/16GB（最高可配 16GB ）32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)，默认LPDDR5 8GB</li></th>
+            <th><li>2GB/4GB/8GB/16GB（最高可配 16GB ）32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC，默认eMMC 64GB</li><li>通过载板 microSD 卡槽扩展</li><li>通过 CM5-IO 的 M.2 M-Key 插座连接 PCIe 2.1 ×1 NVMe SSD</li></th>
+            <th><li>32/64/128GB eMMC</li><li>通过载板 microSD 卡槽扩展</li><li>通过 CM5-IO 的 M.2 M-Key 插座连接 PCIe 2.1 ×1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>显示</th>
@@ -247,6 +247,8 @@ CM5-IO 的 M.2 使用 PCIe0，USB Hub 使用另一组复用接口的 USB 模式�
 | --- | --- | --- | --- | --- | --- | --- |
 | 3 | CM5 | RK3576 | 4.0 V | 350 mA | 0.1 mA | 1040 mA |
 | 4 | CM5-IO | RK3576 | 12.0 V | 480 mA | 27 mA | 735 mA |
+
+表中 CM5 的 4.0V 为原始测试记录，低于本页标称供电范围下限；测试点和条件尚需复核，不应将此记录视为推荐输入电压。
 
 
 ## CM5-IO 产品简介 {#cm5-io}
@@ -1119,7 +1121,7 @@ root@armsom-cm5:/# aplay -D hw:0,0 /usr/share/sounds/alsa/Front_Right.wav
 
 CM5 Kit 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
-目前风扇默认五个状态
+以下示例包含六档状态（0–5）；温度阈值与 PWM 值取决于镜像和设备树配置。
 
 | 温度       | 状态  | PWM转速 |
 | --------------- | ----- | ------ |
