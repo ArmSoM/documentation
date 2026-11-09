@@ -40,7 +40,7 @@ It is ideal for ARM PCs, edge computing, cloud servers, artificial intelligence,
   - **Hardware Decoding**: H.265/VP9/AVS2 up to 4K@60fps, H.264 up to 4K@30fps
   - **Hardware Encoding**: H.264/H.265 up to 4K@30fps
 - **RAM**: 2GB/4GB/6GB/8GB/12GB/16GB LPDDR5 (supports up to 16GB)
-- **Flash**: 32GB/64GB/128GB eMMC, reserve SPI flash, not mounted by default
+- **Flash**: 32GB/64GB/128GB eMMC, reserve SPI flash (assembly depends on the purchased variant)
 - **WIFI/BT**: Onboard Wi-Fi 6 + BT 5.4
 - **Operating Voltage**: 5V (±5% voltage tolerance)
 - **Operating Temperature**: -25℃ ~ 115℃
@@ -118,11 +118,11 @@ Sige6 Hardware Specifications
 </tr>
 <tr >
 <th>Flash</th>
-<th><li>32GB/64GB/128GB eMMC</li>SPI Flash: 64Mb (Default), 128Mb, 256Mb (Optional)<li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket: PCIe 3.0 NVMe SSD</li></th>
+<th><li>32GB/64GB/128GB eMMC</li>SPI Flash: 64Mb, 128Mb, 256Mb (Optional)<li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket: PCIe 3.0 NVMe SSD</li></th>
 </tr>
 <tr>
 <th>PCIe</th> 
-<th><li>1x M.2 Key M Slot (PCIe 3.0 2-lanes), supports SSD expansion: Types 2280/2260/2242/2230 (2280 is currently the default configuration)</li></th>
+<th><li>1x M.2 Key M Slot (PCIe 3.0 2-lanes), supports SSD expansion: Types 2280/2260/2242/2230</li></th>
 </tr>
 <tr>
 <th>Networking</th>
@@ -188,7 +188,7 @@ Sige6 Hardware Specifications
 | **GPU / NPU** | BXM-4-64 / 3 TOPS | BXM-4-64 / 3 TOPS | BXM-4-64 / 3 TOPS |
 | **RAM (LPDDR5)** | 2GB/4GB/6GB/8GB/12GB/16GB (Up to 16GB) | Up to 16GB supported | 2GB / 4GB / 6GB / 8GB / 12GB / 16GB |
 | **Storage (eMMC)** | 16GB/32GB/64GB/128GB optional | 16GB/32GB/64GB/128GB optional | 16GB/32GB/64GB/128GB optional |
-| **Onboard Flash (SPI)** | 64Mb (Default), 128Mb, 256Mb optional | 128Mb (Default) / 256Mb optional | 8MB SPI NOR Flash |
+| **Onboard Flash (SPI)** | 64Mb, 128Mb, 256Mb optional | 128Mb (Default) / 256Mb optional | 8MB SPI NOR Flash |
 | **High-speed M.2** | **1x M.2 Key M (PCIe 3.0 2-lanes)** | **1x M.2 Key M (PCIe 3.0 2-lanes)** | 1x M.2 Key M (PCIe 3.0 1-lane) |
 | **Ethernet** | 1x Gigabit (PoE supported via external HAT) | 1x Gigabit (PoE supported via external HAT) | 1x Gigabit (PoE supported via external HAT) |
 | **Wireless** | Wi-Fi 6, BT 5.0 (External antenna) | Wi-Fi 6 + BT 5.4 (External antenna) | Wi-Fi 6, BT 5.4 (External antenna) |
@@ -255,6 +255,168 @@ Checked against the V1.0 schematic. Numbers in the diagram are physical pins. NC
 | — | GND | <div className='black'>39</div> | <div className='green'>40</div> | PK3 / UART6-RI / I2S4-DIN0 / I2S4-DOUT1 / TWI5-SCK | — |
 
 </div>
+</details>
+
+Directions are relative to the board/SoC: I = input, O = output, P = power. CSI data/clock enter the board; MCLK, PDN and RST are driven by the board.
+
+<details>
+    <summary>
+      MIPI CSI0
+    </summary>
+0.5mm FPC connector (J12)
+
+| Pin | Signal | Type | Description |
+| :---: | :--- | :---: | :--- |
+| **1** | GND | P | Ground |
+| **3** | MCSIC-D0N | I | MIPI data lane 0 (negative) |
+| **5** | MCSIC-D0P | I | MIPI data lane 0 (positive) |
+| **7** | GND | P | Ground |
+| **9** | MCSIC-D1N | I | MIPI data lane 1 (negative) |
+| **11** | MCSIC-D1P | I | MIPI data lane 1 (positive) |
+| **13** | GND | P | Ground |
+| **15** | MCSIC-CKN | I | MIPI clock lane (negative) |
+| **17** | MCSIC-CKP | I | MIPI clock lane (positive) |
+| **19** | GND | P | Ground |
+| **21** | MCSI-PDN-R2 | O | Camera power-down/reset control (Power Down) |
+| **23** | MCSI-MCLK-2 | O | Camera master clock (Master Clock) |
+| **25** | TWI4-SCK | I/O | I2C configuration clock (SCL) |
+| **27** | TWI4-SDA | I/O | I2C configuration data (SDA) |
+| **29** | VCC33-LCD | P | 3.3V camera supply |
+</details>
+
+<details>
+    <summary>
+      MIPI CSI1
+    </summary>
+0.5mm FPC connector(J13)
+
+| Pin | Signal | Type | Description |
+| :---: | :--- | :---: | :--- |
+| **1** | GND | P | Ground |
+| **2** | MCSIB-D3N | I | MIPI data lane 3 (negative) |
+| **3** | MCSIB-D3P | I | MIPI data lane 3 (positive) |
+| **4** | GND | P | Ground |
+| **5** | MCSIB-D2N | I | MIPI data lane 2 (negative) |
+| **6** | MCSIB-D2P | I | MIPI data lane 2 (positive) |
+| **7** | GND | P | Ground |
+| **8** | NC | - | Not connected (No Connection) |
+| **9** | NC | - | Not connected (No Connection) |
+| **10** | GND | P | Ground |
+| **11** | MCSIB-D1N | I | MIPI data lane 1 (negative) |
+| **12** | MCSIB-D1P | I | MIPI data lane 1 (positive) |
+| **13** | GND | P | Ground |
+| **14** | MCSIB-D0N | I | MIPI data lane 0 (negative) |
+| **15** | MCSIB-D0P | I | MIPI data lane 0 (positive) |
+| **16** | GND | P | Ground |
+| **17** | MCSIB-CKN | I | MIPI clock lane (negative) |
+| **18** | MCSIB-CKP | I | MIPI clock lane (positive) |
+| **19** | GND | P | Ground |
+| **20** | MCSI-MCLK | O | Camera master clock (series 22Ω R147) |
+| **21** | NC | - | Not connected (No Connection) |
+| **22** | NC | - | Not connected (No Connection) |
+| **23** | MCSI-PDN-R | O | Camera power-down control (Power Down) |
+| **24** | TWI3-SCK | I/O | I2C configuration clock (series 22Ω R151) |
+| **25** | TWI3-SDA | I/O | I2C configuration data (series 22Ω R148) |
+| **26** | NC | - | Not connected (No Connection) |
+| **27** | MCSI-RST-R | O | Camera hardware reset (Reset) |
+| **28** | NC | - | Not connected (No Connection) |
+| **29** | NC | - | Not connected (No Connection) |
+| **30** | GND | P | Ground |
+| **31** | PS (Power) | P | Camera supply (with filtering capacitors) |
+| **32** | GND | P | Ground |
+| **33** | GND | P | Ground |
+
+</details>
+
+<details>
+    <summary>
+      MIPI DSI
+    </summary>
+0.5mm FPC connector (J15)
+
+| Pin | Signal | Type | Description |
+| :---: | :--- | :---: | :--- |
+| **1** | GND | P | Ground |
+| **2** | MIPI-DSI0-DN0 | O | DSI data lane 0 (negative) |
+| **3** | MIPI-DSI0-DP0 | O | DSI data lane 0 (positive) |
+| **4** | GND | P | Ground |
+| **5** | MIPI-DSI0-DN1 | O | DSI data lane 1 (negative) |
+| **6** | MIPI-DSI0-DP1 | O | DSI data lane 1 (positive) |
+| **7** | GND | P | Ground |
+| **8** | MIPI-DSI0-CKN | O | DSI clock lane (negative) |
+| **9** | MIPI-DSI0-CKP | O | DSI clock lane (positive) |
+| **10** | GND | P | Ground |
+| **11** | MIPI-DSI0-DN2 | O | DSI data lane 2 (negative) |
+| **12** | MIPI-DSI0-DP2 | O | DSI data lane 2 (positive) |
+| **13** | GND | P | Ground |
+| **14** | MIPI-DSI0-DN3 | O | DSI data lane 3 (negative) |
+| **15** | MIPI-DSI0-DP3 | O | DSI data lane 3 (positive) |
+| **16** | GND | P | Ground |
+| **17** | LCD-PWM | O | Display backlight brightness control (PWM) |
+| **18** | BL-PWR-EN | O | Backlight power enable |
+| **19** | LCD-3V3 | P | 3.3V logic supply (maximum 300mA) |
+| **20** | LCD-RST | O | Display hardware reset |
+| **21** | GPADC5 | I | Analog signal input (series 22Ω R270) |
+| **22** | LCD-PWR-EN | O | Display power enable |
+| **23** | TWI2-SCK | I/O | I2C clock (touch or panel configuration) |
+| **24** | TWI2-SDA | I/O | I2C data (touch or panel configuration) |
+| **25** | TP-INT | I | Touch interrupt |
+| **26** | TP-RST | O | Touch hardware reset |
+| **27** | GND | P | Ground |
+| **28** | LCD-5V | P | 5V supply (backlight or display driver) |
+| **29** | LCD-5V | P | 5V supply (backlight or display driver) |
+| **30** | GND | P | Ground |
+
+</details>
+
+<details>
+    <summary>
+        Debug
+    </summary>
+2.54 connector(J17)
+
+|Pin |Assignment |   Description |
+ :--------: | :---------: | :--------: |
+|1    | GND  | GND          |
+|2    | CPUX-RX | UART receive |
+|3    | CPUX-TX | UART transmit |
+</details>
+
+<details>
+    <summary>
+        FAN
+    </summary>
+0.8mm connector(J19)
+
+|Pin |Assignment |   Description |
+ :--------: | :---------: | :--------: |
+|1    | VCC_5V0 | 5V Power ouput |
+|2 | FAN switched return | PWM-switched low-side return; connect the fan negative lead here, not a logic PWM output |
+</details>
+
+<details>
+    <summary>
+        HPOUT
+    </summary>
+
+0.8mm connector(J10)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: |
+|1          | SPKR1+         | Speaker output (positive)     |
+|2          | SPKR1-         | Speaker output (negative)      |
+</details>
+
+<details>
+    <summary>
+        VRTC
+    </summary>
+[0.8mm connector](https://item.taobao.com/item.htm?id=742624228081)(J16)
+
+|Pin        | Assignment  | Description|
+ :--------: | :---------: | :--------: |
+|1          | +         | Positive  |
+|2          | -         | Negative  |
 </details>
 
 <span id="doc-section-4" className="armsom-section-anchor" />
@@ -1300,7 +1462,7 @@ CSI Bandwidth: 0
 
 #### 3.14 MIPI DSI
 
-ArmSoM-Sige6 offers a maximum resolution of up to 4K@60Hz
+J15 on Sige6 exposes one 4-lane DSI0 link. A733 Datasheet V1.01 specifies up to 1920×1200@60fps without DSC, or 2000×1200@120fps with DSC (DSC 1.1 is supported on DSI0 only). Available modes depend on the panel, driver and timing configuration; the HDMI 4K@60Hz specification does not apply to this connector.
 
 1. Connect the ribbon cable as shown in the picture below
 

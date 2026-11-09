@@ -37,7 +37,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
   - **硬解码**：H265/VP9/AVS2 4K@60fps, H264 4K@30fps解码
   - **硬编码**：H264/H265 4K@30fps
 - **RAM**：2GB/4GB/6GB/8GB/12GB/16GB LPDDR5（最高可配 16GB ）
-- **Flash**：16GB/32GB/64GB/128GB eMMC, 预留 SPI flash, 默认不贴
+- **Flash**：16GB/32GB/64GB/128GB eMMC, 预留 SPI flash（装配情况以所购版本为准）
 - **WIFI/BT**: 板载 Wi-Fi6 + BT 5.4 
 - **工作电压**：5V（电压误差±5%）
 - **工作温度**：-25℃ ~ 115℃
@@ -115,11 +115,11 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/64GB/128GB eMMC</li>SPI Flash：64Mb（默认贴）、128Mb、256Mb 可选<li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB eMMC</li>SPI Flash：64Mb、128Mb、256Mb 可选<li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M 接口(PCIe 3.0 2- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
+            <th><li>1x M.2 Key M 接口(PCIe 3.0 2- lanes)，可拓展 SSD：Type 2280/2260/2242/2230</li></th>
         </tr>
         <tr>
             <th>网络</th>
@@ -185,7 +185,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 | **GPU / NPU** | BXM-4-64 / 3 TOPS |BXM-4-64 / 3 TOPS |BXM-4-64 / 3 TOPS |
 | **内存 (LPDDR5)** | 2GB/4GB/6GB/8GB/12GB/16GB(最高支持 16GB) | 最高支持 16GB | 2GB / 4GB / 6GB / 8GB / 12GB / 16GB |
 | **系统存储(EMMc)** | 16GB/32GB/64GB/128GB 可选 | 16GB/32GB/64GB/128GB 可选 | 16GB/32GB/64GB/128GB 可选
-| **板载闪存 (SPI)** | 64Mb（默认贴）、128Mb、256Mb 可选 | 128Mb (默认) / 256Mb 可选 | 8MB SPI NOR Flash |
+| **板载闪存 (SPI)** | 64Mb、128Mb、256Mb 可选 | 128Mb (默认) / 256Mb 可选 | 8MB SPI NOR Flash |
 | **高速接口 (M.2)** | **1x M.2 Key M 接口(PCIe 3.0 2- lanes)** | **1x M.2 Key M 接口(PCIe 3.0 2- lanes)** | 1x M.2 Key M 接口(PCIe 3.0 1- lanes) |
 | **以太网** | 1x 千兆网口（支持 PoE，需外接 PoE HAT） | 1x 千兆网口（支持 PoE，需外接 PoE HAT）  | 1x 千兆网口（支持 PoE，需外接 PoE HAT） |
 | **无线连接** | Wi-Fi 6, BT 5.0 (外接天线) | Wi-Fi 6 + BT 5.4  (外接天线)| Wi-Fi 6, BT 5.4 (外接天线) |
@@ -254,6 +254,8 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 </div>
 </details>
 
+以下信号方向以主板/SoC 为参照：I 为输入，O 为输出，P 为电源；CSI 数据/时钟输入主板，MCLK、PDN 和 RST 从主板输出。
+
 <details>
     <summary>
       MIPI CSI0
@@ -263,16 +265,16 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 | 引脚 (Pin) | 信号名称 (Signal) | 类型 (Type) | 描述 (Description) |
 | :---: | :--- | :---: | :--- |
 | **1** | GND | P | 电源地 |
-| **3** | MCSIC-D0N | O | MIPI 数据通道 0 (负) |
-| **5** | MCSIC-D0P | O | MIPI 数据通道 0 (正) |
+| **3** | MCSIC-D0N | I | MIPI 数据通道 0 (负) |
+| **5** | MCSIC-D0P | I | MIPI 数据通道 0 (正) |
 | **7** | GND | P | 电源地 |
-| **9** | MCSIC-D1N | O | MIPI 数据通道 1 (负) |
-| **11** | MCSIC-D1P | O | MIPI 数据通道 1 (正) |
+| **9** | MCSIC-D1N | I | MIPI 数据通道 1 (负) |
+| **11** | MCSIC-D1P | I | MIPI 数据通道 1 (正) |
 | **13** | GND | P | 电源地 |
-| **15** | MCSIC-CKN | O | MIPI 时钟通道 (负) |
-| **17** | MCSIC-CKP | O | MIPI 时钟通道 (正) |
+| **15** | MCSIC-CKN | I | MIPI 时钟通道 (负) |
+| **17** | MCSIC-CKP | I | MIPI 时钟通道 (正) |
 | **19** | GND | P | 电源地 |
-| **21** | MCSI-PDN-R2 | I | 摄像头掉电/复位控制 (Power Down) |
+| **21** | MCSI-PDN-R2 | O | 摄像头掉电/复位控制 (Power Down) |
 | **23** | MCSI-MCLK-2 | O | 摄像头主时钟 (Master Clock) |
 | **25** | TWI4-SCK | I/O | I2C 配置时钟线 (SCL) |
 | **27** | TWI4-SDA | I/O | I2C 配置数据线 (SDA) |
@@ -288,32 +290,32 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 | 引脚 (Pin) | 信号名称 (Signal) | 类型 (Type) | 描述 (Description) |
 | :---: | :--- | :---: | :--- |
 | **1** | GND | P | 电源地 |
-| **2** | MCSIB-D3N | O | MIPI 数据通道 3 (负) |
-| **3** | MCSIB-D3P | O | MIPI 数据通道 3 (正) |
+| **2** | MCSIB-D3N | I | MIPI 数据通道 3 (负) |
+| **3** | MCSIB-D3P | I | MIPI 数据通道 3 (正) |
 | **4** | GND | P | 电源地 |
-| **5** | MCSIB-D2N | O | MIPI 数据通道 2 (负) |
-| **6** | MCSIB-D2P | O | MIPI 数据通道 2 (正) |
+| **5** | MCSIB-D2N | I | MIPI 数据通道 2 (负) |
+| **6** | MCSIB-D2P | I | MIPI 数据通道 2 (正) |
 | **7** | GND | P | 电源地 |
 | **8** | NC | - | 空脚 (No Connection) |
 | **9** | NC | - | 空脚 (No Connection) |
 | **10** | GND | P | 电源地 |
-| **11** | MCSIB-D1N | O | MIPI 数据通道 1 (负) |
-| **12** | MCSIB-D1P | O | MIPI 数据通道 1 (正) |
+| **11** | MCSIB-D1N | I | MIPI 数据通道 1 (负) |
+| **12** | MCSIB-D1P | I | MIPI 数据通道 1 (正) |
 | **13** | GND | P | 电源地 |
-| **14** | MCSIB-D0N | O | MIPI 数据通道 0 (负) |
-| **15** | MCSIB-D0P | O | MIPI 数据通道 0 (正) |
+| **14** | MCSIB-D0N | I | MIPI 数据通道 0 (负) |
+| **15** | MCSIB-D0P | I | MIPI 数据通道 0 (正) |
 | **16** | GND | P | 电源地 |
-| **17** | MCSIB-CKN | O | MIPI 时钟通道 (负) |
-| **18** | MCSIB-CKP | O | MIPI 时钟通道 (正) |
+| **17** | MCSIB-CKN | I | MIPI 时钟通道 (负) |
+| **18** | MCSIB-CKP | I | MIPI 时钟通道 (正) |
 | **19** | GND | P | 电源地 |
 | **20** | MCSI-MCLK | O | 摄像头主时钟 (串联 22Ω R147) |
 | **21** | NC | - | 空脚 (No Connection) |
 | **22** | NC | - | 空脚 (No Connection) |
-| **23** | MCSI-PDN-R | I | 摄像头掉电控制 (Power Down) |
+| **23** | MCSI-PDN-R | O | 摄像头掉电控制 (Power Down) |
 | **24** | TWI3-SCK | I/O | I2C 配置时钟线 (串联 22Ω R151) |
 | **25** | TWI3-SDA | I/O | I2C 配置数据线 (串联 22Ω R148) |
 | **26** | NC | - | 空脚 (No Connection) |
-| **27** | MCSI-RST-R | I | 摄像头硬件复位 (Reset) |
+| **27** | MCSI-RST-R | O | 摄像头硬件复位 (Reset) |
 | **28** | NC | - | 空脚 (No Connection) |
 | **29** | NC | - | 空脚 (No Connection) |
 | **30** | GND | P | 电源地 |
@@ -374,7 +376,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
  :--------: | :---------: | :--------: | 
 |1    | GND  | GND          |
 |2    | CPUX-RX | UART 接收端 |
-|2    | CPUX-tx | UART 发送端 |
+|3    | CPUX-TX | UART 发送端 |
 </details>
 
 <details>
@@ -386,7 +388,7 @@ ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
-|2    | PWM | PWM控制 |
+|2 | FAN switched return | PWM 低侧开关回路，风扇负极接此脚；不是逻辑 PWM 输出 |
 </details>
 
 <details>
@@ -1461,7 +1463,7 @@ CSI Bandwidth: 0
 
 #### 3.14 MIPI DSI
 
-ArmSoM-Sige6 分辨率最高分辨率可达 4K@60Hz
+Sige6 的 J15 引出一组 4-lane DSI0。按 A733 Datasheet V1.01，单链路无 DSC 时最高 1920×1200@60fps；启用 DSC 时最高 2000×1200@120fps（仅 DSI0 支持 DSC 1.1）。实际可用模式取决于屏幕、驱动与时序配置，不能将 HDMI 的 4K@60Hz 参数用于此接口。
 
 1. 按照下图连接好排线
 
