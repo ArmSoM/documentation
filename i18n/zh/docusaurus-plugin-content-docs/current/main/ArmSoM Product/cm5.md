@@ -50,7 +50,7 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 - **RAM**：2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0)，RK3576 最大支持16GB。
 - **Flash**：32/64/128GB eMMC。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
-- **工作电压**：4.5V–5.5V
+- **核心板输入电压**：建议 4V，最高不得超过 5.5V
 - **工作温度**：0℃ ~ 80℃
 - **重量**：12g
 - **pcb**: 10层2阶
@@ -248,7 +248,7 @@ CM5-IO 的 M.2 使用 PCIe0，USB Hub 使用另一组复用接口的 USB 模式�
 | 3 | CM5 | RK3576 | 4.0 V | 350 mA | 0.1 mA | 1040 mA |
 | 4 | CM5-IO | RK3576 | 12.0 V | 480 mA | 27 mA | 735 mA |
 
-表中 CM5 的 4.0V 为原始测试记录，低于本页标称供电范围下限；测试点和条件尚需复核，不应将此记录视为推荐输入电压。
+CM5 核心板建议输入电压为 4.0V，最高不得超过 5.5V。表中保留原始功耗测试数据；CM5-IO 的 12.0V 是载板输入电压，不是核心板供电电压，载板供电要求请参考下方 CM5-IO 规格。
 
 
 ## CM5-IO 产品简介 {#cm5-io}

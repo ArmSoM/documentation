@@ -48,7 +48,7 @@ There's a problem with Pin 21 on the ArmSoM-CM5 v1.2 not working properly, but i
 - **RAM:** 2/4/8/16GB 32bit LPDDR5 (V1.3) / LPDDR4X (V2.0), with RK3576 supporting up to 16GB.
 - **Flash:** 32/64/128GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
-- **Operating Voltage:** 4.5V–5.5V
+- **Module input voltage:** Recommended 4V; must not exceed 5.5V
 - **Operating Temperature:** 0℃ ~ 80℃
 - **Weight:** 12g
 - **Dimensions:**
@@ -242,7 +242,7 @@ Here’s a table showing the current consumption of ArmSoM-CM5 and ArmSoM-CM5-IO
 | 3 | CM5 | RK3576 | 4.0 V | 350 mA | 0.1 mA | 1040 mA |
 | 4 | CM5-IO | RK3576 | 12.0 V | 480 mA | 27 mA | 735 mA |
 
-The CM5 4.0V entry is an original test record below the specified input range. Its measurement point and conditions require verification; it is not a recommended input voltage.
+The recommended CM5 module input voltage is 4.0V and must not exceed 5.5V. The table retains the original power-consumption measurements. The CM5-IO 12.0V entry refers to the carrier-board input, not the module supply; follow the separate CM5-IO power requirements below.
 
 
 ## CM5-IO Product Introduction {#cm5-io}
