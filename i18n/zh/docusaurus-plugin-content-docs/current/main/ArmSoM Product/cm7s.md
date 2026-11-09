@@ -46,22 +46,43 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 * **NPU**：6TOPS 算力，支持 INT4/INT8/INT16 混合运算
 * **RAM**：支持 4GB/8GB/16GB/32GB LPDDR4/LPDDR4x
 * **eMMC**：32/64/128/256GB eMMC
-* **接口**：板载 3×100pin 连接器（DF40C-100DP-04V），支持 Type-C/DP1.4、HDMI 2.1/eDP1.3、MIPI DPHY/CSI、USB3.0/2.0、SATA III/PCIe2.0、SDIO3.0/RGMII、SDMMC 及 I2C/I2S/UART/SPI/CAN/PWM/GPIO 等复用总线与控制引脚
+* **接口**：板载 3×100pin 连接器（DF40C-100DP-04V），支持 Type-C/DP1.4、HDMI 2.1/eDP1.3、MIPI DPHY/CSI、USB3.0/2.0、SATA III/PCIe 2.1 ×1、SDIO3.0/RGMII、SDMMC 及 I2C/I2S/UART/SPI/CAN/PWM/GPIO 等复用总线与控制引脚
 * **电源**：输入 DC 5V (MAX 2500mA)；输出 DC 3.3V/1.8V (MAX 600mA)
 * **尺寸**：55 x 40 x 1.6 毫米
 * **工作温度**：0℃ ~ 80 ℃
 * **输入**：DC 5V MAX 2500mA
 * **输出**：DC 3.3V MAX 600mA 和 DC 1.8V MAX 600mA
 * **PCB尺寸**：55 x 40 x 1.6 毫米（长 x 宽 x 厚）
+### 核心板接口与复用功能 {#module-interfaces}
+
+CM7s 通过板对板连接器引出显示、摄像头、USB 和存储扩展信号，便于根据应用需求设计载板。下表描述的是核心板的信号能力；实际插座数量和可用功能取决于载板设计与软件配置。
+
+| 接口类别 | 数量与功能 | 说明 |
+| --- | --- | --- |
+| Type-C / DisplayPort | 1 组 USB 3.0 / DP 1.4 信号 | 原理图列出 4-lane DP、Type-C USB 及 USB + 2-lane DP 组合模式；实际支持取决于载板与软件。 |
+| HDMI / eDP | 1× HDMI 2.1 或 eDP 1.3 | 同组复用接口，不能按两个独立接口累计。 |
+| USB | Type-C USB 3.0 通道 + 1 组可选 USB 3.0 高速复用通道；3× USB 2.0 | Type-C 通道与下方高速扩展接口组 2 是不同资源。USB 2.0 为 1× OTG + 2× Host；不要将复用功能或 Hub 下行端口重复累计。 |
+| SDMMC | 1× SDMMC | 可用于载板上的存储扩展。 |
+| SDIO / RGMII | SDIO 3.0 或 RGMII | 同组复用信号，按载板设计选择功能，不作为两个独立接口累计。 |
+| MIPI D-PHY TX | 1× 4-lane + 1× 2-lane | 两组发送接口，用于显示扩展。 |
+| MIPI D-PHY RX | 2× 2-lane | 两组接收接口，用于摄像头扩展。 |
+| MIPI CSI RX | 1× 4-lane 或 2× 2-lane | 两种通道组织方式，按摄像头接线与配置选择。 |
+| 高速扩展接口组 1 | 1× SATA III 或 PCIe 2.1 ×1 | 同组信号选择一种功能。 |
+| 高速扩展接口组 2 | 1× SATA III、PCIe 2.1 ×1 或 USB 3.0 | 同组信号选择一种功能，不表示三种接口可以同时使用。 |
+
+:::note 载板设计与接口复用
+“或（or）”表示同组信号的备选功能，不应将各选项叠加计算为可同时使用的端口。 Type-C / DP 通道另有 USB + DP 组合模式，不能简单视为始终二选一。Type-C 是连接器形式，DP、USB 等功能还需相应的载板电路支持。具体引脚、通道映射和可同时启用的组合，请结合对应硬件版本的原理图、引脚定义和设备树配置确认。
+:::
+
 <span id="doc-section-2" className="armsom-section-anchor" />
 
 ## CM7s 硬件信息
 
 ### 硬件接口
 
-![ArmSoM-CM5-front & back](/img/cm/cm7s-interface.jpg)
+![ArmSoM-CM7s-front & back](/img/cm/cm7s-interface.jpg)
 
-<div className="armsom-image-caption">ArmSoM-CM5-front &amp; back</div>
+<div className="armsom-image-caption">ArmSoM-CM7s-front &amp; back</div>
 
 
 :::tip
@@ -79,14 +100,14 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
 | **NPU**                | **6TOPS 算力，支持 INT4/INT8/INT16 混合运算** | 无内置NPU                |
 | **内存**               | **最高支持 32GB LPDDR4X**                 | 2GB、4GB、8GB、16GB LPDDR4       |
 | **存储**               | eMMC 存储（可选容量）                     | eMMC 存储（可选容量）        |
-| **显示输出**           | 1x HDMI 2.1, 1x DP 1.4                   | 2x HDMI 2.0                    |
+| **显示输出**           | HDMI 2.1 / eDP 1.3；USB 3.0 / DP 1.4 通道（含 USB + DP 组合模式） | 2x HDMI 2.0                    |
 | **视频分辨率**         | **支持8K@60fps**                         | 支持4K@60fps                   |
-| **网络接口**           | 1x 千兆以太网接口                         | 1x 千兆以太网接口               |
-| **USB接口**            | **1x USB3.0，3x USB2.0**                 | 2xUSB3.0，1xUSB2.0       |
-| **GPIO**               | 40针 GPIO                                | 40针 GPIO                      |
-| **扩展性**             | **2x PCIE2.1/SATA3**                     | 1x PCIe 2.0         |
-| **相机接口**           | 1x 4通道 MIPI CSI, 2x 2通道 MIPI CSI      | 2x 4通道 MIPI CSI     |
-| **显示接口**           | 1x 4通道 MIPI DSI                        | 2x 4通道 MIPI DSI                    |
+| **网络接口**           | GMAC 信号引出；RJ45 位于 CM7s-IO | 1x 千兆以太网接口               |
+| **USB接口**            | Type-C USB 3.0 + 可选高速复用 USB 3.0；3× USB 2.0 | 2xUSB3.0，1xUSB2.0       |
+| **GPIO**               | 通过板对板连接器引出 GPIO；40 针排针位于 CM7s-IO | 40针 GPIO                      |
+| **扩展性**             | 1× SATA III / PCIe 2.1 ×1；1× SATA III / PCIe 2.1 ×1 / USB 3.0（组内复用） | 1x PCIe 2.0         |
+| **相机接口**           | 2× 2-lane D-PHY RX；CSI RX：1× 4-lane 或 2× 2-lane | 2x 4通道 MIPI CSI     |
+| **显示接口**           | MIPI D-PHY TX：1× 4-lane + 1× 2-lane | 2x 4通道 MIPI DSI                    |
 | **电源输入**           | 5V                                       | 5V                          |
 | **尺寸**               | 55mm x 40mm                               | 55mm x 40mm                    |
 | **操作系统支持**       | Debian, Android, Ubuntu, Armbian等         | Raspberry Pi OS, Ubuntu, 其他  |
@@ -138,29 +159,29 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/64GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB/256GB eMMC</li><li>引出 SDMMC 信号，microSD 插座位于载板</li><li>引出 PCIe 2.1 ×1 信号；CM7s-IO 提供 M.2 Key M 插座（PCIe 2.1 ×1）</li></th>
         </tr>
         <tr>
             <th>显示</th>
-            <th><li>1x HDMI OUT2.1，支持 8K@60Hz或4K@120Hz</li><li>2x MIPI DSI 分辨率最高可达 4K@60Hz</li><li>1x DP1.4 分辨率最高可达 8K@30Hz</li></th>
+            <th><li>1× HDMI 2.1 或 eDP 1.3；HDMI 支持 8K@60Hz 或 4K@120Hz</li><li>1 组 USB 3.0 / DP 1.4 信号，含 USB + DP 组合模式；DP 分辨率最高可达 8K@30Hz</li><li>MIPI D-PHY TX：1× 4-lane + 1× 2-lane；MIPI DSI 分辨率最高可达 4K@60Hz</li></th>
         </tr>
         <tr>
             <th>摄像头</th>
-            <th><li>2x 4Lanes MIPI CSI，每线最高 2.5Gbps</li><li>支持最多三个MIPI摄像头输入</li></th>
+            <th><li>MIPI D-PHY RX：2× 2-lane</li><li>MIPI CSI RX：1× 4-lane 或 2× 2-lane</li><li>每 lane 最高 2.5Gbps；实际可用组合取决于载板接线与软件配置</li></th>
         </tr>
         <tr>
             <th>网络</th>
             <th>
-              <li>1x GMAC，提供 RGMII / RMII 接口引出</li>
+              <li>1x GMAC，提供 RGMII / RMII 接口引出</li><li>SDIO 3.0 或 RGMII：同组信号复用，按载板设计选择</li>
             </th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>2x PCIe 2.0 1-lans</li></th>
+            <th><li>接口组 1：1× SATA III 或 PCIe 2.1 ×1</li><li>接口组 2：1× SATA III、PCIe 2.1 ×1 或 USB 3.0</li><li>各组复用功能择一使用</li></th>
         </tr>
          <tr>
             <th>USB</th>
-            <th><li>3x USB 3.0</li><li>2x USB 2.0 Host</li><li>1x USB 2.0 OTG</li><li>1× Type-C (USB 3.1)</li></th>
+            <th><li>Type-C USB 3.0 通道；另有 1 组可选 USB 3.0 高速复用通道；3× USB 2.0</li><li>可选 USB 3.0 通道与高速扩展接口组 2 的 PCIe / SATA 复用；Type-C 通道独立于该组</li><li>Type-C / DP 功能取决于载板设计</li></th>
         </tr>
         <tr>
             <th>音频</th>
@@ -168,7 +189,7 @@ armsom-cm7sv1.1 CN2 第2pin和第4pin不工作，将在下个v1.2 版本修复
         </tr>
          <tr>
             <th rowspan="3">Others</th>
-            <th ><li>UART DEBUG x1</li><li>FAN x1</li><li>RTC x1</li></th>
+            <th ><li>UART DEBUG x1</li><li>风扇控制与 RTC 相关信号引出；风扇插座、RTC 芯片和电池插座位于 CM7s-IO</li></th>
         </tr>
     </tbody>
 </table>
@@ -276,12 +297,12 @@ CM7s-IO是 ArmSoM CM7s的 IO 板，尺寸为 100x79x41 毫米，适用于需要�
 CM7s-IO板是专为CM7s计算模块设计的扩展板，旨在帮助完成系统和嵌入式板开发。
 
 - 1x HDMI输出, 1x Typec(DP)输出
-- 4x USB 3.0 Type-A
+- 4× USB 3.0 Type-A（由 RTS5411S USB Hub 扩展，共享上行链路）
 - 支持千兆以太网 RJ45
 - 通过USB Type-C进行固件闪存和设备模式
 - GPIO：40针扩展头
 - 电源连接器：DC Barrel插孔，用于12V电源输入
-- 扩展：M.2（M键，支持PCIe）、microSD
+- 扩展：M.2（M键，PCIe 2.1 ×1）、microSD
 - MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
 - MIPI CSI0：1x 4通道MIPI CSI，每条通道最高2.5Gbps
 - MIPI CSI1：1x 2通道MIPI CSI，每条通道最高2.5Gbps
@@ -345,20 +366,20 @@ CM7s-IO Board 使用12V DC供电。
     <summary>
         FAN
     </summary>
-0.8mm 连接器(CN4)
+0.8mm 连接器(CN5)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
-|1    | VCC_5V0 | 5V Power ouput |
+|1    | VCC5V0_DEVICE_S0 | 5V 电源输出 |
 |2    | GND | 地 | 
-|3    | PWM | PWM控制 |
+|3    | 受控回路端 | 接 Q45 集电极，经 Q45/Q46 电路受 FAN_PWM6_M0 控制；不是直接引出的逻辑 PWM 脚 |
 </details>
 
 <details>
     <summary>
         HPOUT
     </summary>
-0.8mm 连接器(CN3)
+0.8mm 连接器(CN4)
 
 |Pin        | Assignment  | Description|
 |:--------: | :---------: | :--------:  | 

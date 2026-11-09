@@ -46,7 +46,7 @@ armsom-cm7s v1.1 CN2 pins 2 and 4 aren't working, will be fixed in the next v1.2
 * **NPU**：6 TOPS computing power, supports mixed INT4/INT8/INT16 operations
 * **RAM**：Supports 4GB/8GB/16GB/32GB LPDDR4/LPDDR4x
 * **eMMC**：32/64/128/256GB eMMC
-* **interface**：On-board 3×100-pin connector (DF40C-100DP-04V), supports multiplexed buses and control pins like Type-C/DP1.4, HDMI 2.1/eDP1.3, MIPI DPHY/CSI, USB 3.0/2.0, SATA III/PCIe 2.0, SDIO 3.0/RGMII, SDMMC, and I2C/I2S/UART/SPI/CAN/PWM/GPIO.
+* **interface**：On-board 3×100-pin connector (DF40C-100DP-04V), supports multiplexed buses and control pins like Type-C/DP1.4, HDMI 2.1/eDP1.3, MIPI DPHY/CSI, USB 3.0/2.0, SATA III/PCIe 2.1 ×1, SDIO 3.0/RGMII, SDMMC, and I2C/I2S/UART/SPI/CAN/PWM/GPIO.
 * **Power supply**：Input DC 5V (MAX 2500mA); Output DC 3.3V/1.8V (MAX 600mA)
 * **Size**：55 x 40 x 1.6 mm
 * **Operating temperature**：0℃ ~ 80 ℃
@@ -54,15 +54,36 @@ armsom-cm7s v1.1 CN2 pins 2 and 4 aren't working, will be fixed in the next v1.2
 * **Output**: DC 3.3 V max. 600 mA and DC 1.8 V max. 600 mA
 * **PCB size**：55 x 40 x 1.6 mm (L x W x H)
 
+### Module interfaces and multiplexed functions {#module-interfaces}
+
+CM7s exposes display, camera, USB and storage expansion signals through its board-to-board connectors for custom carrier designs. The table below describes module signal capabilities; physical connector counts and available functions depend on the carrier hardware and software configuration.
+
+| Interface category | Count and function | Notes |
+| --- | --- | --- |
+| Type-C / DisplayPort | 1 USB 3.0 / DP 1.4 signal group | The schematic lists 4-lane DP, Type-C USB and combined USB + 2-lane DP modes; availability depends on the carrier and software. |
+| HDMI / eDP | 1× HDMI 2.1 or eDP 1.3 | Multiplexed alternatives, not two independent ports. |
+| USB | Type-C USB 3.0 channel + 1 optional multiplexed USB 3.0 channel; 3× USB 2.0 | The Type-C channel is separate from high-speed expansion group 2 below. USB 2.0 comprises 1× OTG + 2× Host; do not double-count multiplexed functions or hub downstream ports. |
+| SDMMC | 1× SDMMC | For storage expansion on the carrier. |
+| SDIO / RGMII | SDIO 3.0 or RGMII | Multiplexed alternatives selected by the carrier design, not two independent interfaces. |
+| MIPI D-PHY TX | 1× 4-lane + 1× 2-lane | Two transmit interfaces for display expansion. |
+| MIPI D-PHY RX | 2× 2-lane | Two receive interfaces for camera expansion. |
+| MIPI CSI RX | 1× 4-lane or 2× 2-lane | Alternative lane configurations selected according to camera wiring and configuration. |
+| High-speed expansion group 1 | 1× SATA III or PCIe 2.1 ×1 | Select one function for this signal group. |
+| High-speed expansion group 2 | 1× SATA III, PCIe 2.1 ×1 or USB 3.0 | Select one function for this signal group; the three alternatives are not simultaneously available ports. |
+
+:::note Carrier design and interface multiplexing
+“Or” indicates alternative functions within a signal group. Do not add these alternatives together as simultaneously available ports. The Type-C / DP channel also supports combined USB + DP lane configurations in the schematic, so it is not always a mutually exclusive choice. Type-C describes a connector form factor; DP and USB functions require the corresponding carrier circuitry. Confirm pin assignments, lane mappings and simultaneous-use combinations against the schematic, pin definitions and device tree configuration for the applicable hardware revision.
+:::
+
 <span id="doc-section-2" className="armsom-section-anchor" />
 
 ## CM7s Hardware Info
 
 ### Hardware interface
 
-![ArmSoM-CM5-front & back](/img/cm/cm7s-interface.jpg)
+![ArmSoM-CM7s-front & back](/img/cm/cm7s-interface.jpg)
 
-<div className="armsom-image-caption">ArmSoM-CM5-front &amp; back</div>
+<div className="armsom-image-caption">ArmSoM-CM7s-front &amp; back</div>
 
 
 :::tip
@@ -80,14 +101,14 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 | **NPU**                      | **6 TOPS computing power**              | No built-in NPU                |
 | **Memory**                   | **Supports up to 32GB LPDDR4X**          | 2GB, 4GB, 8GB, 16GB LPDDR4      |
 | **Storage**                  | eMMC storage (optional capacity)        | eMMC storage (optional capacity) |
-| **Display Output**           | 1x HDMI 2.1, 1x DP 1.4                  | 2x HDMI 2.0                    |
+| **Display Output**           | HDMI 2.1 / eDP 1.3; USB 3.0 / DP 1.4 channel (including combined USB + DP modes) | 2x HDMI 2.0                    |
 | **Video Resolution**         | **Supports 8K@60fps**                   | Supports 4K@60fps              |
-| **Network Interface**        | 1x Gigabit Ethernet port                | 1x Gigabit Ethernet port       |
-| **USB Ports**                | **1x USB3.0，3x USB2.0**                | 2xUSB3.0，1xUSB2.0             |
-| **GPIO**                     | 40 pin GPIO                             | 40 pin GPIO                    |
-| **Expandability**            | **2x PCIE2.1/SATA3**                    | 1x PCIe 2.0                    |
-| **Camera Interface**         | 1x 4-channel MIPI CSI, 2x 2-channel MIPI CSI | 2x 4-channel MIPI CSI     |
-| **Display Interface**        | 1x 4-channel MIPI DSI                        | 2x 4-channel MIPI DSI     |
+| **Network Interface**        | GMAC signals exposed; RJ45 on CM7s-IO | 1x Gigabit Ethernet port       |
+| **USB Ports**                | Type-C USB 3.0 + optional multiplexed USB 3.0; 3× USB 2.0 | 2xUSB3.0，1xUSB2.0             |
+| **GPIO**                     | GPIO exposed through board-to-board connectors; 40-pin header on CM7s-IO | 40 pin GPIO                    |
+| **Expandability**            | 1× SATA III / PCIe 2.1 ×1; 1× SATA III / PCIe 2.1 ×1 / USB 3.0 (multiplexed within each group) | 1x PCIe 2.0                    |
+| **Camera Interface**         | 2× 2-lane D-PHY RX; CSI RX: 1× 4-lane or 2× 2-lane | 2x 4-channel MIPI CSI     |
+| **Display Interface**        | MIPI D-PHY TX：1× 4-lane + 1× 2-lane | 2x 4-channel MIPI DSI     |
 | **Power Input**              | 5V                                        | 5V                          |
 | **Dimensions**               | 55mm x 40mm                               | 55mm x 40mm                    |
 | **Operating System Support** | Debian, Android, Ubuntu, Armbian, etc.    | Raspberry Pi OS, Ubuntu, etc.  |
@@ -139,29 +160,29 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/64GB/128GB eMMC，default is eMMC 64GB</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB/256GB eMMC</li><li>SDMMC signals exposed; the microSD socket is on the carrier</li><li>PCIe 2.1 ×1 signals exposed; CM7s-IO provides an M.2 Key M socket (PCIe 2.1 ×1)</li></th>
         </tr>
         <tr>
             <th>Display</th>
-            <th><li>1x HDMI OUT 2.1, supports 8K@60Hz or 4K@120Hz 2x MIPI DSI with a maximum resolution of 4K@60Hz</li><li>1x DP1.4, supports up to 8K@30Hz</li></th>
+            <th><li>1× HDMI 2.1 or eDP 1.3; HDMI supports 8K@60Hz or 4K@120Hz</li><li>1 USB 3.0 / DP 1.4 signal group, including combined USB + DP modes; DP supports up to 8K@30Hz</li><li>MIPI D-PHY TX: 1× 4-lane + 1× 2-lane; MIPI DSI supports up to 4K@60Hz</li></th>
         </tr>
         <tr>
             <th>Camera</th>
-            <th><li>2x 4-lane MIPI CSI, up to 2.5Gbps per lane</li><li>Supports up to three MIPI camera inputs</li></th>
+            <th><li>MIPI D-PHY RX: 2× 2-lane</li><li>MIPI CSI RX: 1× 4-lane or 2× 2-lane</li><li>Up to 2.5Gbps per lane; available combinations depend on carrier wiring and software configuration</li></th>
         </tr>
         <tr>
             <th>Network</th>
             <th>
-              <li>1x GMAC, providing RGMII/RMII interface output</li>
+              <li>1x GMAC, providing RGMII/RMII interface output</li><li>SDIO 3.0 or RGMII: multiplexed signals selected according to the carrier design</li>
             </th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>2x PCIe 2.0 1-lans</li></th>
+            <th><li>Group 1: 1× SATA III or PCIe 2.1 ×1</li><li>Group 2: 1× SATA III, PCIe 2.1 ×1 or USB 3.0</li><li>Select one function within each multiplexed group</li></th>
         </tr>
          <tr>
             <th>USB</th>
-            <th><li>3x USB 3.0</li><li>2x USB 2.0 Host</li><li>1x USB 2.0 OTG</li><li>1× Type-C (USB 3.1)</li></th>
+            <th><li>Type-C USB 3.0 channel; 1 additional optional multiplexed USB 3.0 channel; 3× USB 2.0</li><li>The optional USB 3.0 channel shares high-speed expansion group 2 with PCIe / SATA; the Type-C channel is separate</li><li>Type-C / DP functionality depends on the carrier design</li></th>
         </tr>
         <tr>
             <th>Audio</th>
@@ -169,7 +190,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
         </tr>
          <tr>
             <th rowspan="3">Others</th>
-            <th ><li>UART DEBUG x1</li><li>FAN x1</li><li>RTC x1</li></th>
+            <th ><li>UART DEBUG x1</li><li>Fan-control and RTC-related signals exposed; fan connector, RTC IC and battery connector on CM7s-IO</li></th>
         </tr>
     </tbody>
 </table>
@@ -271,12 +292,12 @@ The CM7s-IO is the IO board for the ArmSoM CM7s, measuring 100x79x41 mm. It's gr
 The CM7s-IO board is an expansion board designed specifically for the CM7s computing module, aimed at helping with system and embedded board development.
 
 - 1x HDMI output, 1x Type-C (DP) output
-- 4x USB 3.0 Type-A
+- 4× USB 3.0 Type-A (expanded by an RTS5411S USB hub and sharing its upstream link)
 - Supports Gigabit Ethernet RJ45
 - Firmware flashing and device mode via USB Type-C
 - GPIO: 40-pin header
 - Power connector: DC barrel jack for 12V power input
-- Expansion: M.2 (M key, supports PCIe), microSD
+- Expansion: M.2 (M key, PCIe 2.1 ×1), microSD
 - MIPI DSI: 1x 4-lane MIPI DSI, supports up to 4K@60fps (x4)
 - MIPI CSI0: 1x 4-lane MIPI CSI, up to 2.5Gbps per lane
 - MIPI CSI1: 1x 2-lane MIPI CSI, up to 2.5Gbps per lane
@@ -340,20 +361,20 @@ Checked against the CM7S-IO V1.0 schematic. Numbers in the diagram are physical 
     <summary>
         FAN
     </summary>
-0.8mm connector (CN4)
+0.8mm connector (CN5)
 
 |Pin |Assignment |   Description |
  :--------: | :---------: | :--------: | 
-|1    | VCC_5V0 | 5V Power ouput |
+|1    | VCC5V0_DEVICE_S0 | 5V power output |
 |2    | GND | GND | 
-|3    | PWM | PWM Control |
+|3    | Switched return | Connected to the Q45 collector and controlled by FAN_PWM6_M0 through Q45/Q46; not a direct logic-level PWM pin |
 </details>
 
 <details>
     <summary>
         HPOUT
     </summary>
-0.8mm connector (CN3)
+0.8mm connector (CN4)
 
 |Pin        | Assignment  | Description|
 |:--------: | :---------: | :--------:  | 
