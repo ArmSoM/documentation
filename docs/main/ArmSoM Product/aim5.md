@@ -34,8 +34,8 @@ It is applicable to ARM PC, edge computing, personal mobile Internet devices and
 - VPU/codec:
   - Hard decoding: Supports H.264, H.265, VP9, AV1, and AVS2, among others 8K@30fps or 4K@120fps The highest quality JPEG decoder 4K@60fps
   - Hard coded: Supports H.264 and H.265, with JPEG being the highest 4K@60fps .
-- RAM: 8/16GB 32-bit LPDDR5, default 8GB, RK3576 supports up to 16GB.
-- Flash: 32/64/128GB eMMC, default eMMC 64GB.
+- RAM: 8/16GB 32-bit LPDDR5, RK3576 supports up to 16GB.
+- Flash: 32/64/128GB eMMC.
 - Working voltage: With a wide range of input voltages, from 5V to 23V (voltage error ± 5%)
 - Working temperature：0℃ ~ 80℃
 - Operating System
@@ -77,6 +77,8 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 ### Product Diagram
 
 
+**USB topology:** USBHUB_HOST1–4 in the module connector table are downstream ports of the module hub, not four independent SoC controllers. AIM-IO V1.1 also has an RTS5411S hub; its USB-A ports share upstream bandwidth. Concurrent USB3, PCIe and SATA operation depends on module PHY muxing and the system image.
+
 ### Hardware specifications
 <details>
     <summary>
@@ -108,7 +110,7 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>PCIe 2.0 x2: Each PCIe 2.1 interface supports 1 lane, with a maximum data rate of 5Gbps</li></th>
+            <th><li>2 selectable PCIe 2.1 ×1 interfaces, up to 5 Gbps each; not a single ×2 link. PCIe/SATA/USB3 functions sharing a PHY are mutually exclusive.</li></th>
         </tr>
          <tr>
             <th>USB</th>
@@ -143,10 +145,10 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 | Ethernet         | 1 10/100/1000 BASE-T   | 1 10/100/1000 BASE-T                                         | 
 | CSI Interfaces   |1x 4-lane + 4x 2-lane MIPI CSI interface, maximum 2.5Gbps per line, maximum 2.5Gbps per line| 12 channels (3x4 or 4x2) MIPI CSI-2 D-PHY 1.1 (18 Gbps)      |
 | I/O               |3 UARTs, 2 SPIs, 2 I2S, 4 I2Cs, multiple GPIOs               | 3 UARTs, 2SPIs, 2 I2S, 4 I2Cs, multiple GPIOs  | 
-| PCIE             |<div className='armsom-color'>2 2lan PCIE2.0</div>| 1 1/2/4lane PCIE2.0 | 
-| HDMI Output      |<div className='armsom-color'>1 HDMI OUT2.1 / 1 eDP 1.4 </div>| 1 HDMI 2.0                                                   | 
+| PCIE             |<div className='armsom-color'>2 × PCIe 2.1 ×1 (mux)</div>| 1 1/2/4lane PCIE2.0 |
+| HDMI Output      |<div className='armsom-color'>1 HDMI OUT2.1 / 1 eDP 1.3 </div>| 1 HDMI 2.0                                                   |
 | DP Interface     | 1 DP1.4a | 1 DP1.2                                                      |
-| eDP/DP Interface | <div className='armsom-color'>1 eDP 1.4 / 1 HDMI OUT2.1</div>| 1 eDP 1.4 / 1 DP                                             | 
+| eDP/DP Interface | <div className='armsom-color'>1 eDP 1.3 / 1 HDMI OUT2.1</div>| 1 eDP 1.4 / 1 DP                                             |
 | DSI Interface    | 1 DSI (1 x2) 2 sync|1 DSI (1 x2) 2 sync                                          | 
 | OS Support       | <div className='armsom-color'>Support Debian，Ubuntu，Armbian</div>  | NVIDIA JetPack software suite                                | 
 | Size             | 69.6 mm x 45 mm  | 69.6 mm x 45 mm                                              | 
@@ -160,31 +162,32 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
     <summary>
        40-PIN
     </summary>
+AIM5 uses the same AIM-IO carrier as AIM7. This table maps J41 on AIM-IO V1.1 to the RK3576 GPIOs on AIM5; do not use AIM7/RK3588 GPIO numbers. Numbers use bank × 32 + group × 8 + offset. Select mux functions in the device tree; signals routed through level shifters are also constrained by the carrier circuit.
+
 <div className='gpio_style'>
 
 | GPIO number | Function | Pin | Pin | Function | GPIO number |
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
-|             |   +3.3V   | <div className='red'>1</div>  |  <div className='red'>2</div>   |   +5.0V  |             |
-|     139     | SAI0_LRCK_M1/I2C3_SDA_M1/SPI0_CLK_M0/GPIO0_C7_d| <div className='green'>3</div>  |  <div className='red'>4</div>   |   +5.0V    |           |             |
-|     138     | SAI0_SCLK_M1/I2C3_SCL_M1/SPI0_CSN0_M0/GPIO0_C6_d  |  <div className='green'>5</div>  | <div className='black'>6</div>  |    GND    |           |             |
-|     115     | /UART10_RTSN_M1/I2C5_SCL_M1/GPIO1_D4_d  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  UART5_TX_M0/SPI3_MISO_M1/I2C3_SDA_M2/GPIO3_D5_d
-|     13      |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  UART5_RX_M0/SPI3_CLK_M1/I2C3_SCL_M2/GPIO3_D4_d|     14      |
-|     113     |  UART5_RTSN_M0/SPI3_CSN1_M1/PWM2_CH7_M3/GPIO3_D7_d  | <div className='green'>11</div>  | <div className='green'>12</div> |  SAI2_SCLK_M0/UART10_RX_M1/I3C0_SDA_PU_M1/GPIO1_D1_d |     109     |
-|     111     |  UART1_RTSN_M1/SPI4_CLK_M3/GPIO2_B3_d| <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     112     |   SAI3_MCLK_M1/UART3_RX_M2/GPIO1_C1_d  | <div className='green'>15</div>  | <div className='green'>16</div> |  UART8_TX_M1/SPI4_CSN1_M3/I2C4_SCL_M2/GPIO2_A6_d   |     100     |
-|             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  UART1_CTSN_M1/SPI4_CSN0_M3/GPIO2_B2_d |    148     |
-|     42      | UART11_CTSN_M1/SPI1_MOSI_M1/PWM1_CH2_M2/GPIO2_C2_d  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
-|     41      | UART11_RTSN_M1/SPI1_MISO_M1/PWM0_CH0_M2/GPIO2_C3_d  | <div className='green'>21</div>  | <div className='green'>22</div> | UART7_RTSN_M0/SPI4_MISO_M3/GPIO2_B5_d          |             |
-|     43      | UART11_RX_M1/SPI1_CLK_M1/PWM1_CH4_M2/GPIO2_C5_d  | <div className='green'>23</div>  | <div className='green'>24</div> |  UART11_TX_M1/SPI1_CSN0_M1/PWM1_CH3_M2/GPIO2_C4_d |     44      |
-|             |   GND    | <div className='black'>25</div>  | <div className='green'>26</div> |  UART9_TX_M0/SPI1_CSN1_M1/PWM1_CH1_M2/GPIO2_C1_d |     45      |
-|     150     | I2C2_SDA_M0/UART1_RX_M0/PWM1_CH3_M0/GPIO0_C0_d  |  <div className='green'>27</div>  | <div className='green'>28</div>  |  I2C2_SCL_M0/UART1_TX_M0/PWM1_CH4_M0/GPIO0_B7_d /
-|     63      | UART3_CTSN_M0/SPI3_MISO_M0/CAN1_TX_M3/GPIO3_A2_d  | <div className='green'>29</div>  | <div className='black'>30</div> |    GND     |  |             |
-|     47      | GPIO0_A0_d  | <div className='green'>31</div>  | <div className='green'>32</div> |  UART6_RX_M1/I3C1_SDA_M0/PWM2_CH3_M2/GPIO2_D3_d  |    114     |
-|     103     | UART9_CTSN_M0/SPI3_CSN1_M0/PWM2_CH7_M2/GPIO2_D7_d  | <div className='green'>33</div>  | <div className='black'>34</div> |    GND     |             |
-|     110     | I3C0_SCL_M1/PWM1_CH3_M1/GPIO1_D2_d  | <div className='green'>35</div>  | <div className='green'>36</div> |  UART5_CTSN_M0/SPI3_MOSI_M1/PWM2_CH6_M3/GPIO3_D6_d |     105     |
-|      0      | UART7_CTSN_M0/SPI4_MOSI_M3/GPIO2_B4_d	    | <div className='green'>37</div>  | <div className='green'>38</div> |  I3C0_SDA_M1/PWM1_CH4_M1/GPIO1_D3_d   |     106     |
-|             |   GND    | <div className='black'>39</div>  | <div className='green'>40</div> |  UART10_TX_M1/GPIO1_D0_d   |     107     |
-
+|  | +3.3V | <div className='red'>1</div> | <div className='red'>2</div> | +5.0V |  |
+| 23 | SAI0_LRCK_M1/I2C3_SDA_M1/SPI0_CLK_M0/GPIO0_C7_d | <div className='green'>3</div> | <div className='red'>4</div> | +5.0V |  |
+| 22 | SAI0_SCLK_M1/I2C3_SCL_M1/SPI0_CSN0_M0/GPIO0_C6_d | <div className='green'>5</div> | <div className='black'>6</div> | GND |  |
+| 60 | UART10_RTSN_M1/I2C5_SCL_M1/GPIO1_D4_d | <div className='green'>7</div> | <div className='green'>8</div> | UART5_TX_M0/SPI3_MISO_M1/I2C3_SDA_M2/GPIO3_D5_d | 125 |
+|  | GND | <div className='black'>9</div> | <div className='green'>10</div> | UART5_RX_M0/SPI3_CLK_M1/I2C3_SCL_M2/GPIO3_D4_d | 124 |
+| 127 | UART5_RTSN_M0/SPI3_CSN1_M1/PWM2_CH7_M3/GPIO3_D7_d | <div className='green'>11</div> | <div className='green'>12</div> | SAI2_SCLK_M0/UART10_RX_M1/I3C0_SDA_PU_M1/GPIO1_D1_d | 57 |
+| 75 | UART1_RTSN_M1/SPI4_CLK_M3/GPIO2_B3_d | <div className='green'>13</div> | <div className='black'>14</div> | GND |  |
+| 49 | SAI3_MCLK_M1/UART3_RX_M2/GPIO1_C1_d | <div className='green'>15</div> | <div className='green'>16</div> | UART8_TX_M1/SPI4_CSN1_M3/I2C4_SCL_M2/GPIO2_A6_d | 70 |
+|  | +3.3V | <div className='red'>17</div> | <div className='green'>18</div> | UART1_CTSN_M1/SPI4_CSN0_M3/GPIO2_B2_d | 74 |
+| 82 | UART11_CTSN_M1/SPI1_MOSI_M1/PWM1_CH2_M2/GPIO2_C2_d | <div className='green'>19</div> | <div className='black'>20</div> | GND |  |
+| 83 | UART11_RTSN_M1/SPI1_MISO_M1/PWM0_CH0_M2/GPIO2_C3_d | <div className='green'>21</div> | <div className='green'>22</div> | UART7_RTSN_M0/SPI4_MISO_M3/GPIO2_B5_d | 77 |
+| 85 | UART11_RX_M1/SPI1_CLK_M1/PWM1_CH4_M2/GPIO2_C5_d | <div className='green'>23</div> | <div className='green'>24</div> | UART11_TX_M1/SPI1_CSN0_M1/PWM1_CH3_M2/GPIO2_C4_d | 84 |
+|  | GND | <div className='black'>25</div> | <div className='green'>26</div> | UART9_TX_M0/SPI1_CSN1_M1/PWM1_CH1_M2/GPIO2_C1_d | 81 |
+| 16 | I2C2_SDA_M0/UART1_RX_M0/PWM1_CH3_M0/GPIO0_C0_d | <div className='green'>27</div> | <div className='green'>28</div> | I2C2_SCL_M0/UART1_TX_M0/PWM1_CH4_M0/GPIO0_B7_d | 15 |
+| 98 | UART3_CTSN_M0/SPI3_MISO_M0/CAN1_TX_M3/GPIO3_A2_d | <div className='green'>29</div> | <div className='black'>30</div> | GND |  |
+| 0 | GPIO0_A0_d | <div className='green'>31</div> | <div className='green'>32</div> | UART6_RX_M1/I3C1_SDA_M0/PWM2_CH3_M2/GPIO2_D3_d | 91 |
+| 95 | UART9_CTSN_M0/SPI3_CSN1_M0/PWM2_CH7_M2/GPIO2_D7_d | <div className='green'>33</div> | <div className='black'>34</div> | GND |  |
+| 58 | SAI2_LRCK_M0/I3C0_SCL_M1/PWM1_CH3_M1/GPIO1_D2_d | <div className='green'>35</div> | <div className='green'>36</div> | UART5_CTSN_M0/SPI3_MOSI_M1/PWM2_CH6_M3/GPIO3_D6_d | 126 |
+| 76 | UART7_CTSN_M0/SPI4_MOSI_M3/GPIO2_B4_d | <div className='green'>37</div> | <div className='green'>38</div> | SAI2_SDI_M0/I3C0_SDA_M1/PWM1_CH4_M1/GPIO1_D3_d | 59 |
+|  | GND | <div className='black'>39</div> | <div className='green'>40</div> | SAI2_SDO_M0/UART10_TX_M1/GPIO1_D0_d | 56 |
 </div>
 </details>
 
@@ -192,6 +195,10 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
     <summary>
         Pin Definition
     </summary>
+
+:::caution
+In the AIM5 V1.0 schematic, DP net labels and connector function names disagree on polarity at pins 41/47/53/59. The table retains the original net labels for traceability. Do not use these DP labels as a PCB routing reference without checking the original CAD netlist. This is separate from the confirmed use of the AIM-IO carrier.
+:::
 
 |ArmSoM-AIM5 function |	Pin number	|Pin number|	ArmSoM-AIM5 function|
 |------------------|-------------------------|-------------------------|-------------------------|
@@ -227,16 +234,16 @@ All pins of AIM5 are compatible with NVIDIA Jetson TX2 & NVIDIA Jetson Nano, wit
 |DP_TX_D3N/USB3_OTG0_SSTX2P|	59|	60|	MIPI_DPHY_CSI0_RX_D1P|
 |GND_21|61|	62|	GND_22|
 |HDMI_TX_D2N/EDP_TX_D2N|	63|	64|	MIPI_DPHY_CSI0_RX_D3N|
-|HDMI_TX_D2N/EDP_TX_D2P|	65|	66|	MIPI_DPHY_CSI0_RX_D3P|
+|HDMI_TX_D2P/EDP_TX_D2P|	65|	66|	MIPI_DPHY_CSI0_RX_D3P|
 |GND_23|	67|	68|	GND_24|
 |HDMI_TX_D1N/EDP_TX_D1N|	69|	70|	DSI_D0_N|
-|HDMI_TX_D1N/EDP_TX_D1P|	71|	72|	DSI_D0_P|
+|HDMI_TX_D1P/EDP_TX_D1P|	71|	72|	DSI_D0_P|
 |GND_25|	73|	74|	GND_26|
 |HDMI_TX_D0N/EDP_TX_D0N|	75|	76|	DSI_CLK_N|
-|HDMI_TX_D0N/EDP_TX_D0P|	77|	78|	DSI_CLK_P|
+|HDMI_TX_D0P/EDP_TX_D0P|	77|	78|	DSI_CLK_P|
 |GND_27|	79|	80|	GND_28|
 |HDMI_TX_D3N/EDP_TX_D3N|	81|	82|	DSI_D1_N|
-|HDMI_TX_D3N/EDP_TX_D3P|	83|	84|	DSI_D1_P|
+|HDMI_TX_D3P/EDP_TX_D3P|	83|	84|	DSI_D1_P|
 |GND_29|	85|	86|	GND_30|
 |GPIO2_B0|	87|	88|	DP_HPDIN_M0|
 |SPI1_MOSI_M1|	89|	90|	DP_TX_AUXN|

@@ -1,7 +1,7 @@
 ---
 image: /img/armsom-social-card.png
 description: ArmSoM-AIM3
-keywords: [armsom, armsom-aim3, RK3576核心板, rockchip]
+keywords: [armsom, armsom-aim3, RK3568核心板, rockchip]
 sidebar_label: "AIM3"
 sidebar_position: 3
 slug: /armsom-aim3
@@ -28,8 +28,8 @@ ArmSoM-AIM3是一款定位中高端的通用型S0C，是一款高性能低功耗
 - VPU/编解码：
   - 硬解码：H.265/VP9 (HEVC) 硬件解码（最高 4Kp60）
   - 硬编码：H.264 硬件解码（最高 1080p60）
-- RAM：2/4/8 GB 32bit LPDDR4x，默认4GB
-- Flash：8/16/32/64 GB eMMC，默认eMMC 32GB
+- RAM：2/4/8 GB 32bit LPDDR4x
+- Flash：8/16/32/64 GB eMMC
 - 工作电压：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
 - 工作温度：0℃ ~ 60℃
 - 操作系统：
@@ -91,7 +91,7 @@ AIM3所有引脚均与 NVIDIA Jetson TX2 &  NVIDIA Jetson Nano兼容，尺寸相
     <tbody align="left">
         <tr>
             <th>显示</th>
-            <th><li>1x DP interface</li><li>1x HDMI/eDP combo interface</li> <li>2-lane MIPI DSI 接口 </li></th>
+            <th><li>1× HDMI 接口</li><li>1× eDP 接口（与 HDMI 分别引出）</li><li>1× 4-lane MIPI DSI 接口；所用载板须接出对应通道</li></th>
         </tr>
         <tr>
             <th>摄像头</th>

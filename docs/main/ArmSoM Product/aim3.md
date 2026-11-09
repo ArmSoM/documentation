@@ -27,8 +27,8 @@ ArmSoM-AIM3 is a mid-to-high-end general-purpose System-on-Chip (SoC) featuring 
 
 ### Key Specifications
 - **SOC**: Rockchip RK3568
-- **Memory**: 2/4/8GB LPDDR4x (default 4GB)
-- **Storage**: 8/16/32/64GB eMMC (default 32GB)
+- **Memory**: 2/4/8GB LPDDR4x
+- **Storage**: 8/16/32/64GB eMMC
 - **Power Input**: 4.5V-18V (±5% tolerance)
 - **Operating Temp**: 0℃ ~ 60℃
 - **Dimensions**: 92×62×14.6mm
@@ -86,7 +86,7 @@ All GPIO pins maintain compatibility with NVIDIA Jetson TX2 & Nano development b
     <tbody align="left">
         <tr>
             <th>Display</th>
-            <td><li>1x DP interface</li><li>1x HDMI/eDP combo</li><li>Dual-lane MIPI DSI</li></td>
+            <td><li>1× HDMI interface</li><li>1× eDP interface, exposed separately from HDMI</li><li>1× 4-lane MIPI DSI interface; the carrier must route the required lanes</li></td>
         </tr>
         <tr>
             <th>Camera</th>

@@ -46,8 +46,8 @@ AIM7 可适用于ARM PC、边缘计算、云服务器、人工智能、云计算
 - VPU/编解码：
   - 硬解码：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - 硬编码：8K@30fps H.265 / H.264
-- RAM：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4x，默认LPDDR4x 8GB
-- Flash：32GB/64GB/128GB eMMC，默认eMMC 32GB
+- RAM：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4x
+- Flash：32GB/64GB/128GB eMMC
 - 接口类型：260pin SO-DIMM 连接器，兼容 Jetson TX2 NX
 - 工作电压：5V DC
 - 温度：工作温度：0°C 至 80°C，存储温度：-20°C 至 85°C
@@ -125,7 +125,7 @@ AIM7 采用与 NVIDIA Jetson Nano / TX2 NX 相同类型的 260-pin SO-DIMM 外�
     <tbody align="left">
         <tr>
             <th>显示</th>
-            <th><li>1x DP interface</li><li>1x HDMI/eDP combo interface</li> <li>up to 7680 x 4320@60 Hz for HDMI and DP, and 3840 x 2160@60 Hz for eDP </li></th>
+            <th><li>1x DP interface</li><li>1x HDMI/eDP combo interface</li> <li>HDMI 最高 7680 × 4320@60 Hz；DP 最高 7680 × 4320@30 Hz；eDP 最高 3840 × 2160@60 Hz。实际模式取决于载板和系统配置。</li></th>
         </tr>
         <tr>
             <th>摄像头</th>
@@ -176,9 +176,9 @@ AIM7 采用与 NVIDIA Jetson Nano / TX2 NX 相同类型的 260-pin SO-DIMM 外�
 | CSI接口 | 12通道 3x 4-lane or 5x 2-lane MIPI CSI 每线最高 2.5Gbps      |12 通道（3x4 或 4x2）MIPI CSI-2 D-PHY 1.1 (18 Gbps)     | 
 | I/O        | 3 个 UART、2 个 SPI、2 个 I2S、4 个 I2C、多个 GPIO   | 3 个 UART、2 个 SPI、2 个 I2S、4 个 I2C、多个 GPIO        |
 | PCIE    |<div className='armsom-color'>1 个 1/2/4lan PCIE3.0 & 1 个 1lan PCIE2.0</div>   | 1 个 1/2/4lan PCIE2.0  | 
-| HDMI输出      |  <div className='armsom-color'>1 个 HDMI OUT2.1  / 1 个 eDP 1.4</div>   |1 个 HDMI 2.0  |
+| HDMI输出      |  <div className='armsom-color'>1 个 HDMI OUT2.1  / 1 个 eDP 1.3</div>   |1 个 HDMI 2.0  |
 | DP接口    | 1 个 DP1.4a | 1 个 DP1.2  |
-| eDP/DP接口    | <div className='armsom-color'>1 个 eDP 1.4/ 1 个 HDMI OUT2.1</div>  | 1 个 eDP 1.4/1 个 DP接口  | 
+| eDP/DP接口    | <div className='armsom-color'>1 个 eDP 1.3/ 1 个 HDMI OUT2.1</div>  | 1 个 eDP 1.4/1 个 DP接口  |
 |  DSI接口    | 1 个 DSI (1 x2)  | 1 个 DSI (1 x2)   | 
 | 操作系统支持    |支持Debian，Ubuntu，Armbian    | NVIDIA JetPack软件套件 | 
 | 大小   |  69.6 mm x 45 mm |69.6 mm x 45 mm  |
@@ -374,8 +374,8 @@ Table 7. eDP/HDMI pin descriptions
 |83|	HDMI_CLK_P/EDP_TX0_D3P|	HDMI/EDP Clk Lane+	|Output|	HDMI/EDP|
 |98|	HDMI_SDA / EDP_TX0_AUXN |	HDMI/EDP DDC SDA|Bidir	|Open-Drain,3.3V|
 |100|	HDMI_SCL / EDP_TX0_AUXP|	HDMI/EDP DDC SCL|	Output|	Open-Drain,3.3V|
-|96|	HDMI_CEC|	HDMI/EDP Hot Plug Detect|	Input	|Open Drain–3.3V|
-|94|	HDMI_HPD|	HDMI/EDP CEC|	Bidir|	Open Drain–1.8V|
+|96|	HDMI_HPD|	HDMI/EDP Hot Plug Detect|	Input	|Open Drain–3.3V|
+|94|	HDMI_CEC|	HDMI/EDP CEC|	Bidir|	Open Drain–1.8V|
 </details>
 
 
@@ -709,8 +709,8 @@ Table 16. i2s pin descriptions
 |GPIO0/GPIO1_C5/VBUS_DET|	87|	88|	DP0_HPD|
 |SPI0_MOSI|	89|	90|	DP0_AUX_N|
 |SPI0_SCK|	91|	92|	DP0_AUX_P|
-|SPI0_MISO_M2|	93|	94|	HDMI_HPD|
-|SPI0_CS0|	95|	96|	HDMI_CEC|
+|SPI0_MISO_M2|	93|	94|	HDMI_CEC|
+|SPI0_CS0|	95|	96|	HDMI_HPD|
 |SPI0_CS1|	97|	98|	HDMI_SDA / EDP_TX0_AUXN|
 |UART0_TXD|	99|	100|	HDMI_SCL / EDP_TX0_AUXP|
 |UART0_RXD|	101|	102|	GND_31|
