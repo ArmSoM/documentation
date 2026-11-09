@@ -1,0 +1,613 @@
+{
+  "date": "2026-11-09",
+  "scope": "67 paired Markdown pages; targeted schematic/datasheet checks, no powered hardware validation",
+  "user_confirmations": [
+    "AIM5 与 AIM7 共用 AIM-IO 载板",
+    "产品页不写默认配置",
+    "Sige7S 提供 2GB/4GB RAM 和 16GB eMMC",
+    "CM7S 提供 256GB eMMC"
+  ],
+  "extra_evidence": {
+    "OV13850": "OmniVision product brief V1.8, p2: https://dlscorp.com/wp-content/uploads/2019/02/OV13850-DS.pdf",
+    "fan": "3505鼓风机规格书1.docx / 3505S V1.0, 2024-08-02"
+  },
+  "checks": [
+    "docs: pin counts, GPIO numbers, HDMI mapping, connector translations, capacities, display matrix and accessories passed",
+    "i18n\\zh\\docusaurus-plugin-content-docs\\current: pin counts, GPIO numbers, HDMI mapping, connector translations, capacities, display matrix and accessories passed"
+  ],
+  "issues": [
+    {
+      "id": "HW-01",
+      "title": "40pin GPIO 数值与 GPIO 名称不一致",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM5"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM5-1V0_Sch.pdf",
+          "pages": "第23页连接器；数值检查依据站内 GPIO 编号规则"
+        }
+      ]
+    },
+    {
+      "id": "HW-02",
+      "title": "HDMI 差分正极写成负极",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM5"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM5-1V0_Sch.pdf",
+          "pages": "第23页，连接器65/71/77/83脚"
+        }
+      ]
+    },
+    {
+      "id": "HW-03",
+      "title": "DP 正负极：原理图与文档存在同源命名矛盾",
+      "status": "needs-hardware-evidence",
+      "resolution": "原理图网络名自身冲突；保留原标签并在引脚表前警示，等待 CAD 网表。",
+      "products": [
+        "AIM5"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM5-1V0_Sch.pdf",
+          "pages": "第11、23页，DP/USB共享信号"
+        }
+      ]
+    },
+    {
+      "id": "HW-04",
+      "title": "HDMI CEC / HPD 引脚名称对调",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM7",
+        "AIM-IO"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM7-1V2_Sch.pdf",
+          "pages": "第24页，94/96脚"
+        }
+      ]
+    },
+    {
+      "id": "HW-05",
+      "title": "13、15脚 GPIO 名称/编号及公共表互相冲突",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige7",
+        "公共40pin"
+      ],
+      "sources": [
+        {
+          "file": "ARMSOM-SIGE7_1V1_20231218_SCH.pdf",
+          "pages": "第11、22页：SPI1信号和40pin"
+        }
+      ]
+    },
+    {
+      "id": "HW-06",
+      "title": "12pin GPIO5/7 编号与名称不匹配",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "P2pro"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-P2 PRO_1V1_20231223_Sch.pdf",
+          "pages": "第10、15页，扩展接口与复用信号"
+        }
+      ]
+    },
+    {
+      "id": "HW-07",
+      "title": "调试串口第三脚重复标为2",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige6"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-Sige6-1v0_sch.pdf",
+          "pages": "第17页J17"
+        }
+      ]
+    },
+    {
+      "id": "HW-08",
+      "title": "风扇端子不能统一按普通逻辑 PWM 引脚描述",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige5",
+        "Sige7",
+        "Sige6",
+        "公共FAN"
+      ],
+      "sources": [
+        {
+          "file": "armsom-sige5-1v3_Sch.pdf",
+          "pages": "第23页FAN"
+        },
+        {
+          "file": "ARMSOM-SIGE7_1V1_20231218_SCH.pdf",
+          "pages": "第22页FAN"
+        },
+        {
+          "file": "ArmSoM-Sige6-1v0_sch.pdf",
+          "pages": "第16页J19"
+        }
+      ]
+    },
+    {
+      "id": "HW-09",
+      "title": "DP 参数表复制了 HDMI 表",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "公共屏幕教程",
+        "Sige1",
+        "Sige3",
+        "Sige7",
+        "W3"
+      ],
+      "sources": [
+        {
+          "file": "armsom-sige1_20240701.pdf",
+          "pages": "USB/HDMI与电源接口页"
+        },
+        {
+          "file": "armsom-sige3_20240716.pdf",
+          "pages": "第12、24、27页"
+        },
+        {
+          "file": "Rockchip RK3588 Datasheet V1.5-20220802.pdf",
+          "pages": "第12页DP TX"
+        }
+      ]
+    },
+    {
+      "id": "HW-10",
+      "title": "显示接口描述套用了其他芯片",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM3"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM3.pdf",
+          "pages": "第14、23页"
+        },
+        {
+          "file": "Rockchip RK3568 Datasheet V1.2-20210601.pdf",
+          "pages": "第14页显示接口"
+        }
+      ]
+    },
+    {
+      "id": "HW-11",
+      "title": "eDP 版本误写为1.4",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM5",
+        "AIM7"
+      ],
+      "sources": [
+        {
+          "file": "Rockchip RK3576 Datasheet V1.1-20240430.pdf",
+          "pages": "第18页"
+        },
+        {
+          "file": "Rockchip RK3588 Datasheet V1.5-20220802.pdf",
+          "pages": "第16页框图"
+        }
+      ]
+    },
+    {
+      "id": "HW-12",
+      "title": "DP 分辨率误写为8K60",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM7"
+      ],
+      "sources": [
+        {
+          "file": "Rockchip RK3588 Datasheet V1.5-20220802.pdf",
+          "pages": "第12页"
+        }
+      ]
+    },
+    {
+      "id": "HW-13",
+      "title": "M.2 PCIe 通道数写成×1",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige3"
+      ],
+      "sources": [
+        {
+          "file": "armsom-sige3_20240716.pdf",
+          "pages": "第31页J3100"
+        }
+      ]
+    },
+    {
+      "id": "HW-14",
+      "title": "CSI 数据/时钟信号方向写成输出",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige6"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-Sige6-1v0_sch.pdf",
+          "pages": "摄像头接口页"
+        },
+        {
+          "file": "A733_Datasheet_V1.01.pdf",
+          "pages": "第30–31页Video Input"
+        }
+      ]
+    },
+    {
+      "id": "HW-15",
+      "title": "DSI 手册写4K60，超出所提供规格的单链路说明",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige6"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-Sige6-1v0_sch.pdf",
+          "pages": "第16页J15"
+        },
+        {
+          "file": "A733_Datasheet_V1.01.pdf",
+          "pages": "PDF第1页；正文3.6.3 MIPI DSI"
+        }
+      ]
+    },
+    {
+      "id": "HW-16",
+      "title": "英文缺失多组硬件引脚表",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige6"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-17",
+      "title": "默认内存/eMMC自相矛盾",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige1"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-18",
+      "title": "eMMC容量列表遗漏默认64GB",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige5"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-19",
+      "title": "description泛称8K视频编解码",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige5"
+      ],
+      "sources": [
+        {
+          "file": "Rockchip RK3576 Datasheet V1.1-20240430.pdf",
+          "pages": "第7页产品概述及视频编解码章节"
+        }
+      ]
+    },
+    {
+      "id": "HW-20",
+      "title": "编码与内存/eMMC列表内部不一致",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "Sige7S"
+      ],
+      "sources": [
+        {
+          "file": "Rockchip RK3588S Datasheet V1.5-20230117.pdf",
+          "pages": "第6、9页"
+        }
+      ]
+    },
+    {
+      "id": "HW-21",
+      "title": "PCIe ×2 易被误读为一条双通道链路",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM5"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM5-1V0_Sch.pdf",
+          "pages": "第14、19、23页"
+        },
+        {
+          "file": "Rockchip RK3576 Datasheet V1.1-20240430.pdf",
+          "pages": "第20页"
+        }
+      ]
+    },
+    {
+      "id": "HW-22",
+      "title": "USB数量未区分Hub端口与SoC控制器",
+      "status": "partially-addressed",
+      "resolution": "已区分模块/载板 Hub 与共享上行；完整可并行 USB 端口组合仍需镜像与实板验证。",
+      "products": [
+        "AIM5"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-AIM5-1V0_Sch.pdf",
+          "pages": "第19、23页"
+        }
+      ]
+    },
+    {
+      "id": "HW-23",
+      "title": "RK3506J工业级声明与现有资料版本不一致",
+      "status": "needs-hardware-evidence",
+      "resolution": "缺少 RK3506J 对应手册及量产 BOM，保留原型号/温度声明。",
+      "products": [
+        "CM1",
+        "Forge1"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-CM1-1V1_Sch.pdf",
+          "pages": "第1、3页"
+        },
+        {
+          "file": "ArmSoM-Forge1-1V1_sch.pdf",
+          "pages": "第1、3页"
+        },
+        {
+          "file": "Rockchip RK3506B Datasheet V1.0-20240816.pdf",
+          "pages": "器件型号及工作条件"
+        }
+      ]
+    },
+    {
+      "id": "HW-24",
+      "title": "4.0V测试记录仍与标称范围不一致",
+      "status": "needs-hardware-evidence",
+      "resolution": "保留4.0V原始记录，已增加不作为推荐输入电压的说明；测量条件待确认。",
+      "products": [
+        "CM5"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-25",
+      "title": "PCIe版本仍写2.0",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "CM7S"
+      ],
+      "sources": [
+        {
+          "file": "Rockchip RK3588S Datasheet V1.5-20230117.pdf",
+          "pages": "第14页"
+        }
+      ]
+    },
+    {
+      "id": "HW-26",
+      "title": "eMMC容量上限前后不一致",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "CM7S"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-27",
+      "title": "5V供电规则过度泛化",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "公共40pin",
+        "Sige6"
+      ],
+      "sources": [
+        {
+          "file": "ArmSoM-Sige6-1v0_sch.pdf",
+          "pages": "第17页40pin及电源网络"
+        }
+      ]
+    },
+    {
+      "id": "HW-28",
+      "title": "DP写8192×4320，与当前datasheet不同",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "W3",
+        "LM7"
+      ],
+      "sources": [
+        {
+          "file": "Rockchip RK3588 Datasheet V1.5-20220802.pdf",
+          "pages": "第12页"
+        }
+      ]
+    },
+    {
+      "id": "HW-29",
+      "title": "像素尺寸单位疑似放大1000倍",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "摄像头module1"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-30",
+      "title": "CSI时钟差分对编号不一致",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "摄像头module1"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-31",
+      "title": "中文SEO芯片型号写错",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "AIM3"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-32",
+      "title": "中文description仍在介绍LM7",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "W3"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-33",
+      "title": "图片备注写成10寸屏",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "7寸屏"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-34",
+      "title": "引脚表列数不一致",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "10.1寸屏"
+      ],
+      "sources": [
+        {
+          "file": "调试规格书10.1inch 1200x1920 MIPI IPS AML101FDJI4001 Shenzhen Amelin Electronic Technology .,LTD.pdf",
+          "pages": "引脚/结构图章节"
+        }
+      ]
+    },
+    {
+      "id": "HW-35",
+      "title": "五个状态与表格六档不一致",
+      "status": "fixed",
+      "resolution": "已同步修正中英文；详见对应提交差异。",
+      "products": [
+        "公共FAN"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-36",
+      "title": "未找到明确匹配CM3的原理图",
+      "status": "needs-hardware-evidence",
+      "resolution": "缺少 CM3 匹配原理图。",
+      "products": [
+        "CM3"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-37",
+      "title": "产品目录内未找到可核对原理图",
+      "status": "needs-hardware-evidence",
+      "resolution": "缺少 KVM 主板及扩展板原理图。",
+      "products": [
+        "KVM"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-38",
+      "title": "资料型号需要确认对应关系",
+      "status": "needs-hardware-evidence",
+      "resolution": "LM7 与 W3 CORE 版本映射仍需确认；DP分辨率按RK3588资料修正。",
+      "products": [
+        "LM7"
+      ],
+      "sources": [
+        {
+          "file": "ARMSOM-W3-CORE_1V0_SCH.pdf",
+          "pages": "ARMSOM-W3-CORE_1V0，版本映射待确认"
+        }
+      ]
+    },
+    {
+      "id": "HW-39",
+      "title": "多份规格表和示例输出会持续漂移",
+      "status": "partially-addressed",
+      "resolution": "修正重复表，历史 WiringOP 输出保留并增加版本说明；未在本次引入全站数据源重构。",
+      "products": [
+        "Sige1",
+        "Sige3",
+        "Sige5",
+        "Sige7",
+        "公共40pin"
+      ],
+      "sources": []
+    },
+    {
+      "id": "HW-40",
+      "title": "风扇电流和线序需按实际料号确认",
+      "status": "partially-addressed",
+      "resolution": "已读3505S V1.0供应商承认书，补充额定电流测试条件及标签区别；PWM接法仍需实物兼容性验证。",
+      "products": [
+        "主动散热套件"
+      ],
+      "sources": []
+    }
+  ],
+  "validation": {
+    "build": "npm run build: English and Chinese succeeded",
+    "default_capacity_claims_remaining": 0,
+    "sige6_bilingual_connector_tables": "7 matched pin/signal tables",
+    "removed_markdown_image_destinations": 0,
+    "warnings": "First build reported existing static/img/link/p2pro.jpg image-size warning and outdated Browserslist data."
+  }
+}
