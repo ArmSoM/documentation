@@ -82,6 +82,8 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 | **Label**                           | DC5V-0.45A                                              |
 | **Pin Terminal**                    | NO                                                      |
 
+Source: 3505S blower approval specification V1.0 (2024-08-02). It separately lists rated current of 310mA (340mA maximum) and a DC5V-0.45A label. Rated current is measured after three minutes of continuous operation at rated voltage; these are distinct entries. The supplier calls the blue wire a PWM control lead, but compatibility with a board low-side switch must be verified for the fan part and carrier; do not wire it by color alone.
+
 ### Average Lifespan
 
 After continuous operation at a specified constant temperature, the average lifespan can be estimated if 90% of the units are still operational after testing.

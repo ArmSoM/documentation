@@ -50,7 +50,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| NC| OPEN 
-|2-3| VDDIN Power SUPPLY 3.3V 
+|2-3| VDDIN | Power SUPPLY 3.3V
 |4| GND| Ground 
 |5| RESET| Global reset signal,=VDDIN 
 |6| NC| OPEN 
@@ -69,7 +69,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 |19| GND| Ground 
 |20| MIPI_TDN3 |MIPI data input. 
 |21| MIPI_TDP3| MIPI data input. 
-|22| GND Ground 
+|22| GND | Ground
 |23-24| NC| OPEN 
 |25| GND| Ground 
 |26| NC| OPEN 

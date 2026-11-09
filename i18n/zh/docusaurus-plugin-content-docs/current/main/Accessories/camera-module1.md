@@ -12,7 +12,7 @@ sidebar_position: 15
 ArmSoM 使用了高性能的超清晰4K相机 OV13850。
 
 OV13850 模块具有以下特点：
-* 像素尺寸：1.12 毫米 x 1.12 毫米
+* 像素尺寸：1.12 μm × 1.12 μm
 * 1300 万像素，30 帧每秒
 * 支持图像尺寸为 13.2MP（4224 x 3136）、10MP（4224 x 2376）、2K（2112 x 1568）、EIS1080P（2112 x 1188）、EIS 720P（1408 x 792）等
 * 双线串行总线控制（SCCB）
@@ -50,7 +50,7 @@ OV13850 模块具有以下特点：
 |15| CSI_RX_D0P| Channel 0 differential positive signal
 |16| GND| Ground 
 |17| CSI_RX_CLK0N|output clock differential negative signal
-|18| CSI_RX_CLK1P|output clock differential positive signal
+|18| CSI_RX_CLK0P|output clock differential positive signal
 |19| MIPI_VSYNC| Frame synchronization signal
 |20| MIPI_CLKOUT |clock signal
 |21| NC | NC

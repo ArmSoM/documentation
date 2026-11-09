@@ -21,13 +21,13 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 
 可用于平板电脑、娱乐系统和信息仪表板等交互式项目。
 
-![armsom-display-10hd](/img/accessories/armsom-display-7hd.png)
+![armsom-display-7hd](/img/accessories/armsom-display-7hd.png)
 
-<div className="armsom-image-caption">armsom-display-10hd</div>
+<div className="armsom-image-caption">armsom-display-7hd</div>
 
-![armsom-display-10hd-back](/img/accessories/armsom-display-7hd-b.png)
+![armsom-display-7hd-back](/img/accessories/armsom-display-7hd-b.png)
 
-<div className="armsom-image-caption">armsom-display-10hd-back</div>
+<div className="armsom-image-caption">armsom-display-7hd-back</div>
 
 
 ### 兼容性

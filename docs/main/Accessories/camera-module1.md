@@ -11,7 +11,7 @@ sidebar_position: 15
 ArmSoM uses a high-performance ultra clear 4K camera ov13850.
 
 The OV13850 module has the following characteristics:
-* Pixel size: 1.12 millimeters x 1.12 millimeters
+* Pixel size: 1.12 μm × 1.12 μm
 * 13 million pixels, 30fps
 * Supports image sizes of 13.2MP (4224 x 3136), 10MP (4224 x 2376), 2K (2112 x 1568), EIS1080P (2112 x 1188), EIS 720P (1408 x 792), etc
 Dual Wire Serial Bus Control (SCCB)
@@ -55,7 +55,7 @@ Dual Wire Serial Bus Control (SCCB)
 |15| CSI_RX_D0P| Channel 0 differential positive signal
 |16| GND| Ground 
 |17| CSI_RX_CLK0N|output clock differential negative signal
-|18| CSI_RX_CLK1P|output clock differential positive signal
+|18| CSI_RX_CLK0P|output clock differential positive signal
 |19| MIPI_VSYNC| Frame synchronization signal
 |20| MIPI_CLKOUT |clock signal
 |21| NC | NC
