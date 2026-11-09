@@ -109,10 +109,10 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 | **存储**               | eMMC 存储（可选容量）            | 无内置存储，支持microSD卡       |
 | **显示输出**           | 1x HDMI 2.1, 1x DP               | 2x HDMI 2.0                    |
 | **视频分辨率**         | **支持4K@120fps**                     | 支持4K@30fps                   |
-| **网络接口**           | 1x 千兆以太网接口                 | 1x 千兆以太网接口               |
-| **USB接口**            | **1x USB3.0，1x USB2.0**          | 1xUSB2.0       |
-| **GPIO**               | 40针 GPIO                        | 40针 GPIO                      |
-| **扩展性**             | **2x PCIE/SATA/USB30_SS**           | 1x PCIe 2.0         |
+| **网络接口**           | 板载千兆 PHY，MDI 信号引出 | 1x 千兆以太网接口               |
+| **USB接口**            | USB/DP + USB/PCIe/SATA 复用，详见接口说明          | 1xUSB2.0       |
+| **GPIO**               | 通过连接器引出 GPIO，40pin 排针位于 CM5-IO | 40针 GPIO                      |
+| **扩展性**             | PCIe0/SATA0 + PCIe1/SATA1/USB3           | 1x PCIe 2.0         |
 | **相机接口**           | 1x 4通道 MIPI CSI, 1x 2通道 MIPI CSI | 1x 4通道 MIPI CSI, 1x 2通道 MIPI CSI                   |
 | **显示接口**           | 1x 4通道 MIPI DSI                | 2x 4通道 MIPI DSI                    |
 | **电源输入**           | 5V                | 5V                          |
@@ -166,11 +166,11 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32/64/128GB eMMC，默认eMMC 64GB</li><li>通过载板 microSD 卡槽扩展</li><li>通过 CM5-IO 的 M.2 M-Key 插座连接 PCIe 2.1 ×1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>显示</th>
-            <th><li>1x HDMI OUT2.1，支持 4K@120fps</li><li>1x MIPI DSI 分辨率最高可达 2K@60fps</li><li>1x DP1.4 分辨率最高可达 4K@120fps</li></th>
+            <th><li>1x HDMI OUT2.1，支持 4K@120fps</li><li>1x MIPI DSI 分辨率最高可达 2560×1600@60Hz</li><li>1x DP1.4 分辨率最高可达 4K@120fps</li></th>
         </tr>
         <tr>
             <th>摄像头</th>
@@ -179,21 +179,21 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
         <tr>
             <th>网络</th>
             <th>
-              <li>1x GMAC，提供 RGMII / RMII 接口引出</li>
+              <li>板载千兆以太网 PHY（RTL8211F 系列），通过板对板连接器引出 MDI 差分信号；RJ45 位于载板</li>
                <li>板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>2x PCIe 2.0 1-lans</li></th>
+            <th><li>2 组 PCIe 2.1 ×1 复用接口（最高 5GT/s），详见下方复用说明</li></th>
         </tr>
          <tr>
             <th>USB</th>
-            <th><li>1x USB 3.0</li><li>1x USB 2.0</li></th>
+            <th><li>1 组 USB 3.2 Gen1 / DP 复用接口（Type-C Alt Mode）</li><li>另 1 组 USB 3.2 Gen1 与 PCIe1 / SATA1 复用；两组均有对应 USB 2.0 信号，受复用配置限制</li></th>
         </tr>
         <tr>
             <th>音频</th>
-            <th><li>SPDIF_Tx x1</li><li>AUDIO_R/L x1</li><li>i2s x1</li></th>
+            <th><li>SPDIF_Tx x1</li><li>模拟左右声道由 CM5-IO 上的 ES8388 音频 Codec 提供</li><li>i2s x1</li></th>
         </tr>
          <tr>
             <th rowspan="3">Others</th>
@@ -201,6 +201,21 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
         </tr>
     </tbody>
 </table>
+
+### 核心板接口与复用说明 {#module-interfaces}
+
+以下按 CM5 V1.3、CM5-IO V1.1 原理图与 RK3576 Datasheet V1.0（第 16–20 页）整理。芯片上限不代表所有接口可同时使用，实际功能取决于载板连接及软件配置。
+
+| 接口组 | 可选功能 | 使用限制 |
+| --- | --- | --- |
+| USBDP | USB 3.2 Gen1（5Gbps）/ DP 1.4，支持 Type-C Alt Mode | DP 最高 4K@120Hz；USB 与 DP 使用共享高速通道，需匹配通道配置 |
+| Combo PHY0 | PCIe 2.1 ×1 / SATA 3.1 | 二选一；PCIe 最高 5GT/s，SATA 最高 6GT/s |
+| Combo PHY1 | PCIe 2.1 ×1 / SATA 3.1 / USB 3.2 Gen1 | 三选一；选 PCIe1 或 SATA1 时，USB3 OTG1 及对应 USB2 OTG1 同时不可用 |
+| HDMI | HDMI 2.1，最高 4K@120Hz | CM5-IO 提供 HDMI 插座；不能仅凭芯片 HDMI/eDP 复用能力认定载板支持 eDP |
+| MIPI DSI | 1×4-lane D-PHY，最高 2560×1600@60Hz | 需匹配屏幕时序、驱动及连接线 |
+| MIPI CSI | 1×4-lane + 1×2-lane | 按 CM5-IO 实际连接引出 |
+
+CM5-IO 的 M.2 使用 PCIe0，USB Hub 使用另一组复用接口的 USB 模式。microSD、M.2、40pin、风扇及耳机插座位于载板；核心板提供相应连接信号。
 
 ### RK3576框图
 <details>
@@ -226,9 +241,9 @@ ArmSoM-CM5 v1.2 的 Pin 21 存在无法正常工作的问题，已在 v1.3 中�
 <br/>
 
 ### 电气特性
-以下是 ArmSoM-CM5 和 ArmSoM-CM5-IO 在不同状态下的功耗记录表：
+以下是 ArmSoM-CM5 和 ArmSoM-CM5-IO 在不同状态下的电流记录表：
 
-| 序号 | 产品名称 | 硬件方案 | 输入电压（DC） | 待机功耗（OS 界面） | 关机功耗 | 最大功耗（CPU 压力测试） |
+| 序号 | 产品名称 | 硬件方案 | 输入电压（DC） | 待机电流（OS 界面） | 关机电流 | 最大电流（CPU 压力测试） |
 | --- | --- | --- | --- | --- | --- | --- |
 | 3 | CM5 | RK3576 | 4.0 V | 350 mA | 0.1 mA | 1040 mA |
 | 4 | CM5-IO | RK3576 | 12.0 V | 480 mA | 27 mA | 735 mA |
@@ -247,13 +262,13 @@ CM5-IO是 ArmSoM CM5的 IO 板，尺寸为 100x80x29 毫米，它是一款专为
 CM5-IO板是专为CM5计算模块设计的扩展板，旨在帮助完成系统和嵌入式板开发。
 
 - 1x HDMI输出, 1x Typec(DP)输出
-- 4x USB 3.0 Type-A
-- 支持 PoE 的千兆以太网 RJ45
+- 4x USB 3.0 Type-A，由 RTS5411S Hub 扩展，共享一路 USB 3.0 上行链路
+- 千兆以太网 RJ45，J5 提供 PoE 取电引出；使用 PoE 供电需配套兼容的 PoE 电源模块
 - 通过USB Type-C进行固件闪存和设备模式
 - GPIO：40针扩展头
 - 电源连接器：DC Barrel插孔，用于12V电源输入，外径5.5mm,内径2.0mm,内正外负
 - 扩展：M.2（M键，支持PCIe）、microSD
-- MIPI DSI：1x 4通道MIPI DSI，支持最高4K@60fps（x4）
+- MIPI DSI：1x 4通道MIPI DSI，芯片规格最高 2560×1600@60Hz，实际取决于屏幕和软件支持
 - MIPI CSI0：1x 4通道MIPI CSI，每条通道最高2.5Gbps
 - MIPI CSI1：1x 2通道MIPI CSI，每条通道最高2.5Gbps
 - 其他：HPOUT,FAN,VRTC
@@ -305,6 +320,11 @@ CM5-IO Board 使用12V DC供电。
 </div>
 </details>
 
+:::note 40pin 与风扇共用信号
+第 28 脚与风扇控制共用 `PWM2_CH6_M2 / SAI3_MCLK_M2`，不能作为两路独立功能同时配置。表中 `-` 表示此载板未引出对应功能，不应当作可用 GPIO。第 22 脚为 ADC 输入，不是普通数字 GPIO。
+:::
+
+
 <details>
     <summary>
         FAN
@@ -315,7 +335,7 @@ CM5-IO Board 使用12V DC供电。
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | 地 | 
-|3    | PWM | PWM控制 |
+|3    | 风扇受控回路 | 接 Q45 集电极，由 Q45/Q46 控制；不是直接引出的逻辑 PWM 信号 |
 </details>
 
 <details>
@@ -1280,7 +1300,7 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 
 #### MIPI DSI {#cm5-io-mipi-dsi}
 
-CM5 Kit 分辨率最高分辨率可达 2K@60Hz
+CM5 Kit 分辨率最高分辨率可达 2560×1600@60Hz
 
 1. 按照下图将连接好排线
 

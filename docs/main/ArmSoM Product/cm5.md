@@ -107,10 +107,10 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 | **Storage**             | eMMC storage (optional capacities) | No built-in storage, supports microSD cards |
 | **Display Output**      | 1x HDMI 2.1, 1x DP               | 2x HDMI 2.0                    |
 | **Video Resolution**    | **Supports 4K@120fps**            | Supports 4K@30fps              |
-| **Network Interface**   | 1x Gigabit Ethernet port          | 1x Gigabit Ethernet port       |
-| **USB Ports**           | **1x USB3.0，1x USB2.0**   | 1x USB 2.0                  |
-| **GPIO**                | 40-PIN GPIO                       | 40-PIN GPIO                    |
-| **Expandability**       | **2x PCIe/SATA/USB 3.0**     | 1x PCIe 2.0                    |
+| **Network Interface**   | Onboard Gigabit PHY with exposed MDI signals | 1x Gigabit Ethernet port       |
+| **USB Ports**           | USB/DP + USB/PCIe/SATA multiplexing; see interface notes   | 1x USB 2.0                  |
+| **GPIO**                | GPIO exposed through connectors; CM5-IO provides the 40-pin header | 40-PIN GPIO                    |
+| **Expandability**       | PCIe0/SATA0 + PCIe1/SATA1/USB3     | 1x PCIe 2.0                    |
 | **Camera Interface**    | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI | 1x 4-lane MIPI CSI, 1x 2-lane MIPI CSI |
 | **Display Interface**   | 1x 4-lane MIPI DSI                | 2x 4-lane MIPI DSI             |
 | **Power Input**         | 5V                                | 5V                             |
@@ -165,11 +165,11 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32/64/128GB eMMC, default eMMC 64GB</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32/64/128GB eMMC, default eMMC 64GB</li><li>MicroSD expansion through a carrier-board card slot</li><li>PCIe 2.1 ×1 NVMe SSD through the M.2 M-Key socket on CM5-IO</li></th>
         </tr>
         <tr>
             <th>Display</th>
-            <th><li>1x HDMI OUT 2.1, supports 4K@120fps</li><li>1x MIPI DSI resolution up to 2K@60fps</li><li>1x DP 1.4 resolution up to 4K@120fps</li></th>
+            <th><li>1x HDMI OUT 2.1, supports 4K@120fps</li><li>1x MIPI DSI resolution up to 2560×1600@60Hz</li><li>1x DP 1.4 resolution up to 4K@120fps</li></th>
         </tr>
         <tr>
             <th>Camera</th>
@@ -178,21 +178,21 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         <tr>
             <th>Network</th>
             <th>
-              <li>1x GMAC, provides RGMII/RMII interface</li>
+              <li>Onboard Gigabit Ethernet PHY (RTL8211F family), with MDI differential signals exposed through the board-to-board connector; the RJ45 socket is on the carrier</li>
                <li>Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 <a href="https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo">syn43752</a></li>
             </th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>2x PCIe 2.0 1-lane</li></th>
+            <th><li>2 multiplexed PCIe 2.1 ×1 interfaces (up to 5GT/s); see the interface notes below</li></th>
         </tr>
          <tr>
             <th>USB</th>
-            <th><li>1x USB 3.0</li><li>1x USB 2.0</li></th>
+            <th><li>1 USB 3.2 Gen1 / DP interface group (Type-C Alt Mode)</li><li>1 additional USB 3.2 Gen1 interface multiplexed with PCIe1 / SATA1; both groups have companion USB 2.0 signals, subject to multiplexing restrictions</li></th>
         </tr>
         <tr>
             <th>Audio</th>
-            <th><li>SPDIF_Tx x1</li><li>AUDIO_R/L x1</li><li>i2s x1</li></th>
+            <th><li>SPDIF_Tx x1</li><li>Analog left/right audio provided by the ES8388 codec on CM5-IO</li><li>i2s x1</li></th>
         </tr>
          <tr>
             <th rowspan="3">Others</th>
@@ -200,6 +200,21 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
         </tr>
     </tbody>
 </table>
+
+### Module Interfaces and Multiplexing {#module-interfaces}
+
+Based on the CM5 V1.3 and CM5-IO V1.1 schematics and RK3576 Datasheet V1.0 (pages 16–20). Chip limits do not imply simultaneous availability of every interface; actual operation depends on carrier wiring and software configuration.
+
+| Interface group | Available functions | Restrictions |
+| --- | --- | --- |
+| USBDP | USB 3.2 Gen1 (5Gbps) / DP 1.4, with Type-C Alt Mode | DP up to 4K@120Hz; USB and DP share high-speed lanes and require a matching lane configuration |
+| Combo PHY0 | PCIe 2.1 ×1 / SATA 3.1 | Select one; PCIe up to 5GT/s, SATA up to 6GT/s |
+| Combo PHY1 | PCIe 2.1 ×1 / SATA 3.1 / USB 3.2 Gen1 | Select one; selecting PCIe1 or SATA1 disables both USB3 OTG1 and its companion USB2 OTG1 |
+| HDMI | HDMI 2.1, up to 4K@120Hz | CM5-IO provides an HDMI socket; chip-level HDMI/eDP multiplexing alone does not establish carrier support for eDP |
+| MIPI DSI | 1×4-lane D-PHY, up to 2560×1600@60Hz | Requires compatible panel timing, drivers and cabling |
+| MIPI CSI | 1×4-lane + 1×2-lane | As routed on CM5-IO |
+
+CM5-IO uses PCIe0 for M.2 and the USB mode of the other combo interface for its USB hub. The microSD, M.2, 40-pin, fan and headphone connectors are on the carrier; the module exposes the corresponding signals. USB 3.2 Gen1 is also commonly called USB 3.0 (5Gbps).
 
 ### RK3576 Block Diagram
 <details>
@@ -220,9 +235,9 @@ Below is a comparison table between ArmSoM CM5 and Raspberry Pi CM4:
 
 
 ### Electrical characteristics
-Here’s a table showing the power consumption of ArmSoM-CM5 and ArmSoM-CM5-IO in different states:
+Here’s a table showing the current consumption of ArmSoM-CM5 and ArmSoM-CM5-IO in different states:
 
-| No. | Product | SoC | DC input voltage | Standby (OS interface) | Powered off | Maximum (CPU stress test) |
+| No. | Product | SoC | DC input voltage | Standby current (OS interface) | Powered-off current | Maximum current (CPU stress test) |
 | --- | --- | --- | --- | --- | --- | --- |
 | 3 | CM5 | RK3576 | 4.0 V | 350 mA | 0.1 mA | 1040 mA |
 | 4 | CM5-IO | RK3576 | 12.0 V | 480 mA | 27 mA | 735 mA |
@@ -241,13 +256,13 @@ The CM5-IO is the IO board for the ArmSoM CM5, with dimensions of 100x80x29 mm. 
 The CM5-IO board is an expansion board specifically designed for the CM5 computing module, aimed at assisting in system and embedded board development.
 
 - 1x HDMI output, 1x Typec(DP) output
-- 4x USB 3.0 Type-A
-- Gigabit Ethernet RJ45 with PoE support
+- 4x USB 3.0 Type-A, expanded by an RTS5411S hub sharing one USB 3.0 upstream link
+- Gigabit Ethernet RJ45 with PoE taps exposed at J5; PoE powering requires a compatible PoE power module
 - Firmware flashing and device mode via USB Type-C
 - GPIO: 40-PIN header
 - Power connector: DC Barrel jack for 12V power input, outer diameter 5.5mm, inner diameter 2.0mm, center positive, outer negative
 - Expansion: M.2 (M-key, supports PCIe), microSD
-- MIPI DSI: 1x 4-lane MIPI DSI, supports up to 4K@60fps (x4)
+- MIPI DSI: 1x 4-lane MIPI DSI, chip capability up to 2560×1600@60Hz, subject to panel and software support
 - MIPI CSI0: 1x 4-lane MIPI CSI, each lane up to 2.5Gbps
 - MIPI CSI1: 1x 2-lane MIPI CSI, each lane up to 2.5Gbps
 - Others: HPOUT, FAN, VRTC
@@ -300,6 +315,11 @@ The cm5-io board uses a 12V DC power supply.
 </div>
 </details>
 
+:::note Shared 40-pin and fan signal
+Pin 28 shares `PWM2_CH6_M2 / SAI3_MCLK_M2` with fan control; these cannot be configured as two independent functions simultaneously. A `-` in the table indicates a function not exposed on this carrier and must not be treated as an available GPIO. Pin 22 is an ADC input, not a general-purpose digital GPIO.
+:::
+
+
 <details>
     <summary>
         FAN
@@ -310,7 +330,7 @@ The cm5-io board uses a 12V DC power supply.
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | GND |
-|3    | PWM | PWM control |
+|3    | Switched fan return | Connected to the Q45 collector and controlled by Q45/Q46; not a direct logic-level PWM output |
 </details>
 
 <details>
@@ -1277,7 +1297,7 @@ Due to differences in mirror versions, some versions require manually installing
 
 #### MIPI DSI {#cm5-io-mipi-dsi}
 
-The CM5 Kit supports resolutions up to 2K@60Hz.
+The CM5 Kit supports resolutions up to 2560×1600@60Hz.
 
 1. Connect the ribbon cable as shown in the image below:
 
