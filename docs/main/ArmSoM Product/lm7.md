@@ -100,6 +100,9 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 
 
 ### Hardware Spec
+
+The LM7 schematic is named `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE 1V0). Its LGA connector signals are listed on PDF pages 21–22. The interface capabilities below refer to module signals and require a suitable carrier board; multiplexed functions sharing the same pins or PHY are not additional independent ports. Do not equate these capabilities with the connectors fitted to the W3 carrier.
+
 <details>
     <summary>
         LM7 Hardware Spec
@@ -140,13 +143,13 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
             <th rowspan="4">Display output interface</th>
             <th>HDMI/eDP TX interface</th>
             <th>≤2</th>
-            <th colspan="2"><li>Support dual HDMI/eDP TX multiplex interface（HDMI and eDP cannot work together simultaneously
+            <th colspan="2"><li>Support dual HDMI/eDP TX multiplex interface（HDMI and eDP within the same multiplexed interface cannot operate simultaneously
 ）</li><li>HDMI supports 7680×4320@60Hz resolution and 3,6,8,10,12Gbps bandwidth，HDCP2.3 </li><li>eDP supports 4K@60Hz resolution，Each interface supports x1,x2,x4 configurations，supports 1.62Gbps,2.7Gbps and 5.4Gbps bandwidth and HDCP1.3</li></th>
         </tr>
         <tr>
             <th>DP TX</th>
             <th>2</th>
-            <th colspan="2"><li>Support 2 lanes DP TX 1.4a interface，connecting with USB3.1 Gen1，support 1/2/4lanes</li><li>Resolution up to 7680×4320@30Hz (RK3588 Datasheet V1.5)</li><li>Support HDCP2.3, HDCP 1.3</li></th>
+            <th colspan="2"><li>Support two DP TX 1.4a interfaces, multiplexed with USB3.1 Gen1; each DP interface supports 1/2/4 lanes</li><li>Resolution up to 7680×4320@30Hz (RK3588 Datasheet V1.5)</li><li>Support HDCP2.3, HDCP 1.3</li></th>
         </tr>
         <tr>
             <th>MIPI DSI</th>

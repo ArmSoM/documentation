@@ -94,6 +94,9 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ### 硬件规格
 
+LM7 对应的核心板原理图文件名为 `ARMSOM-W3-CORE_1V0_SCH.pdf`（W3 CORE 1V0），LGA 连接器信号见 PDF 第 21–22 页。下表描述核心板信号能力，需要载板配合实现；共享引脚或 PHY 的复用功能不是额外的独立接口，也不等同于 W3 载板实际安装的接口数量。
+
+
 <details>
     <summary>
         LM7 硬件规格
@@ -134,12 +137,12 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
             <th rowspan="4">显示输出接口</th>
             <th>HDMI/eDP TX interface</th>
             <th>≤2</th>
-            <th colspan="2"><li>支持 2 个 HDMI/eDP TX 复用接口（HDMI 和 eDP 不能同时工作）</li><li>HDMI 支持 7680×4320@60Hz 分辨率，支持 3,6,8,10,12Gbps 带宽，支持 HDCP2.3 </li><li>eDP 支持 4K@60Hz 分辨率，每个接口支持 x1,x2,x4 配置，支持 1.62Gbps,2.7Gbps 以及 5.4Gbps 带宽，支持 HDCP1.3</li></th>
+            <th colspan="2"><li>支持 2 个 HDMI/eDP TX 复用接口（同一组复用接口中的 HDMI 和 eDP 不能同时工作）</li><li>HDMI 支持 7680×4320@60Hz 分辨率，支持 3,6,8,10,12Gbps 带宽，支持 HDCP2.3 </li><li>eDP 支持 4K@60Hz 分辨率，每个接口支持 x1,x2,x4 配置，支持 1.62Gbps,2.7Gbps 以及 5.4Gbps 带宽，支持 HDCP1.3</li></th>
         </tr>
         <tr>
             <th>DP TX</th>
             <th>2</th>
-            <th colspan="2"><li>支持 2 路 DP TX 1.4a 接口，可连接 USB3.1 Gen1，支持 1/2/4lanes</li><li>分辨率可达 7680×4320@30Hz (RK3588 Datasheet V1.5)</li><li>支持 HDCP2.3, HDCP 1.3</li></th>
+            <th colspan="2"><li>支持 2 路 DP TX 1.4a 接口，与 USB3.1 Gen1 复用；每路 DP 支持 1/2/4 lanes</li><li>分辨率可达 7680×4320@30Hz (RK3588 Datasheet V1.5)</li><li>支持 HDCP2.3, HDCP 1.3</li></th>
         </tr>
         <tr>
             <th>MIPI DSI</th>

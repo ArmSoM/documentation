@@ -5,11 +5,18 @@
     "AIM5 与 AIM7 共用 AIM-IO 载板",
     "产品页不写默认配置",
     "Sige7S 提供 2GB/4GB RAM 和 16GB eMMC",
-    "CM7S 提供 256GB eMMC"
+    "CM7S 提供 256GB eMMC",
+    "LM7 对应 W3 CORE 1V0 原理图：ARMSOM-W3-CORE_1V0_SCH.pdf",
+    "CM5 核心板建议输入 4V，最高不得超过 5.5V；未提供最低输入电压"
   ],
   "extra_evidence": {
     "OV13850": "OmniVision product brief V1.8, p2: https://dlscorp.com/wp-content/uploads/2019/02/OV13850-DS.pdf",
-    "fan": "3505鼓风机规格书1.docx / 3505S V1.0, 2024-08-02"
+    "fan": "3505鼓风机规格书1.docx / 3505S V1.0, 2024-08-02",
+    "LM7": {
+      "file": "D:\\ArmSoM\\armsom-w3\\ArmSoM_W3共享资料\\BPI_ARMSOM_W3_CORE_1V0\\3.原理图\\ARMSOM-W3-CORE_1V0_SCH.pdf",
+      "sha256": "60537120cf153b8626badcbb055eb9a7059b518355a97709315b921c8ef3473f",
+      "pages": "21–22: LGA connector signal groups; mapping confirmed by user; not a complete pin-by-pin or powered validation"
+    }
   },
   "checks": [
     "docs: pin counts, GPIO numbers, HDMI mapping, connector translations, capacities, display matrix and accessories passed",
@@ -404,8 +411,8 @@
     {
       "id": "HW-24",
       "title": "4.0V测试记录仍与标称范围不一致",
-      "status": "needs-hardware-evidence",
-      "resolution": "保留4.0V原始记录，已增加不作为推荐输入电压的说明；测量条件待确认。",
+      "status": "fixed",
+      "resolution": "用户确认核心板建议 4V、最高 5.5V；中英文供电规格和功耗表说明同步更新，保留原始测量值及 CM5-IO 独立供电要求。",
       "products": [
         "CM5"
       ],
@@ -566,15 +573,15 @@
     {
       "id": "HW-38",
       "title": "资料型号需要确认对应关系",
-      "status": "needs-hardware-evidence",
-      "resolution": "LM7 与 W3 CORE 版本映射仍需确认；DP分辨率按RK3588资料修正。",
+      "status": "fixed",
+      "resolution": "用户确认 LM7 对应 W3 CORE 1V0；核对第21–22页 LGA 信号分组，补充模块/载板区别及复用说明，澄清两路 DP 与 lane 数。此项关闭的是资料映射问题，不代表全引脚或实板验证完成。",
       "products": [
         "LM7"
       ],
       "sources": [
         {
           "file": "ARMSOM-W3-CORE_1V0_SCH.pdf",
-          "pages": "ARMSOM-W3-CORE_1V0，版本映射待确认"
+          "pages": "第21–22页 LGA连接器；用户已确认版本映射"
         }
       ]
     },
