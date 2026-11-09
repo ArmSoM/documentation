@@ -107,11 +107,13 @@ HDMI在默认情况下是打开的
 
 ## 12.3 typec(DP显示)
 
-DP在默认情况下是打开的
+DP 显示支持取决于板型、载板接线和镜像配置。
 
 | 型号 |Sige7 | Sige5  | Sige3 | Sige1 | LM7(w3) | CM5  | 
 | ----- |  ----- | ------ |----- | ----- |----- |----- |
-| 分辨率  | 8Kp60 | 4Kp120 |4Kp60|4Kp60|8Kp60 |4Kp120 |
+| 分辨率上限 | 7680×4320@30Hz | 4K@120Hz | 不支持 Type-C DP | 不支持 Type-C DP | W3：7680×4320@30Hz | CM5：4K@120Hz，需载板引出 |
+
+以上为对应显示链路的规格上限，不代表所有屏幕/镜像均可使用这些模式。LM7、CM5 是核心板，必须由载板引出相应 DP 信号。Type-C 连接器本身不代表支持 DP。
 
 1. 使用 typec 线连接 ArmSoM产品 和 typec 显示器
 2. 启动 linux 系统后如果 typec 显示器有图像输出说明 typec 接口使用正常
@@ -424,7 +426,7 @@ cat /sys/kernel/debug/dri/0/summary
 - Clusterx-winx(Esmartx-winx): 图层信息
 
 ### 12.4.2 DP 屏幕
-ArmSoM-W3硬件上有一个 Type-C 接口输出的DP，分辨率可达 8192x4320@30Hz， PHY 链路速率可以达到 8.1Gbps/lane。
+ArmSoM-W3硬件上有一个 Type-C 接口输出的DP，分辨率可达 7680×4320@30Hz (RK3588 Datasheet V1.5)， PHY 链路速率可以达到 8.1Gbps/lane。
 
 #### 12.4.2.1 DTS配置
 

@@ -520,7 +520,7 @@ armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.w
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
-目前风扇默认五个状态
+以下示例包含六档状态（0–5）；温度阈值与 PWM 值取决于镜像和设备树配置。
 
 | 温度       | 状态  | PWM转速 |
 | --------------- | ----- | ------ |
@@ -545,6 +545,10 @@ Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感
 下载 wiringOP 的代码 [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
 - 测试 gpio readall 命令的输出如下
+
+:::note
+以下为旧版 WiringOP 的 Sige7 示例输出，不能作为当前板卡的接线依据。其中 13/15 脚的旧映射不适用于当前 V1.1 原理图：13=GPIO3_C0（112），15=GPIO3_B7（111）。请以本产品引脚定义为准，并核对安装的 WiringOP 板型映射。其他 Sige 型号不要套用此示例编号。
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+

@@ -11,31 +11,26 @@ sidebar_position: 8
 
 ## 8.1 Interface Model and Connection
 
-- The connector is a 0.8mm 1x3P straight insert type (0.8mm pitch), detailed specifications can be found in the connector datasheet.
-- Supports 5V powered fans.
-- Supports PWM control.
+Fan connectors and control circuits vary by board. The models below use 5V fans with PWM-switched low-side speed control. The switched return is not a standalone logic PWM output.
 
-ArmSoM products are equipped with this fan interface by default.
+| Product / hardware revision | Connector | Pin definition |
+| --- | --- | --- |
+| Sige5 V1.3, Sige7 V1.1 | CN32, 0.8mm 1×3P | 1: 5V; 2: GND; 3: PWM-switched low-side return |
+| Sige6 V1.0 | J19, 0.8mm 1×2P | 1: 5V; 2: PWM-switched low-side return |
+| Other models | Refer to the product schematic/pin table | Do not infer wiring from pin count or wire color |
 
 ![sige5-fan](/img/general-tutorial/interface-usage/fan.png)
 
 <div className="armsom-image-caption">sige5-fan</div>
 
-
-| Fan    | Pin       | Function            | 
-| -------| ----------| ------------------ |
-| 5V     | 1         | 5V Power Supply     |
-| GND    | 2         | Ground              |
-| PWM    | 3         | PWM Control Signal  |
-
-**Note:**
-- **5V Power Supply (Pin 1)**: Provides 5V power to the fan.
-- **Ground (Pin 2)**: Ground line for the fan, used for the circuit's return path.
-- **PWM Control Signal (Pin 3)**: Controls the fan's speed via PWM signal. Changes in duty cycle directly affect the fan's operational speed.
+**Connection notes:**
+- The 5V pin supplies the fan; GND is a fixed ground.
+- A board transistor switches the low-side return. A two-wire fan uses the switched return for PWM speed control; connecting its negative lead to fixed ground bypasses this circuit.
+- A three-/four-wire fan's PWM input, tachometer output and power return are different signals. Check the fan part number, wire assignment and board pin definition; refer to the connector specification for dimensions.
 
 ## 8.2 Using the Fan
 
-The fan currently supports five states based on temperature:
+The following example has six states (0–5). Temperature thresholds and PWM values depend on the image and device tree:
 
 | Temperature   | State | PWM Speed |
 | ------------- | ----- | --------- |

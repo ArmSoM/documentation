@@ -107,11 +107,13 @@ When using HDMI to VGA display, ArmSoM Sige products and Linux systems do not re
 
 ## 12.3 typec (DP display)
 
-DP is open by default
+DP display support depends on the board, carrier routing and system image.
 
 |Model | Sige7 | Sige5 | Sige3 | Sige1 | LM7 (w3) | CM5|
 | ----- |  ----- | ------ |----- | ----- |----- |----- |
-|Resolution | 8Kp60 | 4Kp120 | 4Kp60 | 4Kp60 | 8Kp60 | 4Kp120|
+| Resolution limit | 7680×4320@30Hz | 4K@120Hz | No Type-C DP | No Type-C DP | W3: 7680×4320@30Hz | CM5: 4K@120Hz, carrier routing required |
+
+These are interface specification limits, not guaranteed modes for every panel/image. LM7 and CM5 are modules and require a carrier that routes the DP signals. A Type-C connector alone does not imply DP support.
 
 1. Connect ArmSoM products and typec displays using a typec cable
 2. If there is image output from the TypeC monitor after starting the Linux system, it indicates that the TypeC interface is working properly
@@ -425,7 +427,7 @@ The obtained VOP status is shown in the following figure:
 - Clusterx-winx(Esmartx-winx):  Layer Info 
 
 ### 12.4.2 DP Screen
-The ArmSoM-W3 hardware has a Type-C interface output DP with a resolution of up to 8192x4320@30Hz ，  The PHY link speed can reach 8.1Gbps/lane.
+The ArmSoM-W3 hardware has a Type-C interface output DP with a resolution of up to 7680×4320@30Hz (RK3588 Datasheet V1.5) ，  The PHY link speed can reach 8.1Gbps/lane.
 
 #### 12.4.2.1 DTS Configuration
 

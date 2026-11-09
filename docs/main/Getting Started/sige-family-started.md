@@ -536,6 +536,10 @@ Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wirin
 
 - Test the output of the `gpio readall` command as shown below:
 
+:::note
+The following is historical Sige7 output from WiringOP, not a wiring reference for current boards. Its old mapping for pins 13/15 differs from the V1.1 schematic: 13=GPIO3_C0 (112), 15=GPIO3_B7 (111). Follow the product pin definition and verify the installed WiringOP board mapping. Do not reuse these example numbers on other Sige models.
+:::
+
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  
  | GPIO | wPi |   Name   |  Mode  | V | Physical | V |  Mode  | Name     | wPi | GPIO |  
