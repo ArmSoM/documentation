@@ -31,6 +31,8 @@ The ArmSoM-Sige7s is powered by Rockchip's latest flagship RK3588s,octa-core 64-
 Sige7s is applied for various applications,such as, ARM PCs, edge computing, cloud servers, AI, cloud computing, virtual/augmented reality, blockchain, smart NVRs and more.
  
 
+The SoC supports up to 8K video decoding and 8K@30fps H.264/H.265 encoding; actual modes depend on the system software.
+
 ### Key Parameter
 
 - **SoC**: Rockchip RK3588s
@@ -41,7 +43,7 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
   - **Hardware Decode**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
   - **Hardware Encode**: 8K@30fps H.265 / H.264
 - **RAM**: 2GB/4GB/8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x
-- **Storage**: 32GB/64GB/128GB eMMC module, comes with a default 16MB flash
+- **Storage**: 16GB/32GB/64GB/128GB eMMC module, onboard 16MB SPI flash
 - **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
@@ -119,7 +121,7 @@ Sige7s is applied for various applications,such as, ARM PCs, edge computing, clo
         </tr>
         <tr>
             <th>RAM</th>
-            <th><li>8GB / 16GB / 32GB (Maximum configuration up to 32GB) 64-bit LPDDR4 / LPDDR4x</li></th>
+            <th><li>2GB / 4GB / 8GB / 16GB / 32GB (Maximum configuration up to 32GB) 64-bit LPDDR4 / LPDDR4x</li></th>
         </tr>
         <tr>
             <th>Flash</th>

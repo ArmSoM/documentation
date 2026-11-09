@@ -48,8 +48,8 @@ Sige 7 is applied for various applications,such as, ARM PCs, edge computing, clo
 - **VPU/Codec**:
   - **Hardware Decode**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
   - **Hardware Encode**: 8K@30fps H.265 / H.264
-- **RAM**: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x, default 8GB LPDDR4x
-- **Storage**: 64GB/128GB eMMC, default 64GB eMMC
+- **RAM**: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x
+- **Storage**: 64GB/128GB eMMC
 - **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
@@ -138,15 +138,15 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB/32GB（max 32GB ）64bit LPDDR4/LPDDR4x，default 8GB LPDDR4x</li></th>
+            <th><li>8GB/16GB/32GB（max 32GB ）64bit LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/64GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB eMMC</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M (PCIe 3.0 4-lanes). Expandable SSD support for 2280/2260/2242/2230 M.2 SSD cards, default 2280 </li></th>
+            <th><li>1x M.2 Key M (PCIe 3.0 4-lanes). Expandable SSD support for 2280/2260/2242/2230 M.2 SSD cards </li></th>
         </tr>
         <tr>
             <th>Networking</th>
@@ -258,8 +258,8 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
 |     115     | SPI1_CS1_M1 / I2C8_SDA_M4 / UART7_CTSN_M1 / PWM15_IR_M0 / GPIO3_C3  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  GPIO0_B5 / <div className='orange-txt'>UART2_TX_M0</div> / I2C1_SCL_M0 / I2S1_MCLK_M1  / JTAG_TCK_M2|     13      |
 |             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART2_RX_M0</div> / I2C1_SDA_M0 / I2S1_SCLK_M1 /  JTAG_TMS_M2  |     14      |
 |     113     |  SPI1_CLK_M1 / UART7_RX_M1 / GPIO3_C1  | <div className='green'>11</div>  | <div className='green'>12</div> |  GPIO3_B5  / CAN1_RX_M0 / PWM12_M0  /UART3_TX_M1 / I2S2_SCLK_M1 |     109     |
-|     111     |  SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1 / GPIO3_C0  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     112     |   SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7   | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1  |     100     |
+| 112 |  SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1 / GPIO3_C0  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+| 111 |   SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7   | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1  |     100     |
 |             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  GPIO4_C4 / PWM5_M2 / SPI3_MISO_M0 |    148     |
 |     42      | SPI0_MOSI_M2 / UART4_RX_M2 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
 |     41      | SPI0_MISO_M2 / GPIO1_B1  | <div className='green'>21</div>  | <div className='green'>22</div> | SARADC_IN4          |             |
@@ -388,7 +388,7 @@ There are two identical Type-C ports on Sige7,but only the Type-C (PD Only) port
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | GND |
-|3    | PWM | PWM control |
+|3 | FAN switched return | PWM-switched low-side return, not a standalone logic PWM output |
 </details>
 <details>
     <summary>
@@ -1255,6 +1255,10 @@ Sige products  provides a 40-PIN GPIO header, compatible with most sensors on th
 Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wiring-armbian).
 
 - Test the output of the `gpio readall` command as shown below:
+
+:::note
+The following is historical Sige7 output from WiringOP, not a wiring reference for current boards. Its old mapping for pins 13/15 differs from the V1.1 schematic: 13=GPIO3_C0 (112), 15=GPIO3_B7 (111). Follow the product pin definition and verify the installed WiringOP board mapping. Do not reuse these example numbers on other Sige models.
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  

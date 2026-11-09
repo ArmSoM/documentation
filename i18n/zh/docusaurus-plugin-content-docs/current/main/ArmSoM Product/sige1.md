@@ -35,8 +35,8 @@ ArmSoM-Sige1 采用 Rockchip RK3528 新一代智能机顶盒和多媒体应用�
 - **VPU/编解码**：
   - **硬解码**：支持以60fps播放4K超高清视频，支持高达10位像素，支持H.265、H.264、AVS2等视频标准。
   - **硬编码**：支持以60fps捕捉1080p高清视频，支持H.265和H.264编码。
-- **RAM**：1GB / 2GB / 4GB 32bit LPDDR4x，默认2GB
-- **Flash**：0GB / 8GB / 16GB / 32GB / 64GB eMMC，默认eMMC 8GB
+- **RAM**：1GB / 2GB / 4GB 32bit LPDDR4x
+- **Flash**：0GB / 8GB / 16GB / 32GB / 64GB eMMC
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **工作电压**：具有宽范围的输入电压，从4.5V到18V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
@@ -118,11 +118,11 @@ Sige1上有两个长得一样的Type-C接口，其中Type-C(DC IN)才是电源�
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>4GB 32bit LPDDR4x，默认4GB，最大支持4GB</li></th>
+            <th><li>1GB / 2GB / 4GB 32bit LPDDR4x，最大支持4GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB eMMC，默认eMMC 32GB</li><li>支持MicroSD卡扩展</li></th>
+            <th><li>0GB / 8GB / 16GB / 32GB / 64GB eMMC</li><li>支持MicroSD卡扩展</li></th>
         </tr>
         <tr>
             <th>网络</th>
@@ -1032,7 +1032,7 @@ armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.w
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
-目前风扇默认五个状态
+以下示例包含六档状态（0–5）；温度阈值与 PWM 值取决于镜像和设备树配置。
 
 | 温度       | 状态  | PWM转速 |
 | --------------- | ----- | ------ |
@@ -1062,6 +1062,10 @@ Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感
 <summary>历史命令输出（其他板卡示例，不适用于本板接线）</summary>
 
 此输出保留作为历史参考。接线请使用上方40Pin表；wPi编号必须以支持本板的工具实际输出为准。
+
+:::note
+以下为旧版 WiringOP 的 Sige7 示例输出，不能作为当前板卡的接线依据。其中 13/15 脚的旧映射不适用于当前 V1.1 原理图：13=GPIO3_C0（112），15=GPIO3_B7（111）。请以本产品引脚定义为准，并核对安装的 WiringOP 板型映射。其他 Sige 型号不要套用此示例编号。
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+

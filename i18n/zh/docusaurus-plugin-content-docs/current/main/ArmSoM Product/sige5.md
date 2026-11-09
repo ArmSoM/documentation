@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力NPU，最大可配16GB大内存。支持8K视频编解码，拥有丰富的接口，支持双千兆网口，WIFI6/BT5。
+description: ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力NPU，最大可配16GB大内存。支持最高8K视频解码与4K视频编码，拥有丰富的接口，支持双千兆网口，WIFI6/BT5。
 keywords: [armsom, armsom-sige5, RK3576开发板, rockchip, rk3576 SBC]
 sidebar_label: "Sige5"
 sidebar_position: 2
@@ -43,8 +43,8 @@ ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力
 - **VPU/编解码**：
   - **硬解码**：支持H.264、H.265、VP9、AV1和AVS2等最高8K@30fps或4K@120fps,高质量JPEG解码器最高4K@60fps。
   - **硬编码**：支持H.264和H.265，JPEG最高4K@60fps。
-- **RAM**：8/16GB 32bit LPDDR4x，默认8GB，RK3576 最大支持16GB。
-- **Flash**：32/64/128GB eMMC，默认eMMC 64GB。
+- **RAM**：8/16GB 32bit LPDDR4x，RK3576 最大支持16GB。
+- **Flash**：32/64/128GB eMMC。
 - **WIFI/BT**:  板载 IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **工作电压**：具有宽范围的输入电压，从 5V到23V（电压误差±5%）。
 - **工作温度**：0℃ ~ 80℃
@@ -134,15 +134,15 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB（最高可配 16GB ）32bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
+            <th><li>8GB/16GB（最高可配 16GB ）32bit LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB eMMC</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M 接口(PCIe 2.1 1- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
+            <th><li>1x M.2 Key M 接口(PCIe 2.1 1- lanes)，可拓展 SSD：Type 2280/2260/2242/2230</li></th>
         </tr>
         <tr>
             <th>网络</th>
@@ -390,7 +390,7 @@ Sige5上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | 地 | 
-|3    | PWM | PWM控制 |
+|3 | FAN switched return | 受 PWM 控制的低侧开关回路，不是独立逻辑 PWM 输出 |
 </details>
 
 <details>
@@ -1187,7 +1187,7 @@ armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.w
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
-目前风扇默认五个状态
+以下示例包含六档状态（0–5）；温度阈值与 PWM 值取决于镜像和设备树配置。
 
 | 温度       | 状态  | PWM转速 |
 | --------------- | ----- | ------ |
@@ -1217,6 +1217,10 @@ Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感
 <summary>历史命令输出（其他板卡示例，不适用于本板接线）</summary>
 
 此输出保留作为历史参考。接线请使用上方40Pin表；wPi编号必须以支持本板的工具实际输出为准。
+
+:::note
+以下为旧版 WiringOP 的 Sige7 示例输出，不能作为当前板卡的接线依据。其中 13/15 脚的旧映射不适用于当前 V1.1 原理图：13=GPIO3_C0（112），15=GPIO3_B7（111）。请以本产品引脚定义为准，并核对安装的 WiringOP 板型映射。其他 Sige 型号不要套用此示例编号。
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+

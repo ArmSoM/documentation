@@ -35,8 +35,8 @@ The ArmSoM-Sige3 features the Rockchip RK3568B2, a high-performance and low-powe
 - **VPU/Codec**:
   - **Hardware Decoding**: H.265/VP9 (HEVC) hardware decoding (up to 4Kp60)
   - **Hardware Encoding**: H.264 hardware encoding (up to 1080p60)
-- **RAM**: 2/4/8 GB 32-bit LPDDR4x, default 4GB
-- **Flash**: 8/16/32/64 GB eMMC, default eMMC 32GB
+- **RAM**: 2/4/8 GB 32-bit LPDDR4x
+- **Flash**: 8/16/32/64 GB eMMC
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage**: Wide input voltage range from 4.5V to 18V (voltage tolerance ±5%)
 - **Operating Temperature**: 0℃ ~ 80℃
@@ -118,15 +118,15 @@ On the Sige3, there are two Type-C interfaces that look identical, but only one 
         </tr>
         <tr>
             <th>RAM</th>
-            <th><li>2/4/8 GB 32-bit LPDDR4x, default 4GB</li></th>
+            <th><li>2/4/8 GB 32-bit LPDDR4x</li></th>
         </tr>
         <tr>
             <th>Flash</th>
-            <th><li>8/16/32/64 GB eMMC, default eMMC 32GB</li><li>Supports MicroSD card expansion</li></th>
+            <th><li>8/16/32/64 GB eMMC</li><li>Supports MicroSD card expansion</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M slot (PCIe 3.0 1-lane), expandable SSD: Type 2280/2260/2242/2230, default 2280</li></th>
+            <th><li>1x M.2 Key M slot (PCIe 3.0 ×2), expandable SSD: Type 2280/2260/2242/2230</li></th>
         </tr>
         <tr>
             <th>Network</th>
@@ -1044,6 +1044,10 @@ Sige products  provides a 40-PIN GPIO header, compatible with most sensors on th
 Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wiring-armbian).
 
 - Test the output of the `gpio readall` command as shown below:
+
+:::note
+The following is historical Sige7 output from WiringOP, not a wiring reference for current boards. Its old mapping for pins 13/15 differs from the V1.1 schematic: 13=GPIO3_C0 (112), 15=GPIO3_B7 (111). Follow the product pin definition and verify the installed WiringOP board mapping. Do not reuse these example numbers on other Sige models.
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  

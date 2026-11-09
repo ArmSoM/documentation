@@ -1,5 +1,5 @@
 ---
-description: ArmSoM-Sige5 uses Rockchip RK3576 second-generation 8nm high-performance AIOT platform, 6 TOPS computing power NPU, and can be equipped with up to 16GB of large memory. Supports 8K video encoding and decoding, has rich interfaces, supports dual Gigabit network ports, WIFI6/BT5.
+description: ArmSoM-Sige5 uses Rockchip RK3576 second-generation 8nm high-performance AIOT platform, 6 TOPS computing power NPU, and can be equipped with up to 16GB of large memory. Supports up to 8K video decoding and 4K video encoding, has rich interfaces, supports dual Gigabit network ports, WIFI6/BT5.
 keywords: [armsom-sige5, RK3576 Development Boards, rk3576 SBC]
 sidebar_label: "Sige5"
 sidebar_position: 2
@@ -39,8 +39,8 @@ Leveraging a robust ecosystem and a variety of expansion accessories, ArmSoM hel
 - **VPU/Codec**:
   - **Hardware Decoding**: Supports H.264, H.265, VP9, AV1, and AVS2 up to 8K@30fps or 4K@120fps, and high-quality JPEG decoding up to 4K@60fps.
   - **Hardware Encoding**: Supports H.264 and H.265，JPEG up to 4K@60fps.
-- **RAM**: 8/16GB 32-bit LPDDR4x, default is 8GB. RK3576 supports a maximum of 16GB.
-- **Flash**: 32/64/128GB eMMC, default is 64GB eMMC.
+- **RAM**: 8/16GB 32-bit LPDDR4x. RK3576 supports a maximum of 16GB.
+- **Flash**: 32/64/128GB eMMC.
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage**: Wide input voltage range, from 5V to 23V (voltage error ±5%).
 - **Operating Temperature**: 0°C to 80°C
@@ -134,15 +134,15 @@ There are two identical Type-C ports on Sige5,but only the Type-C (PD Only) port
         </tr>
        <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB（max 16GB ）64bit LPDDR4/LPDDR4x，default 8GB LPDDR4x</li></th>
+            <th><li>8GB/16GB（max 16GB ）32bit LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB/128GB eMMC，default 64GB eMMC</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
+            <th><li>32GB/64GB/128GB eMMC</li><li>Supports MicroSD card expansion</li><li>M.2 M-KEY Socket：PCIe2.1 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M interface (PCIe 2.1, 1-lane), expandable SSD: Type 2280/2260/2242/2230, currently defaulting to 2280</li></th>
+            <th><li>1x M.2 Key M interface (PCIe 2.1, 1-lane), expandable SSD: Type 2280/2260/2242/2230</li></th>
         </tr>
         <tr>
             <th>Network</th>
@@ -402,7 +402,7 @@ Checked against the V1.3 schematic. Numbers in the diagram are physical pins. NC
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | GND |
-|3    | PWM | PWM control |
+|3 | FAN switched return | PWM-switched low-side return, not a standalone logic PWM output |
 </details>
 
 <details>
@@ -1217,6 +1217,10 @@ Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wirin
 <summary>Historical output (another board; not this board pinout)</summary>
 
 Retained for historical reference. Use the 40Pin table above for wiring. Confirm wPi indices with a tool that supports this board.
+
+:::note
+The following is historical Sige7 output from WiringOP, not a wiring reference for current boards. Its old mapping for pins 13/15 differs from the V1.1 schematic: 13=GPIO3_C0 (112), 15=GPIO3_B7 (111). Follow the product pin definition and verify the installed WiringOP board mapping. Do not reuse these example numbers on other Sige models.
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  

@@ -20,7 +20,7 @@ toc_max_heading_level: 4
 
 ## 简介
 
-ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，主频高达2.4GHz，集成6 TOPS算力NPU，最大可配32GB大内存。支持8K视频解码与4K编码，拥有丰富接口，支持千兆以太网、WiFi6 & BT5和多种视频输出。支持多种操作系统，可适用于ARM PC、边缘计算、云服务器、人工智能、智能NVR等领域。
+ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，主频高达2.4GHz，集成6 TOPS算力NPU，最大可配32GB大内存。芯片支持最高8K视频解码与8K@30fps H.264/H.265编码（实际模式取决于系统软件），拥有丰富接口，支持千兆以太网、WiFi6 & BT5和多种视频输出。支持多种操作系统，可适用于ARM PC、边缘计算、云服务器、人工智能、智能NVR等领域。
 
 ![ArmSoM-sige7s](/img/sige/sige7s-bananer.png)
 
@@ -37,7 +37,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
   - **硬解码**：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - **硬编码**：8K@30fps H.265 / H.264
 - **RAM**：2GB/4GB/8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x
-- **Flash**：32GB/64GB/128GB eMMC Module, 默认贴了 16MB 的flash
+- **Flash**：16GB/32GB/64GB/128GB eMMC Module, 板载 16MB SPI flash
 - **WIFI/BT**: 板载IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5
 - **工作电压**：具有宽范围的输入电压，从5V到23V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
@@ -114,7 +114,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x</li></th>
+            <th><li>2GB/4GB/8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>

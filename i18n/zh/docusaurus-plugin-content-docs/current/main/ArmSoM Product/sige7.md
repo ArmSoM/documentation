@@ -44,8 +44,8 @@ ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频
 - **VPU/编解码**：
   - **硬解码**：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - **硬编码**：8K@30fps H.265 / H.264
-- **RAM**：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB
-- **Flash**：64GB/128GB eMMC，默认eMMC 64GB
+- **RAM**：8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x
+- **Flash**：64GB/128GB eMMC
 - **WIFI/BT**: 板载IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5 [AP6275P](https://www.ampak.com.tw/tw/product/WiFi-Bluetooth/Stamp-Type-2T2R/AP6275P)
 - **工作电压**：具有宽范围的输入电压，从5V到23V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
@@ -134,15 +134,15 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x，默认LPDDR4x 8GB</li></th>
+            <th><li>8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>16GB/32GB/64GB/128GB eMMC，默认eMMC 64GB</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
+            <th><li>16GB/32GB/64GB/128GB eMMC</li><li>支持MicroSD卡扩展</li><li>M.2 M-KEY Socket：PCIe3.0 NVMe SSD</li></th>
         </tr>
         <tr>
             <th>PCIe</th>
-            <th><li>1x M.2 Key M 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230，目前默认使用2280</li></th>
+            <th><li>1x M.2 Key M 接口(PCIe 3.0 4- lanes)，可拓展 SSD：Type 2280/2260/2242/2230</li></th>
         </tr>
         <tr>
             <th>网络</th>
@@ -252,8 +252,8 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
 |     115     | SPI1_CS1_M1 / I2C8_SDA_M4 / UART7_CTSN_M1 / PWM15_IR_M0 / GPIO3_C3  |  <div className='green'>7</div>  | <div className='green'>8</div>  |  GPIO0_B5 / <div className='orange-txt'>UART2_TX_M0</div> / I2C1_SCL_M0 / I2S1_MCLK_M1  / JTAG_TCK_M2|     13      |
 |             |   GND    |  <div className='black'>9</div>  | <div className='green'>10</div> |  GPIO0_B6  / <div className='orange-txt'>UART2_RX_M0</div> / I2C1_SDA_M0 / I2S1_SCLK_M1 /  JTAG_TMS_M2  |     14      |
 |     113     |  SPI1_CLK_M1 / UART7_RX_M1 / GPIO3_C1  | <div className='green'>11</div>  | <div className='green'>12</div> |  GPIO3_B5  / CAN1_RX_M0 / PWM12_M0  /UART3_TX_M1 / I2S2_SCLK_M1 |     109     |
-|     111     |  SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1  / GPIO3_C0  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
-|     112     |   SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1  |     100     |
+| 112 |  SPI1_MISO_M1 / I2C3_SDA_M1 / UART7_TX_M1  / GPIO3_C0  | <div className='green'>13</div>  | <div className='black'>14</div> |    GND     |             |
+| 111 |   SPI1_MOSI_M1 / I2C3_SCL_M1 / GPIO3_B7  | <div className='green'>15</div>  | <div className='green'>16</div> |  GPIO3_A4 / SPI4_CS1_M1 / I2S3_SDI / UART8_RTSN_M1  |     100     |
 |             |   +3.3V   | <div className='red'>17</div> | <div className='green'>18</div> |  GPIO4_C4 / PWM5_M2 / SPI3_MISO_M0 |    148     |
 |     42      | SPI0_MOSI_M2 / UART4_RX_M2 / GPIO1_B2  | <div className='green'>19</div>  | <div className='black'>20</div> |    GND     |             |
 |     41      | SPI0_MISO_M2 / GPIO1_B1  | <div className='green'>21</div>  | <div className='green'>22</div> | SARADC_IN4          |             |
@@ -382,7 +382,7 @@ Sige7上有两个长得一样的Type-C接口，其中Type-C(PD Only)才是电源
  :--------: | :---------: | :--------: | 
 |1    | VCC_5V0 | 5V Power ouput |
 |2    | GND | 地 |
-|3    | PWM | PWM控制 |
+|3 | FAN switched return | 受 PWM 控制的低侧开关回路，不是独立逻辑 PWM 输出 |
 </details>
 
 <details>
@@ -1232,7 +1232,7 @@ armsom@armsom-sige7:/# aplay -D plughw:1,0 ./usr/share/sounds/alsa/Front_Right.w
 
 Sige 产品 配备一个 5V 的风扇，使用 0.8mm 的连接器
 
-目前风扇默认五个状态
+以下示例包含六档状态（0–5）；温度阈值与 PWM 值取决于镜像和设备树配置。
 
 | 温度       | 状态  | PWM转速 |
 | --------------- | ----- | ------ |
@@ -1257,6 +1257,10 @@ Sige 提供了一个40pin针脚的GPIO座子，兼容于市面上大部分传感
 下载 wiringOP 的代码 [wiring-armbian](https://github.com/ArmSoM/wiring-armbian)
 
 - 测试 gpio readall 命令的输出如下
+
+:::note
+以下为旧版 WiringOP 的 Sige7 示例输出，不能作为当前板卡的接线依据。其中 13/15 脚的旧映射不适用于当前 V1.1 原理图：13=GPIO3_C0（112），15=GPIO3_B7（111）。请以本产品引脚定义为准，并核对安装的 WiringOP 板型映射。其他 Sige 型号不要套用此示例编号。
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+

@@ -35,8 +35,8 @@ ArmSoM-Sige1 adopts the Rockchip RK3528, a new-generation smart set-top box and 
 - **VPU/Decoding**:
   - **Hardware Decoding**: Supports 60fps playback of 4K ultra-high-definition video with up to 10-bit pixels. Supports video standards including H.265, H.264, AVS2, etc.
   - **Hardware Encoding**: Supports 60fps capture of 1080p high-definition video. Supports H.265 and H.264 encoding.
-- **RAM**: 1GB / 2GB / 4GB 32-bit LPDDR4x, default 2GB 
-- **Flash**: 0GB / 8GB / 16GB / 32GB / 64GB eMMC, default eMMC 8GB
+- **RAM**: 1GB / 2GB / 4GB 32-bit LPDDR4x
+- **Flash**: 0GB / 8GB / 16GB / 32GB / 64GB eMMC
 - **WIFI/BT**:  Onboard IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5.3 [syn43752](https://www.synaptics.com/products/wireless/syn43752-wi-fi-bluetooth-combo)
 - **Operating Voltage**: Wide range input voltage, from 4.5V to 18V (voltage error ±5%)
 - **Operating Temperature**: 0°C to 80°C
@@ -119,11 +119,11 @@ On the Sige1, there are two Type-C interfaces that look identical, but only one 
         </tr>
         <tr >
             <th>RAM</th>
-            <th><li>4GB 32-bit LPDDR4x, default 4GB, maximum supported 4GB</li></th>
+            <th><li>1GB / 2GB / 4GB 32-bit LPDDR4x, maximum supported 4GB</li></th>
         </tr>
         <tr >
             <th>Flash</th>
-            <th><li>32GB eMMC, default eMMC 32GB</li><li> supports MicroSD card expansion</li></th>
+            <th><li>0GB / 8GB / 16GB / 32GB / 64GB eMMC</li><li> supports MicroSD card expansion</li></th>
         </tr>
          <tr>
             <th>Network</th>
@@ -1087,6 +1087,10 @@ Download the wiringOP code from [wiring-armbian](https://github.com/ArmSoM/wirin
 <summary>Historical output (another board; not this board pinout)</summary>
 
 Retained for historical reference. Use the 40Pin table above for wiring. Confirm wPi indices with a tool that supports this board.
+
+:::note
+The following is historical Sige7 output from WiringOP, not a wiring reference for current boards. Its old mapping for pins 13/15 differs from the V1.1 schematic: 13=GPIO3_C0 (112), 15=GPIO3_B7 (111). Follow the product pin definition and verify the installed WiringOP board mapping. Do not reuse these example numbers on other Sige models.
+:::
 
 ```
  +------+-----+----------+--------+---+  ArmSoM-Sige7(BPI-M7) +---+--------+----------+-----+------+  

@@ -49,7 +49,7 @@ ArmSoM-P2pro 采用Rockchip RK3308B-S，它配备了64位四核ARM Cortex-A35处
 
 
 :::tip
-P2pro的POE模块和eMMC模块为选配，默认没有
+P2pro的POE模块和eMMC模块为选配
 :::
 
 
@@ -136,8 +136,8 @@ P2pro的POE模块和eMMC模块为选配，默认没有
  :-----------: | :-------------: | :--------: | :--------: | :--------: | :------------: | 
 |65|   UART0_TX / GPIO2_A1 / SPI0_TX   | <div className='green'>1</div>  |  <div className='green'>2</div>   |  I2C1_SDA / GPIO0_B3  |      11   |
 |64| UART0_RX / GPIO2_A0 / SPI0_RX | <div className='green'>3</div>  |  <div className='green'>4</div>   |   I2C1_SCL / GPIO0_B4    |    12      |
-|56 | SPI2_CS / I2C0_SCL / GPIO1_D1 / UART1_TX  |  <div className='green'>5</div>  | <div className='red'>6</div>  | VCC_IO +3.3V    |    17  |
-|     57     | SPI2_CLK / I2C0_SDA / GPIO1_D0 / UART1_TX   |  <div className='green'>7</div>  | <div className='black'>8</div>  |  GND  |     |
+| 57 | SPI2_CS / I2C0_SCL / GPIO1_D1 / UART1_TX  |  <div className='green'>5</div>  | <div className='red'>6</div>  | VCC_IO +3.3V    | |
+| 56 | SPI2_CLK / I2C0_SDA / GPIO1_D0 / UART1_RX   |  <div className='green'>7</div>  | <div className='black'>8</div>  |  GND  |     |
 |      55   |   JTAG_TMS / <div className='orange-txt'>UART2_TX_M0</div>  / GPIO1_C7 / SPI2_TX  |  <div className='green'>9</div>  | <div className='green'>10</div> |  PWM2  / GPIO0_B7 / I2C3_SDA  |     15      |
 |     54 |  JTAG_TCK / <div className='orange-txt'>UART2_RX_M0</div> / GPIO1_C6 / SPI2_RX | <div className='green'>11</div>  | <div className='green'>12</div> |  PWM3  / GPIO0_C0 / IR_RX |     16   |
 </div>
