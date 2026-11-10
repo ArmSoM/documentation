@@ -14,7 +14,7 @@ toc_max_heading_level: 4
 
 让我们在 5 分钟内了解 LM7。
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#doc-section-6">样品购买</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#supply-statement">供货声明</a><a href="#doc-section-6">样品购买</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -22,7 +22,7 @@ toc_max_heading_level: 4
 
 ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，采用了LGA封装，传输能力和稳定性更强。拥有丰富的接口，支持多硬盘、千兆网、WiFi6、5G/4G扩展和多种视频输入输出。支持多种操作系统；提供底板参考设计资料，用户可自主深度化定制。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
-![ArmSoM-lm7](/img/lm/lm7.png)
+<img src={require('@site/static/img/lm/lm7.png').default} alt="ArmSoM-lm7" width="636" style={{display: 'block', width: '636px', maxWidth: '100%', height: 'auto', margin: '1.25rem auto'}} />
 
 <div className="armsom-image-caption">ArmSoM-lm7</div>
 
@@ -438,6 +438,12 @@ HDMI输出8K对layout走线要求很高，核心板+底板的设计方式基本�
 
 <div className="armsom-image-caption">armsom-lm7-ce-fc-rohs</div>
 
+
+<span id="supply-statement" className="armsom-section-anchor" />
+
+## 供货声明
+
+ArmSoM-LM7 将至少生产到 2035 年 1 月。
 
 <span id="doc-section-6" className="armsom-section-anchor" />
 

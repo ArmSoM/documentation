@@ -14,7 +14,7 @@ toc_max_heading_level: 4
 
 Let's get to know LM7 in 5 minutes.
 
-<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Product Certificate</a><a href="#doc-section-6">Purchase Samples</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Product Certificate</a><a href="#supply-statement">Supply Statement</a><a href="#doc-section-6">Purchase Samples</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -24,7 +24,7 @@ The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-b
 
 Supports 8K video encoding and decoding,with LGA packaging for stronger transmission capability and stability. 
 
-![ArmSoM-lm7](/img/lm/lm7.png)
+<img src={require('@site/static/img/lm/lm7.png').default} alt="ArmSoM-lm7" width="636" style={{display: 'block', width: '636px', maxWidth: '100%', height: 'auto', margin: '1.25rem auto'}} />
 
 <div className="armsom-image-caption">ArmSoM-lm7</div>
 
@@ -496,6 +496,12 @@ Here are some tips for your design reference:
 <div className="armsom-image-caption">armsom-lm7-ce-fc-rohs</div>
 
 
+
+<span id="supply-statement" className="armsom-section-anchor" />
+
+## Supply Statement
+
+ArmSoM-LM7 will remain in production until at least January 2035.
 
 <span id="doc-section-6" className="armsom-section-anchor" />
 
