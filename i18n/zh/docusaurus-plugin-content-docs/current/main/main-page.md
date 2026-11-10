@@ -8,6 +8,8 @@ sidebar_position: 1
 slug: /
 ---
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
 <section class="armsom-hero">
   <div class="armsom-hero__copy">
     <p class="armsom-eyebrow">开源硬件 · 嵌入式 AI · ROCKCHIP</p>
@@ -122,7 +124,12 @@ slug: /
 
 ## ArmSoM 平台路线图
 
-![ArmSoM Platform Roadmap](/img/armsom-platform-roadmap.png)
+<figure className="armsom-roadmap">
+  <a href="/img/armsom-platform-roadmap.png" target="_blank" rel="noopener noreferrer">
+    <img src={useBaseUrl("/img/armsom-platform-roadmap.png")} alt="ArmSoM Platform Roadmap" width="1373" height="676" loading="lazy" />
+  </a>
+  <figcaption><a href="/img/armsom-platform-roadmap.png" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></figcaption>
+</figure>
 
 ## ArmSoM 产品介绍
 

@@ -8,6 +8,8 @@ sidebar_position: 1
 slug: /
 ---
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
 <section class="armsom-hero">
   <div class="armsom-hero__copy">
     <p class="armsom-eyebrow">OPEN HARDWARE · EMBEDDED AI · ROCKCHIP</p>
@@ -125,7 +127,12 @@ A matching connector shape does not guarantee interchangeability. Check pin assi
 
 ## ArmSoM Platform Roadmap
 
-![ArmSoM Platform Roadmap](/img/armsom-platform-roadmap.png)  
+<figure className="armsom-roadmap">
+  <a href="/img/armsom-platform-roadmap.png" target="_blank" rel="noopener noreferrer">
+    <img src={useBaseUrl("/img/armsom-platform-roadmap.png")} alt="ArmSoM Platform Roadmap" width="1373" height="676" loading="lazy" />
+  </a>
+  <figcaption><a href="/img/armsom-platform-roadmap.png" target="_blank" rel="noopener noreferrer">View full-resolution roadmap ↗</a></figcaption>
+</figure>
 
 ## ArmSoM Product Overview  
 
