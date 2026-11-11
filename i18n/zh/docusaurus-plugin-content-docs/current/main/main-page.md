@@ -10,6 +10,8 @@ slug: /
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+<div className="armsom-design-preview" data-page="home" />
+
 <section class="armsom-hero">
   <div class="armsom-hero__copy">
     <p class="armsom-eyebrow">开源硬件 · 嵌入式 AI · ROCKCHIP</p>
@@ -18,8 +20,10 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
     <div class="armsom-hero__actions"><a class="armsom-button armsom-button--primary" href="#选择适合的-armsom-平台">选择开发平台 <span>→</span></a><a class="armsom-button armsom-button--secondary" href="./getting-start/cloud-disk">开始上手</a></div>
     <div class="armsom-proof"><span><strong>6 TOPS</strong> 边缘 AI</span><span><strong>8K</strong> 多媒体</span><span><strong>开放</strong> 硬件资料</span></div>
   </div>
-  <div class="armsom-hero__visual"><img src="/img/banana.jpg" alt="ArmSoM 开源硬件平台" /></div>
+  <div class="armsom-hero__visual"><img src={useBaseUrl("/img/banana.jpg")} alt="ArmSoM 开源硬件平台" /></div>
 </section>
+
+<nav className="preview-resources" aria-label="常用资源"><a href="/zh/getting-start/cloud-disk"><strong>系统镜像 <span>↗</span></strong><small>下载与开始使用</small></a><a href="/zh/getting-start/flash-img"><strong>烧录指南 <span>↗</span></strong><small>一步步完成首次启动</small></a><a href="/zh/armsom-faqs"><strong>技术支持 <span>↗</span></strong><small>常见问题与解答</small></a></nav>
 
 
 ## 选择适合的 ArmSoM 平台

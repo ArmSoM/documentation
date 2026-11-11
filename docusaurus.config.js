@@ -91,7 +91,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/armsom-docs-social-v2.png',
       docs: {
-        sidebar: {autoCollapseCategories: true},
+        sidebar: {autoCollapseCategories: false, hideable: true},
       },
       navbar: {
         title: '',

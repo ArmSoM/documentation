@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 
 # LM7 产品简介
 
+<div className="armsom-design-preview" data-page="lm7" />
+
 让我们在 5 分钟内了解 LM7。
+
+<section className="preview-product"><div className="preview-product__visual"><img src={require('@site/static/img/lm/lm7.png').default} alt="ArmSoM-lm7" width="636" style={{display: 'block', width: '636px', maxWidth: '100%', height: 'auto', margin: '1.25rem auto'}} /><div className="armsom-image-caption">ArmSoM-lm7</div></div><div className="preview-product__facts"><span className="preview-kicker">LGA SYSTEM ON MODULE</span><h2>Rockchip RK3588</h2><p>从核心计算，到定制产品。</p><dl><div><dt>CPU</dt><dd>8 核</dd></div><div><dt>NPU</dt><dd>6 TOPS</dd></div><div><dt>LGA</dt><dd>506 PIN</dd></div><div><dt>PCB</dt><dd>45 × 50 mm</dd></div></dl><a className="armsom-button armsom-button--primary" href="#doc-section-4">获取开发资料 ↗</a><a className="preview-text-link" href="#doc-section-2">查看使用手册 →</a></div></section>
 
 <nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">简介</a><a href="#doc-section-2">使用手册</a><a href="#doc-section-3">硬件信息</a><a href="#doc-section-4">开发资料</a><a href="#doc-section-5">产品证书</a><a href="#supply-statement">供货声明</a><a href="#doc-section-6">样品购买</a></nav>
 
@@ -22,9 +26,9 @@ toc_max_heading_level: 4
 
 ArmSoM-LM7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，采用了LGA封装，传输能力和稳定性更强。拥有丰富的接口，支持多硬盘、千兆网、WiFi6、5G/4G扩展和多种视频输入输出。支持多种操作系统；提供底板参考设计资料，用户可自主深度化定制。可适用于ARM PC、边缘计算、云服务器、人工智能、云计算、虚拟/增强现实、区块链、智能NVR等领域
 
-<img src={require('@site/static/img/lm/lm7.png').default} alt="ArmSoM-lm7" width="636" style={{display: 'block', width: '636px', maxWidth: '100%', height: 'auto', margin: '1.25rem auto'}} />
 
-<div className="armsom-image-caption">ArmSoM-lm7</div>
+
+
 
 
 :::tip Rockchip RK3588

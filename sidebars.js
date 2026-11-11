@@ -22,7 +22,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Community & Support',
-      collapsed: true,
+      collapsed: false,
       items: [
         {type: 'link', label: 'Official Website', href: 'https://www.armsom.org/'},
         {type: 'link', label: 'Blog', href: 'https://blog.armsom.org/'},

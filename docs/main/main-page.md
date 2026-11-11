@@ -10,6 +10,8 @@ slug: /
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+<div className="armsom-design-preview" data-page="home" />
+
 <section class="armsom-hero">
   <div class="armsom-hero__copy">
     <p class="armsom-eyebrow">OPEN HARDWARE · EMBEDDED AI · ROCKCHIP</p>
@@ -21,8 +23,10 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
     </div>
     <div class="armsom-proof"><span><strong>6 TOPS</strong> edge AI</span><span><strong>8K</strong> multimedia</span><span><strong>Open</strong> hardware resources</span></div>
   </div>
-  <div class="armsom-hero__visual"><img src="/img/banana.jpg" alt="ArmSoM open-source hardware platforms" /></div>
+  <div class="armsom-hero__visual"><img src={useBaseUrl("/img/banana.jpg")} alt="ArmSoM open-source hardware platforms" /></div>
 </section>
+
+<nav className="preview-resources" aria-label="Quick resources"><a href="/getting-start/cloud-disk"><strong>System images <span>↗</span></strong><small>Download & get started</small></a><a href="/getting-start/flash-img"><strong>Flashing guide <span>↗</span></strong><small>Prepare your first boot</small></a><a href="/armsom-faqs"><strong>Technical support <span>↗</span></strong><small>Find answers to common questions</small></a></nav>
 
 
 ## Choose your platform

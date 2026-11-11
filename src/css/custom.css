@@ -536,3 +536,137 @@
 .markdown .armsom-roadmap > a { display: block; }
 .markdown .armsom-roadmap img { display: block; width: 100%; max-width: 100%; height: auto; max-height: none; margin: 0; border-radius: 8px; cursor: zoom-in; }
 .armsom-roadmap figcaption { margin-top: .65rem; text-align: right; font-size: .875rem; }
+
+/* Shared documentation design across both languages. */
+body:has(.theme-doc-markdown) { --ifm-color-primary:#087f8c; --ifm-heading-color:#16303e; --ifm-background-color:#fff; --ifm-background-surface-color:#fff; --ifm-color-emphasis-200:#e5eaee; --ifm-font-color-base:#364650; }
+body:has(.theme-doc-markdown) .navbar { box-shadow:none; border-bottom:1px solid var(--ifm-color-emphasis-200); }
+body:has(.theme-doc-markdown) .menu { padding:1.1rem .8rem; font-size:.9rem; }
+body:has(.theme-doc-markdown) .menu__link { border-radius:7px; padding:.55rem .8rem; }
+body:has(.theme-doc-markdown) .menu__link--active { background:#e8f5f5; color:#087582; }
+body:has(.theme-doc-markdown) .theme-doc-sidebar-container { background:#f9fbfc; }
+body:has(.theme-doc-markdown) .table-of-contents { font-size:.8rem; border-left:1px solid var(--ifm-color-emphasis-200); }
+body:has(.theme-doc-markdown) .markdown { line-height:1.85; font-size:15px; }
+body:has(.theme-doc-markdown) .markdown > h1 { font-size:clamp(2rem,3vw,2.8rem); letter-spacing:-.045em; margin-top:1.5rem; }
+body:has(.theme-doc-markdown) .markdown > h2 { font-size:1.65rem; letter-spacing:-.025em; padding-top:1.6rem; border-top:1px solid var(--ifm-color-emphasis-200); margin-top:3.5rem; }
+body:has(.theme-doc-markdown) .markdown > h3 { font-size:1.25rem; }
+body:has(.theme-doc-markdown) .markdown table:not(.gpio-table):not(.gpio_style table) { border-radius:10px; border:1px solid var(--ifm-color-emphasis-200); font-size:.88rem; }
+body:has(.theme-doc-markdown) .markdown table:not(.gpio-table):not(.gpio_style table) th { background:#f3f7f9; color:#263f4b; border-color:var(--ifm-color-emphasis-200); }
+body:has(.theme-doc-markdown) .markdown table:not(.gpio-table):not(.gpio_style table) td { border-color:var(--ifm-color-emphasis-200); }
+body:has(.theme-doc-markdown) .markdown .card { border-radius:12px; transition:border-color .2s; }
+body:has(.theme-doc-markdown) .markdown .card:hover { border-color:#36a4af; }
+body:has(.theme-doc-markdown) .armsom-hero { border:0; box-shadow:none; border-radius:0; background:transparent; margin-top:0; }
+body:has(.theme-doc-markdown) .armsom-hero__copy { padding:2.8rem 0 2rem; }
+body:has(.theme-doc-markdown) .armsom-hero h1 { font-size:clamp(2rem,3.5vw,3.4rem); line-height:1.16; max-width:22ch; letter-spacing:-.045em; }
+body:has(.theme-doc-markdown) .armsom-hero__lead { font-size:1.05rem; max-width:56ch; }
+body:has(.theme-doc-markdown) .armsom-button { border-radius:8px; font-size:.9rem; padding:.7rem 1.1rem; }
+body:has(.theme-doc-markdown) .armsom-hero__visual { border:1px solid var(--ifm-color-emphasis-200); border-radius:14px; overflow:hidden; }
+body:has(.theme-doc-markdown) .armsom-proof { border-top:1px solid var(--ifm-color-emphasis-200); padding-top:1.2rem; margin-top:1.8rem; }
+body:has(.theme-doc-markdown) .armsom-choice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+body:has(.theme-doc-markdown) .armsom-choice-card { box-shadow:none; min-height:230px; border-radius:12px; }
+body:has(.theme-doc-markdown) .armsom-choice-card:hover { transform:translateY(-2px); box-shadow:none; }
+body:has(.theme-doc-markdown) .armsom-paths { gap:.65rem; margin-bottom:2rem; }
+body:has(.theme-doc-markdown) .armsom-paths a { border:1px solid var(--ifm-color-emphasis-200); border-radius:10px; background:#f8fbfc; }
+.preview-resources { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border:1px solid var(--ifm-color-emphasis-200); border-radius:12px; margin:1.2rem 0 3rem; overflow:hidden; }
+.preview-resources a { padding:1.1rem; color:inherit; display:flex; flex-direction:column; border-right:1px solid var(--ifm-color-emphasis-200); text-decoration:none; }
+.preview-resources a:last-child { border:0; }.preview-resources a:hover { background:#eff8f9; }.preview-resources strong { display:flex; justify-content:space-between; gap:.5rem; }.preview-resources small { margin-top:.4rem; color:var(--ifm-color-emphasis-700); }
+.preview-product { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(220px,1fr); border:1px solid var(--ifm-color-emphasis-200); border-radius:16px; overflow:hidden; margin:1.7rem 0; }
+.preview-product__visual { display:flex; flex-direction:column; justify-content:center; background:#f1f9fa; padding:1rem; }.preview-product__visual img { width:100% !important; }.preview-product__visual .armsom-image-caption { margin:.3rem 0; font-size:.75rem; }
+.preview-product__facts { padding:1.6rem; }.preview-kicker { font-size:.65rem; font-weight:700; letter-spacing:.13em; color:#078392; }.preview-product__facts h2 { font-size:1.55rem; margin:.5rem 0 !important; }.preview-product__facts p { font-size:.85rem; color:var(--ifm-color-emphasis-700); }.preview-product dl { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.3rem 0; }.preview-product dt { font-size:.65rem; letter-spacing:.08em; color:var(--ifm-color-emphasis-700); }.preview-product dd { margin:0; font-size:1rem; font-weight:700; }.preview-text-link { display:block; margin-top:.8rem; font-size:.85rem; }
+body:has(.theme-doc-markdown) .armsom-doc-shortcuts { border-bottom:1px solid var(--ifm-color-emphasis-200); gap:.25rem; padding-bottom:.8rem; }
+body:has(.theme-doc-markdown) .armsom-doc-shortcuts a { border:0; font-size:.85rem; padding:.5rem .75rem; background:#f4f8fa; }
+body:has(.theme-doc-markdown) .armsom-product-gallery { border-radius:12px; overflow:hidden; }
+body:has(.theme-doc-markdown) .theme-admonition { box-shadow:none; border-radius:10px; }
+[data-theme='dark'] body:has(.theme-doc-markdown) { --ifm-heading-color:#e1eff5; --ifm-background-color:#10171d; --ifm-background-surface-color:#151f27; --ifm-font-color-base:#c0ced7; --ifm-color-emphasis-200:#293742; }
+[data-theme='dark'] body:has(.theme-doc-markdown) :is(.theme-doc-sidebar-container,.armsom-paths a,.armsom-doc-shortcuts a,.preview-product__visual) { background:#16242c; }
+[data-theme='dark'] body:has(.theme-doc-markdown) .markdown table:not(.gpio-table):not(.gpio_style table) th { background:#1a2c36; color:#d8e8ef; }
+[data-theme='dark'] body:has(.theme-doc-markdown) .menu__link--active { background:#173b40; color:#7ae0e4; }
+[data-theme='dark'] .preview-resources a:hover { background:#18343c; }
+@media(max-width:700px) { .preview-product { grid-template-columns:1fr; }.preview-product__visual img { max-width:636px !important; }.preview-resources { grid-template-columns:1fr; }.preview-resources a { border-right:0; border-bottom:1px solid var(--ifm-color-emphasis-200); } }
+@media(max-width:560px) { body:has(.theme-doc-markdown) .armsom-choice-grid { grid-template-columns:1fr; } }
+.preview-contact {position:fixed;right:20px;bottom:24px;z-index:99;}
+.preview-contact > summary {list-style:none;cursor:pointer;padding:12px 18px;border:1px solid var(--ifm-color-emphasis-200);border-radius:12px;background:var(--ifm-background-surface-color);color:var(--ifm-font-color-base);box-shadow:0 4px 20px #102c4012;font-size:14px;font-weight:600;}
+.preview-contact > summary::-webkit-details-marker {display:none;}
+.preview-contact > aside {position:absolute;right:0;bottom:calc(100% + 12px);}
+.preview-contact > aside > a,.preview-contact > aside > button {min-width:142px;width:auto;height:auto;border-radius:10px;}
+.preview-contact > aside > a span,.preview-contact > aside > button span {position:static;width:auto;height:auto;clip-path:none;overflow:visible;}
+.preview-contact > summary:focus-visible {outline:3px solid #087f8c;outline-offset:3px;}
+.markdown:has(.armsom-design-preview[data-page="home"]) > header h1 {font-size:1rem;font-weight:600;color:var(--ifm-color-emphasis-700);letter-spacing:0;margin:1rem 0 0;}
+.markdown:has(.armsom-design-preview[data-page="home"]) .armsom-hero__copy {padding-top:1.6rem;}
+
+/* Rounded reading surface for all documentation pages. */
+body:has(.theme-doc-markdown) { --preview-canvas:#f1f4f7; --preview-panel:#fff; --preview-edge:#dfe6ec; }
+body:has(.theme-doc-markdown) .main-wrapper { background:var(--preview-canvas); }
+body:has(.theme-doc-markdown) .theme-doc-sidebar-container { background:var(--preview-canvas); border-right:0; }
+body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { min-width:0; padding:24px 24px 40px 12px; }
+body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container {
+  width:100%; max-width:1440px; margin:0 auto; padding:36px 32px 40px !important;
+  background:var(--preview-panel); border:1px solid var(--preview-edge); border-radius:28px;
+  box-shadow:0 3px 14px rgba(24,48,65,.035); min-height:calc(100vh - 140px);
+}
+body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row { margin-left:0; margin-right:0; }
+body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row > .col { min-width:0; }
+body:has(.theme-doc-markdown) .theme-doc-breadcrumbs { margin-bottom:1.8rem; }
+body:has(.theme-doc-markdown) .menu__link--active { background:#fff; box-shadow:0 1px 4px #1830410a; border:1px solid #deebef; }
+body:has(.theme-doc-markdown) .menu__link:not(.menu__link--active) { border:1px solid transparent; }
+body:has(.theme-doc-markdown) .theme-doc-toc-desktop { padding-left:12px; }
+[data-theme='dark'] body:has(.theme-doc-markdown) { --preview-canvas:#0c1218; --preview-panel:#151e27; --preview-edge:#2b3845; }
+[data-theme='dark'] body:has(.theme-doc-markdown) .theme-doc-sidebar-container { background:var(--preview-canvas); }
+[data-theme='dark'] body:has(.theme-doc-markdown) .menu__link--active { background:#1b3039; border-color:#2b4953; }
+@media(min-width:997px) and (max-width:1250px) {
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { padding:28px 18px !important; }
+}
+@media(max-width:996px) {
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { padding:18px 16px 28px; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { padding:26px 22px 32px !important; border-radius:24px; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row > .col { padding:0; }
+}
+@media(max-width:560px) {
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { padding:12px 8px 20px; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { padding:20px 16px 28px !important; border-radius:18px; }
+ body:has(.theme-doc-markdown) .markdown > h1 { font-size:1.9rem; }
+}
+@media print {
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { padding:0; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { border:0; box-shadow:none; padding:0 !important; }
+}
+
+/* Give the rounded reading panel more room on desktop. */
+@media(min-width:997px) {
+ body:has(.theme-doc-markdown) { --doc-sidebar-width:248px; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { padding:16px 12px 28px 6px; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { max-width:none; padding:28px 22px 32px !important; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row > .col:first-child { --ifm-col-width:78%; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row > .col:last-child:not(:first-child) { --ifm-col-width:22%; }
+}
+@media(max-width:996px) {
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { padding:12px 8px 20px; }
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { padding:24px 18px 28px !important; }
+}/* Independent sidebar sections, with a clear current-page indicator. */
+body:has(.theme-doc-markdown) .menu__list .menu__list {margin:.25rem 0 .65rem .85rem;padding-left:.65rem;border-left:1px solid var(--preview-edge);}
+body:has(.theme-doc-markdown) .menu__link {min-height:38px;transition:background-color .15s,color .15s;}
+body:has(.theme-doc-markdown) .menu__link:hover {background:#e6edf1;color:#116f7b;}
+body:has(.theme-doc-markdown) .menu__link:focus-visible,body:has(.theme-doc-markdown) .menu__caret:focus-visible {outline:2px solid #118b9b;outline-offset:2px;}
+body:has(.theme-doc-markdown) .menu__link--sublist.menu__link--active {background:transparent;box-shadow:none;border-color:transparent;font-weight:650;}
+body:has(.theme-doc-markdown) .menu__link--active:not(.menu__link--sublist) {background:#fff;color:#087582;box-shadow:inset 3px 0 #1598a7;font-weight:700;}
+body:has(.theme-doc-markdown) .menu__link--sublist::after {background-size:1.05rem;opacity:.65;}
+body:has(.theme-doc-markdown) .menu {scrollbar-width:thin;scrollbar-color:#c5d2db transparent;overscroll-behavior:contain;scroll-padding-block:24px;}
+[data-theme='dark'] body:has(.theme-doc-markdown) .menu__link:hover {background:#20313d;color:#83dfe6;}
+[data-theme='dark'] body:has(.theme-doc-markdown) .menu__link--active:not(.menu__link--sublist) {background:#1b3039;color:#83dfe6;}
+@media(prefers-reduced-motion:reduce) {body:has(.theme-doc-markdown) .menu__link {transition:none;}}
+
+/* Shared reading details; keep pinout colors and original image dimensions. */
+body:has(.theme-doc-markdown) .theme-doc-markdown > header h1 {font-size:clamp(1.9rem,3vw,2.8rem);letter-spacing:-.035em;line-height:1.25;overflow-wrap:anywhere;}
+body:has(.theme-doc-markdown) .theme-doc-markdown:has(.armsom-design-preview[data-page="home"]) > header h1 {font-size:1rem;letter-spacing:0;}
+body:has(.theme-doc-markdown) .markdown :is(pre,details,.alert,blockquote) {border-radius:12px;}
+body:has(.theme-doc-markdown) .markdown pre {max-width:100%;overflow-x:auto;}
+body:has(.theme-doc-markdown) .pagination-nav__link {border-radius:12px;background:var(--preview-panel);border-color:var(--preview-edge);}
+body:has(.theme-doc-markdown) .pagination-nav__link:hover {border-color:var(--ifm-link-color);}
+body:has(.theme-doc-markdown) .theme-doc-toc-desktop a {line-height:1.6;}
+body:has(.theme-doc-markdown) .markdown :is(details,blockquote,.alert) {overflow-wrap:anywhere;}
+@media(min-width:997px) {
+ body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row > .col:only-child {--ifm-col-width:100%;max-width:100%;}
+}
+@media(max-width:560px) {
+ body:has(.theme-doc-markdown) .theme-doc-markdown > header h1 {font-size:1.9rem;}
+ body:has(.theme-doc-markdown) .theme-doc-markdown:has(.armsom-design-preview[data-page="home"]) > header h1 {font-size:1rem;}
+}

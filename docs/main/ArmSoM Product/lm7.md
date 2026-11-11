@@ -12,7 +12,11 @@ toc_max_heading_level: 4
 
 # Product Introduction: LM7
 
+<div className="armsom-design-preview" data-page="lm7" />
+
 Let's get to know LM7 in 5 minutes.
+
+<section className="preview-product"><div className="preview-product__visual"><img src={require('@site/static/img/lm/lm7.png').default} alt="ArmSoM-lm7" width="636" style={{display: 'block', width: '636px', maxWidth: '100%', height: 'auto', margin: '1.25rem auto'}} /><div className="armsom-image-caption">ArmSoM-lm7</div></div><div className="preview-product__facts"><span className="preview-kicker">LGA SYSTEM ON MODULE</span><h2>Rockchip RK3588</h2><p>Core computing. Your next product.</p><dl><div><dt>CPU</dt><dd>8 cores</dd></div><div><dt>NPU</dt><dd>6 TOPS</dd></div><div><dt>LGA</dt><dd>506 PIN</dd></div><div><dt>PCB</dt><dd>45 × 50 mm</dd></div></dl><a className="armsom-button armsom-button--primary" href="#doc-section-4">Explore resources ↗</a><a className="preview-text-link" href="#doc-section-2">Read the user manual →</a></div></section>
 
 <nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Overview</a><a href="#doc-section-2">Getting started</a><a href="#doc-section-3">Hardware</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Product Certificate</a><a href="#supply-statement">Supply Statement</a><a href="#doc-section-6">Purchase Samples</a></nav>
 
@@ -24,9 +28,9 @@ The ArmSoM-LM7 adopts Rockchip's latest flagship RK3588 which is eight-core 64-b
 
 Supports 8K video encoding and decoding,with LGA packaging for stronger transmission capability and stability. 
 
-<img src={require('@site/static/img/lm/lm7.png').default} alt="ArmSoM-lm7" width="636" style={{display: 'block', width: '636px', maxWidth: '100%', height: 'auto', margin: '1.25rem auto'}} />
 
-<div className="armsom-image-caption">ArmSoM-lm7</div>
+
+
 
 
 We can provide baseboard reference design materials for users to customize in-depth independently. 
