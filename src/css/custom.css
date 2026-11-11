@@ -540,7 +540,7 @@
 /* Shared documentation design across both languages. */
 body:has(.theme-doc-markdown) { --ifm-color-primary:#087f8c; --ifm-heading-color:#16303e; --ifm-background-color:#fff; --ifm-background-surface-color:#fff; --ifm-color-emphasis-200:#e5eaee; --ifm-font-color-base:#364650; }
 body:has(.theme-doc-markdown) .navbar { box-shadow:none; border-bottom:1px solid var(--ifm-color-emphasis-200); }
-body:has(.theme-doc-markdown) .menu { padding:1.1rem .8rem; font-size:.9rem; }
+body:has(.theme-doc-markdown) .menu { padding:1.1rem .8rem; font-size:.95rem; }
 body:has(.theme-doc-markdown) .menu__link { border-radius:7px; padding:.55rem .8rem; }
 body:has(.theme-doc-markdown) .menu__link--active { background:#e8f5f5; color:#087582; }
 body:has(.theme-doc-markdown) .theme-doc-sidebar-container { background:#f9fbfc; }
@@ -632,7 +632,7 @@ body:has(.theme-doc-markdown) .theme-doc-toc-desktop { padding-left:12px; }
 
 /* Give the rounded reading panel more room on desktop. */
 @media(min-width:997px) {
- body:has(.theme-doc-markdown) { --doc-sidebar-width:248px; }
+ body:has(.theme-doc-markdown) { --doc-sidebar-width:272px; }
  body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) { padding:16px 12px 28px 6px; }
  body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { max-width:none; padding:28px 22px 32px !important; }
  body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container > .row > .col:first-child { --ifm-col-width:78%; }
@@ -643,7 +643,7 @@ body:has(.theme-doc-markdown) .theme-doc-toc-desktop { padding-left:12px; }
  body:has(.theme-doc-markdown) main:has(.theme-doc-markdown) > .container { padding:24px 18px 28px !important; }
 }/* Independent sidebar sections, with a clear current-page indicator. */
 body:has(.theme-doc-markdown) .menu__list .menu__list {margin:.25rem 0 .65rem .85rem;padding-left:.65rem;border-left:1px solid var(--preview-edge);}
-body:has(.theme-doc-markdown) .menu__link {min-height:38px;transition:background-color .15s,color .15s;}
+body:has(.theme-doc-markdown) .menu__link {min-height:40px;transition:background-color .15s,color .15s;}
 body:has(.theme-doc-markdown) .menu__link:hover {background:#e6edf1;color:#116f7b;}
 body:has(.theme-doc-markdown) .menu__link:focus-visible,body:has(.theme-doc-markdown) .menu__caret:focus-visible {outline:2px solid #118b9b;outline-offset:2px;}
 body:has(.theme-doc-markdown) .menu__link--sublist.menu__link--active {background:transparent;box-shadow:none;border-color:transparent;font-weight:650;}
