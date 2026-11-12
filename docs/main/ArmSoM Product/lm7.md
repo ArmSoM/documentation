@@ -105,7 +105,7 @@ The ArmSoM-LM7 has an extremely small size, about half the size of a credit card
 
 ### Hardware Spec
 
-The LM7 schematic is named `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE 1V0). Its LGA connector signals are listed on PDF pages 21–22. The interface capabilities below refer to module signals and require a suitable carrier board; multiplexed functions sharing the same pins or PHY are not additional independent ports. Do not equate these capabilities with the connectors fitted to the W3 carrier.
+The interface information on this page was checked against the internal ArmSoM-LM7 V1.1 core-module schematic dated 2023-12-26. This schematic has not been publicly released. The interface capabilities below refer to module signals and require a suitable carrier board; multiplexed functions sharing the same pins or PHY are not additional independent ports. Do not equate these capabilities with the connectors fitted to the W3 carrier.
 
 <details>
     <summary>
@@ -223,12 +223,12 @@ The LM7 schematic is named `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE 1V0). Its LGA c
         <tr>
             <th>SPI</th>
             <th>≤5</th>
-            <th colspan="2"><li>Each controller supports two chip select outputs</li><li>Support serial master, serial slave modes, software configurable</li></th>
+            <th colspan="2"><li>The SoC has up to 5 SPI controllers; SPI2 is reserved for onboard power management. Other controllers require suitable pin multiplexing and carrier-board connections.</li><li>Each controller supports two chip select outputs</li><li>Support serial master, serial slave modes, software configurable</li></th>
         </tr>
         <tr>
             <th>I2C</th>
             <th>≤9</th>
-            <th colspan="2"><li>Support 7-bit and 10-bit address modes</li><li>Standard mode data rate up to 100k bits/s, up to 400k bits/s in fast mode</li></th>
+            <th colspan="2"><li>The SoC has up to 9 I2C controllers; I2C0 and I2C1 are reserved for onboard power management. Other controllers require suitable pin multiplexing and carrier-board connections.</li><li>Support 7-bit and 10-bit address modes</li><li>Standard mode data rate up to 100k bits/s, up to 400k bits/s in fast mode</li></th>
         </tr>
         <tr>
             <th>UART</th>
@@ -244,12 +244,12 @@ The LM7 schematic is named `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE 1V0). Its LGA c
             <th rowspan="3">Others interface</th>
             <th>GPIO</th>
             <th>GPIOs</th>
-            <th colspan="2"><li>All GPIOs can be used to generate interrupts</li><li>Support level triggered and edge triggered interrupts</li><li>Support configurable pull-up direction (weak pull-up and weak pull-down)</li></th>
+            <th colspan="2"><li>GPIO voltage depends on the I/O power domain. VCCIO1 and VCCIO3 use 1.8V in this design; do not assume all GPIOs are 3.3V. Match the carrier-board logic voltage to each pin domain and use level shifting where needed.</li><li>All GPIOs can be used to generate interrupts</li><li>Support level triggered and edge triggered interrupts</li><li>Support configurable pull-up direction (weak pull-up and weak pull-down)</li></th>
         </tr>
         <tr>
             <th>ADC</th>
             <th>≤7</th>
-            <th colspan="2"><li>Support 7 12bit single-ended input SAR-ADCs, sampling rate up to 1MS/s</li></th>
+            <th colspan="2"><li>Support 7 12bit single-ended input SAR-ADCs, sampling rate up to 1MS/s</li><li>SARADC_IN0 is used for boot-mode selection; SARADC_IN1 is labeled KEY/RECOVERY. Preserve their boot/recovery functions when designing external circuits.</li></th>
         </tr>
         <tr>
             <th>PWM</th>
@@ -264,7 +264,7 @@ The LM7 schematic is named `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE 1V0). Its LGA c
 
 The interface quantities in the table are the maximum theoretical values for the hardware design or CPU. 
 
-Most function pins have multiplexed relationships. For easy configuration, please refer to the **[Pin Function Table](./)** for the LM7.  
+Most function pins have multiplexed relationships. For easy configuration, please refer to the **[Pin Function Table](#lm7-hardware-resources)** for the LM7.
 
 :::
 
@@ -272,17 +272,17 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 When designing a carrier board, reserve the following RK3588 buses for the LM7 module's onboard power-management circuitry:
 
-| Bus | Onboard use | Schematic reference |
-| --- | --- | --- |
-| I2C0 (M2) | Controls the CPU big-core power regulators (RK860-2 / RK860-3). | Pages 8 and 18 |
-| I2C1 (M2) | Controls the NPU power regulator (RK860-2). | Pages 8 and 18 |
-| SPI2 (M2) | Connects to the RK806-1 PMIC via the PMIC_SPI signals. | Pages 8 and 17 |
+| Bus | Onboard use |
+| --- | --- |
+| I2C0 (M2) | Controls the CPU big-core power regulators (RK860-2 / RK860-3). |
+| I2C1 (M2) | Controls the NPU power regulator (RK860-2). |
+| SPI2 (M2) | Connects to the RK806-1 PMIC via the PMIC_SPI signals. |
 
 These buses are reserved for module operation; do not reassign their controllers or pin multiplexing for carrier-board peripherals. Selecting another mux group (M0/M1/M2, etc.) does not create an independent controller.
 
 Other UART, SPI and I2C interfaces must be selected according to the LM7 LGA pin definitions, carrier-board connections and software configuration. A controller that is not reserved onboard is not automatically available on every mux group, and multiplexed interfaces cannot necessarily operate simultaneously. UARTs may also be assigned as a bootloader or Linux debug console.
 
-**Reference:** `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE V1.0, the LM7 core-module schematic): page 8 for SoC connections, pages 17–18 for power management, and pages 21–22 for LGA signals. Refer to the schematic matching your module revision in the hardware resources below.
+**Documentation note:** The information above was checked against the ArmSoM-LM7 V1.1 core-module schematic dated 2023-12-26 (`ArmSoM-LM7_1V1_20231226 sch.pdf`). This is an internal core-module schematic, not a W3 carrier-board schematic. It has not been publicly released and is not included in the public website or Google Drive downloads. For specific pin assignments or carrier-board design questions, contact [ArmSoM technical support](mailto:fae@armsom.org).
 
 ### Development Kit (W3) 
 

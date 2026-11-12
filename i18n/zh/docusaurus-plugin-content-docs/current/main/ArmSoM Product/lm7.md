@@ -98,7 +98,7 @@ ArmSoM-LM7拥有极小尺寸，约为信用卡的一半大小。
 
 ### 硬件规格
 
-LM7 对应的核心板原理图文件名为 `ARMSOM-W3-CORE_1V0_SCH.pdf`（W3 CORE 1V0），LGA 连接器信号见 PDF 第 21–22 页。下表描述核心板信号能力，需要载板配合实现；共享引脚或 PHY 的复用功能不是额外的独立接口，也不等同于 W3 载板实际安装的接口数量。
+本页接口说明依据 ArmSoM-LM7 V1.1（2023-12-26）核心板内部原理图核查，该原理图尚未公开。下表描述核心板信号能力，需要载板配合实现；共享引脚或 PHY 的复用功能不是额外的独立接口，也不等同于 W3 载板实际安装的接口数量。
 
 
 <details>
@@ -215,12 +215,12 @@ LM7 对应的核心板原理图文件名为 `ARMSOM-W3-CORE_1V0_SCH.pdf`（W3 CO
         <tr>
             <th>SPI</th>
             <th>≤5</th>
-            <th colspan="2"><li>每个控制器支持两路片选输出</li><li>支持串行主、串行从模式，软件可配置</li></th>
+            <th colspan="2"><li>SoC 最多提供 5 路 SPI 控制器，其中 SPI2 保留给板载电源管理；其余控制器需结合引脚复用和载板连接使用。</li><li>每个控制器支持两路片选输出</li><li>支持串行主、串行从模式，软件可配置</li></th>
         </tr>
         <tr>
             <th>I2C</th>
             <th>≤9</th>
-            <th colspan="2"><li>支持 7 位和 10 位地址模式</li><li>标准模式数据传输速率可达100k bits/s，在快速模式下高达400k bits/s；</li></th>
+            <th colspan="2"><li>SoC 最多提供 9 路 I2C 控制器，其中 I2C0、I2C1 保留给板载电源管理；其余控制器需结合引脚复用和载板连接使用。</li><li>支持 7 位和 10 位地址模式</li><li>标准模式数据传输速率可达100k bits/s，在快速模式下高达400k bits/s；</li></th>
         </tr>
         <tr>
             <th>UART</th>
@@ -236,12 +236,12 @@ LM7 对应的核心板原理图文件名为 `ARMSOM-W3-CORE_1V0_SCH.pdf`（W3 CO
             <th rowspan="3">其他接口</th>
             <th>GPIO</th>
             <th>GPIOs</th>
-            <th colspan="2"><li>所有 GPIO 均可用于产生中断</li><li>支持电平触发和边沿触发中断</li><li>支持可配置的上拉方向（弱上拉和弱下拉）</li></th>
+            <th colspan="2"><li>GPIO 电平取决于所属 I/O 电源域；本设计中的 VCCIO1、VCCIO3 使用 1.8V，不能将所有 GPIO 视为 3.3V。载板需按各引脚电压域匹配逻辑电平，必要时使用电平转换。</li><li>所有 GPIO 均可用于产生中断</li><li>支持电平触发和边沿触发中断</li><li>支持可配置的上拉方向（弱上拉和弱下拉）</li></th>
         </tr>
         <tr>
             <th>ADC</th>
             <th>≤7</th>
-            <th colspan="2"><li>支持 7 路 12bit 单端输入 SAR-ADC，采样率高达 1MS/s</li></th>
+            <th colspan="2"><li>支持 7 路 12bit 单端输入 SAR-ADC，采样率高达 1MS/s</li><li>SARADC_IN0 用于启动模式选择，SARADC_IN1 标为 KEY/RECOVERY；设计外部电路时需保留其启动/恢复功能。</li></th>
         </tr>
         <tr>
             <th>PWM</th>
@@ -262,17 +262,17 @@ LM7 对应的核心板原理图文件名为 `ARMSOM-W3-CORE_1V0_SCH.pdf`（W3 CO
 
 设计载板时，以下 RK3588 总线需保留给 LM7 核心板上的电源管理电路：
 
-| 总线 | 板载用途 | 原理图位置 |
-| --- | --- | --- |
-| I2C0（M2） | 控制 CPU 大核供电芯片（RK860-2 / RK860-3）。 | 第 8、18 页 |
-| I2C1（M2） | 控制 NPU 供电芯片（RK860-2）。 | 第 8、18 页 |
-| SPI2（M2） | 通过 PMIC_SPI 信号连接 RK806-1 PMIC。 | 第 8、17 页 |
+| 总线 | 板载用途 |
+| --- | --- |
+| I2C0（M2） | 控制 CPU 大核供电芯片（RK860-2 / RK860-3）。 |
+| I2C1（M2） | 控制 NPU 供电芯片（RK860-2）。 |
+| SPI2（M2） | 通过 PMIC_SPI 信号连接 RK806-1 PMIC。 |
 
 上述总线用于核心板正常运行，请勿将其控制器或引脚复用重新分配给载板外设。切换到其他复用组（M0/M1/M2 等）并不会产生一个独立的总线控制器。
 
 其他 UART、SPI 和 I2C 接口需结合 LM7 的 LGA 引脚定义、载板连接和软件配置选择。控制器未被板载占用，不代表每组复用引脚均已引出，也不代表所有复用接口可以同时使用。UART 还可能被配置为 Bootloader 或 Linux 调试控制台。
 
-**核查依据：** `ARMSOM-W3-CORE_1V0_SCH.pdf`（W3 CORE V1.0，即 LM7 核心板原理图）：第 8 页为 SoC 连接，第 17–18 页为电源管理，第 21–22 页为 LGA 信号。请在下方硬件资料中查阅与实际核心板版本对应的原理图。
+**资料说明：** 上述信息依据 ArmSoM-LM7 V1.1（2023-12-26）核心板原理图 `ArmSoM-LM7_1V1_20231226 sch.pdf` 核查。该文件是核心板内部原理图，并非 W3 载板原理图，尚未公开，不在网站或 Google Drive 的公开下载资料中。如需确认具体引脚或载板设计，请联系 [ArmSoM 技术支持](mailto:fae@armsom.org)。
 
 <span id="doc-section-4" className="armsom-section-anchor" />
 
