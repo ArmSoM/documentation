@@ -268,6 +268,22 @@ Most function pins have multiplexed relationships. For easy configuration, pleas
 
 :::
 
+### Onboard bus reservations {#onboard-bus-reservations}
+
+When designing a carrier board, reserve the following RK3588 buses for the LM7 module's onboard power-management circuitry:
+
+| Bus | Onboard use | Schematic reference |
+| --- | --- | --- |
+| I2C0 (M2) | Controls the CPU big-core power regulators (RK860-2 / RK860-3). | Pages 8 and 18 |
+| I2C1 (M2) | Controls the NPU power regulator (RK860-2). | Pages 8 and 18 |
+| SPI2 (M2) | Connects to the RK806-1 PMIC via the PMIC_SPI signals. | Pages 8 and 17 |
+
+These buses are reserved for module operation; do not reassign their controllers or pin multiplexing for carrier-board peripherals. Selecting another mux group (M0/M1/M2, etc.) does not create an independent controller.
+
+Other UART, SPI and I2C interfaces must be selected according to the LM7 LGA pin definitions, carrier-board connections and software configuration. A controller that is not reserved onboard is not automatically available on every mux group, and multiplexed interfaces cannot necessarily operate simultaneously. UARTs may also be assigned as a bootloader or Linux debug console.
+
+**Reference:** `ARMSOM-W3-CORE_1V0_SCH.pdf` (W3 CORE V1.0, the LM7 core-module schematic): page 8 for SoC connections, pages 17–18 for power management, and pages 21–22 for LGA signals. Refer to the schematic matching your module revision in the hardware resources below.
+
 ### Development Kit (W3) 
 
 [ArmSoM-LM7 Development Kit (ArmSoM-W3)](./armsom-w3)
