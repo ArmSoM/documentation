@@ -1224,6 +1224,9 @@ Format Video Capture Multiplanar:
 
 ##### 安装 gst-launch-1.0 {#cm5-io-安装-gst-launch-10}
 - 检查系统是否集成 gst-launch-1.0，如果没有，需要先安装
+
+更新索引前，请按[更新 APT 软件源](/getting-start/apt-update#fresh-image-apt)检查系统时间和软件源。
+
 ```bash
 root@armsom:/# apt-get update
 root@armsom:/# apt-get install gstreamer1.0*

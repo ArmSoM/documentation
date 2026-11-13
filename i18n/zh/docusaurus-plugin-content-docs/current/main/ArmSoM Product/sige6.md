@@ -1005,6 +1005,9 @@ Pairing successful    #当此处显示配对成功时，我们再退出（可能
 
 
 3. 如果我们需要连接的蓝牙设备是手机，需要下载启用音频服务，（如果你需要连接的蓝牙设备是耳机/蓝牙音响，可以不需要执行下面的操作）
+
+更新索引前，请按[更新 APT 软件源](/getting-start/apt-update#fresh-image-apt)检查系统时间和软件源。
+
 ```bash
 root@localhost:/# apt update
 root@localhost:/# apt -y install pulseaudio-module-bluetooth

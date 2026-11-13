@@ -1019,6 +1019,8 @@ armsom@armsom:~$ v4l2-ctl -d /dev/video31 --get-fmt-video
 
 部分镜像需手动安装 GStreamer，若缺少 `gst-launch-1.0`，执行：
 
+更新索引前，请按[更新 APT 软件源](/getting-start/apt-update#fresh-image-apt)检查系统时间和软件源。
+
 ```bash
 armsom@armsom:~$ sudo apt-get update
 armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x

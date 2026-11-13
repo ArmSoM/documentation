@@ -22,6 +22,8 @@ PC系统默认使用Win11，在使用RockChip的烧录工具时需要使用到Wi
 
 ## 2.1 安装SDK依赖的软件包
 安装SDK构建所需要的软件包，整体复制下面内容到终端中安装：
+更新索引前，请按[更新 APT 软件源](/getting-start/apt-update#fresh-image-apt)检查系统时间和软件源。
+
 ```
 sudo apt-get update && sudo apt-get install git ssh make gcc libssl-dev \
 liblz4-tool expect expect-dev g++ patchelf chrpath gawk texinfo chrpath \

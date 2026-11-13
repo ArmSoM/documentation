@@ -22,6 +22,8 @@ Recommended hardware configuration: 64-bit system, hard disk space larger than 8
 
 ## 2.1 Install SDK Dependent Software Packages
 Install the software packages required for SDK build. Copy the following content entirely into the terminal for installation:
+Before refreshing the index, check the system clock and repositories in [Update the APT package source list](/getting-start/apt-update#fresh-image-apt).
+
 ```
 sudo apt-get update && sudo apt-get install git ssh make gcc libssl-dev \
 liblz4-tool expect expect-dev g++ patchelf chrpath gawk texinfo chrpath \

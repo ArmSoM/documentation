@@ -1009,6 +1009,9 @@ Pairing successful    #When it shows that the pairing is successful here, we can
 
 
 3. If the Bluetooth device we need to connect is a phone, you'll need to download and enable the audio service. (If the Bluetooth device you want to connect is a headset/Bluetooth speaker, you don’t need to do the following steps.)
+
+Before refreshing the index, check the system clock and repositories in [Update the APT package source list](/getting-start/apt-update#fresh-image-apt).
+
 ```bash
 root@localhost:/# apt update
 root@localhost:/# apt -y install pulseaudio-module-bluetooth

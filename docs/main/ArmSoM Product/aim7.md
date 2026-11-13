@@ -1729,6 +1729,8 @@ armsom@armsom:~$ v4l2-ctl -d /dev/videoX --list-formats-ext
 
 Some image versions require GStreamer to be installed manually. If `gst-launch-1.0 --version` reports that the command is missing, run:
 
+Before refreshing the index, check the system clock and repositories in [Update the APT package source list](/getting-start/apt-update#fresh-image-apt).
+
 ```bash
 armsom@armsom:~$ sudo apt-get update
 armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x

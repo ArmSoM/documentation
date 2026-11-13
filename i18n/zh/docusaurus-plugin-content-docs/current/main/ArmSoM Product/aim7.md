@@ -1691,6 +1691,8 @@ armsom@armsom:~$ v4l2-ctl -d /dev/videoX --list-formats-ext
 
 部分版本镜像需要手动安装 GStreamer。若 `gst-launch-1.0 --version` 提示命令不存在，执行：
 
+更新索引前，请按[更新 APT 软件源](/getting-start/apt-update#fresh-image-apt)检查系统时间和软件源。
+
 ```bash
 armsom@armsom:~$ sudo apt-get update
 armsom@armsom:~$ sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-x
