@@ -1,7 +1,7 @@
 --- 
 keywords: [armsom, armsom-aim, som, maker kit, Rockchip]
 sidebar_label: "AIM Family Getting Started"
-sidebar_position: 15
+sidebar_position: 18
 slug: /aim-family-started
 ---
 description: "Official ArmSoM technical documentation for AIM Family User Manual. Find product specifications, configuration steps, usage guidance, and embedded development references."

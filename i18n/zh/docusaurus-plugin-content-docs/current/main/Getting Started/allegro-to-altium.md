@@ -3,7 +3,7 @@ description: "指导客户将 ArmSoM Allegro PCB 文件导入 Altium Designer，
 keywords: [ArmSoM, Allegro, Altium Designer, PCB导入, BRD, ALG]
 image: /img/armsom-social-card.png
 sidebar_label: "Allegro 导入 Altium"
-sidebar_position: 16
+sidebar_position: 19
 slug: /getting-start/allegro-to-altium
 ---
 

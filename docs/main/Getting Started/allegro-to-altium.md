@@ -3,7 +3,7 @@ description: "Import ArmSoM Allegro PCB files into Altium Designer: BRD prerequi
 keywords: [ArmSoM, Allegro, Altium Designer, PCB, BRD, ALG]
 image: /img/armsom-social-card.png
 sidebar_label: "Allegro to Altium"
-sidebar_position: 16
+sidebar_position: 19
 slug: /getting-start/allegro-to-altium
 ---
 
