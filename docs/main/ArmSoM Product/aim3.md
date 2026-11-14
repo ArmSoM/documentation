@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM AIM3 | RK3568B2 Compute Module Documentation"
 image: /img/armsom-social-card.png
 description: ArmSoM-AIM3
 keywords: [armsom, armsom-aim3, RK3568  Development Boards, RK3568 Core borad, rockchip]

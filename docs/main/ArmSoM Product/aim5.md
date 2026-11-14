@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM AIM5 | RK3576 Compute Module Documentation"
 description: ArmSoM-AIM5 adopts Rockchip RK3576 second-generation 8nm high-performance AIOT platform processor
 keywords: [armsom, armsom-aim5, RK3576  Development Boards, RK3576 Core borad, rockchip]
 sidebar_label: "AIM5"

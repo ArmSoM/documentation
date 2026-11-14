@@ -1,6 +1,7 @@
 ---
-description: ArmSoM-Sige5 采用Rockchip RK3576第二代8nm高性能AIOT平台，6 TOPS算力NPU，最大可配16GB大内存。支持最高8K视频解码与4K视频编码，拥有丰富的接口，支持双千兆网口，WIFI6/BT5。
-keywords: [armsom, armsom-sige5, RK3576开发板, rockchip, rk3576 SBC]
+title: "ArmSoM Sige5｜RK3576 单板计算机文档"
+description: "ArmSoM Sige5 是一款基于 RK3576 的单板计算机，面向边缘 AI 与嵌入式 Linux 开发，提供八核 CPU、最高 6 TOPS NPU、双千兆网口、Wi-Fi 6 与丰富扩展接口。"
+keywords: [ArmSoM Sige5, RK3576开发板, 边缘AI计算机, 单板计算机, 嵌入式Linux]
 sidebar_label: "Sige5"
 sidebar_position: 2
 slug: /armsom-sige5

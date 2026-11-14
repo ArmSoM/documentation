@@ -1,6 +1,7 @@
 ---
-description: ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存，接口完全兼容 Jetson Nano。
-keywords: [armsom, armsom-AIM7, RK3588核心板, rockchip]
+title: "ArmSoM AIM7｜RK3588 核心板文档"
+description: "ArmSoM AIM7 是一款基于 RK3588 的核心板，面向边缘 AI 与多媒体开发，提供八核 CPU、最高 6 TOPS NPU 算力、内存配置选择及载板扩展能力。"
+keywords: [ArmSoM AIM7, RK3588核心板, 边缘AI模块, 嵌入式多媒体, 载板开发]
 sidebar_label: "AIM7"
 sidebar_position: 3
 slug: /armsom-aim7
@@ -16,7 +17,7 @@ toc_max_heading_level: 4
 
 ## AIM7 简介 {#aim7-overview}
 
-ArmSoM-AIM7 采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。接口完全兼容 Jetson Nano的同时，升级了PCIe接口为PCIe3.0 4-lane和PCIe2.1 1-lan。
+ArmSoM-AIM7 采用 Rockchip RK3588 新一代旗舰级八核 64 位处理器，主频高达 2.4GHz，6 TOPS 算力 NPU，最大可配 32GB 大内存。接口兼容 Jetson Nano，同时 PCIe 接口升级为 PCIe 3.0 4-lane 和 PCIe 2.1 1-lane。
 
 :::tip
 [欢迎阅读 RK3588AI Module7 文档！RK3588AI Module7 目前处于众筹预热阶段。请关注我们的众筹活动，获取最新动态！](https://www.crowdsupply.com/armsom/rk3588-ai-module7)

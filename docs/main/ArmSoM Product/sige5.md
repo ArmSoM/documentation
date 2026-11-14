@@ -1,6 +1,7 @@
 ---
-description: ArmSoM-Sige5 uses Rockchip RK3576 second-generation 8nm high-performance AIOT platform, 6 TOPS computing power NPU, and can be equipped with up to 16GB of large memory. Supports up to 8K video decoding and 4K video encoding, has rich interfaces, supports dual Gigabit network ports, WIFI6/BT5.
-keywords: [armsom-sige5, RK3576 Development Boards, rk3576 SBC]
+title: "ArmSoM Sige5 | RK3576 Single-Board Computer Documentation"
+description: "ArmSoM Sige5 is an RK3576 single-board computer for edge AI and embedded Linux development, with an 8-core CPU, up to 6 TOPS NPU performance, dual Gigabit Ethernet, Wi-Fi 6 and expansion interfaces."
+keywords: [ArmSoM Sige5, RK3576 SBC, edge AI computer, single-board computer, embedded Linux]
 sidebar_label: "Sige5"
 sidebar_position: 2
 slug: /armsom-sige5

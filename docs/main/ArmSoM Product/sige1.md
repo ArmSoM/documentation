@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM Sige1 | RK3528 Single-Board Computer Documentation"
 description: ArmSoM-Sige1 adopts the Rockchip RK3528, a new-generation smart set-top box and multimedia application chip. It can be used in IPTV/OTT boxes, cloud terminals, and converged products. It is a high-performance, low-power 4K player with decoding capability up to 4K@60fps, and it also supports the AVS2 and HDR Vivid standards.
 keywords: [armsom, armsom-sige1, maker kit, rockchip, rk3528 product introduction]
 sidebar_label: "Sige1"

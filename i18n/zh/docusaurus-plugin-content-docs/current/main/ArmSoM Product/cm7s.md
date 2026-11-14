@@ -1,6 +1,7 @@
 ---
-description: ArmSoM-CM7s 采用瑞芯微 RK3588S 8核64位处理器，4个Cortex-A76（主频2.4GHz）和4个Cortex-A55（主频1.8GHz）。6 TOPS算力NPU，最大可配32GB大内存。支持4K视频编解码，拥有丰富的接口，支持多种操作系统。
-keywords: [armsom, armsom-CM7s, RK3588s  Development Boards, RK3588s Core borad, rockchip]
+title: "ArmSoM CM7S｜RK3588S 核心板文档"
+description: "ArmSoM CM7S 是一款基于 RK3588S 的核心板，面向嵌入式 AI 与多媒体系统，提供八核 CPU、最高 6 TOPS NPU 算力、内存配置选择及高密度载板接口。"
+keywords: [ArmSoM CM7S, RK3588S核心板, 计算机模块, 嵌入式AI, 载板开发]
 sidebar_label: "CM7s"
 sidebar_position: 5
 slug: /armsom-cm7s

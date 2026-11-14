@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM Sige6｜Allwinner A733 单板计算机文档"
 description: ArmSoM-Sige6 采用了全志 A733 八核处理器，集成八核高性能 CPU，双核 Arm Cortex-A76 + 六核 Arm Cortex-A55 大小核架构，12nm 制程，最高主频 2.0GHz；并集成 3 TOPS NPU 及 Imagination BXM-4-64 MC1 GPU，可提供强大的 AI 和多媒体处理能力。
 keywords: [armsom, armsom-sige6, maker kit, allwinner, A733产品介绍]
 sidebar_label: "Sige6"

@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM KVM | Remote KVM Development Platform Documentation"
 description: ArmSoM-KVM KVM over IP Industrial control gateway design with Rockchip RK3568. ArmSoM-KVM is an IP KVM device designed for remote monitoring and control of industrial devices. It can connect the video, mouse, and keyboard of the industrial control computer of the production line machine to the remote console over a network to realize remote management of the machine. The device also provides a port for connecting to the local console. Supports local management of machines.
 keywords: [armsom, armsom-kvm, PIKVM, rockchip, RK3568]
 sidebar_label: "KVM"

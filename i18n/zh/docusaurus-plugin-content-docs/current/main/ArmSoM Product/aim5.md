@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM AIM5｜RK3576 核心板文档"
 description: ArmSoM-AIM5
 keywords: [armsom, armsom-aim5, RK3576核心板, rockchip]
 sidebar_label: "AIM5"

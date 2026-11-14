@@ -1,6 +1,7 @@
 ---
-description: The ArmSoM-Sige7 is powered by Rockchip's latest flagship RK3588,octa-core 64-bit processor, with a max frequency of 2.4GHz, a 6 TOPS NPU, and up to 32GB of RAM. 
-keywords: [armsom, armsom-sige7, SBC, maker kit, Rockchip]
+title: "ArmSoM Sige7 | RK3588 Single-Board Computer Documentation"
+description: "ArmSoM Sige7 is an RK3588 single-board computer for edge AI, 8K multimedia and high-speed embedded development, with an 8-core CPU, up to 6 TOPS NPU performance, dual 2.5GbE and PCIe expansion."
+keywords: [ArmSoM Sige7, RK3588 SBC, edge AI computer, 8K multimedia, dual 2.5GbE, PCIe]
 sidebar_label: "Sige7"
 sidebar_position: 2
 slug: /armsom-sige7

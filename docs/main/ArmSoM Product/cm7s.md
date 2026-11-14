@@ -1,6 +1,7 @@
 ---
-description: The ArmSoM-CM7s uses the Rockchip RK3588S 8-core 64-bit processor, with 4 Cortex-A76 cores running at 2.4GHz and 4 Cortex-A55 cores at 1.8GHz. It has a 6 TOPS NPU and can support up to 32GB of memory. It supports 4K video encoding and decoding, comes with plenty of interfaces, and works with various operating systems.
-keywords: [armsom, armsom-CM7s, RK3588s  Development Boards, RK3588s Core borad, rockchip]
+title: "ArmSoM CM7S | RK3588S Compute Module Documentation"
+description: "ArmSoM CM7S is an RK3588S compute module for embedded AI and multimedia systems, with an 8-core CPU, up to 6 TOPS NPU performance, memory options and high-density carrier-board interfaces."
+keywords: [ArmSoM CM7S, RK3588S compute module, system on module, embedded AI, carrier board]
 sidebar_label: "CM7s"
 sidebar_position: 5
 slug: /armsom-cm7s

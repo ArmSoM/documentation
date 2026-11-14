@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM Forge1 | RK3506J Industrial Development Board Documentation"
 description: ArmSom-Forge1 adopts the Rockchip RK3506 next-generation high-performance industrial-grade embedded chip, featuring a multi-core heterogeneous design with three Cortex-A7 cores and one Cortex-M0 core, with main frequencies of 1.5GHz and 200MHz respectively. This chip is widely used in industrial control, industrial communication, human-machine interaction, and other fields due to its high integration, low power consumption, high real-time performance, and rich interface resources.
 keywords: [armsom, armsom-forge1, maker kit, rockchip, rk3506 product introduction]
 sidebar_label: "Forge1"

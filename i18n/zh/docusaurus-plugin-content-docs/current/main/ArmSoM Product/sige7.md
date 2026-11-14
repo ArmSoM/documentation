@@ -1,6 +1,7 @@
 ---
-description: ArmSoM-Sige7采用Rockchip RK3588新一代旗舰级八核64位处理器，主频高达2.4GHz，6 TOPS算力NPU，最大可配32GB大内存。支持8K视频编解码，拥有丰富的接口，支持双2.5G网口、WiFi6 & BT5和多种视频输出。
-keywords: [armsom, armsom-sige7, maker kit, rockchip, rk3588产品介绍]
+title: "ArmSoM Sige7｜RK3588 单板计算机文档"
+description: "ArmSoM Sige7 是一款基于 RK3588 的单板计算机，面向边缘 AI、8K 多媒体与高速嵌入式开发，提供八核 CPU、最高 6 TOPS NPU、双 2.5GbE 与 PCIe 扩展。"
+keywords: [ArmSoM Sige7, RK3588开发板, 边缘AI计算机, 8K多媒体, 双2.5GbE, PCIe]
 sidebar_label: "Sige7"
 sidebar_position: 2
 slug: /armsom-sige7

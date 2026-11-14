@@ -1,4 +1,5 @@
 ---
+title: "ArmSoM Sige6 | Allwinner A733 Single-Board Computer Documentation"
 description: ArmSoM-Sige6 is powered by the Allwinner A733 octa-core processor, featuring a high-performance architecture with dual-core Arm Cortex-A76 and hexa-core Arm Cortex-A55. Built on a 12nm process with a peak frequency of 2.0GHz, it integrates a 3 TOPS NPU and an Imagination BXM-4-64 MC1 GPU, providing powerful AI and multimedia processing capabilities.
 keywords: [armsom, armsom-sige6, maker kit, allwinner, A733 Product Introduction]
 sidebar_label: "Sige6"
