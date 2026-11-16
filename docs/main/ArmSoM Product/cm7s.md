@@ -216,7 +216,7 @@ Here's a comparison chart of the specs for the ArmSoM CM7s and the Raspberry Pi 
 
 ### hardware documentation
 
-Get CM7s schematics, DXF, and other hardware materials
+Get CM7s and CM7s-IO schematics, DXF files, and other hardware materials
 <a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
   <span>Google Drive link</span>
 </a>
@@ -229,7 +229,7 @@ Get CM7s schematics, DXF, and other hardware materials
                 <i>📄</i>
             </div>
             <div class="content">
-                <h2>CM7s SCH</h2>
+                <h2>CM7s / CM7s-IO SCH</h2>
             </div>
         </div>
 </a>
@@ -240,7 +240,7 @@ Get CM7s schematics, DXF, and other hardware materials
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>CM7s 2D</h2>
+            <h2>CM7s / CM7s-IO 2D</h2>
         </div>
     </div>
 </a>
@@ -251,7 +251,7 @@ Get CM7s schematics, DXF, and other hardware materials
             <i>📜</i>
         </div>
         <div class="content">
-            <h2>CM7s SMD</h2>
+            <h2>CM7s / CM7s-IO SMD</h2>
         </div>
     </div>
 </a>

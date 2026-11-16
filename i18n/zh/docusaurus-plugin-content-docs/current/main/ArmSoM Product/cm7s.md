@@ -15,7 +15,7 @@ toc_max_heading_level: 5
 
 让我们在 5 分钟内了解 ArmSoM-CM7s 和 ArmSoM-CM7s-IO
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">CM7s 简介</a><a href="#doc-section-2">CM7s 硬件信息</a><a href="#doc-section-3">CM7s-IO 简介</a><a href="#doc-section-4">CM7s-IO 硬件信息</a><a href="#doc-section-5">Getting started</a><a href="#doc-section-6">开发资料</a></nav>
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">CM7s 简介</a><a href="#doc-section-2">CM7s 硬件信息</a><a href="#doc-section-3">CM7s-IO 简介</a><a href="#doc-section-4">CM7s-IO 硬件信息</a><a href="#doc-section-5">使用手册</a><a href="#doc-section-6">开发资料</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
@@ -220,7 +220,7 @@ CM7s 通过板对板连接器引出显示、摄像头、USB 和存储扩展信�
 
 ### 硬件资料
 
-获取 CM7s 原理图、DXF等硬件资料
+获取 CM7s 与 CM7s-IO 的原理图、DXF 等硬件资料
 
 <a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
   <span>百度网盘链接</span>
@@ -234,7 +234,7 @@ CM7s 通过板对板连接器引出显示、摄像头、USB 和存储扩展信�
                 <i>📄</i>
             </div>
             <div class="content">
-                <h2>CM7s SCH</h2>
+                <h2>CM7s / CM7s-IO SCH</h2>
             </div>
         </div>
 </a>
@@ -245,7 +245,7 @@ CM7s 通过板对板连接器引出显示、摄像头、USB 和存储扩展信�
             <i>📃</i>
         </div>
         <div class="content">
-            <h2>CM7s 2D</h2>
+            <h2>CM7s / CM7s-IO 2D</h2>
         </div>
     </div>
 </a>
@@ -256,7 +256,7 @@ CM7s 通过板对板连接器引出显示、摄像头、USB 和存储扩展信�
             <i>📜</i>
         </div>
         <div class="content">
-            <h2>CM7s SMD</h2>
+            <h2>CM7s / CM7s-IO SMD</h2>
         </div>
     </div>
 </a>
@@ -404,7 +404,7 @@ CM7s-IO Board 使用12V DC供电。
 
 <span id="doc-section-5" className="armsom-section-anchor" />
 
-## Getting started
+## 使用手册
 
 <a href="./armsom-cm7s#使用手册" class="card-link">
     <div class="card">
