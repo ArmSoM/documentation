@@ -540,6 +540,12 @@ ArmSoM团队以 Debian bullseye 为基础作为官方操作系统。[如何烧�
 |:--------: | :---------: | :--------:  | 
 | ![Debian 11](/img/sige/debian11-1.png) | **适用于 Sige6 的 Debian 11：** <br/>Debian 11（Bullseye）系统镜像。请在网盘中选择对应产品文件夹，镜像版本及桌面类型以实际文件为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
 
+### 第三方镜像
+
+| 标识 | 系统镜像 | 下载入口 |
+|:--------: | :---------: | :--------: |
+| ![Armbian](/img/armbian-logo.png) | **适用于 Sige6 的 Armbian：** <br/>Armbian 是一个计算构建框架，允许用户根据各种单板计算机的可变用户空间配置创建带有工作内核的即用镜像。它为支持的单板计算机提供各种预构建镜像，通常基于 Debian 或 Ubuntu。 | [Armbian 固件下载](https://armbian.com/boards/armsom-sige6) |
+
 ### 硬件资料
 
 获取 Sige6 原理图、DXF等硬件资料 `网盘路径：ArmSoM->ArmSoM-Sige6->硬件资料`
