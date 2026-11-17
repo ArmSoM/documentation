@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="583" viewBox="0 0 680 708" role="img" aria-labelledby="title desc">
+  <title id="title">Rockchip Linux boot flow</title>
+  <desc id="desc">A typical Arm64 boot sequence: BootROM, DDR initialization and early loader, TF-A, U-Boot, Linux kernel, and Linux userspace. OP-TEE, initramfs and a desktop depend on the image configuration.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#008497" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="680" height="708" rx="16" fill="#f4f8fa"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="340" y="39" font-size="25" font-weight="700" fill="#173744">Rockchip Linux boot flow</text>
+    <g fill="none" stroke="#008497" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M340 146 V165"/><path d="M340 244 V263"/><path d="M340 342 V361"/><path d="M340 440 V459"/><path d="M340 538 V557"/>
+    </g>
+    <g fill="#ffffff" stroke="#b8d5dc" stroke-width="1.5">
+      <rect x="40" y="70" width="600" height="76" rx="10"/>
+      <rect x="40" y="168" width="600" height="76" rx="10"/>
+      <rect x="40" y="266" width="600" height="76" rx="10"/>
+      <rect x="40" y="364" width="600" height="76" rx="10"/>
+      <rect x="40" y="462" width="600" height="76" rx="10"/>
+      <rect x="40" y="560" width="600" height="76" rx="10"/>
+    </g>
+    <g font-size="24" font-weight="700" fill="#006d7c">
+      <text x="340" y="101">1. BootROM</text>
+      <text x="340" y="199">2. DDR initialization + early loader</text>
+      <text x="340" y="297">3. TF-A (Arm64)</text>
+      <text x="340" y="395">4. U-Boot</text>
+      <text x="340" y="493">5. Linux kernel</text>
+      <text x="340" y="591">6. Linux userspace</text>
+    </g>
+    <g font-size="18" fill="#3b5360">
+      <text x="340" y="128">Boot source selection</text>
+      <text x="340" y="226">DDR binary / TPL + SPL or miniloader</text>
+      <text x="340" y="324">BL31; optional OP-TEE (BL32)</text>
+      <text x="340" y="422">Load kernel + DTB + optional initramfs</text>
+      <text x="340" y="520">Initialize drivers and reach the root filesystem</text>
+      <text x="340" y="618">systemd, services, login and optional desktop</text>
+      <text x="340" y="676">Exact components and packaging depend on the board and SDK.</text>
+    </g>
+  </g>
+</svg>
