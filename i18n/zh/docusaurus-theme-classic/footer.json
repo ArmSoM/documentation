@@ -20,7 +20,7 @@
     "message": "新闻"
   },
   "link.item.label.Products": {
-    "description": "The label of footer link with label=Products linking to http://www.armsom.org/product",
+    "description": "The label of footer link with label=Products linking to https://www.armsom.org/category/all-products",
     "message": "产品"
   },
   "link.item.label.Services": {

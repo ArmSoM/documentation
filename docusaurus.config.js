@@ -159,7 +159,7 @@ const config = {
               },
               {
                 label: "Products",
-                to: "https://www.armsom.org/product",
+                to: "https://www.armsom.org/category/all-products",
                 target: "_blank",
               },
               {
