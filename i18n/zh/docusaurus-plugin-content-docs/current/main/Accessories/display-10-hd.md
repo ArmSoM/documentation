@@ -6,27 +6,33 @@ sidebar_label: "10.1寸屏幕"
 sidebar_position: 18
 slug: /armsom-display-10-hd
 ---
-#  ArmSoM  Display 10 HD
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# ArmSoM Display 10 HD
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#product-introduction">产品介绍</a><a href="#兼容性">兼容性</a><a href="#参数">参数</a><a href="#屏幕引脚">屏幕引脚</a><a href="#resources">Resources</a><a href="#样品购买">样品购买</a></nav>
+
+## 1. 产品介绍 {#product-introduction}
 
 ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器）模块。 该型号由 TFT LCD 面板、驱动电路和背光组成，并具有 10.1 英寸对角线测量的活动显示区域，分辨率为 FHD（水平 1200 x 垂直 1920 像素），分辨率为条纹排列。 通过8位R.G.B信号输入显示16.7M颜色。
 
 可用于平板电脑、娱乐系统和信息仪表板等交互式项目。
 
-![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-display-10hd.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-display-10hd.png')} alt="armsom-display-10hd" /></a>
+  <figcaption>armsom-display-10hd</figcaption>
+</figure>
 
-<div className="armsom-image-caption">armsom-display-10hd</div>
 
-
-### 兼容性
+## 2. 兼容性 {#兼容性}
 - Sige 3/5/7
 - CM5
 - LM7 & W3
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">参数</a><a href="#doc-section-2">屏幕引脚</a><a href="#doc-section-3">Resources</a><a href="#doc-section-4">样品购买</a></nav>
-
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## 参数 
+## 3. 参数 {#参数}
 
 - 外形尺寸：143×228.70×2.25（典型值）mm
 - 显示面积：135.36(H)×216.58(V) mm
@@ -43,7 +49,7 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## 屏幕引脚
+## 4. 屏幕引脚 {#屏幕引脚}
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| NC| OPEN 
@@ -78,7 +84,7 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 |39-40| LEDA |LED Anode
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## Resources
+## 5. Resources {#resources}
 <div class="cards">
     <a href="https://pan.baidu.com/s/1gwBWVhTw9nfQnBvsymUV1g?pwd=arms" class="card-link">
         <div class="card">
@@ -104,7 +110,7 @@ ArmSoM Display 10 HD1 是一款全时 TFT LCD（薄膜晶体管液晶显示器�
 
 <span id="doc-section-4" className="armsom-section-anchor" />
 
-## 样品购买
+## 6. 样品购买 {#样品购买}
 ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
  
 ArmSoM 速卖通官方店: [https://www.aliexpress.com/item/3256806439494827.html](https://www.aliexpress.com/item/3256806439494827.html) 

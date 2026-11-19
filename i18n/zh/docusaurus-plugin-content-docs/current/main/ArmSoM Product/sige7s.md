@@ -38,7 +38,7 @@ ArmSoM-Sige7S 采用 Rockchip RK3588S 新一代高性能八核64位处理器，�
   - **硬解码**：8K@60fps H.265/VP9/AVS2、 8K@30fps H.264 AVC/MVC、 4K@60fps AV1、1080P@60fps MPEG-2/-1/VC-1/VP8
   - **硬编码**：8K@30fps H.265 / H.264
 - **RAM**：2GB/4GB/8GB/16GB/32GB（最高可配 32GB ）64bit LPDDR4/LPDDR4x
-- **Flash**：16GB/32GB/64GB/128GB eMMC Module, 板载 16MB SPI flash
+- **Flash**：16GB/32GB/64GB/128GB eMMC 模块，板载 16MB SPI flash；安装与购买信息见 [64GB eMMC 模块文档](./armsom-emmc-module)。
 - **WIFI/BT**: 板载IEEE 802.11a/b/g/n/ac/ax WIFI6 和 BT5
 - **工作电压**：具有宽范围的输入电压，从5V到23V（电压误差±5%）
 - **工作温度**：0℃ ~ 80℃
@@ -469,6 +469,8 @@ ArmSoM 提供以下官方系统镜像，请在网盘中按产品型号选择所�
 ### 2. 烧录方式选择
 ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到emmc或SD卡两种方式，以及如何擦除SPIFlash
 
+<span id="emmc-flashing" className="armsom-section-anchor" />
+
 #### 2.1 将固件烧录到emmc
 - ArmSoM-sige7s进入烧录模式需要按如下图方式短接，若要进入Maskrom模式则将Maskrom引脚与GND引脚短接，若要进入Loader模式则将Recovery引脚与GND引脚短接。                                      
 - ArmSoM-sige7s烧录使用USB双公线，一端接板载USB3.0接口，另一端接电脑端，同时接USB Type-C线给开发板供电。                            
@@ -523,6 +525,8 @@ ArmSoM-sige7s 支持从emmc启动或SD卡启动,下面介绍将固件烧录到em
 
 | 硬件接口  | [Sige7s](./armsom-sige7s#硬件接口) |
 | --------------- | ----- | 
+
+<span id="debug-uart" className="armsom-section-anchor" />
 
 #### 3.1 调试串口
 

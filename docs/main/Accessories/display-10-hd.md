@@ -6,30 +6,35 @@ sidebar_label: "Display 10 HD"
 sidebar_position: 18
 slug: /armsom-display-10-hd
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # ArmSoM Display 10 HD
 
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#product-introduction">Product Introduction</a><a href="#compatibility">Compatibility</a><a href="#general-information">General information</a><a href="#pinout">Pinout</a><a href="#resources">Resources</a><a href="#purchase-samples">Purchase Samples</a></nav>
+
+## 1. Product Introduction {#product-introduction}
 
 The display model  ArmSoM Display 10 HD1 is a ALL O‘ clock TFT LCD (Thin Film Transistor Liquid Crystal Display) module. This model is Composed of a TFT LCD panel, a driving circuit and a back light, and also has a 10.1 inch diagonally measured active display area with FHD(1200 horizontal by 1920 vertical pixel) resolution in a stripe arrangement. Display 16.7M colors by 8 bit R.G.B signal input.
 
 Suitable for interactive projects such as tablets, entertainment systems, and information dashboards.
 
-![armsom-display-10hd](/img/accessories/armsom-display-10hd.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-display-10hd.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-display-10hd.png')} alt="armsom-display-10hd" /></a>
+  <figcaption>armsom-display-10hd</figcaption>
+</figure>
 
-<div className="armsom-image-caption">armsom-display-10hd</div>
-
-
-<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Compatibility</a><a href="#doc-section-2">General information</a><a href="#doc-section-3">Pinout</a><a href="#doc-section-4">Resources</a><a href="#doc-section-5">Purchase Samples</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## Compatibility
+## 2. Compatibility {#compatibility}
 - Sige 3/5/7
 - CM5
 - LM7 & W3
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## General information 
+## 3. General information {#general-information}
 - Outline Dimension:  143×228.70×2.25 (TYP.) mm 
 - Display area:  135.36(H)×216.58(V) mm 
 - Number of Pixel:  1200RGB(H)×1920(V) pixels 
@@ -46,7 +51,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## Pinout
+## 4. Pinout {#pinout}
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| NC| OPEN 
@@ -81,7 +86,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 |39-40| LEDA |LED Anode
 <span id="doc-section-4" className="armsom-section-anchor" />
 
-## Resources
+## 5. Resources {#resources}
 <div class="cards">
     <a href="https://drive.google.com/file/d/13BqkwRQGyNxGWXQ_LBf9IrNkQIbPgAB4/view?usp=drive_link" class="card-link">
         <div class="card">
@@ -108,7 +113,7 @@ Suitable for interactive projects such as tablets, entertainment systems, and in
 
 <span id="doc-section-5" className="armsom-section-anchor" />
 
-## Purchase Samples 
+## 6. Purchase Samples {#purchase-samples}
 
 ArmSoM online shop: [https://www.armsom.org/product-page/armsom-display-10-hd](https://www.armsom.org/product-page/armsom-display-10-hd)
  

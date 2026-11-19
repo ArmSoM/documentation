@@ -6,7 +6,14 @@ sidebar_label: "Active Cooling Kit"
 sidebar_position: 16
 slug: /sige-active-cooling-kit
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Sige Active Cooling Kit
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#product-introduction">Product Introduction</a><a href="#heatsink">Heatsink</a><a href="#compatibility">Compatibility</a><a href="#3505s-cooling-fan">3505S Cooling Fan</a><a href="#documents">Documents</a><a href="#assembly-instructions">Assembly Instructions</a><a href="#product-certificates">Product Certificates</a><a href="#purchase-samples">Purchase Samples</a></nav>
+
+## 1. Product Introduction {#product-introduction}
 
 The Sige Active Cooling Kit is a dedicated active cooling solution designed for the ArmSoM-Sige. It combines an aluminum heatsink with a temperature-controlled fan to keep your ArmSoM-Sige operating at a comfortable temperature even under heavy loads.
 
@@ -15,20 +22,20 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 :::
 
 
-<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Heatsink</a><a href="#doc-section-2">Compatibility</a><a href="#doc-section-3">3505S Cooling Fan</a><a href="#doc-section-4">Documents</a><a href="#doc-section-5">Assembly Instructions</a><a href="#doc-section-6">Product Certificates</a></nav>
-
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## Heatsink
+## 2. Heatsink {#heatsink}
 
-![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-active-cooling-fan-real.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-active-cooling-fan-real.png')} alt="sige-active-cooling-fan-real" /></a>
+  <figcaption>sige-active-cooling-fan-real</figcaption>
+</figure>
 
-<div className="armsom-image-caption">sige-active-cooling-fan-real</div>
 
-
-![sige-heatsink](/img/accessories/sige-heatsink.png)
-
-<div className="armsom-image-caption">sige-heatsink</div>
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-heatsink.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-heatsink.png')} alt="sige-heatsink" /></a>
+  <figcaption>sige-heatsink</figcaption>
+</figure>
 
 
 - Material: AL6063-T5
@@ -37,7 +44,7 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## Compatibility
+## 3. Compatibility {#compatibility}
 
 - Sige1 2mm Thermal Pad
 - Sige3 2mm Thermal Pad
@@ -46,14 +53,15 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## 3505S Cooling Fan
+## 4. 3505S Cooling Fan {#3505s-cooling-fan}
 
-![sige-active-cooling-fan](/img/accessories/sige-active-cooling-fan.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-active-cooling-fan.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-active-cooling-fan.png')} alt="sige-active-cooling-fan" /></a>
+  <figcaption>sige-active-cooling-fan</figcaption>
+</figure>
 
-<div className="armsom-image-caption">sige-active-cooling-fan</div>
 
-
-### Detailed Specifications
+### 4.1 Detailed Specifications {#detailed-specifications}
 
 | **ITEM**                            | **SPECIFICATION/CONDITION**                             |
 |-------------------------------------|---------------------------------------------------------|
@@ -84,7 +92,7 @@ Please note that the Sige DIY Case 1 and the Sige Active Cooling Kit cannot be u
 
 Source: 3505S blower approval specification V1.0 (2024-08-02). It separately lists rated current of 310mA (340mA maximum) and a DC5V-0.45A label. Rated current is measured after three minutes of continuous operation at rated voltage; these are distinct entries. The supplier calls the blue wire a PWM control lead, but compatibility with a board low-side switch must be verified for the fan part and carrier; do not wire it by color alone.
 
-### Average Lifespan
+### 4.2 Average Lifespan {#average-lifespan}
 
 After continuous operation at a specified constant temperature, the average lifespan can be estimated if 90% of the units are still operational after testing.
 
@@ -94,18 +102,19 @@ After continuous operation at a specified constant temperature, the average life
 | Hydraumatic        | 40°C                  | 25,000                 |
 | Hydraumatic        | 60°C                  | 20,000                 |
 
-### Fan Static Pressure and Airflow Curves
+### 4.3 Fan Static Pressure and Airflow Curves {#fan-static-pressure-and-airflow-curves}
 
 | NO | Duty Cycle | Speed (RPM) | Current (mA) | Pressure (mm-H2O) | Air Flow (CFM) | SPL (dB(A)) @ 0.1m |
 |----|------------|-------------|--------------|------------------|----------------|---------------------|
 | 1  | 100%       | 10,000      | 310          | 26.75            | 2.0            | 54                  |
 
-![cooling-kit-air-flow](/img/accessories/cooling-kit-air-flow.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/cooling-kit-air-flow.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/cooling-kit-air-flow.png')} alt="cooling-kit-air-flow" /></a>
+  <figcaption>cooling-kit-air-flow</figcaption>
+</figure>
 
-<div className="armsom-image-caption">cooling-kit-air-flow</div>
 
-
-### Other Parameters
+### 4.4 Other Parameters {#other-parameters}
 
 - Operating Temperature: Normal operation between -10°C to 50°C
 - Storage Temperature: After storage at -20°C to 40°C for 500 hours, and a 24-hour recovery period at room temperature, all functions operate normally
@@ -117,7 +126,7 @@ After continuous operation at a specified constant temperature, the average life
 
 <span id="doc-section-4" className="armsom-section-anchor" />
 
-## Documents
+## 5. Documents {#documents}
 
 <div class="cards">
     <a href="https://drive.google.com/file/d/1DQ92d9owV1JzpOhPE3L9g2yUZR8_7SDt/view?usp=drive_link" class="card-link">
@@ -134,22 +143,23 @@ After continuous operation at a specified constant temperature, the average life
 
 <span id="doc-section-5" className="armsom-section-anchor" />
 
-## Assembly Instructions
+## 6. Assembly Instructions {#assembly-instructions}
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
 
 <span id="doc-section-6" className="armsom-section-anchor" />
 
-## Product Certificates
+## 7. Product Certificates {#product-certificates}
 
-### CE / FCC / RoHS
+### 7.1 CE / FCC / RoHS {#ce--fcc--rohs}
 
-![sige-cooling-ce-fc-rohs](/img/accessories/sige-cooling-ce-fc-rohs.webp)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-cooling-ce-fc-rohs.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-cooling-ce-fc-rohs.webp')} alt="sige-cooling-ce-fc-rohs" /></a>
+  <figcaption>sige-cooling-ce-fc-rohs</figcaption>
+</figure>
 
-<div className="armsom-image-caption">sige-cooling-ce-fc-rohs</div>
 
-
-## Purchase Samples 
+## 8. Purchase Samples {#purchase-samples}
 
 ArmSoM online shop: [https://www.armsom.org/product-page/sige-active-cooling-kit](https://www.armsom.org/product-page/sige-active-cooling-kit)
  

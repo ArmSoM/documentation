@@ -6,7 +6,14 @@ sidebar_label: "7 寸屏幕"
 sidebar_position: 19
 slug: /armsom-display-7-hd
 ---
-#  ArmSoM  Display 7 HD
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# ArmSoM Display 7 HD
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#product-introduction">产品介绍</a><a href="#兼容性">兼容性</a><a href="#显示面板规格参数">显示面板规格参数</a><a href="#resources">Resources</a><a href="#样品购买">样品购买</a></nav>
+
+## 1. 产品介绍 {#product-introduction}
 
 ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶显示屏（LCD），采用非晶硅 TFT 作为开关器件。该型号由以下组件构成：
 - ​TFT LCD 面板​​
@@ -21,34 +28,34 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 
 可用于平板电脑、娱乐系统和信息仪表板等交互式项目。
 
-![armsom-display-7hd](/img/accessories/armsom-display-7hd.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-display-7hd.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-display-7hd.png')} alt="armsom-display-7hd" /></a>
+  <figcaption>armsom-display-7hd</figcaption>
+</figure>
 
-<div className="armsom-image-caption">armsom-display-7hd</div>
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-display-7hd-b.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-display-7hd-b.png')} alt="armsom-display-7hd-back" /></a>
+  <figcaption>armsom-display-7hd-back</figcaption>
+</figure>
 
-![armsom-display-7hd-back](/img/accessories/armsom-display-7hd-b.png)
 
-<div className="armsom-image-caption">armsom-display-7hd-back</div>
-
-
-### 兼容性
+## 2. 兼容性 {#兼容性}
 - Forge1
 - AIM7
 - CM1
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">显示面板规格参数</a><a href="#doc-section-2">Resources</a><a href="#doc-section-3">样品购买</a></nav>
-
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## 显示面板规格参数
+## 3. 显示面板规格参数 {#显示面板规格参数}
 
-### 基础参数
+### 3.1 基础参数 {#基础参数}
 - **面板尺寸 (Panel Size):** 7英寸 (inch)  
 - **像素数量 (Number of Pixels):** 800×1280 (pixels)  
 - **有效区域 (Active Area):** 94.2 mm × 150.72 mm  
 - **像素间距 (Pixel Pitch):** 0.11775 mm × 0.11775 mm  
 - **外形尺寸 (Outline Dimension):** 160.85 mm (H) × 99.65 mm (W) × 2.5 mm (D)  
 
-### 显示特性
+### 3.2 显示特性 {#显示特性}
 - **色彩数量 (Number of Colors):** 1670万色 (16.7M)  
 - **显示模式 (Display Mode):** 常黑模式 (Normally Black)  
 - **可视角度 (Viewing Direction):** IPS（全视角技术）  
@@ -57,12 +64,12 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 - **对比度 (Contrast Ratio):** 700:1（典型值）  
 - **表面处理 (Surface Treatment):** 防眩光 (Anti-Glare)  
 
-### 接口与硬件
+### 3.3 接口与硬件 {#接口与硬件}
 - **接口 (Interface):** MIPI（移动行业处理器接口）  
 - **背光 (Backlight):** 白色 LED (White LED)  
 - **驱动芯片 (IC):** GH8555BL  
 
-### 环境与物理特性
+### 3.4 环境与物理特性 {#环境与物理特性}
 - **工作温度 (Operation Temperature):** -10°C ~ 50°C  
 - **存储温度 (Storage Temperature):** -20°C ~ 60°C  
 - **重量 (Weight):** 141.5 / g 
@@ -70,7 +77,7 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## Resources
+## 4. Resources {#resources}
 <div class="cards">
     <a href="https://pan.baidu.com/s/1qtsYXoZeXkcMNA83zKzHXA?pwd=arms" class="card-link">
         <div class="card">
@@ -96,11 +103,9 @@ ArmSoM  Display 7 HD 是一款彩色有源矩阵薄膜晶体管（TFT）液晶�
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## 样品购买
+## 5. 样品购买 {#样品购买}
 ArmSoM 独立站: [https://www.armsom.org/product-page/armsom-display-7-hd](https://www.armsom.org/product-page/armsom-display-7-hd)
  
-ArmSoM 速卖通官方店: 
-
 ArmSoM 淘宝官方店: [https://item.taobao.com/item.htm?id=923705669085](https://item.taobao.com/item.htm?id=923705669085)
 
 OEM&ODM,  请联系: sales@armsom.org

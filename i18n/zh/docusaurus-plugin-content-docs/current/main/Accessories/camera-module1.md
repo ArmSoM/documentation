@@ -7,7 +7,13 @@ slug: /armsom-camera-module1
 sidebar_position: 15
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # ArmSoM Camera module 1
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#product-introduction">产品介绍</a><a href="#兼容性">兼容性</a><a href="#引脚定义">引脚定义</a><a href="#样品购买">样品购买</a></nav>
+
+## 1. 产品介绍 {#product-introduction}
 
 ArmSoM 使用了高性能的超清晰4K相机 OV13850。
 
@@ -19,18 +25,19 @@ OV13850 模块具有以下特点：
 * 高达 4 通道 MIPI 串行输出
 * 工作温度范围：0 ℃～60 ℃，存储温度范围：-30 ℃～80 ℃
 
-![armsom-camera-module1](/img/accessories/armsom-camera-module1.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-camera-module1.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-camera-module1.png')} alt="armsom-camera-module1" /></a>
+  <figcaption>armsom-camera-module1</figcaption>
+</figure>
 
-<div className="armsom-image-caption">armsom-camera-module1</div>
 
-
-### 兼容性
+## 2. 兼容性 {#兼容性}
 - Sige 3/5/7
 - LM7 & W3
 - CM5
 - AIM7
 
-### 引脚定义
+## 3. 引脚定义 {#引脚定义}
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| GND| Ground
@@ -77,7 +84,7 @@ OV13850 模块具有以下特点：
 </div>
 
 
-## 样品购买
+## 4. 样品购买 {#样品购买}
 ArmSoM 独立站: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
  
 ArmSoM 速卖通官方店: [https://aliexpress.com/item/3256806937514891.html](https://aliexpress.com/item/3256806937514891.html) 

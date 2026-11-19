@@ -258,15 +258,23 @@ CM5-IO, AIM-IO and the LM7-based W3 provide corresponding development and interf
 
 ### Accessories
 
-**Complete your platform with displays, cameras, cooling and enclosures.** Select screens and cameras for the application, then choose cooling and mechanical accessories for the board and workload to build a practical prototype.
+**Complete your platform with displays, cameras, storage, cooling and enclosures.** Select accessories for the board and application to build a practical prototype.
 
 Check supported boards, pin assignments, cables, power and drivers before connecting accessories. A matching 40-pin header does not guarantee compatibility with every peripheral.
 
-<div class="armsom-product-gallery armsom-product-gallery--5">
+<div class="armsom-product-gallery armsom-product-gallery--3">
 
-| [ArmSoM Display 10 HD](./armsom-display-10-hd) |[ArmSoM Display 7 HD](./armsom-display-7-hd) | [ArmSoM Camera Module 1](./armsom-camera-module1) | [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) |  
-| --------- | --------- | --------- | --------- |  --------- | 
-| ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Display 10 HD](/img/accessories/armsom-display-7hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) | ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) |
+| [ArmSoM Display 10 HD](./armsom-display-10-hd) | [ArmSoM Display 7 HD](./armsom-display-7-hd) | [ArmSoM Camera Module 1](./armsom-camera-module1) |
+| --- | --- | --- |
+| ![ArmSoM Display 10 HD](/img/accessories/armsom-display-10hd.png) | ![ArmSoM Display 7 HD](/img/accessories/armsom-display-7hd.png) | ![ArmSoM Camera Module 1](/img/accessories/armsom-camera-module1-real.png) |
+
+</div>
+
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
+| [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) | [64GB eMMC Module](./armsom-emmc-module)<br/>For Sige7S |
+| --- | --- | --- |
+| ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC Module](/img/accessories/armsom-emmc-module.png) |
 
 </div>
 
@@ -278,7 +286,7 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 |[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
 |[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| ---- | [Camera-Module-1](./armsom-camera-module1) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-CM7s](./armsom-cm7s)  [Rockchip RK3588s]| ---- |  [Sige Diy Case 1](./sige-diy-case1)  |
-|[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]| ---- | ---- | ---- |
+|[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]| ---- | ---- | [64GB eMMC Module](./armsom-emmc-module) |
 ## Documentation Center  
 
 If you encounter any issues while using this documentation, please reach out to us via the [forum](http://forum.armsom.org/) or [Discord](https://discord.gg/THfTEatpfK), and we will respond promptly.  

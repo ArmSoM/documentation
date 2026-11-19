@@ -44,7 +44,7 @@ The SoC supports up to 8K video decoding and 8K@30fps H.264/H.265 encoding; actu
   - **Hardware Decode**: 8K@60fps H.265/VP9/AVS2, 8K@30fps H.264 AVC/MVC, 4K@60fps AV1, 1080P@60fps MPEG-2/-1/VC-1/VP8  
   - **Hardware Encode**: 8K@30fps H.265 / H.264
 - **RAM**: 2GB/4GB/8GB/16GB/32GB (max 32GB) 64bit LPDDR4/LPDDR4x
-- **Storage**: 16GB/32GB/64GB/128GB eMMC module, onboard 16MB SPI flash
+- **Storage**: 16GB/32GB/64GB/128GB eMMC module, onboard 16MB SPI flash; see the [64GB eMMC module guide](./armsom-emmc-module) for installation and purchase information.
 - **WIFI/BT**: IEEE 802.11a/b/g/n/ac/ax WIFI6 and BT5 
 - **Operating Voltage**: Wide input voltage, 5V to 23V (±5% tolerance)
 - **Operating temperature**: 0°C ~ 80°C  
@@ -489,6 +489,8 @@ Plug the power into the port labeled "PWR IN", and make sure to use the correct 
 ### 2. Choose Burning Method
 ArmSoM-sige7s supports booting from eMMC or SD card. Below, we'll introduce two ways to flash the firmware onto eMMC or SD card, and how to erase the SPI Flash.
 
+<span id="emmc-flashing" className="armsom-section-anchor" />
+
 #### 2.1 Flash the firmware to the eMMC
 - To put the ArmSoM-sige7s into flashing mode, you need to short the pins as shown in the picture below. To enter Maskrom mode, short the Maskrom pin to the GND pin, and to enter Loader mode, short the Recovery pin to the GND pin.                                      
 - The ArmSoM-sige7s is programmed using a USB dual male cable, with one end connected to the onboard USB 3.0 port and the other end to the computer, while also using a USB Type-C cable to power the development board.                
@@ -546,6 +548,8 @@ If this is your first time using the ArmSoM-Sige7s product, please get familiar 
 
 | Hardware interfaces  | [Sige7s](./armsom-sige7s#hardware-interface) |
 | --------------- | ----- | 
+
+<span id="debug-uart" className="armsom-section-anchor" />
 
 #### 3.1 Debugging the serial port
 

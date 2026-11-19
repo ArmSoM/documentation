@@ -6,7 +6,14 @@ sidebar_label: "Camera module 1"
 slug: /armsom-camera-module1
 sidebar_position: 15
 ---
-# ArmSoM  Camera Module 1
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# ArmSoM Camera Module 1
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#product-introduction">Product Introduction</a><a href="#compatibility">Compatibility</a><a href="#pinout">Pinout</a><a href="#purchase-samples">Purchase Samples</a></nav>
+
+## 1. Product Introduction {#product-introduction}
 
 ArmSoM uses a high-performance ultra clear 4K camera ov13850.
 
@@ -18,16 +25,15 @@ Dual Wire Serial Bus Control (SCCB)
 * Up to 4-channel MIPI serial output
 * Working temperature range: 0 ℃~60 ℃, storage temperature range: -30 ℃~80 ℃
 
-![armsom-camera-module1](/img/accessories/armsom-camera-module1.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-camera-module1.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-camera-module1.png')} alt="armsom-camera-module1" /></a>
+  <figcaption>armsom-camera-module1</figcaption>
+</figure>
 
-<div className="armsom-image-caption">armsom-camera-module1</div>
-
-
-<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Compatibility</a><a href="#doc-section-2">Pinout</a><a href="#doc-section-3">Purchase Samples</a></nav>
 
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## Compatibility
+## 2. Compatibility {#compatibility}
 - Sige 3/5/7
 - LM7 & W3
 - CM5
@@ -35,7 +41,7 @@ Dual Wire Serial Bus Control (SCCB)
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## Pinout
+## 3. Pinout {#pinout}
 |PIN NO| SYMBOL| Description |
 | -------- | ----------- | ----------- |
 |1| GND| Ground
@@ -83,7 +89,7 @@ Dual Wire Serial Bus Control (SCCB)
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## Purchase Samples 
+## 4. Purchase Samples {#purchase-samples}
 ArmSoM online shop: [https://www.armsom.org/product-page/camera-module-1](https://www.armsom.org/product-page/camera-module-1)
  
 ArmSoM Aliexpress online shop: [https://aliexpress.com/item/3256806937514891.html](https://aliexpress.com/item/3256806937514891.html) 

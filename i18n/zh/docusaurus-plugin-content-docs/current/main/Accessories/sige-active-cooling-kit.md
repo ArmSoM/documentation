@@ -7,7 +7,13 @@ sidebar_position: 16
 slug: /sige-active-cooling-kit
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Sige系列主动散热套件
+
+<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#product-introduction">产品介绍</a><a href="#散热器">散热器</a><a href="#兼容性">兼容性</a><a href="#3505s冷却风扇">3505S冷却风扇</a><a href="#文件">文件</a><a href="#安装介绍">安装介绍</a><a href="#产品证书">产品证书</a><a href="#样品购买">样品购买</a></nav>
+
+## 1. 产品介绍 {#product-introduction}
 
 Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方案。它结合了铝制散热器和温控鼓风机，即使在重负载下也能让您的 ArmSoM-Sige 保持舒适的工作温度。
 
@@ -15,20 +21,20 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 请注意，Sige DIY Case 1 和 Sige Active Cooling Kit 不能一起使用。
 :::
 
-<nav className="armsom-doc-shortcuts" aria-label="章节快捷导航"><a href="#doc-section-1">散热器</a><a href="#doc-section-2">兼容性</a><a href="#doc-section-3">3505S冷却风扇</a><a href="#doc-section-4">文件</a><a href="#doc-section-5">安装介绍</a><a href="#doc-section-6">产品证书</a></nav>
-
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## 散热器
+## 2. 散热器 {#散热器}
 
-![sige-active-cooling-fan-real](/img/accessories/sige-active-cooling-fan-real.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-active-cooling-fan-real.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-active-cooling-fan-real.png')} alt="sige-active-cooling-fan-real" /></a>
+  <figcaption>sige-active-cooling-fan-real</figcaption>
+</figure>
 
-<div className="armsom-image-caption">sige-active-cooling-fan-real</div>
 
-
-![sige-heatsink](/img/accessories/sige-heatsink.png)
-
-<div className="armsom-image-caption">sige-heatsink</div>
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-heatsink.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-heatsink.png')} alt="sige-heatsink" /></a>
+  <figcaption>sige-heatsink</figcaption>
+</figure>
 
 
 - 材质：AL6063-T5
@@ -37,7 +43,7 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## 兼容性
+## 3. 兼容性 {#兼容性}
 
 - Sige1 2mm散热垫
 - Sige3 2mm散热垫
@@ -46,15 +52,15 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## 3505S冷却风扇
+## 4. 3505S冷却风扇 {#3505s冷却风扇}
 
-![sige-active-cooling-fan](/img/accessories/sige-active-cooling-fan.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-active-cooling-fan.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-active-cooling-fan.png')} alt="sige-active-cooling-fan" /></a>
+  <figcaption>sige-active-cooling-fan</figcaption>
+</figure>
 
-<div className="armsom-image-caption">sige-active-cooling-fan</div>
 
-
-
-### 详细规格
+### 4.1 详细规格 {#详细规格}
 
 | 项目                         | 技术参数               |
 |----------------------------------|-------------------------------------------------------|
@@ -85,7 +91,7 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 规格来源：3505S 鼓风机承认书 V1.0（2024-08-02）分别列出额定电流 310mA（最大 340mA）和标签 DC5V-0.45A；额定电流测试条件为额定电压下连续运行 3 分钟后测量，两项应分别读取。供应商将蓝线定义为 PWM 调速线，但该线与主板低侧开关回路的兼容接法仍需按风扇料号和载板验证，不能仅凭线色直接连接。
 
-### 平均寿命
+### 4.2 平均寿命 {#平均寿命}
 
 在指定恒温下持续工作后，经检验，90%能正常运转即可估算其平均使用寿命
 
@@ -95,18 +101,19 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 | Hydraumatic        | 40°C                  | 25,000                 |
 | Hydraumatic        | 60°C                  | 20,000                 |
 
-### 风扇静压和气流曲线
+### 4.3 风扇静压和气流曲线 {#风扇静压和气流曲线}
 
 | NO | Duty Cycle | Speed (RPM) | Current (mA) | Pressure (mm-H2O) | Air Flow (CFM) | SPL (dB(A)) @ 0.1m |
 |----|------------|-------------|--------------|------------------|----------------|---------------------|
 | 1  | 100%       | 10,000      | 310          | 26.75            | 2.0            | 54                  |
 
-![cooling-kit-air-flow](/img/accessories/cooling-kit-air-flow.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/cooling-kit-air-flow.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/cooling-kit-air-flow.png')} alt="cooling-kit-air-flow" /></a>
+  <figcaption>cooling-kit-air-flow</figcaption>
+</figure>
 
-<div className="armsom-image-caption">cooling-kit-air-flow</div>
 
-
-### 其他参数
+### 4.4 其他参数 {#其他参数}
 
 - 运行温度：-10℃ ~50℃为正常温
 - 贮存温度： 在-20℃ ~40℃温度下贮存500小时后，经过在室内温度下24小时恢复期后，所有功能正常运作
@@ -118,7 +125,7 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 <span id="doc-section-4" className="armsom-section-anchor" />
 
-## 文件
+## 5. 文件 {#文件}
 <div class="cards">
     <a href="https://pan.baidu.com/s/1CvUflC1Vf7lX9fmMoArXLA?pwd=arms" class="card-link">
         <div class="card">
@@ -134,22 +141,23 @@ Sige Active Cooling Kit 是专门为 ArmSoM-Sige 设计的主动冷却解决方�
 
 <span id="doc-section-5" className="armsom-section-anchor" />
 
-## 安装介绍
+## 6. 安装介绍 {#安装介绍}
 
 [ArmSoM YouTube Channel](https://www.youtube.com/watch?v=azB0MyI7scE)
 
 <span id="doc-section-6" className="armsom-section-anchor" />
 
-## 产品证书
+## 7. 产品证书 {#产品证书}
 
-### CE / FCC / RoHS
+### 7.1 CE / FCC / RoHS {#ce--fcc--rohs}
 
-![sige-cooling-ce-fc-rohs](/img/accessories/sige-cooling-ce-fc-rohs.webp)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/sige-cooling-ce-fc-rohs.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/sige-cooling-ce-fc-rohs.webp')} alt="sige-cooling-ce-fc-rohs" /></a>
+  <figcaption>sige-cooling-ce-fc-rohs</figcaption>
+</figure>
 
-<div className="armsom-image-caption">sige-cooling-ce-fc-rohs</div>
 
-
-## 样品购买
+## 8. 样品购买 {#样品购买}
 
 ArmSoM 独立站: [https://www.armsom.org/product-page/sige-active-cooling-kit](https://www.armsom.org/product-page/sige-active-cooling-kit)
  

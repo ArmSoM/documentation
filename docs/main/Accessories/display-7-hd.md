@@ -7,7 +7,13 @@ sidebar_position: 19
 slug: /armsom-display-7-hd
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # ArmSoM Display 7 HD
+
+<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#product-introduction">Product Introduction</a><a href="#compatibility">Compatibility</a><a href="#display-panel-specifications">Display Panel Specifications</a><a href="#resources">Resources</a><a href="#purchase-samples">Purchase Samples</a></nav>
+
+## 1. Product Introduction {#product-introduction}
 
 The ArmSoM Display 7 HD is a color active-matrix thin-film transistor (TFT) liquid crystal display (LCD) that uses amorphous silicon TFT as the switching device. This model consists of the following components:
 - TFT LCD Panel
@@ -19,35 +25,34 @@ This TFT LCD features a **7.0-inch diagonally measured active display area** wit
 
 Ideal for interactive projects such as tablets, entertainment systems, and information dashboards.
 
-![armsom-display-7hd](/img/accessories/armsom-display-7hd.png)
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-display-7hd.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-display-7hd.png')} alt="armsom-display-7hd" /></a>
+  <figcaption>armsom-display-7hd</figcaption>
+</figure>
 
-<div className="armsom-image-caption">armsom-display-7hd</div>
-
-![armsom-display-7hd-back](/img/accessories/armsom-display-7hd-b.png)
-
-<div className="armsom-image-caption">armsom-display-7hd-back</div>
-
+<figure className="armsom-doc-figure">
+  <a href="/img/accessories/armsom-display-7hd-b.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-display-7hd-b.png')} alt="armsom-display-7hd-back" /></a>
+  <figcaption>armsom-display-7hd-back</figcaption>
+</figure>
 
 
-### Compatibility
+## 2. Compatibility {#compatibility}
 - Forge1
 - AIM7
 - CM1
 
-<nav className="armsom-doc-shortcuts" aria-label="Section shortcuts"><a href="#doc-section-1">Display Panel Specifications</a><a href="#doc-section-2">Resources</a><a href="#doc-section-3">Purchase Samples</a></nav>
-
 <span id="doc-section-1" className="armsom-section-anchor" />
 
-## Display Panel Specifications
+## 3. Display Panel Specifications {#display-panel-specifications}
 
-### Basic Parameters
+### 3.1 Basic Parameters {#basic-parameters}
 - **Panel Size:** 7 inches (inch)  
 - **Number of Pixels:** 800×1280 (pixels)  
 - **Active Area:** 94.2 mm × 150.72 mm  
 - **Pixel Pitch:** 0.11775 mm × 0.11775 mm  
 - **Outline Dimension:** 160.85 mm (H) × 99.65 mm (W) × 2.5 mm (D)  
 
-### Display Characteristics
+### 3.2 Display Characteristics {#display-characteristics}
 - **Number of Colors:** 16.7 million colors (16.7M)  
 - **Display Mode:** Normally Black  
 - **Viewing Direction:** IPS (In-Plane Switching)  
@@ -56,19 +61,19 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
 - **Contrast Ratio:** 700:1 (Typ.)  
 - **Surface Treatment:** Anti-Glare  
 
-### Interfaces & Hardware
+### 3.3 Interfaces & Hardware {#interfaces--hardware}
 - **Interface:** MIPI (Mobile Industry Processor Interface)  
 - **Backlight:** White LED  
 - **Driver IC:** GH8555BL  
 
-### Environmental & Physical Properties
+### 3.4 Environmental & Physical Properties {#environmental--physical-properties}
 - **Operation Temperature:** -10°C ~ 50°C  
 - **Storage Temperature:** -20°C ~ 60°C  
 - **Weight:** 141.5 / g  
 
 <span id="doc-section-2" className="armsom-section-anchor" />
 
-## Resources
+## 4. Resources {#resources}
 <div class="cards">
     <a href="https://drive.google.com/file/d/1UsFckLnyqX01MbFFhEDX51pvf0e5WaRK/view?usp=drive_link" class="card-link">
         <div class="card">
@@ -94,7 +99,7 @@ Ideal for interactive projects such as tablets, entertainment systems, and infor
 
 <span id="doc-section-3" className="armsom-section-anchor" />
 
-## Purchase Samples
+## 5. Purchase Samples {#purchase-samples}
 ArmSoM Official Site: [https://www.armsom.org/product-page/armsom-display-7-hd](https://www.armsom.org/product-page/armsom-display-7-hd)
 
 ArmSoM Taobao Store: [https://item.taobao.com/item.htm?id=923705669085](https://item.taobao.com/item.htm?id=923705669085)
