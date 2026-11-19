@@ -1713,10 +1713,14 @@ armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
 
 以下以 `2112×1568 @ 30fps` 为例，分辨率和帧率以实际节点支持的模式为准。
 
-**抓图（NV12 原始帧，不是 JPEG）：**
+**抓图（JPEG）**
 
 ```bash
-armsom@armsom:~$ v4l2-ctl -d /dev/videoX --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+# AIM7 CAM2 示例，请替换为当前 ISP 主输出节点。
+# 连续采集 45 帧以便曝光稳定，固定文件名保留最后一张。
+gst-launch-1.0 -q v4l2src device=/dev/video71 num-buffers=45 ! \
+  video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=ov13850.jpg
 ```
 
 **录像：**
@@ -1738,7 +1742,11 @@ armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/videoX ! video/x-raw,format=
 **抓图（JPEG）：**
 
 ```bash
-armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/videoX num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+# AIM7 CAM0 示例，请替换为当前 ISP 主输出节点。
+# 连续采集 45 帧以便曝光稳定，固定文件名保留最后一张。
+GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -q v4l2src device=/dev/video53 num-buffers=45 io-mode=4 ! \
+  video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=imx219.jpg
 ```
 
 **录像：**
@@ -1777,6 +1785,15 @@ armsom@armsom:~$ python3 aim7-four-camera-preview.py
 
 <div className="armsom-image-caption">AIM7 四路摄像头同时预览</div>
 
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📝</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>在配有相机适配包的 AIM7 桌面上，按 CAM 接口选择摄像头，用 Cheese 或 guvcview 拍照、录像，在 guvcview 中设置分辨率和帧率。</p>
+    </div>
+  </div>
+</a>
 
 #### 10. MIPI DSI {#aim-io-10-mipi-dsi}
 

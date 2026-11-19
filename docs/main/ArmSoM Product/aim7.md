@@ -1751,10 +1751,14 @@ Run one capture command at a time. Connect a display for preview and press `Ctrl
 
 These examples use `2112×1568 @ 30fps`. Select a resolution and frame rate supported by your actual node.
 
-**Capture a frame (raw NV12, not JPEG):**
+**Capture a JPEG photo**
 
 ```bash
-armsom@armsom:~$ v4l2-ctl -d /dev/videoX --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+# AIM7 CAM2 example. Substitute the ISP mainpath node for your camera.
+# Capture 45 frames for auto exposure. The fixed filename keeps the last photo.
+gst-launch-1.0 -q v4l2src device=/dev/video71 num-buffers=45 ! \
+  video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=ov13850.jpg
 ```
 
 **Record video:**
@@ -1776,7 +1780,11 @@ Capture, recording, and preview use `3280×2464`. The full-resolution mode suppo
 **Capture a photo (JPEG):**
 
 ```bash
-armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/videoX num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+# AIM7 CAM0 example. Substitute the ISP mainpath node for your camera.
+# Capture 45 frames for auto exposure. The fixed filename keeps the last photo.
+GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -q v4l2src device=/dev/video53 num-buffers=45 io-mode=4 ! \
+  video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=imx219.jpg
 ```
 
 **Record video:**
@@ -1815,6 +1823,15 @@ Screenshot from the test (each camera image rotated 180° to correct its orienta
 
 <div className="armsom-image-caption">AIM7 simultaneous four-camera preview</div>
 
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📝</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>On an AIM7 desktop with camera support installed, select a camera by CAM port. Take photos or record video in Cheese or guvcview and set the resolution and frame rate in guvcview.</p>
+    </div>
+  </div>
+</a>
 
 #### 10. MIPI DSI {#aim-io-10-mipi-dsi}
 

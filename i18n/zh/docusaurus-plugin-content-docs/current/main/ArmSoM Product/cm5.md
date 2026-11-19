@@ -1251,16 +1251,19 @@ root@armsom:/# dmesg | grep ov13850
 [    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 下述命令中的 /dev/video31 要根据实际注册的video节点来替换
-- 使用v4l2-ctl进行抓图
+- 抓取一张 JPEG 照片
 ```bash
-// video31 或 video11
-root@armsom:/# systemctl restart rkaiq_3A.service
-root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+# video31 或 video11
+sudo systemctl restart rkaiq_3A.service
+# 连续采集 45 帧以便曝光稳定，固定文件名保留最后一张。
+gst-launch-1.0 -q v4l2src device=/dev/video31 num-buffers=45 ! \
+  video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=ov13850.jpg
 ```
 
 - 预览（需接显示器实时预览）
 ```bash
-// video31 或 video11
+# video31 或 video11
 root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
@@ -1284,25 +1287,45 @@ root@armsom:/# dmesg | grep imx219
 
 - 拍照
 ```bash
-// video22 或 video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
-```         
+# video22 或 video11
+# 连续采集 45 帧以便曝光稳定，固定文件名保留最后一张。
+GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -q v4l2src device=/dev/video22 num-buffers=45 io-mode=4 ! \
+  video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=imx219.jpg
+```
+
+<figure className="armsom-doc-figure">
+
+![CM5 搭配 IMX219 拍摄的桌面和小黄鸭](/img/cm/cm5-imx219-sample.webp)
+
+<figcaption>CM5 搭配 IMX219 的实拍图</figcaption>
+</figure>
 
 - 拍摄视频
 ```bash
-// video22 或 video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=3280, height=2464, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
-```  
+# video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video22 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=3280, height=2464, framerate=15/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.ts
+```
 
 - 预览（需接显示器实时预览）
 ```bash
-// video22 或 video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
-``` 
+# video22 或 video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=15/1 ! xvimagesink
+```
 
 :::tip
 由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
 :::
+
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📝</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>RK3588 系列桌面教程：用 Cheese 和 guvcview 选择摄像头、调整分辨率并拍照。</p>
+    </div>
+  </div>
+</a>
 
 #### MIPI DSI {#cm5-io-mipi-dsi}
 

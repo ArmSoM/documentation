@@ -983,7 +983,7 @@ armsom@armsom:~$ sudo reboot
 
 ##### Check Cameras and Device Nodes
 
-The following logs and nodes were collected on CM7s with Debian 12 / Linux 6.1 and both cameras enabled:
+Device detection and node examples for CM7s with Debian 12 / Linux 6.1 and both cameras enabled:
 
 ```bash
 armsom@armsom:~$ dmesg | grep -E "imx219|ov13850"
@@ -1032,10 +1032,13 @@ Run only one set of capture commands at a time. Preview requires a local desktop
 
 These examples use `2112×1568` with a configured rate of 30 FPS. Actual frame rate depends on exposure and other factors.
 
-**Capture a frame (raw NV12, not JPEG):**
+**Capture a JPEG photo**
 
 ```bash
-armsom@armsom:~$ v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+# Capture 45 frames for auto exposure. The fixed filename keeps the last photo.
+gst-launch-1.0 -q v4l2src device=/dev/video31 num-buffers=45 ! \
+  video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=ov13850.jpg
 ```
 
 **Record video (H.264 / MP4):**
@@ -1059,12 +1062,15 @@ Capture and preview use `3280×2464 @ 15 FPS`. Do not configure this full-resolu
 **Capture a photo (JPEG):**
 
 ```bash
-armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+# Capture 45 frames for auto exposure. The fixed filename keeps the last photo.
+GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -q v4l2src device=/dev/video22 num-buffers=45 io-mode=4 ! \
+  video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=imx219.jpg
 ```
 
 **Record video (MJPEG / AVI):**
 
-The following software-encoding example scales ISP output to `1920×1080 @ 15 FPS` and produces large files. Full-resolution IMX219 H.264 hardware recording timed out on the tested image, so the old 8MP / 30 FPS command is not retained. This MJPEG example has not yet been verified on hardware.
+This example uses MJPEG software encoding with `1920×1080 @ 15 FPS` ISP output and saves an AVI file.
 
 ```bash
 armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/video22 num-buffers=150 ! video/x-raw,format=NV12,width=1920,height=1080,framerate=15/1 ! videoconvert ! jpegenc ! avimux ! filesink location=imx219.avi
@@ -1088,11 +1094,21 @@ armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
 armsom@armsom:~$ python3 cm7s-dual-camera-preview.py
 ```
 
-The script targets a 1920×1080 screen, with IMX219 on the left and OV13850 on the right. Each ISP output is 640×480, scaled proportionally to 960×720 without cropping. Measured rates were approximately 15 FPS and 25 FPS; both cameras' colors and smoothness were confirmed. Update the camera list if node numbers differ. Press `Ctrl+C` to exit.
+The script targets a 1920×1080 screen, with IMX219 on the left and OV13850 on the right. Each ISP output is 640×480, scaled proportionally to 960×720 without cropping. Update the camera list if node numbers differ. Press `Ctrl+C` to exit.
 
-Test image below: titles and upper/lower black borders were cropped out. Only the left IMX219 image was rotated 180° to correct its orientation; the right image is unchanged.
+Dual-camera preview example:
 
 ![CM7s IMX219 and OV13850 simultaneous preview](/img/cm/cm7s-dual-camera-preview.webp)
+
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📝</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>On a desktop image with ArmSoM camera support, select a camera and resolution, take photos or record video in Cheese or guvcview. Use guvcview to set the frame rate.</p>
+    </div>
+  </div>
+</a>
 
 #### 3.13 MIPI DSI
 

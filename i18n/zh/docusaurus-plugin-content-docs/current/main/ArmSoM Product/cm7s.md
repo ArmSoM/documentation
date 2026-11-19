@@ -990,7 +990,7 @@ armsom@armsom:~$ sudo reboot
 
 ##### 确认摄像头与节点
 
-以下日志和节点以 CM7s / Debian 12 / Linux 6.1、两路同时启用时的实测结果为例：
+以下为 CM7s / Debian 12 / Linux 6.1 双摄配置的设备识别和节点示例：
 
 ```bash
 armsom@armsom:~$ dmesg | grep -E "imx219|ov13850"
@@ -1039,10 +1039,13 @@ armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
 
 以下使用 `2112×1568` 模式，配置帧率为 30 FPS，实际帧率受曝光等因素影响。
 
-**抓图（NV12 原始帧，不是 JPEG）：**
+**抓图（JPEG）**
 
 ```bash
-armsom@armsom:~$ v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=ov13850.nv12 --stream-count=1 --stream-poll
+# 连续采集 45 帧以便曝光稳定，固定文件名保留最后一张。
+gst-launch-1.0 -q v4l2src device=/dev/video31 num-buffers=45 ! \
+  video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=ov13850.jpg
 ```
 
 **录像（H.264 / MP4）：**
@@ -1066,12 +1069,15 @@ armsom@armsom:~$ gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format
 **抓图（JPEG）：**
 
 ```bash
-armsom@armsom:~$ GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video22 num-buffers=1 io-mode=4 ! video/x-raw,format=NV12,width=3280,height=2464 ! videoconvert ! jpegenc ! filesink location=imx219.jpg
+# 连续采集 45 帧以便曝光稳定，固定文件名保留最后一张。
+GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -q v4l2src device=/dev/video22 num-buffers=45 io-mode=4 ! \
+  video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=imx219.jpg
 ```
 
 **录像（MJPEG / AVI）：**
 
-以下为软件编码示例，ISP 输出缩放到 `1920×1080 @ 15 FPS`，文件较大。当前镜像的 IMX219 全分辨率 H.264 硬件录像测试出现超时，因此不沿用旧版 8MP / 30 FPS 录像命令；本 MJPEG 示例尚未实机验证。
+以下使用 MJPEG 软件编码，ISP 输出为 `1920×1080 @ 15 FPS`，保存为 AVI 文件。
 
 ```bash
 armsom@armsom:~$ gst-launch-1.0 -e v4l2src device=/dev/video22 num-buffers=150 ! video/x-raw,format=NV12,width=1920,height=1080,framerate=15/1 ! videoconvert ! jpegenc ! avimux ! filesink location=imx219.avi
@@ -1095,11 +1101,21 @@ armsom@armsom:~$ sudo systemctl restart rkaiq_3A.service
 armsom@armsom:~$ python3 cm7s-dual-camera-preview.py
 ```
 
-脚本针对 1920×1080 屏幕，左侧为 IMX219，右侧为 OV13850。每路 ISP 输出为 640×480，等比例放大至 960×720，保留完整画面。实测约为 15 FPS 和 25 FPS，两路色彩、流畅度均已确认正常。节点不同时修改脚本中的摄像头列表，按 `Ctrl+C` 退出。
+脚本针对 1920×1080 屏幕，左侧为 IMX219，右侧为 OV13850。每路 ISP 输出为 640×480，等比例放大至 960×720，保留完整画面。节点不同时修改脚本中的摄像头列表，按 `Ctrl+C` 退出。
 
-以下为实测素材：已裁去标题和上下黑边，仅将左侧 IMX219 画面旋转 180° 调正；右侧保持原样。
+双路预览示例：
 
 ![CM7s IMX219 与 OV13850 双路预览](/img/cm/cm7s-dual-camera-preview.webp)
+
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📝</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>在配有 ArmSoM 相机组件的桌面镜像中，用 Cheese 或 guvcview 选择摄像头和分辨率、拍照或录像。guvcview 还可设置帧率。</p>
+    </div>
+  </div>
+</a>
 
 #### 3.13 MIPI DSI
 

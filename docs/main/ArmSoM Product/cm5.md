@@ -1247,16 +1247,19 @@ root@armsom:/# dmesg | grep ov13850
 [    2.332084] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov13850 5-0010:bus type 5
 ```
 Replace `/dev/video31` in the commands below with the video node actually registered on your system.
-- Capture an image using `v4l2-ctl`.
+- Capture a JPEG photo.
 ```bash
-// video31 or video11
-root@armsom:/# systemctl restart rkaiq_3A.service
-root@armsom:/# v4l2-ctl -d /dev/video31 --set-selection=target=crop,top=0,left=0,width=2112,height=1568 --set-fmt-video=width=2112,height=1568,pixelformat=NV12 --stream-mmap=3 --stream-to=/nv12.bin --stream-count=1 --stream-poll
+# video31 or video11
+sudo systemctl restart rkaiq_3A.service
+# Capture 45 frames for auto exposure. The fixed filename keeps the last photo.
+gst-launch-1.0 -q v4l2src device=/dev/video31 num-buffers=45 ! \
+  video/x-raw,format=NV12,width=2112,height=1568,framerate=30/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=ov13850.jpg
 ```
 
 - Preview (requires a monitor for real-time preview)
 ```bash
-// video31 or video11
+# video31 or video11
 root@armsom:/# gst-launch-1.0 v4l2src device=/dev/video31 ! video/x-raw,format=NV12,width=2112,height=1568, framerate=30/1 ! xvimagesink
 ```
 ![armsom-w3-imx415-camera](/img/lm/armsom-w3-imx415-camera.jpeg)
@@ -1281,25 +1284,45 @@ After confirming the driver is loaded, run the following command to take a photo
 
 - take a photo
 ```bash
-video22 or video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw,format=NV12,width=3280,height=2464 ! jpegenc ! multifilesink location=photo.jpg
-```         
+# video22 or video11
+# Capture 45 frames for auto exposure. The fixed filename keeps the last photo.
+GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 -q v4l2src device=/dev/video22 num-buffers=45 io-mode=4 ! \
+  video/x-raw,format=NV12,width=3280,height=2464,framerate=15/1 ! \
+  videoconvert ! jpegenc ! multifilesink location=imx219.jpg
+```
+
+<figure className="armsom-doc-figure">
+
+![CM5 IMX219 sample photo of a desk and a rubber duck](/img/cm/cm5-imx219-sample.webp)
+
+<figcaption>CM5 · IMX219</figcaption>
+</figure>
 
 - record a video
 ```bash
-video22 or video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=30/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.mp4
-```           
+# video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src num-buffers=512 device=/dev/video11 io-mode=4 ! videoconvert ! video/x-raw, format=NV12, width=1920, height=1080, framerate=15/1 ! tee name=t ! queue ! mpph264enc ! queue ! h264parse ! mpegtsmux ! filesink location=/tmp/video.ts
+```
 
 - Preview (requires a monitor for real-time preview)
 ```bash
-video22 or video11
-root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=30/1 ! xvimagesink
-```  
+# video22 or video11
+root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src device=/dev/video11 ! video/x-raw,format=NV12,width=3280,height=2464, framerate=15/1 ! xvimagesink
+```
 
 :::tip
 Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
 :::
+
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📝</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>A desktop guide for the RK3588 family. Choose a camera and resolution, then take a photo in Cheese or guvcview.</p>
+    </div>
+  </div>
+</a>
 
 #### MIPI DSI {#cm5-io-mipi-dsi}
 
