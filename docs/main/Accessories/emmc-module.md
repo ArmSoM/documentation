@@ -20,7 +20,7 @@ The ArmSoM eMMC module provides removable system storage for [Sige7S](./armsom-s
 eMMC integrates flash memory and a storage controller in one package. The operating system accesses it as a block device; applications use the mounted filesystem without managing the flash directly.
 
 <figure className="armsom-doc-figure">
-  <a href="/img/accessories/armsom-emmc-module.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-emmc-module.png')} alt="ArmSoM eMMC module: chip side on the left and connector side on the right" /></a>
+  <a href="/img/accessories/armsom-emmc-module.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-emmc-module-optimized.webp')} alt="ArmSoM eMMC module: chip side on the left and connector side on the right" /></a>
   <figcaption>Chip side (left) and board-to-board connector side (right).</figcaption>
 </figure>
 

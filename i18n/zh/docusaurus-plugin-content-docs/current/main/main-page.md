@@ -20,7 +20,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
     <div class="armsom-hero__actions"><a class="armsom-button armsom-button--primary" href="#选择适合的-armsom-平台">选择开发平台 <span>→</span></a><a class="armsom-button armsom-button--secondary" href="./getting-start/cloud-disk">开始上手</a></div>
     <div class="armsom-proof"><span><strong>6 TOPS</strong> 边缘 AI</span><span><strong>8K</strong> 多媒体</span><span><strong>开放</strong> 硬件资料</span></div>
   </div>
-  <div class="armsom-hero__visual"><img src={useBaseUrl("/img/banana.jpg")} alt="ArmSoM 开源硬件平台" /></div>
+  <div class="armsom-hero__visual"><img src={useBaseUrl("/img/banana.jpg")} alt="ArmSoM 开源硬件平台" width="1362" height="451" loading="eager" fetchpriority="high" /></div>
 </section>
 
 <nav className="preview-resources" aria-label="常用资源"><a href="/zh/getting-start/cloud-disk"><strong>系统镜像 <span>↗</span></strong><small>下载与开始使用</small></a><a href="/zh/getting-start/flash-img"><strong>烧录指南 <span>↗</span></strong><small>一步步完成首次启动</small></a><a href="/zh/armsom-faqs"><strong>技术支持 <span>↗</span></strong><small>常见问题与解答</small></a></nav>
@@ -270,7 +270,7 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 | [Sige 主动散热套件](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) | [64GB eMMC 模块](./armsom-emmc-module)<br/>适用于 Sige7S |
 | --- | --- | --- |
-| ![Sige 主动散热套件](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC 模块](/img/accessories/armsom-emmc-module.png) |
+| ![Sige 主动散热套件](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC 模块](/img/accessories/armsom-emmc-module-optimized.webp) |
 
 </div>
 
@@ -279,7 +279,7 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 
 | [AIM7 专用散热器](./board-heatsinks#aim7) | [CM5/CM7S 专用散热器](./board-heatsinks#cm5-cm7s) | [Sige6 专用散热器](./board-heatsinks#sige6) |
 | --- | --- | --- |
-| ![AIM7 专用散热器](/img/accessories/heatsinks/aim7-front.webp) | ![CM5/CM7S 专用散热器](/img/accessories/heatsinks/cm5-cm7s-front.webp) | ![Sige6 专用散热器](/img/accessories/heatsinks/sige6-front.webp) |
+| ![AIM7 专用散热器](/img/accessories/heatsinks/aim7-front-optimized.webp) | ![CM5/CM7S 专用散热器](/img/accessories/heatsinks/cm5-cm7s-front-optimized.webp) | ![Sige6 专用散热器](/img/accessories/heatsinks/sige6-front-optimized.webp) |
 
 </div>
 

@@ -10,7 +10,7 @@ export default function BrandedFooter(props) {
     <section className="armsom-footer__brand" aria-label="ArmSoM">
       <div>
         <a href="https://www.armsom.org/" aria-label={zh ? 'ArmSoM 官网' : 'ArmSoM website'}>
-          <img src={useBaseUrl('/img/armsom-wordmark.png')} alt="ArmSoM" width="180" height="60" />
+          <img src={useBaseUrl('/img/armsom-wordmark-optimized.webp')} alt="ArmSoM" width="180" height="60" />
         </a>
         <p className="armsom-footer__tagline">Build the next embedded product, faster.</p>
         <p className="armsom-footer__description">{zh ? '开源硬件 · 核心板 · 单板计算机 · 嵌入式 Linux' : 'Open hardware · System on modules · Single-board computers · Embedded Linux'}</p>

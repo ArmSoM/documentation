@@ -97,7 +97,7 @@ const config = {
         title: '',
         logo: {
           alt: 'ArmSoM',
-          src: 'img/armsom-wordmark.png',
+          src: 'img/armsom-wordmark-optimized.webp',
           width: 150,
           height: 50,
         },

@@ -23,7 +23,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
     </div>
     <div class="armsom-proof"><span><strong>6 TOPS</strong> edge AI</span><span><strong>8K</strong> multimedia</span><span><strong>Open</strong> hardware resources</span></div>
   </div>
-  <div class="armsom-hero__visual"><img src={useBaseUrl("/img/banana.jpg")} alt="ArmSoM open-source hardware platforms" /></div>
+  <div class="armsom-hero__visual"><img src={useBaseUrl("/img/banana.jpg")} alt="ArmSoM open-source hardware platforms" width="1362" height="451" loading="eager" fetchpriority="high" /></div>
 </section>
 
 <nav className="preview-resources" aria-label="Quick resources"><a href="/getting-start/cloud-disk"><strong>System images <span>↗</span></strong><small>Download & get started</small></a><a href="/getting-start/flash-img"><strong>Flashing guide <span>↗</span></strong><small>Prepare your first boot</small></a><a href="/armsom-faqs"><strong>Technical support <span>↗</span></strong><small>Find answers to common questions</small></a></nav>
@@ -274,7 +274,7 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 
 | [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) | [64GB eMMC Module](./armsom-emmc-module)<br/>For Sige7S |
 | --- | --- | --- |
-| ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC Module](/img/accessories/armsom-emmc-module.png) |
+| ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC Module](/img/accessories/armsom-emmc-module-optimized.webp) |
 
 </div>
 
@@ -282,7 +282,7 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 
 | [AIM7 Heatsink](./board-heatsinks#aim7) | [CM5/CM7S Heatsink](./board-heatsinks#cm5-cm7s) | [Sige6 Heatsink](./board-heatsinks#sige6) |
 | --- | --- | --- |
-| ![AIM7 Heatsink](/img/accessories/heatsinks/aim7-front.webp) | ![CM5/CM7S Heatsink](/img/accessories/heatsinks/cm5-cm7s-front.webp) | ![Sige6 Heatsink](/img/accessories/heatsinks/sige6-front.webp) |
+| ![AIM7 Heatsink](/img/accessories/heatsinks/aim7-front-optimized.webp) | ![CM5/CM7S Heatsink](/img/accessories/heatsinks/cm5-cm7s-front-optimized.webp) | ![Sige6 Heatsink](/img/accessories/heatsinks/sige6-front-optimized.webp) |
 
 </div>
 

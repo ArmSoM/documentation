@@ -58,11 +58,11 @@ AIM7、CM5 和 CM7S 为核心板，安装时还应确认载板及外壳的空间
 
 <div className="armsom-heatsink-views">
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/aim7-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-front.webp')} alt="AIM7 款 · 正面" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/aim7-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-front-optimized.webp')} alt="AIM7 款 · 正面" loading="lazy" /></a>
     <figcaption>AIM7 款 · 正面</figcaption>
   </figure>
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/aim7-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-back.webp')} alt="AIM7 款 · 背面" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/aim7-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-back-optimized.webp')} alt="AIM7 款 · 背面" loading="lazy" /></a>
     <figcaption>AIM7 款 · 背面</figcaption>
   </figure>
 </div>
@@ -74,11 +74,11 @@ AIM7、CM5 和 CM7S 为核心板，安装时还应确认载板及外壳的空间
 
 <div className="armsom-heatsink-views">
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/cm5-cm7s-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-front.webp')} alt="CM5/CM7S 款 · 正面" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/cm5-cm7s-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-front-optimized.webp')} alt="CM5/CM7S 款 · 正面" loading="lazy" /></a>
     <figcaption>CM5/CM7S 款 · 正面</figcaption>
   </figure>
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/cm5-cm7s-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-back.webp')} alt="CM5/CM7S 款 · 背面" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/cm5-cm7s-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-back-optimized.webp')} alt="CM5/CM7S 款 · 背面" loading="lazy" /></a>
     <figcaption>CM5/CM7S 款 · 背面</figcaption>
   </figure>
 </div>
@@ -90,11 +90,11 @@ AIM7、CM5 和 CM7S 为核心板，安装时还应确认载板及外壳的空间
 
 <div className="armsom-heatsink-views">
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/sige6-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-front.webp')} alt="Sige6 款 · 正面" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/sige6-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-front-optimized.webp')} alt="Sige6 款 · 正面" loading="lazy" /></a>
     <figcaption>Sige6 款 · 正面</figcaption>
   </figure>
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/sige6-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-back.webp')} alt="Sige6 款 · 背面" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/sige6-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-back-optimized.webp')} alt="Sige6 款 · 背面" loading="lazy" /></a>
     <figcaption>Sige6 款 · 背面</figcaption>
   </figure>
 </div>

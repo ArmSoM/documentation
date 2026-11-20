@@ -1,4 +1,22 @@
 {
+  "headers": [
+    {
+      "source": "/assets/:path*",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]
+    },
+    {
+      "source": "/zh/assets/:path*",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]
+    },
+    {
+      "source": "/img/:path*",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}]
+    },
+    {
+      "source": "/zh/img/:path*",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=3600, must-revalidate"}]
+    }
+  ],
   "redirects": [
     {
       "source": "/armsom-cm1-io",

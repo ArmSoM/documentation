@@ -58,11 +58,11 @@ For [ArmSoM AIM7](/armsom-aim7).
 
 <div className="armsom-heatsink-views">
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/aim7-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-front.webp')} alt="AIM7 variant · Front" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/aim7-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-front-optimized.webp')} alt="AIM7 variant · Front" loading="lazy" /></a>
     <figcaption>AIM7 variant · Front</figcaption>
   </figure>
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/aim7-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-back.webp')} alt="AIM7 variant · Rear" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/aim7-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/aim7-back-optimized.webp')} alt="AIM7 variant · Rear" loading="lazy" /></a>
     <figcaption>AIM7 variant · Rear</figcaption>
   </figure>
 </div>
@@ -74,11 +74,11 @@ For [ArmSoM CM5](/armsom-cm5) and [ArmSoM CM7S](/armsom-cm7s). Both modules use 
 
 <div className="armsom-heatsink-views">
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/cm5-cm7s-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-front.webp')} alt="CM5/CM7S variant · Front" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/cm5-cm7s-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-front-optimized.webp')} alt="CM5/CM7S variant · Front" loading="lazy" /></a>
     <figcaption>CM5/CM7S variant · Front</figcaption>
   </figure>
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/cm5-cm7s-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-back.webp')} alt="CM5/CM7S variant · Rear" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/cm5-cm7s-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/cm5-cm7s-back-optimized.webp')} alt="CM5/CM7S variant · Rear" loading="lazy" /></a>
     <figcaption>CM5/CM7S variant · Rear</figcaption>
   </figure>
 </div>
@@ -90,11 +90,11 @@ For [ArmSoM Sige6](/armsom-sige6).
 
 <div className="armsom-heatsink-views">
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/sige6-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-front.webp')} alt="Sige6 variant · Front" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/sige6-front.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-front-optimized.webp')} alt="Sige6 variant · Front" loading="lazy" /></a>
     <figcaption>Sige6 variant · Front</figcaption>
   </figure>
   <figure className="armsom-doc-figure">
-    <a href="/img/accessories/heatsinks/sige6-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-back.webp')} alt="Sige6 variant · Rear" loading="lazy" /></a>
+    <a href="/img/accessories/heatsinks/sige6-back.webp" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/heatsinks/sige6-back-optimized.webp')} alt="Sige6 variant · Rear" loading="lazy" /></a>
     <figcaption>Sige6 variant · Rear</figcaption>
   </figure>
 </div>

@@ -20,7 +20,7 @@ ArmSoM eMMC 模块为 [Sige7S](./armsom-sige7s) 提供可拆卸的系统存储�
 eMMC 将闪存与存储控制器集成在同一封装中。操作系统将其作为块设备访问，应用程序通过挂载后的文件系统读写数据，无需直接管理底层闪存。
 
 <figure className="armsom-doc-figure">
-  <a href="/img/accessories/armsom-emmc-module.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-emmc-module.png')} alt="ArmSoM eMMC 模块，左侧为芯片面，右侧为连接器面" /></a>
+  <a href="/img/accessories/armsom-emmc-module.png" target="_blank" rel="noopener noreferrer"><img src={useBaseUrl('/img/accessories/armsom-emmc-module-optimized.webp')} alt="ArmSoM eMMC 模块，左侧为芯片面，右侧为连接器面" /></a>
   <figcaption>左：芯片面；右：板对板连接器面。</figcaption>
 </figure>
 
