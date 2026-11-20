@@ -1181,6 +1181,18 @@ Fri Nov 03 2023 10:36:01 UTC
 
 #### MIPI-CSI {#cm5-io-mipi-csi}
 
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>Use Cheese or guvcview to select a camera, switch resolutions, preview, take photos and record video. On both desktop and Server images, the armsom-camera command also lets you choose the camera, resolution and frame rate.</p>
+    </div>
+  </div>
+</a>
+
+The instructions below cover wiring, enabling the overlay and using the original capture and preview commands. These commands use the sensor resolution selected by the driver by default.
+
 ##### Enable Camera Configuration {#cm5-io-enable-camera-configuration}
 Before using a camera, enable the camera device-tree overlay by locating the following two lines:
 ```bash
@@ -1313,16 +1325,6 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 :::tip
 Due to differences in mirror versions, some versions require manually installing gstreamer1.0. In these cases, if you get an error when using the command above to capture images, you can remove the GST_V4L2SRC_MAX_RESOLUTION=3280x2464 prefix and capture the images directly.
 :::
-
-<a href="/advanced-manual/armsom-camera" className="card-link">
-  <div className="card">
-    <div className="icon" aria-hidden="true"><i>📝</i></div>
-    <div className="content">
-      <h2>ArmSoM Camera Applications</h2>
-      <p>A desktop guide for the RK3588 family. Choose a camera and resolution, then take a photo in Cheese or guvcview.</p>
-    </div>
-  </div>
-</a>
 
 #### MIPI DSI {#cm5-io-mipi-dsi}
 

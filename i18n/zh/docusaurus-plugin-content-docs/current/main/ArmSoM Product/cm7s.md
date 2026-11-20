@@ -965,6 +965,18 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 
 #### 3.12 MIPI-CSI
 
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>用 Cheese 或 guvcview 选择摄像头、切换分辨率、预览、拍照和录像。桌面和 Server 镜像也可通过 armsom-camera 命令选择摄像头、分辨率和帧率。</p>
+    </div>
+  </div>
+</a>
+
+下文介绍接线、启用 overlay，以及使用原始命令抓图和预览。这些命令沿用驱动默认的传感器采集分辨率。
+
 CM7s-IO 支持 CAM0 的两通道 IMX219（Raspberry Pi Camera Module 2）和 CAM1 的四通道 OV13850（[ArmSoM camera-module1](./armsom-camera-module1)）。连接排线前先断电，并确认排线方向。
 
 ##### 开启摄像头配置
@@ -1106,16 +1118,6 @@ armsom@armsom:~$ python3 cm7s-dual-camera-preview.py
 双路预览示例：
 
 ![CM7s IMX219 与 OV13850 双路预览](/img/cm/cm7s-dual-camera-preview.webp)
-
-<a href="/zh/advanced-manual/armsom-camera" className="card-link">
-  <div className="card">
-    <div className="icon" aria-hidden="true"><i>📝</i></div>
-    <div className="content">
-      <h2>ArmSoM 相机应用</h2>
-      <p>在配有 ArmSoM 相机组件的桌面镜像中，用 Cheese 或 guvcview 选择摄像头和分辨率、拍照或录像。guvcview 还可设置帧率。</p>
-    </div>
-  </div>
-</a>
 
 #### 3.13 MIPI DSI
 

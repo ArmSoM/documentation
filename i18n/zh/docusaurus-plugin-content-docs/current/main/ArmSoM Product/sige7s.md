@@ -1201,6 +1201,19 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 ```
 
 #### 3.13 MIPI-CSI
+
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>用 Cheese 或 guvcview 选择摄像头、切换分辨率、预览、拍照和录像。桌面和 Server 镜像也可通过 armsom-camera 命令选择摄像头、分辨率和帧率。</p>
+    </div>
+  </div>
+</a>
+
+下文介绍接线、启用 overlay，以及使用原始命令抓图和预览。这些命令沿用驱动默认的传感器采集分辨率。
+
 ##### ArmSoM-Sige7s 适配以下两款imx219摄像头:
 - [Raspberry pi 系列摄像头](https://e.tb.cn/h.8gE3ZXsWJRLW5La?tk=PwhpgBOlZBx)
 - [Jeston 系列摄像头](https://detail.tmall.com/item.htm?id=608399452891&mi_id=0000IWXv5BQA8CjV7BPN3wY4S6TqJ9YA0VQI9c6gTQmF-Vw&spm=tbpc.boughtlist.suborder_itemtitle.1.39fc2e8dNHksy1&skuId=4513040438631)

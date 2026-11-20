@@ -1619,6 +1619,18 @@ armsom@armsom:~$ sudo poweroff
 
 #### 9. MIPI-CSI {#aim-io-9-mipi-csi}
 
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>用 Cheese 或 guvcview 选择摄像头、切换分辨率、预览、拍照和录像。桌面和 Server 镜像也可通过 armsom-camera 命令选择摄像头、分辨率和帧率。</p>
+    </div>
+  </div>
+</a>
+
+下文介绍接线、启用 overlay，以及使用原始命令抓图和预览。这些命令沿用驱动默认的传感器采集分辨率。
+
 ##### 摄像头接口与 overlay {#aim-io-摄像头接口与-overlay}
 
 AIM5、AIM7 的接口位置和摄像头模组相同。下面的 I2C 地址和完整文件名以 AIM7 为例；AIM5 使用对应前缀和启动配置：
@@ -1784,16 +1796,6 @@ armsom@armsom:~$ python3 aim7-four-camera-preview.py
 ![AIM7 四路摄像头同时预览](/img/aim/aim7-four-camera-preview.webp)
 
 <div className="armsom-image-caption">AIM7 四路摄像头同时预览</div>
-
-<a href="/zh/advanced-manual/armsom-camera" className="card-link">
-  <div className="card">
-    <div className="icon" aria-hidden="true"><i>📝</i></div>
-    <div className="content">
-      <h2>ArmSoM 相机应用</h2>
-      <p>在配有相机适配包的 AIM7 桌面上，按 CAM 接口选择摄像头，用 Cheese 或 guvcview 拍照、录像，在 guvcview 中设置分辨率和帧率。</p>
-    </div>
-  </div>
-</a>
 
 #### 10. MIPI DSI {#aim-io-10-mipi-dsi}
 

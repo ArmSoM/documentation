@@ -1216,6 +1216,19 @@ armsom@armsom:~$ sudo hwclock -r -f /dev/rtc0
 ```
 
 #### 3.13 MIPI-CSI
+
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>Use Cheese or guvcview to select a camera, switch resolutions, preview, take photos and record video. On both desktop and Server images, the armsom-camera command also lets you choose the camera, resolution and frame rate.</p>
+    </div>
+  </div>
+</a>
+
+The instructions below cover wiring, enabling the overlay and using the original capture and preview commands. These commands use the sensor resolution selected by the driver by default.
+
 ##### ArmSoM-Sige7s is compatible with the following two imx219 cameras:
 - [Raspberry Pi series cameras](https://e.tb.cn/h.8gE3ZXsWJRLW5La?tk=PwhpgBOlZBx)
 - [Jeston series cameras](https://detail.tmall.com/item.htm?id=608399452891&mi_id=0000IWXv5BQA8CjV7BPN3wY4S6TqJ9YA0VQI9c6gTQmF-Vw&spm=tbpc.boughtlist.suborder_itemtitle.1.39fc2e8dNHksy1&skuId=4513040438631)

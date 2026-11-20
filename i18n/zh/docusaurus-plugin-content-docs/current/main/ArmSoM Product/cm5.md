@@ -1185,6 +1185,19 @@ root@armsom-cm5:/# date
 ```
 
 #### MIPI-CSI {#cm5-io-mipi-csi}
+
+<a href="/zh/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM 相机应用</h2>
+      <p>用 Cheese 或 guvcview 选择摄像头、切换分辨率、预览、拍照和录像。桌面和 Server 镜像也可通过 armsom-camera 命令选择摄像头、分辨率和帧率。</p>
+    </div>
+  </div>
+</a>
+
+下文介绍接线、启用 overlay，以及使用原始命令抓图和预览。这些命令沿用驱动默认的传感器采集分辨率。
+
 ##### 开启摄像头配置 {#cm5-io-开启摄像头配置}
 要使用摄像头之前，需要先开启摄像头设备树overlay，分别找到如下两行：
 ```bash
@@ -1316,16 +1329,6 @@ root@armsom:~# GST_V4L2SRC_MAX_RESOLUTION=3280x2464 gst-launch-1.0 v4l2src devic
 :::tip
 由于镜像版本差异，某些版本镜像需手动安装 gstreamer1.0，这类情况如果使用上述命令抓图报错，可以去掉 GST_V4L2SRC_MAX_RESOLUTION=3280x2464 前缀，直接抓图即可
 :::
-
-<a href="/zh/advanced-manual/armsom-camera" className="card-link">
-  <div className="card">
-    <div className="icon" aria-hidden="true"><i>📝</i></div>
-    <div className="content">
-      <h2>ArmSoM 相机应用</h2>
-      <p>RK3588 系列桌面教程：用 Cheese 和 guvcview 选择摄像头、调整分辨率并拍照。</p>
-    </div>
-  </div>
-</a>
 
 #### MIPI DSI {#cm5-io-mipi-dsi}
 

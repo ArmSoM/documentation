@@ -1657,6 +1657,18 @@ Leave the RTC battery connected and disconnect only the main power. Power on aga
 
 #### 9. MIPI-CSI {#aim-io-9-mipi-csi}
 
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>Use Cheese or guvcview to select a camera, switch resolutions, preview, take photos and record video. On both desktop and Server images, the armsom-camera command also lets you choose the camera, resolution and frame rate.</p>
+    </div>
+  </div>
+</a>
+
+The instructions below cover wiring, enabling the overlay and using the original capture and preview commands. These commands use the sensor resolution selected by the driver by default.
+
 ##### Camera Ports and Overlays {#aim-io-camera-ports-and-overlays}
 
 AIM5 and AIM7 use the same physical ports and camera modules. The I2C addresses and full filenames below are AIM7 examples; AIM5 uses its own prefix and boot configuration:
@@ -1822,16 +1834,6 @@ Screenshot from the test (each camera image rotated 180° to correct its orienta
 ![AIM7 simultaneous four-camera preview](/img/aim/aim7-four-camera-preview.webp)
 
 <div className="armsom-image-caption">AIM7 simultaneous four-camera preview</div>
-
-<a href="/advanced-manual/armsom-camera" className="card-link">
-  <div className="card">
-    <div className="icon" aria-hidden="true"><i>📝</i></div>
-    <div className="content">
-      <h2>ArmSoM Camera Applications</h2>
-      <p>On an AIM7 desktop with camera support installed, select a camera by CAM port. Take photos or record video in Cheese or guvcview and set the resolution and frame rate in guvcview.</p>
-    </div>
-  </div>
-</a>
 
 #### 10. MIPI DSI {#aim-io-10-mipi-dsi}
 

@@ -958,6 +958,18 @@ root@armsom:~# sudo hwclock -r -f /dev/rtc0
 
 #### 3.12 MIPI-CSI
 
+<a href="/advanced-manual/armsom-camera" className="card-link">
+  <div className="card">
+    <div className="icon" aria-hidden="true"><i>📷</i></div>
+    <div className="content">
+      <h2>ArmSoM Camera Applications</h2>
+      <p>Use Cheese or guvcview to select a camera, switch resolutions, preview, take photos and record video. On both desktop and Server images, the armsom-camera command also lets you choose the camera, resolution and frame rate.</p>
+    </div>
+  </div>
+</a>
+
+The instructions below cover wiring, enabling the overlay and using the original capture and preview commands. These commands use the sensor resolution selected by the driver by default.
+
 CM7s-IO supports a two-lane IMX219 (Raspberry Pi Camera Module 2) on CAM0 and a four-lane OV13850 ([ArmSoM camera-module1](./armsom-camera-module1)) on CAM1. Power off before connecting ribbon cables and check their orientation.
 
 ##### Enable Camera Configuration
@@ -1099,16 +1111,6 @@ The script targets a 1920×1080 screen, with IMX219 on the left and OV13850 on t
 Dual-camera preview example:
 
 ![CM7s IMX219 and OV13850 simultaneous preview](/img/cm/cm7s-dual-camera-preview.webp)
-
-<a href="/advanced-manual/armsom-camera" className="card-link">
-  <div className="card">
-    <div className="icon" aria-hidden="true"><i>📝</i></div>
-    <div className="content">
-      <h2>ArmSoM Camera Applications</h2>
-      <p>On a desktop image with ArmSoM camera support, select a camera and resolution, take photos or record video in Cheese or guvcview. Use guvcview to set the frame rate.</p>
-    </div>
-  </div>
-</a>
 
 #### 3.13 MIPI DSI
 
