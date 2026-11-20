@@ -165,6 +165,83 @@
   justify-content: flex-start;
 }
 
+/* Category overviews share the sidebar's localized links and descriptions. */
+.armsom-category-overview .card {
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+  min-height: 148px;
+}
+.armsom-category-overview .card .text--truncate {
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+.armsom-category-overview .card h2 { line-height: 1.45; }
+.armsom-category-overview .card p {
+  font-size: .95rem;
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.armsom-category-overview .card p.text--truncate { overflow: hidden; }
+.armsom-category-overview .card:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+/* Community links carry a purpose and destination instead of empty doc cards. */
+.armsom-community-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1rem;
+}
+.armsom-category-overview .card.armsom-community-card {
+  width: 100%;
+  min-height: 0;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+.armsom-community-card__heading { display: flex; align-items: center; gap: .7rem; }
+.armsom-community-card__icon {
+  display: inline-flex;
+  flex: 0 0 38px;
+  height: 38px;
+  padding: 8px;
+  border-radius: 10px;
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+.armsom-community-card__icon svg { width: 100%; height: 100%; }
+.armsom-category-overview .armsom-community-card__heading h3 { margin: 0; font-size: 1.05rem; line-height: 1.4; }
+.armsom-category-overview .armsom-community-card p {
+  display: block;
+  margin: .85rem 0 1rem;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.armsom-community-card__destination {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-top: auto;
+  color: var(--ifm-color-primary);
+  font-size: .78rem;
+  overflow-wrap: anywhere;
+}
+.armsom-community-card .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+body:has(.armsom-community-links) .markdown > h2 { margin-top: 2rem; padding-top: 1.2rem; }
+
+
 .card-link {
   text-decoration: none!important;
   color: inherit; /* 保持链接默认颜色 */
@@ -649,6 +726,16 @@ body:has(.theme-doc-markdown) .menu__link:focus-visible,body:has(.theme-doc-mark
 body:has(.theme-doc-markdown) .menu__link--sublist.menu__link--active {background:transparent;box-shadow:none;border-color:transparent;font-weight:650;}
 body:has(.theme-doc-markdown) .menu__link--active:not(.menu__link--sublist) {background:#fff;color:#087582;box-shadow:inset 3px 0 #1598a7;font-weight:700;}
 body:has(.theme-doc-markdown) .menu__link--sublist::after {background-size:1.05rem;opacity:.65;}
+/* Emphasize top-level navigation without changing child document labels. */
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link,
+.theme-doc-sidebar-item-link-level-1 > .menu__link {
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+body:has(.theme-doc-markdown) .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link--active {
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
 body:has(.theme-doc-markdown) .menu {scrollbar-width:thin;scrollbar-color:#c5d2db transparent;overscroll-behavior:contain;scroll-padding-block:24px;}
 [data-theme='dark'] body:has(.theme-doc-markdown) .menu__link:hover {background:#20313d;color:#83dfe6;}
 [data-theme='dark'] body:has(.theme-doc-markdown) .menu__link--active:not(.menu__link--sublist) {background:#1b3039;color:#83dfe6;}
