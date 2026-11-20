@@ -36,7 +36,7 @@ const groups = {
   },
   accessories: {
     imaging: /^(camera-module1|display-10-hd|display-7-hd)$/,
-    cooling: /^(sige-active-cooling-kit|sige-diy-case1)$/,
+    cooling: /^(sige-active-cooling-kit|board-heatsinks|sige-diy-case1)$/,
     storage: /.*/,
   },
   community: {

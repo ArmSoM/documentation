@@ -241,6 +241,10 @@
 }
 body:has(.armsom-community-links) .markdown > h2 { margin-top: 2rem; padding-top: 1.2rem; }
 
+.armsom-heatsink-views { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+.armsom-heatsink-views .armsom-doc-figure { margin: 0; min-width: 0; }
+.armsom-heatsink-views .armsom-doc-figure img { width: 100%; height: 280px; object-fit: contain; background: #fff; border-radius: 12px; }
+@media (max-width: 600px) { .armsom-heatsink-views { grid-template-columns: minmax(0, 1fr); } }
 
 .card-link {
   text-decoration: none!important;

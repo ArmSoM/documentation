@@ -1,0 +1,2 @@
+# Preserve supplied CAD drawings byte for byte and keep them out of text diffs.
+static/downloads/heatsinks/*.dxf binary

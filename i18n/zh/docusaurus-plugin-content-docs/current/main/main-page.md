@@ -275,6 +275,14 @@ CM5-IO、AIM-IO 与基于 LM7 的 W3 提供相应的开发和接口验证平台�
 </div>
 
 
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
+| [AIM7 专用散热器](./board-heatsinks#aim7) | [CM5/CM7S 专用散热器](./board-heatsinks#cm5-cm7s) | [Sige6 专用散热器](./board-heatsinks#sige6) |
+| --- | --- | --- |
+| ![AIM7 专用散热器](/img/accessories/heatsinks/aim7-front.webp) | ![CM5/CM7S 专用散热器](/img/accessories/heatsinks/cm5-cm7s-front.webp) | ![Sige6 专用散热器](/img/accessories/heatsinks/sige6-front.webp) |
+
+</div>
+
 ### 产品目录表
 
 | Sige系列单板计算机 | 模块化核心板和载板 | IoT/Industrial Control | 配件 |

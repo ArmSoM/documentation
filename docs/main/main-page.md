@@ -278,6 +278,14 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 
 </div>
 
+<div class="armsom-product-gallery armsom-product-gallery--3">
+
+| [AIM7 Heatsink](./board-heatsinks#aim7) | [CM5/CM7S Heatsink](./board-heatsinks#cm5-cm7s) | [Sige6 Heatsink](./board-heatsinks#sige6) |
+| --- | --- | --- |
+| ![AIM7 Heatsink](/img/accessories/heatsinks/aim7-front.webp) | ![CM5/CM7S Heatsink](/img/accessories/heatsinks/cm5-cm7s-front.webp) | ![Sige6 Heatsink](/img/accessories/heatsinks/sige6-front.webp) |
+
+</div>
+
 ### Product Catalog Table  
 | **Sige Series Single-Board Computers** | **System on Module and Carrier Boards** | **IoT/Industrial Control** | **Accessories** |  
 |---------|--------------|--------------|---------|  
