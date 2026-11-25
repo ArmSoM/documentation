@@ -111,7 +111,7 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
             <th>电源</th>
             <th><li>DC IN 12V/2A</li><li>Typec 5V/2A</li></th>
             <th>系统</th>
-            <th><li>Rockchip官方支持：buildroot</li></th>
+            <th><li>Rockchip 官方支持：Buildroot</li><li>其他镜像：Ubuntu、Debian、Armbian</li></th>
         </tr>
         <tr>
             <th>尺寸</th>
@@ -205,20 +205,23 @@ Forge1 是一款工业级产品，采用RK3506J 三核Cortex-A7应用处理器�
 
 ### 官方镜像
 
-ArmSoM团队以 buildroot 为基础作为Forge1官方操作系统。[如何烧录系统镜像？](https://docs.armsom.org/zh/getting-start/flash-img)📤
+ArmSoM 官方系统镜像按产品型号存放。请在百度网盘的 Forge1 产品目录中选择所需镜像。[系统镜像烧录指南](https://docs.armsom.org/zh/getting-start/flash-img)
 
-以下系统已由ArmSoM官方测试验证：
-
-网盘地址：
-
-<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" class="btn">
+<a href="https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F" className="btn">
   <span>百度网盘链接</span>
 </a>
-<br/>
 
 | 标识 | 系统镜像 | 下载入口 |
-|:--------: | :---------: | :--------:  | 
-|buildroot | **buildroot for Forge1 :** <br/> Linux Kernel 6.1, 支持RT-Thread 4.1, <br/>支持裸机程, 序支持多核异构AMP,<br/> Preempt-RT/Xenomai实时补丁, <br/>轻量级UI框架 LVGL。 |[百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F)  |
+| :---: | :---: | :---: |
+| ![Buildroot](/img/forge/buildroot-logo.png) | **适用于 Forge1 的 Buildroot**<br/>基于 Linux 6.1，分为 SD 卡和 NAND 镜像。SDK 支持 LVGL、RT-Thread 4.1、裸机程序和多核异构 AMP，并提供 PREEMPT_RT 和 Xenomai 实时补丁。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **适用于 Forge1 的 Ubuntu**<br/>请在百度网盘的 Forge1 产品目录中按发行版本选择对应的 Ubuntu 镜像。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+| ![Debian](/img/sige/debian12-1.png) | **适用于 Forge1 的 Debian**<br/>Debian 镜像的发行版本及桌面类型以 Forge1 产品目录中的文件名为准。 | [百度网盘总目录](https://pan.baidu.com/s/14qfAZM3QqgJPuFVjKRSBUw?pwd=arms#list/path=%2F) |
+
+### 第三方镜像
+
+| 标识 | 介绍 | 固件下载 |
+| :---: | :---: | :---: |
+| ![Armbian](/img/armbian-logo.png) | **适用于 Forge1 的 Armbian**<br/>Armbian 是面向单板计算机的 Linux 镜像构建框架，可将适配板型的内核与不同的用户空间组合成可直接启动的系统。Forge1 用户可下载基于 Debian 或 Ubuntu 的预构建镜像。 | [Armbian Forge1 下载页](https://armbian.com/boards/armsom-forge1) |
 
 ### 硬件资料
 

@@ -102,7 +102,7 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
         </tr>  
         <tr>  
             <th>OS</th>  
-            <th><li>Officially supported by Rockchip: Buildroot</li></th>  
+            <th><li>Officially supported by Rockchip: Buildroot</li><li>Other images: Ubuntu, Debian, Armbian</li></th>
         </tr>  
         <tr>  
             <th>Dimensions</th>  
@@ -199,20 +199,23 @@ With a comprehensive set of peripheral interfaces—including ​​RS485​​,
 
 ### Official Image
 
-The ArmSoM team uses buildroot as the official operating system for Forge1. [How to Flash Image](https://docs.armsom.org/getting-start/flash-img)📤
+ArmSoM organizes its official images by board. On Google Drive, open `ArmSoM-Forge1/software` to find the Forge1 images. [Image flashing guide](https://docs.armsom.org/getting-start/flash-img)
 
-#### Download
-
-The following systems have been tested and verified by ArmSoM official:
-
-Network disk address: 
-<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" class="btn">
+<a href="https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56" className="btn">
   <span>Google Drive link</span>
 </a>
 
-| logo | Description | Download|
-|:--------: | :---------: | :--------: |
-|buildroot | **buildroot for Forge1:** <br/> Linux Kernel 6.1, support RT-Thread 4.1, <br/> support bare metal programs, support multi-core heterogeneous AMP, <br/> Preempt-RT/Xenomai real-time patches, <br/> lightweight UI framework LVGL. |[Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| Logo | System image | Download |
+| :---: | :---: | :---: |
+| ![Buildroot](/img/forge/buildroot-logo.png) | **Buildroot for Forge1**<br/>Linux 6.1 images for SD cards or NAND flash. The SDK supports LVGL, RT-Thread 4.1, bare-metal applications and heterogeneous multiprocessing (AMP), and includes real-time patches for PREEMPT_RT and Xenomai. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Ubuntu](/img/sige/ubuntu.png) | **Ubuntu for Forge1**<br/>Select the Ubuntu image for your release from the Forge1 product folder on Google Drive. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+| ![Debian](/img/sige/debian12-1.png) | **Debian for Forge1**<br/>Check the filenames in the Forge1 product folder for available Debian releases and desktop variants. | [Google Drive root folder](https://drive.google.com/drive/folders/1x2KOX1F4-DVyyV_9qfdH28PWIORcWH56) |
+
+### Third Party System
+
+| Logo | Description | Download |
+| :---: | :---: | :---: |
+| ![Armbian](/img/armbian-logo.png) | **Armbian for Forge1**<br/>Armbian is a framework for building Linux images for single-board computers. It combines a board-specific kernel with a choice of user space to produce a bootable system. Prebuilt images based on Debian or Ubuntu are available for Forge1. | [Armbian Forge1 downloads](https://armbian.com/boards/armsom-forge1) |
 
 ### Hardware Resources 
 
