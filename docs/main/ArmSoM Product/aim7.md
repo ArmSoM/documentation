@@ -1949,7 +1949,7 @@ OEM&ODM, please contact: sales@armsom.org
 
 :::danger [Heat Management]
 
-Without effective cooling measures, the surface temperature of the main chip may exceed 60 degrees. When handling the device, please avoid direct contact with the SoC and surrounding power inductors to prevent burns. Ensure that the environment is well-ventilated during operation to prevent localized heat buildup, which could lead to overheating. Additionally, do not place the device in direct sunlight. It is recommended to choose between the official [dedicated heatsink](./board-heatsinks#aim7), or third-party cooling kits based on specific usage conditions to ensure optimal cooling performance.
+Without effective cooling measures, the surface temperature of the main chip may exceed 60 degrees. When handling the device, please avoid direct contact with the SoC and surrounding power inductors to prevent burns. Ensure that the environment is well-ventilated during operation to prevent localized heat buildup, which could lead to overheating. Additionally, do not place the device in direct sunlight. It is recommended to choose between the official [dedicated heatsink](./sige-active-cooling-kit#aim7), or third-party cooling kits based on specific usage conditions to ensure optimal cooling performance.
 
 :::
 

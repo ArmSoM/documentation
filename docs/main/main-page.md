@@ -272,17 +272,17 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 
 <div class="armsom-product-gallery armsom-product-gallery--3">
 
-| [Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) | [64GB eMMC Module](./armsom-emmc-module)<br/>For Sige7S |
+| [ArmSoM Active Cooling Kit](./sige-active-cooling-kit) | [Sige DIY Case 1](./sige-diy-case1) | [64GB eMMC Module](./armsom-emmc-module)<br/>For Sige7S |
 | --- | --- | --- |
-| ![Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC Module](/img/accessories/armsom-emmc-module-optimized.webp) |
+| ![ArmSoM Active Cooling Kit](/img/accessories/sige-active-cooling-fan-real.png) | ![Sige DIY Case 1](/img/accessories/sige-diy-case.png) | ![ArmSoM eMMC Module](/img/accessories/armsom-emmc-module-optimized.webp) |
 
 </div>
 
 <div class="armsom-product-gallery armsom-product-gallery--3">
 
-| [AIM7 Heatsink](./board-heatsinks#aim7) | [CM5/CM7S Heatsink](./board-heatsinks#cm5-cm7s) | [Sige6 Heatsink](./board-heatsinks#sige6) |
+| [AIM7 Heatsink](./sige-active-cooling-kit#aim7) | [CM5/CM7S Heatsink](./sige-active-cooling-kit#cm5-cm7s) | [Sige6/Sige7S Heatsink](./sige-active-cooling-kit#sige6) |
 | --- | --- | --- |
-| ![AIM7 Heatsink](/img/accessories/heatsinks/aim7-front-optimized.webp) | ![CM5/CM7S Heatsink](/img/accessories/heatsinks/cm5-cm7s-front-optimized.webp) | ![Sige6 Heatsink](/img/accessories/heatsinks/sige6-front-optimized.webp) |
+| ![AIM7 Heatsink](/img/accessories/heatsinks/aim7-front-optimized.webp) | ![CM5/CM7S Heatsink](/img/accessories/heatsinks/cm5-cm7s-front-optimized.webp) | ![Sige6/Sige7S Heatsink](/img/accessories/heatsinks/sige6-front-optimized.webp) |
 
 </div>
 
@@ -291,7 +291,7 @@ Check supported boards, pin assignments, cables, power and drivers before connec
 |---------|--------------|--------------|---------|  
 |[ArmSoM-Sige1](./armsom-sige1)  [Rockchip RK3528]|[ArmSoM-CM5](./armsom-cm5)  [Rockchip RK3576] <br/> [ArmSoM-CM5-IO](./armsom-cm5#cm5-io)  [CM5 Maker kit]|[ArmSoM-Forge1](./armsom-forge1)  [Rockchip RK3506J] | [display-10-hd](./armsom-display-10-hd)|
 |[ArmSoM-Sige3](./armsom-sige3)  [Rockchip RK3568B2]|[ArmSoM-AIM5](./armsom-aim5)  [Rockchip RK3576] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]|[ArmSoM-P2pro](./armsom-p2pro)  [Rockchip RK3308] | [Camera-Module-1](./armsom-camera-module1)	|
-|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [Active Cooling Kit](./sige-active-cooling-kit) |
+|[ArmSoM-Sige5](./armsom-sige5)  [Rockchip RK3576]|[ArmSoM-AIM7](./armsom-aim7)  [Rockchip RK3588] <br/> [ArmSoM-AIM-IO](./armsom-aim7#aim-io)  [AIM Maker kit]| [ArmSoM-KVM](./armsom-kvm)  [Rockchip RK3568B2] | [ArmSoM Active Cooling Kit](./sige-active-cooling-kit) |
 |[ArmSoM-Sige6](./armsom-sige6)  [Allwinner A733]|[ArmSoM-LM7](./armsom-lm7)  [Rockchip RK3588]<br/> [ArmSoM-W3](./armsom-w3)  [LM7 Maker kit]| ---- | [Camera-Module-1](./armsom-camera-module1) |
 |[ArmSoM-Sige7](./armsom-sige7)  [Rockchip RK3588]|[ArmSoM-CM7s](./armsom-cm7s)  [Rockchip RK3588s]| ---- |  [Sige Diy Case 1](./sige-diy-case1)  |
 |[ArmSoM-Sige7s](./armsom-sige7s)  [Rockchip RK3588s]| ---- | ---- | [64GB eMMC Module](./armsom-emmc-module) |
