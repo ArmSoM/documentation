@@ -16,8 +16,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 根据产品提供的镜像，可选择 GNOME、XFCE 桌面或 Server 版本，通过 APT 安装软件，满足学习、嵌入式开发、多媒体应用和服务部署需求。开发者还可使用开源的 [armsom-sdk](https://github.com/ArmSoM/manifests) 定制内核、设备树与文件系统。
 
 <figure style={{maxWidth: '860px', margin: '1.5rem auto'}}>
-  <img src={useBaseUrl('/img/getting-started/armsom-os-desktop.webp')} alt="ArmSoM OS 在 CM5 上运行的 Debian 12 GNOME 桌面" width="1920" height="1080" style={{width: '100%', height: 'auto', borderRadius: '12px'}} />
-  <figcaption className="armsom-image-caption">ArmSoM OS 桌面：Debian 12 · GNOME</figcaption>
+  <img src={useBaseUrl('/img/getting-started/armsom-os-desktop.webp')} alt="ArmSoM OS 在 CM5 上运行的 Debian 12 XFCE 桌面" width="1920" height="1080" style={{width: '100%', height: 'auto', borderRadius: '12px'}} />
+  <figcaption className="armsom-image-caption">ArmSoM OS 桌面：Debian 12 · XFCE</figcaption>
 </figure>
 
 首次使用，请先在对应产品文档中选择匹配的镜像，再按下方“准备与启动”完成烧录与登录；网络连接、系统维护和开发指南可按需查阅。

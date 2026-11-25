@@ -16,8 +16,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Depending on your product's available images, choose a GNOME or XFCE desktop, or a Server edition, and install software with APT for learning, embedded development, multimedia applications and service deployment. Developers can also customize the kernel, device tree and root filesystem using the open-source [armsom-sdk](https://github.com/ArmSoM/manifests).
 
 <figure style={{maxWidth: '860px', margin: '1.5rem auto'}}>
-  <img src={useBaseUrl('/img/getting-started/armsom-os-desktop.webp')} alt="ArmSoM OS Debian 12 GNOME desktop running on CM5" width="1920" height="1080" style={{width: '100%', height: 'auto', borderRadius: '12px'}} />
-  <figcaption className="armsom-image-caption">ArmSoM OS desktop: Debian 12 · GNOME</figcaption>
+  <img src={useBaseUrl('/img/getting-started/armsom-os-desktop.webp')} alt="ArmSoM OS Debian 12 XFCE desktop running on CM5" width="1920" height="1080" style={{width: '100%', height: 'auto', borderRadius: '12px'}} />
+  <figcaption className="armsom-image-caption">ArmSoM OS desktop: Debian 12 · XFCE</figcaption>
 </figure>
 
 For your first setup, choose a matching image from your product documentation, then follow “Preparation and First Boot” below to flash it and log in. Refer to the connection, maintenance and development guides as needed.
