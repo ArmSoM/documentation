@@ -53,7 +53,7 @@ With the powerful ecosystem and variety of extension modules, ArmSoM can help us
 - RAM: 8GB/16GB/32GB (max 32GB) 64bit LPDDR4x
 - Flash: 32GB/64GB/128GB eMMC
 - Interface type: 260pin SO-DIMM connector, compatible with Jetson TX2 NX
-- Working voltage: 5V DC
+- **Module input voltage**: 4V recommended; must not exceed 5.5V.
 - Temperature: Operating temperature: 0°C to 80°C, Storage temperature: -20°C to 85°C
 - Humidity: Relative humidity: Operation: 10% to 90%, Storage: 5% to 95%
 - operating system:
